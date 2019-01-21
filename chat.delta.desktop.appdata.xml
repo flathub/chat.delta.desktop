@@ -24,6 +24,76 @@ Free, independent, email compatible.
  <url type="homepage">https://delta.chat/</url>
 
   <releases>
+    <release version="v0.99.0" date="2019-01-20">
+        <description>
+        <p>
+
+Changed
+
+    Update copyright year in readme (@jikstra)
+    Use path.join() for getLogsPath() (@ralphtheninja)
+    Upgrade bindings (#595) (@ralphtheninja)
+    Wrap application-config module for proper appConfig during production and testing (#598) (@ralphtheninja)
+    Use electron v4 (#581) (@ralphtheninja)
+    Misc cleanup (#588) (@ralphtheninja)
+    State refactor (#583) (@ralphtheninja)
+    Update translations (@ralphtheninja)
+    Rename Home component to ScreenController (@ralphtheninja)
+
+Added
+
+    Login automatically if last credentials were saved in state (#589) (@ralphtheninja)
+    Add devtron (@ralphtheninja)
+
+Removed
+
+    Remove password and account settings label (#538) (@ralphtheninja)
+    Remove window.state, not used (@ralphtheninja)
+
+Fixed
+
+    Do not send uncaughtError to render process, just log and die (#593) (@ralphtheninja)
+        </p>
+        </description>    
+    </release>
+    <release version="v0.98.2" date="2019-01-11">
+        <description>
+        <p>
+Changed
+
+    Tweak search button (#568) (@jikstra)
+    Convert src/config.js to src/applications-constants.js with a functional API (#578) (@ralphtheninja)
+    Improve css building for conversations stylesheets (#573) (@jikstra)
+    Update install instructions in README (@jikstra, @ralphtheninja)
+    Restyle create chat buttons (#563) (@jikstra)
+    Update outdated watch script (@ralphtheninja)
+    Hide known accounts section when it's empty (#567) (@Simon-Laux)
+    Set minimum window height to 450px (@jikstra)
+    Upgrade deltachat-node to ^0.36.0 for Mac OS prebuilt binaries (#570) (@ralphtheninja)
+    Make unit tests less spammy (#554) (@ralphtheninja)
+    Simplify state load (#540) (@ralphtheninja)
+    Make converting translations less spammy (#547) (@ralphtheninja)
+
+Added
+
+    Add rc module for configuration (#574) (@ralphtheninja)
+    Add logging functionality (#497) (@Simon-Laux)
+    Add hallmark module for markdown linting (#548) (@ralphtheninja)
+
+Removed
+
+    Remove bin/clean.js (@ralphtheninja)
+    Clean up unused configuration code (@ralphtheninja)
+
+Fixed
+
+    Fix non verified contacts in verified groups (#580) (@ralphtheninja)
+    Fix escaped characters in translations (#569) (@ralphtheninja)
+    Adjust login form so it's not hidden below navigation bar (#564) (@jikstra)
+    Fix broken rimraf dependency (@jikstra)
+        </p>
+        </description>    
+    </release>
     <release version="v0.98.1" date="2019-01-06">
         <description>
         <p>

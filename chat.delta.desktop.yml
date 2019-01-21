@@ -75,7 +75,6 @@ modules:
         
 
     sources:
-        - generated-sources.json
         # Of course, not all electron packages are equal *sigh*
         # This one downloads files at installation time.
         # Taken from https://github.com/electron/chromedriver/issues/28#issuecomment-427839364
@@ -106,8 +105,8 @@ modules:
           dest: npm-cache
 
         - type: archive
-          url: https://github.com/deltachat/deltachat-desktop/archive/v0.98.1.tar.gz
-          sha256: 23e1bf9b5b9f70cbd2124d22e84a7af4cf1e8ae4515df3b049d5c94f1d60c38c
+          url: https://github.com/deltachat/deltachat-desktop/archive/v0.99.0.tar.gz
+          sha256: 5c96ee780b50d6b8ec9e154ddb16b6f3ddc435cc154872b2d8c01db5cb81c4af
 
         - type: file
           url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
@@ -135,3 +134,5 @@ modules:
             - /app/delta/deltachat-desktop
           
 
+        # This needs to go to the bottom so that the commands in that file can see package.json and friends.
+        - generated-sources.json
