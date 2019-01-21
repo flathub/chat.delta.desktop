@@ -24,6 +24,38 @@ Free, independent, email compatible.
  <url type="homepage">https://delta.chat/</url>
 
   <releases>
+    <release version="v0.99.0" date="2019-01-20">
+        <description>
+        <p>
+
+Changed
+
+    Update copyright year in readme (@jikstra)
+    Use path.join() for getLogsPath() (@ralphtheninja)
+    Upgrade bindings (#595) (@ralphtheninja)
+    Wrap application-config module for proper appConfig during production and testing (#598) (@ralphtheninja)
+    Use electron v4 (#581) (@ralphtheninja)
+    Misc cleanup (#588) (@ralphtheninja)
+    State refactor (#583) (@ralphtheninja)
+    Update translations (@ralphtheninja)
+    Rename Home component to ScreenController (@ralphtheninja)
+
+Added
+
+    Login automatically if last credentials were saved in state (#589) (@ralphtheninja)
+    Add devtron (@ralphtheninja)
+
+Removed
+
+    Remove password and account settings label (#538) (@ralphtheninja)
+    Remove window.state, not used (@ralphtheninja)
+
+Fixed
+
+    Do not send uncaughtError to render process, just log and die (#593) (@ralphtheninja)
+        </p>
+        </description>    
+    </release>
     <release version="v0.98.2" date="2019-01-11">
         <description>
         <p>
