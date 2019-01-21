@@ -75,7 +75,6 @@ modules:
         
 
     sources:
-        - generated-sources.json
         # Of course, not all electron packages are equal *sigh*
         # This one downloads files at installation time.
         # Taken from https://github.com/electron/chromedriver/issues/28#issuecomment-427839364
@@ -135,3 +134,5 @@ modules:
             - /app/delta/deltachat-desktop
           
 
+        # This needs to go to the bottom so that the commands in that file can see package.json and friends.
+        - generated-sources.json
