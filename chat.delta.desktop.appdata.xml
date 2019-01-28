@@ -24,10 +24,33 @@ Free, independent, email compatible.
  <url type="homepage">https://delta.chat/</url>
 
   <releases>
+    <release version="v0.100.0" date="2019-01-27">
+        <description>
+        <p>
+Changed
+    Simplify logging (#602) (@ralphtheninja)
+    change language dropdown to use the local names (@Simon-Laux)
+    Pass in logHandler to menu.init() from ipc (@ralphtheninja)
+    Be explicit when ignoring _*.json, _languages.json should be ignored (@ralphtheninja)
+    Selected chat now uses the delta (light) color (@jikstra)
+    Update translations (@ralphtheninja)
+        </p>
+        <p>
+Added
+    Implement login instruction (#607) (@jikstra)
+    Add emoji picker (#615) (@jikstra)
+        </p>
+        <p>
+Fixed
+    Fix message duplication (#613) (@Simon-Laux)
+    Appdata updates and cleanup (@har9862)
+    For some reasons emoji-mart doesn't pull in a required dependency, we need to require it manually (@jikstra)
+        </p>
+        </description>    
+    </release>
     <release version="v0.99.0" date="2019-01-20">
         <description>
         <p>
-
 Changed
 
     Update copyright year in readme (@jikstra)
