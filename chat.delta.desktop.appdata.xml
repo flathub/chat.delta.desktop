@@ -24,6 +24,42 @@ Free, independent, email compatible.
  <url type="homepage">https://delta.chat/</url>
 
   <releases>
+    <release version="v0.101.0" date="2019-02-14">
+        <description>
+        <p>
+Changed
+    Sort languages alphabetically (#640) (@Simon-Laux)
+    Set this.chatView.current from the start (@ralphtheninja)
+    Fix some typos and tweak logging docs (@ralphtheninja)
+    Update github issue template (#647) (@ralphtheninja)
+    Cleanup ipc (#641) (@ralphtheninja)
+    Hide error message when attempting to login (#644) (@ralphtheninja)
+    Add more detailed info about deltachat-core to About sreen (@Simon-Laux)
+    Improve hanlde position for context menu of messages (#666) (@nicodh)
+    Use vertical ellipsis for context handle (#671) (@nicodh)
+    Update deltachat-node dependency to v0.40.2 (#678) (@ralphtheninja) (@jikstra)
+
+Added
+    Add logging documentation (#628) (@Simon-Laux)
+    Add line break between advanced button and login button (#635) (@Jikstra)
+    Prevent running multiple instances (#649) (@ralphtheninja)
+    Resize the composer based on the newlines in the text (multiline composer) (#654) (@jikstra)
+    Added MAC install information to README (#660) (@zafai)
+
+Removed
+    Remove misleading/Uninformative lefticons in login form (#637) (@Jikstra)
+    Remove style specific components (#645) (@ralphtheninja)
+
+Fixed
+    Show leading digits in Autocrypt Setup (#651) (@ralphtheninja)
+    Change chown to chmod in README.md (#655) /(@naltun)
+    Remove/Hide scrollbar in groupname and fix emoji in avatar (#661) (@Simon-Laux)
+    Do not send empty messages (i.e. only spaces) (#670) (@nicodh)
+    Fix layout breaking when pasting long multiline messages to composer
+    Focus the composer position on the current selection/cursor (#677) (@jikstra)
+        </p>
+        </description>
+    </release>
     <release version="v0.100.0" date="2019-01-27">
         <description>
         <p>
