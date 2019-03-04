@@ -79,12 +79,17 @@ modules:
   - name: delta
     buildsystem: simple
     build-options:
-        env:
-            electron_config_cache: /run/build/delta/npm-cache
-            npm_config_nodedir: /app/
-            #npm_config_devdir: /run/build/delta/npm-dev
-            npm_config_devdir: /app
-            ELECTRON_CACHE: /run/build/delta/npm-cache
+      env:
+        # Tell electron where we pre-downloaded things.
+        electron_config_cache: /run/build/delta/npm-cache
+
+        # Point node-gyp to our node.js installation so that it won't
+        # try to download the headers and source.
+        npm_config_nodedir: /app/
+        npm_config_devdir: /app
+
+        # Tell the chromedriver npm package where we pre-downloaded things.
+        ELECTRON_CACHE: /run/build/delta/npm-cache
     build-commands:
         - npm install  --offline --cache=/run/build/delta/npm-cache/  --verbose
         - npm run build  --offline --cache=/run/build/delta/npm-cache/  --verbose
