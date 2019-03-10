@@ -99,7 +99,7 @@ modules:
       # Install the required static files
       - install run.sh /app/bin/run.sh
       - install -Dm 0644 chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
-      - install -Dm 0644 chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
+      - install -Dm 0644 static/chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
       - install -Dm 0644 delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
     sources:
       # The chromedriver package tries to download a bunch of files
@@ -136,8 +136,10 @@ modules:
         path: chat.delta.desktop.256.png
         dest-filename: chat.delta.desktop.png
 
+      # We overwrite upstream's appdata file because it lacks the releases
       - type: file
         path: chat.delta.desktop.appdata.xml
+        dest-filename: static/chat.delta.desktop.appdata.xml
 
       - type: script
         dest-filename: run.sh
