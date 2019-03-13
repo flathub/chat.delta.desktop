@@ -9570,7 +9570,8 @@
         "commands": [
             "sed -r -i 's^\"github:hughsk/remark-contributors(#.*)?\"^\"git+file:/var/tmp/build-dir/npm-cache/git/hughsk-remark-contributors\\#b1703ce019560906e3f0b7af40b43c620b6e1786\"^g' package.json",
             "sed -i 's^github:hughsk/remark-contributors#b1703ce019560906e3f0b7af40b43c620b6e1786^git+file:/var/tmp/build-dir/npm-cache/git/hughsk-remark-contributors#b1703ce019560906e3f0b7af40b43c620b6e1786^g' package-lock.json",
-            "sed -i 's^\"from\": \"github:hughsk/remark-contributors\",^^g' package-lock.json"
+            "sed -i 's^github:hughsk/remark-contributors#b1703ce^git+file:/var/tmp/build-dir/npm-cache/git/hughsk-remark-contributors#b1703ce019560906e3f0b7af40b43c620b6e1786^g' package-lock.json",
+            "sed -i 's^\"from\": \"github:hughsk/remark-contributors#.*\",^^g' package-lock.json"
         ],
         "type": "shell"
     }
