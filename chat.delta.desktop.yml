@@ -5,18 +5,13 @@ runtime: org.freedesktop.Platform
 runtime-version: '18.08'
 sdk: org.freedesktop.Sdk
 command: /app/bin/run.sh
-#rename-icon: deltachat-desktop
-#rename-desktop-file: deltachat-desktop.desktop
 finish-args:
   - --socket=x11
   - --share=ipc
-  # We can record and play voice messages
-  - --socket=pulseaudio
-  # Without DRI the app doesn't come up :-/
-  - --device=dri
-  # It connects to the network to send and receive messages
+  - --device=dri         # Without DRI the app doesn't come up :-/
+  - --socket=pulseaudio  # Record and play voice messages
+  - --filesystem=home
   - --share=network
-  # I guess it wants to show notification.
   - --talk-name=org.freedesktop.Notifications
 
 build-options:
