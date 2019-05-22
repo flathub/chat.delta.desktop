@@ -112,17 +112,13 @@ modules:
         dest: npm-cache
 
       - type: archive
-        url: https://github.com/deltachat/deltachat-desktop/archive/v0.102.0.tar.gz
-        sha256: 7ada40529cc998d37c7ea16e0fac1b5bd5b562ceb4099ffe9769481e15a92f4f
+        url: https://github.com/deltachat/deltachat-desktop/archive/v0.103.0.tar.gz
+        sha256: f4ac78a6cd7b9c0df74606acf7c5cfe745e1d00defab7ee00f2225fc82d29afe
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
         sha256: 1787a9dfdd80301ae5dbe48105bd58215c6552bd8ecfa4efd15fe6d31ba31274
         dest-filename: delta-v7-pathed.svg
-
-      - type: file
-        path: package-lock.json
-        dest-filename: package-lock.json
 
       - type: file
         path: chat.delta.desktop.desktop
