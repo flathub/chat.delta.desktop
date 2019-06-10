@@ -4,6 +4,8 @@ base-version: '18.08'
 runtime: org.freedesktop.Platform
 runtime-version: '18.08'
 sdk: org.freedesktop.Sdk
+#sdk-extensions:
+#  - org.freedesktop.Sdk.Extension.rust-stable
 command: /app/bin/run.sh
 finish-args:
   - --socket=x11
@@ -17,7 +19,7 @@ finish-args:
 build-options:
     env:
         NPM_CONFIG_LOGLEVEL: info
-
+    append-path: /app/lib/sdk/rust-stable/bin
 
 modules:
 
@@ -42,6 +44,7 @@ modules:
         url: https://nodejs.org/dist/v10.15.3/node-v10.15.3.tar.gz
         sha256: db460a63d057ac015b75bb6a879fcbe2fefaaf22afa4b6f6445b9db61ce2270d
 
+  
   # libsasl is not in the org.freedekstop.Platform runtime but needed
   # by deltachat-core.
   - name: cyrus-sasl2
@@ -75,8 +78,43 @@ modules:
     build-options:
       env:
         electron_config_cache: /run/build/delta/npm-cache
+        CARGO_HOME: /run/build/deltachat-core-rust/cargo
     build-commands:
-        - cargo build -p deltachat_ffi --release --locked
+        - cargo build -p deltachat_ffi --release
+    modules:
+        - name: rust
+          cleanup:
+            - /share/info
+            - /share/man
+          buildsystem: simple
+          build-options:
+            prefix: "/app/lib/sdk/rust-stable"
+            env:
+                V: "1"
+          build-commands:
+            - ./install.sh --prefix=/app/lib/sdk/rust-stable --disable-ldconfig --verbose
+
+          sources:
+            - type: archive
+              only-arches: ["i386"]
+              url: https://static.rust-lang.org/dist/rust-nightly-i686-unknown-linux-gnu.tar.gz
+              sha256: 15337776b3645e4b8c8c7ced0bcd1615cf9ad1b9c8b3d0f333620e5401e31aee
+
+            - type: archive
+              only-arches: ["arm"]
+              url: https://static.rust-lang.org/dist/rust-nightly-arm-unknown-linux-gnueabihf.tar.gz.asc
+              sha256: 25337776b3645e4b8c8c7ced0bcd1615cf9ad1b9c8b3d0f333620e5401e31aee
+
+            - type: archive
+              only-arches: ["aarch64"]
+              url: https://static.rust-lang.org/dist/rust-nightly-aarch64-unknown-linux-gnu.tar.gz
+              sha256: 31e6da56e67838fd2874211ae896a433badf67c13a7b68481f1d5f7dedcc5952
+
+            - type: archive
+              only-arches: ["x86_64"]
+              url: https://static.rust-lang.org/dist/rust-nightly-x86_64-unknown-linux-gnu.tar.gz
+              sha256: c4bda3b7835d5b72475950f778c82908110b8bbdd9c23eb75fbc221486d32969
+    
     sources:
       - type: file
         path: Cargo.lock
