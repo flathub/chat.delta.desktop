@@ -70,6 +70,40 @@ modules:
         url: https://ftp.osuosl.org/pub/blfs/conglomeration/cyrus-sasl/cyrus-sasl-2.1.27.tar.gz
         sha256: 26866b1549b00ffd020f188a43c258017fa1c382b3ddadd8201536f72efb05d5
 
+  - name: deltachat-core-rust
+    buildsystem: simple
+    build-options:
+      env:
+        electron_config_cache: /run/build/delta/npm-cache
+    build-commands:
+        - cargo build -p deltachat_ffi --release --locked
+    sources:
+      - type: file
+        path: Cargo.lock
+
+      - type: archive
+        url: https://github.com/deltachat/deltachat-core-rust/archive/1.0.0-alpha.0.tar.gz
+        sha256: 49db29f878091dc8b8563726a8c718b6ae19ce9a6828fa6dad294522add62837
+
+      - generated-sources-rust.json
+
+
+  - name: deltachat-node
+    buildsystem: simple
+    build-options:
+      env:
+        electron_config_cache: /run/build/delta/npm-cache
+        npm_config_nodedir: /app/
+        npm_config_devdir: /app
+        ELECTRON_CACHE: /run/build/delta/npm-cache
+    build-commands:
+        - npm install deltachat-node --dc-system-lib=true
+    sources:
+        - type: archive
+          url: https://github.com/deltachat/deltachat-node/archive/v1.0.0-alpha.0.tar.gz
+          sha256: a13ab6252cea2ab194008c0897b56ff888848c188c8b70224161d67d5f4ff170
+
+
   - name: delta
     buildsystem: simple
     build-options:
