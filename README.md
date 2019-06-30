@@ -55,6 +55,22 @@ done to publish the release.
 ## Upgrading to a new release
 
 
+### Re-generating rust sources
+
+Since flatpak does not allow the build to download things while
+building we have to resolve all the cargo dependencies statically
+beforehand.  This is done by processing the `Cargo.lock` file into the
+`generated-source-rust.json` file:
+
+```
+python3 ../flatpak-builder-tools/cargo/flatpak-cargo-generator.py \
+    -o generated-sources-rust.json \
+    ../deltachat-core-rust/Cargo.lock
+```
+
+Make sure you generate it from the correct downloaded release.
+
+
 ### Re-generating npm sources
 
 Since flatpak does not allow the build to download things while
@@ -64,23 +80,16 @@ beforehand.  This is done by letting npm put the dependencies into a
 converting that into a manifest snipped called
 `generated-sources.json`.
 
-You need to generate the `package-lock.json` file from the
-deltachat-desktop release you need.  Go to the git repository,
-chechout the correct tag and run (e.g. using docker):
-
-```
-docker run --rm -it -u 1000:1000 -v (pwd):/bindings -w /bindings node:11-stretch npm install --package-lock-only
-```
-
-After this move the file to this repository here.
-
-Now to create the `generated-sources.json` file you need a copy of the
+To create the `generated-sources.json` file you need a copy of the
 https://github.com/flatpak/flatpak-builder-tools.git repository and
 invoke the `npm/flatpak-npm-generator.py` script, e.g.:
 
 ```
-python3 ../flatpak-builder-tools/npm/flatpak-npm-generator.py package-lock.json
+python3 ../flatpak-builder-tools/npm/flatpak-npm-generator.py \
+    -o generated-sources-npm.json \
+    npm ../deltachat-desktop-X.Y.Z/package-lock.json
 ```
 
 This will produce the `generated-sources.json` file which is referenced
-in the `chat.delta.desktop.yml` manifest.
+in the `chat.delta.desktop.yml` manifest.  Make sure you generate it
+from the correct downloaded release.
