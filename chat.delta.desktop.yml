@@ -125,7 +125,7 @@ modules:
       # However since we already pull in remark-contributors we can
       # just delete that dependency.  flatpak-npm-generator.py should
       # be fixed really.
-      - sed -i '/remark-contributors.*github:hughsk\/remark-contributors/s/\(github:hughsk\/remark-contributors#\)/git+file:\/home\/flub\/delta\/chat.delta.desktop\/.flatpak-builder\/build\/delta\/flatpak-node\/git-packages\/remark-contributors-/' package-lock.json
+      # - sed -i '/remark-contributors.*github:hughsk\/remark-contributors/s/\(github:hughsk\/remark-contributors#\)/git+file:\/home\/flub\/delta\/chat.delta.desktop\/.flatpak-builder\/build\/delta\/flatpak-node\/git-packages\/remark-contributors-/' package-lock.json
 
       # Install the deltachat-desktop npm package
       - npm install --offline --cache=/run/build/delta/npm-cache/ --verbose --dc-system-lib=true
