@@ -89,6 +89,7 @@ modules:
       - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat.h
       - install -D -m a+r deltachat.pc  /app/lib/pkgconfig/deltachat.pc
       - find /app -name '*delta*.so'
+      - pkg-config --libs deltachat
     modules:
       - name: rust-nightly-2019-06-16
         cleanup:
