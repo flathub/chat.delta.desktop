@@ -85,7 +85,8 @@ modules:
       - type -a cargo
       - rustc --version
       - rustc -vV
-      - cargo build -p deltachat_ffi --release
+      - cargo -Z unstable-options build -p deltachat_ffi --release --out-dir /app/lib/ --verbose
+      - find /app -name '*delta*.so'
     modules:
       - name: rust-nightly-2019-06-16
         cleanup:
