@@ -81,6 +81,10 @@ modules:
         CARGO_HOME: /run/build/deltachat-core-rust/cargo
       append-path: /app/lib/sdk/rust-nightly/bin
     build-commands:
+      - type -a rustc
+      - type -a cargo
+      - rustc --version
+      - rustc -vV
       - cargo build -p deltachat_ffi --release
     modules:
       - name: rust-nightly-2019-06-16
