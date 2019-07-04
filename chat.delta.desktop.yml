@@ -86,7 +86,7 @@ modules:
       - rustc --version
       - rustc -vV
       - cargo -Z unstable-options build -p deltachat_ffi --release --out-dir /app/lib/ --verbose
-      - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat.h
+      - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat/deltachat.h
       - install -D -m a+r deltachat.pc  /app/lib/pkgconfig/deltachat.pc
       - find /app -name '*delta*.so'
       - pkg-config --libs deltachat
