@@ -86,6 +86,8 @@ modules:
       - rustc --version
       - rustc -vV
       - cargo -Z unstable-options build -p deltachat_ffi --release --out-dir /app/lib/ --verbose
+      - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat.h
+      - install -D -m a+r deltachat.pc  /app/lib/pkgconfig/deltachat.pc
       - find /app -name '*delta*.so'
     modules:
       - name: rust-nightly-2019-06-16
@@ -104,6 +106,8 @@ modules:
       - type: archive
         url: https://github.com/deltachat/deltachat-core-rust/archive/1.0.0-alpha.2.tar.gz
         sha256: 7e208b1da7605e73babc2ec0bdc7ea70287bfe224ab87cc621890c433bc604d7
+      - type: file
+        path: deltachat.pc
       - generated-sources-rust.json
 
 
