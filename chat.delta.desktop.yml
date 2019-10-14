@@ -80,6 +80,8 @@ modules:
       env:
         CARGO_HOME: /run/build/deltachat-core-rust/cargo
       append-path: /app/lib/sdk/rust-nightly/bin
+      build-args:
+        - --share=network
     cleanup:
         - /include
     build-commands:
