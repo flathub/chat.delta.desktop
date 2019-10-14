@@ -131,6 +131,8 @@ modules:
         # Tell the chromedriver npm package where we pre-downloaded things.
         ELECTRON_CACHE: /run/build/delta/npm-cache
     build-commands:
+      - node --version
+      - npm --version
       # Ugly hack for remark-contributors.  This is an npm dependency
       # which uses github rather than a published package.  The
       # generated-sources-npm.json tries to fix this by re-writing the
