@@ -93,7 +93,7 @@ modules:
       - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat/deltachat.h
       - find . -name 'deltachat.pc'
       - find /app/ -name 'deltachat.pc'
-      - install -D -m a+r deltachat.pc  /app/lib/pkgconfig/deltachat.pc
+      - install -D -m a+r ./target/release/pkgconfig/deltachat.pc  /app/lib/pkgconfig/deltachat.pc
       - find /app -name '*delta*.so'
       - pkg-config --libs deltachat
     modules:
