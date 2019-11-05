@@ -121,16 +121,16 @@ modules:
     build-options:
       env:
         # Tell electron where we pre-downloaded things.
-        electron_config_cache: /run/build/delta/npm-cache
+        electron_config_cache: /run/build/delta/flatpak-node/npm-cache
 
         # Point node-gyp to our node.js installation so that it won't
         # try to download the headers and source.
         npm_config_nodedir: /app/
         npm_config_devdir: /app
-        npm_config_cache: /run/build/delta/npm-cache/
+        npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
 
         # Tell the chromedriver npm package where we pre-downloaded things.
-        ELECTRON_CACHE: /run/build/delta/npm-cache
+        ELECTRON_CACHE: /run/build/delta/flatpak-node/npm-cache
     build-commands:
       - node --version
       - npm --version
@@ -145,10 +145,10 @@ modules:
       # - sed -i '/remark-contributors.*github:hughsk\/remark-contributors/s/\(github:hughsk\/remark-contributors#\)/git+file:\/home\/flub\/delta\/chat.delta.desktop\/.flatpak-builder\/build\/delta\/flatpak-node\/git-packages\/remark-contributors-/' package-lock.json
 
       # Install the deltachat-desktop npm package
-      - npm cache verify --offline --cache=/run/build/delta/npm-cache/ --verbose
-      - find /run/build/delta/npm-cache/ -type f
-      - npm install --offline --cache=/run/build/delta/npm-cache/ --verbose --dc-system-lib=true
-      - npm run pack --offline --cache=/run/build/delta/npm-cache/ --verbose
+      - npm cache verify
+      - find /run/build/delta/flatpak-node/npm-cache/ -type f | head 
+      - npm install --offline --verbose --dc-system-lib=true
+      - npm run pack --offline --verbose
       - mkdir -p /app/delta
       - cp -ar dist/linux-unpacked/* /app/delta/
 
