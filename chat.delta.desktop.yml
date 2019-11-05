@@ -127,6 +127,7 @@ modules:
         # try to download the headers and source.
         npm_config_nodedir: /app/
         npm_config_devdir: /app
+        npm_config_cache: /run/build/delta/npm-cache/
 
         # Tell the chromedriver npm package where we pre-downloaded things.
         ELECTRON_CACHE: /run/build/delta/npm-cache
@@ -144,6 +145,8 @@ modules:
       # - sed -i '/remark-contributors.*github:hughsk\/remark-contributors/s/\(github:hughsk\/remark-contributors#\)/git+file:\/home\/flub\/delta\/chat.delta.desktop\/.flatpak-builder\/build\/delta\/flatpak-node\/git-packages\/remark-contributors-/' package-lock.json
 
       # Install the deltachat-desktop npm package
+      - npm cache verify --offline --cache=/run/build/delta/npm-cache/ --verbose
+      - find /run/build/delta/npm-cache/ -type f
       - npm install --offline --cache=/run/build/delta/npm-cache/ --verbose --dc-system-lib=true
       - npm run pack --offline --cache=/run/build/delta/npm-cache/ --verbose
       - mkdir -p /app/delta
