@@ -147,7 +147,7 @@ modules:
       # Install the deltachat-desktop npm package
       - npm cache verify
       - find /run/build/delta/flatpak-node/npm-cache/ -type f | head 
-      - npm install --offline --verbose --dc-system-lib=true
+      - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp npm install --offline --verbose --dc-system-lib=true
       - npm run pack --offline --verbose
       - mkdir -p /app/delta
       - cp -ar dist/linux-unpacked/* /app/delta/
@@ -164,14 +164,15 @@ modules:
       # Taken from https://github.com/electron/chromedriver/issues/28#issuecomment-42783936
       - type: file
         only-arches: ["x86_64"]
-        url: https://github.com/electron/electron/releases/download/v3.0.0/chromedriver-v3.0.0-linux-x64.zip
-        sha256: 31c59d42d80001721dbdbf2f2c8b3b527bdb8df38c766b020329cb46cf1d3bb4
-        dest: npm-cache
+        url: https://github.com/electron/electron/releases/download/v4.0.0/chromedriver-v4.0.0-linux-x64.zip
+        sha256: 221db18ea2f3a8267f9a57ee61a9d5a6df09824c61bf8cefa360502cae503d7c
+        dest: flatpak-node/npm-cache
+
       - type: file
-        url: https://github.com/electron/electron/releases/download/v3.0.0/SHASUMS256.txt
-        sha256: 6560dd88350be568ff29cdb1cdb05e68304268b821b1d5040f9a5fde901ef670
-        dest-filename: SHASUMS256.txt-3.0.0
-        dest: npm-cache
+        url: https://github.com/electron/electron/releases/download/v4.0.0/SHASUMS256.txt
+        sha256: 52dfb903bf248db3b2c94cdcddd310034cd743098c13b5b10c71272ad6f812d1
+        dest-filename: SHASUMS256.txt-4.0.0
+        dest: flatpak-node/npm-cache
 
       - type: archive
         url: https://github.com/deltachat/deltachat-desktop/archive/v0.840.0.tar.gz
