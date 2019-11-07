@@ -121,7 +121,7 @@ modules:
     build-options:
       env:
         # Tell electron where we pre-downloaded things.
-        electron_config_cache: /run/build/delta/flatpak-node/npm-cache
+        electron_config_cache: /run/build/delta/flatpak-node/electron-cache
 
         # Point node-gyp to our node.js installation so that it won't
         # try to download the headers and source.
@@ -130,7 +130,7 @@ modules:
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
 
         # Tell the chromedriver npm package where we pre-downloaded things.
-        ELECTRON_CACHE: /run/build/delta/flatpak-node/npm-cache
+        ELECTRON_CACHE: /run/build/delta/flatpak-node/electron-cache
     build-commands:
       - node --version
       - npm --version
