@@ -5,6 +5,8 @@ base-version: '19.08'
 runtime: org.freedesktop.Platform
 runtime-version: '19.08'
 sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.node10
 command: /app/bin/run.sh
 finish-args:
   - --socket=x11
@@ -16,10 +18,18 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
 
 build-options:
+    append-path: /usr/lib/sdk/node10/bin
     env:
         NPM_CONFIG_LOGLEVEL: info
-
+        npm_config_nodedir: '/usr/lib/sdk/node10'
+        
 modules:
+  # Copied from https://github.com/flatpak/flatpak-builder-tools/blob/ca5863a21454e81b04218f22cea83b2f78abed0b/node/vanilla-quick-start/org.electronjs.ElectronQuickStart.yaml#L31
+  # We might look into replacing our own build with this SDK version
+  - name: node
+    buildsystem: simple
+    build-commands:
+      - '/usr/lib/sdk/node10/install-sdk.sh'
 
   # Build node.js.  We need to dynamically link to OpenSSL and libz
   # because our deltachat-node extension module also uses these
