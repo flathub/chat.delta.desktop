@@ -31,12 +31,8 @@ modules:
     build-commands:
       - '/usr/lib/sdk/node10/install-sdk.sh'
 
-  # Build node.js.  We need to dynamically link to OpenSSL and libz
-  # because our deltachat-node extension module also uses these
-  # libraries and we need to use the same objects for each symbol.
-  # For deltachat-core-rust this is no longer true, but it's still
-  # better to re-use these libraries from the Platform SDK rather than
-  # increase the download size of this application.
+  # Somehow, using the node from the Sdk does not make it build :(
+  # So we build our own nodejs.
   - name: nodejs
     buildsystem: autotools
     config-opts:
@@ -56,35 +52,6 @@ modules:
         sha256: db5a5e03a815b84a1266a4b48bb6a6d887175705f84fd2472f0d28e5e305a1f8
 
   
-  # libsasl is not in the org.freedekstop.Platform runtime but needed
-  # by deltachat-core.
-  - name: cyrus-sasl2
-    disabled: true
-    buildsystem: autotools
-    config-opts:
-      # Disable a number of obsolete things, enable some required so
-      # we get build-failures if they are not present.
-      - --enable-shared
-      - --disable-cmulocal
-      - --disable-sample
-      - --disable-obsolete_cram_attr
-      - --disable-obsolete_digest_attr
-      - --disable-alwaystrue
-      - --enable-checkapop
-      - --enable-cram
-      - --enable-digest
-      - --enable-scram
-      - --enable-plain
-      - --enable-anon
-      - --enable-login
-    cleanup:
-      - /include
-      - /share
-    sources:
-      - type: archive
-        url: https://ftp.osuosl.org/pub/blfs/conglomeration/cyrus-sasl/cyrus-sasl-2.1.27.tar.gz
-        sha256: 26866b1549b00ffd020f188a43c258017fa1c382b3ddadd8201536f72efb05d5
-
   - name: deltachat-core-rust
     buildsystem: simple
     build-options:
@@ -145,20 +112,8 @@ modules:
     build-commands:
       - node --version
       - npm --version
-      # Ugly hack for remark-contributors.  This is an npm dependency
-      # which uses github rather than a published package.  The
-      # generated-sources-npm.json tries to fix this by re-writing the
-      # URL to be local, but it does not handle this for the
-      # dependency of remark-git-contributors on remark-contributors.
-      # However since we already pull in remark-contributors we can
-      # just delete that dependency.  flatpak-npm-generator.py should
-      # be fixed really.
-      # - sed -i '/remark-contributors.*github:hughsk\/remark-contributors/s/\(github:hughsk\/remark-contributors#\)/git+file:\/home\/flub\/delta\/chat.delta.desktop\/.flatpak-builder\/build\/delta\/flatpak-node\/git-packages\/remark-contributors-/' package-lock.json
-
-      # Install the deltachat-desktop npm package
       - npm cache verify
-      - find /run/build/delta/flatpak-node/npm-cache/ -type f | head 
-      - find /app -name 'deltachat.h'  # deltachat-ffi/deltachat.h is missing...
+      # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
       - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp npm install --offline --verbose --dc-system-lib=true
       - npm run pack --offline --verbose
       - mkdir -p /app/delta
@@ -219,6 +174,7 @@ modules:
       - type: file
         path: package-lock.json
 
+      # https://github.com/deltachat/deltachat-desktop/pull/1125
       - type: file
         dest: static
         path: chat.delta.desktop.appdata.xml
