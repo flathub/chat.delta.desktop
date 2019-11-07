@@ -147,6 +147,7 @@ modules:
       # Install the deltachat-desktop npm package
       - npm cache verify
       - find /run/build/delta/flatpak-node/npm-cache/ -type f | head 
+      - find /app -name 'deltachat.h'  # deltachat-ffi/deltachat.h is missing...
       - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp npm install --offline --verbose --dc-system-lib=true
       - npm run pack --offline --verbose
       - mkdir -p /app/delta
