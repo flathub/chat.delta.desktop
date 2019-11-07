@@ -80,14 +80,27 @@ beforehand.  This is done by letting npm put the dependencies into a
 converting that into a manifest snipped called
 `generated-sources.json`.
 
+Upstream ships the package-lock.json file so it should not be
+necessary to generate it.  However, sometimes the file is not
+updated in lockstep with package.json and then dependencies will
+be missing during build time.
+
+Current version of npm (6.9.0) have problems generating a clean
+lockfile, cf. https://github.com/RocketChat/Rocket.Chat/issues/15408.
+In order to fix up the file, you may need to run something like
+
+    cat package-lock.json | jq 'walk(if type == "object" then with_entries(if (.value | type) == "object" and .value.resolved == false then .value.resolved = "https://registry.npmjs.org/\(.key)/-/\(.key)-\(.value.version).tgz" else . end) else . end)' > package-lock-new.json
+
 To create the `generated-sources.json` file you need a copy of the
 https://github.com/flatpak/flatpak-builder-tools.git repository and
-invoke the `npm/flatpak-npm-generator.py` script, e.g.:
+invoke the `node/flatpak-node-generator.py` script, e.g.:
 
 ```
-python3 ../flatpak-builder-tools/npm/flatpak-npm-generator.py \
+python3 ../flatpak-builder-tools/node/flatpak-node-generator.py \
     -o generated-sources-npm.json \
-    npm ../deltachat-desktop-X.Y.Z/package-lock.json
+    --recursive \
+    --split \
+    npm package-lock-new.json
 ```
 
 This will produce the `generated-sources.json` file which is referenced
