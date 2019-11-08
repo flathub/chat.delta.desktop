@@ -104,5 +104,6 @@ python3 ../flatpak-builder-tools/node/flatpak-node-generator.py \
 ```
 
 This will produce the `generated-sources.json` file which is referenced
-in the `chat.delta.desktop.yml` manifest.  Make sure you generate it
-from the correct downloaded release.
+in the `chat.delta.desktop.yml` manifest.  Because that file is quite big
+and Github seems to not like big files all too much, the generator offers
+a --split option, cf. https://github.com/flatpak/flatpak-builder-tools/blob/204309e0066a66a6f3c9ad7c5edb870513a7504c/node/README.md#splitting-mode.
