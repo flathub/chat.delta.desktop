@@ -1,9 +1,12 @@
 app-id: chat.delta.desktop
-base: io.atom.electron.BaseApp
-base-version: '18.08'
+# I have no idea, actually, what a base does and whether we need it.
+base: org.electronjs.Electron2.BaseApp
+base-version: '19.08'
 runtime: org.freedesktop.Platform
-runtime-version: '18.08'
+runtime-version: '19.08'
 sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.node10
 command: /app/bin/run.sh
 finish-args:
   - --socket=x11
@@ -15,15 +18,21 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
 
 build-options:
+    append-path: /usr/lib/sdk/node10/bin
     env:
         NPM_CONFIG_LOGLEVEL: info
-
-
+        npm_config_nodedir: '/usr/lib/sdk/node10'
+        
 modules:
+  # Copied from https://github.com/flatpak/flatpak-builder-tools/blob/ca5863a21454e81b04218f22cea83b2f78abed0b/node/vanilla-quick-start/org.electronjs.ElectronQuickStart.yaml#L31
+  # We might look into replacing our own build with this SDK version
+  - name: node
+    buildsystem: simple
+    build-commands:
+      - '/usr/lib/sdk/node10/install-sdk.sh'
 
-  # Build node.js.  We need to dynamically link to OpenSSL and libz
-  # because our deltachat-node extension module also uses these
-  # libraries and we need to use the same objects for each symbol.
+  # Somehow, using the node from the Sdk does not make it build :(
+  # So we build our own nodejs.
   - name: nodejs
     buildsystem: autotools
     config-opts:
@@ -39,55 +48,74 @@ modules:
       - /app/lib/node_modules/npm/scripts
     sources:
       - type: archive
-        url: https://nodejs.org/dist/v10.15.3/node-v10.15.3.tar.gz
-        sha256: db460a63d057ac015b75bb6a879fcbe2fefaaf22afa4b6f6445b9db61ce2270d
+        url: https://nodejs.org/dist/v10.16.3/node-v10.16.3.tar.gz
+        sha256: db5a5e03a815b84a1266a4b48bb6a6d887175705f84fd2472f0d28e5e305a1f8
 
-  # libsasl is not in the org.freedekstop.Platform runtime but needed
-  # by deltachat-core.
-  - name: cyrus-sasl2
-    buildsystem: autotools
-    config-opts:
-      # Disable a number of obsolete things, enable some required so
-      # we get build-failures if they are not present.
-      - --enable-shared
-      - --disable-cmulocal
-      - --disable-sample
-      - --disable-obsolete_cram_attr
-      - --disable-obsolete_digest_attr
-      - --disable-alwaystrue
-      - --enable-checkapop
-      - --enable-cram
-      - --enable-digest
-      - --enable-scram
-      - --enable-plain
-      - --enable-anon
-      - --enable-login
+  
+  - name: deltachat-core-rust
+    buildsystem: simple
+    build-options:
+      env:
+        CARGO_HOME: /run/build/deltachat-core-rust/cargo
+      append-path: /app/lib/sdk/rust-nightly/bin
+      #build-args:
+      #  - --share=network
     cleanup:
-      - /include
-      - /share
+        - /include
+    build-commands:
+      - type -a rustc
+      - type -a cargo
+      - rustc --version
+      - rustc -vV
+      - cargo -Z unstable-options build -p deltachat_ffi --release --out-dir /app/lib/ --verbose
+      - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat-ffi/deltachat.h
+      - find . -name 'deltachat.pc'
+      - find /app/ -name 'deltachat.pc'
+      - install -D -m a+r ./target/release/pkgconfig/deltachat.pc  /app/lib/pkgconfig/deltachat.pc
+      - find /app -name '*delta*.so'
+      - pkg-config --libs deltachat
+    modules:
+      - name: rust-nightly-2019-06-16
+        cleanup:
+          # We don't need rust in the final application, only build-time
+          - /lib/sdk/rust-nightly
+        buildsystem: simple
+        build-commands:
+          - ./install.sh --prefix=/app/lib/sdk/rust-nightly --disable-ldconfig --verbose
+        sources:
+          - type: archive
+            only-arches: ["x86_64"]
+            url: https://static.rust-lang.org/dist/2019-08-13/rust-nightly-x86_64-unknown-linux-gnu.tar.gz
+            sha256: 8c714c2fc359fe55f121859dbefc5ac0f722c10b7e1ebf5657bf455c57be5376
     sources:
       - type: archive
-        url: https://ftp.osuosl.org/pub/blfs/conglomeration/cyrus-sasl/cyrus-sasl-2.1.27.tar.gz
-        sha256: 26866b1549b00ffd020f188a43c258017fa1c382b3ddadd8201536f72efb05d5
+        url: https://github.com/deltachat/deltachat-core-rust/archive/1.0.0-beta.1.tar.gz
+        sha256: 0dedd2c94a0bc60d6e485dc9d6fbe3f0777cc51401176f34171908601e375671
+      - generated-sources-rust.json
+
 
   - name: delta
     buildsystem: simple
     build-options:
       env:
         # Tell electron where we pre-downloaded things.
-        electron_config_cache: /run/build/delta/npm-cache
+        electron_config_cache: /run/build/delta/flatpak-node/electron-cache
 
         # Point node-gyp to our node.js installation so that it won't
         # try to download the headers and source.
         npm_config_nodedir: /app/
         npm_config_devdir: /app
+        npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
 
         # Tell the chromedriver npm package where we pre-downloaded things.
-        ELECTRON_CACHE: /run/build/delta/npm-cache
+        ELECTRON_CACHE: /run/build/delta/flatpak-node/electron-cache
     build-commands:
-      # Install the deltachat-desktop npm package
-      - npm install --offline --cache=/run/build/delta/npm-cache/ --verbose
-      - npm run pack --offline --cache=/run/build/delta/npm-cache/ --verbose
+      - node --version
+      - npm --version
+      - npm cache verify
+      # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
+      - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp npm install --offline --verbose --dc-system-lib=true
+      - npm run pack --offline --verbose
       - mkdir -p /app/delta
       - cp -ar dist/linux-unpacked/* /app/delta/
 
@@ -102,27 +130,25 @@ modules:
       # use ELECTRON_CACHE to point to them.
       # Taken from https://github.com/electron/chromedriver/issues/28#issuecomment-42783936
       - type: file
-        url: https://github.com/electron/electron/releases/download/v3.0.0/chromedriver-v3.0.0-linux-x64.zip
-        sha256: 31c59d42d80001721dbdbf2f2c8b3b527bdb8df38c766b020329cb46cf1d3bb4
-        dest: npm-cache
+        only-arches: ["x86_64"]
+        url: https://github.com/electron/electron/releases/download/v4.0.0/chromedriver-v4.0.0-linux-x64.zip
+        sha256: 221db18ea2f3a8267f9a57ee61a9d5a6df09824c61bf8cefa360502cae503d7c
+        dest: flatpak-node/electron-cache
+
       - type: file
-        url: https://github.com/electron/electron/releases/download/v3.0.0/SHASUMS256.txt
-        sha256: 6560dd88350be568ff29cdb1cdb05e68304268b821b1d5040f9a5fde901ef670
-        dest-filename: SHASUMS256.txt-3.0.0
-        dest: npm-cache
+        url: https://github.com/electron/electron/releases/download/v4.0.0/SHASUMS256.txt
+        sha256: 52dfb903bf248db3b2c94cdcddd310034cd743098c13b5b10c71272ad6f812d1
+        dest-filename: SHASUMS256.txt-4.0.0
+        dest: flatpak-node/electron-cache
 
       - type: archive
-        url: https://github.com/deltachat/deltachat-desktop/archive/v0.102.0.tar.gz
-        sha256: 7ada40529cc998d37c7ea16e0fac1b5bd5b562ceb4099ffe9769481e15a92f4f
+        url: https://github.com/deltachat/deltachat-desktop/archive/v0.840.0.tar.gz
+        sha256: 16ac2708d1a8728217e1672124e6b94898ebf8c02728b3563ace702f993ad98d
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
         sha256: 1787a9dfdd80301ae5dbe48105bd58215c6552bd8ecfa4efd15fe6d31ba31274
         dest-filename: delta-v7-pathed.svg
-
-      - type: file
-        path: package-lock.json
-        dest-filename: package-lock.json
 
       - type: file
         path: chat.delta.desktop.desktop
@@ -131,17 +157,25 @@ modules:
         path: chat.delta.desktop.256.png
         dest-filename: chat.delta.desktop.png
 
-      # We overwrite upstream's appdata file because it lacks the releases
-      - type: file
-        path: chat.delta.desktop.appdata.xml
-        dest-filename: static/chat.delta.desktop.appdata.xml
-
       - type: script
         dest-filename: run.sh
         commands:
           - /app/delta/deltachat-desktop
 
       # All the generated npm downloads, see README.md how to create
-      # this file.
-      # This needs to go to the bottom so that the commands in that file can see package.json and friends.
-      - generated-sources.json
+      # this file.  This needs to go to the bottom so that the
+      # commands in that file can see package.json and friends.
+      - generated-sources-npm.0.json
+      - generated-sources-npm.1.json
+      - generated-sources-npm.2.json
+
+
+      # https://github.com/deltachat/deltachat-desktop/issues/1111
+      - type: file
+        path: package-lock.json
+
+      # https://github.com/deltachat/deltachat-desktop/pull/1125
+      - type: file
+        dest: static
+        path: chat.delta.desktop.appdata.xml
+
