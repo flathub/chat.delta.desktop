@@ -25,9 +25,10 @@ and `base-version` properties for the current version numbers.
 
 ```
 flatpak install flathub \
-    org.freedesktop.Platform//18.08 \
-    org.freedesktop.Sdk//18.08 \
-    io.atom.electron.BaseApp//18.08
+    org.freedesktop.Platform//19.08 \
+    org.freedesktop.Sdk//19.08 \
+    org.electronjs.Electron2.BaseApp//19.08 \
+    org.freedesktop.Sdk.Extension.node10//19.08
 ```
 
 

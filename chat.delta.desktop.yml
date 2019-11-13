@@ -16,61 +16,33 @@ finish-args:
   - --filesystem=home
   - --share=network
   - --talk-name=org.freedesktop.Notifications
-
-build-options:
-    append-path: /usr/lib/sdk/node10/bin
-    env:
-        NPM_CONFIG_LOGLEVEL: info
-        npm_config_nodedir: '/usr/lib/sdk/node10'
         
 modules:
   # Copied from https://github.com/flatpak/flatpak-builder-tools/blob/ca5863a21454e81b04218f22cea83b2f78abed0b/node/vanilla-quick-start/org.electronjs.ElectronQuickStart.yaml#L31
-  # We might look into replacing our own build with this SDK version
   - name: node
     buildsystem: simple
     build-commands:
       - '/usr/lib/sdk/node10/install-sdk.sh'
 
-  # Somehow, using the node from the Sdk does not make it build :(
-  # So we build our own nodejs.
-  - name: nodejs
-    buildsystem: autotools
-    config-opts:
-      - --shared-openssl
-      - --shared-zlib
-    cleanup:
-      - /include
-      - /share
-      - /app/lib/node_modules/npm/changelogs
-      - /app/lib/node_modules/npm/doc
-      - /app/lib/node_modules/npm/html
-      - /app/lib/node_modules/npm/man
-      - /app/lib/node_modules/npm/scripts
-    sources:
-      - type: archive
-        url: https://nodejs.org/dist/v10.16.3/node-v10.16.3.tar.gz
-        sha256: db5a5e03a815b84a1266a4b48bb6a6d887175705f84fd2472f0d28e5e305a1f8
-
-  
   - name: deltachat-core-rust
     buildsystem: simple
     build-options:
       env:
         CARGO_HOME: /run/build/deltachat-core-rust/cargo
+
+        # deltachat-ffi/build.rs uses this to create deltachat.pc,
+        # should locate deltachat.so.
+        PREFIX: /app/lib
       append-path: /app/lib/sdk/rust-nightly/bin
-      #build-args:
-      #  - --share=network
     cleanup:
         - /include
+        - /lib/libdeltachat.a
     build-commands:
       - type -a rustc
       - type -a cargo
       - rustc --version
-      - rustc -vV
-      - cargo -Z unstable-options build -p deltachat_ffi --release --out-dir /app/lib/ --verbose
+      - cargo -Z unstable-options build -p deltachat_ffi --release --out-dir $PREFIX --verbose
       - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat-ffi/deltachat.h
-      - find . -name 'deltachat.pc'
-      - find /app/ -name 'deltachat.pc'
       - install -D -m a+r ./target/release/pkgconfig/deltachat.pc  /app/lib/pkgconfig/deltachat.pc
       - find /app -name '*delta*.so'
       - pkg-config --libs deltachat
@@ -97,15 +69,14 @@ modules:
   - name: delta
     buildsystem: simple
     build-options:
+      append-path: /usr/lib/sdk/node10/bin
       env:
-        # Tell electron where we pre-downloaded things.
-        electron_config_cache: /run/build/delta/flatpak-node/electron-cache
+        NPM_CONFIG_LOGLEVEL: info
+        npm_config_nodedir: /usr/lib/sdk/node10
 
-        # Point node-gyp to our node.js installation so that it won't
-        # try to download the headers and source.
-        npm_config_nodedir: /app/
-        npm_config_devdir: /app
+        # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
+        electron_config_cache: /run/build/delta/flatpak-node/electron-cache
 
         # Tell the chromedriver npm package where we pre-downloaded things.
         ELECTRON_CACHE: /run/build/delta/flatpak-node/electron-cache
