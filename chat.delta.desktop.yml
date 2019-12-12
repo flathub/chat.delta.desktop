@@ -41,7 +41,7 @@ modules:
       - type -a rustc
       - type -a cargo
       - rustc --version
-      - cargo -Z unstable-options build -p deltachat_ffi --release --out-dir $PREFIX --verbose
+      - cargo --offline -Z unstable-options build -p deltachat_ffi --release --out-dir $PREFIX --verbose
       - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat-ffi/deltachat.h
       - install -D -m a+r ./target/release/pkgconfig/deltachat.pc  /app/lib/pkgconfig/deltachat.pc
       - find /app -name '*delta*.so'
@@ -57,12 +57,13 @@ modules:
         sources:
           - type: archive
             only-arches: ["x86_64"]
-            url: https://static.rust-lang.org/dist/2019-08-13/rust-nightly-x86_64-unknown-linux-gnu.tar.gz
-            sha256: 8c714c2fc359fe55f121859dbefc5ac0f722c10b7e1ebf5657bf455c57be5376
+            url: https://static.rust-lang.org/dist/2019-11-06/rust-nightly-x86_64-unknown-linux-gnu.tar.gz
+            sha256: 1ab1dc265d3cfa0836dd40a844e8d5288839db16d1acb799b5508a15dd77e303
+
     sources:
       - type: archive
-        url: https://github.com/deltachat/deltachat-core-rust/archive/1.0.0-beta.1.tar.gz
-        sha256: 0dedd2c94a0bc60d6e485dc9d6fbe3f0777cc51401176f34171908601e375671
+        url: https://github.com/deltachat/deltachat-core-rust/archive/1.0.0-beta14.tar.gz
+        sha256: b57ffefe7825bd709e44ca7cbcbb688b1826e2f718505bf53a0a4fde3ebb39f9
       - generated-sources-rust.json
 
 
@@ -113,8 +114,8 @@ modules:
         dest: flatpak-node/electron-cache
 
       - type: archive
-        url: https://github.com/deltachat/deltachat-desktop/archive/v0.840.0.tar.gz
-        sha256: 16ac2708d1a8728217e1672124e6b94898ebf8c02728b3563ace702f993ad98d
+        url: https://github.com/deltachat/deltachat-desktop/archive/v0.900.0.tar.gz
+        sha256: 7fae82d59c50feadef9f8230866bd2570beb4eaa59c304b5effe15aaef34a509
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
