@@ -24,48 +24,7 @@ modules:
     build-commands:
       - '/usr/lib/sdk/node10/install-sdk.sh'
 
-  - name: deltachat-core-rust
-    buildsystem: simple
-    build-options:
-      env:
-        CARGO_HOME: /run/build/deltachat-core-rust/cargo
-
-        # deltachat-ffi/build.rs uses this to create deltachat.pc,
-        # should locate deltachat.so.
-        PREFIX: /app/lib
-      append-path: /app/lib/sdk/rust-nightly/bin
-    cleanup:
-        - /include
-        - /lib/libdeltachat.a
-    build-commands:
-      - type -a rustc
-      - type -a cargo
-      - rustc --version
-      - cargo --offline -Z unstable-options build -p deltachat_ffi --release --out-dir $PREFIX --verbose
-      - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat-ffi/deltachat.h
-      - install -D -m a+r ./target/release/pkgconfig/deltachat.pc  /app/lib/pkgconfig/deltachat.pc
-      - find /app -name '*delta*.so'
-      - pkg-config --libs deltachat
-    modules:
-      - name: rust-nightly-2019-06-16
-        cleanup:
-          # We don't need rust in the final application, only build-time
-          - /lib/sdk/rust-nightly
-        buildsystem: simple
-        build-commands:
-          - ./install.sh --prefix=/app/lib/sdk/rust-nightly --disable-ldconfig --verbose
-        sources:
-          - type: archive
-            only-arches: ["x86_64"]
-            url: https://static.rust-lang.org/dist/2019-11-06/rust-nightly-x86_64-unknown-linux-gnu.tar.gz
-            sha256: 1ab1dc265d3cfa0836dd40a844e8d5288839db16d1acb799b5508a15dd77e303
-
-    sources:
-      - type: archive
-        url: https://github.com/deltachat/deltachat-core-rust/archive/1.0.0-beta14.tar.gz
-        sha256: b57ffefe7825bd709e44ca7cbcbb688b1826e2f718505bf53a0a4fde3ebb39f9
-      - generated-sources-rust.json
-
+  - deltachat-core-rust.yaml
 
   - name: delta
     buildsystem: simple
