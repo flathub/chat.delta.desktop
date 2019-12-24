@@ -2,6 +2,8 @@ name: deltachat-core-rust
 buildsystem: simple
 build-options:
   env:
+    # It does not work to dereference the variable here :-/
+    # CARGO_HOME: $FLATPAK_BUILDER_BUILDDIR/cargo
     CARGO_HOME: /run/build/deltachat-core-rust/cargo
 
     # deltachat-ffi/build.rs uses this to create deltachat.pc,
@@ -15,6 +17,10 @@ build-commands:
   - type -a rustc
   - type -a cargo
   - rustc --version
+  # If "fetch" doesn't work while being offline, then the build is unlikely to work either.
+  - cargo --offline -Z unstable-options fetch --manifest-path deltachat-ffi/Cargo.toml  --verbose --verbose
+  # Vendorising doesn't seem to work offline, even though fetch and building work. So don't attempt to re-vendor.
+  # - cargo --offline -Z unstable-options vendor --manifest-path deltachat-ffi/Cargo.toml  --verbose
   - cargo --offline -Z unstable-options build -p deltachat_ffi --release --out-dir $PREFIX --verbose
   - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat-ffi/deltachat.h
   - install -D -m a+r ./target/release/pkgconfig/deltachat.pc  /app/lib/pkgconfig/deltachat.pc
