@@ -1,6 +1,12 @@
 [
     {
         "type": "file",
+        "url": "data:%5Bsource.crates-io%5D%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.vendored-sources%5D%0Adirectory%20%3D%20%22cargo/vendor%22%0A",
+        "dest": "cargo",
+        "dest-filename": "config"
+    },
+    {
+        "type": "file",
         "url": "https://static.crates.io/crates/adler32/adler32-1.0.4.crate",
         "sha256": "5d2e7343e7fc9de883d1b0341e0b13970f764c14101234857d2ddafa1cb1cac2",
         "dest": "cargo/vendor",
@@ -79,19 +85,6 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/anyhow/anyhow-1.0.25.crate",
-        "sha256": "9267dff192e68f3399525901e709a48c1d3982c9c072fa32f2127a0cb0babf14",
-        "dest": "cargo/vendor",
-        "dest-filename": "anyhow-1.0.25.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%229267dff192e68f3399525901e709a48c1d3982c9c072fa32f2127a0cb0babf14%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/anyhow-1.0.25",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
         "url": "https://static.crates.io/crates/arrayref/arrayref-0.3.5.crate",
         "sha256": "0d382e583f07208808f6b1249e60848879ba3543f57c32277bf52d69c2f0f0ee",
         "dest": "cargo/vendor",
@@ -158,75 +151,39 @@
     {
         "type": "git",
         "url": "https://github.com/async-email/async-imap",
-        "commit": "377d40837028b454c6365ff13e3f35cc341a908e",
-        "dest": "cargo/vendor/async-imap"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "if test -d cargo/vendor/async-imap/async-imap; then mv cargo/vendor/async-imap cargo/vendor/async-imap.bak; cp -ar --dereference --reflink=auto cargo/vendor/async-imap.bak/async-imap cargo/vendor/async-imap; rm -r cargo/vendor/async-imap.bak; fi"
-        ]
+        "commit": "50e843113e3a67e924a8a14c477833da3ebc1b44",
+        "dest": "cargo/git/db/async-imap-d663ba60b0093518"
     },
     {
         "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22.cirrus.yml%22%3A%224b73c766d5c15ed1e8d81d9912de91d07d7bb3c3f26c7bac7f7c880634d85e96%22%2C%22.github/workflows/ci.yml%22%3A%22105df61191de00fd2f2d8efbc61c7d8f87682c013e8fb1a3cb9f369ea3e8d864%22%2C%22Cargo.toml%22%3A%22a776972dffe9a176f5abd88e867bc7f146d9dea2adaefc6151b85f7b8c28ca81%22%2C%22LICENSE-APACHE%22%3A%22a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2%22%2C%22LICENSE-MIT%22%3A%224e0ec88980aac272d80e61a33cb695cf40dbb8768a5973e6c077be73912bd9f0%22%2C%22README.md%22%3A%22bb01168a0b7c8655888a12f05917b895b575af0f34bafada4fb84d97dfc86ebe%22%2C%22azure-pipelines.yml%22%3A%220e8b59f9145b11afd761924b449bd5a88dbd04abc3a25d202a8e01627068f556%22%2C%22examples/README.md%22%3A%22aa41d4c53873654fee2b53240516331704e7dfbc3d39451f1d3f7a9e90b08d17%22%2C%22examples/basic.rs%22%3A%2288b441e23617eb75f12388402333726ed146a1f5d643fb4496e7314458f6ee31%22%2C%22examples/gmail_oauth2.rs%22%3A%227f56b9a2d9016a91b785d3aa42ba146ef60a60d4fc67e14f70a6c9d9af6ec4cf%22%2C%22examples/idle.rs%22%3A%22845939d1aaf520e476d21dea968a1aed90dcdf7fe726bb091cd49abcd2c2734a%22%2C%22rustfmt.toml%22%3A%22d8e7f616455a670ba75e3e94bf6f88f4c168c481664d12501820c7dfff5c3cc2%22%2C%22src/authenticator.rs%22%3A%22151dfc5f3b1e8ad5822db04fd6bc8ad4553c1c67fffb35a805de81439408536c%22%2C%22src/client.rs%22%3A%22a340cd04955ef2f878a401b41780551e596637e7f8bcfabb76d5eaf454a9734f%22%2C%22src/codec.rs%22%3A%223ea7ff77e67d3b087c83e141c2b7d7b113cc98c155e5d59f692342d180e7e4c5%22%2C%22src/error.rs%22%3A%22534fedc27091e7dc8aef7232dbc38e7491aeb72a72c2010bdd4a7a30f187270a%22%2C%22src/extensions/idle.rs%22%3A%22a18ab1fce5e10a921604ceaa40db0d43ecc6f067fc50e864cbc10381d57ae13c%22%2C%22src/extensions/mod.rs%22%3A%22c89dfa94f4caa2f9574a86afa89794e62a015be4cdbd729fa667a46a32008405%22%2C%22src/lib.rs%22%3A%22679212426a40442cd8bbc1f273c0022e665aacb51c1209e85b69060424adb602%22%2C%22src/mock_stream.rs%22%3A%2237ca6d969dc527dc558f36475f550a7d2f75e8f3e32f11a185f48c7c16e40e40%22%2C%22src/parse.rs%22%3A%22e845e672bb26137c8d45bc2d660d6d9832cb634e81d06f8f4bf360e64b5c10d5%22%2C%22src/types/capabilities.rs%22%3A%229a15a5871bdd289b299abdbe9b4f36dcc9415e6860f4f9d9d7470a469548de51%22%2C%22src/types/fetch.rs%22%3A%22a62589821604153bf82c4f1dd4a409e4f7f82604bc84bafdeac64dfb424d84e1%22%2C%22src/types/mailbox.rs%22%3A%2222392bc5c0ca038342a7b9f509a788f85ddb03cf48a95a198ab44ae6aa03a036%22%2C%22src/types/mod.rs%22%3A%22afbec0507aff166316c5fd32f8599f146fa501f819c6946e34069a5a8b917658%22%2C%22src/types/name.rs%22%3A%22a4e172be4fe790a687375abd98675f6095cb6908793c2b72fa771cdf53e52695%22%2C%22tests/imap_integration.rs%22%3A%226b29e201a8364b6e135fb5eb5d85cc2a88f09503338dbc5851287eea1815e7fa%22%7D%2C%22package%22%3Anull%7D",
-        "dest": "cargo/vendor/async-imap",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/async-imap/.git"
-        ]
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/async-macros/async-macros-2.0.0.crate",
-        "sha256": "644a5a8de80f2085a1e7e57cd1544a2a7438f6e003c0790999bd43b92a77cdb2",
+        "url": "https://static.crates.io/crates/async-native-tls/async-native-tls-0.1.1.crate",
+        "sha256": "a29e9e4ed87f4070dd6099d0bd5edfc7692c94442c80d656b50a802c6fde23b7",
         "dest": "cargo/vendor",
-        "dest-filename": "async-macros-2.0.0.crate"
+        "dest-filename": "async-native-tls-0.1.1.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22644a5a8de80f2085a1e7e57cd1544a2a7438f6e003c0790999bd43b92a77cdb2%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/async-macros-2.0.0",
+        "url": "data:%7B%22package%22%3A%20%22a29e9e4ed87f4070dd6099d0bd5edfc7692c94442c80d656b50a802c6fde23b7%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/async-native-tls-0.1.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "git",
         "url": "https://github.com/async-email/async-smtp",
-        "commit": "b2c9e8a1a817575d3911152103692ec3d033fd96",
-        "dest": "cargo/vendor/async-smtp"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "if test -d cargo/vendor/async-smtp/async-smtp; then mv cargo/vendor/async-smtp cargo/vendor/async-smtp.bak; cp -ar --dereference --reflink=auto cargo/vendor/async-smtp.bak/async-smtp cargo/vendor/async-smtp; rm -r cargo/vendor/async-smtp.bak; fi"
-        ]
+        "commit": "6a4830032953f06020edc09db8daa06193e2b93f",
+        "dest": "cargo/git/db/async-smtp-108dc1403f5bfbf5"
     },
     {
         "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22.github/workflows/ci.yml%22%3A%22105df61191de00fd2f2d8efbc61c7d8f87682c013e8fb1a3cb9f369ea3e8d864%22%2C%22Cargo.toml%22%3A%222a6ece05551b75fc53178c9ffec979197f40ff418eecda738d3d3ac515af35dc%22%2C%22LICENSE-APACHE%22%3A%22a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2%22%2C%22LICENSE-MIT%22%3A%2223f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3%22%2C%22README.md%22%3A%22211594bdf31c539f3cf4266b9ef728bb3e7e727ba9da6be7855e3c6962668873%22%2C%22benches/transport_smtp.rs%22%3A%22af6dd48e3dac47467ec6a64f4f73f11869bc457fddbd302fd646d71c3a6677ab%22%2C%22examples/smtp.rs%22%3A%2286e347baeec76cef855802b2f82fb50c8c2faa7fdbf93c1f84faed0f1b49b76b%22%2C%22examples/smtp_gmail.rs%22%3A%22781c49208f30abe0e9eb8a01e65e36dcb6cd05c80919b387f215b3d45b386d29%22%2C%22rustfmt.toml%22%3A%22d8e7f616455a670ba75e3e94bf6f88f4c168c481664d12501820c7dfff5c3cc2%22%2C%22src/error.rs%22%3A%224aced70772b0d3ad7fa36f35be3be9bc39e361e3b530fb115e509e27c94e77f3%22%2C%22src/file/error.rs%22%3A%2236bca9f38bfcb5e3de5ac3412feeb43db359eddb1f30644f1944149992cd8973%22%2C%22src/file/mod.rs%22%3A%220fd03ce94a3c5988ef512a20d63841725fee3d902f5a0912bb6edc3ebec39491%22%2C%22src/lib.rs%22%3A%22cf54acfe38fac30307493251fd9135f4d23e135505a8033ffafba9759dd91022%22%2C%22src/sendmail/error.rs%22%3A%224732892239c86ce569276f858c0b6bacc993772169c28a9bf04f5f5bd3563de8%22%2C%22src/sendmail/mod.rs%22%3A%2203eca9cd389c99524807bcbdf1fe4f63ae88d665e9f7d82870c1530f9500ce65%22%2C%22src/smtp/authentication.rs%22%3A%22792ec8641a9150b1783ae7d2039c236d923abe84f7398034d7ec489e73d3d1c2%22%2C%22src/smtp/client/mock.rs%22%3A%226713adb03f490d41a4e0c6ea0bac5f5a51f708fe1ff3f01ccf7a483d0d6d4c7d%22%2C%22src/smtp/client/mod.rs%22%3A%227e0a41dfaa38982ff96b5a39abd749afebe34af1f7de87f18ad9a6c7f86501ea%22%2C%22src/smtp/client/net.rs%22%3A%22b063842f37e6b4ed95965fd0ce2108a14daf0b05a0bc0c903b8da208d8c131c6%22%2C%22src/smtp/commands.rs%22%3A%2206ea88325d8e6dfd60974674fd387540356360ea52add8abed51f5d36d551483%22%2C%22src/smtp/error.rs%22%3A%22aa709726d941ad12f6e1c0d0a6b28a14e17df4909b68c5dfcbf6919b3ef0acc6%22%2C%22src/smtp/extension.rs%22%3A%22d565c62dba750f0d2ec24edb27de7501cfe2877cd5c194e4edfd6def58dc4ab8%22%2C%22src/smtp/mod.rs%22%3A%22e7ff350a4954470b19f53b11c25ee9e2c3d40b39addc7b6e37a9a2aa168bb474%22%2C%22src/smtp/response.rs%22%3A%22b423be1e7d825bbd132e19342388e8ee37e9674f439deb08ca6d909109b77c98%22%2C%22src/smtp/smtp_client.rs%22%3A%22bdf0fcef72ba9e03dcd479da1acd607ed02e60831ab297065ea0d28e29ad5f1f%22%2C%22src/smtp/util.rs%22%3A%229ccd47917a4dd0426336f5f0a50f4cb7939877e9dc13695f6dd040fd3c66ddf4%22%2C%22src/stub/mod.rs%22%3A%2238a5b355e6a939b324eb8371e2a105dcb1420f9136fa28a584eddce653e802ad%22%2C%22src/types.rs%22%3A%2294c08bdf664d47b957d813050efb3b68ae0c18cdfd6ef5ba3656752a8f0f21b5%22%2C%22tests/skeptic.rs%22%3A%224b2a43ab7ec36e7d56521d81d14fe09c5117ed9d766a79cc5f418e426f3fb472%22%2C%22tests/transport_file.rs%22%3A%226030b279bef1650782810faef29b90b9250806f9fe23c1507f4cd22c00389af7%22%2C%22tests/transport_sendmail.rs%22%3A%2288d14aeb6886eaf7795627332e73f87300c09bc2c4f34d3fa6bf284936c7eb67%22%2C%22tests/transport_smtp.rs%22%3A%22bbf292ac1017353fc544d167a5d0e61c82fae41ad2e868910d8e3f187f9c3c49%22%2C%22tests/transport_stub.rs%22%3A%22fccf110b3752a4d72c696081156a18a36fe364103bdd7d4bb34022d534cbd421%22%7D%2C%22package%22%3Anull%7D",
-        "dest": "cargo/vendor/async-smtp",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/async-smtp/.git"
-        ]
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/async-std/async-std-1.2.0.crate",
-        "sha256": "513ee3c49800679a319912340f5601afda9e72848d7dea3a48bab489e8c1a46f",
+        "url": "https://static.crates.io/crates/async-std/async-std-1.4.0.crate",
+        "sha256": "0bf6039b315300e057d198b9d3ab92ee029e31c759b7f1afae538145e6f18a3e",
         "dest": "cargo/vendor",
-        "dest-filename": "async-std-1.2.0.crate"
+        "dest-filename": "async-std-1.4.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22513ee3c49800679a319912340f5601afda9e72848d7dea3a48bab489e8c1a46f%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/async-std-1.2.0",
+        "url": "data:%7B%22package%22%3A%20%220bf6039b315300e057d198b9d3ab92ee029e31c759b7f1afae538145e6f18a3e%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/async-std-1.4.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -240,19 +197,6 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%22de6bd58f7b9cc49032559422595c81cbfcf04db2f2133592f70af19e258a1ced%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/async-task-1.0.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/async-tls/async-tls-0.6.0.crate",
-        "sha256": "6ce6977f57fa68da77ffe5542950d47e9c23d65f5bc7cb0a9f8700996913eec7",
-        "dest": "cargo/vendor",
-        "dest-filename": "async-tls-0.6.0.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%226ce6977f57fa68da77ffe5542950d47e9c23d65f5bc7cb0a9f8700996913eec7%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/async-tls-0.6.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -517,19 +461,6 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/bumpalo/bumpalo-2.6.0.crate",
-        "sha256": "ad807f2fc2bf185eeb98ff3a901bd46dc5ad58163d0fa4577ba0d25674d71708",
-        "dest": "cargo/vendor",
-        "dest-filename": "bumpalo-2.6.0.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22ad807f2fc2bf185eeb98ff3a901bd46dc5ad58163d0fa4577ba0d25674d71708%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/bumpalo-2.6.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
         "url": "https://static.crates.io/crates/byte-tools/byte-tools-0.3.1.crate",
         "sha256": "e3b5ca7a04898ad4bcd41c90c5285445ff5b791899bb1b0abdd2a2aa791211d7",
         "dest": "cargo/vendor",
@@ -621,15 +552,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/cc/cc-1.0.47.crate",
-        "sha256": "aa87058dce70a3ff5621797f1506cb837edd02ac4c0ae642b4542dce802908b8",
+        "url": "https://static.crates.io/crates/cc/cc-1.0.48.crate",
+        "sha256": "f52a465a666ca3d838ebbf08b241383421412fe7ebb463527bba275526d89f76",
         "dest": "cargo/vendor",
-        "dest-filename": "cc-1.0.47.crate"
+        "dest-filename": "cc-1.0.48.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22aa87058dce70a3ff5621797f1506cb837edd02ac4c0ae642b4542dce802908b8%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/cc-1.0.47",
+        "url": "data:%7B%22package%22%3A%20%22f52a465a666ca3d838ebbf08b241383421412fe7ebb463527bba275526d89f76%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/cc-1.0.48",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -725,6 +656,19 @@
     },
     {
         "type": "file",
+        "url": "https://static.crates.io/crates/color_quant/color_quant-1.0.1.crate",
+        "sha256": "0dbbb57365263e881e805dc77d94697c9118fd94d8da011240555aa7b23445bd",
+        "dest": "cargo/vendor",
+        "dest-filename": "color_quant-1.0.1.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%220dbbb57365263e881e805dc77d94697c9118fd94d8da011240555aa7b23445bd%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/color_quant-1.0.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
         "url": "https://static.crates.io/crates/constant_time_eq/constant_time_eq-0.1.4.crate",
         "sha256": "995a44c877f9212528ccc74b21a232f66ad69001e40ede5bcee2ac9ef2657120",
         "dest": "cargo/vendor",
@@ -760,6 +704,32 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%2246750b3f362965f197996c4448e4a0935e791bf7d6631bfce9ee0af3d24c919c%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/cookie_store-0.7.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/core-foundation/core-foundation-0.6.4.crate",
+        "sha256": "25b9e03f145fd4f2bf705e07b900cd41fc636598fe5dc452fd0db1441c3f496d",
+        "dest": "cargo/vendor",
+        "dest-filename": "core-foundation-0.6.4.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%2225b9e03f145fd4f2bf705e07b900cd41fc636598fe5dc452fd0db1441c3f496d%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/core-foundation-0.6.4",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/core-foundation-sys/core-foundation-sys-0.6.2.crate",
+        "sha256": "e7ca8a5221364ef15ce201e8ed2f609fc312682a8f4e0e3d4aa5879764e0fa3b",
+        "dest": "cargo/vendor",
+        "dest-filename": "core-foundation-sys-0.6.2.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22e7ca8a5221364ef15ce201e8ed2f609fc312682a8f4e0e3d4aa5879764e0fa3b%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/core-foundation-sys-0.6.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -842,6 +812,19 @@
     },
     {
         "type": "file",
+        "url": "https://static.crates.io/crates/crossbeam-queue/crossbeam-queue-0.2.0.crate",
+        "sha256": "dfd6515864a82d2f877b42813d4553292c6659498c9a2aa31bab5a15243c2700",
+        "dest": "cargo/vendor",
+        "dest-filename": "crossbeam-queue-0.2.0.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22dfd6515864a82d2f877b42813d4553292c6659498c9a2aa31bab5a15243c2700%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/crossbeam-queue-0.2.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
         "url": "https://static.crates.io/crates/crossbeam-utils/crossbeam-utils-0.6.6.crate",
         "sha256": "04973fa96e96579258a5091af6003abde64af786b860f18622b82e026cca60e6",
         "dest": "cargo/vendor",
@@ -868,19 +851,6 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/ct-logs/ct-logs-0.6.0.crate",
-        "sha256": "4d3686f5fa27dbc1d76c751300376e167c5a43387f44bb451fd1c24776e49113",
-        "dest": "cargo/vendor",
-        "dest-filename": "ct-logs-0.6.0.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%224d3686f5fa27dbc1d76c751300376e167c5a43387f44bb451fd1c24776e49113%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/ct-logs-0.6.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
         "url": "https://static.crates.io/crates/ctor/ctor-0.1.12.crate",
         "sha256": "cd8ce37ad4184ab2ce004c33bf6379185d3b1c95801cab51026bd271bf68eedc",
         "dest": "cargo/vendor",
@@ -894,54 +864,54 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/curve25519-dalek/curve25519-dalek-1.2.3.crate",
-        "sha256": "8b7dcd30ba50cdf88b55b033456138b7c0ac4afdc436d82e1b79f370f24cc66d",
+        "url": "https://static.crates.io/crates/curve25519-dalek/curve25519-dalek-2.0.0.crate",
+        "sha256": "26778518a7f6cffa1d25a44b602b62b979bd88adb9e99ffec546998cf3404839",
         "dest": "cargo/vendor",
-        "dest-filename": "curve25519-dalek-1.2.3.crate"
+        "dest-filename": "curve25519-dalek-2.0.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%228b7dcd30ba50cdf88b55b033456138b7c0ac4afdc436d82e1b79f370f24cc66d%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/curve25519-dalek-1.2.3",
+        "url": "data:%7B%22package%22%3A%20%2226778518a7f6cffa1d25a44b602b62b979bd88adb9e99ffec546998cf3404839%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/curve25519-dalek-2.0.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/darling/darling-0.9.0.crate",
-        "sha256": "fcfbcb0c5961907597a7d1148e3af036268f2b773886b8bb3eeb1e1281d3d3d6",
+        "url": "https://static.crates.io/crates/darling/darling-0.10.2.crate",
+        "sha256": "0d706e75d87e35569db781a9b5e2416cff1236a47ed380831f959382ccd5f858",
         "dest": "cargo/vendor",
-        "dest-filename": "darling-0.9.0.crate"
+        "dest-filename": "darling-0.10.2.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22fcfbcb0c5961907597a7d1148e3af036268f2b773886b8bb3eeb1e1281d3d3d6%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/darling-0.9.0",
+        "url": "data:%7B%22package%22%3A%20%220d706e75d87e35569db781a9b5e2416cff1236a47ed380831f959382ccd5f858%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/darling-0.10.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/darling_core/darling_core-0.9.0.crate",
-        "sha256": "6afc018370c3bff3eb51f89256a6bdb18b4fdcda72d577982a14954a7a0b402c",
+        "url": "https://static.crates.io/crates/darling_core/darling_core-0.10.2.crate",
+        "sha256": "f0c960ae2da4de88a91b2d920c2a7233b400bc33cb28453a2987822d8392519b",
         "dest": "cargo/vendor",
-        "dest-filename": "darling_core-0.9.0.crate"
+        "dest-filename": "darling_core-0.10.2.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%226afc018370c3bff3eb51f89256a6bdb18b4fdcda72d577982a14954a7a0b402c%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/darling_core-0.9.0",
+        "url": "data:%7B%22package%22%3A%20%22f0c960ae2da4de88a91b2d920c2a7233b400bc33cb28453a2987822d8392519b%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/darling_core-0.10.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/darling_macro/darling_macro-0.9.0.crate",
-        "sha256": "c6d8dac1c6f1d29a41c4712b4400f878cb4fcc4c7628f298dd75038e024998d1",
+        "url": "https://static.crates.io/crates/darling_macro/darling_macro-0.10.2.crate",
+        "sha256": "d9b5a2f4ac4969822c62224815d069952656cadc7084fdca9751e6d959189b72",
         "dest": "cargo/vendor",
-        "dest-filename": "darling_macro-0.9.0.crate"
+        "dest-filename": "darling_macro-0.10.2.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22c6d8dac1c6f1d29a41c4712b4400f878cb4fcc4c7628f298dd75038e024998d1%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/darling_macro-0.9.0",
+        "url": "data:%7B%22package%22%3A%20%22d9b5a2f4ac4969822c62224815d069952656cadc7084fdca9751e6d959189b72%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/darling_macro-0.10.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -959,6 +929,19 @@
     },
     {
         "type": "file",
+        "url": "https://static.crates.io/crates/deflate/deflate-0.7.20.crate",
+        "sha256": "707b6a7b384888a70c8d2e8650b3e60170dfc6a67bb4aa67b6dfca57af4bedb4",
+        "dest": "cargo/vendor",
+        "dest-filename": "deflate-0.7.20.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22707b6a7b384888a70c8d2e8650b3e60170dfc6a67bb4aa67b6dfca57af4bedb4%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/deflate-0.7.20",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
         "url": "https://static.crates.io/crates/deltachat-provider-database/deltachat-provider-database-0.2.1.crate",
         "sha256": "814dba060d9fdc7a989fccdc4810ada9d1c7a1f09131c78e42412bc6c634b93b",
         "dest": "cargo/vendor",
@@ -972,41 +955,28 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/derive_builder/derive_builder-0.7.2.crate",
-        "sha256": "3ac53fa6a3cda160df823a9346442525dcaf1e171999a1cf23e67067e4fd64d4",
+        "url": "https://static.crates.io/crates/derive_builder/derive_builder-0.9.0.crate",
+        "sha256": "a2658621297f2cf68762a6f7dc0bb7e1ff2cfd6583daef8ee0fed6f7ec468ec0",
         "dest": "cargo/vendor",
-        "dest-filename": "derive_builder-0.7.2.crate"
+        "dest-filename": "derive_builder-0.9.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%223ac53fa6a3cda160df823a9346442525dcaf1e171999a1cf23e67067e4fd64d4%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/derive_builder-0.7.2",
+        "url": "data:%7B%22package%22%3A%20%22a2658621297f2cf68762a6f7dc0bb7e1ff2cfd6583daef8ee0fed6f7ec468ec0%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/derive_builder-0.9.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/derive_builder_core/derive_builder_core-0.5.0.crate",
-        "sha256": "0288a23da9333c246bb18c143426074a6ae96747995c5819d2947b64cd942b37",
+        "url": "https://static.crates.io/crates/derive_builder_core/derive_builder_core-0.9.0.crate",
+        "sha256": "2791ea3e372c8495c0bc2033991d76b512cd799d07491fbd6890124db9458bef",
         "dest": "cargo/vendor",
-        "dest-filename": "derive_builder_core-0.5.0.crate"
+        "dest-filename": "derive_builder_core-0.9.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%220288a23da9333c246bb18c143426074a6ae96747995c5819d2947b64cd942b37%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/derive_builder_core-0.5.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/derive_more/derive_more-0.14.1.crate",
-        "sha256": "6d944ac6003ed268757ef1ee686753b57efc5fcf0ebe7b64c9fc81e7e32ff839",
-        "dest": "cargo/vendor",
-        "dest-filename": "derive_more-0.14.1.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%226d944ac6003ed268757ef1ee686753b57efc5fcf0ebe7b64c9fc81e7e32ff839%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/derive_more-0.14.1",
+        "url": "data:%7B%22package%22%3A%20%222791ea3e372c8495c0bc2033991d76b512cd799d07491fbd6890124db9458bef%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/derive_builder_core-0.9.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1089,15 +1059,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/ed25519-dalek/ed25519-dalek-1.0.0-pre.2.crate",
-        "sha256": "845aaacc16f01178f33349e7c992ecd0cee095aa5e577f0f4dee35971bd36455",
+        "url": "https://static.crates.io/crates/ed25519-dalek/ed25519-dalek-1.0.0-pre.3.crate",
+        "sha256": "978710b352437433c97b2bff193f2fb1dfd58a093f863dd95e225a19baa599a2",
         "dest": "cargo/vendor",
-        "dest-filename": "ed25519-dalek-1.0.0-pre.2.crate"
+        "dest-filename": "ed25519-dalek-1.0.0-pre.3.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22845aaacc16f01178f33349e7c992ecd0cee095aa5e577f0f4dee35971bd36455%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/ed25519-dalek-1.0.0-pre.2",
+        "url": "data:%7B%22package%22%3A%20%22978710b352437433c97b2bff193f2fb1dfd58a093f863dd95e225a19baa599a2%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/ed25519-dalek-1.0.0-pre.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1117,49 +1087,13 @@
         "type": "git",
         "url": "https://github.com/deltachat/rust-email",
         "commit": "38b325ea23bf9e71da7b5bc1b70d986d09a9e5a7",
-        "dest": "cargo/vendor/email"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "if test -d cargo/vendor/email/email; then mv cargo/vendor/email cargo/vendor/email.bak; cp -ar --dereference --reflink=auto cargo/vendor/email.bak/email cargo/vendor/email; rm -r cargo/vendor/email.bak; fi"
-        ]
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22.travis.sh%22%3A%22c4c4f52fd02a3c200875d53ef809b7375d9ce3c4e1a2f8ba164f669ef02e173b%22%2C%22.travis.yml%22%3A%2200cfe2b2a6a07de4db532831825f1d28cdf44274c1756f71ab8b80d13965bee2%22%2C%22Cargo.toml%22%3A%223a228327ba408c76f335e9a62f9ad6526db8ede5f6687318700697b9878b5b18%22%2C%22LICENSE%22%3A%229f571808cd94bfb7c88e522405f8d14e5c9d07f893178a0d5b70a5ab6644c421%22%2C%22README.md%22%3A%22d4d5f22efd1e01e0307d68698987a91ad6ad0d46a21be547ce70894df8e4830c%22%2C%22build.rs%22%3A%226a3c38034bfcf6ab87c754abbcdf61a39de359b2932c903d9c03d1d4a72cdf46%22%2C%22examples/parse_email.rs%22%3A%220a7d4a07ca051d9c77e0fa5969f6d5824f0a1721cc6c5cecf88dcdd1cc6c0c14%22%2C%22examples/printing.rs%22%3A%223d7e59a50446a875abab08fff16c74d0f55dc625fb73cd8deea3283ea7930134%22%2C%22src/address.rs%22%3A%223cd49d65a7c9aa8534679ed27f0205dbcca17645f06fcfe16d3dc8c35c10edac%22%2C%22src/header.rs%22%3A%2250d404b4cc21ce7dd131af41bc81b0f2a5495cbe5d6adf71c6153c2c2dac6804%22%2C%22src/lib.rs%22%3A%22b2c78e5b930604fc61d1452a5121c53eda865e8fa3841796555e7c256b600675%22%2C%22src/message.rs%22%3A%228f07558439e8d46e133543e0e4af78aaddcd566f56bb2e4e9690b6241ceac535%22%2C%22src/mimeheaders.rs%22%3A%222028d5098aa3855d4bd33b874fb0c87474c63a47898461b9a45ed64419105060%22%2C%22src/results.rs%22%3A%227fe75541d96bfe19676657b73dfcc803e6893fea72e12d240a89e2a7d589bdfa%22%2C%22src/rfc2045.rs%22%3A%224be5755d0f33cb88f72e8ca715062e19b81521ddedb3acd3fed65037b5f8c5cd%22%2C%22src/rfc2047.rs%22%3A%22a7a5a3235d31d67aee410360b7c1bf36c403c93af40551936903ba2e9c53d819%22%2C%22src/rfc5322.rs%22%3A%22c06ae7ee0408aa3eda3c78cda8f24d72f64af1f23f5d9f34c0b2bdf719828d98%22%2C%22src/rfc822.rs%22%3A%229e679c1c8d907892c5db6e78b56d26ad9fdbd4d6ecf7eedbe0c3abcadc2077e3%22%7D%2C%22package%22%3Anull%7D",
-        "dest": "cargo/vendor/email",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/email/.git"
-        ]
+        "dest": "cargo/git/db/rust-email-853e6bebda7f792c"
     },
     {
         "type": "git",
         "url": "https://github.com/async-email/encoded-words",
         "commit": "2631c258183620f6d976abffabbfc2dcc697d793",
-        "dest": "cargo/vendor/encoded-words"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "if test -d cargo/vendor/encoded-words/encoded-words; then mv cargo/vendor/encoded-words cargo/vendor/encoded-words.bak; cp -ar --dereference --reflink=auto cargo/vendor/encoded-words.bak/encoded-words cargo/vendor/encoded-words; rm -r cargo/vendor/encoded-words.bak; fi"
-        ]
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22Cargo.toml%22%3A%224cb6aaf10d32f1c49182783b2cc1001289af3b1a81570410780ac3119824db61%22%2C%22LICENSE-APACHE%22%3A%22a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2%22%2C%22LICENSE-MIT%22%3A%224e0ec88980aac272d80e61a33cb695cf40dbb8768a5973e6c077be73912bd9f0%22%2C%22README.md%22%3A%221463c033a7792511daaee8d41804222ecd9fa65ad2c0ed47e366bc4b65315358%22%2C%22src/charset.rs%22%3A%22d483bdd0a96c26e20d772720a2839136b571537a1e5f9de4e15f9546d072667f%22%2C%22src/defects.rs%22%3A%222652b0903bef145e6533a1a1fa06a679390e8ffdee243f66406030a748393095%22%2C%22src/encoded_words.rs%22%3A%22329ccd145d88b144f901c1557bfc3fe4f73796feb8e4ba6897918c2a49f9f39e%22%2C%22src/lib.rs%22%3A%2278e2cf84b5e6ffe68022236e20b7516ac8ccd2d74d3044e43887a246214adc7a%22%7D%2C%22package%22%3Anull%7D",
-        "dest": "cargo/vendor/encoded-words",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/encoded-words/.git"
-        ]
+        "dest": "cargo/git/db/encoded-words-3938f54a6166f9c4"
     },
     {
         "type": "file",
@@ -1254,15 +1188,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/encoding_rs/encoding_rs-0.8.20.crate",
-        "sha256": "87240518927716f79692c2ed85bfe6e98196d18c6401ec75355760233a7e12e9",
+        "url": "https://static.crates.io/crates/encoding_rs/encoding_rs-0.8.22.crate",
+        "sha256": "cd8d03faa7fe0c1431609dfad7bbe827af30f82e1e2ae6f7ee4fca6bd764bc28",
         "dest": "cargo/vendor",
-        "dest-filename": "encoding_rs-0.8.20.crate"
+        "dest-filename": "encoding_rs-0.8.22.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%2287240518927716f79692c2ed85bfe6e98196d18c6401ec75355760233a7e12e9%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/encoding_rs-0.8.20",
+        "url": "data:%7B%22package%22%3A%20%22cd8d03faa7fe0c1431609dfad7bbe827af30f82e1e2ae6f7ee4fca6bd764bc28%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/encoding_rs-0.8.22",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1419,6 +1353,32 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%222fad85553e09a6f881f739c29f0b00b0f01357c743266d478b68951ce23285f3%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/fnv-1.0.6",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/foreign-types/foreign-types-0.3.2.crate",
+        "sha256": "f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1",
+        "dest": "cargo/vendor",
+        "dest-filename": "foreign-types-0.3.2.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22f6f339eb8adc052cd2ca78910fda869aefa38d22d5cb648e6485e4d3fc06f3b1%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/foreign-types-0.3.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/foreign-types-shared/foreign-types-shared-0.1.1.crate",
+        "sha256": "00b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b",
+        "dest": "cargo/vendor",
+        "dest-filename": "foreign-types-shared-0.1.1.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%2200b0228411908ca8685dba7fc2cdd70ec9990a6e753e89b6ac91a84c40fbaf4b%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/foreign-types-shared-0.1.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1709,6 +1669,19 @@
     },
     {
         "type": "file",
+        "url": "https://static.crates.io/crates/gif/gif-0.10.3.crate",
+        "sha256": "471d90201b3b223f3451cd4ad53e34295f16a1df17b1edf3736d47761c3981af",
+        "dest": "cargo/vendor",
+        "dest-filename": "gif-0.10.3.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22471d90201b3b223f3451cd4ad53e34295f16a1df17b1edf3736d47761c3981af%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/gif-0.10.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
         "url": "https://static.crates.io/crates/glob/glob-0.2.11.crate",
         "sha256": "8be18de09a56b60ed0edf84bc9df007e30040691af7acd1c41874faac5895bfb",
         "dest": "cargo/vendor",
@@ -1761,15 +1734,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/hermit-abi/hermit-abi-0.1.3.crate",
-        "sha256": "307c3c9f937f38e3534b1d6447ecf090cafcc9744e4a6360e8b037b2cf5af120",
+        "url": "https://static.crates.io/crates/hermit-abi/hermit-abi-0.1.5.crate",
+        "sha256": "f629dc602392d3ec14bfc8a09b5e644d7ffd725102b48b81e59f90f2633621d7",
         "dest": "cargo/vendor",
-        "dest-filename": "hermit-abi-0.1.3.crate"
+        "dest-filename": "hermit-abi-0.1.5.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22307c3c9f937f38e3534b1d6447ecf090cafcc9744e4a6360e8b037b2cf5af120%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/hermit-abi-0.1.3",
+        "url": "data:%7B%22package%22%3A%20%22f629dc602392d3ec14bfc8a09b5e644d7ffd725102b48b81e59f90f2633621d7%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/hermit-abi-0.1.5",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1878,15 +1851,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/hyper-rustls/hyper-rustls-0.17.1.crate",
-        "sha256": "719d85c7df4a7f309a77d145340a063ea929dcb2e025bae46a80345cffec2952",
+        "url": "https://static.crates.io/crates/hyper-tls/hyper-tls-0.3.2.crate",
+        "sha256": "3a800d6aa50af4b5850b2b0f659625ce9504df908e9733b635720483be26174f",
         "dest": "cargo/vendor",
-        "dest-filename": "hyper-rustls-0.17.1.crate"
+        "dest-filename": "hyper-tls-0.3.2.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22719d85c7df4a7f309a77d145340a063ea929dcb2e025bae46a80345cffec2952%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/hyper-rustls-0.17.1",
+        "url": "data:%7B%22package%22%3A%20%223a800d6aa50af4b5850b2b0f659625ce9504df908e9733b635720483be26174f%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/hyper-tls-0.3.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1930,6 +1903,19 @@
     },
     {
         "type": "file",
+        "url": "https://static.crates.io/crates/image/image-0.22.3.crate",
+        "sha256": "7b4be8aaefbe7545dc42ae925afb55a0098f226a3fe5ef721872806f44f57826",
+        "dest": "cargo/vendor",
+        "dest-filename": "image-0.22.3.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%227b4be8aaefbe7545dc42ae925afb55a0098f226a3fe5ef721872806f44f57826%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/image-0.22.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
         "url": "https://static.crates.io/crates/image-meta/image-meta-0.1.0.crate",
         "sha256": "b00861cbbb254a627d8acc0cec786b484297d896ab8f20fdc8e28536a3e918ef",
         "dest": "cargo/vendor",
@@ -1944,26 +1930,8 @@
     {
         "type": "git",
         "url": "https://github.com/djc/tokio-imap",
-        "commit": "2b8701b83c50085b7ffcdf26a95146b91f93a6d5",
-        "dest": "cargo/vendor/imap-proto"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "if test -d cargo/vendor/imap-proto/imap-proto; then mv cargo/vendor/imap-proto cargo/vendor/imap-proto.bak; cp -ar --dereference --reflink=auto cargo/vendor/imap-proto.bak/imap-proto cargo/vendor/imap-proto; rm -r cargo/vendor/imap-proto.bak; fi"
-        ]
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22Cargo.toml%22%3A%22114fbc4e70b238db02b9558a8f1f70891b9c2ee3e4d1c64018fc2096647ce100%22%2C%22src/body.rs%22%3A%2292c9d468e020bd1b7139d7eb922f32b2f9798e8a5e2a671e0b4fd464e27532d5%22%2C%22src/body_structure.rs%22%3A%22757bd52d2ef75def5485baaf80b1a1f5d20f0d9524f5713c0e430b377747aece%22%2C%22src/builders/command.rs%22%3A%22e62ff7c17359241be5ed90eec56f50aa6a121a7bdc5d429095d40d4a48a778fa%22%2C%22src/builders/mod.rs%22%3A%222841aba86e8dd5f37f0c282cdea7ef91e0f8efb7f39fe57b9d10ff733984d94b%22%2C%22src/core.rs%22%3A%224304be5e2acaf809a495355bf0adffbd4b71bf5a7587feed8e1d3c1eda3ef5fa%22%2C%22src/lib.rs%22%3A%22fa6e5548364bb63d12335ffe7e1f6bdbccf22ef2e7561eeba85d25b2ebac8a0e%22%2C%22src/macros.rs%22%3A%22b6cfb97c5816e22f632bea0340e0506f46ada5fed0c1a87fe10f0646e4c46cb9%22%2C%22src/parser/mod.rs%22%3A%22767c738eb3e6233dee81de3b96936875134f220f56f9f7f426a1c1a26b798816%22%2C%22src/parser/rfc3501.rs%22%3A%220527b71a8083e231de320911aa464bf1f0edf92893a23b26546c47c7f74b00a9%22%2C%22src/parser/rfc4551.rs%22%3A%228360ed86806771af3247bd4d77be6907cc1be3989ab1980ebaefe2a9123bb19e%22%2C%22src/parser/rfc5464.rs%22%3A%2204b21d97dd72446f9716059575b22e7fc2d992fa9e12c3052d2bc0a42728425a%22%2C%22src/types.rs%22%3A%22f7e16fab697739edc825e0347ed9744d6e62647a5d70edebe6a1cb084fd2cc56%22%7D%2C%22package%22%3Anull%7D",
-        "dest": "cargo/vendor/imap-proto",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/imap-proto/.git"
-        ]
+        "commit": "de420791b4e240242592616938407b742454c46c",
+        "dest": "cargo/git/db/tokio-imap-dba9202c4bd2ed97"
     },
     {
         "type": "file",
@@ -1976,6 +1944,19 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%22712d7b3ea5827fcb9d4fda14bf4da5f136f0db2ae9c8f4bd4e2d1c6fde4e6db2%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/indexmap-1.3.0",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/inflate/inflate-0.4.5.crate",
+        "sha256": "1cdb29978cc5797bd8dcc8e5bf7de604891df2a8dc576973d71a281e916db2ff",
+        "dest": "cargo/vendor",
+        "dest-filename": "inflate-0.4.5.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%221cdb29978cc5797bd8dcc8e5bf7de604891df2a8dc576973d71a281e916db2ff%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/inflate-0.4.5",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2019,15 +2000,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/js-sys/js-sys-0.3.32.crate",
-        "sha256": "1c840fdb2167497b0bd0db43d6dfe61e91637fa72f9d061f8bd17ddc44ba6414",
+        "url": "https://static.crates.io/crates/jpeg-decoder/jpeg-decoder-0.1.18.crate",
+        "sha256": "0256f0aec7352539102a9efbcb75543227b7ab1117e0f95450023af730128451",
         "dest": "cargo/vendor",
-        "dest-filename": "js-sys-0.3.32.crate"
+        "dest-filename": "jpeg-decoder-0.1.18.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%221c840fdb2167497b0bd0db43d6dfe61e91637fa72f9d061f8bd17ddc44ba6414%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/js-sys-0.3.32",
+        "url": "data:%7B%22package%22%3A%20%220256f0aec7352539102a9efbcb75543227b7ab1117e0f95450023af730128451%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/jpeg-decoder-0.1.18",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2085,50 +2066,14 @@
     {
         "type": "git",
         "url": "https://github.com/deltachat/lettre",
-        "commit": "00ba9db544059ddd60048f0b85d5052e4bf605da",
-        "dest": "cargo/vendor/lettre"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "if test -d cargo/vendor/lettre/lettre; then mv cargo/vendor/lettre cargo/vendor/lettre.bak; cp -ar --dereference --reflink=auto cargo/vendor/lettre.bak/lettre cargo/vendor/lettre; rm -r cargo/vendor/lettre.bak; fi"
-        ]
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22CHANGELOG.md%22%3A%2296c3006a11a4e8ac3e62c6b3805bd430228e3a5e9491c26e9391fb5e17375fef%22%2C%22Cargo.toml%22%3A%226bc878e781b1eee437c148a56ae5805be067f691efb194f0ed795f08e7f86d75%22%2C%22LICENSE%22%3A%22ec3dc3bf0f1d84cc5c9b80462ffcbaafbb89f1400b7c5c015b8a56ff3eaef844%22%2C%22README.md%22%3A%224d1a3f03f1cf20e12b08d235eed24e0975fdfddfc43af3eb695687e7663a3a08%22%2C%22benches/transport_smtp.rs%22%3A%22347f30ada1c892f1e7c54b0e51dd5c73779c6fa09c8405ce3d398b86dd0cc61a%22%2C%22examples/smtp.rs%22%3A%222744e7c36db6a7ae12dc22ec8674649a41373e67043870335466a0ae0c9a44f5%22%2C%22examples/smtp_gmail.rs%22%3A%22457d82ec2b51158522b8763fe131160712213e6c2b710b10654bbb677b747a64%22%2C%22src/error.rs%22%3A%228c2bc183f7ee1d73eae9328bd8ab9feb5f4f6326a546ac76a76c705af6e0f921%22%2C%22src/file/error.rs%22%3A%228ce0c7a8b08032d5b70ca58d096ba5e073bbd0d7d2035a39b91be10cac07cf82%22%2C%22src/file/mod.rs%22%3A%22f25b0969e387ef9ae941139fcf086ecb6b891b361561d81f8f6b98d07d5eb5ac%22%2C%22src/lib.rs%22%3A%221acf7a91a6ca43eb4e2ae7b2158a3783c529092f3b82381af5881f5bdd0f6ebb%22%2C%22src/sendmail/error.rs%22%3A%223a781b04d68f4a538e1f8d9af86ec239667ca31f9a965e8b280e1dfb22a72c56%22%2C%22src/sendmail/mod.rs%22%3A%22272724c94b25c3d1eef25e0dc41a884fbd80be1d16b2eb9ccf8f1d6fe9ed02f8%22%2C%22src/smtp/authentication.rs%22%3A%22792ec8641a9150b1783ae7d2039c236d923abe84f7398034d7ec489e73d3d1c2%22%2C%22src/smtp/client/mock.rs%22%3A%22f27304c679d6360634b22a6560ad5b4fb3e19c17ab9a676e3a5b0df958284533%22%2C%22src/smtp/client/mod.rs%22%3A%2232be21b7e6d547465cedf71e22b4cf3857f2ec1b035791990b1e197aba98addf%22%2C%22src/smtp/client/net.rs%22%3A%22c8888f418ff1c60cc5bd71e6852f3fdd01f6a6207c36e5c6337b8385135579bb%22%2C%22src/smtp/commands.rs%22%3A%2206ea88325d8e6dfd60974674fd387540356360ea52add8abed51f5d36d551483%22%2C%22src/smtp/error.rs%22%3A%22aa709726d941ad12f6e1c0d0a6b28a14e17df4909b68c5dfcbf6919b3ef0acc6%22%2C%22src/smtp/extension.rs%22%3A%22d565c62dba750f0d2ec24edb27de7501cfe2877cd5c194e4edfd6def58dc4ab8%22%2C%22src/smtp/mod.rs%22%3A%225018d97d13c11ceae5b2a86c519639255ba477059322ca75328e05bd02d34863%22%2C%22src/smtp/r2d2.rs%22%3A%222eb38866fa9ab0e7f8af0edd49c45435ea178d953d3990eef5a71e30b48f89c5%22%2C%22src/smtp/response.rs%22%3A%22156d603b316e352a4edaffad4eb159c99b2035d762abb94112f934026b7ce0cd%22%2C%22src/smtp/util.rs%22%3A%229ccd47917a4dd0426336f5f0a50f4cb7939877e9dc13695f6dd040fd3c66ddf4%22%2C%22src/stub/mod.rs%22%3A%226ec2ede5abc10b2a1bfa4a0c5d8f77a9a7b74d56017a7d84acfc1229c5d4796d%22%2C%22tests/r2d2_smtp.rs%22%3A%22438a3777304b1c42c714424ff85c43fcc1b1e08a8f28a9b244b6ca97fe7e0fd6%22%2C%22tests/skeptic.rs%22%3A%224b2a43ab7ec36e7d56521d81d14fe09c5117ed9d766a79cc5f418e426f3fb472%22%2C%22tests/transport_file.rs%22%3A%22222e748986326b1a9377bd08da12c970f7a4b4d33efeb6337d2d5591c5808739%22%2C%22tests/transport_sendmail.rs%22%3A%2212fd1406c72103eaf9253892e7b0c0b28dec34ae4a34b456d25c9ce87197f8e8%22%2C%22tests/transport_smtp.rs%22%3A%22442bc16d699bf0caf8688e03360c22370c9b5e73e92e6277804563d57ad9cf6e%22%2C%22tests/transport_stub.rs%22%3A%22ea431f825fc449bac808952d818645a6434f8c4478897f8b069dda735275f0aa%22%7D%2C%22package%22%3Anull%7D",
-        "dest": "cargo/vendor/lettre",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/lettre/.git"
-        ]
+        "commit": "12e4f22d8d691fb5d1606e4c9034f5d4d9ba635b",
+        "dest": "cargo/git/db/lettre-dec4e412d285d89b"
     },
     {
         "type": "git",
         "url": "https://github.com/deltachat/lettre",
-        "commit": "00ba9db544059ddd60048f0b85d5052e4bf605da",
-        "dest": "cargo/vendor/lettre_email"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "if test -d cargo/vendor/lettre_email/lettre_email; then mv cargo/vendor/lettre_email cargo/vendor/lettre_email.bak; cp -ar --dereference --reflink=auto cargo/vendor/lettre_email.bak/lettre_email cargo/vendor/lettre_email; rm -r cargo/vendor/lettre_email.bak; fi"
-        ]
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22CHANGELOG.md%22%3A%2296c3006a11a4e8ac3e62c6b3805bd430228e3a5e9491c26e9391fb5e17375fef%22%2C%22Cargo.toml%22%3A%2245f48211162358272bf1622b9bc7cb91c129d7ee41fefaf67edfeaef7c5c6a15%22%2C%22LICENSE%22%3A%22ec3dc3bf0f1d84cc5c9b80462ffcbaafbb89f1400b7c5c015b8a56ff3eaef844%22%2C%22README.md%22%3A%224d1a3f03f1cf20e12b08d235eed24e0975fdfddfc43af3eb695687e7663a3a08%22%2C%22examples/local.rs%22%3A%22366e39966347c908ffc6d276bfc0f1b96fedc3777cf6aa55f5b99a3fb70e1118%22%2C%22src/error.rs%22%3A%22f71d712f8e0edd4e29ec04b7d886a0fd4c3e34f57f51f308e1e432a836a7da4f%22%2C%22src/lib.rs%22%3A%22cd2a81d231a04ac85979411b691b09ef039a2b065b5b6ec7a3fc1819a63d5c3d%22%2C%22tests/build_with_envelope.rs%22%3A%2277ebe8aab4910d3197983461357109769cd329fff16755fdec45ab928c4b58d5%22%2C%22tests/skeptic.rs%22%3A%22a0bb8da90461798fd200ebd940c33a67fa634cb0cfb3cf48730aad374575e73d%22%7D%2C%22package%22%3Anull%7D",
-        "dest": "cargo/vendor/lettre_email",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/lettre_email/.git"
-        ]
+        "commit": "12e4f22d8d691fb5d1606e4c9034f5d4d9ba635b",
+        "dest": "cargo/git/db/lettre-dec4e412d285d89b"
     },
     {
         "type": "file",
@@ -2158,15 +2103,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/libm/libm-0.1.4.crate",
-        "sha256": "7fc7aa29613bd6a620df431842069224d8bc9011086b1db4c0e0cd47fa03ec9a",
+        "url": "https://static.crates.io/crates/libm/libm-0.2.1.crate",
+        "sha256": "c7d73b3f436185384286bd8098d17ec07c9a7d2388a6599f824d8502b529702a",
         "dest": "cargo/vendor",
-        "dest-filename": "libm-0.1.4.crate"
+        "dest-filename": "libm-0.2.1.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%227fc7aa29613bd6a620df431842069224d8bc9011086b1db4c0e0cd47fa03ec9a%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/libm-0.1.4",
+        "url": "data:%7B%22package%22%3A%20%22c7d73b3f436185384286bd8098d17ec07c9a7d2388a6599f824d8502b529702a%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/libm-0.2.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2232,6 +2177,19 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%2231e24f1ad8321ca0e8a1e0ac13f23cb668e6f5466c2c57319f6a5cf1cc8e3b1c%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/lru-cache-0.1.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/lzw/lzw-0.10.0.crate",
+        "sha256": "7d947cbb889ed21c2a84be6ffbaebf5b4e0f4340638cba0444907e38b56be084",
+        "dest": "cargo/vendor",
+        "dest-filename": "lzw-0.10.0.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%227d947cbb889ed21c2a84be6ffbaebf5b4e0f4340638cba0444907e38b56be084%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/lzw-0.10.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2405,6 +2363,19 @@
     },
     {
         "type": "file",
+        "url": "https://static.crates.io/crates/native-tls/native-tls-0.2.3.crate",
+        "sha256": "4b2df1a4c22fd44a62147fd8f13dd0f95c9d8ca7b2610299b2a2f9cf8964274e",
+        "dest": "cargo/vendor",
+        "dest-filename": "native-tls-0.2.3.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%224b2df1a4c22fd44a62147fd8f13dd0f95c9d8ca7b2610299b2a2f9cf8964274e%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/native-tls-0.2.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
         "url": "https://static.crates.io/crates/net2/net2-0.2.33.crate",
         "sha256": "42550d9fb7b6684a6d404d9fa7250c2eb2646df731d1c06afc06dcee9e1bcf88",
         "dest": "cargo/vendor",
@@ -2470,15 +2441,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/num-bigint-dig/num-bigint-dig-0.5.0.crate",
-        "sha256": "7e8552a8edd6289764deab155204f86ccf3b0027e10f960a55d5a53deaf6688c",
+        "url": "https://static.crates.io/crates/num-bigint-dig/num-bigint-dig-0.6.0.crate",
+        "sha256": "b3d03c330f9f7a2c19e3c0b42698e48141d0809c78cd9b6219f85bd7d7e892aa",
         "dest": "cargo/vendor",
-        "dest-filename": "num-bigint-dig-0.5.0.crate"
+        "dest-filename": "num-bigint-dig-0.6.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%227e8552a8edd6289764deab155204f86ccf3b0027e10f960a55d5a53deaf6688c%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/num-bigint-dig-0.5.0",
+        "url": "data:%7B%22package%22%3A%20%22b3d03c330f9f7a2c19e3c0b42698e48141d0809c78cd9b6219f85bd7d7e892aa%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/num-bigint-dig-0.6.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2492,6 +2463,19 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%22eafd0b45c5537c3ba526f79d3e75120036502bebacbb3f3220914067ce39dbf2%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/num-derive-0.2.5",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/num-derive/num-derive-0.3.0.crate",
+        "sha256": "0c8b15b261814f992e33760b1fca9fe8b693d8a65299f20c9901688636cfb746",
+        "dest": "cargo/vendor",
+        "dest-filename": "num-derive-0.3.0.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%220c8b15b261814f992e33760b1fca9fe8b693d8a65299f20c9901688636cfb746%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/num-derive-0.3.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2518,6 +2502,19 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%2276bd5272412d173d6bf9afdf98db8612bbabc9a7a830b7bfc9c188911716132e%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/num-iter-0.1.39",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/num-rational/num-rational-0.2.2.crate",
+        "sha256": "f2885278d5fe2adc2f75ced642d52d879bffaceb5a2e0b1d4309ffdfb239b454",
+        "dest": "cargo/vendor",
+        "dest-filename": "num-rational-0.2.2.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22f2885278d5fe2adc2f75ced642d52d879bffaceb5a2e0b1d4309ffdfb239b454%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/num-rational-0.2.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2570,6 +2567,58 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%222839e79665f131bdb5782e51f2c6c9599c133c6098982a54c794358bf432529c%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/opaque-debug-0.2.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/openssl/openssl-0.10.26.crate",
+        "sha256": "3a3cc5799d98e1088141b8e01ff760112bbd9f19d850c124500566ca6901a585",
+        "dest": "cargo/vendor",
+        "dest-filename": "openssl-0.10.26.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%223a3cc5799d98e1088141b8e01ff760112bbd9f19d850c124500566ca6901a585%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/openssl-0.10.26",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/openssl-probe/openssl-probe-0.1.2.crate",
+        "sha256": "77af24da69f9d9341038eba93a073b1fdaaa1b788221b00a69bce9e762cb32de",
+        "dest": "cargo/vendor",
+        "dest-filename": "openssl-probe-0.1.2.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%2277af24da69f9d9341038eba93a073b1fdaaa1b788221b00a69bce9e762cb32de%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/openssl-probe-0.1.2",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/openssl-src/openssl-src-111.6.1+1.1.1d.crate",
+        "sha256": "c91b04cb43c1a8a90e934e0cd612e2a5715d976d2d6cff4490278a0cddf35005",
+        "dest": "cargo/vendor",
+        "dest-filename": "openssl-src-111.6.1+1.1.1d.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22c91b04cb43c1a8a90e934e0cd612e2a5715d976d2d6cff4490278a0cddf35005%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/openssl-src-111.6.1+1.1.1d",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/openssl-sys/openssl-sys-0.9.53.crate",
+        "sha256": "465d16ae7fc0e313318f7de5cecf57b2fbe7511fd213978b457e1c96ff46736f",
+        "dest": "cargo/vendor",
+        "dest-filename": "openssl-sys-0.9.53.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22465d16ae7fc0e313318f7de5cecf57b2fbe7511fd213978b457e1c96ff46736f%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/openssl-sys-0.9.53",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2690,28 +2739,17 @@
         "dest-filename": ".cargo-checksum.json"
     },
     {
-        "type": "git",
-        "url": "https://github.com/rpgp/rpgp",
-        "commit": "8928a249f848d46889f618fde914417f698ea76f",
-        "dest": "cargo/vendor/pgp"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "if test -d cargo/vendor/pgp/pgp; then mv cargo/vendor/pgp cargo/vendor/pgp.bak; cp -ar --dereference --reflink=auto cargo/vendor/pgp.bak/pgp cargo/vendor/pgp; rm -r cargo/vendor/pgp.bak; fi"
-        ]
+        "type": "file",
+        "url": "https://static.crates.io/crates/pgp/pgp-0.4.0.crate",
+        "sha256": "1b16d0ab0f228058bcd3f20a1ee0da6b443ff142988693247a08b799b6c520fb",
+        "dest": "cargo/vendor",
+        "dest-filename": "pgp-0.4.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22.circleci/config.yml%22%3A%2268521bad4770a12679b189541d3bd14d80402dff3aad773cc884d0bc6d307621%22%2C%22.gitmodules%22%3A%22fc304b5e5a2161b547af2f77543c20ce434d8364eb6055dc089a4a77226ae99a%22%2C%22Cargo.toml%22%3A%22da9ae904a8cb56c25d5cb9331d1d04e5d566d3820d7d56662b23e8fff20193b0%22%2C%22LICENSE-APACHE%22%3A%22769f80b5bcb42ed0af4e4d2fd74e1ac9bf843cb80c5a29219d1ef3544428a6bb%22%2C%22LICENSE-MIT%22%3A%2230fefc3a7d6a0041541858293bcbea2dde4caa4c0a5802f996a7f7e8c0085652%22%2C%22LICENSE.md%22%3A%2286a88ebd236d2d8628e06a898354b3269ae25a6f719a1c511dfa814d875821e5%22%2C%22PLATFORMS.md%22%3A%227581d077c7929513ec8b1cfa68b66a1f8a1071c02d271f1d413f0a3303819264%22%2C%22README.md%22%3A%226267bcd2c4e1c9d1f05d410eadca086e56a54376684749a78440e426c311faf4%22%2C%22STATUS.md%22%3A%22d057b93d46fa4fd40af2ab90d6b00f6f8ae2b63fa41ddbbd760690c5680c0759%22%2C%22appveyor.yml%22%3A%2254a0a0ab317a11dd1eab2cdac6ccd28c570c1de84e715ab9f3ec7242c600dbb0%22%2C%22benches/key/mod.rs%22%3A%221d745bfc53d7f545dc9d1f92aabc0ae2ebeb2ce0da81dcb5159aa9e4b23ba3de%22%2C%22benches/message/mod.rs%22%3A%228da11cc378f2ffbb3d84980f5760dd013f47f0d829c9a74de425176455eec335%22%2C%22benches/pgp_benches.rs%22%3A%227a60043666dba8e4f35319a2c39708715ba37d82ecc0ccc2f1a23e94a97ccb34%22%2C%22ci/run.sh%22%3A%22c90a21f18504ac3c35b16c2533f7c815002920ce9d8b7358dab43907df41ed44%22%2C%22release.toml%22%3A%22fdfe7c3515a102e2a27176b0827366e104b15cf09e07f2b2f2c8d6940447c23d%22%2C%22rust-toolchain%22%3A%22a40f0b36411961efe039acca0985e8c51792016d16c65e2958d3d1b9f10116b7%22%2C%22src/armor/mod.rs%22%3A%22a0886816316311d4eb7c718c300bfb9419ffaf90b8af71b470d05b1cf5e740cc%22%2C%22src/armor/reader.rs%22%3A%223cc1fc1a1a5febe5ae0c2f00ae3a81126d5b05acf15fb7fe153218b150b14ac9%22%2C%22src/armor/writer.rs%22%3A%22b5f997f4a52578bd9ba655cfe7cd8a4150e919a1bf4174b8aa8be3e1011d351c%22%2C%22src/base64_decoder.rs%22%3A%22b67f35016925fb3283d6975de4916c2ce7e25c62cc69d5b0456aef945dd9f08e%22%2C%22src/base64_reader.rs%22%3A%22f4e1a455cbf6576b667f6f80ece4213144b53a0fae0df31c0343f7f6c64d8309%22%2C%22src/composed/key/builder.rs%22%3A%220f1dc589057cb1680722ca523e0ad43f37e1fd0817099fdfa467bcc07f9d0f1b%22%2C%22src/composed/key/mod.rs%22%3A%22611df67ab9128fb9e319ad3372847bf0929518267bf96d1e5ed0963fed5392b9%22%2C%22src/composed/key/public.rs%22%3A%226108031ac706456ed21bac0396b9354964915690667c382fea98e21307177224%22%2C%22src/composed/key/secret.rs%22%3A%2286714ca5cdcb05aacace6d456d1f568a2aa84ec688264d7ee1a2f14246220637%22%2C%22src/composed/key/shared.rs%22%3A%2217c5bc8b9144f43b959a4394a1b2d5aa82d2c60d3baa6fa368e2ad94307ec6d0%22%2C%22src/composed/message/decrypt.rs%22%3A%226929034e011282087415e08cbd38443218baa9dfa72edc345e9b81efbe0b220b%22%2C%22src/composed/message/mod.rs%22%3A%22985ab3e7a40669a016fdbdeaab5885299ece7b26ff4c8a4ca11be11fd05fa5b9%22%2C%22src/composed/message/parser.rs%22%3A%227a9dffb35ca4d0ef4c55a83612b080b4ae3e1f74800f4ab120831145a04974d0%22%2C%22src/composed/message/types.rs%22%3A%22b257cdb4085a075935137c99ffb66562e830f6354cc52844dba9e36b1f5abe39%22%2C%22src/composed/mod.rs%22%3A%22fb685820baecb7148d9d3d0dae02711fd5a2e85a08ab00281a5f0f8cd9bd78dc%22%2C%22src/composed/shared.rs%22%3A%2271d1b653311bd3bb5f9dd30d96b878668ae2dc586fdb46aebaa89fc87f3dffa3%22%2C%22src/composed/signature.rs%22%3A%22a946added45312909048f59b8a415e86d9154f32e224bdfd52abeb7dc3c285f3%22%2C%22src/composed/signed_key/key_parser_macros.rs%22%3A%22400383079cab6f5179a8bb4ed4f14f7ecc400c67c8a5ec7b96487d469cf76ee3%22%2C%22src/composed/signed_key/mod.rs%22%3A%2279a65957c1ac8057587481d130943fd70b3797e665d98548972b8b708560206a%22%2C%22src/composed/signed_key/parse.rs%22%3A%22a53c725c3bd6534e6701f7faf32acef025318256599d57f2bddac874f88d3837%22%2C%22src/composed/signed_key/public.rs%22%3A%22d3fc92bd138478d00156e91d70b2c00ca423a915d44293a44be624e1f7622bb4%22%2C%22src/composed/signed_key/secret.rs%22%3A%22d56c400dd96485d5251668d2e755256f75187e9668011e18622691b4e05d3dc2%22%2C%22src/composed/signed_key/shared.rs%22%3A%22d6040d69711910e8c4a13ada4d08d648307951822465133a082534c090af8b10%22%2C%22src/crypto/aead.rs%22%3A%225bcc48b2b6a38d7b5e2eb79f257a281bbcb19edb7b1e1094d8b3e3a285961b57%22%2C%22src/crypto/aes_kw.rs%22%3A%22b048201f432fb94fa8ee68846881b3376981c918b34b0d0457a7eba83d50c62d%22%2C%22src/crypto/checksum.rs%22%3A%229525c70a4c6964773c37d10066e0e8dfbdd5ad89d4cafd09b913fbaf761fd32e%22%2C%22src/crypto/ecc_curve.rs%22%3A%227084ede0937305fab705a59209fbdf213225e07348aabeef20e7652b7243d1d7%22%2C%22src/crypto/ecdh.rs%22%3A%220d09221297ca2025426b22e0743fda3f5698d0e23f1b21e37c38ba9c29eacc02%22%2C%22src/crypto/eddsa.rs%22%3A%22b426f757a39b4e8f133a03b1dd3916d46f8ef33847bbb101ba0b2420f4120caf%22%2C%22src/crypto/hash.rs%22%3A%2275b7ef6b307a0c0fe1431a6e4f5773c4998c2ad41ccde7258a648168bd202633%22%2C%22src/crypto/mod.rs%22%3A%229fbef86eb99b5d4080bcb8dace5b4dbe737114caee74fb055dc32531224c7afe%22%2C%22src/crypto/pkcs5.rs%22%3A%2201ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b%22%2C%22src/crypto/public_key.rs%22%3A%220baa5579ce091ed116eefa73dae389189065d576ceef06995fc4210de748eb55%22%2C%22src/crypto/rsa.rs%22%3A%229551f5230211211c1f81f92f4b457be6a04bb4a7ae9a7c590621df176b2c2d52%22%2C%22src/crypto/sym.rs%22%3A%2239eda60e6f398a6965276c8f3e2f5b57a29879abe09dc87d8dd4b711d106dc39%22%2C%22src/de.rs%22%3A%22abc5831f17705ef026c5e0a488739e1f71ac855095ecdf92db9dec5927092f14%22%2C%22src/errors.rs%22%3A%228e167d913a63164cf404bec102854f2ca2bd17880bcb1a34f8e7ffdc8cc0f2bc%22%2C%22src/lib.rs%22%3A%22f0c3958848d815e4d3142f56428033f208eadf9a9431d1f2bfaa03fd46b1db3b%22%2C%22src/line_reader.rs%22%3A%221b24c0578560939135444ba0c3842bd09d549c16840e1f7be250d834cd00dad8%22%2C%22src/line_writer.rs%22%3A%22ee34c4a4d3a503183344cb8af277f554e100515921aadc59790671724f595942%22%2C%22src/normalize_lines.rs%22%3A%220feb24273604f4aff0733b12f6eda7899d4539c93a95badb7913e5482259d382%22%2C%22src/packet/compressed_data.rs%22%3A%22a5c8cb4327f6003dd67bb7a52e3631eade76017148d166cb65178aa14fdcd80c%22%2C%22src/packet/key.rs%22%3A%220ad9d1782feda59c1961ce32c2c1f5ba052bf511025db0b0b56cb7ee1e20007f%22%2C%22src/packet/literal_data.rs%22%3A%22d8ae3a5a81265724e0e3c9d49dac9ec3fada599f43b7b0579d23d2aa00cf48d4%22%2C%22src/packet/many.rs%22%3A%22bcb546d043189d5064a0627122f5bc1df59787861e19e9b137034805c01db21d%22%2C%22src/packet/marker.rs%22%3A%22cf45277d84c69b26b6eb6d69b18d61016f4526e27f509eeed340c3a9a2ef154a%22%2C%22src/packet/mod.rs%22%3A%2299119cc9a37432e32161236afde45dc1c2db6e167f4e341e0a7f131aca41475f%22%2C%22src/packet/mod_detection_code.rs%22%3A%224bb2a546358af8afb4b9a802fa22f275c0c864005eb146337a2c094520648f58%22%2C%22src/packet/one_pass_signature.rs%22%3A%22113694038209a851ccadc277f6d645d4dc2a9bbd0cc6259db58401d89479fd71%22%2C%22src/packet/packet_sum.rs%22%3A%2224b4781f3c862e27462b2422895b9953588448b96215e7070f90c43ee23e892c%22%2C%22src/packet/public_key_encrypted_session_key.rs%22%3A%2275bc9de6725a0550c25c5aea8a7cc605edcff5dfbaaa8ffd868c55ebaa40e6d4%22%2C%22src/packet/public_key_macro.rs%22%3A%22ee3d173777e516f07f8af94c348072cafd185c770acc1acaa2cbd5b796ce469b%22%2C%22src/packet/public_key_parser.rs%22%3A%22b635f1a0fad8f42c89b7d6b5fd39d47939077782694da8ddf8ba4c5e741bbf34%22%2C%22src/packet/secret_key_macro.rs%22%3A%2226d0f4076215badec23941b670e69f8597e0d24497b037b60f30956c13032a81%22%2C%22src/packet/secret_key_parser.rs%22%3A%22a63fdcd15122ab49eebb71b1ce2e5db4a5daae4e08dc04c69f8183d57a51a53f%22%2C%22src/packet/signature/config.rs%22%3A%22df4149f773a8ddb4e141b18c566e7934537fa9efb7ea246d10bd3c61a9d6afd5%22%2C%22src/packet/signature/de.rs%22%3A%221bdbf6cb7260c5988b9fd3971cc95679cdd687d8e0b05a3cdcb16c3f73bb7355%22%2C%22src/packet/signature/mod.rs%22%3A%22729d8097ec4f0188ae90bd81b56c4c2a609b940e29c095bf97933317019c7718%22%2C%22src/packet/signature/ser.rs%22%3A%227ddd4635f01789f5216dae2ee9c2db4ff70b7764c14de10de021be89e5ef2822%22%2C%22src/packet/signature/types.rs%22%3A%2260d77295d91deceb63165218df6b37674f127fc727722f3ac4fcf468b886b24c%22%2C%22src/packet/single.rs%22%3A%22661f6bc3168bf6c9e363efd823f286931cacc25eb32153f5c8051e23a5c0c867%22%2C%22src/packet/sym_encrypted_data.rs%22%3A%2260d023c85f765d11e59b7fa86a930abd2f1c23f6d6838322dd41de63254797d9%22%2C%22src/packet/sym_encrypted_protected_data.rs%22%3A%22d569edb4696ed62c81802f963aa8dd794aa78c7dd923e089e9cb3c43b1721611%22%2C%22src/packet/sym_key_encrypted_session_key.rs%22%3A%22ba334089ba60bbc1d74da5aa71f24d19d2ea554cb95cabc0b105904b12bfa5b7%22%2C%22src/packet/trust.rs%22%3A%2294772aa64d5f379708703b3a4030ee00cbdfb16a0b6b1343a8afd03ce501efbf%22%2C%22src/packet/user_attribute.rs%22%3A%22c13d9789bc6b70bd9155e89372165e882aea7fc128d6cb49b62083e7ca03ba2f%22%2C%22src/packet/user_id.rs%22%3A%22ec324c7d509a44ea190f8b4103446c060766983e1247c8bf1aa5f668f0762ad1%22%2C%22src/ser.rs%22%3A%223aa9d27ea770062af098644a6535eec291d319216854a58c220ff7e923821092%22%2C%22src/types/compression.rs%22%3A%227ecec308881ffc762754156583d28117565485ebbe1e7e3a6c315fc2cb4b9335%22%2C%22src/types/key.rs%22%3A%22c17912f649846f4d0263c1f9d20dc51ba07354dd230e2596822b7257d9981f73%22%2C%22src/types/key_id.rs%22%3A%2274efdc3160fa682b7158d89c44afc6a036117fca0792f6b07b001835f61cc380%22%2C%22src/types/mod.rs%22%3A%22ec850cc50955b5d5e308df659753f5d303de8bc547ada10704c2858247a57570%22%2C%22src/types/mpi.rs%22%3A%220fa078f6632716ba387780708d99d19f9a3fbf878032f7fed4f38bf5fb776311%22%2C%22src/types/packet.rs%22%3A%22817fa6eae82d425635e6e4841eb988f4a4698b7df80b025a328356711f31b115%22%2C%22src/types/params/encrypted_secret.rs%22%3A%22f622fef35b0b35ef91677500be7bdd54ba35d998400a482c06bdeaadc5660c66%22%2C%22src/types/params/mod.rs%22%3A%22a2c6d9f06562f5be656f879475267c6c941af912473a5d645ab1af3773711d68%22%2C%22src/types/params/plain_secret.rs%22%3A%22a98f1af1f18113767e5b7b083a205b6416df14f2f36e64d9a1249b9280ac1f7c%22%2C%22src/types/params/public.rs%22%3A%22b1272d5429533ba046c0a8c4cbf0eac7adc3abd7742299c01eae9ef519c9df8f%22%2C%22src/types/params/secret.rs%22%3A%224428ea5c0a09d5bd172b9dc1e156518b8cadea3c81c28b1b574f594223617232%22%2C%22src/types/public_key.rs%22%3A%22a2ee66b17e1158eb82ae0642703da0a88e4c79e4ecaa489b381da9ec5c6693d1%22%2C%22src/types/revocation_key.rs%22%3A%229f792cf97affb876867f7d8e81bfc7ae6c6347b5e737c7f7e045b3a30cc613de%22%2C%22src/types/s2k.rs%22%3A%2234692596586fb957ef438c879b320842dcda167660405ba57cd03a180eaf22ff%22%2C%22src/types/secret_key.rs%22%3A%22222f6d712c83c3ce6b8afac2ae0de509922cb760def5c4a00f9e76d987dce5f4%22%2C%22src/types/secret_key_repr.rs%22%3A%22c502ffd62e9220758cb4a21840fe1541eea38abd72b2b37b8be4dd7fd33206c7%22%2C%22src/types/user.rs%22%3A%2256b09e4faff015587db6ba4e0fd5fabf7dc6782bf421f51e86b1f18537cbcdfd%22%2C%22src/util.rs%22%3A%22ceefc7b0cda263f9ea1d16cdbef518dcf1f84fc3bff0fd65ecb5a78005a1475b%22%2C%22tests/autocrypt/alice%40autocrypt.example.pub.asc%22%3A%22ff85434ce8ef92af4576ed14b8f3a7253230b0e0134e78efd8f64eb2517065e4%22%2C%22tests/autocrypt/alice%40autocrypt.example.sec.asc%22%3A%22287619665e7d94008141f0c44bc76b948ea9fd155f330469671cfcb46aa560d5%22%2C%22tests/autocrypt/bob%40autocrypt.example.pub.asc%22%3A%227b66cd45d172ecf09fab25ba1456b1688515f91e84a8951e9ac0462d7638b023%22%2C%22tests/autocrypt/bob%40autocrypt.example.sec.asc%22%3A%220ec7c2b6f83baa54124cd915652746135a9c1a40474328192f54d6e4cba893ba%22%2C%22tests/autocrypt/carol%40autocrypt.example.pub.asc%22%3A%22eeac1754c13f87394329f4e2223d894be2926f55f26e4331540069768fd9d495%22%2C%22tests/autocrypt/carol%40autocrypt.example.sec.asc%22%3A%22fb94f548a7a6c8811f504b01b23519e27bf1c37aaff7f43b18a6ceb0ad6f133d%22%2C%22tests/indeterminated.asc%22%3A%2251607c8e844e01193e328bd6d0c617bbcf7ea1bed00c1f81d078f13b20eb3af7%22%2C%22tests/key_test.rs%22%3A%2282e9015516e6d8241567b5fd8c0b2e5c3a5101cba779e9c3184a39b825f230e5%22%2C%22tests/literal-text-signed.asc%22%3A%22cd4edce59c499a642bf5fea3d6fc26c2f33a5c40a79afda1e98d21c88590c13d%22%2C%22tests/message_test.rs%22%3A%2231fe564d365cf3a45af0f6518896433a288bbac320e02cd8903da4bb0d1f9a80%22%2C%22tests/opengpg-interop/AUTHORS%22%3A%2255cd3e58503d98b87beb86a9cba9c5c0d543929e9752eabd877278c2ad5efb2b%22%2C%22tests/opengpg-interop/CONTRIBUTING.md%22%3A%2260309c84719fa557981cfa210b14b8782e4e96751059455a6c500385be9880c8%22%2C%22tests/opengpg-interop/CONTRIBUTORS%22%3A%22bbe65e30c581060719a42b54c32095985aba469a9d022794d91cd66a7eef76b8%22%2C%22tests/opengpg-interop/LICENSE%22%3A%2258d1e17ffe5109a7ae296caafcadfdbe6a7d176f0bc4ab01e12a689b0499d8bd%22%2C%22tests/opengpg-interop/README.md%22%3A%22c9483c59308ded7653e237714d47eccac533d105a3d705d3af5ad730bf0bc9f2%22%2C%22tests/opengpg-interop/testcases/keys/e2e-001.asc%22%3A%229bb1adf036c85a4035dfa11c957281fcd244113d0c6424f1771efb813b6cd55b%22%2C%22tests/opengpg-interop/testcases/keys/e2e-001.json%22%3A%222b3f5dc90b49642fd13ac75c06b6a3ddafefd52c4a16594bfbe838f81832bac1%22%2C%22tests/opengpg-interop/testcases/keys/gnupg-v1-001.asc%22%3A%220024dd6a7e615d3db63be12f0803b2cab8ce2f2c19db4e0967f19aca651c4ca6%22%2C%22tests/opengpg-interop/testcases/keys/gnupg-v1-001.json%22%3A%224fd3a9a0b2bf2658ca16f6353a1c2f623dfafa37b4f034cdcf68112b5383a441%22%2C%22tests/opengpg-interop/testcases/keys/gnupg-v1-002.asc%22%3A%229299b5418132868833dadd14b41dec9dd54de03548cfb71fd070d52a45413975%22%2C%22tests/opengpg-interop/testcases/keys/gnupg-v1-002.json%22%3A%221691fe1687bbeb41668a0bf742364fca99c88de35a7dede497ba691357c98c13%22%2C%22tests/opengpg-interop/testcases/keys/gnupg-v1-003.asc%22%3A%22319eb44afcb0f1b9b15f69e78cf1168d9888925083dabf1584bdfa9db8a1a25d%22%2C%22tests/opengpg-interop/testcases/keys/gnupg-v1-003.json%22%3A%2205ac42aaab1c1db8dddf02c885f13fffad17ae5b0cfb9bda98ccd43a613a6ad0%22%2C%22tests/opengpg-interop/testcases/keys/gnupg-v1-004.asc%22%3A%22bd76dfb08781ba0ee3662432e1acd1c483b712a302a6bb51617fed7f29f53012%22%2C%22tests/opengpg-interop/testcases/keys/gnupg-v1-004.json%22%3A%2285ce4dcddcfd2e2da015bfef0228bff20ec7db4bec9da15d48446497d79ff9cd%22%2C%22tests/opengpg-interop/testcases/keys/openkeychain-001.asc%22%3A%22fe788ca7868482ceaacc528ba973ef92e50b66b0be31ca8ba7cab2c98204551b%22%2C%22tests/opengpg-interop/testcases/keys/openkeychain-001.json%22%3A%222c5c87c6db57188131b0e4a1c867b880d76bd1eafc5a2c894a86dfe95a1c9c83%22%2C%22tests/opengpg-interop/testcases/keys/pgp-6-5-001.asc%22%3A%22cec2ececc876d278f078243f29f79f49374c6d5fff31a09bc119359487337896%22%2C%22tests/opengpg-interop/testcases/keys/pgp-6-5-001.json%22%3A%22e2b6c4deda544c3da0796a77016a7d5a9dd11aa0e917324e15a673183e6d80ef%22%2C%22tests/opengpg-interop/testcases/keys/subkey-001.asc%22%3A%2236e8135606f885e74c6105f4c50746d90b8ef8bc05b450f337e4700297491f92%22%2C%22tests/opengpg-interop/testcases/keys/subkey-001.json%22%3A%22d8cea86116eb0140f540c3a2d960a3a148022441662f70e451017512f7e4f1e1%22%2C%22tests/opengpg-interop/testcases/keys/uid-001.asc%22%3A%22fe0c92af820b9dcba28c702f60eeaabfc5e3ca827df4fdf0cbd011f5c3b1bbb2%22%2C%22tests/opengpg-interop/testcases/keys/uid-001.json%22%3A%220ed4bf00c38104f3cca5ef20b1cbb9589b30ef0e86813d6c6fefebfeccb96900%22%2C%22tests/opengpg-interop/testcases/keys/uid-002.asc%22%3A%22587b8ed28a39551f5d36bdcd63a71747240848a18c860f8a40781662cdb9950c%22%2C%22tests/opengpg-interop/testcases/keys/uid-002.json%22%3A%22ce7b74530c257b1fc191a16d31293a0b5ea4f1564f4d26db9c9f5af1e372861d%22%2C%22tests/opengpg-interop/testcases/keys/uid-003.asc%22%3A%22e4950d5d6deaec02b7e7aa8ca3641b460df7979119d5d50921e558fea9fb8ab6%22%2C%22tests/opengpg-interop/testcases/keys/uid-003.json%22%3A%2225347f8802d211c674f927968deffb6007b97b1059d954c46f8a3aedfdd7e577%22%2C%22tests/opengpg-interop/testcases/messages/e2e-001-decrypt.asc%22%3A%22fb0fb591440ad9dc9eeed7df75e97d750e48b096cf8aa18354e50537371972e0%22%2C%22tests/opengpg-interop/testcases/messages/e2e-001-verify.asc%22%3A%22a50c910d3633e96b12916ab3dac5f2c159abf4e81f7ae926ec44c97d4b007994%22%2C%22tests/opengpg-interop/testcases/messages/e2e-001.asc%22%3A%229b9996e892bae829c1faaf6871da2a82877ab327ec3246041dad0d0480bb461f%22%2C%22tests/opengpg-interop/testcases/messages/e2e-001.json%22%3A%226a604df1ec1e7377a42629fb4a6408a8d99addd75300ad316f8a3302d3d306c4%22%2C%22tests/opengpg-interop/testcases/messages/e2e-002-decrypt.asc%22%3A%2293993ee4b31c77f3c902b0ac96711d11b0a04704ffefaf75b5a00c05c741ec8f%22%2C%22tests/opengpg-interop/testcases/messages/e2e-002-verify.asc%22%3A%22a50c910d3633e96b12916ab3dac5f2c159abf4e81f7ae926ec44c97d4b007994%22%2C%22tests/opengpg-interop/testcases/messages/e2e-002.asc%22%3A%22e885c9c2386869ec12e94c9341663d61aac0fbf02227a9af30f14bb384561595%22%2C%22tests/opengpg-interop/testcases/messages/e2e-002.json%22%3A%2203b76383d6fc8750b20c59d449f48c8887a5eca2e053352084cbbbdfb05fd247%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-001-decrypt.asc%22%3A%225c776b88356a1dc12891ff299677237a7e3c6c30c0a3851fc157418f20ebb4cf%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-001-verify.asc%22%3A%22064c03597609fd68729869f9de6045b1299a836792bca595aa53115a0fc2d54c%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-001.asc%22%3A%2261c73fa27d6a1449a1fbd735bfe8cfa57232319ee36b6bf120a8396b34047d68%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-001.json%22%3A%22137b115ba79e58b2b016ef2af020cbd4c8b3caabdaa34720a376acd45d171be3%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-002-decrypt.asc%22%3A%22714036e808ba615948e6320bf0bf5049f0a90fbc541317461a3bdc3ea42d060e%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-002.asc%22%3A%2271ef6bf5723179eba1af464b6581dc24387d2ed90beca781dc3ce52aabada4df%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-002.json%22%3A%22658fb24f63b02aa5f6b859bf000b5c4e9c440c2b806a8223a2d31d4e7ed883da%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-003-decrypt.asc%22%3A%225c776b88356a1dc12891ff299677237a7e3c6c30c0a3851fc157418f20ebb4cf%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-003-verify.asc%22%3A%22064c03597609fd68729869f9de6045b1299a836792bca595aa53115a0fc2d54c%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-003.asc%22%3A%2261c73fa27d6a1449a1fbd735bfe8cfa57232319ee36b6bf120a8396b34047d68%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-003.json%22%3A%2201453ec97be3d82c7b36fc82ec719d6de0dab63217a88ac2220b643434d9ac20%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-001-decrypt.asc%22%3A%22a4b519758caaa1236abdde6dfaf1789b02675d0b96a96be2a8f82b4d049d29ee%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-001.asc%22%3A%22a60c8b2eb871876f2430a554acefb2d38bc9bd7e4773cc6db2477a22b2342068%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-001.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-002.asc%22%3A%225f8ca20530a91a8ca279bf89acc6ee66f159779963c76a31ae00177cbff79842%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-002.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-003.asc%22%3A%2289ec86c98100ee8c3caadaa6e8d3ab3aa1dca3cde9ac85de0cc0c4b1d65c8f7d%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-003.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-004.asc%22%3A%228008abd7a0976da9fb0f187a4302e6215cc1af38d1b9b885fa54a48aca8e0f7c%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-004.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-005.asc%22%3A%22831fdec572ecb9fa66a41fd23a2a1660b9680f4161f21fc50caef38be66fe500%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-005.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-006.asc%22%3A%2214e4f27f29d58f20c902a5f28f4d94e4e660fae9a8efcb4df2cc337383300922%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v1-4-11-006.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-001.asc%22%3A%2222c99f5b15edd141d16ec3fed3d657dd6f62743a8e7fa4421f3dc31a57c80c48%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-001.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-002.asc%22%3A%228779567224d1e07d61b3204425671f6e1f94d187963baa92ce015783ad244345%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-002.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-003.asc%22%3A%2299d48d9b17c7cd176c8d974143c6d7a8fcd619411e54a4aba153648d9e15d046%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-003.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-004.asc%22%3A%22152b194e5236580523724b0b84a8f984ef5bbdb1f034e1abd7c9b73fba2c1212%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-004.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-005.asc%22%3A%228fa33c20c62ebf8218fe30dc0a9ec3a77630cb7a1408559b4375e8c0e2af9ee6%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-005.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-006.asc%22%3A%228441903c8a672b30504945d159279e99003d1a022599e46585641f619c7699a0%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-0-17-006.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-001-decrypt.asc%22%3A%22b687aac512fe12423b3d01ba505ca564c6325cbffe8bb41fcb0c651b314e92ce%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-001-verify.asc%22%3A%223cefce0c04caacf2b4e457e0afab7bdf3c4acb0c94c0c2e0d2c03f75abc3d62b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-001.asc%22%3A%22d738ececcc8b3c01b9b6e8cf31d8a449517af8875e50904f8401372e08481bf9%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-001.json%22%3A%221e2b4fc8494b36741af87f1acabc6cb40ee55818ce3a1d24137163eceedbe695%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-002-decrypt.asc%22%3A%222ca02f14cdb7081bde6f3c2f0cdebe28a39a3e7fedd1061799ef20e559aebb2f%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-002-verify.asc%22%3A%228ab7aa8e240dc2f577badb76b401e1321c2a2c53222b62a6496f66cd0704a43a%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-002.asc%22%3A%22c862a38bd268731b1f338b552452ce930a914fff2bdb1debc631bb083b242a73%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-002.json%22%3A%22bb903a49b5b61620575f54033c71cf19b116aa6480034cedf05c21c008cc626e%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-003-decrypt.asc%22%3A%2238df602ff46c8a256c5bf1f4c9a05efc1b566b2cefc67bbaaa459e7622ff1984%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-003-verify.asc%22%3A%221f2938eaa19992ff21ef6aae9d31ae5cc5bc74cc3d35a526a9ff802d0b597b25%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-003.asc%22%3A%22bebe920bd0916dd85c91fc9ea0c4a7226de0924e0b797fba9d9515fdc79ec5f7%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-1-5-003.json%22%3A%223b8a01c5f5e8249920def4a6505176be3b9da5433201f2dad7b430962390293d%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-001.asc%22%3A%22139dc84d6b1f9cfec459ef6279288c25be285e59f06e98e02168298fe96091f5%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-001.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-002.asc%22%3A%227078d55d31da49bb2af0cadc0bfe3a59698911d37c23f87602cc2fa621045b02%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-002.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-003.asc%22%3A%22380e33726fbd3ada653c477e1747b12fc38b2993ecf998fddb419a2cd856ebc8%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-003.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-004.asc%22%3A%22be102a6444f38d7e2253a66fdffe7b20d76594b251b0ca51f828bedfc167fe15%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-004.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-005.asc%22%3A%229d5a3b33f4ff63e4ced34936fef8e9725dad5aa62cc549eca4bace6453f0c916%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-005.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-006.asc%22%3A%22ab49fc84ebe28ba483060acf37358ddeb6712a118a8f65c6f7447449553d4ae6%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-006.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-007.asc%22%3A%225d147c71e2e38215721dc912b02a78a63530a197a309a52db376dc349bab5e15%22%2C%22tests/opengpg-interop/testcases/messages/gnupg-v2-10-007.json%22%3A%22b9eae0e56029470addc0b96acdb76fbc40eaf827fa854e0e7cb5f9cfefcb099b%22%2C%22tests/opengpg-interop/testcases/messages/openkeychain-001-decrypt.asc%22%3A%22175512553d3d2c12d06989d96527923f0a37198aa9865f7b845476784f6fb4eb%22%2C%22tests/opengpg-interop/testcases/messages/openkeychain-001-verify.asc%22%3A%2258c1122beefd159dc1b4bfce07460ed90f73b7453a13dfbd2fd0b2e89ee32789%22%2C%22tests/opengpg-interop/testcases/messages/openkeychain-001.asc%22%3A%224a45992c0ef28bc45e12dccf3b6e3de0a9e21fddc5c38ce43c45f2c7fee830c6%22%2C%22tests/opengpg-interop/testcases/messages/openkeychain-001.json%22%3A%22d1f1391d466acc4c9f1a39e60817c787ea6b148cb1f700c8415cfd105658bf26%22%2C%22tests/opengpg-interop/testcases/messages/openpgp-001.asc%22%3A%22eb281c440a79026a94d3b4d3ed15bc7809732fbe8cd2230508f886cb1a2e0ab4%22%2C%22tests/opengpg-interop/testcases/messages/openpgp-001.json%22%3A%22ee764b42aa9475effd36f64e0feb8db06ab008956dc978ecd2375e36bc6e31e5%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-001.asc%22%3A%22c3dd051ef5b72b14a0dc27267d3ab428d6193cb9ce1a8e2f67555c7fcce42d9a%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-001.json%22%3A%22018fcae9c1e5a8d4c5288124757abeff14877f0e16f9d2b33a7e241d94a03eb4%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-002.asc%22%3A%2255d8b70b1455ecc4220945ac1e99549cb20131f4e097a6295b1e9013c71e3ea8%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-002.json%22%3A%22b892f861433b51a665d5be755575701a6ba94eaa4d8ab65ce9e40e06537b048e%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-003.asc%22%3A%22c1238ca774deed4354125b78b500f4212c8f47e479ad388b2ded03c2bac96aaf%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-003.json%22%3A%22b892f861433b51a665d5be755575701a6ba94eaa4d8ab65ce9e40e06537b048e%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-004.asc%22%3A%22c1238ca774deed4354125b78b500f4212c8f47e479ad388b2ded03c2bac96aaf%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-004.json%22%3A%22b892f861433b51a665d5be755575701a6ba94eaa4d8ab65ce9e40e06537b048e%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-005.asc%22%3A%22a011dc857877b75a6b100bba8d7cd80335d27ed1bf6099ace6dfced23edefa6f%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-005.json%22%3A%22b892f861433b51a665d5be755575701a6ba94eaa4d8ab65ce9e40e06537b048e%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-006.asc%22%3A%22981205d6a537b845b2a80d098da0f06dc5302e0af9ce7843e52ff065244fbf8d%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-006.json%22%3A%22b892f861433b51a665d5be755575701a6ba94eaa4d8ab65ce9e40e06537b048e%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-007.asc%22%3A%228fb08cfb73c97d19cda4c75832b37f04a94ed202b678b22ff0e04056f43a7745%22%2C%22tests/opengpg-interop/testcases/messages/pgp-10-0-007.json%22%3A%22b892f861433b51a665d5be755575701a6ba94eaa4d8ab65ce9e40e06537b048e%22%2C%22tests/openpgp/4gb-packet.asc%22%3A%22455b9310d9dffcb9e14d8ba0bf1aecc2c871618a714baa649be696f646d8fca9%22%2C%22tests/openpgp/README%22%3A%222fd9d17b51056b4fbbc6e9219e8c469b3360c932661375c9dfa3f5c4056066e8%22%2C%22tests/openpgp/bug1223-bogus.asc%22%3A%22f344b429ee790fea424a448ec9dc0441f6e9bbb7e2bbab287e07a529dc1d1a9d%22%2C%22tests/openpgp/bug1223-good.asc%22%3A%2203579187d3f00bb26d374df7f2a20714ab0fcb651e4ca02681984cc9ededc7c9%22%2C%22tests/openpgp/bug537-test.data.asc%22%3A%22582528865d21da28471a95fbb4df91c3b9543afdae1dc98fef7d1b338a849106%22%2C%22tests/openpgp/bug894-test.asc%22%3A%22988dc9ecad94e258257063b147ea4e61ec48771e5c0d12f133ab2db63447edb8%22%2C%22tests/openpgp/forged-keyring.gpg%22%3A%22a0bd735784824bde0f9b0f1254ff511ca0ec2a3c7293f5877ec37919e4844a05%22%2C%22tests/openpgp/key-selection/0.asc%22%3A%226f609a78bb44446a781b1ee6c51119af2425168a88beb69acd03ef7295281d65%22%2C%22tests/openpgp/key-selection/1.asc%22%3A%226c394d49a3c18117ef29672605298c039b965b5cb5819c005300be6f3615b18d%22%2C%22tests/openpgp/key-selection/2.asc%22%3A%22e6de7d85cd500a5196161138cf1e6268d6bb7327afc6fc8ba27061097aa1f340%22%2C%22tests/openpgp/key-selection/3.asc%22%3A%22628db7d030f132e138dff491de200717c0716df23fe86a1d6162225f4022906e%22%2C%22tests/openpgp/key-selection/4.asc%22%3A%2236df3106496f196c86f00f41d3f788cff05df0968ee872c65498c8d0fa9e31a3%22%2C%22tests/openpgp/mkdemodirs%22%3A%2207dee3db0aa48867a3d0130b2e669afca1ea79bf8038e9ac9c4626453f8b0050%22%2C%22tests/openpgp/pgp263-test.pub.asc%22%3A%22f6410b7b950ec645386119f59ae434364e68bcb459aa9fc77ac36d109b4928a5%22%2C%22tests/openpgp/pgp263-test.sec.asc%22%3A%2289f79c8474deac863340c227869f11a17f21f78b1c4b2eede57b5f9d0b29b0b4%22%2C%22tests/openpgp/plain-1-pgp.asc%22%3A%223c2aebfdf57c734ed3f7e7c3f5e0d1d93e4ffe04292a0697e103e64e67233083%22%2C%22tests/openpgp/plain-1.asc%22%3A%2235b7051b4b94139955ef166ca27c7cc164cb6a8887846b2bdd9e359f70855745%22%2C%22tests/openpgp/plain-1o.asc%22%3A%222cb5622cffe1532086078940169978522c811057f9eba13f88c776489a7fc3a2%22%2C%22tests/openpgp/plain-2.asc%22%3A%227335c590fcc0bd6ff4f44ac5795e1f13dcd00d2992c32fa013db57edbb96da3d%22%2C%22tests/openpgp/plain-2o.asc%22%3A%2285d2279ee2ded41e433fa785ff58cab8a2c10cce19d09206a464b62d9ab2f17c%22%2C%22tests/openpgp/plain-3.asc%22%3A%22435c90042bdcdde5ec0cb189b6be4ad8aeff40cfaab6e9e5a198a90a633e02e9%22%2C%22tests/openpgp/plain-3o.asc%22%3A%22a7684f53199e2b1039db60ad9c4f69f77f095368bf3261176c63bf7cb13cadb7%22%2C%22tests/openpgp/plain-large.asc%22%3A%2217e7f5a863488ce1413c03235ba10632501dd56d99f52d879c51ab4783cb74e9%22%2C%22tests/openpgp/plain-largeo.asc%22%3A%227acb51b6fa7c4120bb98d9965cbe55751bf5130f52ff83d5dcec55dee37d5296%22%2C%22tests/openpgp/privkeys/00FE67F28A52A8AA08FFAED20AF832DA916D1985.asc%22%3A%220b0d2e89e422d5790e7724f0cddee601df002b9fcbe53aabf742353ba116cc2a%22%2C%22tests/openpgp/privkeys/0D6F6AD4C4C803B25470F9104E9F4E6A4CA64255.asc%22%3A%22379fc2cae5ef729c05fa187937feec566df7291dd6ab709dd59aa6540c09e068%22%2C%22tests/openpgp/privkeys/0DD40284FF992CD24DC4AAC367037E066FCEE26A.asc%22%3A%22cea89b0d72292f333bc28674c923030311d6caa0066e9dd578c528411d1eaf44%22%2C%22tests/openpgp/privkeys/13FDB8809B17C5547779F9D205C45F47CE0217CE.asc%22%3A%22d63f9c0d881182e65868f2dfa2f4365a2323be9eb0f4adc564f17ac8ac038b87%22%2C%22tests/openpgp/privkeys/1DF48228FEFF3EC2481B106E0ACA8C465C662CC5.asc%22%3A%2298b5fcadd903866bc7529f4bc2cb68c8b14a24ceebbcc5c045af86b4ab7b03ad%22%2C%22tests/openpgp/privkeys/1E28F20E41B54C2D1234D896096495FF57E08D18.asc%22%3A%2254575247638cc3644db96ed5073d30e26b0f4544fa670f0e9139da81eed47c58%22%2C%22tests/openpgp/privkeys/2BC997C0B8691D41D29A4EC81CCBCF08454E4961.asc%22%3A%223933d88bd8911433e9aeaf656f353f9103189ac01b5a9d85815591333640d521%22%2C%22tests/openpgp/privkeys/343D8AF79796EE107D645A2787A9D9252F924E6F.asc%22%3A%22f040ec8ad9f152c9365ff6749d6cd6fe38dfa3966649a3491642e1ea331662bb%22%2C%22tests/openpgp/privkeys/3C9D5ECA70130C2DBB1FC6AC0076BEEEC197716F.asc%22%3A%22e1235f6126cc6f1025386ac4d3d496dae897ba4399da0506ff7153e96c456c41%22%2C%22tests/openpgp/privkeys/449E644892C951A37525654730DD32C202079926.asc%22%3A%223fb98a293dc05736f422498984dc43715dbe90de586f68a74d885ceb54892b67%22%2C%22tests/openpgp/privkeys/4DF9172D6FF428C97A0E9AA96F03E8BCE3B2F188.asc%22%3A%221f8e36c330457ae79888f9ffd55f5c3def657e9f6a8d5db7a8f3c346540eb7b8%22%2C%22tests/openpgp/privkeys/50B2D4FA4122C212611048BC5FC31BD44393626E.asc%22%3A%222e18506c17cb49dc18b17356694d07d48cd8fb961f6a9411a170a7c5c130946f%22%2C%22tests/openpgp/privkeys/58FFE844087634E62440224908BDE44BEA7EB730.asc%22%3A%22cb4106135271ae4e37d1246237ba61b0e85f504be09f91565462b11ee7e8aa09%22%2C%22tests/openpgp/privkeys/6E6B7ED0BD4425018FFC54F3921D5467A3AE00EB.asc%22%3A%223352eb3a2f45bc5acfb2b01af6ef0d1d7794550c10b8b95415a20dd75d86ad09%22%2C%22tests/openpgp/privkeys/76F7E2B35832976B50A27A282D9B87E44577EB66.asc%22%3A%223561173cc4e4a3a57541ccd229074c2eada5436bfba31c5d9fc1ccb4d8725b55%22%2C%22tests/openpgp/privkeys/7E201E28B6FEB2927B321F443205F4724EBE637E.asc%22%3A%2296d921271efe807e1ee7404e8d6617028eb913c6f8f06cbd958763d701041238%22%2C%22tests/openpgp/privkeys/8B5ABF3EF9EB8D96B91A0B8C2C4401C91C834C34.asc%22%3A%226aa70bc6e714cd1e7e7a32ffb4007256926b94485c50ffc72462a27ebc0cf3fa%22%2C%22tests/openpgp/privkeys/9D7CD8F53F2F14C3E2177D1E9D1D11F39513A4A4.asc%22%3A%226ffe16cd3d7f82fa5ed2d6784cc680842b0e8b2aee86890ca18f981f3307ab4a%22%2C%22tests/openpgp/privkeys/A0747D5F9425E6664F4FFBEED20FBCA79FDED2BD.asc%22%3A%22d95ab6e1495428a054d9581ace81ae458563c8bd9a907a39218e88c8132c37df%22%2C%22tests/openpgp/privkeys/A2832820DC9F40751BDCD375BB0945BA33EC6B4C.asc%22%3A%22b07fc4db3a964dba0d062e88fb457317715d889e199caac87ff13a3d9e6e4d3d%22%2C%22tests/openpgp/privkeys/ADE710D74409777B7729A7653373D820F67892E0.asc%22%3A%2265496dc7e036d701248c9e64d769a70cf5c008cfeeb341dec7b6bd0f1171f708%22%2C%22tests/openpgp/privkeys/B2BAA7144303DF19BB6FDE23781DD3FDD97918D4.asc%22%3A%22c675a8ac0533c54c40b3083ebe1340c5774086333fa46ee39ee136f2eedac1d8%22%2C%22tests/openpgp/privkeys/C6A6390E9388CDBAD71EAEA698233FE5E04F001E.asc%22%3A%226aae2e29e2c4a4ac65d2e1e3c31a14df8758282282fd588e3373bd1afb4ed5df%22%2C%22tests/openpgp/privkeys/C905D0AB6AE9655C5A35975939997BBF3325D6DD.asc%22%3A%221f6587456432edc12d1c82168666748c26758657cd8f120e62eb21210836e516%22%2C%22tests/openpgp/privkeys/CEFC51AF91F68A2904FBFF62C4F075A4785B803F.asc%22%3A%22c813844a3d548de5a13027d97e4f9f6a8ec342ee494c0786c836ea7af727836c%22%2C%22tests/openpgp/privkeys/CF60965BF51F67CF80DECE853E0D2D343468571D.asc%22%3A%22f81d522ed2be6955098441aa632f392e5fce0f5381ee4ccede72513962f6672f%22%2C%22tests/openpgp/privkeys/D69102E0F5AC6B6DB8E4D16DA8E18CF46D88CAE3.asc%22%3A%228c27e425a0b96b4c3cc5fce07df356ba7b4f0711abeeb28c7af7dfc55f6f690f%22%2C%22tests/openpgp/privkeys/DF00E361D34F80868D06879AC21D7A7D4E4FAD76.asc%22%3A%2229aa2a496202777af3bf43bbcfd1cc7367cc42a34d22f0a7f9fb4c0c28766daa%22%2C%22tests/openpgp/privkeys/EB33B687EB8581AB64D04852A54453E85F3DF62D.asc%22%3A%223dbc41e0f03df1a15c47f8aeee41fe711d16546160a959349622fd7dbbf9f97a%22%2C%22tests/openpgp/privkeys/FD692BD59D6640A84C8422573D469F84F3B98E53.asc%22%3A%22fdbc3c2f5a055d82cbd20e5307f5e7ba854fd335e5ce797162129d0000d13e10%22%2C%22tests/openpgp/pubdemo.asc%22%3A%226f7fe07230fe422a08f33506ddee1a2ae500a02005254328b713a7fea5267392%22%2C%22tests/openpgp/pubring.asc%22%3A%22c8782aa9c8edf2fcd231613affe2d0403eaf39eba2e9b4fe0c7a772afd3ea3f2%22%2C%22tests/openpgp/pubring.pkr.asc%22%3A%22a0094ea34619c167944594fc98aca55bb4ba90b4a972cbbfe2809935bf78bf60%22%2C%22tests/openpgp/samplekeys/E657FB607BB4F21C90BB6651BC067AF28BC90111.asc%22%3A%224ad424de6649a64b31fdf41603cebbfc17d7a93138f130f89b85b2b918cded34%22%2C%22tests/openpgp/samplekeys/README%22%3A%2288731aed4ff12b458e508a76c4733835ad932c5c7d946cf268064a6fd156b317%22%2C%22tests/openpgp/samplekeys/authenticate-only.pub.asc%22%3A%22bcdae0f9017edbb0865044356cca0582fffaf1e781778dc51211e799c7d56ae0%22%2C%22tests/openpgp/samplekeys/authenticate-only.sec.asc%22%3A%226f7f91fe1086f7fd0486106c9c6739cbc6b2e544faaf37803c0b064a0a30bdf4%22%2C%22tests/openpgp/samplekeys/dda252ebb8ebe1af-1.asc%22%3A%22f29abef8232cc5c826d39a367f84d6fdbfdd2fd53a64cdfbe702e36227d0ea9d%22%2C%22tests/openpgp/samplekeys/dda252ebb8ebe1af-2.asc%22%3A%22874fd8038a328d16f78e8c5f0ac1110d6a7f278126d2131f065d14e547851d33%22%2C%22tests/openpgp/samplekeys/e2e-p256-1-clr.asc%22%3A%22a4b784bd8fa5525ba292ef34c18e2014b3f591fa344017d2e6564c71bc2fd016%22%2C%22tests/openpgp/samplekeys/e2e-p256-1-prt.asc%22%3A%22bde10a9be607b0a87fa6df92b4d8d72ef0fb8d85972ed57d5dadc09841d5aede%22%2C%22tests/openpgp/samplekeys/ecc-sample-1-pub.asc%22%3A%22888581c2378017213441e180c128501ae022372c6af1f7a8c8248d6ffac2fa81%22%2C%22tests/openpgp/samplekeys/ecc-sample-1-sec.asc%22%3A%22f45aa142d8f633d462fa686d5de9debc9adeb64fbe4f784e04e6138de871bce5%22%2C%22tests/openpgp/samplekeys/ecc-sample-2-pub.asc%22%3A%2216163a93353ddf32dc74b2fd8a1ede6e0579e4a609be63b7f1779c471a513ece%22%2C%22tests/openpgp/samplekeys/ecc-sample-2-sec.asc%22%3A%226c1aa58241e573e606c5fe3b52b198659253808a4a0c3cf5871d8ce284b54339%22%2C%22tests/openpgp/samplekeys/ecc-sample-3-pub.asc%22%3A%2209ab82d55560dca38844cf75ea3974e9c084c66e819ffa71026a68f8b4a08fbb%22%2C%22tests/openpgp/samplekeys/ecc-sample-3-sec.asc%22%3A%22d643f786b451463dc0239b4d9618d82b7a7110703cd3a79b180ab5510cca4770%22%2C%22tests/openpgp/samplekeys/ed25519-cv25519-sample-1.asc%22%3A%224e78808e173b9aeb286be2a76af20121506b224e5ca42777ed678c40cb484291%22%2C%22tests/openpgp/samplekeys/eddsa-sample-1-pub.asc%22%3A%22ad2e5f5811175317cd885e8ba9c3e8729a7460264dfd2adceb79fae563ed0247%22%2C%22tests/openpgp/samplekeys/eddsa-sample-1-sec.asc%22%3A%229f9b4ea36e2414d4f60da2ff5a29b32fe4f6f8895418e78c930b7210a2d2c17a%22%2C%22tests/openpgp/samplekeys/issue2346.gpg%22%3A%224292636979e546376bd513870ac35930f1237f3332585ac29e1be91a04c6d1cd%22%2C%22tests/openpgp/samplekeys/no-creation-time.gpg%22%3A%2233058de93754fc35374dd6390fa6b8031467d8f135566c3d55653b5e93f0c704%22%2C%22tests/openpgp/samplekeys/rsa-primary-auth-only.pub.asc%22%3A%22a48c591c902a3adba150281298188294a09df912ef7019387898630ba79cf587%22%2C%22tests/openpgp/samplekeys/rsa-primary-auth-only.sec.asc%22%3A%22aeb85ccdf663f4d08856a8cb11876c3f0b39f8270e417e6654e46d170140a479%22%2C%22tests/openpgp/samplekeys/rsa-rsa-sample-1.asc%22%3A%2294dc587a5903e9cbc6f5bfa8451550907acf1079a29c4f1cbef00a94756136ba%22%2C%22tests/openpgp/samplekeys/silent-running.asc%22%3A%22cb29fcf1b0628d033cee4841256182c8997e5399b1fcc57ede8cff1b41865fd6%22%2C%22tests/openpgp/samplekeys/ssh-dsa.key%22%3A%22eb079b3df30b5e249f2c29ac493808841b5dd7189e31592ad531c1e5314b9055%22%2C%22tests/openpgp/samplekeys/ssh-ecdsa.key%22%3A%22f4c7b9dac104b8789fdf438e3b1d92efc2f049ee02ed43d250adf33ce71a207d%22%2C%22tests/openpgp/samplekeys/ssh-ed25519.key%22%3A%22dd0003768336f7c47e414256f39a255ec19c8e36d16669dec89141da477c716d%22%2C%22tests/openpgp/samplekeys/ssh-rsa.key%22%3A%22a176669244579b3cd5f1e6ae2670c79e05ddd314a72262857d3efcc8cdfddc2a%22%2C%22tests/openpgp/samplekeys/whats-new-in-2.1.asc%22%3A%22e7c8882f5163608a434147eb13960e2de333778443a87b58c7310e0da7b0c9ba%22%2C%22tests/openpgp/samplemsgs/clearsig-1-key-1.asc%22%3A%2253bcc6cc8360ffddf28d74a40e1afc6290ef074cdeb164158c86f9f5661da8c3%22%2C%22tests/openpgp/samplemsgs/clearsig-2-keys-1.asc%22%3A%22b29edd9283cbf5ad8f5c808092e75ba545bc97617a36581970228deff9d034dd%22%2C%22tests/openpgp/samplemsgs/clearsig-2-keys-2.asc%22%3A%22eff3979ffff1e0acb9609e2b93bb56fd7fa2b1f340fdbece5b62161cda138090%22%2C%22tests/openpgp/samplemsgs/enc-1-key-1.asc%22%3A%22af2eed196c125b4b2c72071a8743a81a1f19aa17c5cb3b23fbfeebddb8b62938%22%2C%22tests/openpgp/samplemsgs/enc-1-key-1.gpg%22%3A%22816efae96e808c71b2169f98a97cf5b260f30bf6c89c475520401ea0c5d4d8c9%22%2C%22tests/openpgp/samplemsgs/enc-1-key-2.asc%22%3A%22bc3f29a0b251dc2ddadabd4d8ffafa873a356a1d7aaf1f15c99aac9e8e8ffec4%22%2C%22tests/openpgp/samplemsgs/enc-1-key-2.gpg%22%3A%223c7df370f0e26e9741973fedd416beb858d41e0a235ee6d736268f91f69d89af%22%2C%22tests/openpgp/samplemsgs/enc-2-keys-1.asc%22%3A%22b8db5bb3080c3b12a4eb5efa34dc141ac793aa1ab1e9f318589485dbed10193b%22%2C%22tests/openpgp/samplemsgs/enc-2-keys-1.gpg%22%3A%229f15dedb0bf23e8cc2848de2238027ae01c2c24306885cc9ea164b51994c2309%22%2C%22tests/openpgp/samplemsgs/enc-2-keys-2.asc%22%3A%22b949e0665b25d94f1f4bab55eabba2087b8bb4a30825fd240e48503b430c5d1b%22%2C%22tests/openpgp/samplemsgs/enc-2-keys-2.gpg%22%3A%2299459fb7d526845f5e7da1655f533a785cbe4f16debcb92cb7e2c481d97c04da%22%2C%22tests/openpgp/samplemsgs/enc-2-keys-hh-1.asc%22%3A%22525c08a231bc62aac7d33c8e28e234c42bfaa79db1a745f506dcb7a20e89000b%22%2C%22tests/openpgp/samplemsgs/enc-2-keys-hr-1.asc%22%3A%222af449e10dc37ccfb43135e5df88f1c5da9690cf18b1efd04507b076fb473605%22%2C%22tests/openpgp/samplemsgs/enc-2-keys-rh-1.asc%22%3A%22630e467931df53bc03896416f585076b1771bd4e682dbc2818d114aa0601282c%22%2C%22tests/openpgp/samplemsgs/encsig-2-2-keys-3.asc%22%3A%224fdfa8637bb21f22edced1af882507e4a0b842f4230c916acd8d679d5f4a917f%22%2C%22tests/openpgp/samplemsgs/encsig-2-2-keys-3.gpg%22%3A%22a2783e2cec3e92d20578a12ae96ecf56300a166d77f7aa715cd4f80296452ac6%22%2C%22tests/openpgp/samplemsgs/encsig-2-2-keys-4.asc%22%3A%227b37932be7486d68901c2fcda734a29a29f811e9505a21ef9a43875c20dcdf3b%22%2C%22tests/openpgp/samplemsgs/encsig-2-2-keys-4.gpg%22%3A%22cce8e2a3e050e2073afe217f2af43805c2e0f871a8f517efb7e47b94ee15d607%22%2C%22tests/openpgp/samplemsgs/encsig-2-keys-1.asc%22%3A%2241b957cf47f6ce7a1d95c43822a670c34d4d7e75e9f14e5146a48af54cc8087f%22%2C%22tests/openpgp/samplemsgs/encsig-2-keys-1.gpg%22%3A%22dc49efa7fbd7559c395b581fbcaed8b9da461b762c0fb492aeea7261e638be12%22%2C%22tests/openpgp/samplemsgs/encsig-2-keys-2.asc%22%3A%2227d8f8d93d7131b4526b798ba53217daf3b5e4971cb39db97a3c92f98c00a40e%22%2C%22tests/openpgp/samplemsgs/encsig-2-keys-2.gpg%22%3A%22c88425891e5d653e5dd664a16fe150ad02d2af0f44870bab1041b84035973a6f%22%2C%22tests/openpgp/samplemsgs/encsig-2-keys-3.asc%22%3A%2254a918466099bd1c3f3a20349242291544583f2b3a6bbd1b8a28c22bea7c1803%22%2C%22tests/openpgp/samplemsgs/encsig-2-keys-3.gpg%22%3A%221b79ff5a77c393554441ebab992534101393bfb8c788aa3e7ce65b144cc1d2f2%22%2C%22tests/openpgp/samplemsgs/encsig-2-keys-4.asc%22%3A%2284dadaac8862d8b75b856f12ebc124d6892f1e2baaa79c321fd7b3ed29a1011e%22%2C%22tests/openpgp/samplemsgs/encsig-2-keys-4.gpg%22%3A%22f034089d68a6934a44fd3317ab1cad657300a31200ec898d893a8660f8705b12%22%2C%22tests/openpgp/samplemsgs/encz0-1-key-1.asc%22%3A%22a4ad637bf74e6df804a8a30d2907109b4f639c8e642210e99666d99cf7807e63%22%2C%22tests/openpgp/samplemsgs/encz0-1-key-2.asc%22%3A%22e8d3b4040c8ac17b1d4c2b67f13f252c29400a5fb6be74b9d6abfc013bfd4a79%22%2C%22tests/openpgp/samplemsgs/issue2419.asc%22%3A%2267b0ab96cac822dfb3ee8c3c371a289f86256238087a27a539e3385b69175d68%22%2C%22tests/openpgp/samplemsgs/revoke-2D727CC768697734.asc%22%3A%220072a048231140e1622e1899918c9ada8512147b4b3237bf6665ec5c9fafbdfe%22%2C%22tests/openpgp/samplemsgs/sig-1-key-1.asc%22%3A%2201458d2e264121c04430c6cf7d32f491922805087cbf2b04f710955f8706aff8%22%2C%22tests/openpgp/samplemsgs/sig-1-key-1.sig%22%3A%22f65be91119a10ca3c0bf5a550ae364bf3b4b79d83474c074ea1dc645a1a98688%22%2C%22tests/openpgp/samplemsgs/sig-1-key-2.asc%22%3A%229a3709a01d01e49607bec7a86def31ddd7b86951405204efff927abdc386b820%22%2C%22tests/openpgp/samplemsgs/sig-1-key-2.sig%22%3A%22683d63305f0c8444fc95ae02a31955723b252077c61389b8e0fdf9a4591b982e%22%2C%22tests/openpgp/samplemsgs/sig-2-keys-1.asc%22%3A%221f537ced5fa7fc47019f17ca876f868b06b8cc54d9295063539816de165ea9fa%22%2C%22tests/openpgp/samplemsgs/sig-2-keys-1.sig%22%3A%22b9d147ff5a7bcd546bf8f1661dd48ca4005e9882e377d7761a1eae0577bf6fbc%22%2C%22tests/openpgp/samplemsgs/sig-2-keys-2.asc%22%3A%2299a4b8b0172a55db4eae6e8f9a000a6d255b9a48a08f324ce7482bca8a3d6f57%22%2C%22tests/openpgp/samplemsgs/sig-2-keys-2.sig%22%3A%22233abdcb171b274bcf2adf9aa0afb4a1a4e0c977fda9be2cdde1c73ef81764b4%22%2C%22tests/openpgp/samplemsgs/signed-1-key-1.asc%22%3A%2204ca91c3986c7f0ce99779a0ec5109b7833def004faa70406672bc97cd38f3d6%22%2C%22tests/openpgp/samplemsgs/signed-1-key-1.gpg%22%3A%2270623cc0e0b248294fd02a02e75832db7751c05acfa81377e543deb70adb1b61%22%2C%22tests/openpgp/samplemsgs/signed-1-key-2.asc%22%3A%22d1f08ee5bd529e0fa5812d1f0d7ff58725e3e4b5f89e11cd00671d548197c854%22%2C%22tests/openpgp/samplemsgs/signed-1-key-2.gpg%22%3A%2207b1aa0db62209bb3c616ac6c1eb6dc958daf24da0a7da6b514f6a2338b826f3%22%2C%22tests/openpgp/samplemsgs/signed-2-keys-1.asc%22%3A%22489810a85cc864a05b703e0de41106abe2691d9707a5458266ae44dc17fedf32%22%2C%22tests/openpgp/samplemsgs/signed-2-keys-1.gpg%22%3A%224211115929b1e1d9ddc6a76f34e0fe595e705b86d79a9fa7bd6cd78eafb4ef99%22%2C%22tests/openpgp/samplemsgs/signed-2-keys-2.asc%22%3A%2211ccc14089c3c8eaf27f69545dc145c4d0f5fda62c2f74c0a62ace7e32e771f4%22%2C%22tests/openpgp/samplemsgs/signed-2-keys-2.gpg%22%3A%22cface1c5b098ad6c33aecd9098a33aed475a832a6c407488b49148676b85ca4f%22%2C%22tests/openpgp/samplemsgs/signed-data-1.txt%22%3A%22b5eabb4fb615ab44b8be6a9f609049464765333a606c62ce69a5ed595e1c9842%22%2C%22tests/openpgp/samplemsgs/signedz0-1-key-1.gpg%22%3A%2250e5ee6583f2d33bae2e343a9ba503d9b58febd3adcb4c95f6c370f864585469%22%2C%22tests/openpgp/samplemsgs/signedz0-1-key-2.gpg%22%3A%22e12eefc8c88351c1ae285c591a7d1723c76d33dc6fe35b87ebe23fab04e38ec3%22%2C%22tests/openpgp/samplemsgs/signedz0-2-keys-1.gpg%22%3A%2200cea9945ea654a6cbabee8218c4bcb9ecb478a7eea4e595d9b2baa5e30a5ef6%22%2C%22tests/openpgp/samplemsgs/signedz0-2-keys-2.gpg%22%3A%2235b97ca83bdc02764c565a8d078c7f30105abd2620519122e87ec0860a06791c%22%2C%22tests/openpgp/secdemo.asc%22%3A%228a8364849e9c5f2bf721012b1191cef7d492a9b7a97f30b107340856ddc03061%22%2C%22tests/openpgp/secring.asc%22%3A%22a8f00f201bc57890a30bb3eecf45e810429acf7af2ceb6a763693f2a85e8a744%22%2C%22tests/openpgp/secring.skr.asc%22%3A%22ecdf8deca16f551402f6afa68cd4ef3c65be1e22cbdb94fb610624e8c0e39b4a%22%2C%22tests/openpgp/signdemokey%22%3A%22541b0fb82b66323763f140553d1b9b3fe19422020f6c9b9ea6a357fbdf089971%22%2C%22tests/openpgp/tofu/conflicting/1C005AF3-1.txt%22%3A%22e3e2e4644ab7748e12ee491aa5da75bfacfdcb71843a16e7149196e51ba06d11%22%2C%22tests/openpgp/tofu/conflicting/1C005AF3-2.txt%22%3A%2227363d22be29a877f07b0576487f4503226d37a0b68108105e7286447a7b2130%22%2C%22tests/openpgp/tofu/conflicting/1C005AF3-3.txt%22%3A%223ff34a9b3bd5585bd39544737f05f9fd10bbe27a706616ce97bff665122b643e%22%2C%22tests/openpgp/tofu/conflicting/1C005AF3-4.txt%22%3A%22945bc7e5d4421877db7f373ca8c7e5effe1f3732261a0dbfcb131812301567b8%22%2C%22tests/openpgp/tofu/conflicting/1C005AF3-5.txt%22%3A%22d93ce54abf3098ef8ba7e391dcaa85624cd3b59923b1b01f8c33f104a86da599%22%2C%22tests/openpgp/tofu/conflicting/1C005AF3-secret.gpg%22%3A%2254fbbe58703dc1fa067e9980d767aef5cc80b8f6d0eaccc4b1ea5fb12b102267%22%2C%22tests/openpgp/tofu/conflicting/1C005AF3.gpg%22%3A%223edef5e348d4a9525b9155dc8688814b80c0a3a90836af3428564cb74994776a%22%2C%22tests/openpgp/tofu/conflicting/B662E42F-1.txt%22%3A%221834d8fa43819b71d8b592637892ab26224d0f3b4f5f98ac85e3b2c1fb5a9716%22%2C%22tests/openpgp/tofu/conflicting/B662E42F-2.txt%22%3A%22cae4cc209573fb8a0c1b27cd4799ef346587ceeb99603a0d131c093427244e1b%22%2C%22tests/openpgp/tofu/conflicting/B662E42F-3.txt%22%3A%2228067962987971038f042e6047eae2e49ae3dd218b11145c0d61bea096d5426b%22%2C%22tests/openpgp/tofu/conflicting/B662E42F-4.txt%22%3A%22db78b6193c02d3919e4b1c0118f8c9b05aa51ef63678ca6b8b2003f900167c1e%22%2C%22tests/openpgp/tofu/conflicting/B662E42F-5.txt%22%3A%22a70007d11a270d7a9aa54af06f86b63a0bab70c97223481ca9a8721b061d12f3%22%2C%22tests/openpgp/tofu/conflicting/B662E42F-secret.gpg%22%3A%222439c0af5ade54fd33d79dfc991732270dd43f59bab379b8118ee19ac04b4415%22%2C%22tests/openpgp/tofu/conflicting/B662E42F.gpg%22%3A%22dcd688566a9a0f03798a3e371c5457444795ad258275ca15c8add4a527d173e7%22%2C%22tests/openpgp/tofu/conflicting/BE04EB2B-1.txt%22%3A%2211a98f75f56894112209933cc2267ede0077e81d004de8d2bf8263cf967d2214%22%2C%22tests/openpgp/tofu/conflicting/BE04EB2B-2.txt%22%3A%226648029dbe0f981acf37b949bd1217231569d766bc913a3835c313d817d479f1%22%2C%22tests/openpgp/tofu/conflicting/BE04EB2B-3.txt%22%3A%224ee53b33814e49485e326a79dc09c5a0ab245d11959e2bd6720ae61c341615cf%22%2C%22tests/openpgp/tofu/conflicting/BE04EB2B-4.txt%22%3A%22cdeb235c92fb9b4946ac5900a377cd736162b3ad2945e670248298aec995369e%22%2C%22tests/openpgp/tofu/conflicting/BE04EB2B-5.txt%22%3A%224f35d23175a5d2c6ef60d91a4db0dfd1e3f8bd46047683a6c7bfaa49e884351b%22%2C%22tests/openpgp/tofu/conflicting/BE04EB2B-secret.gpg%22%3A%228bec90aded719d91d3a7f10104bc93f43c3f7caecd7c0aa4755dc8e05143ca79%22%2C%22tests/openpgp/tofu/conflicting/BE04EB2B.gpg%22%3A%22e16640b44784e770fe38dc28420ac9110545ed06f6f17a2220db5edc7092b93d%22%2C%22tests/openpgp/tofu/conflicting/README%22%3A%224b6d2c7c0cf032be2b6142f0d6450adb35ffc06ff73a82d9ae18d97d2b9eca45%22%2C%22tests/openpgp/tofu/cross-sigs/871C2247-1.gpg%22%3A%22855315c451d368f47a2cec9f5b53b7a1b1d4ea56dfbc74e31df512c10413be02%22%2C%22tests/openpgp/tofu/cross-sigs/871C2247-1.txt%22%3A%2212c09f8cc288f6201272604e5a5bc76220b3c3f2b2ca4eecd134c3f5730a3a9c%22%2C%22tests/openpgp/tofu/cross-sigs/871C2247-2.gpg%22%3A%229a0cb7552f3c9492c13f458b76379c1eca7ad39b39b21b66bf6f9bb79eea2c5c%22%2C%22tests/openpgp/tofu/cross-sigs/871C2247-2.txt%22%3A%22af13e398bdda8b6ccc1c9dd8bc7f4b05509c67a1e5932c69b5431ca505f69b4c%22%2C%22tests/openpgp/tofu/cross-sigs/871C2247-3.gpg%22%3A%22394dc55bbb6ae404785d2c55536995b6c73f7efdc7e7adfae167cd5ec10c88bd%22%2C%22tests/openpgp/tofu/cross-sigs/871C2247-3.txt%22%3A%228763092e53ec9c8a8390791bf05773d45d7924944d6e5602c9800cb5aaab2a60%22%2C%22tests/openpgp/tofu/cross-sigs/871C2247-4.gpg%22%3A%22da7330dd4471f0da5dd58580744b39af6e9566fcd5b528db4fd083f5021ccb10%22%2C%22tests/openpgp/tofu/cross-sigs/871C2247-secret.gpg%22%3A%22ae3b04989fac708abf9b52f999e9564255f42750f3cc88efb63cb53f169097ff%22%2C%22tests/openpgp/tofu/cross-sigs/EC38277E-1.gpg%22%3A%221405a34c50dc716553c8c4f7801e823b6ebfd760fe0406d660e28f5f13670862%22%2C%22tests/openpgp/tofu/cross-sigs/EC38277E-1.txt%22%3A%22cd47da0a3ffe4780f0e68b75776a0a12f0f989a75bf7f337a9cfc63db6afe162%22%2C%22tests/openpgp/tofu/cross-sigs/EC38277E-2.gpg%22%3A%221c61bdd07a7d2f8cdb568babc047839e621bafcfdc2f3572b6df96f5b512ed64%22%2C%22tests/openpgp/tofu/cross-sigs/EC38277E-2.txt%22%3A%22ffe9cf26233d4ab0d00eca6eb948335df21ae54606d946b03fe978db00a7663d%22%2C%22tests/openpgp/tofu/cross-sigs/EC38277E-3.txt%22%3A%228763092e53ec9c8a8390791bf05773d45d7924944d6e5602c9800cb5aaab2a60%22%2C%22tests/openpgp/tofu/cross-sigs/EC38277E-secret.gpg%22%3A%2254c8cdb93f0a6d147701082ad24def2b80a541876e34638e805f72b78f0b220e%22%2C%22tests/openpgp/tofu/cross-sigs/README%22%3A%2285977451a789ff318c129646938a9223995df07e12078312c8ec7a38d86c3d0d%22%2C%22tests/openpgp/trust-pgp/alice.sec.asc%22%3A%22e90b5a7a6cf2048b68cec33edc631ba33f1826da11389d8a466df890b622ec7e%22%2C%22tests/openpgp/trust-pgp/bobby.sec.asc%22%3A%22085e2dbfb94d87d5712ac000d58fea1292cb7abfdb452547db61187323583d79%22%2C%22tests/openpgp/trust-pgp/carol.sec.asc%22%3A%22a44b3fa046b8be97ef6903eb73993ddb0b0d9014561c8a07f03947148f754c2f%22%2C%22tests/openpgp/trust-pgp/common.scm%22%3A%224ab241571eb27f2874980b4399eaf071d467aea9188f9270b6ffd5896f811fee%22%2C%22tests/openpgp/trust-pgp/david.sec.asc%22%3A%229bd646d3326401bcc38493b535ec5834b28fd6925fa1347d4b2c307e0c8d1a3a%22%2C%22tests/openpgp/trust-pgp/frank.sec.asc%22%3A%22dc91d5428c971f91dc3397524138cbb2a837f4821bcb398009c8343d12d857ef%22%2C%22tests/openpgp/trust-pgp/grace.sec.asc%22%3A%22af09499c639c9af33291aa5b914b972e669dcd683b53f806a30b97a5285f34c0%22%2C%22tests/openpgp/trust-pgp/heidi.sec.asc%22%3A%2280b6813602ce6c4634b9d613c8e5eca42b2f4aa66683c8a207013f9e2a747898%22%2C%22tests/openpgp/trust-pgp/scenario1.asc%22%3A%2294df2593a0c1ff214e42d104620d255fa39e2b8089f4d58f1b03406a3667be1c%22%2C%22tests/openpgp/trust-pgp/scenario2.asc%22%3A%226cb05a63864955f5cbe81989c5b97375d094a5949a430482635bcb9f52da796e%22%2C%22tests/openpgp/trust-pgp/scenario3.asc%22%3A%22a6f3f55c6b77deae1199ec15f75c17bc06a1cf140a1b3222dead31e81d5cc3f6%22%2C%22tests/openpgp/trust-pgp/scenario4.asc%22%3A%22b48bcc9388b6c274bb286d2ae04382b45aa818a45b15a8f8d05b2ff188056d1b%22%2C%22tests/openpgpjs/x25519-little.pub.asc%22%3A%22f1c73d5cd000e3e243ccb14555a40cf16782fc4a0db85496107e186c0a22fd13%22%2C%22tests/openpgpjs/x25519.asc%22%3A%222fb7eee6f78dabaeb3368e6704801a61d31d7dab9662e3e04aba56840427732a%22%2C%22tests/openpgpjs/x25519.json%22%3A%22703d27751956004501c01fa09e2b2247df28fa3c6d7f1205b7378b7eff12ad68%22%2C%22tests/openpgpjs/x25519.pub.asc%22%3A%22c1767fec00882c02ab26ef14e49fea616230f4329a2c647f39ac02188a757e3a%22%2C%22tests/openpgpjs/x25519.sec.asc%22%3A%221bd490929a2e63d47d729c484d70bf773a4089d205d6537a30115f01631852a6%22%2C%22tests/partial.asc%22%3A%228a004b75ce89abf43d3ffc7d76a8f041e81a3392dee5f07d88ae3a7b3b16f023%22%2C%22tests/regression-01.asc%22%3A%224b01c9f0b8a823640e8b158631b9d8f4b85059e6d8c2e1ff020bdeea8c60bbad%22%7D%2C%22package%22%3Anull%7D",
-        "dest": "cargo/vendor/pgp",
+        "url": "data:%7B%22package%22%3A%20%221b16d0ab0f228058bcd3f20a1ee0da6b443ff142988693247a08b799b6c520fb%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/pgp-0.4.0",
         "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/pgp/.git"
-        ]
     },
     {
         "type": "file",
@@ -2776,6 +2814,19 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%2205da548ad6865900e60eaba7f589cc0783590a92e940c26953ff81ddbab2d677%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/pkg-config-0.3.17",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/png/png-0.15.2.crate",
+        "sha256": "247cb804bd7fc86d0c2b153d1374265e67945875720136ca8fe451f11c6aed52",
+        "dest": "cargo/vendor",
+        "dest-filename": "png-0.15.2.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22247cb804bd7fc86d0c2b153d1374265e67945875720136ca8fe451f11c6aed52%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/png-0.15.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -2923,15 +2974,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/quick-xml/quick-xml-0.15.0.crate",
-        "sha256": "c2b074258da4f2ccb1c450380c5bd8e77db2508de2161f574c70930d8e880482",
+        "url": "https://static.crates.io/crates/quick-xml/quick-xml-0.17.2.crate",
+        "sha256": "fe1e430bdcf30c9fdc25053b9c459bb1a4672af4617b6c783d7d91dc17c6bbb0",
         "dest": "cargo/vendor",
-        "dest-filename": "quick-xml-0.15.0.crate"
+        "dest-filename": "quick-xml-0.17.2.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22c2b074258da4f2ccb1c450380c5bd8e77db2508de2161f574c70930d8e880482%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/quick-xml-0.15.0",
+        "url": "data:%7B%22package%22%3A%20%22fe1e430bdcf30c9fdc25053b9c459bb1a4672af4617b6c783d7d91dc17c6bbb0%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/quick-xml-0.17.2",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3209,6 +3260,32 @@
     },
     {
         "type": "file",
+        "url": "https://static.crates.io/crates/rayon/rayon-1.2.1.crate",
+        "sha256": "43739f8831493b276363637423d3622d4bd6394ab6f0a9c4a552e208aeb7fddd",
+        "dest": "cargo/vendor",
+        "dest-filename": "rayon-1.2.1.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%2243739f8831493b276363637423d3622d4bd6394ab6f0a9c4a552e208aeb7fddd%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/rayon-1.2.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/rayon-core/rayon-core-1.6.1.crate",
+        "sha256": "f8bf17de6f23b05473c437eb958b9c850bfc8af0961fe17b4cc92d5a627b4791",
+        "dest": "cargo/vendor",
+        "dest-filename": "rayon-core-1.6.1.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22f8bf17de6f23b05473c437eb958b9c850bfc8af0961fe17b4cc92d5a627b4791%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/rayon-core-1.6.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
         "url": "https://static.crates.io/crates/rdrand/rdrand-0.4.0.crate",
         "sha256": "678054eb77286b51581ba43620cc911abf02758c91f93f479767aed0f90458b2",
         "dest": "cargo/vendor",
@@ -3313,28 +3390,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/reqwest/reqwest-0.9.22.crate",
-        "sha256": "2c2064233e442ce85c77231ebd67d9eca395207dec2127fe0bbedde4bd29a650",
+        "url": "https://static.crates.io/crates/reqwest/reqwest-0.9.24.crate",
+        "sha256": "f88643aea3c1343c804950d7bf983bd2067f5ab59db6d613a08e05572f2714ab",
         "dest": "cargo/vendor",
-        "dest-filename": "reqwest-0.9.22.crate"
+        "dest-filename": "reqwest-0.9.24.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%222c2064233e442ce85c77231ebd67d9eca395207dec2127fe0bbedde4bd29a650%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/reqwest-0.9.22",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/ring/ring-0.16.9.crate",
-        "sha256": "6747f8da1f2b1fabbee1aaa4eb8a11abf9adef0bf58a41cee45db5d59cecdfac",
-        "dest": "cargo/vendor",
-        "dest-filename": "ring-0.16.9.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%226747f8da1f2b1fabbee1aaa4eb8a11abf9adef0bf58a41cee45db5d59cecdfac%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/ring-0.16.9",
+        "url": "data:%7B%22package%22%3A%20%22f88643aea3c1343c804950d7bf983bd2067f5ab59db6d613a08e05572f2714ab%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/reqwest-0.9.24",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3352,15 +3416,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/rsa/rsa-0.1.4.crate",
-        "sha256": "5108a8bbfb84fe77d829d77d5a89255dcd189dfe5c4de5a33d0a47f12808bb15",
+        "url": "https://static.crates.io/crates/rsa/rsa-0.2.0.crate",
+        "sha256": "6ed8692d8e0ea3baae03f0f32ecfc13a6c6f1f85fcd6d9fdefcdf364e70f4df9",
         "dest": "cargo/vendor",
-        "dest-filename": "rsa-0.1.4.crate"
+        "dest-filename": "rsa-0.2.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%225108a8bbfb84fe77d829d77d5a89255dcd189dfe5c4de5a33d0a47f12808bb15%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/rsa-0.1.4",
+        "url": "data:%7B%22package%22%3A%20%226ed8692d8e0ea3baae03f0f32ecfc13a6c6f1f85fcd6d9fdefcdf364e70f4df9%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/rsa-0.2.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3413,32 +3477,6 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%22138e3e0acb6c9fb258b19b67cb8abd63c00679d2851805ea151465464fe9030a%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/rustc_version-0.2.3",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/rustls/rustls-0.16.0.crate",
-        "sha256": "b25a18b1bf7387f0145e7f8324e700805aade3842dd3db2e74e4cdeb4677c09e",
-        "dest": "cargo/vendor",
-        "dest-filename": "rustls-0.16.0.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22b25a18b1bf7387f0145e7f8324e700805aade3842dd3db2e74e4cdeb4677c09e%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/rustls-0.16.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/rustls-connector/rustls-connector-0.8.1.crate",
-        "sha256": "58255a0cb2043d0cc58b2a4208412b8168fc78451c9427816bb094fcf996fac1",
-        "dest": "cargo/vendor",
-        "dest-filename": "rustls-connector-0.8.1.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%2258255a0cb2043d0cc58b2a4208412b8168fc78451c9427816bb094fcf996fac1%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/rustls-connector-0.8.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3521,6 +3559,19 @@
     },
     {
         "type": "file",
+        "url": "https://static.crates.io/crates/schannel/schannel-0.1.16.crate",
+        "sha256": "87f550b06b6cba9c8b8be3ee73f391990116bf527450d2556e9b9ce263b9a021",
+        "dest": "cargo/vendor",
+        "dest-filename": "schannel-0.1.16.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%2287f550b06b6cba9c8b8be3ee73f391990116bf527450d2556e9b9ce263b9a021%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/schannel-0.1.16",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
         "url": "https://static.crates.io/crates/scheduled-thread-pool/scheduled-thread-pool-0.2.3.crate",
         "sha256": "f5de7bc31f28f8e6c28df5e1bf3d10610f5fdc14cc95f272853512c70a2bd779",
         "dest": "cargo/vendor",
@@ -3530,6 +3581,19 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%22f5de7bc31f28f8e6c28df5e1bf3d10610f5fdc14cc95f272853512c70a2bd779%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/scheduled-thread-pool-0.2.3",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/scoped_threadpool/scoped_threadpool-0.1.9.crate",
+        "sha256": "1d51f5df5af43ab3f1360b429fa5e0152ac5ce8c0bd6485cae490332e96846a8",
+        "dest": "cargo/vendor",
+        "dest-filename": "scoped_threadpool-0.1.9.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%221d51f5df5af43ab3f1360b429fa5e0152ac5ce8c0bd6485cae490332e96846a8%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/scoped_threadpool-0.1.9",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3547,15 +3611,28 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/sct/sct-0.6.0.crate",
-        "sha256": "e3042af939fca8c3453b7af0f1c66e533a15a86169e39de2657310ade8f98d3c",
+        "url": "https://static.crates.io/crates/security-framework/security-framework-0.3.4.crate",
+        "sha256": "8ef2429d7cefe5fd28bd1d2ed41c944547d4ff84776f5935b456da44593a16df",
         "dest": "cargo/vendor",
-        "dest-filename": "sct-0.6.0.crate"
+        "dest-filename": "security-framework-0.3.4.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22e3042af939fca8c3453b7af0f1c66e533a15a86169e39de2657310ade8f98d3c%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/sct-0.6.0",
+        "url": "data:%7B%22package%22%3A%20%228ef2429d7cefe5fd28bd1d2ed41c944547d4ff84776f5935b456da44593a16df%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/security-framework-0.3.4",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/security-framework-sys/security-framework-sys-0.3.3.crate",
+        "sha256": "e31493fc37615debb8c5090a7aeb4a9730bc61e77ab10b9af59f1a202284f895",
+        "dest": "cargo/vendor",
+        "dest-filename": "security-framework-sys-0.3.3.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22e31493fc37615debb8c5090a7aeb4a9730bc61e77ab10b9af59f1a202284f895%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/security-framework-sys-0.3.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3586,41 +3663,41 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/serde/serde-1.0.103.crate",
-        "sha256": "1217f97ab8e8904b57dd22eb61cde455fa7446a9c1cf43966066da047c1f3702",
+        "url": "https://static.crates.io/crates/serde/serde-1.0.104.crate",
+        "sha256": "414115f25f818d7dfccec8ee535d76949ae78584fc4f79a6f45a904bf8ab4449",
         "dest": "cargo/vendor",
-        "dest-filename": "serde-1.0.103.crate"
+        "dest-filename": "serde-1.0.104.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%221217f97ab8e8904b57dd22eb61cde455fa7446a9c1cf43966066da047c1f3702%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/serde-1.0.103",
+        "url": "data:%7B%22package%22%3A%20%22414115f25f818d7dfccec8ee535d76949ae78584fc4f79a6f45a904bf8ab4449%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/serde-1.0.104",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/serde_derive/serde_derive-1.0.103.crate",
-        "sha256": "a8c6faef9a2e64b0064f48570289b4bf8823b7581f1d6157c1b52152306651d0",
+        "url": "https://static.crates.io/crates/serde_derive/serde_derive-1.0.104.crate",
+        "sha256": "128f9e303a5a29922045a830221b8f78ec74a5f544944f3d5984f8ec3895ef64",
         "dest": "cargo/vendor",
-        "dest-filename": "serde_derive-1.0.103.crate"
+        "dest-filename": "serde_derive-1.0.104.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22a8c6faef9a2e64b0064f48570289b4bf8823b7581f1d6157c1b52152306651d0%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/serde_derive-1.0.103",
+        "url": "data:%7B%22package%22%3A%20%22128f9e303a5a29922045a830221b8f78ec74a5f544944f3d5984f8ec3895ef64%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/serde_derive-1.0.104",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/serde_json/serde_json-1.0.42.crate",
-        "sha256": "1a3351dcbc1f067e2c92ab7c3c1f288ad1a4cffc470b5aaddb4c2e0a3ae80043",
+        "url": "https://static.crates.io/crates/serde_json/serde_json-1.0.44.crate",
+        "sha256": "48c575e0cc52bdd09b47f330f646cf59afc586e9c4e3ccd6fc1f625b8ea1dad7",
         "dest": "cargo/vendor",
-        "dest-filename": "serde_json-1.0.42.crate"
+        "dest-filename": "serde_json-1.0.44.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%221a3351dcbc1f067e2c92ab7c3c1f288ad1a4cffc470b5aaddb4c2e0a3ae80043%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/serde_json-1.0.42",
+        "url": "data:%7B%22package%22%3A%20%2248c575e0cc52bdd09b47f330f646cf59afc586e9c4e3ccd6fc1f625b8ea1dad7%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/serde_json-1.0.44",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3729,15 +3806,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/smallvec/smallvec-1.0.0.crate",
-        "sha256": "4ecf3b85f68e8abaa7555aa5abdb1153079387e60b718283d732f03897fcfc86",
+        "url": "https://static.crates.io/crates/smallvec/smallvec-1.1.0.crate",
+        "sha256": "44e59e0c9fa00817912ae6e4e6e3c4fe04455e75699d06eedc7d85917ed8e8f4",
         "dest": "cargo/vendor",
-        "dest-filename": "smallvec-1.0.0.crate"
+        "dest-filename": "smallvec-1.1.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%224ecf3b85f68e8abaa7555aa5abdb1153079387e60b718283d732f03897fcfc86%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/smallvec-1.0.0",
+        "url": "data:%7B%22package%22%3A%20%2244e59e0c9fa00817912ae6e4e6e3c4fe04455e75699d06eedc7d85917ed8e8f4%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/smallvec-1.1.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3764,19 +3841,6 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%224c5e338c8b0577457c9dda8e794b6ad7231c96e25b1b0dd5842d52249020c1c0%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/snafu-derive-0.6.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/sourcefile/sourcefile-0.1.4.crate",
-        "sha256": "4bf77cb82ba8453b42b6ae1d692e4cdc92f9a47beaf89a847c8be83f4e328ad3",
-        "dest": "cargo/vendor",
-        "dest-filename": "sourcefile-0.1.4.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%224bf77cb82ba8453b42b6ae1d692e4cdc92f9a47beaf89a847c8be83f4e328ad3%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/sourcefile-0.1.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -3859,15 +3923,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/strsim/strsim-0.7.0.crate",
-        "sha256": "bb4f380125926a99e52bc279241539c018323fab05ad6368b56f93d9369ff550",
+        "url": "https://static.crates.io/crates/strsim/strsim-0.9.3.crate",
+        "sha256": "6446ced80d6c486436db5c078dde11a9f73d42b57fb273121e160b84f63d894c",
         "dest": "cargo/vendor",
-        "dest-filename": "strsim-0.7.0.crate"
+        "dest-filename": "strsim-0.9.3.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22bb4f380125926a99e52bc279241539c018323fab05ad6368b56f93d9369ff550%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/strsim-0.7.0",
+        "url": "data:%7B%22package%22%3A%20%226446ced80d6c486436db5c078dde11a9f73d42b57fb273121e160b84f63d894c%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/strsim-0.9.3",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4093,6 +4157,19 @@
     },
     {
         "type": "file",
+        "url": "https://static.crates.io/crates/tiff/tiff-0.3.1.crate",
+        "sha256": "d7b7c2cfc4742bd8a32f2e614339dd8ce30dbcf676bb262bd63a2327bc5df57d",
+        "dest": "cargo/vendor",
+        "dest-filename": "tiff-0.3.1.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%22d7b7c2cfc4742bd8a32f2e614339dd8ce30dbcf676bb262bd63a2327bc5df57d%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/tiff-0.3.1",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
         "url": "https://static.crates.io/crates/time/time-0.1.42.crate",
         "sha256": "db8dcfca086c1143c9270ac42a2bbd8a7ee477b78ac8e45b19abfb0cbede4b6f",
         "dest": "cargo/vendor",
@@ -4184,19 +4261,6 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/tokio-rustls/tokio-rustls-0.10.2.crate",
-        "sha256": "1df2fa53ac211c136832f530ccb081af9af891af22d685a9493e232c7a359bc2",
-        "dest": "cargo/vendor",
-        "dest-filename": "tokio-rustls-0.10.2.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%221df2fa53ac211c136832f530ccb081af9af891af22d685a9493e232c7a359bc2%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/tokio-rustls-0.10.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
         "url": "https://static.crates.io/crates/tokio-sync/tokio-sync-0.1.7.crate",
         "sha256": "d06554cce1ae4a50f42fba8023918afa931413aded705b560e29600ccf7c6d76",
         "dest": "cargo/vendor",
@@ -4223,15 +4287,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/tokio-threadpool/tokio-threadpool-0.1.16.crate",
-        "sha256": "2bd2c6a3885302581f4401c82af70d792bb9df1700e7437b0aeb4ada94d5388c",
+        "url": "https://static.crates.io/crates/tokio-threadpool/tokio-threadpool-0.1.17.crate",
+        "sha256": "f0c32ffea4827978e9aa392d2f743d973c1dfa3730a2ed3f22ce1e6984da848c",
         "dest": "cargo/vendor",
-        "dest-filename": "tokio-threadpool-0.1.16.crate"
+        "dest-filename": "tokio-threadpool-0.1.17.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%222bd2c6a3885302581f4401c82af70d792bb9df1700e7437b0aeb4ada94d5388c%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/tokio-threadpool-0.1.16",
+        "url": "data:%7B%22package%22%3A%20%22f0c32ffea4827978e9aa392d2f743d973c1dfa3730a2ed3f22ce1e6984da848c%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/tokio-threadpool-0.1.17",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4379,15 +4443,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/unicode-width/unicode-width-0.1.6.crate",
-        "sha256": "7007dbd421b92cc6e28410fe7362e2e0a2503394908f417b68ec8d1c364c4e20",
+        "url": "https://static.crates.io/crates/unicode-width/unicode-width-0.1.7.crate",
+        "sha256": "caaa9d531767d1ff2150b9332433f32a24622147e5ebb1f26409d5da67afd479",
         "dest": "cargo/vendor",
-        "dest-filename": "unicode-width-0.1.6.crate"
+        "dest-filename": "unicode-width-0.1.7.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%227007dbd421b92cc6e28410fe7362e2e0a2503394908f417b68ec8d1c364c4e20%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/unicode-width-0.1.6",
+        "url": "data:%7B%22package%22%3A%20%22caaa9d531767d1ff2150b9332433f32a24622147e5ebb1f26409d5da67afd479%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/unicode-width-0.1.7",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4440,19 +4504,6 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%22f30360d7979f5e9c6e6cea48af192ea8fab4afb3cf72597154b8f08935bc9c7f%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/unsafe-any-0.4.2",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/untrusted/untrusted-0.7.0.crate",
-        "sha256": "60369ef7a31de49bcb3f6ca728d4ba7300d9a1658f94c727d4cab8c8d9f4aece",
-        "dest": "cargo/vendor",
-        "dest-filename": "untrusted-0.7.0.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%2260369ef7a31de49bcb3f6ca728d4ba7300d9a1658f94c727d4cab8c8d9f4aece%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/untrusted-0.7.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4518,6 +4569,19 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%2290dbc611eb48397705a6b0f6e917da23ae517e4d127123d2cf7674206627d32a%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/uuid-0.7.4",
+        "dest-filename": ".cargo-checksum.json"
+    },
+    {
+        "type": "file",
+        "url": "https://static.crates.io/crates/uuid/uuid-0.8.1.crate",
+        "sha256": "9fde2f6a4bea1d6e007c4ad38c6839fa71cbb63b6dbf5b595aa38dc9b1093c11",
+        "dest": "cargo/vendor",
+        "dest-filename": "uuid-0.8.1.crate"
+    },
+    {
+        "type": "file",
+        "url": "data:%7B%22package%22%3A%20%229fde2f6a4bea1d6e007c4ad38c6839fa71cbb63b6dbf5b595aa38dc9b1093c11%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/uuid-0.8.1",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4622,149 +4686,6 @@
         "type": "file",
         "url": "data:%7B%22package%22%3A%20%22b89c3ce4ce14bdc6fb6beaf9ec7928ca331de5df7e5ea278375642a2f478570d%22%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/wasi-0.7.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/wasm-bindgen/wasm-bindgen-0.2.55.crate",
-        "sha256": "29ae32af33bacd663a9a28241abecf01f2be64e6a185c6139b04f18b6385c5f2",
-        "dest": "cargo/vendor",
-        "dest-filename": "wasm-bindgen-0.2.55.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%2229ae32af33bacd663a9a28241abecf01f2be64e6a185c6139b04f18b6385c5f2%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/wasm-bindgen-0.2.55",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/wasm-bindgen-backend/wasm-bindgen-backend-0.2.55.crate",
-        "sha256": "1845584bd3593442dc0de6e6d9f84454a59a057722f36f005e44665d6ab19d85",
-        "dest": "cargo/vendor",
-        "dest-filename": "wasm-bindgen-backend-0.2.55.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%221845584bd3593442dc0de6e6d9f84454a59a057722f36f005e44665d6ab19d85%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/wasm-bindgen-backend-0.2.55",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/wasm-bindgen-macro/wasm-bindgen-macro-0.2.55.crate",
-        "sha256": "87fcc747e6b73c93d22c947a6334644d22cfec5abd8b66238484dc2b0aeb9fe4",
-        "dest": "cargo/vendor",
-        "dest-filename": "wasm-bindgen-macro-0.2.55.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%2287fcc747e6b73c93d22c947a6334644d22cfec5abd8b66238484dc2b0aeb9fe4%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/wasm-bindgen-macro-0.2.55",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/wasm-bindgen-macro-support/wasm-bindgen-macro-support-0.2.55.crate",
-        "sha256": "3dc4b3f2c4078c8c4a5f363b92fcf62604c5913cbd16c6ff5aaf0f74ec03f570",
-        "dest": "cargo/vendor",
-        "dest-filename": "wasm-bindgen-macro-support-0.2.55.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%223dc4b3f2c4078c8c4a5f363b92fcf62604c5913cbd16c6ff5aaf0f74ec03f570%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/wasm-bindgen-macro-support-0.2.55",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/wasm-bindgen-shared/wasm-bindgen-shared-0.2.55.crate",
-        "sha256": "ca0b78d6d3be8589b95d1d49cdc0794728ca734adf36d7c9f07e6459508bb53d",
-        "dest": "cargo/vendor",
-        "dest-filename": "wasm-bindgen-shared-0.2.55.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22ca0b78d6d3be8589b95d1d49cdc0794728ca734adf36d7c9f07e6459508bb53d%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/wasm-bindgen-shared-0.2.55",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/wasm-bindgen-webidl/wasm-bindgen-webidl-0.2.55.crate",
-        "sha256": "3126356474ceb717c8fb5549ae387c9fbf4872818454f4d87708bee997214bb5",
-        "dest": "cargo/vendor",
-        "dest-filename": "wasm-bindgen-webidl-0.2.55.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%223126356474ceb717c8fb5549ae387c9fbf4872818454f4d87708bee997214bb5%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/wasm-bindgen-webidl-0.2.55",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/web-sys/web-sys-0.3.32.crate",
-        "sha256": "98405c0a2e722ed3db341b4c5b70eb9fe0021621f7350bab76df93b09b649bbf",
-        "dest": "cargo/vendor",
-        "dest-filename": "web-sys-0.3.32.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%2298405c0a2e722ed3db341b4c5b70eb9fe0021621f7350bab76df93b09b649bbf%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/web-sys-0.3.32",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/webpki/webpki-0.21.0.crate",
-        "sha256": "d7e664e770ac0110e2384769bcc59ed19e329d81f555916a6e072714957b81b4",
-        "dest": "cargo/vendor",
-        "dest-filename": "webpki-0.21.0.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22d7e664e770ac0110e2384769bcc59ed19e329d81f555916a6e072714957b81b4%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/webpki-0.21.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/webpki-roots/webpki-roots-0.17.0.crate",
-        "sha256": "a262ae37dd9d60f60dd473d1158f9fbebf110ba7b6a5051c8160460f6043718b",
-        "dest": "cargo/vendor",
-        "dest-filename": "webpki-roots-0.17.0.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22a262ae37dd9d60f60dd473d1158f9fbebf110ba7b6a5051c8160460f6043718b%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/webpki-roots-0.17.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/webpki-roots/webpki-roots-0.18.0.crate",
-        "sha256": "91cd5736df7f12a964a5067a12c62fa38e1bd8080aff1f80bc29be7c80d19ab4",
-        "dest": "cargo/vendor",
-        "dest-filename": "webpki-roots-0.18.0.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%2291cd5736df7f12a964a5067a12c62fa38e1bd8080aff1f80bc29be7c80d19ab4%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/webpki-roots-0.18.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "file",
-        "url": "https://static.crates.io/crates/weedle/weedle-0.10.0.crate",
-        "sha256": "3bb43f70885151e629e2a19ce9e50bd730fd436cfd4b666894c9ce4de9141164",
-        "dest": "cargo/vendor",
-        "dest-filename": "weedle-0.10.0.crate"
-    },
-    {
-        "type": "file",
-        "url": "data:%7B%22package%22%3A%20%223bb43f70885151e629e2a19ce9e50bd730fd436cfd4b666894c9ce4de9141164%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/weedle-0.10.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4912,15 +4833,15 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/x25519-dalek/x25519-dalek-0.5.2.crate",
-        "sha256": "7ee1585dc1484373cbc1cee7aafda26634665cf449436fd6e24bfd1fad230538",
+        "url": "https://static.crates.io/crates/x25519-dalek/x25519-dalek-0.6.0.crate",
+        "sha256": "637ff90c9540fa3073bb577e65033069e4bae7c79d49d74aa3ffdf5342a53217",
         "dest": "cargo/vendor",
-        "dest-filename": "x25519-dalek-0.5.2.crate"
+        "dest-filename": "x25519-dalek-0.6.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%227ee1585dc1484373cbc1cee7aafda26634665cf449436fd6e24bfd1fad230538%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/x25519-dalek-0.5.2",
+        "url": "data:%7B%22package%22%3A%20%22637ff90c9540fa3073bb577e65033069e4bae7c79d49d74aa3ffdf5342a53217%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/x25519-dalek-0.6.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4938,28 +4859,28 @@
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/zeroize/zeroize-0.10.1.crate",
-        "sha256": "4090487fa66630f7b166fba2bbb525e247a5449f41c468cc1d98f8ae6ac03120",
+        "url": "https://static.crates.io/crates/zeroize/zeroize-1.1.0.crate",
+        "sha256": "3cbac2ed2ba24cc90f5e06485ac8c7c1e5449fe8911aef4d8877218af021a5b8",
         "dest": "cargo/vendor",
-        "dest-filename": "zeroize-0.10.1.crate"
+        "dest-filename": "zeroize-1.1.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%224090487fa66630f7b166fba2bbb525e247a5449f41c468cc1d98f8ae6ac03120%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/zeroize-0.10.1",
+        "url": "data:%7B%22package%22%3A%20%223cbac2ed2ba24cc90f5e06485ac8c7c1e5449fe8911aef4d8877218af021a5b8%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/zeroize-1.1.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
         "type": "file",
-        "url": "https://static.crates.io/crates/zeroize_derive/zeroize_derive-0.10.0.crate",
-        "sha256": "fc9ce59c69fc43078c6f4250b0c866bb06b9ff7ac955c7ddb82a8c189281dcae",
+        "url": "https://static.crates.io/crates/zeroize_derive/zeroize_derive-1.0.0.crate",
+        "sha256": "de251eec69fc7c1bc3923403d18ececb929380e016afe103da75f396704f8ca2",
         "dest": "cargo/vendor",
-        "dest-filename": "zeroize_derive-0.10.0.crate"
+        "dest-filename": "zeroize_derive-1.0.0.crate"
     },
     {
         "type": "file",
-        "url": "data:%7B%22package%22%3A%20%22fc9ce59c69fc43078c6f4250b0c866bb06b9ff7ac955c7ddb82a8c189281dcae%22%2C%20%22files%22%3A%20%7B%7D%7D",
-        "dest": "cargo/vendor/zeroize_derive-0.10.0",
+        "url": "data:%7B%22package%22%3A%20%22de251eec69fc7c1bc3923403d18ececb929380e016afe103da75f396704f8ca2%22%2C%20%22files%22%3A%20%7B%7D%7D",
+        "dest": "cargo/vendor/zeroize_derive-1.0.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4968,11 +4889,5 @@
         "commands": [
             "for c in *.crate; do tar -xf $c; done"
         ]
-    },
-    {
-        "type": "file",
-        "url": "data:%5Bsource.crates-io%5D%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.vendored-sources%5D%0Adirectory%20%3D%20%22cargo/vendor%22%0A%0A%5Bsource.%22https%3A//github.com/async-email/async-imap%22%5D%0Agit%20%3D%20%22https%3A//github.com/async-email/async-imap%22%0Abranch%20%3D%20%22master%22%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.%22https%3A//github.com/async-email/async-smtp%22%5D%0Agit%20%3D%20%22https%3A//github.com/async-email/async-smtp%22%0Abranch%20%3D%20%22master%22%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.%22https%3A//github.com/deltachat/rust-email%22%5D%0Agit%20%3D%20%22https%3A//github.com/deltachat/rust-email%22%0Abranch%20%3D%20%22master%22%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.%22https%3A//github.com/async-email/encoded-words%22%5D%0Agit%20%3D%20%22https%3A//github.com/async-email/encoded-words%22%0Abranch%20%3D%20%22master%22%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.%22https%3A//github.com/djc/tokio-imap%22%5D%0Agit%20%3D%20%22https%3A//github.com/djc/tokio-imap%22%0Abranch%20%3D%20%22master%22%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.%22https%3A//github.com/deltachat/lettre%22%5D%0Agit%20%3D%20%22https%3A//github.com/deltachat/lettre%22%0Abranch%20%3D%20%22feat/mail%22%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.%22https%3A//github.com/rpgp/rpgp%22%5D%0Agit%20%3D%20%22https%3A//github.com/rpgp/rpgp%22%0Abranch%20%3D%20%22master%22%0Areplace-with%20%3D%20%22vendored-sources%22%0A",
-        "dest": "cargo",
-        "dest-filename": "config"
     }
 ]
