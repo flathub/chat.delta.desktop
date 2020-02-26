@@ -1,5 +1,4 @@
 app-id: chat.delta.desktop
-# I have no idea, actually, what a base does and whether we need it.
 base: org.electronjs.Electron2.BaseApp
 base-version: '19.08'
 runtime: org.freedesktop.Platform
@@ -91,7 +90,8 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
-          - /app/delta/deltachat-desktop --no-sandbox
+          - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
+          - exec zypak-wrapper /app/delta/deltachat-desktop "$@"
 
       # All the generated npm downloads, see README.md how to create
       # this file.  This needs to go to the bottom so that the
