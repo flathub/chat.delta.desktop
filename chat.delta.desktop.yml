@@ -91,7 +91,7 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
-          - /app/delta/deltachat-desktop
+          - /app/delta/deltachat-desktop --no-sandbox
 
       # All the generated npm downloads, see README.md how to create
       # this file.  This needs to go to the bottom so that the
