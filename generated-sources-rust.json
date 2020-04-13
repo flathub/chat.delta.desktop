@@ -1072,22 +1072,10 @@
         "dest": "cargo/vendor/email"
     },
     {
-        "type": "shell",
-        "commands": [
-            "if test -d cargo/vendor/email/email; then mv cargo/vendor/email cargo/vendor/email.bak; cp -ar --dereference --reflink=auto cargo/vendor/email.bak/email cargo/vendor/email; rm -r cargo/vendor/email.bak; fi"
-        ]
-    },
-    {
         "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22.travis.sh%22%3A%22c4c4f52fd02a3c200875d53ef809b7375d9ce3c4e1a2f8ba164f669ef02e173b%22%2C%22.travis.yml%22%3A%2200cfe2b2a6a07de4db532831825f1d28cdf44274c1756f71ab8b80d13965bee2%22%2C%22Cargo.toml%22%3A%223a228327ba408c76f335e9a62f9ad6526db8ede5f6687318700697b9878b5b18%22%2C%22LICENSE%22%3A%229f571808cd94bfb7c88e522405f8d14e5c9d07f893178a0d5b70a5ab6644c421%22%2C%22README.md%22%3A%22d4d5f22efd1e01e0307d68698987a91ad6ad0d46a21be547ce70894df8e4830c%22%2C%22build.rs%22%3A%226a3c38034bfcf6ab87c754abbcdf61a39de359b2932c903d9c03d1d4a72cdf46%22%2C%22examples/parse_email.rs%22%3A%220a7d4a07ca051d9c77e0fa5969f6d5824f0a1721cc6c5cecf88dcdd1cc6c0c14%22%2C%22examples/printing.rs%22%3A%223d7e59a50446a875abab08fff16c74d0f55dc625fb73cd8deea3283ea7930134%22%2C%22src/address.rs%22%3A%22af11d4a0b447e64f1323431c390415b1b357c9192a580268e0ac48ed555cdc14%22%2C%22src/header.rs%22%3A%2250d404b4cc21ce7dd131af41bc81b0f2a5495cbe5d6adf71c6153c2c2dac6804%22%2C%22src/lib.rs%22%3A%22b2c78e5b930604fc61d1452a5121c53eda865e8fa3841796555e7c256b600675%22%2C%22src/message.rs%22%3A%228f07558439e8d46e133543e0e4af78aaddcd566f56bb2e4e9690b6241ceac535%22%2C%22src/mimeheaders.rs%22%3A%222028d5098aa3855d4bd33b874fb0c87474c63a47898461b9a45ed64419105060%22%2C%22src/results.rs%22%3A%227fe75541d96bfe19676657b73dfcc803e6893fea72e12d240a89e2a7d589bdfa%22%2C%22src/rfc2045.rs%22%3A%224be5755d0f33cb88f72e8ca715062e19b81521ddedb3acd3fed65037b5f8c5cd%22%2C%22src/rfc2047.rs%22%3A%22a7a5a3235d31d67aee410360b7c1bf36c403c93af40551936903ba2e9c53d819%22%2C%22src/rfc5322.rs%22%3A%22c06ae7ee0408aa3eda3c78cda8f24d72f64af1f23f5d9f34c0b2bdf719828d98%22%2C%22src/rfc822.rs%22%3A%229e679c1c8d907892c5db6e78b56d26ad9fdbd4d6ecf7eedbe0c3abcadc2077e3%22%7D%2C%22package%22%3Anull%7D",
+        "url": "data:%7B%22package%22%3A%20null%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/email",
         "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/email/.git"
-        ]
     },
     {
         "type": "git",
@@ -1096,22 +1084,10 @@
         "dest": "cargo/vendor/encoded-words"
     },
     {
-        "type": "shell",
-        "commands": [
-            "if test -d cargo/vendor/encoded-words/encoded-words; then mv cargo/vendor/encoded-words cargo/vendor/encoded-words.bak; cp -ar --dereference --reflink=auto cargo/vendor/encoded-words.bak/encoded-words cargo/vendor/encoded-words; rm -r cargo/vendor/encoded-words.bak; fi"
-        ]
-    },
-    {
         "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22Cargo.toml%22%3A%224cb6aaf10d32f1c49182783b2cc1001289af3b1a81570410780ac3119824db61%22%2C%22LICENSE-APACHE%22%3A%22a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2%22%2C%22LICENSE-MIT%22%3A%224e0ec88980aac272d80e61a33cb695cf40dbb8768a5973e6c077be73912bd9f0%22%2C%22README.md%22%3A%221463c033a7792511daaee8d41804222ecd9fa65ad2c0ed47e366bc4b65315358%22%2C%22src/charset.rs%22%3A%22d483bdd0a96c26e20d772720a2839136b571537a1e5f9de4e15f9546d072667f%22%2C%22src/defects.rs%22%3A%222652b0903bef145e6533a1a1fa06a679390e8ffdee243f66406030a748393095%22%2C%22src/encoded_words.rs%22%3A%22329ccd145d88b144f901c1557bfc3fe4f73796feb8e4ba6897918c2a49f9f39e%22%2C%22src/lib.rs%22%3A%2278e2cf84b5e6ffe68022236e20b7516ac8ccd2d74d3044e43887a246214adc7a%22%7D%2C%22package%22%3Anull%7D",
+        "url": "data:%7B%22package%22%3A%20null%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/encoded-words",
         "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/encoded-words/.git"
-        ]
     },
     {
         "type": "file",
@@ -1993,20 +1969,16 @@
     {
         "type": "shell",
         "commands": [
-            "if test -d cargo/vendor/lettre/lettre; then mv cargo/vendor/lettre cargo/vendor/lettre.bak; cp -ar --dereference --reflink=auto cargo/vendor/lettre.bak/lettre cargo/vendor/lettre; rm -r cargo/vendor/lettre.bak; fi"
+            "mv cargo/vendor/lettre cargo/vendor/lettre.repo",
+            "mv cargo/vendor/lettre.repo/lettre cargo/vendor/lettre",
+            "rm -rf cargo/vendor/lettre.repo"
         ]
     },
     {
         "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22CHANGELOG.md%22%3A%2296c3006a11a4e8ac3e62c6b3805bd430228e3a5e9491c26e9391fb5e17375fef%22%2C%22Cargo.toml%22%3A%22dc5448d0da50383975b7166f7c6cb549729369c9ba0cafe72a48d9a61d9acc0f%22%2C%22LICENSE%22%3A%22ec3dc3bf0f1d84cc5c9b80462ffcbaafbb89f1400b7c5c015b8a56ff3eaef844%22%2C%22README.md%22%3A%22f6a0a8daae6beee5367920b06042d8a1e38b307f865ca565def81e82f1b62501%22%2C%22benches/transport_smtp.rs%22%3A%22347f30ada1c892f1e7c54b0e51dd5c73779c6fa09c8405ce3d398b86dd0cc61a%22%2C%22examples/smtp.rs%22%3A%222744e7c36db6a7ae12dc22ec8674649a41373e67043870335466a0ae0c9a44f5%22%2C%22examples/smtp_gmail.rs%22%3A%22457d82ec2b51158522b8763fe131160712213e6c2b710b10654bbb677b747a64%22%2C%22src/error.rs%22%3A%228c2bc183f7ee1d73eae9328bd8ab9feb5f4f6326a546ac76a76c705af6e0f921%22%2C%22src/file/error.rs%22%3A%228ce0c7a8b08032d5b70ca58d096ba5e073bbd0d7d2035a39b91be10cac07cf82%22%2C%22src/file/mod.rs%22%3A%22fcaa4e0dc73e1cb6d9efbee10afed2cc8917fe743747abbcdad77ce359aa63e4%22%2C%22src/lib.rs%22%3A%22bcbf1dc2fd68366d5bb49d807b252835adf19152cfc8070fb43aac3ef9016440%22%2C%22src/sendmail/error.rs%22%3A%223a781b04d68f4a538e1f8d9af86ec239667ca31f9a965e8b280e1dfb22a72c56%22%2C%22src/sendmail/mod.rs%22%3A%22135c0e5ddaa6d9977d5ceaa9e011c85a96c9d36404306fa84f2aeac7c3aa9939%22%2C%22src/smtp/authentication.rs%22%3A%227a9e03ea7c7330030f7b36501d2cd98332e739e117dc9f7f7a2c40cb11e98180%22%2C%22src/smtp/client/mock.rs%22%3A%22f27304c679d6360634b22a6560ad5b4fb3e19c17ab9a676e3a5b0df958284533%22%2C%22src/smtp/client/mod.rs%22%3A%228e2246f7c392c1c2f06df3e01e547a210ba0a20d01f23912a603ba432aa300f4%22%2C%22src/smtp/client/net.rs%22%3A%2285642527eb30a0aa64edb25eca1b100cba6b06fdbc6f08cb3c80547dbd2ea10f%22%2C%22src/smtp/commands.rs%22%3A%22ca82d025ac5c458b201afcee0397935d415b55531d091b1fa05c433c217e572c%22%2C%22src/smtp/error.rs%22%3A%2235d9a7a43d094d6a6dcdcf33806cd876556925844d767cc8029d9ebeb6633f36%22%2C%22src/smtp/extension.rs%22%3A%225011c821ad90244254d28fa35bd8df321e9f9120bf99eb45e81b59a215b587ae%22%2C%22src/smtp/mod.rs%22%3A%2204c896805cb1987befcd1e243addc32cd98a9d33901895d5e13fb58ca20b3e67%22%2C%22src/smtp/r2d2.rs%22%3A%222eb38866fa9ab0e7f8af0edd49c45435ea178d953d3990eef5a71e30b48f89c5%22%2C%22src/smtp/response.rs%22%3A%22c405496f695c0d90985501967b182998258de2061c613ddaf93743e95b68b283%22%2C%22src/smtp/util.rs%22%3A%22cf6791b5fce2cc961ef95748b05a5dc1b99cfad0be25d7412a36ab330ff04462%22%2C%22src/stub/mod.rs%22%3A%22df6527915076a515261aab87b799924851695adffb830d2de51f4549c40dd4ef%22%2C%22tests/r2d2_smtp.rs%22%3A%22438a3777304b1c42c714424ff85c43fcc1b1e08a8f28a9b244b6ca97fe7e0fd6%22%2C%22tests/skeptic.rs%22%3A%224b2a43ab7ec36e7d56521d81d14fe09c5117ed9d766a79cc5f418e426f3fb472%22%2C%22tests/transport_file.rs%22%3A%22222e748986326b1a9377bd08da12c970f7a4b4d33efeb6337d2d5591c5808739%22%2C%22tests/transport_sendmail.rs%22%3A%2212fd1406c72103eaf9253892e7b0c0b28dec34ae4a34b456d25c9ce87197f8e8%22%2C%22tests/transport_smtp.rs%22%3A%22442bc16d699bf0caf8688e03360c22370c9b5e73e92e6277804563d57ad9cf6e%22%2C%22tests/transport_stub.rs%22%3A%22ea431f825fc449bac808952d818645a6434f8c4478897f8b069dda735275f0aa%22%7D%2C%22package%22%3Anull%7D",
+        "url": "data:%7B%22package%22%3A%20null%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/lettre",
         "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/lettre/.git"
-        ]
     },
     {
         "type": "git",
@@ -2017,20 +1989,16 @@
     {
         "type": "shell",
         "commands": [
-            "if test -d cargo/vendor/lettre_email/lettre_email; then mv cargo/vendor/lettre_email cargo/vendor/lettre_email.bak; cp -ar --dereference --reflink=auto cargo/vendor/lettre_email.bak/lettre_email cargo/vendor/lettre_email; rm -r cargo/vendor/lettre_email.bak; fi"
+            "mv cargo/vendor/lettre_email cargo/vendor/lettre_email.repo",
+            "mv cargo/vendor/lettre_email.repo/lettre_email cargo/vendor/lettre_email",
+            "rm -rf cargo/vendor/lettre_email.repo"
         ]
     },
     {
         "type": "file",
-        "url": "data:%7B%22files%22%3A%7B%22CHANGELOG.md%22%3A%2296c3006a11a4e8ac3e62c6b3805bd430228e3a5e9491c26e9391fb5e17375fef%22%2C%22Cargo.toml%22%3A%22440a358a8ade1e76e9fb471e171ff5379061bb5899edf872836558dabb616739%22%2C%22LICENSE%22%3A%22ec3dc3bf0f1d84cc5c9b80462ffcbaafbb89f1400b7c5c015b8a56ff3eaef844%22%2C%22README.md%22%3A%22f6a0a8daae6beee5367920b06042d8a1e38b307f865ca565def81e82f1b62501%22%2C%22examples/local.rs%22%3A%22efa3766af17dcbfe0bb3967bbc6a4a74150963ee7641d2e22c04214b50496b95%22%2C%22src/error.rs%22%3A%22f71d712f8e0edd4e29ec04b7d886a0fd4c3e34f57f51f308e1e432a836a7da4f%22%2C%22src/lib.rs%22%3A%22c15ea2cac98bb665d16726ca561ed49d466e2173beb3dd61441ef91e3951afa5%22%2C%22tests/build_with_envelope.rs%22%3A%2277ebe8aab4910d3197983461357109769cd329fff16755fdec45ab928c4b58d5%22%2C%22tests/skeptic.rs%22%3A%22a0bb8da90461798fd200ebd940c33a67fa634cb0cfb3cf48730aad374575e73d%22%7D%2C%22package%22%3Anull%7D",
+        "url": "data:%7B%22package%22%3A%20null%2C%20%22files%22%3A%20%7B%7D%7D",
         "dest": "cargo/vendor/lettre_email",
         "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "echo rm -r cargo/vendor/lettre_email/.git"
-        ]
     },
     {
         "type": "file",
@@ -4576,7 +4544,7 @@
     },
     {
         "type": "file",
-        "url": "data:%5Bsource.crates-io%5D%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.vendored-sources%5D%0Adirectory%20%3D%20%22cargo/vendor%22%0A%0A%5Bsource.%22https%3A//github.com/deltachat/rust-email%22%5D%0Agit%20%3D%20%22https%3A//github.com/deltachat/rust-email%22%0Abranch%20%3D%20%22master%22%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.%22https%3A//github.com/async-email/encoded-words%22%5D%0Agit%20%3D%20%22https%3A//github.com/async-email/encoded-words%22%0Abranch%20%3D%20%22master%22%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.%22https%3A//github.com/deltachat/lettre%22%5D%0Agit%20%3D%20%22https%3A//github.com/deltachat/lettre%22%0Abranch%20%3D%20%22master%22%0Areplace-with%20%3D%20%22vendored-sources%22%0A",
+        "url": "data:%5Bsource.vendored-sources%5D%0Adirectory%20%3D%20%22cargo/vendor%22%0A%0A%5Bsource.crates-io%5D%0Areplace-with%20%3D%20%22vendored-sources%22%0A%0A%5Bsource.%22https%3A//github.com/deltachat/rust-email%22%5D%0Agit%20%3D%20%22https%3A//github.com/deltachat/rust-email%22%0Areplace-with%20%3D%20%22vendored-sources%22%0Abranch%20%3D%20%22master%22%0A%0A%5Bsource.%22https%3A//github.com/async-email/encoded-words%22%5D%0Agit%20%3D%20%22https%3A//github.com/async-email/encoded-words%22%0Areplace-with%20%3D%20%22vendored-sources%22%0Abranch%20%3D%20%22master%22%0A%0A%5Bsource.%22https%3A//github.com/deltachat/lettre%22%5D%0Agit%20%3D%20%22https%3A//github.com/deltachat/lettre%22%0Areplace-with%20%3D%20%22vendored-sources%22%0Abranch%20%3D%20%22master%22%0A",
         "dest": "cargo",
         "dest-filename": "config"
     }
