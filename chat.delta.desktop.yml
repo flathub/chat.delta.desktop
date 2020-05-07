@@ -11,6 +11,7 @@ finish-args:
   - --socket=x11
   - --share=ipc
   - --device=dri         # Without DRI the app doesn't come up :-/
+  - --device=all         # Webcam access for QR code scans
   - --socket=pulseaudio  # Record and play voice messages
   - --filesystem=home
   - --share=network
