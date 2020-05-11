@@ -73,8 +73,8 @@ modules:
         dest: flatpak-node/electron-cache
 
       - type: archive
-        url: https://github.com/deltachat/deltachat-desktop/archive/v1.3.0.tar.gz
-        sha256: 08867c83e28eb4872eb309d36287347f50337320ab9e623502e1149014e3e3dd
+        url: https://github.com/deltachat/deltachat-desktop/archive/v1.3.2.tar.gz
+        sha256: 05279fb1bf96ae6a877a47440dff1bc11d3c6369db76063bc0915ba6609927e7
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
@@ -98,8 +98,6 @@ modules:
       # this file.  This needs to go to the bottom so that the
       # commands in that file can see package.json and friends.
       - generated-sources-npm.0.json
-      - generated-sources-npm.1.json
-      - generated-sources-npm.2.json
 
 
       # https://github.com/deltachat/deltachat-desktop/pull/1125
