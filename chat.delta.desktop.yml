@@ -46,7 +46,8 @@ modules:
       - npm cache verify
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
       - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp npm install --offline --verbose --dc-system-lib=true
-      - npm run pack --offline --verbose
+      - npm run pack:generate_config --offline --verbose
+      - npm run pack:linux --offline --verbose
       - mkdir -p /app/delta
       - cp -ar dist/linux-unpacked/* /app/delta/
 
