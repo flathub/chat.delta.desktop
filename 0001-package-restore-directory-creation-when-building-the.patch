@@ -1,0 +1,27 @@
+From 29305974fe73e5a6a77c5a88d2124eaee14881ed Mon Sep 17 00:00:00 2001
+From: Tobias Mueller <muelli@cryptobitch.de>
+Date: Fri, 26 Jun 2020 18:05:06 +0200
+Subject: [PATCH] package: restore directory creation when building the app
+
+The flatpak build does not require appimage or anything else.
+Just the app in a directory. The change in behaviour was changed with
+ff0d88bfce175ea9b182d095b6555d1e94dfb105.
+---
+ package.json | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/package.json b/package.json
+index f2f050ba..7bc9eb0f 100644
+--- a/package.json
++++ b/package.json
+@@ -40,6 +40,7 @@
+     "pack:generate_config": "node ./build/gen-electron-builder-config.js && prettier --write ./electron-builder.json5 --loglevel silent",
+     "pack:win": "electron-builder --config ./electron-builder.json5 --win nsis portable",
+     "pack:mac": "electron-builder --config ./electron-builder.json5 --mac dmg mas",
++    "pack:linux:dir": "electron-builder --config ./electron-builder.json5 --linux --dir",
+     "pack:linux": "electron-builder --config ./electron-builder.json5 --linux AppImage deb",
+     "pack:all": "electron-builder --config ./electron-builder.json5 --mac dmg --win nsis portable --linux AppImage deb"
+   },
+-- 
+2.17.1
+
