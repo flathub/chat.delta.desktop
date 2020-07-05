@@ -46,7 +46,8 @@ modules:
       - npm cache verify
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
       - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp npm install --offline --verbose --dc-system-lib=true
-      - npm run pack --offline --verbose
+      - npm run pack:generate_config --offline --verbose
+      - npm run pack:linux:dir --offline --verbose
       - mkdir -p /app/delta
       - cp -ar dist/linux-unpacked/* /app/delta/
 
@@ -73,8 +74,8 @@ modules:
         dest: flatpak-node/electron-cache
 
       - type: archive
-        url: https://github.com/deltachat/deltachat-desktop/archive/v1.3.2.tar.gz
-        sha256: 05279fb1bf96ae6a877a47440dff1bc11d3c6369db76063bc0915ba6609927e7
+        url: https://github.com/deltachat/deltachat-desktop/archive/v1.4.3.tar.gz
+        sha256: 1a424f1ce520689c7a08a17b401f852e99bb3d236453f45d29b5e9de0ea7abf6
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
