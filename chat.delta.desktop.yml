@@ -74,8 +74,8 @@ modules:
         dest: flatpak-node/electron-cache
 
       - type: archive
-        url: https://github.com/deltachat/deltachat-desktop/archive/v1.4.2.tar.gz
-        sha256: 346ed1e0b135bb41b916a422d02a6cd329242cb2ea6085ae1a16f9aa483f9161
+        url: https://github.com/deltachat/deltachat-desktop/archive/v1.4.3.tar.gz
+        sha256: 1a424f1ce520689c7a08a17b401f852e99bb3d236453f45d29b5e9de0ea7abf6
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
@@ -105,7 +105,4 @@ modules:
       - type: file
         dest: static
         path: chat.delta.desktop.appdata.xml
-
-      - type: patch
-        path: 0001-package-restore-directory-creation-when-building-the.patch
 
