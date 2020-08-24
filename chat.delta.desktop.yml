@@ -74,9 +74,10 @@ modules:
         dest-filename: SHASUMS256.txt-4.0.0
         dest: flatpak-node/electron-cache
 
-      - type: archive
-        url: https://github.com/deltachat/deltachat-desktop/archive/v1.4.3.tar.gz
-        sha256: 1a424f1ce520689c7a08a17b401f852e99bb3d236453f45d29b5e9de0ea7abf6
+      - type: git
+        url: https://github.com/deltachat/deltachat-desktop.git
+        tag: v1.13.0-rc1
+        commit: 43dd87caf88e793e4d324d553074ae9d036f4755
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
@@ -95,6 +96,7 @@ modules:
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - exec zypak-wrapper /app/delta/deltachat-desktop "$@"
+
 
       # All the generated npm downloads, see README.md how to create
       # this file.  This needs to go to the bottom so that the
