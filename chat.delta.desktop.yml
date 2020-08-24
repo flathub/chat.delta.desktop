@@ -74,9 +74,10 @@ modules:
         dest-filename: SHASUMS256.txt-4.0.0
         dest: flatpak-node/electron-cache
 
-      - type: archive
-        url: https://github.com/deltachat/deltachat-desktop/archive/v1.12.0.tar.gz
-        sha256: 074d31f7691b58e74ee0421172c5a44bce65eafdc7c9cd62e8d4914d46f173bb
+      - type: git
+        url: https://github.com/deltachat/deltachat-desktop.git
+        tag: v1.13.0-rc1
+        commit: 43dd87caf88e793e4d324d553074ae9d036f4755
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
