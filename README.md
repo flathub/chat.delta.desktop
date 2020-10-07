@@ -19,16 +19,16 @@ flatpak remote-add --if-not-exists \
 ```
 
 You also need to install the required flatpak runtime, SDK and
-electron BaseApp.  At the time of this writing they are the 18.08
+electron BaseApp.  At the time of this writing they are the 20.08
 versions, but check the `chat.delta.desktop.yml`'s `runtime-version`
 and `base-version` properties for the current version numbers.
 
 ```
 flatpak install flathub \
-    org.freedesktop.Platform//19.08 \
-    org.freedesktop.Sdk//19.08 \
-    org.electronjs.Electron2.BaseApp//19.08 \
-    org.freedesktop.Sdk.Extension.node10//19.08
+    org.freedesktop.Platform//20.08 \
+    org.freedesktop.Sdk//20.08 \
+    org.electronjs.Electron2.BaseApp//20.08 \
+    org.freedesktop.Sdk.Extension.node10//20.08
 ```
 
 
@@ -55,6 +55,21 @@ done to publish the release.
 
 ## Upgrading to a new release
 
+Get hold of a newer version of the desktop app and the Rust binding,
+e.g. `git fetch --tags`.  Check the newest tags out, so that their
+dependencies can be seen.
+
+```
+cd delta-chat-desktop
+git fetch --tags
+git checkout v1.13.0  # or whatever the latest tag is
+```
+
+```
+cd delta-chat-rust
+git fetch --tags
+git checkout 1.46.0
+```
 
 ### Re-generating rust sources
 
@@ -75,22 +90,17 @@ Make sure you generate it from the correct downloaded release.
 ### Re-generating npm sources
 
 Since flatpak does not allow the build to download things while
-building we have to resolve all the npm dependencies statically
-beforehand.  This is done by letting npm put the dependencies into a
-`package-lock.json` file without actually downloading them and than
-converting that into a manifest snipped called
-`generated-sources.json`.
+building we have to resolve all the npm dependencies beforehand.
+This is done by converting the `package-lock.json`, which should
+contain all the dependencies, into a manifest snipped suitabled for
+building flatpaks.
 
 Upstream ships the package-lock.json file so it should not be
 necessary to generate it.  However, sometimes the file is not
 updated in lockstep with package.json and then dependencies will
-be missing during build time.
-
-Current version of npm (6.9.0) have problems generating a clean
-lockfile, cf. https://github.com/RocketChat/Rocket.Chat/issues/15408.
-In order to fix up the file, you may need to run something like
-
-    cat package-lock.json | jq 'walk(if type == "object" then with_entries(if (.value | type) == "object" and .value.resolved == false then .value.resolved = "https://registry.npmjs.org/\(.key)/-/\(.key)-\(.value.version).tgz" else . end) else . end)' > package-lock-new.json
+be missing during build time.  In that case, it's best to wait for
+upstream to provide the lock file, but it should be possible to run
+`npm install` to get the lockfile updated.
 
 To create the `generated-sources.json` file you need a copy of the
 https://github.com/flatpak/flatpak-builder-tools.git repository and
@@ -98,13 +108,12 @@ invoke the `node/flatpak-node-generator.py` script, e.g.:
 
 ```
 python3 ../flatpak-builder-tools/node/flatpak-node-generator.py \
-    -o generated-sources-npm.json \
-    --recursive \
-    --split \
-    npm package-lock-new.json
+    npm ../deltachat-desktop/package-lock.json \
+    --recursive --split \
+    --output generated-sources-npm.json
 ```
 
-This will produce the `generated-sources.json` file which is referenced
+This will produce the `generated-sources-npm-?.json` files which is referenced
 in the `chat.delta.desktop.yml` manifest.  Because that file is quite big
 and Github seems to not like big files all too much, the generator offers
 a --split option, cf. https://github.com/flatpak/flatpak-builder-tools/blob/204309e0066a66a6f3c9ad7c5edb870513a7504c/node/README.md#splitting-mode.
