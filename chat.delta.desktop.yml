@@ -97,6 +97,8 @@ modules:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - exec zypak-wrapper /app/delta/deltachat-desktop "$@"
 
+      - type: patch
+        path: 0001-electron-builder-disable-ASAR.patch
 
       # All the generated npm downloads, see README.md how to create
       # this file.  This needs to go to the bottom so that the

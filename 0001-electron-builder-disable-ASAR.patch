@@ -1,0 +1,27 @@
+From 9452917f7ebc3110a55a7a2c302c563123bd0279 Mon Sep 17 00:00:00 2001
+From: Tobias Mueller <muelli@cryptobitch.de>
+Date: Fri, 16 Oct 2020 15:18:10 +0200
+Subject: [PATCH] electron-builder: disable ASAR
+
+with this change, the resources should not get zipped which will hopefully
+enable updates through content-addressable systems, i.e. flatpak, to be *much*
+more efficient.
+---
+ electron-builder.json5 | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/electron-builder.json5 b/electron-builder.json5
+index fe777d8f..da45fbd4 100644
+--- a/electron-builder.json5
++++ b/electron-builder.json5
+@@ -135,6 +135,7 @@
+     ],
+   },
+   linux: {
++    asar: false,
+     target: ['AppImage', 'deb'],
+     category: 'Network;Chat;InstantMessaging;',
+     desktop: {
+-- 
+2.25.1
+
