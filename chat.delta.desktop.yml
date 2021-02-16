@@ -5,7 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node10
+  - org.freedesktop.Sdk.Extension.node12
 command: /app/bin/run.sh
 finish-args:
   - --socket=x11
@@ -22,17 +22,17 @@ modules:
   - name: node
     buildsystem: simple
     build-commands:
-      - '/usr/lib/sdk/node10/install-sdk.sh'
+      - '/usr/lib/sdk/node12/install-sdk.sh'
 
   - deltachat-core-rust.yaml
 
   - name: delta
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node10/bin
+      append-path: /usr/lib/sdk/node12/bin
       env:
         NPM_CONFIG_LOGLEVEL: info
-        npm_config_nodedir: /usr/lib/sdk/node10
+        npm_config_nodedir: /usr/lib/sdk/node12
 
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
@@ -44,6 +44,7 @@ modules:
       - node --version
       - npm --version
       - npm cache verify
+      - mkdir -p $FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
       - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp npm install --offline --verbose --dc-system-lib=true
       - npm run build4production --offline --verbose
