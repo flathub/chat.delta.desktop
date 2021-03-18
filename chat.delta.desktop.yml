@@ -65,14 +65,20 @@ modules:
       # Taken from https://github.com/electron/chromedriver/issues/28#issuecomment-42783936
       - type: file
         only-arches: ["x86_64"]
-        url: https://github.com/electron/electron/releases/download/v4.0.0/chromedriver-v4.0.0-linux-x64.zip
-        sha256: 221db18ea2f3a8267f9a57ee61a9d5a6df09824c61bf8cefa360502cae503d7c
+        url: https://github.com/electron/electron/releases/download/v10.0.0/chromedriver-v10.0.0-linux-x64.zip
+        sha256: f2db1ff4e39f78719a20315238813bf0c56b98fc1dec6b324345b80b16db9b25
         dest: flatpak-node/electron-cache
 
       - type: file
-        url: https://github.com/electron/electron/releases/download/v4.0.0/SHASUMS256.txt
-        sha256: 52dfb903bf248db3b2c94cdcddd310034cd743098c13b5b10c71272ad6f812d1
-        dest-filename: SHASUMS256.txt-4.0.0
+        only-arches: ["aarch64"]
+        url: https://github.com/electron/electron/releases/download/v10.0.0/chromedriver-v10.0.0-linux-arm64.zip
+        sha256: 5b8b1a114ad46c1b11e1413dcf26fadaa94e2f8d474406f8ac60d55637bc0f7f
+        dest: flatpak-node/electron-cache
+
+      - type: file
+        url: https://github.com/electron/electron/releases/download/v10.0.0/SHASUMS256.txt
+        sha256: e1da2cc834eebb065fb4e3438a8e007223af4beade6f6d0d1c68c3d9592ae804
+        dest-filename: SHASUMS256.txt-10.0.0
         dest: flatpak-node/electron-cache
 
       - type: git
