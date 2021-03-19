@@ -32,14 +32,9 @@ modules:
       append-path: /usr/lib/sdk/node12/bin
       env:
         NPM_CONFIG_LOGLEVEL: info
-        npm_config_nodedir: /usr/lib/sdk/node12
+        npm_config_cache: /run/build/delta/flatpak-node/cache/npm
+        XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
 
-        # Tell caches where we pre-downloaded things.
-        npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
-        electron_config_cache: /run/build/delta/flatpak-node/electron-cache
-
-        # Tell the chromedriver npm package where we pre-downloaded things.
-        ELECTRON_CACHE: /run/build/delta/flatpak-node/electron-cache
     build-commands:
       - node --version
       - npm --version
