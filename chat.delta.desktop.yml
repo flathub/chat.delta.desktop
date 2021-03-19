@@ -36,6 +36,10 @@ modules:
         XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
         # DEBUG is used by electron/get, maybe we can see something enlightening
         DEBUG: "*"
+        # There is some failure related to esbuild.
+        # https://github.com/flathub/com.visualstudio.code-oss/blob/f6485a4747852d488d3c221d98898c728003da8c/com.visualstudio.code-oss.yml#L70
+        # is a place that may help us
+        ESBUILD_BIN_PATH_FOR_TESTS: /run/build/delta/flatpak-node/cache/esbuild/bin/esbuild-current
 
     build-commands:
       - node --version
