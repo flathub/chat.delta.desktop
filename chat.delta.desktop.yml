@@ -32,7 +32,7 @@ modules:
       append-path: /usr/lib/sdk/node12/bin
       env:
         NPM_CONFIG_LOGLEVEL: info
-        npm_config_cache: /run/build/delta/flatpak-node/cache/npm
+        npm_config_cache: /run/build/delta/flatpak-node/npm-cache
         XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
         # DEBUG is used by electron/get, maybe we can see something enlightening
         DEBUG: "*"
