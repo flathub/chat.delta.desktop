@@ -13,7 +13,10 @@ finish-args:
   - --device=dri         # Without DRI the app doesn't come up :-/
   - --device=all         # Webcam access for QR code scans
   - --socket=pulseaudio  # Record and play voice messages
-  - --filesystem=home
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
+  - --filesystem=xdg-music
+  - --filesystem=xdg-videos
   - --share=network
   - --talk-name=org.freedesktop.Notifications
         
