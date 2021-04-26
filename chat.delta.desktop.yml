@@ -6,12 +6,12 @@ runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node12
+  - org.freedesktop.Sdk.Extension.rust-nightly
 command: /app/bin/run.sh
 finish-args:
   - --socket=x11
   - --share=ipc
-  - --device=dri         # Without DRI the app doesn't come up :-/
-  - --device=all         # Webcam access for QR code scans
+  - --device=all         # Webcam access for QR code scans, include DRI
   - --socket=pulseaudio  # Record and play voice messages
   - --filesystem=home
   - --share=network
