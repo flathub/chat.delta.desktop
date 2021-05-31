@@ -14,7 +14,12 @@ build-options:
     # The flatpak build process should separate the debug symbols.
     RUSTFLAGS: "-g"
 
+    # sccache hopefully speeds up subsequent compilations
+    RUSTC_WRAPPER: /app/bin/sccache
+    SCCACHE_DIR: /run/ccache/sccache/
+
   append-path: /app/lib/sdk/rust-nightly/bin
+
 cleanup:
     - /include
     - /lib/libdeltachat.a
@@ -49,6 +54,15 @@ modules:
         only-arches: ["aarch64"]
         url: https://static.rust-lang.org/dist/2020-08-03/rust-nightly-aarch64-unknown-linux-gnu.tar.gz
         sha256: aa93f75fcab54287cb0922002b1beb3ab6f43d95b1f944e58659d0307df3c7ee
+
+  - name: sccache
+    buildsystem: simple
+    build-commands:
+        - install -Dma+rwx sccache /app/bin/sccache
+    sources:
+        - type: archive
+          url: https://github.com/mozilla/sccache/releases/download/v0.2.15/sccache-v0.2.15-x86_64-unknown-linux-musl.tar.gz
+          sha256: e5d03a9aa3b9fac7e490391bbe22d4f42c840d31ef9eaf127a03101930cbb7ca
 
 sources:
   - type: archive
