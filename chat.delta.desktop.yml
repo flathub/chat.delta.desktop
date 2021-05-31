@@ -31,6 +31,8 @@ modules:
     build-options:
       append-path: /usr/lib/sdk/node12/bin
       env:
+        DEBUG: "*"
+        
         NPM_CONFIG_LOGLEVEL: info
         npm_config_nodedir: /usr/lib/sdk/node12
 
