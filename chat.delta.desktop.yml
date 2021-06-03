@@ -31,7 +31,6 @@ modules:
     build-options:
       append-path: /usr/lib/sdk/node12/bin
       env:
-        DEBUG: "*"
         
         NPM_CONFIG_LOGLEVEL: info
         npm_config_nodedir: /usr/lib/sdk/node12
@@ -45,6 +44,10 @@ modules:
     build-commands:
       - node --version
       - npm --version
+      - ls /run/build/delta/flatpak-node/
+      - ls /run/build/delta/flatpak-node/electron
+      - pwd
+      - ls flatpak-node/cache/electron || echo error
       - npm cache verify
       - mkdir -p $FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
