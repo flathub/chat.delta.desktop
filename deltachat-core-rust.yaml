@@ -38,7 +38,7 @@ modules:
       - /lib/sdk/rust-nightly
     buildsystem: simple
     build-commands:
-      - ./install.sh --prefix=/app/lib/sdk/rust-nightly --disable-ldconfig --verbose
+      - ./install.sh --prefix=/app/lib/sdk/rust-nightly --disable-ldconfig --verbose --without=rust-docs,rust-analyzer-preview,rust-analysis-x86_64-unknown-linux-gnu,miri-preview,llvm-tools-preview,clippy-preview
     sources:
       - type: archive
         only-arches: ["x86_64"]
