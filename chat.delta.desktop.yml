@@ -38,10 +38,10 @@ modules:
 
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
-        electron_config_cache: /run/build/delta/flatpak-node/electron-cache
+        electron_config_cache: /run/build/delta/flatpak-node/electron
 
         # Tell the chromedriver npm package where we pre-downloaded things.
-        ELECTRON_CACHE: flatpak-node/cache/electron
+        ELECTRON_CACHE: /run/build/delta/flatpak-node/electron
     build-commands:
       - node --version
       - npm --version
