@@ -70,13 +70,13 @@ modules:
         only-arches: ["x86_64"]
         url: https://github.com/electron/electron/releases/download/v4.0.0/chromedriver-v4.0.0-linux-x64.zip
         sha256: 221db18ea2f3a8267f9a57ee61a9d5a6df09824c61bf8cefa360502cae503d7c
-        dest: /run/build/delta/flatpak-node/electron-cache
+        dest: flatpak-node/cache/electron
 
       - type: file
         url: https://github.com/electron/electron/releases/download/v4.0.0/SHASUMS256.txt
         sha256: 52dfb903bf248db3b2c94cdcddd310034cd743098c13b5b10c71272ad6f812d1
         dest-filename: SHASUMS256.txt-4.0.0
-        dest: /run/build/delta/flatpak-node/electron-cache
+        dest: flatpak-node/cache/electron
 
       # Electron
       # the binaries are already included in generated-sources-npm.0.json
