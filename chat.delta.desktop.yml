@@ -36,7 +36,6 @@ modules:
 
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
-        electron_config_cache: /run/build/delta/flatpak-node/cache/electron
         
         # for electron builder
         ELECTRON_CACHE: /run/build/delta/flatpak-node/cache/electron
@@ -52,9 +51,6 @@ modules:
     build-commands:
       - node --version
       - npm --version
-      # electron builder symlink workaround
-      - cd $ELECTRON_CACHE && ln -s httpsgithub.comelectronelectronreleasesdownloadv*.zip/*.zip $(echo httpsgithub.comelectronelectronreleasesdownloadv*.zip | sed -e s/.*electron/electron/) && cd -
-   
       - npm cache verify
       - mkdir -p $FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
