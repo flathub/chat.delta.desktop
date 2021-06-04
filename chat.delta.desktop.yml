@@ -37,10 +37,7 @@ modules:
 
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
-        electron_config_cache: /run/build/delta/flatpak-node/cache/electron
-
-        # Tell the chromedriver npm package where we pre-downloaded things.
-        ELECTRON_CACHE: /run/build/delta/flatpak-node/cache/electron
+        electron_config_cache: /run/build/delta/flatpak-node/electron-cache/
 
         # Taken from https://github.com/flathub/com.visualstudio.code-oss/blob/bd6d8052cbbd63a53396f4caad86adf73ec455cf/com.visualstudio.code-oss.yml#L71
         ESBUILD_BIN_PATH_FOR_TESTS: /run/build/delta/flatpak-node/cache/esbuild/bin/esbuild-current
@@ -51,7 +48,6 @@ modules:
     build-commands:
       - node --version
       - npm --version
-      - ls /run/build/delta/flatpak-node/cache/electron
       - npm cache verify
       - mkdir -p $FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
