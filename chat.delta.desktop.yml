@@ -30,9 +30,7 @@ modules:
     buildsystem: simple
     build-options:
       append-path: /usr/lib/sdk/node12/bin
-      env:
-        DEBUG: "*"
-        
+      env:      
         NPM_CONFIG_LOGLEVEL: info
         npm_config_nodedir: /usr/lib/sdk/node12
 
@@ -54,7 +52,7 @@ modules:
       - npm cache verify
       - mkdir -p $FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
-      - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp npm install --offline --verbose --dc-system-lib=true
+      - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp DEBUG="*" npm install --offline --verbose --dc-system-lib=true
       - npm run build4production --offline --verbose
       - env NO_ASAR=true  npm run pack:generate_config --offline --verbose
       - npm run pack:linux:dir --offline --verbose
