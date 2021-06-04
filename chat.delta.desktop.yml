@@ -51,6 +51,11 @@ modules:
     build-commands:
       - node --version
       - npm --version
+      # start electron builder symlink workaround
+      - cd $ELECTRON_CACHE
+      - ln -s httpsgithub.comelectronelectronreleasesdownloadv*.zip/*.zip $(echo httpsgithub.comelectronelectronreleasesdownloadv*.zip | sed -e s/.*electron/electron/)
+      - cd -
+      # end electron builder symlink workaround
       - npm cache verify
       # patch pkg-config until https://github.com/deltachat/deltachat-core-rust/issues/2755 is fixed
       - sed -i "s/-L\${libdir} //" /app/lib/pkgconfig/deltachat.pc
