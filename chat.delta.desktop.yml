@@ -59,10 +59,11 @@ modules:
       - cp -ar dist/linux-unpacked/* /app/delta/
 
       # Install the required static files
-      - install run.sh /app/bin/run.sh
-      - install -Dm 0644 chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
-      - install -Dm 0644 static/chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
-      - install -Dm 0644 delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
+      - install ../run.sh /app/bin/run.sh
+      - install -Dm 0644 ../chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
+      - install -Dm 0644 ../chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
+      - install -Dm 0644 ../delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
+    subdir: main
     sources:
       # Electron
       # the binaries are already included in generated-sources-npm.0.json
@@ -72,6 +73,7 @@ modules:
         url: https://github.com/deltachat/deltachat-desktop.git
         tag: v1.20.2
         commit: 0c548cbd909bed66de812b16b8fbb3f8c45bc158
+        dest: main
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
@@ -100,6 +102,5 @@ modules:
 
       # https://github.com/deltachat/deltachat-desktop/pull/1125
       - type: file
-        dest: static
         path: chat.delta.desktop.appdata.xml
 
