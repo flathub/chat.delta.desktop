@@ -30,23 +30,28 @@ modules:
     buildsystem: simple
     build-options:
       append-path: /usr/lib/sdk/node12/bin
-      env:
+      env:      
         NPM_CONFIG_LOGLEVEL: info
         npm_config_nodedir: /usr/lib/sdk/node12
 
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
-        electron_config_cache: /run/build/delta/flatpak-node/electron-cache
 
-        # Tell the chromedriver npm package where we pre-downloaded things.
-        ELECTRON_CACHE: /run/build/delta/flatpak-node/electron-cache
+        XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
+
+        # Taken from https://github.com/flathub/com.visualstudio.code-oss/blob/bd6d8052cbbd63a53396f4caad86adf73ec455cf/com.visualstudio.code-oss.yml#L71
+        ESBUILD_BIN_PATH_FOR_TESTS: /run/build/delta/flatpak-node/cache/esbuild/bin/esbuild-current
+
+        # This overwrites the git-ref version info for the about- and crash-screen
+        VERSION_INFO_GIT_REF: "flathub"
+
     build-commands:
       - node --version
       - npm --version
       - npm cache verify
       - mkdir -p $FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
-      - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp npm install --offline --verbose --dc-system-lib=true
+      - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp DEBUG="*" npm install --offline --verbose --dc-system-lib=true
       - npm run build4production --offline --verbose
       - env NO_ASAR=true  npm run pack:generate_config --offline --verbose
       - npm run pack:linux:dir --offline --verbose
@@ -54,31 +59,21 @@ modules:
       - cp -ar dist/linux-unpacked/* /app/delta/
 
       # Install the required static files
-      - install run.sh /app/bin/run.sh
-      - install -Dm 0644 chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
-      - install -Dm 0644 static/chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
-      - install -Dm 0644 delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
+      - install ../run.sh /app/bin/run.sh
+      - install -Dm 0644 ../chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
+      - install -Dm 0644 ../chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
+      - install -Dm 0644 ../delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
+    subdir: main
     sources:
-      # The chromedriver package tries to download a bunch of files
-      # outside of the normal npm dependencies.  Pre-download them and
-      # use ELECTRON_CACHE to point to them.
-      # Taken from https://github.com/electron/chromedriver/issues/28#issuecomment-42783936
-      - type: file
-        only-arches: ["x86_64"]
-        url: https://github.com/electron/electron/releases/download/v4.0.0/chromedriver-v4.0.0-linux-x64.zip
-        sha256: 221db18ea2f3a8267f9a57ee61a9d5a6df09824c61bf8cefa360502cae503d7c
-        dest: flatpak-node/electron-cache
+      # Electron
+      # the binaries are already included in generated-sources-npm.0.json
 
-      - type: file
-        url: https://github.com/electron/electron/releases/download/v4.0.0/SHASUMS256.txt
-        sha256: 52dfb903bf248db3b2c94cdcddd310034cd743098c13b5b10c71272ad6f812d1
-        dest-filename: SHASUMS256.txt-4.0.0
-        dest: flatpak-node/electron-cache
-
+      # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.14.1
-        commit: c6273f7449c46ad938b3cbb3285ca511815ade50
+        tag: v1.20.2
+        commit: 0c548cbd909bed66de812b16b8fbb3f8c45bc158
+        dest: main
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
@@ -107,6 +102,5 @@ modules:
 
       # https://github.com/deltachat/deltachat-desktop/pull/1125
       - type: file
-        dest: static
         path: chat.delta.desktop.appdata.xml
 

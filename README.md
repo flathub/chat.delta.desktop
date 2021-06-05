@@ -109,7 +109,7 @@ invoke the `node/flatpak-node-generator.py` script, e.g.:
 ```
 python3 ../flatpak-builder-tools/node/flatpak-node-generator.py \
     npm ../deltachat-desktop/package-lock.json \
-    --recursive --split \
+    --recursive --split --xdg-layout \
     --output generated-sources-npm.json
 ```
 
