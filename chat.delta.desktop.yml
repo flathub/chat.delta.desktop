@@ -25,6 +25,8 @@ modules:
     cleanup:
         # remove stuff that is not required at runtime
         - /app/bin/sccache
+        - /app/delta/resources/app/node_modules/deltachat-node/prebuilds
+        - /app/delta/resources/app/node_modules/deltachat-node/deltachat-core-rust
     buildsystem: simple
     build-options:
       append-path: /usr/lib/sdk/node14/bin
