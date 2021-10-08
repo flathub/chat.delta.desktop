@@ -65,8 +65,10 @@ modules:
           sha256: e5d03a9aa3b9fac7e490391bbe22d4f42c840d31ef9eaf127a03101930cbb7ca
 
 sources:
-  - type: archive
-    url: https://github.com/deltachat/deltachat-core-rust/archive/1.56.0.tar.gz
-    sha256: 56cd840b3859f000ca5ef453e1c3ef6b6ea12c281dab967b843b72eaa2f10cde
+  - type: git
+    url: https://github.com/deltachat/deltachat-core-rust.git
+    tag: 1.60
+    commit: 51c6467feb977b4e31184ec5110b6783cb72be45
+   
   - generated-sources-rust.json
 
