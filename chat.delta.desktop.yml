@@ -5,7 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node12
+  - https://github.com/flathub/org.freedesktop.Sdk.Extension.node14
 command: /app/bin/run.sh
 finish-args:
   - --socket=x11
@@ -22,7 +22,7 @@ modules:
   - name: node
     buildsystem: simple
     build-commands:
-      - '/usr/lib/sdk/node12/install-sdk.sh'
+      - '/usr/lib/sdk/node14/install-sdk.sh'
 
   - deltachat-core-rust.yaml
 
@@ -33,10 +33,10 @@ modules:
         - /app/node
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node12/bin
+      append-path: /usr/lib/sdk/node14/bin
       env:      
         NPM_CONFIG_LOGLEVEL: info
-        npm_config_nodedir: /usr/lib/sdk/node12
+        npm_config_nodedir: /usr/lib/sdk/node14
 
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
