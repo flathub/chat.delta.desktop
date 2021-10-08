@@ -21,6 +21,9 @@ modules:
   - deltachat-core-rust.yaml
 
   - name: delta
+    cleanup:
+        - /delta/resources/app/node_modules/deltachat-node/deltachat-core-rust
+        - /delta/resources/app/node_modules/deltachat-node/prebuilds
     buildsystem: simple
     build-options:
       append-path: /usr/lib/sdk/node14/bin
