@@ -27,6 +27,10 @@ modules:
   - deltachat-core-rust.yaml
 
   - name: delta
+    cleanup:
+        # remove stuff that is not required at runtime
+        - /app/bin/sccache
+        - /app/node
     buildsystem: simple
     build-options:
       append-path: /usr/lib/sdk/node12/bin
