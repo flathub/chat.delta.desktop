@@ -5,7 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node12
+  - org.freedesktop.Sdk.Extension.node14
 command: /app/bin/run.sh
 finish-args:
   - --socket=x11
@@ -18,21 +18,15 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
         
 modules:
-  # Copied from https://github.com/flatpak/flatpak-builder-tools/blob/ca5863a21454e81b04218f22cea83b2f78abed0b/node/vanilla-quick-start/org.electronjs.ElectronQuickStart.yaml#L31
-  - name: node
-    buildsystem: simple
-    build-commands:
-      - '/usr/lib/sdk/node12/install-sdk.sh'
-
   - deltachat-core-rust.yaml
 
   - name: delta
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node12/bin
+      append-path: /usr/lib/sdk/node14/bin
       env:      
         NPM_CONFIG_LOGLEVEL: info
-        npm_config_nodedir: /usr/lib/sdk/node12
+        npm_config_nodedir: /usr/lib/sdk/node14
 
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
