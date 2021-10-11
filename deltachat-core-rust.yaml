@@ -33,6 +33,9 @@ build-commands:
   # - cargo --offline -Z unstable-options vendor --manifest-path deltachat-ffi/Cargo.toml  --verbose
   - cargo --offline -Z unstable-options build -p deltachat_ffi --release --out-dir $PREFIX --verbose
   - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat-ffi/deltachat.h
+  # We shouldn't really have to patch this ourselves: https://github.com/deltachat/deltachat-core-rust/issues/2744
+  - sed -i 's,/usr/local/include,/app/include/deltachat-ffi,g' ./target/release/pkgconfig/deltachat.pc
+  - sed -i 's,/usr/local/,/app/,g' ./target/release/pkgconfig/deltachat.pc
   - install -D -m a+r ./target/release/pkgconfig/deltachat.pc  /app/lib/pkgconfig/deltachat.pc
   - find /app -name '*delta*.so'
   - pkg-config --libs deltachat
