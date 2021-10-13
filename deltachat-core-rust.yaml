@@ -44,6 +44,8 @@ modules:
     buildsystem: simple
     build-commands:
         - install -Dma+rwx sccache /app/bin/sccache
+    cleanup:
+        - /bin/sccache
     sources:
         - type: archive
           url: https://github.com/mozilla/sccache/releases/download/v0.2.15/sccache-v0.2.15-x86_64-unknown-linux-musl.tar.gz
