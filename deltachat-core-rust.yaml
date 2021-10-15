@@ -33,9 +33,13 @@ build-commands:
   # - cargo --offline -Z unstable-options vendor --manifest-path deltachat-ffi/Cargo.toml  --verbose
   - cargo --offline -Z unstable-options build -p deltachat_ffi --release --out-dir $PREFIX --verbose
   - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat-ffi/deltachat.h
+  # We shouldn't really have to patch this ourselves: https://github.com/deltachat/deltachat-core-rust/issues/2744
+  - sed -i 's,/usr/local/include,/app/include/deltachat-ffi,g' ./target/release/pkgconfig/deltachat.pc
+  - sed -i 's,/usr/local/,/app/,g' ./target/release/pkgconfig/deltachat.pc
   - install -D -m a+r ./target/release/pkgconfig/deltachat.pc  /app/lib/pkgconfig/deltachat.pc
   - find /app -name '*delta*.so'
   - pkg-config --libs deltachat
+
 modules:
   - name: rust-nightly
     cleanup:
@@ -66,7 +70,7 @@ modules:
 
 sources:
   - type: archive
-    url: https://github.com/deltachat/deltachat-core-rust/archive/1.56.0.tar.gz
-    sha256: 56cd840b3859f000ca5ef453e1c3ef6b6ea12c281dab967b843b72eaa2f10cde
+    url: https://github.com/deltachat/deltachat-core-rust/archive/1.60.0.tar.gz
+    sha256: b7df115452f32822e934a8e38761e2c8b15b59e34bb3ac538ec148ddc6d51098
   - generated-sources-rust.json
 
