@@ -54,7 +54,10 @@ modules:
       - env NO_ASAR=true  npm run pack:generate_config --offline --verbose
       - npm run pack:linux:dir --offline --verbose
       - mkdir -p /app/delta
-      - cp -ar dist/linux-unpacked/* /app/delta/
+      # The x86-64 build seems to be put in "linux-unpacked",
+      # the aarch64 build in "linix-arm64-unpacked"
+      # we try to catch both paths with the wildcard
+      - cp -ar dist/linux*unpacked/* /app/delta/
 
       # Install the required static files
       - install ../run.sh /app/bin/run.sh
