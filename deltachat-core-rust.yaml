@@ -1,14 +1,10 @@
 name: deltachat-core-rust
-buildsystem: simple
+buildsystem: cmake-ninja
 build-options:
   env:
     # It does not work to dereference the variable here :-/
     # CARGO_HOME: $FLATPAK_BUILDER_BUILDDIR/cargo
     CARGO_HOME: /run/build/deltachat-core-rust/cargo
-
-    # deltachat-ffi/build.rs uses this to create deltachat.pc,
-    # should locate deltachat.so.
-    PREFIX: /app/lib
 
     # The intention is to have a release build with debugging symbols.
     # The flatpak build process should separate the debug symbols.
@@ -23,22 +19,7 @@ build-options:
 cleanup:
     - /include
     - /lib/libdeltachat.a
-build-commands:
-  - type -a rustc
-  - type -a cargo
-  - rustc --version
-  # If "fetch" doesn't work while being offline, then the build is unlikely to work either.
-  - cargo --offline -Z unstable-options fetch --manifest-path deltachat-ffi/Cargo.toml  --verbose --verbose
-  # Vendorising doesn't seem to work offline, even though fetch and building work. So don't attempt to re-vendor.
-  # - cargo --offline -Z unstable-options vendor --manifest-path deltachat-ffi/Cargo.toml  --verbose
-  - cargo --offline -Z unstable-options build -p deltachat_ffi --release --out-dir $PREFIX --verbose
-  - install -D -m a+r deltachat-ffi/deltachat.h  /app/include/deltachat-ffi/deltachat.h
-  # We shouldn't really have to patch this ourselves: https://github.com/deltachat/deltachat-core-rust/issues/2744
-  - sed -i 's,/usr/local/include,/app/include/deltachat-ffi,g' ./target/release/pkgconfig/deltachat.pc
-  - sed -i 's,/usr/local/,/app/,g' ./target/release/pkgconfig/deltachat.pc
-  - install -D -m a+r ./target/release/pkgconfig/deltachat.pc  /app/lib/pkgconfig/deltachat.pc
-  - find /app -name '*delta*.so'
-  - pkg-config --libs deltachat
+    - /lib/pkgconfig/deltachat.pc
 
 modules:
   - name: rust-nightly
@@ -63,6 +44,8 @@ modules:
     buildsystem: simple
     build-commands:
         - install -Dma+rwx sccache /app/bin/sccache
+    cleanup:
+        - /bin/sccache
     sources:
         - type: archive
           url: https://github.com/mozilla/sccache/releases/download/v0.2.15/sccache-v0.2.15-x86_64-unknown-linux-musl.tar.gz
