@@ -5,7 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node12
+  - org.freedesktop.Sdk.Extension.node14
 command: /app/bin/run.sh
 finish-args:
   - --socket=x11
@@ -18,21 +18,15 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications
         
 modules:
-  # Copied from https://github.com/flatpak/flatpak-builder-tools/blob/ca5863a21454e81b04218f22cea83b2f78abed0b/node/vanilla-quick-start/org.electronjs.ElectronQuickStart.yaml#L31
-  - name: node
-    buildsystem: simple
-    build-commands:
-      - '/usr/lib/sdk/node12/install-sdk.sh'
-
   - deltachat-core-rust.yaml
 
   - name: delta
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node12/bin
+      append-path: /usr/lib/sdk/node14/bin
       env:      
         NPM_CONFIG_LOGLEVEL: info
-        npm_config_nodedir: /usr/lib/sdk/node12
+        npm_config_nodedir: /usr/lib/sdk/node14
 
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
@@ -45,13 +39,17 @@ modules:
         # This overwrites the git-ref version info for the about- and crash-screen
         VERSION_INFO_GIT_REF: "flathub"
 
+        USE_SYSTEM_LIBDELTACHAT: "true"
+
     build-commands:
       - node --version
       - npm --version
       - npm cache verify
+      - pkg-config --libs deltachat
+      - pkg-config --cflags deltachat
       - mkdir -p $FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
-      - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp DEBUG="*" npm install --offline --verbose --dc-system-lib=true
+      - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp DEBUG="*" npm install --offline --verbose
       - npm run build4production --offline --verbose
       - env NO_ASAR=true  npm run pack:generate_config --offline --verbose
       - npm run pack:linux:dir --offline --verbose
@@ -71,8 +69,8 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.20.3
-        commit: cd816d56259649f9963641c4ab15d4ef80612af6
+        tag: v1.22.2
+        commit: 6bd4fb40cd17d4143eef7059f09f2c8e499316f6
         dest: main
 
       - type: file
