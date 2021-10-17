@@ -48,6 +48,8 @@ modules:
       - node --version
       - npm --version
       - npm cache verify
+      # patch pkg-config until https://github.com/deltachat/deltachat-core-rust/issues/2755 is fixed
+      - sed -i "s/-L\${libdir} //" /app/lib/pkgconfig/deltachat.pc
       - pkg-config --libs deltachat
       - pkg-config --cflags deltachat
       - mkdir -p $FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp
