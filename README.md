@@ -18,26 +18,12 @@ flatpak remote-add --if-not-exists \
     flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
-You also need to install the required flatpak runtime, SDK and
-electron BaseApp.  At the time of this writing they are the 20.08
-versions, but check the `chat.delta.desktop.yml`'s `runtime-version`
-and `base-version` properties for the current version numbers.
-
-```
-flatpak install flathub \
-    org.freedesktop.Platform//20.08 \
-    org.freedesktop.Sdk//20.08 \
-    org.electronjs.Electron2.BaseApp//20.08 \
-    org.freedesktop.Sdk.Extension.node10//20.08
-```
-
-
 ### Building the application
 
 To simply build the application in a build-directory invoke
 `flatpak-builder` pointing to the manifest:
 ```
-flatpak-builder build-dir chat.delta.desktop.yml
+flatpak-builder --install-deps-from=flathub build-dir chat.delta.desktop.yml
 ```
 
 To install the local build you can add the `--install` flag.  To
