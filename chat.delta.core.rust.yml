@@ -1,7 +1,9 @@
 app-id: chat.delta.core.rust
 runtime: org.freedesktop.Platform
-runtime-version: '20.08'
+runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.rust-stable
 
 modules:
   - deltachat-core-rust.yaml
