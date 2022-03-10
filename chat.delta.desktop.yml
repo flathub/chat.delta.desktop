@@ -21,7 +21,21 @@ finish-args:
   - --filesystem=xdg-videos
   - --share=network
   - --talk-name=org.freedesktop.Notifications
-        
+
+cleanup:
+    # usused libs/binary variants
+    - /lib/libdeltachat.a
+    - /lib/libsqlcipher.a
+    - /lib/libsqlcipher.la
+    - /bin/sqlcipher
+    # debug info
+    - /lib/debug
+    # stuff dor building against
+    - /lib/pkgconfig
+    - /lib/include
+    - /include
+
+
 modules:
   - deltachat-core-rust.yaml
 

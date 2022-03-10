@@ -14,14 +14,59 @@ build-options:
     RUSTC_WRAPPER: /app/bin/sccache
     SCCACHE_DIR: /run/ccache/sccache/
 
-  append-path: /app/lib/sdk/rust-stable/bin
+  append-path: /usr/lib/sdk/rust-stable/bin
 
 cleanup:
-    - /include
-    - /lib/libdeltachat.a
-    - /lib/pkgconfig/deltachat.pc
+  # usused libs/binary variants
+  - /lib/libdeltachat.a
+  - /lib/libsqlcipher.a
+  - /bin/sqlcipher
+  # debug info
+  - /lib/debug
+  # stuff for building against
+  - /lib/pkgconfig
+  - /lib/include
+  - /include
 
 modules:
+  # sqlcipher build dep
+  # thanks to schildi for sqlcipher recipe: https://github.com/flathub/chat.schildi.desktop/blob/5f3cd4d14d2cd6264e8c463b96eec438894b273b/chat.schildi.desktop.yaml#L56
+  - name: tcl
+    subdir: unix
+    build-options:
+      no-debuginfo: true
+    cleanup:
+      - "*"
+    sources:
+      - type: git
+        url: https://github.com/tcltk/tcl.git
+        tag: core-8-6-11
+        commit: 17b5b3e0201cdf92d3c125776e1b2dd453f225bd
+
+  - name: sqlcipher
+    rm-configure: true
+    config-opts:
+      - "--enable-tempstore=yes"
+      - "--disable-tcl"
+    build-options:
+      cflags: "-DSQLITE_HAS_CODEC"
+      ldflags: "-lcrypto"
+    sources:
+      - type: archive
+        url: https://github.com/sqlcipher/sqlcipher/archive/v4.5.0.tar.gz
+        sha256: 20c46a855c47d5a0a159fdcaa8491ec7bdbaa706a734ee52bc76188b929afb14
+      - type: shell
+        commands:
+          - cp -p /usr/share/automake-*/config.{sub,guess} .
+      - type: script
+        dest-filename: autogen.sh
+        commands:
+          - AUTOMAKE="automake --foreign" autoreconf -vfi
+    cleanup:
+      - bin/*
+      - lib/*.a
+
+  # setup caching
   - name: sccache
     buildsystem: simple
     build-commands:

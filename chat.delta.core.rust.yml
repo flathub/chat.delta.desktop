@@ -7,3 +7,16 @@ sdk-extensions:
 
 modules:
   - deltachat-core-rust.yaml
+
+cleanup:
+    # usused libs/binary variants
+    - /lib/libdeltachat.a
+    - /lib/libsqlcipher.a
+    - /lib/libsqlcipher.la
+    - /bin/sqlcipher
+    # debug info
+    - /lib/debug
+    # stuff dor building against
+    - /lib/pkgconfig
+    - /lib/include
+    - /include
