@@ -1,22 +1,7 @@
 app-id: chat.delta.core.rust
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
-sdk-extensions:
-  - org.freedesktop.Sdk.Extension.rust-stable
 
 modules:
   - deltachat-core-rust.yaml
-
-cleanup:
-    # usused libs/binary variants
-    - /lib/libdeltachat.a
-    - /lib/libsqlcipher.a
-    - /lib/libsqlcipher.la
-    - /bin/sqlcipher
-    # debug info
-    - /lib/debug
-    # stuff dor building against
-    - /lib/pkgconfig
-    - /lib/include
-    - /include
