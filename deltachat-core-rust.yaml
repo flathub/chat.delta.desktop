@@ -14,59 +14,32 @@ build-options:
     RUSTC_WRAPPER: /app/bin/sccache
     SCCACHE_DIR: /run/ccache/sccache/
 
-  append-path: /usr/lib/sdk/rust-stable/bin
+  append-path: /app/lib/sdk/rust-nightly/bin
 
 cleanup:
-  # usused libs/binary variants
-  - /lib/libdeltachat.a
-  - /lib/libsqlcipher.a
-  - /bin/sqlcipher
-  # debug info
-  - /lib/debug
-  # stuff for building against
-  - /lib/pkgconfig
-  - /lib/include
-  - /include
+    - /include
+    - /lib/libdeltachat.a
+    - /lib/pkgconfig/deltachat.pc
 
 modules:
-  # sqlcipher build dep
-  # thanks to schildi for sqlcipher recipe: https://github.com/flathub/chat.schildi.desktop/blob/5f3cd4d14d2cd6264e8c463b96eec438894b273b/chat.schildi.desktop.yaml#L56
-  - name: tcl
-    subdir: unix
-    build-options:
-      no-debuginfo: true
+  - name: rust-nightly
     cleanup:
-      - "*"
-    sources:
-      - type: git
-        url: https://github.com/tcltk/tcl.git
-        tag: core-8-6-11
-        commit: 17b5b3e0201cdf92d3c125776e1b2dd453f225bd
-
-  - name: sqlcipher
-    rm-configure: true
-    config-opts:
-      - "--enable-tempstore=yes"
-      - "--disable-tcl"
-    build-options:
-      cflags: "-DSQLITE_HAS_CODEC"
-      ldflags: "-lcrypto"
+      # We don't need rust in the final application, only build-time
+      - /lib/sdk/rust-nightly
+    buildsystem: simple
+    build-commands:
+      - ./install.sh --prefix=/app/lib/sdk/rust-nightly --disable-ldconfig --verbose --without=rust-docs,rust-analyzer-preview,rust-analysis-x86_64-unknown-linux-gnu,miri-preview,llvm-tools-preview,clippy-preview
     sources:
       - type: archive
-        url: https://github.com/sqlcipher/sqlcipher/archive/v4.5.0.tar.gz
-        sha256: 20c46a855c47d5a0a159fdcaa8491ec7bdbaa706a734ee52bc76188b929afb14
-      - type: shell
-        commands:
-          - cp -p /usr/share/automake-*/config.{sub,guess} .
-      - type: script
-        dest-filename: autogen.sh
-        commands:
-          - AUTOMAKE="automake --foreign" autoreconf -vfi
-    cleanup:
-      - bin/*
-      - lib/*.a
+        only-arches: ["x86_64"]
+        url: https://static.rust-lang.org/dist/2021-02-03/rust-nightly-x86_64-unknown-linux-gnu.tar.gz
+        sha256: f105251b7b0bcd451d5cba59353a29d5daac30b61b3e8c5bb0929536b635ac94
 
-  # setup caching
+      - type: archive
+        only-arches: ["aarch64"]
+        url: https://static.rust-lang.org/dist/2021-02-03/rust-nightly-aarch64-unknown-linux-gnu.tar.gz
+        sha256: 1299c37205f1364d9523b8f540a623310c528cb2d90a5a09b78bc8b1aa9aa973
+
   - name: sccache
     buildsystem: simple
     build-commands:
@@ -84,20 +57,9 @@ modules:
           sha256: 90d91d21a767e3f558196dbd52395f6475c08de5c4951a4c8049575fa6894489
           only-arches: ["aarch64"]
 
-  - name: sccache
-    buildsystem: simple
-    build-commands:
-        - install -Dma+rwx sccache /app/bin/sccache
-    sources:
-        - type: archive
-          url: https://github.com/mozilla/sccache/releases/download/v0.2.15/sccache-v0.2.15-x86_64-unknown-linux-musl.tar.gz
-          sha256: e5d03a9aa3b9fac7e490391bbe22d4f42c840d31ef9eaf127a03101930cbb7ca
-
 sources:
   - type: archive
-    url: https://github.com/deltachat/deltachat-core-rust/archive/1.76.0.tar.gz
-    sha256: 4839351057b903b03aee7364cd6983b91921e20326fc78c24458aaf4844b4124
-  - type: patch # needed for now to make it build in flatpak-builder, next core version will have it fixed
-    path: 368f27ffbc7f2908ac15890b8204aab86d2ffe5e.patch
+    url: https://github.com/deltachat/deltachat-core-rust/archive/1.68.0.tar.gz
+    sha256: 43d659b42797a8924ee3f1f2ea959dcfc7840979bb786270e8b36199316d9c3d
   - generated-sources-rust.json
 

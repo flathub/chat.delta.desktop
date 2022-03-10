@@ -6,7 +6,6 @@ runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
-  - org.freedesktop.Sdk.Extension.rust-stable
 command: /app/bin/run.sh
 finish-args:
   - --socket=x11
@@ -14,28 +13,10 @@ finish-args:
   - --device=dri         # Without DRI the app doesn't come up :-/
   - --device=all         # Webcam access for QR code scans
   - --socket=pulseaudio  # Record and play voice messages
-  - --filesystem=xdg-documents
-  - --filesystem=xdg-download
-  - --filesystem=xdg-music
-  - --filesystem=xdg-pictures
-  - --filesystem=xdg-videos
+  - --filesystem=home
   - --share=network
   - --talk-name=org.freedesktop.Notifications
-
-cleanup:
-    # usused libs/binary variants
-    - /lib/libdeltachat.a
-    - /lib/libsqlcipher.a
-    - /lib/libsqlcipher.la
-    - /bin/sqlcipher
-    # debug info
-    - /lib/debug
-    # stuff dor building against
-    - /lib/pkgconfig
-    - /lib/include
-    - /include
-
-
+        
 modules:
   - deltachat-core-rust.yaml
 
@@ -66,9 +47,6 @@ modules:
     build-commands:
       - node --version
       - npm --version
-      # electron builder symlink workaround
-      - cd $ELECTRON_CACHE && ln -s httpsgithub.comelectronelectronreleasesdownloadv*.zip/*.zip $(echo httpsgithub.comelectronelectronreleasesdownloadv*.zip | sed -e s/.*electron/electron/) && cd -
-   
       - npm cache verify
       # patch pkg-config until https://github.com/deltachat/deltachat-core-rust/issues/2755 is fixed
       - sed -i "s/-L\${libdir} //" /app/lib/pkgconfig/deltachat.pc
@@ -99,8 +77,8 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.27.0
-        commit: 4d75fd8be9cec277c59e44dd86e3acc36d21938e
+        tag: v1.26.0
+        commit: 1897f54e08bf4ab4cf8875666a7acebc9b229114
         dest: main
 
       - type: file
