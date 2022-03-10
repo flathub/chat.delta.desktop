@@ -14,7 +14,7 @@ build-options:
     RUSTC_WRAPPER: /app/bin/sccache
     SCCACHE_DIR: /run/ccache/sccache/
 
-  append-path: /app/lib/sdk/rust-nightly/bin
+  append-path: /app/lib/sdk/rust-stable/bin
 
 cleanup:
     - /include
