@@ -69,6 +69,9 @@ modules:
       - install -Dm 0644 ../chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
       - install -Dm 0644 ../chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
       - install -Dm 0644 ../delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
+
+      # check that the correct core version is being used. Unfortunately, deltachat builds successfully even when the wrong core version is used.
+      - node -e "try{require(\"./app/files/delta/resources/app/node_modules/deltachat-node/binding.js\")} catch (err) {console.log(err);process.exit(1);}"
     subdir: main
     sources:
       # Electron
