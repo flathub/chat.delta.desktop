@@ -6,6 +6,7 @@ runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node14
+  - org.freedesktop.Sdk.Extension.rust-stable
 command: /app/bin/run.sh
 finish-args:
   - --socket=x11
@@ -13,10 +14,75 @@ finish-args:
   - --device=dri         # Without DRI the app doesn't come up :-/
   - --device=all         # Webcam access for QR code scans
   - --socket=pulseaudio  # Record and play voice messages
-  - --filesystem=home
+  - --filesystem=xdg-documents
+  - --filesystem=xdg-download
+  - --filesystem=xdg-music
+  - --filesystem=xdg-pictures
+  - --filesystem=xdg-videos
   - --share=network
   - --talk-name=org.freedesktop.Notifications
-        
+
+cleanup:
+    # usused libs/binary variants
+    - /lib/libdeltachat.a
+    - /lib/libsqlcipher.a
+    - /lib/libsqlcipher.la
+    - /bin/sqlcipher
+    # debug info
+    - /lib/debug
+    # stuff dor building against
+    - /lib/pkgconfig
+    - /lib/include
+    - /include
+    # Desktop___________________
+    - /delta/resources/app/node_modules/napi-macros
+    # frontend node_modules not needed at runtime - would get easier if dc-desktop would adopt the 2 package.json project structure
+    # Blueprint js
+    - /delta/resources/app/node_modules/@blueprintjs/core/lib/css/blueprint-hi-contrast.css
+    - /delta/resources/app/node_modules/@blueprintjs/core/lib/cjs
+    - /delta/resources/app/node_modules/@blueprintjs/core/lib/esm
+    - /delta/resources/app/node_modules/@blueprintjs/core/lib/esnext
+    - /delta/resources/app/node_modules/@blueprintjs/core/lib/less
+    - /delta/resources/app/node_modules/@blueprintjs/core/dist/*.js
+    - /delta/resources/app/node_modules/@blueprintjs/core/src
+    - /delta/resources/app/node_modules/@blueprintjs/core/node_modules/tslib
+    - /delta/resources/app/node_modules/@blueprintjs/core/package.json
+    - /delta/resources/app/node_modules/@blueprintjs/core/scripts
+    - /delta/resources/app/node_modules/@blueprintjs/icons/lib/cjs
+    - /delta/resources/app/node_modules/@blueprintjs/icons/lib/esm
+    - /delta/resources/app/node_modules/@blueprintjs/icons/lib/esnext
+    - /delta/resources/app/node_modules/@blueprintjs/icons/lib/less
+    - /delta/resources/app/node_modules/@blueprintjs/icons/dist/*.js
+    - /delta/resources/app/node_modules/@blueprintjs/icons/src
+    - /delta/resources/app/node_modules/@blueprintjs/icons/package.json
+    - /delta/resources/app/node_modules/@blueprintjs/icons/node_modules/tslib
+    - /delta/resources/app/node_modules/popper.js
+    # every react addon
+    - /delta/resources/app/node_modules/react-*
+    - /delta/resources/app/node_modules/classnames
+    - /delta/resources/app/node_modules/use-debounce
+    - /delta/resources/app/node_modules/create-react-context
+    # mapbox
+    - /delta/resources/app/node_modules/mapbox-gl/src
+    - /delta/resources/app/node_modules/mapbox-gl/flow-typed
+    - /delta/resources/app/node_modules/mapbox-gl/build
+    - /delta/resources/app/node_modules/mapbox-gl/dist/*.flow
+    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-dev.js
+    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-unminified.js
+    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-unminified.js.map
+    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-csp.js.map
+    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-csp-worker.js.map
+    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-csp.js
+    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-csp-worker.js
+    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl.js.map # we don't want to add 3mb to debug mapbox in production
+    # need testing?
+    - /delta/resources/app/node_modules/resize-observer-polyfill
+    - /delta/resources/app/node_modules/mapbox-gl/dist/style-spec
+    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl.js # should be bundled via esbuild already
+    # momentjs is currently only used by renderer process
+    - /delta/resources/app/node_modules/moment
+
+
 modules:
   - deltachat-core-rust.yaml
 
@@ -47,6 +113,9 @@ modules:
     build-commands:
       - node --version
       - npm --version
+      # electron builder symlink workaround
+      - cd $ELECTRON_CACHE && ln -s httpsgithub.comelectronelectronreleasesdownloadv*.zip/*.zip $(echo httpsgithub.comelectronelectronreleasesdownloadv*.zip | sed -e s/.*electron/electron/) && cd -
+   
       - npm cache verify
       # patch pkg-config until https://github.com/deltachat/deltachat-core-rust/issues/2755 is fixed
       - sed -i "s/-L\${libdir} //" /app/lib/pkgconfig/deltachat.pc
@@ -77,8 +146,8 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.26.0
-        commit: 1897f54e08bf4ab4cf8875666a7acebc9b229114
+        tag: v1.28.0
+        commit: 67db520607b203ad13c154b7fdc768e67ab76fae
         dest: main
 
       - type: file
