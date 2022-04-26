@@ -95,15 +95,12 @@ modules:
       append-path: /usr/lib/sdk/node14/bin
       env:      
         NPM_CONFIG_LOGLEVEL: info
-        npm_config_nodedir: /usr/lib/sdk/node14
 
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
 
         XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
-
-        # Taken from https://github.com/flathub/com.visualstudio.code-oss/blob/bd6d8052cbbd63a53396f4caad86adf73ec455cf/com.visualstudio.code-oss.yml#L71
-        ESBUILD_BIN_PATH_FOR_TESTS: /run/build/delta/flatpak-node/cache/esbuild/bin/esbuild-current
+        TMPDIR: /run/build/delta/flatpak-node/tmp
 
         # This overwrites the git-ref version info for the about- and crash-screen
         VERSION_INFO_GIT_REF: "flathub"
@@ -113,20 +110,18 @@ modules:
     build-commands:
       - node --version
       - npm --version
-      # electron builder symlink workaround
-      - cd $ELECTRON_CACHE && ln -s httpsgithub.comelectronelectronreleasesdownloadv*.zip/*.zip $(echo httpsgithub.comelectronelectronreleasesdownloadv*.zip | sed -e s/.*electron/electron/) && cd -
-   
       - npm cache verify
       # patch pkg-config until https://github.com/deltachat/deltachat-core-rust/issues/2755 is fixed
       - sed -i "s/-L\${libdir} //" /app/lib/pkgconfig/deltachat.pc
       - pkg-config --libs deltachat
       - pkg-config --cflags deltachat
-      - mkdir -p $FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
-      - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp DEBUG="*" npm install --offline --verbose
+      - env DEBUG="*" npm install --offline --verbose
       - npm run build4production --offline --verbose
       - env NO_ASAR=true  npm run pack:generate_config --offline --verbose
-      - npm run pack:linux:dir --offline --verbose
+      - |
+        ln -srv $XDG_CACHE_HOME/node-gyp $HOME/.electron-gyp
+        npm run pack:linux:dir --offline --verbose
       - mkdir -p /app/delta
       # The x86-64 build seems to be put in "linux-unpacked",
       # the aarch64 build in "linix-arm64-unpacked"
