@@ -5,7 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node14
+  - org.freedesktop.Sdk.Extension.node16
   - org.freedesktop.Sdk.Extension.rust-stable
 command: /app/bin/run.sh
 finish-args:
@@ -92,7 +92,7 @@ modules:
         - /delta/resources/app/node_modules/deltachat-node/prebuilds
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node14/bin
+      append-path: /usr/lib/sdk/node16/bin
       env:      
         NPM_CONFIG_LOGLEVEL: info
 
