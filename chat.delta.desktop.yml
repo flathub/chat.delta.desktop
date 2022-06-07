@@ -110,9 +110,8 @@ modules:
     build-commands:
       - node --version
       - npm --version
+      - python --version
       - npm cache verify
-      # patch pkg-config until https://github.com/deltachat/deltachat-core-rust/issues/2755 is fixed
-      - sed -i "s/-L\${libdir} //" /app/lib/pkgconfig/deltachat.pc
       - pkg-config --libs deltachat
       - pkg-config --cflags deltachat
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
@@ -141,8 +140,8 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.30.0
-        commit: bae633343dedcebab27cb5cac91611d082ec6285
+        # tag: v1.30.0
+        commit: 0ae41a0415128866417856b08fbf5b8787f9e5de
         dest: main
 
       - type: file
