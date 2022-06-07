@@ -5,7 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node14
+  - org.freedesktop.Sdk.Extension.node16
   - org.freedesktop.Sdk.Extension.rust-stable
 command: /app/bin/run.sh
 finish-args:
@@ -92,7 +92,7 @@ modules:
         - /delta/resources/app/node_modules/deltachat-node/prebuilds
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node14/bin
+      append-path: /usr/lib/sdk/node16/bin
       env:      
         NPM_CONFIG_LOGLEVEL: info
 
@@ -110,9 +110,8 @@ modules:
     build-commands:
       - node --version
       - npm --version
+      - python --version
       - npm cache verify
-      # patch pkg-config until https://github.com/deltachat/deltachat-core-rust/issues/2755 is fixed
-      - sed -i "s/-L\${libdir} //" /app/lib/pkgconfig/deltachat.pc
       - pkg-config --libs deltachat
       - pkg-config --cflags deltachat
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
@@ -141,8 +140,8 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.28.2
-        commit: 42fb6159ffa2aed013503a9d21ae90a1a9a94fc5
+        tag: v1.30.1
+        commit: a82c6c9e9750663bd6c7e03ee3e4565cb888e628
         dest: main
 
       - type: file
