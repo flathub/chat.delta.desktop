@@ -85,8 +85,14 @@ modules:
           only-arches: ["aarch64"]
 
 sources:
-  - type: archive
-    url: https://github.com/deltachat/deltachat-core-rust/archive/1.91.0.tar.gz
-    sha256: 2909661e9e4bab24b482e9c2b2d983a777fa5e6173484ab99571115d5aaa70aa
+  # - type: archive
+  #   url: https://github.com/deltachat/deltachat-core-rust/archive/1.91.0.tar.gz
+  #   sha256: 2909661e9e4bab24b482e9c2b2d983a777fa5e6173484ab99571115d5aaa70aa
+  - type: git
+    url: https://github.com/deltachat/deltachat-core-rust.git
+    tag: v1.93.0
+    commit: e7957b166121abb9b899c705879b9b4b3716b723
   - generated-sources-rust.json
+
+  
 
