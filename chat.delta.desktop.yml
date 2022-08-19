@@ -108,6 +108,7 @@ modules:
         USE_SYSTEM_LIBDELTACHAT: "true"
 
     build-commands:
+      - mkdir -p $TMPDIR
       - node --version
       - npm --version
       - python --version
