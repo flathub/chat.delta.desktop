@@ -90,16 +90,19 @@ upstream to provide the lock file, but it should be possible to run
 
 To create the `generated-sources.json` file you need a copy of the
 https://github.com/flatpak/flatpak-builder-tools.git repository and
-invoke the `node/flatpak-node-generator.py` script, e.g.:
-
+install the `flatpak-node-generator` tool with `pipx`:
+```sh
+git clone https://github.com/flatpak/flatpak-builder-tools.git
+pip install pipx
+pipx flatpak-builder-tools/node
 ```
-python3 ../flatpak-builder-tools/node/flatpak-node-generator.py \
-    npm ../deltachat-desktop/package-lock.json \
-    --recursive --split --xdg-layout \
-    --output generated-sources-npm.json
+Then invoke the `node/flatpak-node-generator.py` script, e.g.:
+
+```sh
+flatpak-node-generator -o generated-sources-npm.json -r npm ../deltachat-desktop/package-lock.json
 ```
 
-This will produce the `generated-sources-npm-?.json` files which is referenced
+This will produce the `generated-sources-npm.json` file which is referenced
 in the `chat.delta.desktop.yml` manifest.  Because that file is quite big
 and Github seems to not like big files all too much, the generator offers
 a --split option, cf. https://github.com/flatpak/flatpak-builder-tools/blob/204309e0066a66a6f3c9ad7c5edb870513a7504c/node/README.md#splitting-mode.
