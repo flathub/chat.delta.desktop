@@ -213,6 +213,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"async-imap\"\nversion = \"0.6.0\"\nauthors = [ \"dignifiedquire <me@dignifiedquire.com>\",]\ndocumentation = \"https://docs.rs/async-imap/\"\nrepository = \"https://github.com/async-email/async-imap\"\nhomepage = \"https://github.com/async-email/async-imap\"\ndescription = \"Async IMAP client for Rust\"\nreadme = \"README.md\"\nlicense = \"Apache-2.0/MIT\"\nedition = \"2018\"\nkeywords = [ \"email\", \"imap\",]\ncategories = [ \"email\", \"network-programming\",]\n\n[features]\ndefault = [ \"runtime-async-std\",]\nruntime-async-std = [ \"async-std\", \"async-native-tls/runtime-async-std\",]\nruntime-tokio = [ \"tokio\", \"async-native-tls/runtime-tokio\",]\n\n[dependencies]\nimap-proto = \"0.16.1\"\nnom = \"7.0\"\nbase64 = \"0.13\"\npin-utils = \"0.1.0-alpha.4\"\nfutures = \"0.3.15\"\nouroboros = \"0.15\"\nstop-token = \"0.7\"\nbyte-pool = \"0.2.2\"\nonce_cell = \"1.8.0\"\nlog = \"0.4.8\"\nthiserror = \"1.0.9\"\nasync-channel = \"1.6.1\"\n\n[dev-dependencies]\npretty_assertions = \"1.2\"\n\n[badges.maintenance]\nstatus = \"actively-developed\"\n\n[badges.is-it-maintained-issue-resolution]\nrepository = \"async-email/async-imap\"\n\n[badges.is-it-maintained-open-issues]\nrepository = \"async-email/async-imap\"\n\n[dependencies.chrono]\nversion = \"0.4\"\ndefault-features = false\nfeatures = [ \"std\",]\n\n[dependencies.async-native-tls]\nversion = \"0.4\"\ndefault-features = false\n\n[dependencies.async-std]\nversion = \"1.8.0\"\ndefault-features = false\nfeatures = [ \"std\",]\noptional = true\n\n[dependencies.tokio]\nversion = \"1\"\nfeatures = [ \"net\", \"sync\", \"time\",]\noptional = true\n\n[dev-dependencies.async-std]\nversion = \"1.8.0\"\nfeatures = [ \"std\", \"attributes\",]\n\n[dev-dependencies.tokio]\nversion = \"1\"\nfeatures = [ \"rt-multi-thread\", \"macros\",]\n",
+        "dest": "cargo/vendor/async-imap",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/async-imap",
         "dest-filename": ".cargo-checksum.json"
@@ -1317,6 +1323,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"email\"\nversion = \"0.0.21\"\nauthors = [ \"Nicholas Hollett <niax@niax.co.uk>\",]\ndescription = \"Implementation of RFC 5322 email messages\"\nrepository = \"https://github.com/niax/rust-email\"\ndocumentation = \"https://niax.github.io/rust-email/email/\"\nlicense = \"MIT\"\nbuild = \"build.rs\"\n\n[dependencies]\nencoding = \"0.2.33\"\nchrono = \"0.4.9\"\nlazy_static = \"1.4.0\"\nbase64 = \"0.11.0\"\nrand = \"0.7.2\"\ntime = \"0.1.42\"\n\n[features]\nnightly = []\n\n[build-dependencies]\nversion_check = \"0.9.1\"\n\n[dependencies.encoded-words]\ngit = \"https://github.com/async-email/encoded-words\"\nbranch = \"master\"\n",
+        "dest": "cargo/vendor/email",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/email",
         "dest-filename": ".cargo-checksum.json"
@@ -1326,6 +1338,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/encoded-words-d55366b/.\" \"cargo/vendor/encoded-words\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"encoded-words\"\nversion = \"0.2.0\"\nauthors = [ \"dignifiedquire <me@dignifiedquire.com>\",]\ndocumentation = \"https://docs.rs/encoded-words/\"\nrepository = \"https://github.com/async-email/encoded-words\"\nhomepage = \"https://github.com/async-email/encoded-words\"\ndescription = \"Encoded Words for usage in MIME headers\"\nreadme = \"README.md\"\nlicense = \"Apache-2.0/MIT\"\nedition = \"2018\"\n\n[dependencies]\nthiserror = \"1.0.9\"\nlazy_static = \"1.4.0\"\nhex = \"0.4.0\"\nbase64 = \"0.12.0\"\ncharset = \"0.1.2\"\nencoding_rs = \"0.8.20\"\n\n[dependencies.regex]\nversion = \"1.3.1\"\ndefault-features = false\nfeatures = [ \"std\",]\n",
+        "dest": "cargo/vendor/encoded-words",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -2472,6 +2490,12 @@
     },
     {
         "type": "inline",
+        "contents": "[[bench]]\nname = \"transport_smtp\"\nharness = false\n\n[[example]]\nname = \"smtp\"\nrequired-features = [ \"smtp-transport\",]\n\n[[example]]\nname = \"smtp_gmail\"\nrequired-features = [ \"smtp-transport\",]\n\n[package]\nname = \"lettre\"\nversion = \"0.9.2\"\ndescription = \"Email client\"\nreadme = \"README.md\"\nhomepage = \"http://lettre.at\"\nrepository = \"https://github.com/lettre/lettre\"\nlicense = \"MIT\"\nauthors = [ \"Alexis Mousset <contact@amousset.me>\",]\ncategories = [ \"email\",]\nkeywords = [ \"email\", \"smtp\", \"mailer\",]\nedition = \"2018\"\n\n[dependencies]\nlog = \"^0.4\"\nfast_chemail = \"^0.9\"\n\n[dev-dependencies]\nenv_logger = \"^0.7\"\nglob = \"^0.3\"\ncriterion = \"^0.3\"\n\n[features]\ndefault = [ \"file-transport\", \"smtp-transport\", \"sendmail-transport\",]\nunstable = []\nserde-impls = [ \"serde\",]\nfile-transport = [ \"serde-impls\", \"serde_json\",]\nsmtp-transport = [ \"bufstream\", \"native-tls\", \"base64\", \"nom\", \"hostname\",]\nsendmail-transport = []\nconnection-pool = [ \"r2d2\",]\n\n[badges.travis-ci]\nrepository = \"lettre/lettre\"\n\n[badges.appveyor]\nrepository = \"lettre/lettre\"\n\n[badges.maintenance]\nstatus = \"actively-developed\"\n\n[badges.is-it-maintained-issue-resolution]\nrepository = \"lettre/lettre\"\n\n[badges.is-it-maintained-open-issues]\nrepository = \"lettre/lettre\"\n\n[dependencies.nom]\nversion = \"^5.0\"\noptional = true\n\n[dependencies.bufstream]\nversion = \"^0.1\"\noptional = true\n\n[dependencies.native-tls]\nversion = \"^0.2\"\noptional = true\n\n[dependencies.base64]\nversion = \"^0.11\"\noptional = true\n\n[dependencies.hostname]\nversion = \"^0.2\"\noptional = true\n\n[dependencies.serde]\nversion = \"^1.0\"\noptional = true\nfeatures = [ \"derive\",]\n\n[dependencies.serde_json]\nversion = \"^1.0\"\noptional = true\n\n[dependencies.r2d2]\nversion = \"^0.8\"\noptional = true\n",
+        "dest": "cargo/vendor/lettre",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/lettre",
         "dest-filename": ".cargo-checksum.json"
@@ -2481,6 +2505,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/lettre-96555ec/lettre_email\" \"cargo/vendor/lettre_email\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"lettre_email\"\nversion = \"0.9.2\"\ndescription = \"Email builder\"\nreadme = \"README.md\"\nhomepage = \"http://lettre.at\"\nrepository = \"https://github.com/lettre/lettre\"\nlicense = \"MIT\"\nauthors = [ \"Alexis Mousset <contact@amousset.me>\",]\ncategories = [ \"email\",]\nkeywords = [ \"email\", \"mailer\",]\nedition = \"2018\"\n\n[dev-dependencies]\nglob = \"0.3\"\n\n[dependencies]\nmime = \"^0.3\"\ntime = \"^0.1\"\nbase64 = \"^0.11\"\nlazy_static = \"1.4.0\"\n\n[badges.travis-ci]\nrepository = \"lettre/lettre_email\"\n\n[badges.appveyor]\nrepository = \"lettre/lettre_email\"\n\n[badges.maintenance]\nstatus = \"actively-developed\"\n\n[badges.is-it-maintained-issue-resolution]\nrepository = \"lettre/lettre_email\"\n\n[badges.is-it-maintained-open-issues]\nrepository = \"lettre/lettre_email\"\n\n[dev-dependencies.lettre]\nversion = \"^0.9\"\npath = \"../lettre\"\nfeatures = [ \"smtp-transport\",]\n\n[dependencies.email]\ngit = \"https://github.com/deltachat/rust-email\"\nbranch = \"master\"\n\n[dependencies.uuid]\nversion = \"^0.8\"\nfeatures = [ \"v4\",]\n\n[dependencies.lettre]\nversion = \"^0.9\"\npath = \"../lettre\"\ndefault-features = false\n\n[dependencies.regex]\nversion = \"1.3.1\"\ndefault-features = false\nfeatures = [ \"std\",]\n",
+        "dest": "cargo/vendor/lettre_email",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
