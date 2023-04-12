@@ -26,6 +26,13 @@ To simply build the application in a build-directory invoke
 flatpak-builder --install-deps-from=flathub build-dir chat.delta.desktop.yml
 ```
 
+To speed up repeated builds add `--ccache`.
+
+To test the application without installing run:
+```sh
+flatpack-builder --run build-dir chat.delta.desktop
+```
+
 To install the local build you can add the `--install` flag.  To
 upload the built application to a repository, which can just be a
 local directory, add the `--repo=repo` flag.

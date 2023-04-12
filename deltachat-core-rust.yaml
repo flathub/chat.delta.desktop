@@ -42,6 +42,7 @@ modules:
         commit: 17b5b3e0201cdf92d3c125776e1b2dd453f225bd
 
   - name: sqlcipher
+    buildsystem: autotools
     rm-configure: true
     config-opts:
       - "--enable-tempstore=yes"
@@ -51,10 +52,11 @@ modules:
       ldflags: "-lcrypto"
     sources:
       - type: archive
-        url: https://github.com/sqlcipher/sqlcipher/archive/v4.5.0.tar.gz
-        sha256: 20c46a855c47d5a0a159fdcaa8491ec7bdbaa706a734ee52bc76188b929afb14
+        url: https://github.com/sqlcipher/sqlcipher/archive/v4.5.3.tar.gz
+        sha256: 5c9d672eba6be4d05a9a8170f70170e537ae735a09c3de444a8ad629b595d5e2
       - type: shell
         commands:
+          - mv v4.5.3/* .
           - cp -p /usr/share/automake-*/config.{sub,guess} .
       - type: script
         dest-filename: autogen.sh
@@ -68,7 +70,7 @@ modules:
   - name: sccache
     buildsystem: simple
     build-commands:
-        - install -Dma+rwx sccache /app/bin/sccache
+        - install -Dma+rwx sccache-*/sccache /app/bin/sccache
     cleanup:
         - /bin/sccache
     sources:
