@@ -1,12 +1,6 @@
 [
     {
         "type": "git",
-        "url": "https://github.com/async-email/async-imap",
-        "commit": "90270474a5a494669e7c63c13471d189afdc98ae",
-        "dest": "flatpak-cargo/git/async-imap-9027047"
-    },
-    {
-        "type": "git",
         "url": "https://github.com/deltachat/rust-email",
         "commit": "25702df99254d059483b41417cd80696a258df8e",
         "dest": "flatpak-cargo/git/rust-email-25702df"
@@ -290,15 +284,16 @@
         "dest-filename": ".cargo-checksum.json"
     },
     {
-        "type": "shell",
-        "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/async-imap-9027047/.\" \"cargo/vendor/async-imap\""
-        ]
+        "type": "archive",
+        "archive-type": "tar-gzip",
+        "url": "https://static.crates.io/crates/async-imap/async-imap-0.8.0.crate",
+        "sha256": "d11e163a705d0c809dfc886eee95df5117c758539c940c0fe9aa3aa4da5388ce",
+        "dest": "cargo/vendor/async-imap-0.8.0"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": null, \"files\": {}}",
-        "dest": "cargo/vendor/async-imap",
+        "contents": "{\"package\": \"d11e163a705d0c809dfc886eee95df5117c758539c940c0fe9aa3aa4da5388ce\", \"files\": {}}",
+        "dest": "cargo/vendor/async-imap-0.8.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -312,19 +307,6 @@
         "type": "inline",
         "contents": "{\"package\": \"479db852db25d9dbf6204e6cb6253698f175c15726470f78af0d918e99d6156e\", \"files\": {}}",
         "dest": "cargo/vendor/async-mutex-1.4.0",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "archive",
-        "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/async-native-tls/async-native-tls-0.4.0.crate",
-        "sha256": "d57d4cec3c647232e1094dc013546c0b33ce785d8aeb251e1f20dfaf8a9a13fe",
-        "dest": "cargo/vendor/async-native-tls-0.4.0"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": \"d57d4cec3c647232e1094dc013546c0b33ce785d8aeb251e1f20dfaf8a9a13fe\", \"files\": {}}",
-        "dest": "cargo/vendor/async-native-tls-0.4.0",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -655,14 +637,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/byte-pool/byte-pool-0.2.3.crate",
-        "sha256": "f8c7230ddbb427b1094d477d821a99f3f54d36333178eeb806e279bcdcecf0ca",
-        "dest": "cargo/vendor/byte-pool-0.2.3"
+        "url": "https://static.crates.io/crates/byte-pool/byte-pool-0.2.4.crate",
+        "sha256": "c2f1b21189f50b5625efa6227cf45e9d4cfdc2e73582df2b879e9689e78a7158",
+        "dest": "cargo/vendor/byte-pool-0.2.4"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"f8c7230ddbb427b1094d477d821a99f3f54d36333178eeb806e279bcdcecf0ca\", \"files\": {}}",
-        "dest": "cargo/vendor/byte-pool-0.2.3",
+        "contents": "{\"package\": \"c2f1b21189f50b5625efa6227cf45e9d4cfdc2e73582df2b879e9689e78a7158\", \"files\": {}}",
+        "dest": "cargo/vendor/byte-pool-0.2.4",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1149,14 +1131,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/crossbeam-channel/crossbeam-channel-0.5.7.crate",
-        "sha256": "cf2b3e8478797446514c91ef04bafcb59faba183e621ad488df88983cc14128c",
-        "dest": "cargo/vendor/crossbeam-channel-0.5.7"
+        "url": "https://static.crates.io/crates/crossbeam-channel/crossbeam-channel-0.5.8.crate",
+        "sha256": "a33c2bf77f2df06183c3aa30d1e96c0695a313d4f9c453cc3762a6db39f99200",
+        "dest": "cargo/vendor/crossbeam-channel-0.5.8"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"cf2b3e8478797446514c91ef04bafcb59faba183e621ad488df88983cc14128c\", \"files\": {}}",
-        "dest": "cargo/vendor/crossbeam-channel-0.5.7",
+        "contents": "{\"package\": \"a33c2bf77f2df06183c3aa30d1e96c0695a313d4f9c453cc3762a6db39f99200\", \"files\": {}}",
+        "dest": "cargo/vendor/crossbeam-channel-0.5.8",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -1713,6 +1695,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"email\"\nversion = \"0.0.21\"\nauthors = [ \"Nicholas Hollett <niax@niax.co.uk>\",]\ndescription = \"Implementation of RFC 5322 email messages\"\nrepository = \"https://github.com/niax/rust-email\"\ndocumentation = \"https://niax.github.io/rust-email/email/\"\nlicense = \"MIT\"\nbuild = \"build.rs\"\n\n[dependencies]\nencoding = \"0.2.33\"\nchrono = \"0.4.9\"\nlazy_static = \"1.4.0\"\nbase64 = \"0.11.0\"\nrand = \"0.7.2\"\ntime = \"0.1.42\"\n\n[features]\nnightly = []\n\n[build-dependencies]\nversion_check = \"0.9.1\"\n\n[dependencies.encoded-words]\ngit = \"https://github.com/async-email/encoded-words\"\nbranch = \"master\"\n",
+        "dest": "cargo/vendor/email",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/email",
         "dest-filename": ".cargo-checksum.json"
@@ -1722,6 +1710,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/encoded-words-d55366b/.\" \"cargo/vendor/encoded-words\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"encoded-words\"\nversion = \"0.2.0\"\nauthors = [ \"dignifiedquire <me@dignifiedquire.com>\",]\ndocumentation = \"https://docs.rs/encoded-words/\"\nrepository = \"https://github.com/async-email/encoded-words\"\nhomepage = \"https://github.com/async-email/encoded-words\"\ndescription = \"Encoded Words for usage in MIME headers\"\nreadme = \"README.md\"\nlicense = \"Apache-2.0/MIT\"\nedition = \"2018\"\n\n[dependencies]\nthiserror = \"1.0.9\"\nlazy_static = \"1.4.0\"\nhex = \"0.4.0\"\nbase64 = \"0.12.0\"\ncharset = \"0.1.2\"\nencoding_rs = \"0.8.20\"\n\n[dependencies.regex]\nversion = \"1.3.1\"\ndefault-features = false\nfeatures = [ \"std\",]\n",
+        "dest": "cargo/vendor/encoded-words",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -2933,6 +2927,12 @@
     },
     {
         "type": "inline",
+        "contents": "[[bench]]\nname = \"transport_smtp\"\nharness = false\n\n[[example]]\nname = \"smtp\"\nrequired-features = [ \"smtp-transport\",]\n\n[[example]]\nname = \"smtp_gmail\"\nrequired-features = [ \"smtp-transport\",]\n\n[package]\nname = \"lettre\"\nversion = \"0.9.2\"\ndescription = \"Email client\"\nreadme = \"README.md\"\nhomepage = \"http://lettre.at\"\nrepository = \"https://github.com/lettre/lettre\"\nlicense = \"MIT\"\nauthors = [ \"Alexis Mousset <contact@amousset.me>\",]\ncategories = [ \"email\",]\nkeywords = [ \"email\", \"smtp\", \"mailer\",]\nedition = \"2018\"\n\n[dependencies]\nlog = \"^0.4\"\nfast_chemail = \"^0.9\"\n\n[dev-dependencies]\nenv_logger = \"^0.7\"\nglob = \"^0.3\"\ncriterion = \"^0.3\"\n\n[features]\ndefault = [ \"file-transport\", \"smtp-transport\", \"sendmail-transport\",]\nunstable = []\nserde-impls = [ \"serde\",]\nfile-transport = [ \"serde-impls\", \"serde_json\",]\nsmtp-transport = [ \"bufstream\", \"native-tls\", \"base64\", \"nom\", \"hostname\",]\nsendmail-transport = []\nconnection-pool = [ \"r2d2\",]\n\n[badges.travis-ci]\nrepository = \"lettre/lettre\"\n\n[badges.appveyor]\nrepository = \"lettre/lettre\"\n\n[badges.maintenance]\nstatus = \"actively-developed\"\n\n[badges.is-it-maintained-issue-resolution]\nrepository = \"lettre/lettre\"\n\n[badges.is-it-maintained-open-issues]\nrepository = \"lettre/lettre\"\n\n[dependencies.nom]\nversion = \"^5.0\"\noptional = true\n\n[dependencies.bufstream]\nversion = \"^0.1\"\noptional = true\n\n[dependencies.native-tls]\nversion = \"^0.2\"\noptional = true\n\n[dependencies.base64]\nversion = \"^0.11\"\noptional = true\n\n[dependencies.hostname]\nversion = \"^0.2\"\noptional = true\n\n[dependencies.serde]\nversion = \"^1.0\"\noptional = true\nfeatures = [ \"derive\",]\n\n[dependencies.serde_json]\nversion = \"^1.0\"\noptional = true\n\n[dependencies.r2d2]\nversion = \"^0.8\"\noptional = true\n",
+        "dest": "cargo/vendor/lettre",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/lettre",
         "dest-filename": ".cargo-checksum.json"
@@ -2942,6 +2942,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/lettre-2ffdb53/lettre_email\" \"cargo/vendor/lettre_email\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"lettre_email\"\nversion = \"0.9.2\"\ndescription = \"Email builder\"\nreadme = \"README.md\"\nhomepage = \"http://lettre.at\"\nrepository = \"https://github.com/lettre/lettre\"\nlicense = \"MIT\"\nauthors = [ \"Alexis Mousset <contact@amousset.me>\",]\ncategories = [ \"email\",]\nkeywords = [ \"email\", \"mailer\",]\nedition = \"2018\"\n\n[dev-dependencies]\nglob = \"0.3\"\n\n[dependencies]\nmime = \"^0.3\"\ntime = \"^0.1\"\nbase64 = \"^0.11\"\nlazy_static = \"1.4.0\"\n\n[badges.travis-ci]\nrepository = \"lettre/lettre_email\"\n\n[badges.appveyor]\nrepository = \"lettre/lettre_email\"\n\n[badges.maintenance]\nstatus = \"actively-developed\"\n\n[badges.is-it-maintained-issue-resolution]\nrepository = \"lettre/lettre_email\"\n\n[badges.is-it-maintained-open-issues]\nrepository = \"lettre/lettre_email\"\n\n[dev-dependencies.lettre]\nversion = \"^0.9\"\npath = \"../lettre\"\nfeatures = [ \"smtp-transport\",]\n\n[dependencies.email]\ngit = \"https://github.com/deltachat/rust-email\"\nbranch = \"master\"\n\n[dependencies.uuid]\nversion = \"^1.3\"\nfeatures = [ \"v4\",]\n\n[dependencies.lettre]\nversion = \"^0.9\"\npath = \"../lettre\"\ndefault-features = false\n\n[dependencies.regex]\nversion = \"1.3.1\"\ndefault-features = false\nfeatures = [ \"std\",]\n",
+        "dest": "cargo/vendor/lettre_email",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -3186,14 +3192,14 @@
     {
         "type": "archive",
         "archive-type": "tar-gzip",
-        "url": "https://static.crates.io/crates/mime/mime-0.3.16.crate",
-        "sha256": "2a60c7ce501c71e03a9c9c0d35b861413ae925bd979cc7a4e30d060069aaac8d",
-        "dest": "cargo/vendor/mime-0.3.16"
+        "url": "https://static.crates.io/crates/mime/mime-0.3.17.crate",
+        "sha256": "6877bb514081ee2a7ff5ef9de3281f14a4dd4bceac4c09388074a6b5df8a139a",
+        "dest": "cargo/vendor/mime-0.3.17"
     },
     {
         "type": "inline",
-        "contents": "{\"package\": \"2a60c7ce501c71e03a9c9c0d35b861413ae925bd979cc7a4e30d060069aaac8d\", \"files\": {}}",
-        "dest": "cargo/vendor/mime-0.3.16",
+        "contents": "{\"package\": \"6877bb514081ee2a7ff5ef9de3281f14a4dd4bceac4c09388074a6b5df8a139a\", \"files\": {}}",
+        "dest": "cargo/vendor/mime-0.3.17",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -4179,6 +4185,12 @@
     },
     {
         "type": "inline",
+        "contents": "[package]\nname = \"quinn-proto\"\nversion = \"0.9.2\"\nedition = \"2021\"\nrust-version = \"1.59\"\nlicense = \"MIT OR Apache-2.0\"\nrepository = \"https://github.com/quinn-rs/quinn\"\ndescription = \"State machine for the QUIC transport protocol\"\nkeywords = [ \"quic\",]\ncategories = [ \"network-programming\", \"asynchronous\",]\nworkspace = \"..\"\n\n[features]\ndefault = [ \"tls-rustls\", \"log\",]\ntls-rustls = [ \"rustls\", \"webpki\", \"ring\",]\nnative-certs = [ \"rustls-native-certs\",]\nlog = [ \"tracing/log\",]\n\n[dependencies]\nbytes = \"1\"\nrustc-hash = \"1.1\"\nrand = \"0.8\"\nslab = \"0.4\"\nthiserror = \"1.0.21\"\ntracing = \"0.1.10\"\n\n[dev-dependencies]\nassert_matches = \"1.1\"\nhex-literal = \"0.3.0\"\nrcgen = \"0.10.0\"\nlazy_static = \"1\"\n\n[badges.maintenance]\nstatus = \"experimental\"\n\n[dependencies.arbitrary]\nversion = \"1.0.1\"\nfeatures = [ \"derive\",]\noptional = true\n\n[dependencies.ring]\nversion = \"0.16.7\"\noptional = true\n\n[dependencies.rustls]\nversion = \"0.20.4\"\ndefault-features = false\nfeatures = [ \"quic\",]\noptional = true\n\n[dependencies.rustls-native-certs]\nversion = \"0.6\"\noptional = true\n\n[dependencies.tinyvec]\nversion = \"1.1\"\nfeatures = [ \"alloc\",]\n\n[dependencies.webpki]\nversion = \"0.22\"\ndefault-features = false\noptional = true\n\n[dev-dependencies.tracing-subscriber]\nversion = \"0.3.0\"\ndefault-features = false\nfeatures = [ \"env-filter\", \"fmt\", \"ansi\", \"time\", \"local-time\",]\n\n[package.metadata.docs.rs]\nall-features = true\n",
+        "dest": "cargo/vendor/quinn-proto",
+        "dest-filename": "Cargo.toml"
+    },
+    {
+        "type": "inline",
         "contents": "{\"package\": null, \"files\": {}}",
         "dest": "cargo/vendor/quinn-proto",
         "dest-filename": ".cargo-checksum.json"
@@ -4188,6 +4200,12 @@
         "commands": [
             "cp -r --reflink=auto \"flatpak-cargo/git/quinn-11b34a7/quinn-udp\" \"cargo/vendor/quinn-udp\""
         ]
+    },
+    {
+        "type": "inline",
+        "contents": "[package]\nname = \"quinn-udp\"\nversion = \"0.3.2\"\nedition = \"2018\"\nrust-version = \"1.59\"\nlicense = \"MIT OR Apache-2.0\"\nrepository = \"https://github.com/quinn-rs/quinn\"\ndescription = \"UDP sockets with ECN information for the QUIC transport protocol\"\nkeywords = [ \"quic\",]\ncategories = [ \"network-programming\", \"asynchronous\",]\nworkspace = \"..\"\n\n[features]\ndefault = [ \"log\",]\nlog = [ \"tracing/log\",]\n\n[dependencies]\nlibc = \"0.2.69\"\nsocket2 = \"0.4\"\ntracing = \"0.1.10\"\n\n[badges.maintenance]\nstatus = \"experimental\"\n\n[dependencies.proto]\npackage = \"quinn-proto\"\npath = \"../quinn-proto\"\nversion = \"0.9\"\ndefault-features = false\n\n[package.metadata.docs.rs]\nall-features = true\n\n[target.\"cfg(windows)\".dependencies.windows-sys]\nversion = \"0.45.0\"\nfeatures = [ \"Win32_Networking_WinSock\",]\n",
+        "dest": "cargo/vendor/quinn-udp",
+        "dest-filename": "Cargo.toml"
     },
     {
         "type": "inline",
@@ -6745,7 +6763,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/async-email/async-imap\"]\ngit = \"https://github.com/async-email/async-imap\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/deltachat/rust-email\"]\ngit = \"https://github.com/deltachat/rust-email\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/async-email/encoded-words\"]\ngit = \"https://github.com/async-email/encoded-words\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/deltachat/lettre\"]\ngit = \"https://github.com/deltachat/lettre\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/quinn-rs/quinn\"]\ngit = \"https://github.com/quinn-rs/quinn\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/deltachat/rust-email\"]\ngit = \"https://github.com/deltachat/rust-email\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/async-email/encoded-words\"]\ngit = \"https://github.com/async-email/encoded-words\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/deltachat/lettre\"]\ngit = \"https://github.com/deltachat/lettre\"\nreplace-with = \"vendored-sources\"\nbranch = \"master\"\n\n[source.\"https://github.com/quinn-rs/quinn\"]\ngit = \"https://github.com/quinn-rs/quinn\"\nreplace-with = \"vendored-sources\"\nbranch = \"main\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
