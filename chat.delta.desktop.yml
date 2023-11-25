@@ -97,6 +97,9 @@ modules:
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
 
+        # for node gyp:
+        npm_config_nodedir: /run/build/delta/node-headers
+
         XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
         TMPDIR: /run/build/delta/flatpak-node/tmp
 
@@ -129,6 +132,7 @@ modules:
       # Install the required static files
       - install ../run.sh /app/bin/run.sh
       - install -Dm 0644 ../chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
+      - install -Dm 0644 ../mime/deltachat-desktop.xml  /app/share/mime/packages/chat.delta.desktop.xml
       - install -Dm 0644 ../chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
       - install -Dm 0644 ../delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
     subdir: main
@@ -139,8 +143,8 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.40.4
-        commit: 70746da647d1eaa56a5bde6845c73ddd7513dfae
+        tag: v1.42.1
+        commit: 80bf53e9279ae728640849ebd622b98ed09a297f
         dest: main
 
       - type: file
@@ -154,6 +158,11 @@ modules:
       - type: file
         path: chat.delta.desktop.256.png
         dest-filename: chat.delta.desktop.png
+
+      - type: archive
+        url: https://nodejs.org/download/release/v18.18.1/node-v18.18.1-headers.tar.gz
+        sha256: 7e96d38cca734754e711af9bc43b6b5f2f279951849c1089bdc8825312fd7ddb
+        dest: node-headers
 
       - type: script
         dest-filename: run.sh
@@ -171,4 +180,8 @@ modules:
       # https://github.com/deltachat/deltachat-desktop/pull/1125
       - type: file
         path: chat.delta.desktop.appdata.xml
+
+      - type: file
+        path: mime/deltachat-desktop.xml
+        dest: mime
 
