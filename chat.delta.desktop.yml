@@ -9,7 +9,8 @@ sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
 command: /app/bin/run.sh
 finish-args:
-  - --socket=x11
+  - --socket=fallback-x11
+  - --socket=wayland
   - --share=ipc
   - --device=dri         # Without DRI the app doesn't come up :-/
   - --device=all         # Webcam access for QR code scans
