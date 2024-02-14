@@ -12,8 +12,7 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --share=ipc
-  - --device=dri         # Without DRI the app doesn't come up :-/
-  - --device=all         # Webcam access for QR code scans
+  - --device=all         # Webcam access for QR code scans and DRI for OpenGL
   - --socket=pulseaudio  # Record and play voice messages
   - --filesystem=xdg-documents
   - --filesystem=xdg-download
