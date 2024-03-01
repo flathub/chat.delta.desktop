@@ -22,6 +22,7 @@ finish-args:
   - --share=network
   - --talk-name=org.freedesktop.Notifications
   - --env=ELECTRON_OZONE_PLATFORM_HINT=auto
+  - --env=NOTIFY_IGNORE_PORTAL=1 # fix https://github.com/deltachat/deltachat-desktop/issues/3590
 
 cleanup:
     # usused libs/binary variants
