@@ -22,7 +22,7 @@ finish-args:
   - --share=network
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=com.canonical.AppMenu.Registrar # fix https://github.com/flathub/chat.delta.desktop/issues/118
-  - --env=ELECTRON_OZONE_PLATFORM_HINT=auto
+  - --env=ELECTRON_OZONE_PLATFORM_HINT=auto # tell electron to choose Wayland if it is available
   - --env=NOTIFY_IGNORE_PORTAL=1 # fix https://github.com/deltachat/deltachat-desktop/issues/3590
 
 cleanup:
