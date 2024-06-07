@@ -4,6 +4,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
   <name>Delta Chat</name>
+  <developer_name>Delta Chat</developer_name>
   <summary>Delta Chat email-based messenger</summary>
   <description>
     <p>Chat over email and head back to the future with us!</p>
@@ -33,7 +34,70 @@
   <url type="faq">https://delta.chat/en/help</url>
   <url type="donation">https://delta.chat/en/contribute#donate-money-or-devices</url>
   <url type="translate">https://www.transifex.com/delta-chat/public/</url>
+  <url type="contribute">https://delta.chat/en/contribute</url>
   <releases>
+   <release version="v1.44.1" date="2024-03-09">
+      <description>
+        <ul>
+          <li>❤️ Send emoji reactions for messages</li>
+          <li>🔄 New Account Switcher sidebar with notification management</li>
+          <li>🛎️ Get notified for all your accounts</li>
+          <li>⚙️ Improved settings dialog</li>
+          <li>✨ A whole bunch of refactorings, improvements and bugfixes</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v1.44.0" date="2024-03-05">
+      <description>
+        <ul>
+          <li>❤️ Send emoji reactions for messages</li>
+          <li>🔄 New Account Switcher sidebar with notification management</li>
+          <li>🛎️ Get notified for all your accounts</li>
+          <li>⚙️ Improved settings dialog</li>
+          <li>✨ A whole bunch of refactorings, improvements and bugfixes</li>
+        </ul>
+      </description>
+    </release>
+   <release version="v1.42.2" date="2023-12-03">
+      <description>
+        <ul>
+          <li>💌 one-to-one chats guarantee end-to-end encryption for introduced contacts now</li>
+          <li>😌 for everyone&#39;s simplicity, we mark these contacts and chats with green checkmarks</li>
+          <li>👥 groups are created automatically with guaranteed end-to-end encryption if possible</li>
+          <li>🔄 Accept/Blocked, Archived, Pinned, Mute is synced across all your devices</li>
+          <li>🗜️ Images are now compressed (unless you send them as files)</li>
+          <li>🖼️ Global Gallery with your pictures, documents, media across all chats</li>
+          <li>✨ many more improvements and bugfixes</li>
+        </ul>
+      </description>
+   </release>
+   <release version="v1.40.3" date="2023-09-08">
+      <description>
+        <ul>
+          <li>
+            Bugfixes and it should run again on older linux distros like ubuntu 18.04.
+          </li>
+        </ul>
+      </description>
+    </release>
+    <release version="v1.40.1" date="2023-09-02">
+      <description>
+        <ul>
+          <li>
+            Bugfixes, resend messages and more.
+          </li>
+        </ul>
+      </description>
+    </release>
+    <release version="v1.38.1" date="2023-06-23" />
+    <release version="v1.36.4" date="2023-04-23" />
+    <release version="v1.34.4" date="2023-02-14" />
+    <release version="v1.34.2" date="2023-01-19" />
+    <release version="v1.34.1" date="2022-12-22" />
+    <release version="v1.32.1" date="2022-08-09" />
+    <release version="v1.30.1" date="2022-06-07" />
+    <release version="v1.28.2" date="2022-04-07" />
+    <release version="v1.28.0" date="2022-03-25" />
     <release version="v1.27.1" date="2022-03-10" />
     <release version="v1.27.0" date="2022-03-04" />
     <release version="v1.26.0" date="2021-12-16" />
@@ -466,4 +530,15 @@
     <content_attribute id="money-purchasing">none</content_attribute>
     <content_attribute id="money-gambling">none</content_attribute>
   </content_rating>
+  <categories>
+    <category>Network</category>
+    <category>Chat</category>
+    <category>InstantMessaging</category>
+  </categories>
+  <provides>
+    <mediatype>x-scheme-handler/openpgp4fpr</mediatype>
+    <mediatype>x-scheme-handler/mailto</mediatype>
+    <mediatype>x-scheme-handler/dcaccount</mediatype>
+    <mediatype>x-scheme-handler/dclogin</mediatype>
+  </provides>
 </component>

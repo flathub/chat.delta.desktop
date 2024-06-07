@@ -1,18 +1,18 @@
 app-id: chat.delta.desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: '21.08'
+base-version: '23.08'
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node14
+  - org.freedesktop.Sdk.Extension.node20
   - org.freedesktop.Sdk.Extension.rust-stable
 command: /app/bin/run.sh
 finish-args:
-  - --socket=x11
+  - --socket=fallback-x11
+  - --socket=wayland
   - --share=ipc
-  - --device=dri         # Without DRI the app doesn't come up :-/
-  - --device=all         # Webcam access for QR code scans
+  - --device=all         # Webcam access for QR code scans and DRI for OpenGL
   - --socket=pulseaudio  # Record and play voice messages
   - --filesystem=xdg-documents
   - --filesystem=xdg-download
@@ -20,113 +20,133 @@ finish-args:
   - --filesystem=xdg-pictures
   - --filesystem=xdg-videos
   - --share=network
-  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.freedesktop.Notifications # needed for dbus notification, as the notification portal crashed because of a bug in electron https://github.com/electron/electron/issues/40461
+  - --talk-name=com.canonical.AppMenu.Registrar # fix https://github.com/flathub/chat.delta.desktop/issues/118
+  - --env=ELECTRON_OZONE_PLATFORM_HINT=auto # tell electron to choose Wayland if it is available
+  - --env=NOTIFY_IGNORE_PORTAL=1 # fix https://github.com/deltachat/deltachat-desktop/issues/3590
 
 cleanup:
-    # usused libs/binary variants
-    - /lib/libdeltachat.a
-    - /lib/libsqlcipher.a
-    - /lib/libsqlcipher.la
-    - /bin/sqlcipher
-    # debug info
-    - /lib/debug
-    # stuff dor building against
-    - /lib/pkgconfig
-    - /lib/include
-    - /include
     # Desktop___________________
     - /delta/resources/app/node_modules/napi-macros
     # frontend node_modules not needed at runtime - would get easier if dc-desktop would adopt the 2 package.json project structure
-    # Blueprint js
-    - /delta/resources/app/node_modules/@blueprintjs/core/lib/css/blueprint-hi-contrast.css
-    - /delta/resources/app/node_modules/@blueprintjs/core/lib/cjs
-    - /delta/resources/app/node_modules/@blueprintjs/core/lib/esm
-    - /delta/resources/app/node_modules/@blueprintjs/core/lib/esnext
-    - /delta/resources/app/node_modules/@blueprintjs/core/lib/less
-    - /delta/resources/app/node_modules/@blueprintjs/core/dist/*.js
-    - /delta/resources/app/node_modules/@blueprintjs/core/src
-    - /delta/resources/app/node_modules/@blueprintjs/core/node_modules/tslib
-    - /delta/resources/app/node_modules/@blueprintjs/core/package.json
-    - /delta/resources/app/node_modules/@blueprintjs/core/scripts
-    - /delta/resources/app/node_modules/@blueprintjs/icons/lib/cjs
-    - /delta/resources/app/node_modules/@blueprintjs/icons/lib/esm
-    - /delta/resources/app/node_modules/@blueprintjs/icons/lib/esnext
-    - /delta/resources/app/node_modules/@blueprintjs/icons/lib/less
-    - /delta/resources/app/node_modules/@blueprintjs/icons/dist/*.js
-    - /delta/resources/app/node_modules/@blueprintjs/icons/src
-    - /delta/resources/app/node_modules/@blueprintjs/icons/package.json
-    - /delta/resources/app/node_modules/@blueprintjs/icons/node_modules/tslib
-    - /delta/resources/app/node_modules/popper.js
     # every react addon
     - /delta/resources/app/node_modules/react-*
     - /delta/resources/app/node_modules/classnames
     - /delta/resources/app/node_modules/use-debounce
     - /delta/resources/app/node_modules/create-react-context
-    # mapbox
-    - /delta/resources/app/node_modules/mapbox-gl/src
-    - /delta/resources/app/node_modules/mapbox-gl/flow-typed
-    - /delta/resources/app/node_modules/mapbox-gl/build
-    - /delta/resources/app/node_modules/mapbox-gl/dist/*.flow
-    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-dev.js
-    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-unminified.js
-    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-unminified.js.map
-    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-csp.js.map
-    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-csp-worker.js.map
-    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-csp.js
-    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl-csp-worker.js
-    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl.js.map # we don't want to add 3mb to debug mapbox in production
     # need testing?
     - /delta/resources/app/node_modules/resize-observer-polyfill
-    - /delta/resources/app/node_modules/mapbox-gl/dist/style-spec
-    - /delta/resources/app/node_modules/mapbox-gl/dist/mapbox-gl.js # should be bundled via esbuild already
     # momentjs is currently only used by renderer process
     - /delta/resources/app/node_modules/moment
 
 
 modules:
-  - deltachat-core-rust.yaml
+  - name: deltachat-core-rust
+    buildsystem: simple
+
+    build-options:
+      env:
+        # Tell caches where we pre-downloaded things.
+        npm_config_cache: /run/build/deltachat-core-rust/flatpak-node/npm-cache/
+
+        # It does not work to dereference the variable here :-/
+        # CARGO_HOME: $FLATPAK_BUILDER_BUILDDIR/cargo
+        CARGO_HOME: /run/build/deltachat-core-rust/cargo
+
+        # The intention is to have a release build with debugging symbols.
+        # The flatpak build process should separate the debug symbols.
+        RUSTFLAGS: "-g"
+
+        # sccache hopefully speeds up subsequent compilations
+        RUSTC_WRAPPER: /app/bin/sccache
+        SCCACHE_DIR: /run/ccache/sccache/
+
+      append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/node20/bin
+
+    build-commands:
+      - node --version
+      - python3 --version
+      - npm cache verify
+      - cd /run/build/deltachat-core-rust/deltachat-jsonrpc/typescript && env DEBUG="*" npm install --offline --verbose && npm run build
+      - python3 deltachat-rpc-server/npm-package/scripts/make_local_dev_version.py
+      - mkdir -p /app/dc-core/deltachat-jsonrpc
+      - sed -i 's|/run/build/deltachat-core-rust|/app/dc-core/deltachat-rpc-server|g' deltachat-rpc-server/npm-package/package.json
+      - cp -r deltachat-jsonrpc /app/dc-core/deltachat-jsonrpc
+      - cp -r deltachat-rpc-server /app/dc-core/deltachat-rpc-server
+
+    modules:
+      # setup caching
+      - name: sccache
+        buildsystem: simple
+        build-commands:
+          - install -Dma+rwx sccache /app/bin/sccache
+        cleanup:
+          - /bin/sccache
+        sources:
+          - type: archive
+            url: https://github.com/mozilla/sccache/releases/download/v0.2.15/sccache-v0.2.15-x86_64-unknown-linux-musl.tar.gz
+            sha256: e5d03a9aa3b9fac7e490391bbe22d4f42c840d31ef9eaf127a03101930cbb7ca
+            only-arches: ["x86_64"]
+
+          - type: archive
+            url: https://github.com/mozilla/sccache/releases/download/v0.2.15/sccache-v0.2.15-aarch64-unknown-linux-musl.tar.gz
+            sha256: 90d91d21a767e3f558196dbd52395f6475c08de5c4951a4c8049575fa6894489
+            only-arches: ["aarch64"]
+      
+    sources:
+      # - type: archive
+      #   url: https://github.com/deltachat/deltachat-core-rust/archive/1.91.0.tar.gz
+      #   sha256: 2909661e9e4bab24b482e9c2b2d983a777fa5e6173484ab99571115d5aaa70aa
+      - type: git
+        url: https://github.com/deltachat/deltachat-core-rust.git
+        # tag: v1.140.0
+        # commit: e9d7fe0561f7285ec6fbd0ee8e3126ebad815fa6
+        branch: simon/npm-rpc-package-make-local-non-symlinked-instalation-possible
+      - generated/sources-rust.json
+      - generated/sources-jsonrpc-client-npm.json
+
+      - type: file
+        path: generated/deltachat-jsonrpc.typescript.package-lock.json
+        dest: deltachat-jsonrpc/typescript/
+        dest-filename: package-lock.json
 
   - name: delta
-    cleanup:
-        - /delta/resources/app/node_modules/deltachat-node/deltachat-core-rust
-        - /delta/resources/app/node_modules/deltachat-node/prebuilds
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node14/bin
+      append-path: /usr/lib/sdk/node20/bin
       env:      
         NPM_CONFIG_LOGLEVEL: info
-        npm_config_nodedir: /usr/lib/sdk/node14
 
         # Tell caches where we pre-downloaded things.
         npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
 
-        XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
+        # for node gyp:
+        npm_config_nodedir: /run/build/delta/node-headers
 
-        # Taken from https://github.com/flathub/com.visualstudio.code-oss/blob/bd6d8052cbbd63a53396f4caad86adf73ec455cf/com.visualstudio.code-oss.yml#L71
-        ESBUILD_BIN_PATH_FOR_TESTS: /run/build/delta/flatpak-node/cache/esbuild/bin/esbuild-current
+        XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
+        TMPDIR: /run/build/delta/flatpak-node/tmp
 
         # This overwrites the git-ref version info for the about- and crash-screen
         VERSION_INFO_GIT_REF: "flathub"
-
-        USE_SYSTEM_LIBDELTACHAT: "true"
+        NO_ASAR: "true"
 
     build-commands:
+      - ls -lah /run/build/
+      - mkdir -p $TMPDIR
       - node --version
       - npm --version
-      # electron builder symlink workaround
-      - cd $ELECTRON_CACHE && ln -s httpsgithub.comelectronelectronreleasesdownloadv*.zip/*.zip $(echo httpsgithub.comelectronelectronreleasesdownloadv*.zip | sed -e s/.*electron/electron/) && cd -
-   
+      - python --version
       - npm cache verify
-      # patch pkg-config until https://github.com/deltachat/deltachat-core-rust/issues/2755 is fixed
-      - sed -i "s/-L\${libdir} //" /app/lib/pkgconfig/deltachat.pc
-      - pkg-config --libs deltachat
-      - pkg-config --cflags deltachat
-      - mkdir -p $FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp
       # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
-      - env TMPDIR=$FLATPAK_BUILDER_BUILDDIR/flatpak-node/tmp DEBUG="*" npm install --offline --verbose
+      - env DEBUG="*" npm install --offline --verbose
+      # install the core we build locally instead of the prebuild
+      - env DEBUG="*" npm install --install-links=true --offline --verbose /app/dc-core/deltachat-rpc-server/npm-package
+      - rm -r /app/dc-core
       - npm run build4production --offline --verbose
-      - env NO_ASAR=true  npm run pack:generate_config --offline --verbose
-      - npm run pack:linux:dir --offline --verbose
+      - npm run pack:generate_config --offline --verbose
+      - |
+        ln -srv $XDG_CACHE_HOME/node-gyp $HOME/.electron-gyp
+        npm run pack:linux:dir --offline --verbose
       - mkdir -p /app/delta
       # The x86-64 build seems to be put in "linux-unpacked",
       # the aarch64 build in "linix-arm64-unpacked"
@@ -136,6 +156,7 @@ modules:
       # Install the required static files
       - install ../run.sh /app/bin/run.sh
       - install -Dm 0644 ../chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
+      - install -Dm 0644 ../mime/deltachat-desktop.xml  /app/share/mime/packages/chat.delta.desktop.xml
       - install -Dm 0644 ../chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
       - install -Dm 0644 ../delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
     subdir: main
@@ -146,8 +167,9 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.27.2
-        commit: 40780139fd90d678522dd799676b59c975c42eb2
+        branch: simon/respect-no-asar-in-after-pack-hook
+        # tag: v1.45.4
+        # commit: 621db4a6e8d0a90ec8aa6a3d507e73994f2f183a
         dest: main
 
       - type: file
@@ -162,20 +184,29 @@ modules:
         path: chat.delta.desktop.256.png
         dest-filename: chat.delta.desktop.png
 
+      - type: archive
+        url: https://nodejs.org/download/release/v18.18.1/node-v18.18.1-headers.tar.gz
+        sha256: 7e96d38cca734754e711af9bc43b6b5f2f279951849c1089bdc8825312fd7ddb
+        dest: node-headers
+
       - type: script
         dest-filename: run.sh
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - exec zypak-wrapper /app/delta/deltachat-desktop "$@"
+          - exec zypak-wrapper /app/delta/deltachat-desktop "$@" --disable-features=WaylandFractionalScaleV1
 
 
       # All the generated npm downloads, see README.md how to create
       # this file.  This needs to go to the bottom so that the
       # commands in that file can see package.json and friends.
-      - generated-sources-npm.0.json
+      - generated/sources-npm.json
 
 
       # https://github.com/deltachat/deltachat-desktop/pull/1125
       - type: file
         path: chat.delta.desktop.appdata.xml
+
+      - type: file
+        path: mime/deltachat-desktop.xml
+        dest: mime
 

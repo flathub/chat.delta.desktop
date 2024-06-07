@@ -39,6 +39,39 @@ flathub.  So once a pull request is merged no more work needs to be
 done to publish the release.
 
 
+### Upgrade to new Release: Re-generating sources
+
+install the `flatpak-node-generator` tool with `pipx`:
+```sh
+git clone https://github.com/flatpak/flatpak-builder-tools.git
+pip install pipx
+pipx flatpak-builder-tools/node
+```
+
+install nodejs version > 20
+<!-- todo command / install fnm then install right version -->
+
+create a python virtual env and enter it, then install aiohttp
+<!-- todo command -->
+
+Then edit (put in the tags/branches you want to update to) and run the `generate.sh` script:
+```sh
+CORE_CHECKOUT=v1.140.0
+DESKTOP_CHECKOUT=v1.45.4
+```
+
+The script then gives you the commit hashes you should add to the build manifest, there you need to also specify branch/tag.
+
+After that, build it locally (if your computer is likely faster than CI, so debugging locally is quicker).
+```
+rm -r build-dir/ || true && flatpak-builder --install-deps-from=flathub build-dir chat.delta.desktop.yml --ccache
+```
+
+> `--ccache` enables sccache, which speeds up subsequent builds.
+
+<details>
+<summary>old docs, outdated, but might be helpful for understanding</summary>
+
 ## Upgrading to a new release
 
 Get hold of a newer version of the desktop app and the Rust binding,
@@ -57,7 +90,7 @@ git fetch --tags
 git checkout 1.46.0
 ```
 
-### Re-generating rust sources
+#### Re-generating rust sources
 
 Since flatpak does not allow the build to download things while
 building we have to resolve all the cargo dependencies statically
@@ -73,7 +106,7 @@ python3 ../flatpak-builder-tools/cargo/flatpak-cargo-generator.py \
 Make sure you generate it from the correct downloaded release.
 
 
-### Re-generating npm sources
+#### Re-generating npm sources
 
 Since flatpak does not allow the build to download things while
 building we have to resolve all the npm dependencies beforehand.
@@ -90,16 +123,21 @@ upstream to provide the lock file, but it should be possible to run
 
 To create the `generated-sources.json` file you need a copy of the
 https://github.com/flatpak/flatpak-builder-tools.git repository and
-invoke the `node/flatpak-node-generator.py` script, e.g.:
-
+install the `flatpak-node-generator` tool with `pipx`:
+```sh
+git clone https://github.com/flatpak/flatpak-builder-tools.git
+pip install pipx
+pipx flatpak-builder-tools/node
 ```
-python3 ../flatpak-builder-tools/node/flatpak-node-generator.py \
-    npm ../deltachat-desktop/package-lock.json \
-    --recursive --split --xdg-layout \
-    --output generated-sources-npm.json
+Then invoke the `node/flatpak-node-generator.py` script, e.g.:
+
+```sh
+flatpak-node-generator -o generated-sources-npm.json -r npm ../deltachat-desktop/package-lock.json
 ```
 
-This will produce the `generated-sources-npm-?.json` files which is referenced
+This will produce the `generated-sources-npm.json` file which is referenced
 in the `chat.delta.desktop.yml` manifest.  Because that file is quite big
 and Github seems to not like big files all too much, the generator offers
 a --split option, cf. https://github.com/flatpak/flatpak-builder-tools/blob/204309e0066a66a6f3c9ad7c5edb870513a7504c/node/README.md#splitting-mode.
+
+</details>
