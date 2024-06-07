@@ -100,8 +100,7 @@ modules:
       - type: git
         url: https://github.com/deltachat/deltachat-core-rust.git
         # tag: v1.140.0
-        # commit: e9d7fe0561f7285ec6fbd0ee8e3126ebad815fa6
-        branch: simon/npm-rpc-package-make-local-non-symlinked-instalation-possible
+        commit: 08ca38cc76e8c8873e5425d9b968cd8a2db10254 # branch  simon/npm-rpc-package-make-local-non-symlinked-instalation-possible
       - generated/sources-rust.json
       - generated/sources-jsonrpc-client-npm.json
 
@@ -167,9 +166,8 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        branch: simon/respect-no-asar-in-after-pack-hook
         # tag: v1.45.4
-        # commit: 621db4a6e8d0a90ec8aa6a3d507e73994f2f183a
+        commit: a48a226dbcbaa5236e2b785cf1ca4109a789920b # branch simon/respect-no-asar-in-after-pack-hook
         dest: main
 
       - type: file
