@@ -99,9 +99,8 @@ modules:
       #   sha256: 2909661e9e4bab24b482e9c2b2d983a777fa5e6173484ab99571115d5aaa70aa
       - type: git
         url: https://github.com/deltachat/deltachat-core-rust.git
-        # tag: v1.140.0
-        # commit: e9d7fe0561f7285ec6fbd0ee8e3126ebad815fa6
-        branch: simon/npm-rpc-package-make-local-non-symlinked-instalation-possible
+        tag: v1.140.2
+        commit: 6a3902d90d5b1997c79f5ec05c43203ee3c5ad77
       - generated/sources-rust.json
       - generated/sources-jsonrpc-client-npm.json
 
@@ -167,9 +166,8 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        branch: simon/respect-no-asar-in-after-pack-hook
-        # tag: v1.45.4
-        # commit: 621db4a6e8d0a90ec8aa6a3d507e73994f2f183a
+        tag: v1.45.5
+        commit: 90403d152f68be2796c3028baa8b6f1d05ec65d4
         dest: main
 
       - type: file
