@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 
-CORE_CHECKOUT=simon/npm-rpc-package-make-local-non-symlinked-instalation-possible
-DESKTOP_CHECKOUT=simon/respect-no-asar-in-after-pack-hook
+CORE_CHECKOUT=v1.140.2
+DESKTOP_CHECKOUT=v1.45.5
 
 # this script needs:
 # - serveral repos checked out next to this repo
@@ -11,6 +11,10 @@ DESKTOP_CHECKOUT=simon/respect-no-asar-in-after-pack-hook
 #  - deltachat-desktop
 # - python3, nodejs 20, flatpak-node-generator
 
+# if -d ../.venv
+# then
+source ../.venv/bin/activate
+# fi
 
 # git checkout & print hashes
 cd ../deltachat-core-rust
@@ -39,6 +43,6 @@ cd -
 flatpak-node-generator -o generated/sources-jsonrpc-client-npm.json -r npm ../deltachat-core-rust/deltachat-jsonrpc/typescript/package-lock.json
 cp ../deltachat-core-rust/deltachat-jsonrpc/typescript/package-lock.json generated/deltachat-jsonrpc.typescript.package-lock.json 
 
-echo "[Done, you need to put these hashes into the manifests]"
+echo "[Done, you need to put these hashes into the manifest]"
 echo "core:    $CORE_COMMIT_HASH"
 echo "desktop: $DESKTOP_COMMIT_HASH"
