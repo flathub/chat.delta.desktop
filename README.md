@@ -41,18 +41,33 @@ done to publish the release.
 
 ### Upgrade to new Release: Re-generating sources
 
+To setup make sure this repo is checked out inside of it's own folder and there is no folder besides it (or the setup script might not do what it should).
+
+Then run `./setup.sh`. (you also need nodejs min version 20 and python3)
+
+> to reset you can run `rm -rf ../.venv/ ../deltachat-* ../flatpak-builder-tools/`
+> But be careful as this could destroy your work if you haven't followed the instractions above correctly.
+
+<details>
+<summary>manual setup</summary>
+
 install the `flatpak-node-generator` tool with `pipx`:
 ```sh
 git clone https://github.com/flatpak/flatpak-builder-tools.git
 pip install pipx
-pipx flatpak-builder-tools/node
+pipx install flatpak-builder-tools/node
 ```
 
 install nodejs version > 20
 <!-- todo command / install fnm then install right version -->
 
 create a python virtual env and enter it, then install aiohttp
-<!-- todo command -->
+```
+python -m venv .venv
+source .venv/bin/activate
+pip install aiohttp toml
+```
+</details>
 
 Then edit (put in the tags/branches you want to update to) and run the `generate.sh` script:
 ```sh

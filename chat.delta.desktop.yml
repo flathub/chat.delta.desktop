@@ -99,8 +99,8 @@ modules:
       #   sha256: 2909661e9e4bab24b482e9c2b2d983a777fa5e6173484ab99571115d5aaa70aa
       - type: git
         url: https://github.com/deltachat/deltachat-core-rust.git
-        # tag: v1.140.0
-        commit: 08ca38cc76e8c8873e5425d9b968cd8a2db10254 # branch  simon/npm-rpc-package-make-local-non-symlinked-instalation-possible
+        tag: v1.140.2
+        commit: 6a3902d90d5b1997c79f5ec05c43203ee3c5ad77
       - generated/sources-rust.json
       - generated/sources-jsonrpc-client-npm.json
 
@@ -166,8 +166,8 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        # tag: v1.45.4
-        commit: 0d802913226b17a83a45e719f0a8def7e03bb246 # branch main (there is no tag yet as I'm still waiting for a new core)
+        tag: v1.45.5
+        commit: 90403d152f68be2796c3028baa8b6f1d05ec65d4
         dest: main
 
       - type: file
