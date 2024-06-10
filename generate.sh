@@ -2,7 +2,7 @@
 set -e
 
 CORE_CHECKOUT=v1.140.2
-DESKTOP_CHECKOUT=v1.45.5
+DESKTOP_CHECKOUT=v1.46.0
 
 # this script needs:
 # - serveral repos checked out next to this repo
