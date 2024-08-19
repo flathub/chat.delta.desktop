@@ -99,8 +99,8 @@ modules:
       #   sha256: 2909661e9e4bab24b482e9c2b2d983a777fa5e6173484ab99571115d5aaa70aa
       - type: git
         url: https://github.com/deltachat/deltachat-core-rust.git
-        tag: v1.140.2
-        commit: 6a3902d90d5b1997c79f5ec05c43203ee3c5ad77
+        tag: v1.142.7
+        commit: 8538a3c148eb7d7052763fe7fb38bb8be2e6035e
       - generated/sources-rust.json
       - generated/sources-jsonrpc-client-npm.json
 
@@ -153,7 +153,7 @@ modules:
       - cp -ar dist/linux*unpacked/* /app/delta/
 
       # Install the required static files
-      - install ../run.sh /app/bin/run.sh
+      - install ../run.sh $FLATPAK_DEST/run.sh
       - install -Dm 0644 ../chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
       - install -Dm 0644 ../mime/deltachat-desktop.xml  /app/share/mime/packages/chat.delta.desktop.xml
       - install -Dm 0644 ../chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
@@ -166,8 +166,8 @@ modules:
       # Delta Chat
       - type: git
         url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.46.1
-        commit: 899f196da874148f880577b3184e01d92fca21a9
+        tag: v1.46.4
+        commit: 72b1ea26bceb05f7c719acdd34ac69f5779fd96a
         dest: main
 
       - type: file
