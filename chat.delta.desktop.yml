@@ -153,7 +153,7 @@ modules:
       - cp -ar dist/linux*unpacked/* /app/delta/
 
       # Install the required static files
-      - install ../run.sh $FLATPAK_DEST/run.sh
+      - install ../run.sh $FLATPAK_DEST/bin/run.sh
       - install -Dm 0644 ../chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
       - install -Dm 0644 ../mime/deltachat-desktop.xml  /app/share/mime/packages/chat.delta.desktop.xml
       - install -Dm 0644 ../chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
