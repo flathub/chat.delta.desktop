@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-CORE_CHECKOUT=v1.140.2
-DESKTOP_CHECKOUT=v1.46.1
+CORE_CHECKOUT=v1.142.7
+DESKTOP_CHECKOUT=v1.46.4
 
 # this script needs:
 # - serveral repos checked out next to this repo
