@@ -1,13 +1,15 @@
 #!/bin/bash
 set -e
 
+npm i -g pnpm
+
 cd ..
 git clone https://github.com/deltachat/deltachat-desktop.git --depth 10
 git clone https://github.com/deltachat/deltachat-core-rust.git --depth 10
 
 python3 -m venv .venv
 source .venv/bin/activate
-pip install aiohttp toml
+pip install aiohttp toml s3cmd
 
 git clone https://github.com/flatpak/flatpak-builder-tools/ --depth 1
 pip install pipx
