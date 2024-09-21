@@ -58,7 +58,7 @@ jq ".pnpm.supportedArchitectures.os = [\"linux\"] | .pnpm.supportedArchitectures
 mv package.new.json package.json
 echo "[desktop deps: fetching]"
 rm -rf .pnpm-store node_modules || true
-pnpm i
+pnpm i --frozen-lockfile
 echo "[desktop deps: compressing result]"
 rm ../chat.delta.desktop/generated/desktop-pnpm-cache.tar.xz || true
 tar -cJvf ../chat.delta.desktop/generated/desktop-pnpm-cache.tar.xz .pnpm-store
