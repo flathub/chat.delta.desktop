@@ -92,7 +92,7 @@ npm i --lockfile-version 2 --package-lock-only
 cd -
 
 flatpak-node-generator -o generated/sources-jsonrpc-client-npm.json -r npm ../deltachat-core-rust/deltachat-jsonrpc/typescript/package-lock.json
-# cp ../deltachat-core-rust/deltachat-jsonrpc/typescript/package-lock.json generated/deltachat-jsonrpc.typescript.package-lock.json # no idea what this is for
+cp ../deltachat-core-rust/deltachat-jsonrpc/typescript/package-lock.json generated/deltachat-jsonrpc.typescript.package-lock.json
 
 echo "[Done, you need to put these hashes into the manifest]"
 echo "core:    $CORE_COMMIT_HASH"
