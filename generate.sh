@@ -59,10 +59,18 @@ mv package.new.json package.json
 echo "[desktop deps: fetching]"
 rm -rf .pnpm-store node_modules || true
 pnpm i --frozen-lockfile
+
+echo "[desktop deps: make pnpm store reproducible -> remove 'checkedAt'-timestamps]"
+shopt -s globstar # enable glob pattern
+for file in .pnpm-store/**/*-index.json; do
+    sed -i 's/"checkedAt":[0-9]\+/"checkedAt":0/g' $file
+done
+
 echo "[desktop deps: compressing result]"
 rm ../chat.delta.desktop/generated/desktop-pnpm-cache.tar.xz || true
-tar -cJvf ../chat.delta.desktop/generated/desktop-pnpm-cache.tar.xz .pnpm-store
+tar --mtime='1970-01-01' -cJvf ../chat.delta.desktop/generated/desktop-pnpm-cache.tar.xz .pnpm-store
 cd -
+
 echo "[desktop deps upload to s3]"
 DESKTOP_DEPS_HASH=$(sha512sum generated/desktop-pnpm-cache.tar.xz | cut -d " " -f 1)
 echo "desktop deps hash: $DESKTOP_DEPS_HASH"
