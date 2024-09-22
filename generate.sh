@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+# must be tags for now
+# (if you want to use sth else, you need to read this script and modify it accordingly)
 CORE_CHECKOUT=v1.142.12
 DESKTOP_CHECKOUT=monorepo-testrelease-rc0
 
@@ -102,6 +104,28 @@ cd -
 flatpak-node-generator -o generated/sources-jsonrpc-client-npm.json -r npm ../deltachat-core-rust/deltachat-jsonrpc/typescript/package-lock.json
 cp ../deltachat-core-rust/deltachat-jsonrpc/typescript/package-lock.json generated/deltachat-jsonrpc.typescript.package-lock.json
 
-echo "[Done, you need to put these hashes into the manifest]"
-echo "core:    $CORE_COMMIT_HASH"
-echo "desktop: $DESKTOP_COMMIT_HASH"
+echo "[writing to manifest files]"
+cat >generated/desktop-git.json <<EOL
+[
+    {
+        "type": "git",
+        "url": "https://github.com/deltachat/deltachat-desktop.git",
+        "tag": "${DESKTOP_CHECKOUT}",
+        "commit": "${DESKTOP_COMMIT_HASH}",
+        "dest": "main",
+    }
+]
+EOL
+
+cat >generated/core-git.json <<EOL
+[
+    {
+        "type": "git",
+        "url": "https://github.com/deltachat/deltachat-core-rust.git",
+        "tag": "${CORE_CHECKOUT}",
+        "commit": "${CORE_COMMIT_HASH}",
+    }
+]
+EOL
+
+echo "[done]"

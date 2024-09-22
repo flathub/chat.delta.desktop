@@ -82,7 +82,7 @@ CORE_CHECKOUT=v1.140.0
 DESKTOP_CHECKOUT=v1.45.4
 ```
 
-The script then gives you the commit hashes you should add to the build manifest, there you need to also specify branch/tag.
+~~The script then gives you the commit hashes you should add to the build manifest, there you need to also specify branch/tag.~~ not nessesary anymore.
 
 After that, build it locally (if your computer is likely faster than CI, so debugging locally is quicker).
 ```

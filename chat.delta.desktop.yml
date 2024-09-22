@@ -94,13 +94,7 @@ modules:
             only-arches: ["aarch64"]
       
     sources:
-      # - type: archive
-      #   url: https://github.com/deltachat/deltachat-core-rust/archive/1.91.0.tar.gz
-      #   sha256: 2909661e9e4bab24b482e9c2b2d983a777fa5e6173484ab99571115d5aaa70aa
-      - type: git
-        url: https://github.com/deltachat/deltachat-core-rust.git
-        tag: v1.142.12
-        commit: e4ebb917126a1243c7180358a50e7d0af7742594
+      - generated/core-git.json
       - generated/sources-rust.json
       - generated/sources-jsonrpc-client-npm.json
 
@@ -167,11 +161,7 @@ modules:
       # the binaries are already included in generated-sources-npm.0.json
 
       # Delta Chat
-      - type: git
-        url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.46.8
-        commit: 5018d9d42854968c0572ada107bfec002f9d3046
-        dest: main
+      - generated/desktop-git.json
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
