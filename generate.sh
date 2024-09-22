@@ -112,7 +112,7 @@ cat >generated/desktop-git.json <<EOL
         "url": "https://github.com/deltachat/deltachat-desktop.git",
         "tag": "${DESKTOP_CHECKOUT}",
         "commit": "${DESKTOP_COMMIT_HASH}",
-        "dest": "main",
+        "dest": "main"
     }
 ]
 EOL
@@ -124,6 +124,7 @@ cat >generated/core-git.json <<EOL
         "url": "https://github.com/deltachat/deltachat-core-rust.git",
         "tag": "${CORE_CHECKOUT}",
         "commit": "${CORE_COMMIT_HASH}",
+        "dest": "/run/build"
     }
 ]
 EOL

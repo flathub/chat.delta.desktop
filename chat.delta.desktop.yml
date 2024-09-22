@@ -64,6 +64,8 @@ modules:
       append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/node20/bin
 
     build-commands:
+      - ls /run/build
+      - find *
       - node --version
       - python3 --version
       - npm cache verify
