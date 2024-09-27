@@ -69,12 +69,6 @@ pip install aiohttp toml
 ```
 </details>
 
-You also need to login to your s3 bucket () and change `S3_INTERNAL_URL` and `S3_EXTERNAL_URL` in `generate.sh` accordingly:
-```sh
-source ../.venv/bin/activate
-s3cmd --configure
-```
--> see https://docs.digitalocean.com/products/spaces/reference/s3cmd/ for more info.
 
 Then edit (put in the tags/branches you want to update to) and run the `generate.sh` script:
 ```sh

@@ -9,7 +9,7 @@ git clone https://github.com/deltachat/deltachat-core-rust.git --depth 10
 
 python3 -m venv .venv
 source .venv/bin/activate
-pip install aiohttp toml s3cmd
+pip install aiohttp toml
 
 git clone https://github.com/flatpak/flatpak-builder-tools/ --depth 1
 pip install pipx
