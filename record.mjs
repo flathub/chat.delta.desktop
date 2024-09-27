@@ -2,7 +2,7 @@
 import { createServer } from 'http';
 import { request } from 'https';
 import { createHash } from 'crypto';
-import { join } from 'path';
+import { basename, dirname, join } from 'path';
 import { writeFileSync } from 'fs';
 
 const PORT = 3000;
@@ -51,12 +51,14 @@ const server = createServer((req, res) => {
             if (!req.url) {
                 throw new Error("no req url");
             }
+            const destPath = join('npm-registry-proxy-offline-cache', req.url.endsWith(".tgz")? req.url:join(req.url, 'index.json'))
             flatpakManifest[req.url] = {
                 type: 'file',
                 url: `https://registry.npmjs.org${req.url}`,
                 sha512,
                 //TODO: decode uri?
-                "dest-filename": join('npm-registry-proxy-offline-cache', req.url.endsWith(".tgz")? req.url:join(req.url, 'index.json')),
+                dest: dirname(destPath),
+                "dest-filename": basename(destPath),
             }
         })
     });
