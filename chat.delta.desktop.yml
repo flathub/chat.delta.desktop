@@ -66,6 +66,7 @@ modules:
 
     build-commands:
       - ls /run/build
+      - ls
       - pwd
       - node --version
       - python3 --version
@@ -113,9 +114,6 @@ modules:
       env:      
         NPM_CONFIG_LOGLEVEL: info
 
-        # Tell caches where we pre-downloaded things.
-        PNPM_HOME: /run/build/delta/flatpak-node/pnpm-home/
-
         XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
         TMPDIR: /run/build/delta/flatpak-node/tmp
 
@@ -128,7 +126,6 @@ modules:
       - ls
       # fixup manually installed pnpm package (why manual? because global npm install is not possible because global node modules dir is read-only)
       - mv ../pnpm/bin/pnpm.cjs ../pnpm/bin/pnpm
-      - ls ../flatpak-node/pnpm-home
       - ls -lah /run/build/
       - mkdir -p $TMPDIR
       - node --version
