@@ -124,9 +124,33 @@ cat >generated/core-git.json <<EOL
         "url": "https://github.com/deltachat/deltachat-core-rust.git",
         "tag": "${CORE_CHECKOUT}",
         "commit": "${CORE_COMMIT_HASH}",
-        "dest": "/run/build"
+        "dest": "."
     }
 ]
+EOL
+
+echo "[pnpm package to install pnpm]"
+result=$(npm view pnpm@9.11.0 --json | jq "{url: .dist.tarball, integrity: .dist.integrity}")
+
+# Use Python to decode the integrity hash and construct the manifest source item
+python3 - <<EOL > generated/pnpm.json
+import json
+import sys
+import base64
+
+data = json.loads('''$result''')
+
+if data.get("integrity", "").startswith("sha512-"):
+    output = {
+        "type": "archive",
+        "url": data["url"],
+        "sha512": base64.b64decode(data["integrity"].replace("sha512-", "")).hex(),
+        "dest": "pnpm"
+    }
+    print(json.dumps(output, indent=2))
+else:
+    print("Input package has unexpected hash, expected sha512", file=sys.stderr)
+    sys.exit(1)
 EOL
 
 echo "[done]"
