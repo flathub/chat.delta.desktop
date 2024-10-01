@@ -155,10 +155,14 @@ modules:
         ./bin/link_core/link_local.sh
         kill $REPLAY_PID
       - mkdir -p /app/delta
+      - |
+        cd packages/target-electron
+        pnpm run build4production
+        pnpm run pack:linux:dir --offline --verbose
       # The x86-64 build seems to be put in "linux-unpacked",
       # the aarch64 build in "linux-arm64-unpacked"
       # we try to catch both paths with the wildcard
-      - cp -ar dist/linux*unpacked/* /app/delta/
+      - cp -ar packages/target-electron/dist/linux*unpacked/* /app/delta/
 
       # Install the required static files
       - install ../run.sh $FLATPAK_DEST/bin/run.sh

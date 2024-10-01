@@ -9,6 +9,16 @@ const PORT = 3000;
 
 const flatpakManifest = {}
 
+/** @type {string[]} */
+const packages_which_should_dl_metdata = []
+
+function stripSuffix(str, suffix) {
+    if (str.endsWith(suffix)) {
+        return str.slice(0, -suffix.length);
+    }
+    return str; // Return the original string if it doesn't end with the suffix
+}
+
 const server = createServer((req, res) => {
     if (!req.url) {
         res.writeHead(400)
@@ -35,7 +45,7 @@ const server = createServer((req, res) => {
                 hash.update(chunk)
             });
             proxyResponse.on('end', () => {
-                console.log("end", data.length)
+                // console.log("end", data.length)
                 data = data.replace(/https:\/\/registry\.npmjs\.org/g, 'http://localhost:3000');
                 res.end(data);
             });
@@ -51,7 +61,14 @@ const server = createServer((req, res) => {
             if (!req.url) {
                 throw new Error("no req url");
             }
-            const destPath = join('npm-registry-proxy-offline-cache', req.url.endsWith(".tgz")? req.url:join(req.url, 'index.json'))
+
+            if (req.url.endsWith(".tgz")) {
+                packages_which_should_dl_metdata.push(
+                    stripSuffix(stripSuffix(req.url, basename(req.url)), '/-/')
+                )
+            }
+
+            const destPath = join('npm-registry-proxy-offline-cache', req.url.endsWith(".tgz") ? req.url : join(req.url, 'index.json'))
             flatpakManifest[req.url] = {
                 type: 'file',
                 url: `https://registry.npmjs.org${req.url}`,
@@ -79,14 +96,20 @@ server.listen(PORT, () => {
     console.log(`Proxy server is running on http://localhost:${PORT}`);
 });
 
-function save() {
+async function save() {
+    // force downloading of index files
+    const indexUrls = packages_which_should_dl_metdata.map(relativeUrl => `http://localhost:${PORT}${relativeUrl}`)
+    // console.log(indexUrls);
+
+    await Promise.all(indexUrls.map(url => fetch(url)))
+
     const arrayManifest = Object.keys(flatpakManifest).map(url => flatpakManifest[url])
-    arrayManifest.sort((a,b)=> a.url.localeCompare(b.url))
+    arrayManifest.sort((a, b) => a.url.localeCompare(b.url))
     writeFileSync('generated/proxy-registry-cache-manifest.json', JSON.stringify(arrayManifest, null, 2), 'utf-8')
 }
 
-process.on('SIGINT', () => {
-    save()
+process.on('SIGINT', async (ev) => {
+    await save()
     process.exit(0)
 })
 
