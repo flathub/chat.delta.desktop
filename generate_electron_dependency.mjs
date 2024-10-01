@@ -39,19 +39,20 @@ function findHashFor(filename) {
 }
 
 const electron = [
-  {
-    type: "file",
-    url: url_shasums,
-    sha256: shasum_file_hash,
-    "dest-filename": `SHASUMS256.txt-${electron_version}`,
-    dest: "cache/electron",
-  },
+  // not actually needed see https://www.electronjs.org/docs/latest/tutorial/installation#cache
+  // {
+  //   type: "file",
+  //   url: url_shasums,
+  //   sha256: shasum_file_hash,
+  //   "dest-filename": `SHASUMS256.txt-${electron_version}`,
+  //   dest: "cache/electron",
+  // },
   {
     type: "file",
     url: `${base_url}/${arm64_filename}`,
     sha256: findHashFor(arm64_filename),
     "dest-filename": arm64_filename,
-    dest: "cache/electron",
+    dest: "cache/electron/" + findHashFor(arm64_filename),
     "only-arches": ["aarch64"],
   },
   {
@@ -59,7 +60,7 @@ const electron = [
     url: `${base_url}/${amd64_filename}`,
     sha256: findHashFor(amd64_filename),
     "dest-filename": amd64_filename,
-    dest: "cache/electron",
+    dest: "cache/electron/" + findHashFor(arm64_filename),
     "only-arches": ["x86_64"],
   },
 ];
