@@ -44,14 +44,14 @@ const electron = [
     url: url_shasums,
     sha256: shasum_file_hash,
     "dest-filename": `SHASUMS256.txt-${electron_version}`,
-    dest: "flatpak-node/cache/electron",
+    dest: "cache/electron",
   },
   {
     type: "file",
     url: `${base_url}/${arm64_filename}`,
     sha256: findHashFor(arm64_filename),
     "dest-filename": arm64_filename,
-    dest: "flatpak-node/cache/electron",
+    dest: "cache/electron",
     "only-arches": ["aarch64"],
   },
   {
@@ -59,7 +59,7 @@ const electron = [
     url: `${base_url}/${amd64_filename}`,
     sha256: findHashFor(amd64_filename),
     "dest-filename": amd64_filename,
-    dest: "flatpak-node/cache/electron",
+    dest: "cache/electron",
     "only-arches": ["x86_64"],
   },
 ];
