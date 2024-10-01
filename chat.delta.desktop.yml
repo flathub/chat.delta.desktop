@@ -155,10 +155,13 @@ modules:
         ./bin/link_core/link_local.sh
         kill $REPLAY_PID
       - mkdir -p /app/delta
-      - |
-        cd packages/target-electron
-        pnpm run build4production
-        pnpm run pack:linux:dir
+
+      # build & package dc desktop
+      - pnpm --filter @deltachat-desktop/target-electron build4production
+      - pnpm --filter @deltachat-desktop/target-electron pack:generate_config
+      - pnpm --filter @deltachat-desktop/target-electron pack:patch-node-modules
+      - pnpm --filter @deltachat-desktop/target-electron pack:linux:dir
+
       # The x86-64 build seems to be put in "linux-unpacked",
       # the aarch64 build in "linux-arm64-unpacked"
       # we try to catch both paths with the wildcard
