@@ -119,4 +119,8 @@ else:
     sys.exit(1)
 EOL
 
+echo "[generate manifest that puts electron binary into cache]"
+
+node generate_electron_dependency.mjs
+
 echo "[done]"
