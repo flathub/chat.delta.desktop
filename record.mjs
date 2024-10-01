@@ -81,6 +81,7 @@ server.listen(PORT, () => {
 
 function save() {
     const arrayManifest = Object.keys(flatpakManifest).map(url => flatpakManifest[url])
+    arrayManifest.sort((a,b)=> a.url.localeCompare(b.url))
     writeFileSync('generated/proxy-registry-cache-manifest.json', JSON.stringify(arrayManifest, null, 2), 'utf-8')
 }
 
