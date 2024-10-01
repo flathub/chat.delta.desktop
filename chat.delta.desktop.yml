@@ -158,7 +158,7 @@ modules:
       - |
         cd packages/target-electron
         pnpm run build4production
-        pnpm run pack:linux:dir --offline --verbose
+        pnpm run pack:linux:dir
       # The x86-64 build seems to be put in "linux-unpacked",
       # the aarch64 build in "linux-arm64-unpacked"
       # we try to catch both paths with the wildcard
