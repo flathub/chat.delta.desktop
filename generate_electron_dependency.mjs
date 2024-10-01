@@ -1,5 +1,5 @@
 //@ts-check
-import { createHash } from "crypto";
+// import { createHash } from "crypto";
 import { readFileSync, writeFileSync } from "fs";
 
 const packages = JSON.parse(
@@ -14,18 +14,18 @@ const electron_version = electron_package.url.match(/\d+?.\d+?.\d+?/)[0];
 
 console.log("found electron version:", electron_version);
 
-function calculateSHA256(blob) {
-  const hash = createHash("sha256");
-  hash.update(blob);
-  return hash.digest("hex");
-}
+// function calculateSHA256(blob) {
+//   const hash = createHash("sha256");
+//   hash.update(blob);
+//   return hash.digest("hex");
+// }
 
 const base_url = `https://github.com/electron/electron/releases/download/v${electron_version}`;
 
 const url_shasums = `${base_url}/SHASUMS256.txt`;
 const request_shasums = await fetch(url_shasums);
 const blob = await request_shasums.blob();
-const shasum_file_hash = calculateSHA256(Buffer.from(await blob.arrayBuffer()));
+// const shasum_file_hash = calculateSHA256(Buffer.from(await blob.arrayBuffer()));
 const shasums = (await blob.text()).split("\n").map((line) => line.split(" *"));
 
 // console.log({ shasums, shasum_file_hash });
@@ -60,15 +60,23 @@ const electron = [
     url: `${base_url}/${amd64_filename}`,
     sha256: findHashFor(amd64_filename),
     "dest-filename": amd64_filename,
-    dest: "cache/electron/" + '33ad7cf20a81d15fc3ce9cc6dab119e211030607726ff9cdca91887b57227c04', // TODO: find out how to get this in code ,//findHashFor(arm64_filename),
+    dest:
+      "cache/electron/" +
+      "33ad7cf20a81d15fc3ce9cc6dab119e211030607726ff9cdca91887b57227c04", // TODO: find out how to get this in code ,//findHashFor(arm64_filename),
     "only-arches": ["x86_64"],
   },
 ];
+
+// Not sure why, but electron-builder and @electron/get have different paths
+const electron_builder = electron.map((item) => ({
+  ...item,
+  dest: "cache/electron",
+}));
 
 // console.log(electron);
 
 writeFileSync(
   "generated/electron-cache-manifest.json",
-  JSON.stringify(electron, null, 2),
+  JSON.stringify([...electron, ...electron_builder], null, 2),
   "utf-8"
 );
