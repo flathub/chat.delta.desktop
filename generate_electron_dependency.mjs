@@ -60,7 +60,7 @@ const electron = [
     url: `${base_url}/${amd64_filename}`,
     sha256: findHashFor(amd64_filename),
     "dest-filename": amd64_filename,
-    dest: "cache/electron/" + findHashFor(arm64_filename),
+    dest: "cache/electron/" + '33ad7cf20a81d15fc3ce9cc6dab119e211030607726ff9cdca91887b57227c04', // TODO: find out how to get this in code ,//findHashFor(arm64_filename),
     "only-arches": ["x86_64"],
   },
 ];

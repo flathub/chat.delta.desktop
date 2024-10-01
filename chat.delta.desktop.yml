@@ -144,7 +144,7 @@ modules:
         node ../replay.mjs &
         REPLAY_PID=$!
         env DEBUG="*" pnpm install --prefer-offline --frozen-lockfile
-        kill -SIGINT $REPLAY_PID
+        kill $REPLAY_PID
       # install the core we build locally instead of the prebuilds
       # link script expect it to be at `../deltachat-core-rust` so we link it
       - ln -s /app/dc-core ../deltachat-core-rust
@@ -153,7 +153,7 @@ modules:
         node ../replay.mjs &
         REPLAY_PID=$!
         ./bin/link_core/link_local.sh
-        kill -SIGINT $REPLAY_PID
+        kill $REPLAY_PID
       - mkdir -p /app/delta
       # The x86-64 build seems to be put in "linux-unpacked",
       # the aarch64 build in "linux-arm64-unpacked"
