@@ -121,7 +121,8 @@ modules:
         VERSION_INFO_GIT_REF: "flathub"
         NO_ASAR: "true"
 
-        electron_config_cache: /run/build/delta/cache/electron
+        ELECTRON_CONFIG_CACHE: /run/build/delta/cache/electron
+        ELECTRON_CACHE: /run/build/delta/cache/electron
 
     build-commands:
       - pwd
