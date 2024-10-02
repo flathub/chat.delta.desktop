@@ -14,7 +14,7 @@ const server = createServer(async (req, res) => {
         return res.end('URL missing')
     }
 
-    let filePath = join(base_directory, req.url.endsWith(".tgz") ? req.url : join(req.url, 'index.json'))
+    let filePath = decodeURIComponent(join(base_directory, req.url.endsWith(".tgz") ? req.url : join(req.url, 'index.json')))
     console.log(req.url, filePath);
 
 
