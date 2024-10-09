@@ -3,7 +3,7 @@ import { createServer } from 'http';
 import { request } from 'https';
 import { createHash } from 'crypto';
 import { basename, dirname, join } from 'path';
-import { writeFileSync } from 'fs';
+import { mkdirSync, writeFileSync } from 'fs';
 
 const PORT = 3000;
 
@@ -47,6 +47,27 @@ const server = createServer((req, res) => {
             proxyResponse.on('end', () => {
                 // console.log("end", data.length)
                 data = data.replace(/https:\/\/registry\.npmjs\.org/g, 'http://localhost:3000');
+
+                if (req.url) {
+                    if (!req.url.endsWith(".tgz")) {
+                        const filename = join(req.url, 'index.json')
+                        const dest = join(
+                            'generated/proxy-registry-cache-indices/',
+                            dirname(filename))
+                        mkdirSync(dest, { recursive: true })
+                        writeFileSync(
+                            join(
+                                dest,
+                                basename(filename)
+                            ),
+                            // make it take multiple lines, otherwise git diff would not be more efficient than with inlining into builder manifest
+                            JSON.stringify(JSON.parse(data), null, 1),
+                            'utf-8')
+                    }
+                } else {
+                    console.log("req.url is undefined");
+                }
+
                 res.end(data);
             });
         } else {
@@ -66,6 +87,13 @@ const server = createServer((req, res) => {
                 packages_which_should_dl_metdata.push(
                     stripSuffix(stripSuffix(req.url, basename(req.url)), '/-/')
                 )
+            } else {
+                return /* because we download index.json files into generated folder now
+                    why? because they are not static and might change between generating and building
+                    why not type:inline?
+                     - githubs file limit is 100mb, the filesize with inline was 207mb
+                     - in order to reduce git diff sizes. (single line 3mb json objects might not be effiecient to diff for git?)
+                */
             }
 
             const destPath = join('npm-registry-proxy-offline-cache', req.url.endsWith(".tgz") ? req.url : join(req.url, 'index.json'))
@@ -73,7 +101,6 @@ const server = createServer((req, res) => {
                 type: 'file',
                 url: `https://registry.npmjs.org${req.url}`,
                 sha512,
-                //TODO: decode uri?
                 dest: dirname(destPath),
                 "dest-filename": basename(destPath),
             }
@@ -105,6 +132,10 @@ async function save() {
 
     const arrayManifest = Object.keys(flatpakManifest).map(url => flatpakManifest[url])
     arrayManifest.sort((a, b) => a.url.localeCompare(b.url))
+    arrayManifest.push({
+        "type": "shell",
+        "commands": ["cp -r generated/proxy-registry-cache-indices/* npm-registry-proxy-offline-cache"]
+    })
     writeFileSync('generated/proxy-registry-cache-manifest.json', JSON.stringify(arrayManifest, null, 2), 'utf-8')
 }
 
