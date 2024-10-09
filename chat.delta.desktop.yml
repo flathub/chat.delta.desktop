@@ -150,7 +150,7 @@ modules:
       # install the core we build locally instead of the prebuilds
       # link script expect it to be at `../deltachat-core-rust` so we link it
       - ln -s /app/dc-core ../deltachat-core-rust
-      - sed -i "s/pnpm add/pnpm add --prefer-offline/g" ./bin/link_core/link_local.sh
+      - sed -i "s/pnpm add/pnpm add --prefer-offline --frozen-lockfile/g" ./bin/link_core/link_local.sh
       - |
         node ../replay.mjs &
         REPLAY_PID=$!
