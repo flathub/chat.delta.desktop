@@ -128,7 +128,6 @@ modules:
     build-commands:
       - pwd
       - ls
-      - cp -r ../generated/proxy-registry-cache-indices/* ../npm-registry-proxy-offline-cache
       # fixup manually installed pnpm package (why manual? because global npm install is not possible because global node modules dir is read-only)
       - mv ../pnpm/bin/pnpm.cjs ../pnpm/bin/pnpm
       - ls -lah /run/build/

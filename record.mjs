@@ -8,6 +8,7 @@ import { mkdirSync, writeFileSync } from 'fs';
 const PORT = 3000;
 
 const flatpakManifest = {}
+const flatpakManifestIndices = []
 
 /** @type {string[]} */
 const packages_which_should_dl_metdata = []
@@ -55,14 +56,21 @@ const server = createServer((req, res) => {
                             'generated/proxy-registry-cache-indices/',
                             dirname(filename))
                         mkdirSync(dest, { recursive: true })
+                        const the_path = join(
+                            dest,
+                            basename(filename)
+                        )
                         writeFileSync(
-                            join(
-                                dest,
-                                basename(filename)
-                            ),
+                            the_path,
                             // make it take multiple lines, otherwise git diff would not be more efficient than with inlining into builder manifest
                             JSON.stringify(JSON.parse(data), null, 1),
                             'utf-8')
+                        flatpakManifestIndices.push({
+                            type: "file",
+                            path: the_path,
+                            dest: join('npm-registry-proxy-offline-cache', req.url),
+                            "dest-filename": basename(the_path)
+                        })
                     }
                 } else {
                     console.log("req.url is undefined");
@@ -132,7 +140,10 @@ async function save() {
 
     const arrayManifest = Object.keys(flatpakManifest).map(url => flatpakManifest[url])
     arrayManifest.sort((a, b) => a.url.localeCompare(b.url))
-    writeFileSync('generated/proxy-registry-cache-manifest.json', JSON.stringify(arrayManifest, null, 2), 'utf-8')
+
+    flatpakManifestIndices.sort((a, b) => a.path.localeCompare(b.path))
+
+    writeFileSync('generated/proxy-registry-cache-manifest.json', JSON.stringify([...arrayManifest, ...flatpakManifestIndices], null, 2), 'utf-8')
 }
 
 process.on('SIGINT', async (ev) => {
