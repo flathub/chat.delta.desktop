@@ -1,0 +1,145 @@
+{
+ "_id": "@hypnosphi/create-react-context",
+ "_rev": "1-57ab285d924625e5a5cfa289e5bde5ca",
+ "name": "@hypnosphi/create-react-context",
+ "dist-tags": {
+  "latest": "0.3.1"
+ },
+ "versions": {
+  "0.3.1": {
+   "name": "@hypnosphi/create-react-context",
+   "publishConfig": {
+    "access": "public"
+   },
+   "version": "0.3.1",
+   "description": "Polyfill for the proposed React context API",
+   "main": "lib/index.js",
+   "typings": "lib/index.d.ts",
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/thejameskyle/create-react-context"
+   },
+   "author": {
+    "name": "James Kyle",
+    "email": "me@thejameskyle.com"
+   },
+   "license": "MIT",
+   "keywords": [
+    "react",
+    "context",
+    "contextTypes",
+    "polyfill",
+    "ponyfill"
+   ],
+   "scripts": {
+    "test": "jest",
+    "flow": "flow",
+    "format": "prettier --write '**/*.{js,md,json,js.flow,d.ts}'",
+    "build": "babel src -d lib --copy-files --ignore __tests__",
+    "prepublish": "yarn build",
+    "commit": "lint-staged"
+   },
+   "dependencies": {
+    "gud": "^1.0.0",
+    "warning": "^4.0.3"
+   },
+   "peerDependencies": {
+    "prop-types": "^15.0.0",
+    "react": ">=0.14.0"
+   },
+   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "enzyme-to-json": "^3.2.2",
+    "flow-bin": "^0.60.1",
+    "husky": "^0.14.3",
+    "jest": "^21.2.1",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.1",
+    "prop-types": "^15.6.0",
+    "raf": "^3.4.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+   },
+   "lint-staged": {
+    "*.{js,md,json,js.flow,d.ts}": [
+     "prettier --write",
+     "git add"
+    ]
+   },
+   "jest": {
+    "snapshotSerializers": [
+     "enzyme-to-json/serializer"
+    ]
+   },
+   "licenseText": "Copyright (c) 2017-present James Kyle <me@thejameskyle.com>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+   "_id": "@hypnosphi/create-react-context@0.3.1",
+   "dist": {
+    "shasum": "f8bfebdc7665f5d426cba3753e0e9c7d3154d7c6",
+    "integrity": "sha512-V1klUed202XahrWJLLOT3EXNeCpFHCcJntdFGI15ntCwau+jfT386w7OFTMaCqOgXUH1fa0w/I1oZs+i/Rfr0A==",
+    "tarball": "http://localhost:3000/@hypnosphi/create-react-context/-/create-react-context-0.3.1.tgz",
+    "fileCount": 9,
+    "unpackedSize": 13746,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJf/KDMCRA9TVsSAnZWagAArzUP/3wja06M67XPdxEAXLfX\nt3HKHW7hWeiv8xTanaacw54G+JKX29BjdT+V3/HqP+qUfVnR0uVfEoBx70Pk\nyWOd19t9jFHvC8TTs15NM4cdiLlVlxVhxmq2AzCXCRn/cBuHfrzLzyorK4mw\nCQFEKuDusggoFbEz3IIUOmjQ09NXRVaHLAKCXDuawRNynp4qJlbs6iGdNYIC\nhZ4p4jjy/nVd0F/6+k0vIU/PN6tOaKVYk547599vzG+DVUkz8iS8yUl6EeQi\n+QGCrCklGtyHoLJ2mRXOacALjwuwmebaYjRbGz2PDtAHziRbOG/5zBLWJ7k6\nD/IyM+xCyxbdDa8/JEqcX9Xq9nGxWo/+gh66YeUXa4GnptG6jKx4w7CJX2A3\niKH/SPvSiX45x6LRchczxfNAWrnWk13aI6nsXqIwHRG5UfyTUeLb9FlMyyTU\nDvWcx29dJ7tja/Vfh3Dymo8Gx5tm1Y3pdi7opSooClsgav7ba7/WkKblZgTJ\n7Hv6iyCOSoXXtzB5YD2Sbx7VoZXTB2XR43+swaIwc/f3AukMYaNL4ILyAkJk\nfZuh+wjOs5zVbEIwW447KidOtynqWKjk6M5hRFQjFK9i1J9Gh91DbkKHRrFM\nBrZe1vY4sesb9Ef15NqS7Yq6QeRL231/TaVrAvccv/cKZnanVnCprwDVEP2q\n0nh/\r\n=d1gs\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEYCIQDYgWBdV1IiGw+QjDBY4ZQOUqMW5Rdl3JZwUxGyjRP3fwIhAMbg4PNLb0cgWTkvk4wjWWSGk+TbqiVVNXRrgXY1bZ9b"
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "hypnosphi",
+    "email": "talpa@yandex.ru"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "hypnosphi",
+     "email": "talpa@yandex.ru"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/create-react-context_0.3.1_1610391756290_0.16407634917651892"
+   },
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2021-01-11T19:02:36.226Z",
+  "0.3.1": "2021-01-11T19:02:36.411Z",
+  "modified": "2022-04-05T18:57:21.478Z"
+ },
+ "maintainers": [
+  {
+   "name": "hypnosphi",
+   "email": "talpa@yandex.ru"
+  }
+ ],
+ "description": "Polyfill for the proposed React context API",
+ "keywords": [
+  "react",
+  "context",
+  "contextTypes",
+  "polyfill",
+  "ponyfill"
+ ],
+ "repository": {
+  "type": "git",
+  "url": "https://github.com/thejameskyle/create-react-context"
+ },
+ "author": {
+  "name": "James Kyle",
+  "email": "me@thejameskyle.com"
+ },
+ "license": "MIT",
+ "readme": "# create-react-context\n\n> Polyfill for the [proposed React context API](https://github.com/reactjs/rfcs/pull/2)\n\n## Install\n\n```sh\nyarn add create-react-context\n```\n\nYou'll need to also have `react` and `prop-types` installed.\n\n## API\n\n```js\nconst Context = createReactContext(defaultValue);\n// <Context.Provider value={providedValue}>{children}</Context.Provider>\n// ...\n// <Context.Consumer>{value => children}</Context.Consumer>\n```\n\n## Example\n\n```js\n// @flow\nimport React, { type Node } from 'react';\nimport createReactContext, { type Context } from 'create-react-context';\n\ntype Theme = 'light' | 'dark';\n// Pass a default theme to ensure type correctness\nconst ThemeContext: Context<Theme> = createReactContext('light');\n\nclass ThemeToggler extends React.Component<\n  { children: Node },\n  { theme: Theme }\n> {\n  state = { theme: 'light' };\n  render() {\n    return (\n      // Pass the current context value to the Provider's `value` prop.\n      // Changes are detected using strict comparison (Object.is)\n      <ThemeContext.Provider value={this.state.theme}>\n        <button\n          onClick={() => {\n            this.setState(state => ({\n              theme: state.theme === 'light' ? 'dark' : 'light'\n            }));\n          }}\n        >\n          Toggle theme\n        </button>\n        {this.props.children}\n      </ThemeContext.Provider>\n    );\n  }\n}\n\nclass Title extends React.Component<{ children: Node }> {\n  render() {\n    return (\n      // The Consumer uses a render prop API. Avoids conflicts in the\n      // props namespace.\n      <ThemeContext.Consumer>\n        {theme => (\n          <h1 style={{ color: theme === 'light' ? '#000' : '#fff' }}>\n            {this.props.children}\n          </h1>\n        )}\n      </ThemeContext.Consumer>\n    );\n  }\n}\n```\n\n## Compatibility\n\nThis package only \"ponyfills\" the `React.createContext` API, not other\nunrelated React 16+ APIs. If you are using a version of React <16, keep\nin mind that you can only use features available in that version.\n\nFor example, you cannot pass children types aren't valid pre React 16:\n\n```js\n<Context.Provider>\n  <div/>\n  <div/>\n</Context.Provider>\n```\n\nIt will throw `A valid React element (or null) must be returned. You may have returned undefined, an array or some other invalid object.` because `<Context.Provider>` can only receive a single child element. To fix the error just wrap everyting in a single `<div>`:\n\n```js\n<Context.Provider>\n  <div>\n    <div/>\n    <div/>\n  </div>\n</Context.Provider>\n```\n",
+ "readmeFilename": "README.md"
+}

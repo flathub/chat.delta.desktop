@@ -1,0 +1,620 @@
+{
+ "_id": "@malept/cross-spawn-promise",
+ "_rev": "4-982c1e4736bad912cdc743ae4b5332d2",
+ "name": "@malept/cross-spawn-promise",
+ "dist-tags": {
+  "latest": "2.0.0"
+ },
+ "versions": {
+  "1.0.0": {
+   "name": "@malept/cross-spawn-promise",
+   "version": "1.0.0",
+   "description": "Promisified version of cross-spawn",
+   "main": "dist/src/index.js",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malept/cross-spawn-promise.git"
+   },
+   "author": {
+    "name": "Mark Lee"
+   },
+   "license": "Apache-2.0",
+   "engines": {
+    "node": ">= 10"
+   },
+   "scripts": {
+    "ava": "ava",
+    "build": "tsc",
+    "codecov": "nyc report --reporter=text-lcov | codecov --disable=gcov --pipe --env=CI_OS",
+    "coverage": "nyc ava",
+    "docs": "typedoc",
+    "lint": "eslint --ext .ts .",
+    "prepare": "npm run build",
+    "test": "yarn lint && yarn ava"
+   },
+   "dependencies": {
+    "cross-spawn": "^7.0.1"
+   },
+   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/cross-spawn": "^6.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "ava": "^3.3.0",
+    "codecov": "^3.6.5",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-ava": "^10.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "nyc": "^15.0.0",
+    "prettier": "^1.19.1",
+    "prettier-eslint-cli": "^5.0.0",
+    "source-map-support": "^0.5.16",
+    "ts-node": "^8.6.2",
+    "typedoc": "^0.16.9",
+    "typescript": "^3.7.5"
+   },
+   "ava": {
+    "extensions": [
+     "ts"
+    ],
+    "require": [
+     "ts-node/register"
+    ]
+   },
+   "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+     "ecmaVersion": "2018",
+     "sourceType": "module"
+    },
+    "plugins": [
+     "@typescript-eslint"
+    ],
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/eslint-recommended",
+     "plugin:@typescript-eslint/recommended",
+     "plugin:ava/recommended",
+     "plugin:import/errors",
+     "plugin:import/warnings",
+     "plugin:import/typescript",
+     "plugin:prettier/recommended",
+     "plugin:promise/recommended",
+     "prettier",
+     "prettier/@typescript-eslint"
+    ],
+    "rules": {
+     "strict": "error"
+    }
+   },
+   "eslintIgnore": [
+    "dist"
+   ],
+   "funding": {
+    "url": "https://github.com/malept/cross-spawn-promise?sponsor=1"
+   },
+   "husky": {
+    "pre-commit": "lint-staged"
+   },
+   "lint-staged": {
+    "*.json": "prettier --write",
+    "*.ts": "prettier-eslint --write"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "gitHead": "850814b128ebf2087b55810eb761419da4618a04",
+   "bugs": {
+    "url": "https://github.com/malept/cross-spawn-promise/issues"
+   },
+   "homepage": "https://github.com/malept/cross-spawn-promise#readme",
+   "_id": "@malept/cross-spawn-promise@1.0.0",
+   "_nodeVersion": "10.19.0",
+   "_npmVersion": "6.13.4",
+   "dist": {
+    "integrity": "sha512-wE6Y5vqqBE0jATZT1oev3twD1beEcBIDwbrZVt9mekFEv3H/REyjdHCr0qulozZsp6DUya3ituJVnC4YacHO9w==",
+    "shasum": "dcd07bc45e818d945d400247a297fc1d95e7766c",
+    "tarball": "http://localhost:3000/@malept/cross-spawn-promise/-/cross-spawn-promise-1.0.0.tgz",
+    "fileCount": 6,
+    "unpackedSize": 21810,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeRd7yCRA9TVsSAnZWagAAUFYQAIKI9iHPzDeSB9DWi3I+\n993pJ47ULGq5wEPwosNv/Sl8NOyeC2CpVVCwQBDRlwtAzhy7h/R5AzCBRPs0\nqXjWvhzZxVHW+jujM7TKRM8aEiVUWHTwbxbZj15gPfLYP3ai/0AlToSrE46L\npigBNivVERSlXp7f5/UmdxmpLrm415K2pWIby6/M/s5+HZ59N3MVEmG7iC2T\nCnq4E5eG0GluPTuRi5RdblnbAddIXOHLEbeDn0ce7Im/iaKnvUz4jxIZT8+U\nL8oo1munSRv+AqUy/zj1BHkPJ9rMPBjhqhhAokjSyy0QURaF46rluE4DSRBD\nkrz2TJPa2ChH+sf6nUgI9HdjG4M20IbmCWfCIg+G1ZXhrHq+4IPo7lZQbVCY\nQrDkLFg24oJtBIutw1SUiFTDU1tqoQhhiml0GfvEB4isidr9lLSakfPxFCSn\ncpXHxPLf1cTxVdQ9cYhYijy15E1O7qEkIo//+oSLU6RCix+jJtnsUCQ2jGIl\nuhomdLga6rJfz8PJh3/E8bwbXEPKY9uQpOFXHKLtuJhZlZ8XFeVd8e+u6KyP\n357NKQrEzr3BniSBv1ZYBEM/+nftsSj7D5X7DAk444GtQX37UmorrQfX6er4\nfUzXkQLbB+zTz8RooKKMQPWOcHR8vRn8hpWKhHJdp2C5nE1ywkmZqfrBTT8n\n2pTi\r\n=cnLE\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIBWiitLjXDKzR+co/PPr8kGKXcmXYkYrQOTJEfZKJFaFAiEAk7xBXwk7i73GsqBANRMeVr/N0sjjgJ6XXRgSNR5w6A0="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "malept",
+     "email": "nodejs.npm.nospam@lazymalevolence.com"
+    }
+   ],
+   "_npmUser": {
+    "name": "malept",
+    "email": "nodejs.npm.nospam@lazymalevolence.com"
+   },
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cross-spawn-promise_1.0.0_1581637362502_0.8659095359172013"
+   },
+   "_hasShrinkwrap": false
+  },
+  "1.1.0": {
+   "name": "@malept/cross-spawn-promise",
+   "version": "1.1.0",
+   "description": "Promisified version of cross-spawn",
+   "main": "dist/src/index.js",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malept/cross-spawn-promise.git"
+   },
+   "author": {
+    "name": "Mark Lee"
+   },
+   "license": "Apache-2.0",
+   "engines": {
+    "node": ">= 10"
+   },
+   "scripts": {
+    "ava": "ava",
+    "build": "tsc",
+    "codecov": "nyc report --reporter=text-lcov | codecov --disable=gcov --pipe --env=CI_OS",
+    "coverage": "nyc ava",
+    "docs": "typedoc",
+    "lint": "prettier --check . && eslint --ext .ts .",
+    "prepare": "npm run build",
+    "test": "yarn lint && yarn ava"
+   },
+   "dependencies": {
+    "cross-spawn": "^7.0.1"
+   },
+   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/cross-spawn": "^6.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "ava": "^3.3.0",
+    "codecov": "^3.6.5",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-ava": "^10.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "nyc": "^15.0.0",
+    "prettier": "^2.0.1",
+    "source-map-support": "^0.5.16",
+    "ts-node": "^8.6.2",
+    "typedoc": "^0.17.3",
+    "typescript": "^3.7.5"
+   },
+   "ava": {
+    "extensions": [
+     "ts"
+    ],
+    "require": [
+     "ts-node/register"
+    ]
+   },
+   "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+     "ecmaVersion": "2018",
+     "sourceType": "module"
+    },
+    "plugins": [
+     "@typescript-eslint"
+    ],
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/eslint-recommended",
+     "plugin:@typescript-eslint/recommended",
+     "plugin:ava/recommended",
+     "plugin:import/errors",
+     "plugin:import/warnings",
+     "plugin:import/typescript",
+     "plugin:prettier/recommended",
+     "plugin:promise/recommended",
+     "prettier",
+     "prettier/@typescript-eslint"
+    ],
+    "rules": {
+     "strict": "error"
+    }
+   },
+   "eslintIgnore": [
+    "dist"
+   ],
+   "funding": {
+    "url": "https://github.com/malept/cross-spawn-promise?sponsor=1"
+   },
+   "husky": {
+    "pre-commit": "lint-staged"
+   },
+   "lint-staged": {
+    "*.{json,md,yml}": "prettier --write",
+    "*.ts": [
+     "prettier --write",
+     "eslint --fix"
+    ]
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "gitHead": "f9ab416ca961b22aafbc25119e57f6cb6e7cf3f7",
+   "bugs": {
+    "url": "https://github.com/malept/cross-spawn-promise/issues"
+   },
+   "homepage": "https://github.com/malept/cross-spawn-promise#readme",
+   "_id": "@malept/cross-spawn-promise@1.1.0",
+   "_nodeVersion": "10.19.0",
+   "_npmVersion": "6.13.4",
+   "dist": {
+    "integrity": "sha512-GeIK5rfU1Yd7BZJQPTGZMMmcZy5nhRToPXZcjaDwQDRSewdhp648GT2E4dh+L7+Io7AOW6WQ+GR44QSzja4qxg==",
+    "shasum": "258fde4098f5004a56db67c35f33033af64810f6",
+    "tarball": "http://localhost:3000/@malept/cross-spawn-promise/-/cross-spawn-promise-1.1.0.tgz",
+    "fileCount": 6,
+    "unpackedSize": 23720,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJef+sRCRA9TVsSAnZWagAARJIP/2cu/CBtH8wcpNJtbabR\nKi2hYlAiu8fTihGeca4DZ12jmf/O525mK2jJBqf4dk1rp5N9PzfZ3suO6ZJa\ngRWu2YIcR1CLaBKstyF/L+HrRU+rrxDIYgFfLokS+R0rF1jj7+CX9ISSb4Lj\njCepLLN/PZ5jgtzPItP2I7aeQf2W7nDjT+Bgl4fgd2FRL7l7wr+e6BxuK9tI\nmya1TLVaL3cj2WDg+tQbL9Z9KpyHZD27OkNHfD49d77M+enl564ZQcZAhNCi\nmmZxamCJPObLPL74XLHN9dbMlKlkbfzeoSzWhNA8hsZzHTunj+LvfkdRNpyg\nb26WYrmY8h+MZpKsNhJLz4bi0FOxueFhZbjDIdkexLhUspCz7AtpkEaRNv8K\nVahjsgZvfyHvcOX+SrkwcFuqakOizPltGbTONCy4HrrkHuEVTeOb6sNKMSa/\nSYQbXrOF8znQHcf7Ums3EEPk7JyCcbCK0pQMKwC+PKzFh1e8+/LzgiRgMxzh\nrFcowh6Hwel7VyAhOCVDSbkxGfqmAC1iSH62DGRgSUHYMyGqvW4io5ZygZSI\nwVC57SNpudKgxBQ0xvj0tBq/377yVUz/YXMW6zvMWOoD6zrkzg+t/R5pCfVi\n9RrB+BX4Vtcb5V384SVCxIvfeCGzym1hzCWQyHan0mQokpoB79wR+gigOvjv\nEaQ2\r\n=rJAx\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQD4Ry+deIkUqX1fr22XZbLQKttwWEatnSQRcEftRnfC1QIgNKHWr1zffu4Q02U/241SZ271+sRaNx2CggrPMCHVmhU="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "malept",
+     "email": "nodejs.npm.nospam@lazymalevolence.com"
+    }
+   ],
+   "_npmUser": {
+    "name": "malept",
+    "email": "nodejs.npm.nospam@lazymalevolence.com"
+   },
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cross-spawn-promise_1.1.0_1585441553234_0.5459874615554308"
+   },
+   "_hasShrinkwrap": false
+  },
+  "1.1.1": {
+   "name": "@malept/cross-spawn-promise",
+   "version": "1.1.1",
+   "description": "Promisified version of cross-spawn",
+   "main": "dist/src/index.js",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malept/cross-spawn-promise.git"
+   },
+   "author": {
+    "name": "Mark Lee"
+   },
+   "license": "Apache-2.0",
+   "engines": {
+    "node": ">= 10"
+   },
+   "scripts": {
+    "ava": "ava",
+    "build": "tsc",
+    "coverage": "nyc --reporter=lcov --reporter=text ava",
+    "docs": "typedoc src/index.ts",
+    "lint": "prettier --check . && eslint --ext .ts .",
+    "prepare": "npm run build",
+    "test": "yarn lint && yarn ava"
+   },
+   "dependencies": {
+    "cross-spawn": "^7.0.1"
+   },
+   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/cross-spawn": "^6.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "ava": "^3.3.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-ava": "^11.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-tsdoc": "^0.2.5",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "nyc": "^15.0.0",
+    "prettier": "^2.0.1",
+    "source-map-support": "^0.5.16",
+    "ts-node": "^9.0.0",
+    "typedoc": "^0.20.0-beta.24",
+    "typescript": "^4.0.2"
+   },
+   "ava": {
+    "extensions": [
+     "ts"
+    ],
+    "require": [
+     "ts-node/register"
+    ]
+   },
+   "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+     "ecmaVersion": "2018",
+     "sourceType": "module"
+    },
+    "plugins": [
+     "@typescript-eslint",
+     "eslint-plugin-tsdoc"
+    ],
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended",
+     "plugin:ava/recommended",
+     "plugin:import/errors",
+     "plugin:import/warnings",
+     "plugin:import/typescript",
+     "plugin:prettier/recommended",
+     "plugin:promise/recommended",
+     "prettier",
+     "prettier/@typescript-eslint"
+    ],
+    "rules": {
+     "strict": "error",
+     "tsdoc/syntax": "warn"
+    }
+   },
+   "eslintIgnore": [
+    "dist"
+   ],
+   "funding": [
+    {
+     "type": "individual",
+     "url": "https://github.com/sponsors/malept"
+    },
+    {
+     "type": "tidelift",
+     "url": "https://tidelift.com/subscription/pkg/npm-.malept-cross-spawn-promise?utm_medium=referral&utm_source=npm_fund"
+    }
+   ],
+   "husky": {
+    "pre-commit": "lint-staged"
+   },
+   "lint-staged": {
+    "*.{json,md,yml}": "prettier --write",
+    "*.ts": [
+     "prettier --write",
+     "eslint --fix"
+    ]
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "gitHead": "aeac583fec36cdf40f6b5b4a5a133c103bd622d3",
+   "bugs": {
+    "url": "https://github.com/malept/cross-spawn-promise/issues"
+   },
+   "homepage": "https://github.com/malept/cross-spawn-promise#readme",
+   "_id": "@malept/cross-spawn-promise@1.1.1",
+   "_nodeVersion": "10.23.0",
+   "_npmVersion": "6.14.8",
+   "dist": {
+    "integrity": "sha512-RTBGWL5FWQcg9orDOCcp4LvItNzUPcyEU9bwaeJX0rJ1IQxzucC48Y0/sQLp/g6t99IQgAlGIaesJS+gTn7tVQ==",
+    "shasum": "504af200af6b98e198bce768bc1730c6936ae01d",
+    "tarball": "http://localhost:3000/@malept/cross-spawn-promise/-/cross-spawn-promise-1.1.1.tgz",
+    "fileCount": 6,
+    "unpackedSize": 24801,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfyvJ7CRA9TVsSAnZWagAA22MP/AujxoFCwZ+2kiB1Tu72\nfoKzMmrkeS+l+EpBuKxzADkPlCBtbEKLqdm29RWpsm9+0PK48VR2HM0eW3QU\n9y8qxrhzCiTIVvxdbk/kXtTfEPTQ/wuISwAUqshBzywHaiQ+RBET6gnyp/6q\n8YpW/5qFz+XARv3p4aaefG6ho5Rdmka/N5cA4skfRTiMqmXRaHjGp6NCVn3h\nZ18sAbDCgZ9hVFRW3/lJ0wQLnCktITUi+CgFhq+3YWZNijTDoEwgFLpvccnp\nLm5scqWih3ZzKdnImzPgQK4WOvOAGNp6NqgUYleLOqkl0fbwQNKFSI/6bDFQ\nM5o9OoXrTJHGQ1EqQkvyNLMP0EJ8xtPji2D0Ht5wziATQpKL+3+h7oXIChCZ\n5S5n/bbw6W+1V8jlJBwkaJpYy+LF/rGoe2lnUQ26EKiYQNg6oBsK3KJYX9GD\n/sxuXDbZFaQHXIl+cwewEuhI0+CCIjCpXh1nK/mtNRzTyX5kW6BSe/extzLw\noCjCrZMA7ScosS76PAt57Gk5Th2A9S0XgTWGcE8EkQBwwUdwdMbXbRUw78Iw\nfqrTzG9hwbFscGaTkq/9aSqOezy2qgWiiymTvr2lsFLUxB6CBgeCnrqdlmQo\n0dwjJsWaAAHxOe6uyZD8hegJFtUuQi6w091H7RVx/cKVOT9LKGS/HzDF0B5M\nUJoA\r\n=X7XY\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQDyksyjvlz/8iUstpgPxUhJC+1m4Pf5uHPvMCZXBzBFYwIgLpz/UNEyTYd0/fiuIxrbQd25lh0lH6XBez4H2Y3mTNI="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "malept",
+    "email": "nodejs.npm.nospam@lazymalevolence.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "malept",
+     "email": "nodejs.npm.nospam@lazymalevolence.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cross-spawn-promise_1.1.1_1607135866866_0.9454630129691153"
+   },
+   "_hasShrinkwrap": false
+  },
+  "2.0.0": {
+   "name": "@malept/cross-spawn-promise",
+   "version": "2.0.0",
+   "description": "Promisified version of cross-spawn",
+   "main": "dist/src/index.js",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malept/cross-spawn-promise.git"
+   },
+   "author": {
+    "name": "Mark Lee"
+   },
+   "license": "Apache-2.0",
+   "engines": {
+    "node": ">= 12.13.0"
+   },
+   "scripts": {
+    "ava": "ava",
+    "build": "tsc",
+    "coverage": "nyc --reporter=lcov --reporter=text ava",
+    "docs": "typedoc src/index.ts",
+    "lint": "prettier --check . && eslint --ext .ts .",
+    "prepare": "husky install && yarn build",
+    "test": "yarn lint && yarn ava"
+   },
+   "dependencies": {
+    "cross-spawn": "^7.0.1"
+   },
+   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/cross-spawn": "^6.0.1",
+    "@types/node": "^15.14.0",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "ava": "^3.3.0",
+    "eslint": "^7.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-ava": "^12.0.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-tsdoc": "^0.2.5",
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0",
+    "nyc": "^15.0.0",
+    "prettier": "^2.0.1",
+    "source-map-support": "^0.5.16",
+    "ts-node": "^10.0.0",
+    "typedoc": "^0.21.2",
+    "typescript": "~4.3.5"
+   },
+   "ava": {
+    "extensions": [
+     "ts"
+    ],
+    "require": [
+     "ts-node/register"
+    ]
+   },
+   "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+     "ecmaVersion": "2019",
+     "sourceType": "module"
+    },
+    "plugins": [
+     "@typescript-eslint",
+     "eslint-plugin-tsdoc"
+    ],
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended",
+     "plugin:ava/recommended",
+     "plugin:import/errors",
+     "plugin:import/warnings",
+     "plugin:import/typescript",
+     "plugin:prettier/recommended",
+     "plugin:promise/recommended",
+     "prettier"
+    ],
+    "rules": {
+     "strict": "error",
+     "tsdoc/syntax": "warn"
+    }
+   },
+   "eslintIgnore": [
+    "dist"
+   ],
+   "funding": [
+    {
+     "type": "individual",
+     "url": "https://github.com/sponsors/malept"
+    },
+    {
+     "type": "tidelift",
+     "url": "https://tidelift.com/subscription/pkg/npm-.malept-cross-spawn-promise?utm_medium=referral&utm_source=npm_fund"
+    }
+   ],
+   "lint-staged": {
+    "*.{json,md,yml}": "prettier --write",
+    "*.ts": [
+     "prettier --write",
+     "eslint --fix"
+    ]
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "gitHead": "d2357c58322dd07ee5a54780b4fa8f00bbf9f65e",
+   "bugs": {
+    "url": "https://github.com/malept/cross-spawn-promise/issues"
+   },
+   "homepage": "https://github.com/malept/cross-spawn-promise#readme",
+   "_id": "@malept/cross-spawn-promise@2.0.0",
+   "_nodeVersion": "12.22.1",
+   "_npmVersion": "6.14.12",
+   "dist": {
+    "integrity": "sha512-1DpKU0Z5ThltBwjNySMC14g0CkbyhCaz9FkhxqNsZI6uAPJXFS8cMXlBKo26FJ8ZuW6S9GCMcR9IO5k2X5/9Fg==",
+    "shasum": "d0772de1aa680a0bfb9ba2f32b4c828c7857cb9d",
+    "tarball": "http://localhost:3000/@malept/cross-spawn-promise/-/cross-spawn-promise-2.0.0.tgz",
+    "fileCount": 6,
+    "unpackedSize": 24933,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJg36RDCRA9TVsSAnZWagAAIToP/3opmi24j1EXP7HmkBg+\nQV3YFIfOikKn8cXcyNcEDyQfJdJKagXY/pYG8fu9fD5m+PKEESmyozpiMWtY\nPSUTPzXG8/3+wQQgh4wFHgdSfMBZxOSQ7Qn+a/vCn7hZy2OTMjPPQeV1jwGZ\nTICti2qLVKm7V4PLvl4SLCUxlIZFIIPa//+kc3VKnshIqh6vvHrsnpvfUBkU\n9mFx6GFJn6/v9TnZPguyniFKZ9+swSWBJjysSLg0k2W+9uJyjQwUCa42PrHq\nfg49LTarFckYZsOwoMEzTl6Qo3BX/62vOguPSeq3Az/ZEUHwhyZu06fcvqh1\nw9dwZgnVFo0FvTlSKhUvSnlXP5aAD5asPIbxUR8yrrRXfvBHFjpvCqJ/UySC\n2kSQ+1U4z6yU054wzD9R45L5YYJYBsMs77dN4hljqz44eFpC5io9+cwRbZCw\nzwDDNbWudIGKH4Z4RRb1+QpFvr5dhVkD7ldGSwXaBmemVk9POVkWLgZO0E3z\n35TYDu8oysqDrZL24mcah9IyRbxmGqxn+CcOQJKbYV0Fta9XWTJ6yoHvbxKv\nsUtmkVWx6u80BJJ7Spio+w03UpiJqG+uUup1OBldcRFVfz4XdTdLdtzTzLIR\nj3EJwbAnPl2BnEQ4IjGWLoCedckDa20sNZ4HfXgBsnzpGeKK1u+mm9chvMAl\nk3Gm\r\n=epZF\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEQCIF1Lbhu4034YUSUemL4c+zEUgRJf8Ym30JCOuH/PFcpXAiBiwKiG1utleOpJ3JzEzgag6LtWnsTJTCNk8N1bG21jeg=="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "malept",
+    "email": "nodejs.npm.nospam@lazymalevolence.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "malept",
+     "email": "nodejs.npm.nospam@lazymalevolence.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cross-spawn-promise_2.0.0_1625269314310_0.8232919232949203"
+   },
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2020-02-13T23:42:42.456Z",
+  "1.0.0": "2020-02-13T23:42:42.605Z",
+  "modified": "2022-04-06T03:18:21.059Z",
+  "1.1.0": "2020-03-29T00:25:53.329Z",
+  "1.1.1": "2020-12-05T02:37:47.089Z",
+  "2.0.0": "2021-07-02T23:41:54.662Z"
+ },
+ "maintainers": [
+  {
+   "name": "malept",
+   "email": "nodejs.npm.nospam@lazymalevolence.com"
+  }
+ ],
+ "description": "Promisified version of cross-spawn",
+ "homepage": "https://github.com/malept/cross-spawn-promise#readme",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/malept/cross-spawn-promise.git"
+ },
+ "author": {
+  "name": "Mark Lee"
+ },
+ "bugs": {
+  "url": "https://github.com/malept/cross-spawn-promise/issues"
+ },
+ "license": "Apache-2.0",
+ "readme": "# `@malept/cross-spawn-promise`\n\n> A promisified version of [`cross-spawn`](https://npm.im/cross-spawn) with slightly different behavior & extra options.\n\n[![CI](https://github.com/malept/cross-spawn-promise/workflows/CI/badge.svg)](https://github.com/malept/cross-spawn-promise/actions?query=workflow%3ACI)\n[![NPM package](https://img.shields.io/npm/v/@malept/cross-spawn-promise.svg)](https://www.npmjs.com/package/@malept/cross-spawn-promise)\n[![codecov](https://codecov.io/gh/malept/cross-spawn-promise/branch/main/graph/badge.svg)](https://codecov.io/gh/malept/cross-spawn-promise)\n\n## Different Behavior\n\nIf the spawned process exits with a non-zero code, an `ExitCodeError` is thrown with the original\ncommand, code, `stdout`, and `stderr` as properties.\n\nIf the spawned process is terminated by a signal on non-Windows platforms, an `ExitSignalError` is\nthrown with the original command, signal name, `stdout`, and `stderr` as properties.\n\n## Extra Options\n\n- `logger`: a `Function` such as `console.log` or `debug(name)` to log some information\n  about the spawned process.\n- `updateErrorCallback`: a callback which mutates the error before it is re-thrown. Most commonly,\n  this is used to augment the error message of `ENOENT` error to provide a more human-friendly\n  message as to how to install the missing executable.\n\n## Legal\n\nThis module is licensed under the Apache 2.0 license.\n",
+ "readmeFilename": "README.md"
+}

@@ -1,0 +1,713 @@
+{
+ "_id": "typed-styles",
+ "_rev": "9-4ed3655e11723f996ac3c618aa6e7589",
+ "name": "typed-styles",
+ "dist-tags": {
+  "latest": "0.0.8"
+ },
+ "versions": {
+  "0.0.1": {
+   "name": "typed-styles",
+   "version": "0.0.1",
+   "description": "Typed styles for cssinjs",
+   "scripts": {
+    "lint": "eslint src",
+    "lint:staged": "lint-staged",
+    "flow": "flow check",
+    "prebuild": "npm run lint && npm run flow",
+    "build": "npm run cp:flow && npm run cp:meta",
+    "cp:flow": "flow-copy-source -i '**/spec/**' src lib",
+    "cp:meta": "copyfiles package.json LICENSE README.md './.*' -a -f lib",
+    "release": "npm run build && git push --follow-tags && npm publish lib"
+   },
+   "keywords": [
+    "jss",
+    "styled-jss",
+    "react",
+    "typed-styles",
+    "flowtype"
+   ],
+   "author": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "license": "MIT",
+   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "copyfiles": "^1.2.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "flow-bin": "^0.66.0",
+    "flow-copy-source": "^1.3.0",
+    "lint-staged": "^7.0.0",
+    "pre-commit": "^1.2.2"
+   },
+   "lint-staged": {
+    "./src": [
+     "eslint",
+     "git add"
+    ]
+   },
+   "pre-commit": [
+    "lint:staged"
+   ],
+   "_id": "typed-styles@0.0.1",
+   "_npmVersion": "5.7.1",
+   "_nodeVersion": "8.9.4",
+   "_npmUser": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "dist": {
+    "integrity": "sha512-w4YE14+Ndm/CqbKQk+NMNlLpRm5I09KGUZewSAvXDM8ZA3NY4mpmT1OzKkF2US11GdY/9Zwaq2LmqAsw/rY+HA==",
+    "shasum": "3f04c7684d6b43ab9a7a5da9194ce951e046ce6f",
+    "tarball": "http://localhost:3000/typed-styles/-/typed-styles-0.0.1.tgz",
+    "fileCount": 11,
+    "unpackedSize": 33278,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIAho79vpwkxleKOpZ6JL/sAS6IZ4MNtRI0ZkDGZ7k6UfAiEA/t/fph0uqrqSGfVGoqHCV2Xu7ztCuwo6mO1NsVuQcjw="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "lttb",
+     "email": "kenzhaev.artur@gmail.com"
+    }
+   ],
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/typed-styles_0.0.1_1519961037568_0.7409244500617518"
+   },
+   "_hasShrinkwrap": false
+  },
+  "0.0.2": {
+   "name": "typed-styles",
+   "version": "0.0.2",
+   "description": "Typed styles for cssinjs",
+   "main": "src/index.js",
+   "author": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "license": "MIT",
+   "keywords": [
+    "jss",
+    "styled-jss",
+    "react",
+    "typed-styles",
+    "flowtype"
+   ],
+   "scripts": {
+    "lint": "eslint src",
+    "lint:staged": "lint-staged",
+    "flow": "flow check",
+    "prebuild": "npm run lint && npm run flow",
+    "build": "npm run cp:flow && npm run cp:meta",
+    "cp:flow": "flow-copy-source -i '**/spec/**' src lib",
+    "cp:meta": "copyfiles package.json LICENSE README.md './.*' -a -f lib",
+    "release": "npm run build && git push --follow-tags && npm publish lib"
+   },
+   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "copyfiles": "^1.2.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "flow-bin": "^0.66.0",
+    "flow-copy-source": "^1.3.0",
+    "lint-staged": "^7.0.0",
+    "pre-commit": "^1.2.2"
+   },
+   "lint-staged": {
+    "./src": [
+     "eslint",
+     "git add"
+    ]
+   },
+   "pre-commit": [
+    "lint:staged"
+   ],
+   "_id": "typed-styles@0.0.2",
+   "_npmVersion": "5.6.0",
+   "_nodeVersion": "8.10.0",
+   "_npmUser": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "dist": {
+    "integrity": "sha512-oVP14Rbiiao4j18AuYKgWhz6DbCYn1VOtWI0vEFhqCFIglSUC5fXiNWJqiDxm1C8mP9V4AslydyhmiD4+I2EUA==",
+    "shasum": "541fd9e140d43e2995ad55edb6b70f116d202519",
+    "tarball": "http://localhost:3000/typed-styles/-/typed-styles-0.0.2.tgz",
+    "fileCount": 12,
+    "unpackedSize": 33814,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa5X2UCRA9TVsSAnZWagAAoikP/2rlda5ttsfS8VMOf2+4\neYix9Xs9TOcbYGBXDuyd9Jkm1HxQbRBT9gmuFOXZvG8n1dJgZz3DiYqwOHTs\nFWm/4U5d++5sXAVZa2b06FQ4doWfSqpHjkcCpBFtFY8tZRMJSBUaRl2jciJO\nsy7Hsl8VXV0Z9c4JCQzgxjB5xm0EJpSPeLXLyHKvL2wEIEzYvwkS5C9IQt4R\njNxiWb+Af7mFKRUt7tMRrULV8qUpvoTIqGuCiYGYBMLbDGl4qb6KKWdeQ+4n\n7w8B5POTMTlpc1Hzzh4JxtA+DSuI7vrhy7nJ7R9zZ2flX8Jd+MBo06gYI5qz\na4/wk2qyjJxowdZsT0qXzccianRkxglRDLh1QJO/XBxsZ80DeJLqwkLNXjne\n6haNoR4YbP3VKcGC6w7fifo43voP6HurVhISImn9OSXvTUi8cz0VnSP9nmim\nj0WasXgk0RrpmDIFshYxgfiFP4rvAWuTNXPDfuWRfBPZVWjA55nSWui7u3Od\ndzphOm6RZeu3U6cfgEMrWa6ce7r0ErdC6yKJLlMTIkXwFxW76GWlrvCAXgJ8\nK+JZD2vvOcFTCSglAO/T7+8gagyjM03zM5vyOyqdiTEr3UmKjDKGLcN5NWw4\n6X1TnC4wbnLcoR+Q/NjLcxzvr7W1UGY8k8jSq3kEW7/uRcQoxoxooy6HGP22\nDLZt\r\n=6/3e\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEYCIQCSf1U6WfKPGKioFL6LW+8IRYYd+2SiO7gmLjTXDFmA0QIhAJksOAreRbdPqo3H97p9SeTxjDLLbYiFeNhfruZEGm2d"
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "lttb",
+     "email": "kenzhaev.artur@gmail.com"
+    }
+   ],
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/typed-styles_0.0.2_1524989331301_0.07423325249516943"
+   },
+   "_hasShrinkwrap": false
+  },
+  "0.0.3": {
+   "name": "typed-styles",
+   "version": "0.0.3",
+   "description": "Typed styles for cssinjs",
+   "main": "index.js",
+   "author": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "license": "MIT",
+   "keywords": [
+    "jss",
+    "styled-jss",
+    "react",
+    "typed-styles",
+    "flowtype"
+   ],
+   "scripts": {
+    "lint": "eslint src",
+    "lint:staged": "lint-staged",
+    "flow": "flow check",
+    "prebuild": "npm run lint && npm run flow",
+    "build": "npm run cp:flow && npm run cp:meta",
+    "cp:flow": "flow-copy-source -i '**/spec/**' src lib",
+    "cp:meta": "copyfiles package.json LICENSE README.md './.*' -a -f lib",
+    "release": "npm run build && git push --follow-tags && npm publish lib"
+   },
+   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "copyfiles": "^1.2.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "flow-bin": "^0.66.0",
+    "flow-copy-source": "^1.3.0",
+    "lint-staged": "^7.0.0",
+    "pre-commit": "^1.2.2"
+   },
+   "lint-staged": {
+    "./src": [
+     "eslint",
+     "git add"
+    ]
+   },
+   "pre-commit": [
+    "lint:staged"
+   ],
+   "_id": "typed-styles@0.0.3",
+   "_npmVersion": "5.6.0",
+   "_nodeVersion": "8.10.0",
+   "_npmUser": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "dist": {
+    "integrity": "sha512-FMvOwaFIKs2TvlaK4tpCi5n5yFz4QEgDgPTo/K5sBVHRnBsHuOIaw4Raw2P6p6N4KrLwhjM5HBDnTTxRyY5Www==",
+    "shasum": "3f633acf42cdec7181a7be2368167b9717de7657",
+    "tarball": "http://localhost:3000/typed-styles/-/typed-styles-0.0.3.tgz",
+    "fileCount": 12,
+    "unpackedSize": 33810,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa5YGjCRA9TVsSAnZWagAA5o8P/jX6v0c9vzlG9HpUFbgu\ny6EU1U26UYg6Qe/9VyGPKamST/8L3fs9j7cq1s+7C8YQK1Zy6Z79Vaf/nG2C\ndyksqeMDnzT/ey71sVudbsJvjk+vL+cmWFAnpzm6K4xMZRqp4Lai46t+MUsI\n3lMqCiKAiaMUn+3EYIS9WHkgBB4e2HpA2JdNU/tw/5DgXuXq05CELk5tyYTj\nnKDkIKDIBrtMEYZ3sM6b8jRjgJg/qgJ1LEFcu/yLas6bWUE3ylErYx+uVLSq\nqOx8by7xQvljBiQT/GII+W/T6bSd1ROS94Dr4ljSPkIIVMcNC50PQfEOuYYo\nfWTs9qFo4Ju6yTHJOkzRHZ7mizq9R816jJcD3L3RDFySG9x905fBMZu42J/v\nU/ARFlWBUsknPGqvtZciSwrDYmymuqo8F4unw5AhyPii/WBN1b578pcuAE9J\n3b14o95sPf+2fZcXXFcEMxsXN4nMFsLyHksIKiqwPFSEM5oL3T6iSXcos2H6\nzVW22JA2ZGSEe7mHCAkumWbvX07PDHDscCqtMdfre5/p7jqBqwX0NFg8+smD\nUDeRWL+YUEzDpurEOPUczsfgD8Tw6OMFjORadAD4XkiDymSFIRoe93kwlewG\n2LWRnQ0jO2mhttTgkIkQaH9bOYEIs5ZcA1/6m2EDDPZfVoBI083yjGU9nige\nUQ47\r\n=P4tJ\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEYCIQDzTtlOAThypjsvKJyqo0y56UrNfc5XfhdmbVxO+YM77QIhANImptnDO28nnQucfeY7ZSv7Xu2P4WKv5iLHv9uWXx76"
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "lttb",
+     "email": "kenzhaev.artur@gmail.com"
+    }
+   ],
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/typed-styles_0.0.3_1524990370979_0.3647898750982097"
+   },
+   "_hasShrinkwrap": false
+  },
+  "0.0.4": {
+   "name": "typed-styles",
+   "version": "0.0.4",
+   "description": "Typed styles for cssinjs",
+   "main": "index.js",
+   "author": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "license": "MIT",
+   "keywords": [
+    "jss",
+    "styled-jss",
+    "react",
+    "typed-styles",
+    "flowtype"
+   ],
+   "scripts": {
+    "lint": "eslint src",
+    "lint:staged": "lint-staged",
+    "flow": "flow check",
+    "prebuild": "npm run lint && npm run flow",
+    "build": "npm run cp:flow && npm run cp:meta",
+    "cp:flow": "flow-copy-source -i '**/spec/**' src lib",
+    "cp:meta": "copyfiles package.json LICENSE README.md './.*' -a -f ./**/*.js lib",
+    "release": "npm run build && git push --follow-tags && npm publish lib"
+   },
+   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "copyfiles": "^1.2.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "flow-bin": "^0.66.0",
+    "flow-copy-source": "^1.3.0",
+    "lint-staged": "^7.0.0",
+    "pre-commit": "^1.2.2"
+   },
+   "lint-staged": {
+    "./src": [
+     "eslint",
+     "git add"
+    ]
+   },
+   "pre-commit": [
+    "lint:staged"
+   ],
+   "_id": "typed-styles@0.0.4",
+   "_npmVersion": "5.6.0",
+   "_nodeVersion": "8.10.0",
+   "_npmUser": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "dist": {
+    "integrity": "sha512-lUuOwW6SvsQ/xp1dMWGQLkinGjbnq+kErhadXz8Abz248661J0SpLcVIJHaXZ4+T0tNLy+5JIUwT98d42XwpXQ==",
+    "shasum": "84b840db02440945aeac7010910ddf9195780e28",
+    "tarball": "http://localhost:3000/typed-styles/-/typed-styles-0.0.4.tgz",
+    "fileCount": 13,
+    "unpackedSize": 33950,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa5YMzCRA9TVsSAnZWagAAj0cP/3lqBv1mvn3omzVTT5Qw\n1EtDCHeEmo1GvJU9XhCpbF3rAbnUOPT1zVBOKgpyPubQm0l09SlrsBAzrQpM\nvRJ7tWRYyEHi7ZKpNcNxG3LZ9BF/TLWiynWNLE/gnx6aTiFHjUWfjE3KBc/V\n87ryMQW/w1TXRlrEDs4gV7XKk0PbP9WR+NvNIc8yPnanSil5Fan50FTQDkrm\nK89nKTjs8E09Xj0w5PnbFifAl/GTUcAugYvje0EkugI8dFhFYQgzd4B0JDrl\nAVfsZGQV2u2w/sZ6WO2i6WpcPIjfFcxpu9GMJt3ST9uiZLO6IRgwstbemXzN\nu9SostUUKLMuKUIxlC4hsehElQtbXaM60y/xL2G6N/bsgpRII6YtyMOVcgWm\nddSrg+yLXBgZLB5GhYNmWe3Pa+xsX+zm6LYvLseZs/1N6Fc3VE6k/ZLKhMv1\nn+LyWj5fxbEWbM7SiAWMAbxmJEIvGEvkSAS31kLbd0eCWzyiNgTxmCX7RcEX\n92DB3a65RWcP5daVcl0Obj4zYo3e9fSZpHkuzH2W257ZboI6p1iHK7pOn5vc\neehHKUFZt2d+UHNqv4NpmCg0zYLbn6wgUAlMqKny8ySXx9hXTiB65ZgXCtBR\nzxBum+6avQK0BpBrUjnaoLNT0aMXzp19s1zJ2IBIgC4P4ey4kGG74BvdweKP\nSxva\r\n=ZDjB\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQCtU58PN86oKqanwoGhQMD02JdK/7lFBsIC58bIpqcGFgIgdkRb+MT6vZAEGHn2gkGuhwQEr+9Fb1rufg1/nNKvg34="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "lttb",
+     "email": "kenzhaev.artur@gmail.com"
+    }
+   ],
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/typed-styles_0.0.4_1524990771014_0.8426568332022224"
+   },
+   "_hasShrinkwrap": false
+  },
+  "0.0.5": {
+   "name": "typed-styles",
+   "version": "0.0.5",
+   "description": "Typed styles for cssinjs",
+   "main": "index.js",
+   "author": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "license": "MIT",
+   "keywords": [
+    "jss",
+    "styled-jss",
+    "react",
+    "typed-styles",
+    "flowtype"
+   ],
+   "scripts": {
+    "lint": "eslint src",
+    "lint:staged": "lint-staged",
+    "flow": "flow check",
+    "prebuild": "npm run lint && npm run flow",
+    "build": "npm run cp:flow && npm run cp:meta",
+    "cp:flow": "flow-copy-source -i '**/spec/**' src lib",
+    "cp:meta": "copyfiles package.json LICENSE README.md './.*' -a -f ./**/*.js lib",
+    "release": "npm run build && git push --follow-tags && npm publish lib"
+   },
+   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "copyfiles": "^1.2.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "flow-bin": "^0.66.0",
+    "flow-copy-source": "^1.3.0",
+    "lint-staged": "^7.0.0",
+    "pre-commit": "^1.2.2"
+   },
+   "lint-staged": {
+    "./src": [
+     "eslint",
+     "git add"
+    ]
+   },
+   "pre-commit": [
+    "lint:staged"
+   ],
+   "_id": "typed-styles@0.0.5",
+   "_npmVersion": "5.6.0",
+   "_nodeVersion": "8.10.0",
+   "_npmUser": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "dist": {
+    "integrity": "sha512-ht+rEe5UsdEBAa3gr64+QjUOqjOLJfWLvl5HZR5Ev9uo/OnD3p43wPeFSB1hNFc13GXQF/JU1Bn0YHLUqBRIlw==",
+    "shasum": "a60df245d482a9b1adf9c06c078d0f06085ed1cf",
+    "tarball": "http://localhost:3000/typed-styles/-/typed-styles-0.0.5.tgz",
+    "fileCount": 13,
+    "unpackedSize": 33884,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa5YPrCRA9TVsSAnZWagAApVIP/3kJSUAjpbUrMeWOY268\nCPguPJgX/WooZlek4na+NrhCLEFzPEmhu7y0BRyA0dGkPfNQhsUuGq5oZjS6\nNrMCS6MfdqEzIN2sdn7/qYpDaI0HCf8Y8t77xGUDrl2nKhZyHns3XS9/ZksW\n9A4y34GnsnH2+wGCFg/GjdurJIw0/zeubQf8ymLOGHaoGknmup6gEfs11t24\nyFvf5SK8klEMwbNaEn35bJ777uQqhPAxcmYwwLPrfEUMEkxpXrSnvGpO0vDB\nsqn2GCy8FbYe7gQTZm/XGWbBEoDA3sSXc8WdyguTrELqkes7DQ18Oob4wb6H\nr/1gwXmT+yCU2BDTaDJMSSNm9z14wSKVYfMy5DCcdpOZdDArtVK9e5S89RfO\nR3DlBAT8RxF0auPw9ljkMCaxyKSkHOdAbjK3du+ryKROrTocvD+a4mzX7HLl\nn7Z0ow7+1L5xYYlN4oBSFnCIyDhDzhDuxBjdkl1q0OLNt+jaSy3iZCskzkXE\n5WVMwZ7EwQVK8gBWLlp0fuyE8lefZKdSG/HAd4EClcE85gL+orgD3kIPPFeO\n8ackU6Qm3WK7nfY/WnhbiVp/JffL3tGyAiTS3mlGXehw3UQG47yj8ObhJ3DE\n4BUJ8lPOSqEb4kPNT8uKVOonkaARnFk3H1V80kA9bX8OqUtsTaM31wLH0GdT\nDbjx\r\n=+UTc\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEQCIDSiqZMFL85hZtDue8q/GQ/UCx7kOmw6xPxYfTzZvNrwAiBchtgUpT/Oyjnfjr9XtzuhrC39LIYJ8IAdTZtmER7ZPA=="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "lttb",
+     "email": "kenzhaev.artur@gmail.com"
+    }
+   ],
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/typed-styles_0.0.5_1524990954145_0.26926771605844446"
+   },
+   "_hasShrinkwrap": false
+  },
+  "0.0.6": {
+   "name": "typed-styles",
+   "version": "0.0.6",
+   "description": "Typed styles for cssinjs",
+   "main": "index.js",
+   "author": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "license": "MIT",
+   "keywords": [
+    "jss",
+    "styled-jss",
+    "react",
+    "typed-styles",
+    "flowtype"
+   ],
+   "scripts": {
+    "lint": "eslint src",
+    "lint:staged": "lint-staged",
+    "flow": "flow check",
+    "prebuild": "npm run lint && npm run flow",
+    "build": "npm run cp:flow && npm run cp:meta",
+    "cp:flow": "flow-copy-source -i '**/spec/**' src lib",
+    "cp:meta": "copyfiles package.json LICENSE README.md './.*' -a -f ./**/*.js lib",
+    "release": "npm run build && git push --follow-tags && npm publish lib"
+   },
+   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "copyfiles": "^1.2.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "flow-bin": "^0.66.0",
+    "flow-copy-source": "^1.3.0",
+    "lint-staged": "^7.0.0",
+    "pre-commit": "^1.2.2"
+   },
+   "lint-staged": {
+    "./src": [
+     "eslint",
+     "git add"
+    ]
+   },
+   "pre-commit": [
+    "lint:staged"
+   ],
+   "_id": "typed-styles@0.0.6",
+   "_npmVersion": "5.6.0",
+   "_nodeVersion": "8.10.0",
+   "_npmUser": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "dist": {
+    "integrity": "sha512-syEWAtoOiea8ga6TS1YTzlxVPSTEdcLHgXN7wYozEVhWXgyjZz0u/H+YxG6koN8XSB98w3794N2aSZB/+FlDCw==",
+    "shasum": "fa6d907eb3951905bf07a8e6948705ac7169c818",
+    "tarball": "http://localhost:3000/typed-styles/-/typed-styles-0.0.6.tgz",
+    "fileCount": 13,
+    "unpackedSize": 33949,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbGUMNCRA9TVsSAnZWagAA1RYQAIho998kj0oF02nSwvKg\nCecW7s+RNnRQrb8KjgazOUR6fuZIKJMa/5tmozzRBvyXEh+9YGno9bCS6Eou\nJ2VFnLdIncsJ8cqHdPaAlMkqqo2oYRb+Rap0Qvu/l2bhMhBDO9IF5v5hpgm5\n5fXmil6qlWK5WSwl8GNzX32jmoZiidlt5vmqWA1Ge1GDBK/hyQi0dLtX9hfT\ns1VQDbVq8fFq+ObEl0WlFfpyL8ybkE3npUzMd2fupoPN8/z92hgfJHU8BIPZ\n3nWQQO0Jb3z15dYlYns9WokwFz/787Qom60xhe0Wl9XGaPPTi1Z/qaD07YEm\nKIn/7TRJk/lKHkg+55aJeLzhofIzbmR54squ//UT1NEiuitobW4Wv+WyVAUk\nHiVu9t+tRiKe6k8it/qGLNB1fh70JtXn9+WCTBE854m5/NcmH5g9r2LXxXqf\n9zPNGwVjUFw5GrBGoyEKrlb5ptNorcZ4kyYYVa8V+aIf/OcjZAxLPNfgN1as\nnAcyDV5F8M7CvgrrMJu999kuk8N3ivVV0zlpSzupQk8JLx9GePI/6i6SXapk\no1N2WAQ+2pteyyXrEBuZQisEMOXIhOav5wVenwlA9jySjyLYDWduEEcyErHo\n5L3qzq3YKgW9dHiD5Q99nf0dfoqC7XWYzQOF+8/FwMtnVkWvDcNk+51mUMSf\npiam\r\n=wGpL\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIBxN3vheHJ5Qhm2XUsoq7z7C9IQNloq9nXji95RM+2j4AiEA7PHFbGgaqZ901Lh4SBOvhzitNljvNYgXQ/aeONrU9/o="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "lttb",
+     "email": "kenzhaev.artur@gmail.com"
+    }
+   ],
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/typed-styles_0.0.6_1528382220797_0.15929925989864335"
+   },
+   "_hasShrinkwrap": false
+  },
+  "0.0.7": {
+   "name": "typed-styles",
+   "version": "0.0.7",
+   "description": "Typed styles for cssinjs",
+   "main": "index.js",
+   "author": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "license": "MIT",
+   "keywords": [
+    "jss",
+    "styled-jss",
+    "react",
+    "typed-styles",
+    "flowtype"
+   ],
+   "scripts": {
+    "lint": "eslint src",
+    "lint:staged": "lint-staged",
+    "flow": "flow check",
+    "prebuild": "npm run lint && npm run flow",
+    "build": "npm run cp:flow && npm run cp:meta",
+    "cp:flow": "flow-copy-source -i '**/spec/**' src lib",
+    "cp:meta": "copyfiles package.json LICENSE README.md './.*' -a -f ./**/*.js lib",
+    "release": "npm run build && git push --follow-tags && npm publish lib"
+   },
+   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "copyfiles": "^1.2.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "flow-bin": "^0.66.0",
+    "flow-copy-source": "^1.3.0",
+    "lint-staged": "^7.0.0",
+    "pre-commit": "^1.2.2"
+   },
+   "lint-staged": {
+    "./src": [
+     "eslint",
+     "git add"
+    ]
+   },
+   "pre-commit": [
+    "lint:staged"
+   ],
+   "_id": "typed-styles@0.0.7",
+   "_npmVersion": "5.6.0",
+   "_nodeVersion": "8.10.0",
+   "_npmUser": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "dist": {
+    "integrity": "sha512-pzP0PWoZUhsECYjABgCGQlRGL1n7tOHsgwYv3oIiEpJwGhFTuty/YNeduxQYzXXa3Ge5BdT6sHYIQYpl4uJ+5Q==",
+    "shasum": "93392a008794c4595119ff62dde6809dbc40a3d9",
+    "tarball": "http://localhost:3000/typed-styles/-/typed-styles-0.0.7.tgz",
+    "fileCount": 13,
+    "unpackedSize": 41032,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbOmdQCRA9TVsSAnZWagAAEbUP/3hlrQzKb1b0OPSlrMHX\nxs7hUzE7qPVNxdEaHSUBw+pdZZnsI1btbj9CuZdIW1GN3VLWlHMucqk51mJC\nIm0y0wkVhuv4QSY2PWr0Kz6llgc6/1KwHv0gMLLKRXTDn6cam3d85OBlSdWq\ngA24ZU5REw1oRxI0hMbP372pcq63dwvxl4ZKbfXQVQI9hv9pkooMTVaIMP46\nQ2UEw0oAMnphQy4a3EAOcXz1E4EfCB+Dh+Srz8F4lbLYko45pI5whBQg09rw\nI/v7p3wGt4yBUF/sPOleGW5dw4IprxJtyJ24Fh8ZFs8ZSmGvqaYaYElYr8Wt\nvaVLkrJi25v6tldeCj3nHqmYZkTv3VLTCapexlEXtFJTH6ETUonoL0QXTn6i\nQOpwFczt79xctD4+Wfp1BAGaTRwLGZXeP/2Hn14FgjE3Ed9vV5zQutEx1FsH\nwgOo5pQN661Vb7KdA2RQ4TLaW1MVAuwuOzKeLaLhQMQkp8Sard+gzUJ4H8X7\nt/8cppgC8rdVhvZGKtgR3+8ahK4x32ZnF6bkhU0u9wmZ/bjKGYfroRnRHgHr\nUe28nsi1VfhuZvgRInR8WCypyyS8lJwkP6bqyRR0Twz6ljWGesHM4XM2Sf8c\n3qqr9/Ieao8ZQiUw7THw0HU2leOuDSCRILlPLsRbYY96+mc93TkySVuRcmUl\nNIxG\r\n=VnY4\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQD+CMd3ic8pUyGtn5yv3e9Mq1ODOhmreVZghPyvTo7ymAIgOW0TN2r9BYlW8xBNtBjFnOhDT4qF4Lu5YIARlqsUgVw="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "lttb",
+     "email": "kenzhaev.artur@gmail.com"
+    }
+   ],
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/typed-styles_0.0.7_1530554192149_0.2756988305068413"
+   },
+   "_hasShrinkwrap": false
+  },
+  "0.0.8": {
+   "name": "typed-styles",
+   "version": "0.0.8",
+   "description": "Typed styles for cssinjs",
+   "main": "index.js",
+   "author": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "license": "MIT",
+   "keywords": [
+    "jss",
+    "styled-jss",
+    "react",
+    "typed-styles",
+    "flowtype"
+   ],
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lttb/typed-styles.git"
+   },
+   "scripts": {
+    "lint": "eslint src",
+    "lint:staged": "lint-staged",
+    "flow": "flow check",
+    "prebuild": "npm run lint && npm run flow",
+    "build": "npm run cp:flow && npm run cp:meta",
+    "cp:flow": "flow-copy-source -i '**/spec/**' src lib",
+    "cp:meta": "copyfiles package.json LICENSE README.md './.*' -a -f ./**/*.js lib",
+    "release": "npm run build && git push --follow-tags && npm publish lib"
+   },
+   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "copyfiles": "^1.2.0",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-flowtype": "^2.46.1",
+    "eslint-plugin-import": "^2.9.0",
+    "flow-bin": "^0.66.0",
+    "flow-copy-source": "^1.3.0",
+    "lint-staged": "^7.0.0",
+    "pre-commit": "^1.2.2"
+   },
+   "lint-staged": {
+    "./src": [
+     "eslint",
+     "git add"
+    ]
+   },
+   "pre-commit": [
+    "lint:staged"
+   ],
+   "bugs": {
+    "url": "https://github.com/lttb/typed-styles/issues"
+   },
+   "homepage": "https://github.com/lttb/typed-styles#readme",
+   "_id": "typed-styles@0.0.8",
+   "_npmVersion": "6.5.0",
+   "_nodeVersion": "8.10.0",
+   "_npmUser": {
+    "name": "lttb",
+    "email": "kenzhaev.artur@gmail.com"
+   },
+   "dist": {
+    "integrity": "sha512-201J8be3Ounr7wBCCE7yLBiINBEpeXtc4+tn1SZHCpvnuqvGqb3DmcA8LlCYNqcgM6VNaHMBcDvoPsAoYKO7VA==",
+    "shasum": "44732c5de7630f83734318bdeaa413b0f8b355f2",
+    "tarball": "http://localhost:3000/typed-styles/-/typed-styles-0.0.8.tgz",
+    "fileCount": 13,
+    "unpackedSize": 41128,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcoMdmCRA9TVsSAnZWagAAE+YP/Am31tXLw87WbL5JfUYY\nUYNlnfgdjltadymhJLsbXy4lFU4TiaYHFtUU0b3Gkk1eyl2KsoTgyYOnfpYE\nkO7Ebt/6KnoSVCqcruLLdh5sC57dxb9bpttE9PsyUDlqdPJkHIvyERgjq8hW\nB+C7GYosndjUHjqUUEZhY+goXLLa2VaKEvkPqhmM7ehvju7RL/+MpAetMIkq\nbwEOSmBwwNCO3qlyk+XiWvCRYBwMaWKwjiG/38crXT3QJgknRIFMqMpyv1Jv\nmYg/ww62LsdiatDOx1Lr3KrhsOFyEmYVlvy/vs4d4oNj0PLVGyYeCEcDTNXY\ny6mFVqtRB9kJylX4jIO/PvFDpLL0TnxohQlu7FTIOJl7chIpmHHLbHnenrsD\nTdA6ITA6aDeJWimkGkG+bXbauqqUuSpHzWGyZYnmH+lApJJdg2t+QyGapxu5\nOBjGPZLf5yjo1vkUQoUr7rrPSKfvDyIbsJZGSBPVZhKm5nyg971bDIgM7jIA\nAsIC2fm2cmI17ipOypvwAEOznDI7pBKUTTYOi9JX7WuwLPBFmYJMNJjwg8J5\nU2HWHADngOD6Af/NF0XX6tMjLm8OrdicONFUEmSAmfyRufkA4+7nPiZWuuP9\nDhXSgTI1urzZx+W0roolkYKtD2flykiRpL3Wnj3gyDjo7XL3zA6bsOrxe+sD\n+qwu\r\n=MCzo\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEYCIQDMWNR7TSaMkEmf6uNHhPKFDnE4uoqv6vXQWXYIZHyl7gIhALwFxHh8JcxoA+roGOW9OdwhW+CuxRRy1NVyaT9u8UAX"
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "lttb",
+     "email": "kenzhaev.artur@gmail.com"
+    }
+   ],
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/typed-styles_0.0.8_1554040677570_0.7264629460153791"
+   },
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2018-03-02T03:23:57.567Z",
+  "0.0.1": "2018-03-02T03:23:57.699Z",
+  "modified": "2022-05-22T12:35:49.850Z",
+  "0.0.2": "2018-04-29T08:08:51.437Z",
+  "0.0.3": "2018-04-29T08:26:11.052Z",
+  "0.0.4": "2018-04-29T08:32:51.124Z",
+  "0.0.5": "2018-04-29T08:35:54.215Z",
+  "0.0.6": "2018-06-07T14:37:00.907Z",
+  "0.0.7": "2018-07-02T17:56:32.219Z",
+  "0.0.8": "2019-03-31T13:57:57.709Z"
+ },
+ "maintainers": [
+  {
+   "name": "lttb",
+   "email": "kenzhaev.artur@gmail.com"
+  }
+ ],
+ "description": "Typed styles for cssinjs",
+ "keywords": [
+  "jss",
+  "styled-jss",
+  "react",
+  "typed-styles",
+  "flowtype"
+ ],
+ "author": {
+  "name": "lttb",
+  "email": "kenzhaev.artur@gmail.com"
+ },
+ "license": "MIT",
+ "readme": "# Typed Styles\n\n```sh\nnpm i typed-styles\n```\n\n## Usage\n\n```js\nimport type {Style} from 'typed-styles'\n\nconst styles: Style = {\n  height: 100,\n  width: 100,\n  display: 'block'\n}\n```\n\n## License\n\nMIT\n",
+ "readmeFilename": "README.md",
+ "homepage": "https://github.com/lttb/typed-styles#readme",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/lttb/typed-styles.git"
+ },
+ "bugs": {
+  "url": "https://github.com/lttb/typed-styles/issues"
+ }
+}

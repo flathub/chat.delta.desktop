@@ -1,0 +1,352 @@
+{
+ "_id": "webxdc-types",
+ "_rev": "6-babb9346aff379594342b5c6248830f9",
+ "name": "webxdc-types",
+ "dist-tags": {
+  "latest": "1.0.1"
+ },
+ "versions": {
+  "0.0.3": {
+   "name": "webxdc-types",
+   "version": "0.0.3",
+   "description": "TypeScript type definitions for webxdc",
+   "homepage": "https://github.com/webxdc/webxdc-types#readme",
+   "keywords": [
+    "webxdc",
+    "deltachat"
+   ],
+   "license": "unlicense",
+   "contributors": [
+    {
+     "name": "Webxdc devs",
+     "url": "https://webxdc.org"
+    },
+    {
+     "name": "Martijn Faassen",
+     "email": "faassen@startifact.com",
+     "url": "http://blog.startifact.com"
+    }
+   ],
+   "types": "./dist/webxdc.d.ts",
+   "scripts": {
+    "typecheck": "tsc",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "version": "version-changelog CHANGELOG.md && git add CHANGELOG.md",
+    "prepublishOnly": "npm run build"
+   },
+   "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.3",
+    "version-changelog": "^3.1.1"
+   },
+   "dependencies": {},
+   "gitHead": "9b54cef99a2802a1544575de41497b8652aeb5d8",
+   "_id": "webxdc-types@0.0.3",
+   "_nodeVersion": "16.16.0",
+   "_npmVersion": "8.11.0",
+   "dist": {
+    "integrity": "sha512-jUK2+AI5PJNk27iSOfSIb66SanyJMy0SggLbnmF5Nyfp5gG6z300lgZgjW7FDUX48RXutZhf+UPDLnbn3jfoLw==",
+    "shasum": "c921ef13ad8972166875a7899d52393f83eaa327",
+    "tarball": "http://localhost:3000/webxdc-types/-/webxdc-types-0.0.3.tgz",
+    "fileCount": 4,
+    "unpackedSize": 3823,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQCj0fRgluRfegElkwB+Pyw3iTjg5rLIbo2N8jDyrCp8EwIgaJ6jzCltp64abbS4HYccjEibCHSwPc17yYEzNUXYQrc="
+     }
+    ],
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJi1U33ACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmpl7Q//aX59re+fc1uVY0thu3hnrpN5w1wEvnGCiC1P9WgQYhNPPix/\r\nCxjjQvu8Ek+yCEz/eBskB0hk5aalD7GhPF8oAxT8suoeP9dqLCShoQkrAAjJ\r\nU7vDY6jJxE/jNthaotLAjZDpx51A2AFea+wfhSR3cdV9MSAwhdwiRxIrzRqS\r\nofb6gB4Cr9/Jo56s5VpbqdGxf4s345XCKMK9ukilbdz/k2WQwMIst5fnymKc\r\nHUL26Nm/F+3+TkOGroDR5AA/Sol3Y2Va3rEYnGQdjQOOkXainBFWticQdX0y\r\nCE18wo73q8XLyj++fm7gey/Iyo2vvT1EAZHNZ6KjPzosFJM20g34Z+cUIb1m\r\n8s/irI9C4aIbVBu3xgAPPlH/8z5SWuj02Rna0F9AIAgvggEGMB1kW+gGgqiw\r\nY6bgCzSzNzL6IWObpGt036HM6KmFU4x/e3aUJOzbVB2zV3HJ+Cywz269qnVb\r\nSMrcgqYtJGyo2AApf/TXXHC/DAr8M0e6rY/DwK1POwcDaU9PBkvCx5WaJqf9\r\ndggy5MDzKuqoqKVgXcffQCdzhGdANEwWzed4t4WwnFDNPXRMEPn055MeyVIS\r\nCf1UZL16lR9eZPXlTAzoEUgTyHG/2YuBI2R1mZ3S/ZV0cS3i4RrkNOkpBR8e\r\nf1N8RLYSoJAZqAU5IKvr1vPbZfX+mgzX3ug=\r\n=6Ze4\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "_npmUser": {
+    "name": "faassen",
+    "email": "faassen@startifact.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "faassen",
+     "email": "faassen@startifact.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/webxdc-types_0.0.3_1658146295657_0.2200902955560724"
+   },
+   "_hasShrinkwrap": false
+  },
+  "0.1.0": {
+   "name": "webxdc-types",
+   "version": "0.1.0",
+   "description": "TypeScript type definitions for webxdc",
+   "homepage": "https://github.com/webxdc/webxdc-types#readme",
+   "keywords": [
+    "webxdc",
+    "deltachat"
+   ],
+   "license": "unlicense",
+   "contributors": [
+    {
+     "name": "Webxdc devs",
+     "url": "https://webxdc.org"
+    },
+    {
+     "name": "Martijn Faassen",
+     "email": "faassen@startifact.com",
+     "url": "http://blog.startifact.com"
+    }
+   ],
+   "types": "./dist/webxdc.d.ts",
+   "scripts": {
+    "typecheck": "tsc",
+    "build": "npm run clean && tsc",
+    "clean": "rimraf dist",
+    "version": "version-changelog CHANGELOG.md && git add CHANGELOG.md",
+    "prepublishOnly": "npm run build"
+   },
+   "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "prettier": "^2.7.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.7.3",
+    "version-changelog": "^3.1.1"
+   },
+   "dependencies": {},
+   "gitHead": "95a7bc084b0b74561282349cca502ee370b233b1",
+   "_id": "webxdc-types@0.1.0",
+   "_nodeVersion": "16.16.0",
+   "_npmVersion": "8.11.0",
+   "dist": {
+    "integrity": "sha512-jZWryMS0lh/1zCuBHUV0RGlN+oJx0ew8adjyZMOHCdTkQD46HkrU9KCl5aXBawycRk7aDU8MWJIkcItnzfH36A==",
+    "shasum": "8fc7adfd2861463cff6b7d2199ab9e90f0fc536f",
+    "tarball": "http://localhost:3000/webxdc-types/-/webxdc-types-0.1.0.tgz",
+    "fileCount": 4,
+    "unpackedSize": 3898,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQDkj8AQ12Xz+5/RsQZa05qVg4/UgLp1pCa5fXlNV/vXLwIgL4CQN7tsGMhsnar2U7hCX4PfjBQVPEXDBf1N3KDOeIE="
+     }
+    ],
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJi1U+RACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmon/A//awulKDBm+05diT7fjOqhcwjZrqdlk1IgbpWC1gOgMTjzKxde\r\nV+C1GmmTz87AJuMzsVgvkt6edWTDep3RbjCG/u0dja/kKTbjyVqWvq1ieDRs\r\n1itV3QyHrbNuBnd/POFZD3FWp1TLQ6ERxD2M/0Dbu38bbKm35CN+x6GEI5DG\r\n5mdDKk/Iru1WrvduDYdBB02dUpQhcwycBx2MvFxO6M1THV3wpkGg+4zLLA4H\r\nFdJrgdOSYcZioE/rSWvcTK24nfgxqGPKlRz555ffekXLm+SqO5z40tqqVPy6\r\niwj58KSQz9dRd+5A3u4xtQ4lgN5MMG8nMQUmFyOYY3yHw1ZuGAJzdF9FvYvW\r\nQ2aXYn16SAPvIRhqexLdpEA7nDiySJw4o68WCgIqB+lvsJhKeplsrBRMYkNT\r\nJMWg3byhrRPMkh32Tzfsn1ltDJo9NOs5V4BpbUBMX6EuW09E4PqZfnIOKLvz\r\nxtdSAA72917O88aq+iEzI4KC75pqPzwx1nQmb5puQCeukm3MT8dWFSeRHyTg\r\nV8EqX5rfiB7fDWOV3bJVGK8H7Nh//hdz961MbTOvqDQi5+Yhow2rhfLOPW0u\r\nC6BCvbsgmv+hZ9HgpRiwQr8tGcQtYcuHjSZQPcOVsh0NC5TsDPX8QhF4H3Pz\r\nUmsEnQkDgC2ptbmYXyqqnN2nNrqjrWCoS5A=\r\n=v5If\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "_npmUser": {
+    "name": "faassen",
+    "email": "faassen@startifact.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "faassen",
+     "email": "faassen@startifact.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/webxdc-types_0.1.0_1658146705180_0.6807510761565838"
+   },
+   "_hasShrinkwrap": false
+  },
+  "1.0.0": {
+   "name": "webxdc-types",
+   "version": "1.0.0",
+   "description": "TypeScript type definitions for webxdc",
+   "homepage": "https://github.com/webxdc/webxdc-types#readme",
+   "keywords": [
+    "webxdc",
+    "deltachat"
+   ],
+   "license": "unlicense",
+   "contributors": [
+    {
+     "name": "Webxdc devs",
+     "url": "https://webxdc.org"
+    },
+    {
+     "name": "Martijn Faassen",
+     "email": "faassen@startifact.com",
+     "url": "http://blog.startifact.com"
+    }
+   ],
+   "types": "./webxdc.d.ts",
+   "scripts": {
+    "typecheck": "tsc",
+    "fix-formatting": "prettier --write *.d.ts",
+    "version": "version-changelog CHANGELOG.md && git add CHANGELOG.md"
+   },
+   "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.3",
+    "version-changelog": "^3.1.1"
+   },
+   "dependencies": {},
+   "gitHead": "890ead015d4c3cc607fce88b8674f1242e2d0031",
+   "_id": "webxdc-types@1.0.0",
+   "_nodeVersion": "16.20.2",
+   "_npmVersion": "8.19.4",
+   "dist": {
+    "integrity": "sha512-VKccEMorc0gPT/XQNqry69F7NeJm8FaVMVuTfImY3vjtaCJmx0BgNdNzFC3nC5bA9PpURcjmGnJD8frFHV+3Yg==",
+    "shasum": "5c841bcf29d634189add1a2f78cae563e4af2330",
+    "tarball": "http://localhost:3000/webxdc-types/-/webxdc-types-1.0.0.tgz",
+    "fileCount": 5,
+    "unpackedSize": 10009,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEYCIQDt4tv2lI3fygqto/ldNcvj4FvGe+IAPjxwZyiWAgpt3gIhAPn0Zg6C1KhN5mubUB0TtMvxiXk8jmQp/FBV/SoFNygO"
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "faassen",
+    "email": "faassen@startifact.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "faassen",
+     "email": "faassen@startifact.com"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "hpk",
+     "email": "holger@deltachat.de"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/webxdc-types_1.0.0_1697041836885_0.04967647699148636"
+   },
+   "_hasShrinkwrap": false
+  },
+  "1.0.1": {
+   "name": "webxdc-types",
+   "version": "1.0.1",
+   "description": "TypeScript type definitions for webxdc",
+   "homepage": "https://github.com/webxdc/webxdc-types#readme",
+   "keywords": [
+    "webxdc",
+    "deltachat"
+   ],
+   "license": "unlicense",
+   "contributors": [
+    {
+     "name": "Webxdc devs",
+     "url": "https://webxdc.org"
+    },
+    {
+     "name": "Martijn Faassen",
+     "email": "faassen@startifact.com",
+     "url": "http://blog.startifact.com"
+    }
+   ],
+   "types": "./webxdc.d.ts",
+   "scripts": {
+    "typecheck": "tsc",
+    "fix-formatting": "prettier --write *.d.ts",
+    "version": "version-changelog CHANGELOG.md && git add CHANGELOG.md"
+   },
+   "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.3",
+    "version-changelog": "^3.1.1"
+   },
+   "dependencies": {},
+   "gitHead": "eb0256956e3a7bda2ea5b8a8bb50f45c30d5ee03",
+   "_id": "webxdc-types@1.0.1",
+   "_nodeVersion": "16.20.2",
+   "_npmVersion": "8.19.4",
+   "dist": {
+    "integrity": "sha512-voocssWnUiMoJoicPWmCKnjd6OG8TNuUq+5n9+0gMSBMg0h1KxapnN9Vq6WssK0jhKcGBSZvcQf8tGK+X88IaQ==",
+    "shasum": "8297c0282192ffc34b02355074e92cede37dc08f",
+    "tarball": "http://localhost:3000/webxdc-types/-/webxdc-types-1.0.1.tgz",
+    "fileCount": 7,
+    "unpackedSize": 10613,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQDDII1Y/zVc7f9Z/Bep0Z7/jEqUjHcxK4nw7DxjIgEEoQIgNSciXwYjeCbe7iYurvjtSE2m7hCCOApXfNBTSYlzPaI="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "faassen",
+    "email": "faassen@startifact.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "faassen",
+     "email": "faassen@startifact.com"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "hpk",
+     "email": "holger@deltachat.de"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/webxdc-types_1.0.1_1697678398354_0.6770836703333885"
+   },
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2022-07-18T12:11:35.657Z",
+  "0.0.3": "2022-07-18T12:11:35.876Z",
+  "modified": "2024-02-05T01:40:54.610Z",
+  "0.1.0": "2022-07-18T12:18:25.347Z",
+  "1.0.0": "2023-10-11T16:30:37.172Z",
+  "1.0.1": "2023-10-19T01:19:58.555Z"
+ },
+ "maintainers": [
+  {
+   "email": "faassen@startifact.com",
+   "name": "faassen"
+  },
+  {
+   "email": "npm-package-manager@simonlaux.de",
+   "name": "simon-laux"
+  },
+  {
+   "email": "link2xt@testrun.org",
+   "name": "link2xt"
+  },
+  {
+   "email": "holger@deltachat.de",
+   "name": "hpk"
+  }
+ ],
+ "description": "TypeScript type definitions for webxdc",
+ "homepage": "https://github.com/webxdc/webxdc-types#readme",
+ "keywords": [
+  "webxdc",
+  "deltachat"
+ ],
+ "contributors": [
+  {
+   "name": "Webxdc devs",
+   "url": "https://webxdc.org"
+  },
+  {
+   "name": "Martijn Faassen",
+   "email": "faassen@startifact.com",
+   "url": "http://blog.startifact.com"
+  }
+ ],
+ "license": "unlicense",
+ "readme": "# Types for webxdc\n\nWhen you develop a [webxdc app](https://webxdc.org), you use the [webxdc\nAPI](https://docs.webxdc.org/spec.html) to communicate with other instances of\nthe same webxdc application.\n\nThe API is available on `window.webxdc`.\n\nWhen you develop your webxdc app in TypeScript, it's handy to have proper\ntypes for this API. This library provides those types for you.\n\n## Why use this?\n\n- you want better autocomplete in your IDE (js and ts)\n- you want to see docuemntation on hover in your IDE (js and ts)\n- you need types for typescript typechecking\n\n## Usage\n\nYou can install this using:\n\n```shell\nnpm install -D webxdc-types\n```\n\n<details>\n<summary> Usage in Typescript with typed payload (Recommended) </summary>\n\nYou should have a type that describes your webxdc payload structure in use\nby your application:\n\n```typescript\ntype Payload = {\n  label: string;\n  value: number;\n};\n```\n\nOnce you have a `Payload` type, you can declare the type of `window.webxdc` in\nyour application:\n\n```typescript\nimport { WebXdc } from \"webxdc-types\";\n\ndeclare global {\n  interface Window {\n    webxdc: WebXdc<Payload>;\n  }\n}\n```\n\n(write this in a file that is picked up by the typescript compiler, paths like `src/types.d.ts` or `src/global.d.ts` should work)\n\nNow `window.webxdc` should be fully typed.\n\n</details>\n\n<details>\n<summary> Usage in Typescript without payload typing </summary>\n\nUse this if you just want completions for the api, but not for the status update payloads, they will get the `any` type with this method.\n\n```typescript\nimport \"webxdc-types/global\";\n// or\n/// <reference types=\"webxdc-types/global\" />\n```\n\nNow `window.webxdc` should be typed.\n\n</details>\n\n<details>\n<summary> \nusage in plain javascript files (jsdoc)\n</summary>\n\nIf your IDE supports it (vscode and it's forks do), you can add `//@ts-check` to the top of your javascript file to enable typescript type checking for it.\n\nyou can then type variables like this\n\n```js\n//@ts-check\n\n/** @type {number} documentation of the value */\nconst my_var = 8;\n```\n\nYou can use this to import the webxdc types when you need them to type your functions:\n\n```js\n/**\n * @typedef {any} MyPayload\n * @typedef {import('webxdc-types').XDCFile} XDCFile\n * @typedef {import('webxdc-types').ReceivedStatusUpdate<MyPayload>} ReceivedStatusUpdate\n * @typedef {import('webxdc-types').SendingStatusUpdate<MyPayload>} SendingStatusUpdate\n * @typedef {import('webxdc-types').Webxdc<MyPayload>} Webxdc\n */\n// note that this does not set `window.webxdc` for you follow the steps below for that.\n```\n\n### Without typed payloads\n\nIf you just want the api and not want to type your payloads you can import the types for `window.webxdc` like this:\n\n```\n/** @typedef {import('webxdc-types/global')} */\n```\n\n### With typed payloads\n\nFor this you need to create a `mytypes.d.ts` file declaring your payload type:\n\n```typescript\nimport { WebXdc } from \"webxdc-types\";\n\n// do your own payload type here\ntype Payload = {\n  label: string;\n  value: number;\n};\n\ndeclare global {\n  interface Window {\n    webxdc: WebXdc<Payload>;\n  }\n}\n```\n\nThen import this file like this:\n\n```js\n/** @typedef {import('./my_types')} */\n```\n\n</details>\n\n\n<details>\n<summary> \nusage without package manager (npm, yarn, pnpm and so on.)\n</summary>\n\nCopy `global.d.ts` and `webxdc.d.ts` files into your project and use one of the methods above, adjusting the import path acordingly.\n\n```js\n/** @typedef {import('./global')} */\n/** @typedef {import('./webxdc')} */\n```\n\nYou can also combine the two files if you have basic knowledge of typescript.\n\n</details>",
+ "readmeFilename": "README.md"
+}

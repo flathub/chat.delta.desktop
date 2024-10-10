@@ -1,0 +1,155 @@
+{
+ "_id": "@deltachat/tiny-emitter",
+ "_rev": "1-d826a3608086aedfdd17cf90c79bbf5b",
+ "name": "@deltachat/tiny-emitter",
+ "dist-tags": {
+  "latest": "3.0.0"
+ },
+ "versions": {
+  "3.0.0": {
+   "name": "@deltachat/tiny-emitter",
+   "version": "3.0.0",
+   "description": "A tiny (less than 1k) event emitter library",
+   "main": "index.js",
+   "scripts": {
+    "test-node": "tape test/index.js | tap-format-spec",
+    "test": "testling | tap-format-spec",
+    "bundle": "browserify index.js > dist/tinyemitter.js -s TinyEmitter && echo 'Bundled'",
+    "minify": "uglifyjs dist/tinyemitter.js -o dist/tinyemitter.min.js -m && echo 'Minified'",
+    "build": "npm test && npm run bundle && npm run minify",
+    "size": "uglifyjs index.js -o minified.js -m && ls -l && rm minified.js"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottcorgan/tiny-emitter.git"
+   },
+   "keywords": [
+    "event",
+    "emitter",
+    "pubsub",
+    "tiny",
+    "events",
+    "bind"
+   ],
+   "author": {
+    "name": "Scott Corgan"
+   },
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/scottcorgan/tiny-emitter/issues"
+   },
+   "devDependencies": {
+    "@tap-format/spec": "0.2.0",
+    "browserify": "11.2.0",
+    "tape": "4.2.1",
+    "testling": "1.7.1",
+    "uglify-js": "2.5.0"
+   },
+   "testling": {
+    "files": [
+     "test/index.js"
+    ],
+    "browsers": [
+     "iexplore/10.0",
+     "iexplore/9.0",
+     "firefox/16..latest",
+     "chrome/22..latest",
+     "safari/5.1..latest",
+     "ipad/6.0..latest",
+     "iphone/6.0..latest",
+     "android-browser/4.2..latest"
+    ]
+   },
+   "types": "./index.d.ts",
+   "gitHead": "6eeb3862127ec148771ad7880e4f5c6b55a78b9f",
+   "homepage": "https://github.com/scottcorgan/tiny-emitter#readme",
+   "_id": "@deltachat/tiny-emitter@3.0.0",
+   "_nodeVersion": "16.13.0",
+   "_npmVersion": "8.19.2",
+   "dist": {
+    "integrity": "sha512-iapvwGCEWFjXtObQ/vNzXS0+M9hrZrY2tMdV7SaX8kHXKVm3oIuJUVmUj5jhABTL7GstO6uKzV+36FUZVGOqCA==",
+    "shasum": "83d1def6e513395d15b04f67bdeaab46daa99001",
+    "tarball": "http://localhost:3000/@deltachat/tiny-emitter/-/tiny-emitter-3.0.0.tgz",
+    "fileCount": 9,
+    "unpackedSize": 16262,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEYCIQCljXlInUqYQ8IVEqFLnP+zKUPx6ljznR4X8LPP6zzXKwIhAJ9k9uxV3P0HixzpxcaovJmhT3bFaZv2jDp7uPUJnZ/P"
+     }
+    ],
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjaqssACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmre7Q//fRCB1yhmOi9B4ZuQuWE5cV0sF04V2VRaPV96DMJzWSG4CcOz\r\nARDlTMfzf5TPhEF7d8Fa+giN7xY0pCLR6opyHkA6uEfLfcUt2KVllPZVK5zT\r\n48YUucnpqdUmVkQJI/fvYfa9a9d4G8VKFyyciwquG6I4Vk7Jk/09y8obfqQ4\r\npkQFOyIpD3x19ULCA5E+h8sdbZnzkSJKOUsF9ywHLLjsCRxR327qUBpS9DAI\r\npo9bh1jPnK8J3Ww8JCqmY4qius87c3xyYUBDMarLlwjTIf8P/zO7h+MX2+ZJ\r\nKkWNVBEt/i3Bsec0J+Slb0ReBfvZ7LUFuHvxjlzmUTCYzS2veGhnNt3OV9SV\r\nJPueQxF5v3uDrGNQm9yNCXb0VCcKfAPITM0HUEadfSCAGXb0LL8YK1ukZrvw\r\nMa/oE/fLXy+DwJ34G57Kq22BZi6xnOSXqb62QpxlE+zjaafzaM4vSmQiZO/Q\r\nGI9F9Ff1MeD0/HmShbMXcAJS7J2b3Z7g7DiCQ2y79V12YVJEasm0RzZ2gSn4\r\niEqvD9rfY6kW0FBWO8RWL8V9HeMGaiACV2yx/1Aae3330hU5DztvsWshmf3Z\r\nvOl2g2JMpZsFaXagWCL4M7YSsbWLrWe+wVr8cbGgaIVce9gTELNvrYL6Yn47\r\nFuO0NRs95jD/mkbA+0rePB5KGEc/MFNbW7I=\r\n=NZ/D\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "_npmUser": {
+    "name": "simon-laux",
+    "email": "npm-package-manager@simonlaux.de"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/tiny-emitter_3.0.0_1667935019867_0.8556585798275811"
+   },
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2022-11-08T19:16:59.773Z",
+  "3.0.0": "2022-11-08T19:17:00.090Z",
+  "modified": "2024-02-05T01:40:41.666Z"
+ },
+ "maintainers": [
+  {
+   "email": "link2xt@testrun.org",
+   "name": "link2xt"
+  },
+  {
+   "email": "missytake@systemli.org",
+   "name": "missytake"
+  },
+  {
+   "email": "jikstra@disroot.org",
+   "name": "jikstra"
+  },
+  {
+   "email": "npm-package-manager@simonlaux.de",
+   "name": "simon-laux"
+  }
+ ],
+ "description": "A tiny (less than 1k) event emitter library",
+ "homepage": "https://github.com/scottcorgan/tiny-emitter#readme",
+ "keywords": [
+  "event",
+  "emitter",
+  "pubsub",
+  "tiny",
+  "events",
+  "bind"
+ ],
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/scottcorgan/tiny-emitter.git"
+ },
+ "author": {
+  "name": "Scott Corgan"
+ },
+ "bugs": {
+  "url": "https://github.com/scottcorgan/tiny-emitter/issues"
+ },
+ "license": "MIT",
+ "readme": "# tiny-emitter fork\n\nA tiny (less than 1k) event emitter library.\n\n## About this fork\nThis fork features some improvements:\n\n- typescript typings for the events\n- ignores errors thrown by event listeners (it logs them but does not fail to invoke other listeners anymore)\n\n## Install\n\n### npm\n\n```\nnpm install @deltachat/tiny-emitter --save\n```\n\n## Usage\n\n```js\nvar Emitter = require('tiny-emitter');\nvar emitter = new Emitter();\n\nemitter.on('some-event', function (arg1, arg2, arg3) {\n //\n});\n\nemitter.emit('some-event', 'arg1 value', 'arg2 value', 'arg3 value');\n```\n\nAlternatively, you can skip the initialization step by requiring `tiny-emitter/instance` instead. This pulls in an already initialized emitter.\n\n```js\nvar emitter = require('tiny-emitter/instance');\n\nemitter.on('some-event', function (arg1, arg2, arg3) {\n //\n});\n\nemitter.emit('some-event', 'arg1 value', 'arg2 value', 'arg3 value');\n```\n\n## Instance Methods\n\n### on(event, callback[, context])\n\nSubscribe to an event\n\n* `event` - the name of the event to subscribe to\n* `callback` - the function to call when event is emitted\n* `context` - (OPTIONAL) - the context to bind the event callback to\n\n### once(event, callback[, context])\n\nSubscribe to an event only **once**\n\n* `event` - the name of the event to subscribe to\n* `callback` - the function to call when event is emitted\n* `context` - (OPTIONAL) - the context to bind the event callback to\n\n### off(event[, callback])\n\nUnsubscribe from an event or all events. If no callback is provided, it unsubscribes you from all events.\n\n* `event` - the name of the event to unsubscribe from\n* `callback` - the function used when binding to the event\n\n### emit(event[, arguments...])\n\nTrigger a named event\n\n* `event` - the event name to emit\n* `arguments...` - any number of arguments to pass to the event subscribers\n\n## Test and Build\n\nBuild (Tests, Browserifies, and minifies)\n\n```\nnpm install\nnpm run build\n```\n\nTest\n\n```\nnpm install\nnpm test\n```\n\n## License\n\n[MIT](https://github.com/scottcorgan/tiny-emitter/blob/master/LICENSE)\n",
+ "readmeFilename": "README.md"
+}

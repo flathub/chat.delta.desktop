@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+npm i -g pnpm
+
 cd ..
 git clone https://github.com/deltachat/deltachat-desktop.git --depth 10
 git clone https://github.com/deltachat/deltachat-core-rust.git --depth 10

@@ -69,13 +69,14 @@ pip install aiohttp toml
 ```
 </details>
 
+
 Then edit (put in the tags/branches you want to update to) and run the `generate.sh` script:
 ```sh
 CORE_CHECKOUT=v1.140.0
 DESKTOP_CHECKOUT=v1.45.4
 ```
 
-The script then gives you the commit hashes you should add to the build manifest, there you need to also specify branch/tag.
+~~The script then gives you the commit hashes you should add to the build manifest, there you need to also specify branch/tag.~~ not nessesary anymore.
 
 After that, build it locally (if your computer is likely faster than CI, so debugging locally is quicker).
 ```
@@ -129,30 +130,7 @@ This is done by converting the `package-lock.json`, which should
 contain all the dependencies, into a manifest snipped suitabled for
 building flatpaks.
 
-Upstream ships the package-lock.json file so it should not be
-necessary to generate it.  However, sometimes the file is not
-updated in lockstep with package.json and then dependencies will
-be missing during build time.  In that case, it's best to wait for
-upstream to provide the lock file, but it should be possible to run
-`npm install` to get the lockfile updated.
-
-To create the `generated-sources.json` file you need a copy of the
-https://github.com/flatpak/flatpak-builder-tools.git repository and
-install the `flatpak-node-generator` tool with `pipx`:
-```sh
-git clone https://github.com/flatpak/flatpak-builder-tools.git
-pip install pipx
-pipx flatpak-builder-tools/node
-```
-Then invoke the `node/flatpak-node-generator.py` script, e.g.:
-
-```sh
-flatpak-node-generator -o generated-sources-npm.json -r npm ../deltachat-desktop/package-lock.json
-```
-
-This will produce the `generated-sources-npm.json` file which is referenced
-in the `chat.delta.desktop.yml` manifest.  Because that file is quite big
-and Github seems to not like big files all too much, the generator offers
-a --split option, cf. https://github.com/flatpak/flatpak-builder-tools/blob/204309e0066a66a6f3c9ad7c5edb870513a7504c/node/README.md#splitting-mode.
+The npm packages for deltachat core jsonrpc client are generated with flatpak-node-generator.
+And for dc-desktop dependencies we currently upload and download a cached .pnpm-store directory because pnpm is not yet supported by flatpak-node-generator and might not be anytime soon (because pnpm store is too different from npm cache), see comments in [generate.sh](generate.sh).
 
 </details>
