@@ -132,10 +132,6 @@ async function save() {
 
     const arrayManifest = Object.keys(flatpakManifest).map(url => flatpakManifest[url])
     arrayManifest.sort((a, b) => a.url.localeCompare(b.url))
-    arrayManifest.push({
-        "type": "shell",
-        "commands": ["cp -r generated/proxy-registry-cache-indices/* npm-registry-proxy-offline-cache"]
-    })
     writeFileSync('generated/proxy-registry-cache-manifest.json', JSON.stringify(arrayManifest, null, 2), 'utf-8')
 }
 
