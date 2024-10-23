@@ -7,7 +7,7 @@ sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node20
   - org.freedesktop.Sdk.Extension.rust-stable
-command: /app/bin/run.sh
+command: run.sh
 finish-args:
   - --socket=fallback-x11
   - --socket=wayland
@@ -26,6 +26,7 @@ finish-args:
   - --env=NOTIFY_IGNORE_PORTAL=1 # fix https://github.com/deltachat/deltachat-desktop/issues/3590
 
 cleanup:
+    - /app/dc-core
     # Desktop___________________
     - /delta/resources/app/node_modules/napi-macros
     # frontend node_modules not needed at runtime - would get easier if dc-desktop would adopt the 2 package.json project structure
@@ -64,10 +65,13 @@ modules:
       append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/node20/bin
 
     build-commands:
+      - ls /run/build
+      - ls
+      - pwd
       - node --version
       - python3 --version
       - npm cache verify
-      - cd /run/build/deltachat-core-rust/deltachat-jsonrpc/typescript && env DEBUG="*" npm install --offline --verbose && npm run build
+      - cd deltachat-jsonrpc/typescript && env DEBUG="*" npm install --offline --verbose && npm run build
       - python3 deltachat-rpc-server/npm-package/scripts/make_local_dev_version.py
       - mkdir -p /app/dc-core/deltachat-jsonrpc
       - sed -i 's|/run/build/deltachat-core-rust|/app/dc-core/deltachat-rpc-server|g' deltachat-rpc-server/npm-package/package.json
@@ -94,13 +98,7 @@ modules:
             only-arches: ["aarch64"]
       
     sources:
-      # - type: archive
-      #   url: https://github.com/deltachat/deltachat-core-rust/archive/1.91.0.tar.gz
-      #   sha256: 2909661e9e4bab24b482e9c2b2d983a777fa5e6173484ab99571115d5aaa70aa
-      - type: git
-        url: https://github.com/deltachat/deltachat-core-rust.git
-        tag: v1.140.2
-        commit: 6a3902d90d5b1997c79f5ec05c43203ee3c5ad77
+      - generated/core-git.json
       - generated/sources-rust.json
       - generated/sources-jsonrpc-client-npm.json
 
@@ -112,15 +110,9 @@ modules:
   - name: delta
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node20/bin
+      append-path: /usr/lib/sdk/node20/bin:/run/build/delta/pnpm/bin
       env:      
         NPM_CONFIG_LOGLEVEL: info
-
-        # Tell caches where we pre-downloaded things.
-        npm_config_cache: /run/build/delta/flatpak-node/npm-cache/
-
-        # for node gyp:
-        npm_config_nodedir: /run/build/delta/node-headers
 
         XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
         TMPDIR: /run/build/delta/flatpak-node/tmp
@@ -129,46 +121,67 @@ modules:
         VERSION_INFO_GIT_REF: "flathub"
         NO_ASAR: "true"
 
+        ELECTRON_CONFIG_CACHE: /run/build/delta/cache/electron
+        electron_config_cache: /run/build/delta/cache/electron
+        ELECTRON_CACHE: /run/build/delta/cache/electron
+
     build-commands:
+      - pwd
+      - ls
+      # fixup manually installed pnpm package (why manual? because global npm install is not possible because global node modules dir is read-only)
+      - mv ../pnpm/bin/pnpm.cjs ../pnpm/bin/pnpm
       - ls -lah /run/build/
       - mkdir -p $TMPDIR
       - node --version
-      - npm --version
+      - pnpm --version
       - python --version
-      - npm cache verify
-      # https://github.com/flatpak/flatpak-builder-tools/blob/db24c70456b7122f4243ab4a21dbb3368334e259/node/README.md#chromedriver-support
-      - env DEBUG="*" npm install --offline --verbose
+      - pnpm config set registry http://localhost:3000 --location project
       # install the core we build locally instead of the prebuild
-      - env DEBUG="*" npm install --install-links=true --offline --verbose /app/dc-core/deltachat-rpc-server/npm-package
-      - rm -r /app/dc-core
-      - npm run build4production --offline --verbose
-      - npm run pack:generate_config --offline --verbose
+      # patch package.json to exclude the extra architectures that we excluded when building the pnpm store
       - |
-        ln -srv $XDG_CACHE_HOME/node-gyp $HOME/.electron-gyp
-        npm run pack:linux:dir --offline --verbose
+        jq ".pnpm.supportedArchitectures.os = [\"linux\"] | .pnpm.supportedArchitectures.cpu = [\"x64\",\"arm64\"]" package.json > package.new.json
+        mv package.new.json package.json
+      # install deps from store
+      - |
+        node ../replay.mjs &
+        REPLAY_PID=$!
+        env DEBUG="*" pnpm install --prefer-offline --frozen-lockfile
+        kill $REPLAY_PID
+      # install the core we build locally instead of the prebuilds
+      # link script expect it to be at `../deltachat-core-rust` so we link it
+      - ln -s /app/dc-core ../deltachat-core-rust
+      - sed -i "s/pnpm add/pnpm add --prefer-offline --frozen-lockfile/g" ./bin/link_core/link_local.sh
+      - |
+        node ../replay.mjs &
+        REPLAY_PID=$!
+        ./bin/link_core/link_local.sh
+        kill $REPLAY_PID
       - mkdir -p /app/delta
+
+      # build & package dc desktop
+      - pnpm --filter @deltachat-desktop/target-electron build4production
+      - pnpm --filter @deltachat-desktop/target-electron pack:generate_config
+      - pnpm --filter @deltachat-desktop/target-electron pack:patch-node-modules
+      - pnpm --filter @deltachat-desktop/target-electron pack:linux:dir
+
       # The x86-64 build seems to be put in "linux-unpacked",
-      # the aarch64 build in "linix-arm64-unpacked"
+      # the aarch64 build in "linux-arm64-unpacked"
       # we try to catch both paths with the wildcard
-      - cp -ar dist/linux*unpacked/* /app/delta/
+      - cp -ar packages/target-electron/dist/linux*unpacked/* /app/delta/
 
       # Install the required static files
-      - install ../run.sh /app/bin/run.sh
+      - install ../run.sh $FLATPAK_DEST/bin/run.sh
       - install -Dm 0644 ../chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
       - install -Dm 0644 ../mime/deltachat-desktop.xml  /app/share/mime/packages/chat.delta.desktop.xml
       - install -Dm 0644 ../chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
       - install -Dm 0644 ../delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
     subdir: main
-    sources:
+    sources: 
       # Electron
-      # the binaries are already included in generated-sources-npm.0.json
+      # the binaries are already included in the pnpm store
 
       # Delta Chat
-      - type: git
-        url: https://github.com/deltachat/deltachat-desktop.git
-        tag: v1.45.5
-        commit: 90403d152f68be2796c3028baa8b6f1d05ec65d4
-        dest: main
+      - generated/desktop-git.json
 
       - type: file
         url: https://raw.githubusercontent.com/deltachat/interface/970c5df39866695b5e8ebdd73caa68cbb6de5242/icons/delta-v7-pathed.svg
@@ -177,6 +190,9 @@ modules:
 
       - type: file
         path: chat.delta.desktop.desktop
+      
+      - type: file
+        path: replay.mjs
 
       - type: file
         path: chat.delta.desktop.256.png
@@ -194,10 +210,10 @@ modules:
           - exec zypak-wrapper /app/delta/deltachat-desktop "$@" --disable-features=WaylandFractionalScaleV1
 
 
-      # All the generated npm downloads, see README.md how to create
-      # this file.  This needs to go to the bottom so that the
-      # commands in that file can see package.json and friends.
-      - generated/sources-npm.json
+      # dependencies
+      - generated/proxy-registry-cache-manifest.json
+      - generated/pnpm.json
+      - generated/electron-cache-manifest.json
 
 
       # https://github.com/deltachat/deltachat-desktop/pull/1125

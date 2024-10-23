@@ -1,0 +1,987 @@
+{
+ "_id": "@electron/osx-sign",
+ "_rev": "12-bb6f9c943e6a6fc162bd611c59438e40",
+ "name": "@electron/osx-sign",
+ "description": "Codesign Electron macOS apps",
+ "dist-tags": {
+  "latest": "1.3.1"
+ },
+ "versions": {
+  "1.0.0": {
+   "name": "@electron/osx-sign",
+   "version": "1.0.0",
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "@electron/osx-sign@1.0.0",
+   "maintainers": [
+    {
+     "name": "electron",
+     "email": "electron@github.com"
+    }
+   ],
+   "homepage": "https://github.com/electron/osx-sign",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.js",
+    "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "dist": {
+    "shasum": "4c700ed1c8d898626c572efe16488148797a87a5",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.0.0.tgz",
+    "fileCount": 61,
+    "integrity": "sha512-N+wMYnMAmKqxeCBJM9OTTM24+RaEsJlLf+B7drsi3CP2WKRIRsqB4tMpA324TPrtvehEzjyuDXd6Xm9WghHtHw==",
+    "signatures": [
+     {
+      "sig": "MEUCIE5K2bE9xITS7ZhinJDMEOHoWvUy6UdrKZ5u7Y4e+XMoAiEAu4ohVlNN9PDmXeUydx1T750Y+rWMfvejD1A7yNDyu6g=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 174786,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiPCAYACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmqTWQ/+L7x9kpRAWTqQFliTZTqiW/FzqPuoq0UDd+a/Rikk141BYPCb\r\ngN12i2AraBZwg4CeZJrN5b4Jq/uHe9WRtIanOfzYazipGBxf3WCn/yP+BrEX\r\n1DsgD89+KohWTUjkkdL4zR06tCW8oHV3AsBZSF2ElfexvK/pn4CpgctAUyo+\r\nX/7/BF7pSGVCPLzDUxi7kemVT5u/MlQQ/L4TrucRxDq6NnxHUpJuQEhI16IH\r\nGO5MOjaPwu3K1ndOWLi2HAKakOz4I+G81ykedFELKUSfh1DGy8lO4yfrD/yT\r\nTf9Q9rGXvW3Gpuv8HmQNkUX/ixPKhHzg+QakxNRYq3rYcIBGJ4XKySUY2pjb\r\nDaGngMUREQ2zaxJPShr3/kHFn80xt1tWGtfj/Gigxzb0ekGhrZ5Jk8BQl4F0\r\necHfjmRMrf7toSuTsPa4H7FIJs0MK0gd50VMNb3Q4TmI5dD3ojxSw+mcOC8p\r\nPtphPQSw17SVsZyY8SA7Mos5wTdGh5TPW6gcStLYk7WYvN9Oglqa1Zc4vrBw\r\nJEQfqFNRCeRw2qPxiXDd3nqWsyYdXVyfpw/stm5XT2EIElkyrxHoVEdAVkXO\r\nEu0CJMgBNEeSXrNWziW9PFi238KMveUbC4we2uN74ECU3C1E9ADghT+LWBi9\r\nk9v0+Foq1jZ7WKZDQlUOpfB3EDGPxqY9oc8=\r\n=SUrb\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "gitHead": "a1a008712c35110a418f05db0da181d4c15cb917",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "yarn lint && tape test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "pretest": "rimraf test/work",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmUser": {
+    "name": "electron",
+    "email": "electron@github.com"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/osx-sign.git",
+    "type": "git"
+   },
+   "_npmVersion": "8.1.0",
+   "description": "Codesign Electron macOS apps",
+   "directories": {},
+   "_nodeVersion": "16.13.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "plist": "^3.0.5",
+    "minimist": "^1.2.6",
+    "isbinaryfile": "^4.0.8",
+    "compare-version": "^0.1.2"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^4.7.1",
+    "eslint": "^8.1.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "fs-extra": "^10.0.0",
+    "standard": "^16.0.4",
+    "run-series": "^1.1.9",
+    "typescript": "^4.4.4",
+    "@types/node": "^16.11.6",
+    "extract-zip": "^2.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/plist": "^3.0.2",
+    "run-waterfall": "^1.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "electron-download": "^4.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-promise": "^5.1.1",
+    "@types/compare-version": "^0.1.31",
+    "eslint-config-standard": "^16.0.3",
+    "@typescript-eslint/parser": "^5.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/osx-sign_1.0.0_1648107544452_0.8421410849276707",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.0.1": {
+   "name": "@electron/osx-sign",
+   "version": "1.0.1",
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "@electron/osx-sign@1.0.1",
+   "maintainers": [
+    {
+     "name": "electron",
+     "email": "electron@github.com"
+    }
+   ],
+   "homepage": "https://github.com/electron/osx-sign",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.js",
+    "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "dist": {
+    "shasum": "ab4fceded7fed9f2f18c25650f46c1e3a6f17054",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.0.1.tgz",
+    "fileCount": 61,
+    "integrity": "sha512-WkUcva+qkt809bI6uxxEG/uOWfl8HAw0m8aPijpKmGMIpZ1CWWB808YG6aY3wckUO86xZdmiOsUJTM4keLhY8A==",
+    "signatures": [
+     {
+      "sig": "MEUCIGm+jNys19TviaSYkWZyspG9zMBYqEd7ltmaNs1jATkKAiEAoVOSxjgTbvEXo/MJdGYk8sv20je8GgTxtk5RktM9qYY=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 174786,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiPCBuACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmoSdg//UnEhk2KOHusDvk6H2e5qV14wacP1b0o9bIs4seiCOGhWUb43\r\na6w/ocvEMvpVO+Ni3onF/fCKQsH6zrQ7VGGF7FprP3FbVGneOKLGvJ5Qf0n6\r\nFO91OsGdBRkJj+wTIa2qEYLwYM6qnXvk1FxBNiGYRPw4ZJhinR5Co2JGygm+\r\nCo9V3cGbMFDx1j/OBu5f/awQugkjG7fvU7r2+HyiACKi5r6lU33GyO1Mgu/g\r\nABB9a22Gr0WSEFw4+CJZS/wayLxp7J5hfy7WY9FqBJtYnRWIutkBVvG0Cn6W\r\nqmmnfHtO1j3kI7QhPbszZ+rVpiK7wAbEbZVO3IkqDyGk4+Z6eqkKpkXJ0PdS\r\nJC6XRq7KuVl0PEPnvwbdiW3DolZPKzh5wgbiBCIMT8+4pffT/+P89nb275BP\r\neHxaeNbUn0WQhmX2hztFcMF2aNaK7+EHeQcFQ7spOxLWEcEA+iePRDcCUo2a\r\nV9T7kO/2nLcnc0mQa57MukNHDAHBIsQ78ZA7cYYCZcoux/W+5O3m2oxEymsP\r\nwPN1vaCRuKyAOVWiClxHPlmzu8KmcuSRHcl2O2JWvXTclE6TxZpUGEc4FidU\r\nn6qjvYmjEJlGg+yFod2TYsjUYLNwGREQpxiBUkSkLDnZ0sog5/kNMIPkiQhu\r\nF7MYpez8iX4aCBGeANadu6zVcQrqXrjIWFw=\r\n=qvB8\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "gitHead": "db611f0eda8931f1ac8caf11a11dfb08187f1d3b",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "yarn lint && tape test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "pretest": "rimraf test/work",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmUser": {
+    "name": "electron",
+    "email": "electron@github.com"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/osx-sign.git",
+    "type": "git"
+   },
+   "_npmVersion": "8.1.0",
+   "description": "Codesign Electron macOS apps",
+   "directories": {},
+   "_nodeVersion": "16.13.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "plist": "^3.0.5",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.6",
+    "isbinaryfile": "^4.0.8",
+    "compare-version": "^0.1.2"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^4.7.1",
+    "eslint": "^8.1.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "standard": "^16.0.4",
+    "run-series": "^1.1.9",
+    "typescript": "^4.4.4",
+    "@types/node": "^16.11.6",
+    "extract-zip": "^2.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/plist": "^3.0.2",
+    "run-waterfall": "^1.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "electron-download": "^4.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-promise": "^5.1.1",
+    "@types/compare-version": "^0.1.31",
+    "eslint-config-standard": "^16.0.3",
+    "@typescript-eslint/parser": "^5.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/osx-sign_1.0.1_1648107630165_0.5986229491340738",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.0.2": {
+   "name": "@electron/osx-sign",
+   "version": "1.0.2",
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "@electron/osx-sign@1.0.2",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/osx-sign",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.js",
+    "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "dist": {
+    "shasum": "c29c2f16f1a5ab7d43830a9493bcaa79f2877201",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.0.2.tgz",
+    "fileCount": 14,
+    "integrity": "sha512-TuDdc+J2LKRyX2w1ue/P3doabxRAsYqmF+32x1fxf5tFnWBfhcbM0eoM/wbbEIuM+gleNhaOkWzk2j5ZJTfL9w==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDhzcwtXNcRonCe9XfYOnYt5Eaq5ByrKPoD6KDS2XsuigIhAMJ0sCAXp4cYtp9a5+DEr7kVNdlXhx5PZBnlybvWyOc9",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 25668,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjjIoqACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmrgqg//aUQuZ3cDgE35gAfwRmw45B0ZIcrKomEXSpFvUlbC4ggaRc4y\r\n46IK4O9yrY7mhFwAP4YjalkokdPQZXUjBxH4KZ9/akYt7+tFK0iCyq4h/gNj\r\nHAYSFTKj47IuGDT2cQnAaEx1p+bn1795CGR7lN6kBETZ4kelXVUV0XkwT9xu\r\nBgshtLBGt8/4SbxfKsd0gSzvHTr+MElk6p4v4nR001gall8euoa7ugqaV4jn\r\n31kiMwv7elD4GSBsscunJTnqmtkoaE3V5qpAxVMQGCtl1KBzYayKnKcjSaI7\r\nrHSYbcCDa5IVAB4ZWW5cuG/yCxW9pikLDgkdecUbJyJXa7n5cgqC+cxR9+uS\r\njuZohpN17gghVYKRum/L0cY0SSfjHp0rNdoAmpEerYjfeUfoDk89JxoVM+zE\r\n61SsomH3IyqJ3Szn1BLfHW5WmPko0xV0+Jhh/XwVWVaN7MOaP2m6RMOaO9tj\r\nYaa48wy5btb1KsfobAZPSdul79TT5uotnFzYl3nJotWFlc6wpQa1XLQ9kYCG\r\n6BH8kzfhfMwH7vpdzNvR55Lj3sqS4K3kh+VbE7hS2TpXvvL1/4PaURK7kNhy\r\nrNPjcz48q6PQn2dvBQ7I6EnmEjDt1u781zmOebljOR+21Ovpq8o4/71sumB8\r\nIZPLlFcTK55jL8Z9lLO5vL2Q+js19muNeW8=\r\n=Mmk2\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "gitHead": "b361eb7f5970c8dd46cd4cc68560e7b0f0f18fbd",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "yarn lint && tape test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "pretest": "rimraf test/work",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/osx-sign.git",
+    "type": "git"
+   },
+   "_npmVersion": "9.1.3",
+   "description": "Codesign Electron macOS apps",
+   "directories": {},
+   "_nodeVersion": "16.17.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "plist": "^3.0.5",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.6",
+    "isbinaryfile": "^4.0.8",
+    "compare-version": "^0.1.2"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^4.7.1",
+    "eslint": "^8.1.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "standard": "^16.0.4",
+    "run-series": "^1.1.9",
+    "typescript": "^4.4.4",
+    "@types/node": "^16.11.6",
+    "extract-zip": "^2.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/plist": "^3.0.2",
+    "run-waterfall": "^1.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "electron-download": "^4.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-promise": "^5.1.1",
+    "@types/compare-version": "^0.1.31",
+    "eslint-config-standard": "^16.0.3",
+    "@typescript-eslint/parser": "^5.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/osx-sign_1.0.2_1670154794684_0.024487041033049328",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.0.4": {
+   "name": "@electron/osx-sign",
+   "version": "1.0.4",
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "@electron/osx-sign@1.0.4",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/osx-sign",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.js",
+    "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "dist": {
+    "shasum": "8e91442846471636ca0469426a82b253b9170151",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.0.4.tgz",
+    "fileCount": 61,
+    "integrity": "sha512-xfhdEcIOfAZg7scZ9RQPya1G1lWo8/zMCwUXAulq0SfY7ONIW+b9qGyKdMyuMctNYwllrIS+vmxfijSfjeh97g==",
+    "signatures": [
+     {
+      "sig": "MEQCIAdtEoDf4Qby9zL1kOjxGkkq8fMb+q2kI2NScya6dk6gAiA4Vi+QMBVab5Fbx4yftoW6Pd5ifVJpt0+fnieLxlKU7A==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 174883,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjjckzACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmqnsw/8D38AZUn5tPrAFfkRRApTc2ypwCYqSrFLbE78sMjTPNs9Rbuj\r\nq9rYYE1RZTw/SJV6oE4RMPaAdcskGZIpdAkCrFqZUYHM4JzKE2zqg9xIzpqH\r\nDgQudl5/IaRseoe0k+j36/2baWjO2zQqybCvpoWDu7SFlMWwrTsBUiBs1M4V\r\nQinRg6XVj2pVYy25cGCG0anke4fnRYwSZtPUGRG62oCqR83zYO4/+PvaDjBO\r\nggjEQsW1/RsDUd02q3i5k8QdO/r3T1QsxhpPcAwqwCkaC7ctRLwE1Its5dvn\r\nFNJzooj6vM0DtcxADrweQHKcXY6Cjoj6nDyAa84bH0hVk3fWCAeRxigbJIwb\r\nGW8CiyoJQF1Xd9xW2OMcjztxuRWeREwptzBo8X2ZlKQ4t69oqT/u1C6zMAw/\r\n3x+XT98G1S7B4HALHoHeEGV3FdMCAsCg7FZC+GYtDcETPb+RxvPraK1O3Cym\r\naAb0FK+dFA3b8CYWnmscSmzopyy0IPuN5ovotTMj2bLkvNpc3Z17dhd4SK0k\r\nXnuWDAxhczAWAUu46SUanv7QPq6mMhw9mfZVryuaadgI1z8WmypN7CsD3vxO\r\nL2vuS2itiSFnItLGR8vC1tbeC+JIb6M4vkoQGNFu1WqpLcBJzrW5il17LYr/\r\niyxTT8FSHFkscaM5aosUYheMaFy8/+DHD2M=\r\n=CYpX\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "gitHead": "9900fe9e995b1ab95caae1f2730f709684954712",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "yarn lint && tape test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "pretest": "rimraf test/work",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/osx-sign.git",
+    "type": "git"
+   },
+   "_npmVersion": "9.1.3",
+   "description": "Codesign Electron macOS apps",
+   "directories": {},
+   "_nodeVersion": "16.17.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "plist": "^3.0.5",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.6",
+    "isbinaryfile": "^4.0.8",
+    "compare-version": "^0.1.2"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^4.7.1",
+    "eslint": "^8.1.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "standard": "^16.0.4",
+    "run-series": "^1.1.9",
+    "typescript": "^4.4.4",
+    "@types/node": "^16.11.6",
+    "extract-zip": "^2.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/plist": "^3.0.2",
+    "run-waterfall": "^1.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "electron-download": "^4.1.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-promise": "^5.1.1",
+    "@types/compare-version": "^0.1.31",
+    "eslint-config-standard": "^16.0.3",
+    "@typescript-eslint/parser": "^5.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.3.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/osx-sign_1.0.4_1670236467452_0.20674851423228469",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.0.5": {
+   "name": "@electron/osx-sign",
+   "version": "1.0.5",
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "@electron/osx-sign@1.0.5",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/osx-sign",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.js",
+    "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "dist": {
+    "shasum": "0af7149f2fce44d1a8215660fd25a9fb610454d8",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.0.5.tgz",
+    "fileCount": 61,
+    "integrity": "sha512-k9ZzUQtamSoweGQDV2jILiRIHUu7lYlJ3c6IEmjv1hC17rclE+eb9U+f6UFlOOETo0JzY1HNlXy4YOlCvl+Lww==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCyw5pygbUJNUCIIpZv5PTqXopZds9xLSuu3pPT7Mxz/wIhAJsP6QN2x+Z84/v1zmv3yAeBfrsmpoEzzkT4WHnUbNST",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 177083
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "gitHead": "06b32b5e8955c95203882ff7ae7f08ae84764a26",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "yarn lint && tape test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "pretest": "rimraf test/work",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/osx-sign.git",
+    "type": "git"
+   },
+   "_npmVersion": "8.19.4",
+   "description": "Codesign Electron macOS apps",
+   "directories": {},
+   "_nodeVersion": "18.17.1",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "plist": "^3.0.5",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.6",
+    "isbinaryfile": "^4.0.8",
+    "compare-version": "^0.1.2"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^4.7.1",
+    "eslint": "^8.29.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "standard": "^17.0.0",
+    "run-series": "^1.1.9",
+    "typescript": "^4.9.3",
+    "@types/node": "^16.11.6",
+    "extract-zip": "^2.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/plist": "^3.0.2",
+    "@electron/get": "^2.0.2",
+    "run-waterfall": "^1.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "@types/compare-version": "^0.1.31",
+    "eslint-config-standard": "^17.0.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@continuous-auth/semantic-release-npm": "^3.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/osx-sign_1.0.5_1692388757353_0.9837024312012637",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.1.0": {
+   "name": "@electron/osx-sign",
+   "version": "1.1.0",
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "@electron/osx-sign@1.1.0",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/osx-sign",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.js",
+    "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "dist": {
+    "shasum": "461ee8cbec833768ced5a99ed61b0f6fdce78852",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.1.0.tgz",
+    "fileCount": 61,
+    "integrity": "sha512-9xxNAyTu2YEAfn2TOQXC5fcTZ9hxVT/zAgWOONpOvxivv5rU97RldGbJrxz+OBKXGAiQRJUYOY07mJI++S/iYw==",
+    "signatures": [
+     {
+      "sig": "MEUCIF7J4rRXVm1U/bneo3cxX8XbdaNp0gzRxGjZsqbK4CisAiEA2IwqRRtSCAvAgoR9i5o0NlgOW0CFHPYFyOwtS1M9JY8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 177939
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "gitHead": "7f7934f24cc553d16881aa09eef5d18633ec540a",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "yarn lint && tape test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "pretest": "rimraf test/work",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/osx-sign.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.2.4",
+   "description": "Codesign Electron macOS apps",
+   "directories": {},
+   "_nodeVersion": "20.11.1",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "plist": "^3.0.5",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.6",
+    "isbinaryfile": "^4.0.8",
+    "compare-version": "^0.1.2"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^4.7.1",
+    "eslint": "^8.29.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "standard": "^17.0.0",
+    "run-series": "^1.1.9",
+    "typescript": "^4.9.3",
+    "@types/node": "^16.11.6",
+    "extract-zip": "^2.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/plist": "^3.0.2",
+    "@electron/get": "^2.0.2",
+    "run-waterfall": "^1.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "@types/compare-version": "^0.1.31",
+    "eslint-config-standard": "^17.0.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/osx-sign_1.1.0_1710951370376_0.6685030770004805",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.2.0": {
+   "name": "@electron/osx-sign",
+   "version": "1.2.0",
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "@electron/osx-sign@1.2.0",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/osx-sign",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.js",
+    "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "dist": {
+    "shasum": "d1c83cac03e52f210858594eb011142a1ad0ae70",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.2.0.tgz",
+    "fileCount": 61,
+    "integrity": "sha512-kOA3bAeDXFMj2JHj0R2fk/IT92qpu3tZHwM4l/PdksAuy7eA3/23QktCiAoQICwPdtxCYdt9ZLimKvnNyUpdSQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDdx6HBaOQpH07tDrclONCCY/iMx4jnS9npCticIOz8IAIhAI/dfibPwQKiFHQ9hGl4cNW2THrUx6YP3muhBHXIxBxn",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 178665
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "gitHead": "e05e008742da43a080d143112f941f73320171d0",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "yarn lint && tape test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "pretest": "rimraf test/work",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/osx-sign.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.5.0",
+   "description": "Codesign Electron macOS apps",
+   "directories": {},
+   "_nodeVersion": "20.12.2",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "plist": "^3.0.5",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.6",
+    "isbinaryfile": "^4.0.8",
+    "compare-version": "^0.1.2"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^4.7.1",
+    "eslint": "^8.29.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "standard": "^17.0.0",
+    "run-series": "^1.1.9",
+    "typescript": "^4.9.3",
+    "@types/node": "^16.11.6",
+    "extract-zip": "^2.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/plist": "^3.0.2",
+    "@electron/get": "^2.0.2",
+    "run-waterfall": "^1.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "@types/compare-version": "^0.1.31",
+    "eslint-config-standard": "^17.0.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/osx-sign_1.2.0_1713760010551_0.35677931383947636",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.3.0": {
+   "name": "@electron/osx-sign",
+   "version": "1.3.0",
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "@electron/osx-sign@1.3.0",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/osx-sign",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.js",
+    "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "dist": {
+    "shasum": "bd6fb60c519b76ca8a000e5801f5685690e8adad",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.3.0.tgz",
+    "fileCount": 61,
+    "integrity": "sha512-TEXhxlYSDRr9JWK5nWdOv5MtuUdaZ412uxIIEQ0hLt80o0HYWtQJBlW5QmrQDMtebzATaOjKG9UfCzLyA90zWQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCQBbhHZ42Vudqu3Ik8wUzokNGcU3SXi1jKEl6FEUTzBAIgdRbkefLBo/iAskSd6vmmx6axUW4VCoME1IfI5IErQXM=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 181598
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "gitHead": "4e9ffced249545add6b4fb7d037de1d2c4b6bb85",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "yarn lint && tape test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "pretest": "rimraf test/work",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/osx-sign.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.5.2",
+   "description": "Codesign Electron macOS apps",
+   "directories": {},
+   "_nodeVersion": "20.13.1",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "plist": "^3.0.5",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.6",
+    "isbinaryfile": "^4.0.8",
+    "compare-version": "^0.1.2"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^4.7.1",
+    "eslint": "^8.29.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "standard": "^17.0.0",
+    "run-series": "^1.1.9",
+    "typescript": "^4.9.3",
+    "@types/node": "^16.11.6",
+    "extract-zip": "^2.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/plist": "^3.0.2",
+    "@electron/get": "^2.0.2",
+    "run-waterfall": "^1.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "@types/compare-version": "^0.1.31",
+    "eslint-config-standard": "^17.0.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/osx-sign_1.3.0_1715738986168_0.9866812008171915",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.3.1": {
+   "name": "@electron/osx-sign",
+   "version": "1.3.1",
+   "description": "Codesign Electron macOS apps",
+   "main": "dist/cjs/index.js",
+   "module": "dist/esm/index.js",
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.js",
+    "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron/osx-sign.git"
+   },
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
+   "homepage": "https://github.com/electron/osx-sign",
+   "dependencies": {
+    "compare-version": "^0.1.2",
+    "debug": "^4.3.4",
+    "fs-extra": "^10.0.0",
+    "isbinaryfile": "^4.0.8",
+    "minimist": "^1.2.6",
+    "plist": "^3.0.5"
+   },
+   "devDependencies": {
+    "@electron/get": "^2.0.2",
+    "@types/compare-version": "^0.1.31",
+    "@types/debug": "^4.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^16.11.6",
+    "@types/plist": "^3.0.2",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.29.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "extract-zip": "^2.0.1",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "run-series": "^1.1.9",
+    "run-waterfall": "^1.1.7",
+    "standard": "^17.0.0",
+    "tape": "^4.7.1",
+    "typedoc": "~0.25.13",
+    "typescript": "^4.9.3"
+   },
+   "scripts": {
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "docs:build": "npx typedoc",
+    "lint": "eslint --ext .ts,.js src bin test",
+    "pretest": "rimraf test/work",
+    "test": "yarn lint && tape test",
+    "prepublishOnly": "yarn build"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "_id": "@electron/osx-sign@1.3.1",
+   "gitHead": "51531f18ea9e789b5359e720edca6970e5503a89",
+   "types": "./dist/cjs/index.d.ts",
+   "_nodeVersion": "20.15.0",
+   "_npmVersion": "10.7.0",
+   "dist": {
+    "integrity": "sha512-BAfviURMHpmb1Yb50YbCxnOY0wfwaLXH5KJ4+80zS0gUkzDX3ec23naTlEqKsN+PwYn+a1cCzM7BJ4Wcd3sGzw==",
+    "shasum": "faf7eeca7ca004a6be541dc4cf7a1bd59ec59b1c",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.3.1.tgz",
+    "fileCount": 61,
+    "unpackedSize": 193505,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIGCwuEufhGs8wfQ3kCT0FWCfNfjd3oXZDLVQmWucRXo+AiEA6R8GoqV7SoSSPlkGziAgJwUwL683Dd3MfKWVMowI4vs="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/osx-sign_1.3.1_1720115783834_0.27717273280491495"
+   },
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2022-03-24T07:39:04.390Z",
+  "modified": "2024-07-04T17:56:24.277Z",
+  "1.0.0": "2022-03-24T07:39:04.591Z",
+  "1.0.1": "2022-03-24T07:40:30.337Z",
+  "1.0.2": "2022-12-04T11:53:14.864Z",
+  "1.0.4": "2022-12-05T10:34:27.627Z",
+  "1.0.5": "2023-08-18T19:59:17.546Z",
+  "1.1.0": "2024-03-20T16:16:10.562Z",
+  "1.2.0": "2024-04-22T04:26:50.708Z",
+  "1.3.0": "2024-05-15T02:09:46.307Z",
+  "1.3.1": "2024-07-04T17:56:24.046Z"
+ },
+ "maintainers": [
+  {
+   "name": "electron-cfa",
+   "email": "info+cfa-npm@electronjs.org"
+  }
+ ],
+ "author": {
+  "name": "electron"
+ },
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/electron/osx-sign.git"
+ },
+ "license": "BSD-2-Clause",
+ "homepage": "https://github.com/electron/osx-sign",
+ "bugs": {
+  "url": "https://github.com/electron/osx-sign/issues"
+ },
+ "readme": "# @electron/osx-sign [![npm][npm_img]][npm_url] [![Build Status][circleci_img]][circleci_url]\n\nCodesign Electron macOS apps\n\n## About\n\n[`@electron/osx-sign`][electron-osx-sign] minimizes the extra work needed to eventually prepare\nyour apps for shipping, providing options that work out of the box for most applications.\nAdditional configuration is available via its API.\n\nThere are two main functionalities exposed via this package:\n* Signing macOS apps via `sign` functions. Under the hood, this uses the `codesign` utility.\n* Creating `.pkg` installer packages via `flat` functions. Under the hood, this uses the `productbuild` utility.\n\n## Installation\n\n`@electron/osx-sign` is integrated into other Electron packaging tools, and can be configured accordingly:\n* [Electron Packager](https://electron.github.io/packager/main/types/OsxSignOptions.html)\n* [Electron Forge](https://www.electronforge.io/guides/code-signing/code-signing-macos)\n\nYou can also install `@electron/osx-sign` separately if your packaging pipeline does not involve those tools:\n\n```sh\nnpm install --save-dev @electron/osx-sign\n```\n\n## Code signing\n\nThe signing procedure implemented in this package is based on what described in Electron's [Code Signing Guide](https://github.com/electron/electron/blob/main/docs/tutorial/code-signing.md).\n\n### Prerequisites\n\n* You must be a registered member of the [Apple Developer Program](https://developer.apple.com/programs/).\n  Please note that you could be charged by Apple in order to get issued with the required certificates.\n* You must have [Xcode](https://developer.apple.com/xcode/) installed from the\n  [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835). It is not recommended to download your\n  copy from other 3rd party sources for security reasons.\n* You must have Xcode Command Line Tools installed. To check whether it is available,\n  try `xcode-select --install` and follow the instructions.\n* To distribute your app on the Mac App Store, You must create a Mac App on [App Store Connect](https://appstoreconnect.apple.com/).\n* You must give your app a unique Bundle ID.\n* You must give your app a version number.\n\n### Certificates\n\nIn order to distribute your application either inside or outside the Mac App Store,\nyou will have to have the following certificates from Apple after becoming a registered developer.\n\nCertificates can be created through the\n[Certificates, Identities & Profiles](https://developer.apple.com/account/resources/certificates/add)\npage in the Apple Developer website or via [Account Preferences in Xcode](https://help.apple.com/xcode/mac/current/#/dev3a05256b8).\n\nFor distribution inside the Mac App Store, you will need to create:\n* Mac App Distribution: `3rd Party Mac Developer Application: * (*)`\n* Mac Installer Distribution: `3rd Party Mac Developer Installer: * (*)`\n\nFor distribution outside the Mac App Store:\n* Developer ID Application: `Developer ID Application: * (*)`\n* Developer ID Installer: `Developer ID Installer: * (*)`\n\nAfter you create the necessary certifications, download them and open each so that they are\ninstalled in your keychain. We recommend installing them in your system default keychain so\nthat `@electron/osx-sign` can detect them automatically.\n\n**Note:** They appear to come in pairs. It is preferred to have every one of them installed so not to \nare about which is not yet installed for future works. However, if you may only want to distribute\noutside the Mac App Store, there is no need to have the 3rd Party Mac Developer ones installed and vice versa.\n\n### API\n\n```javascript\nconst { signAsync } = require('@electron/osx-sign')\nconst opts = {\n  app: 'path/to/my.app'\n};\nsignAsync(opts)\n  .then(function () {\n    // Application signed\n  })\n  .catch(function (err) {\n    // Handle the error\n  })\n```\n\nThe only mandatory option for `signAsync` is a path to your `.app` package.\nConfiguration for most Electron apps should work out of the box.\nFor full configuration options, see the [API documentation].\n\n### Usage examples\n\n#### Signing for Mac App Store distribution\n\n```javascript\nconst { signAsync } = require('@electron/osx-sign')\nconst opts = {\n  app: 'path/to/my.app',\n  // optional parameters for additional customization\n  platform: \"mas\", // should be auto-detected if your app was packaged for MAS via Packager or Forge\n  type: \"distribution\", // defaults to \"distribution\" for submission to App Store Connect\n  provisioningProfile: 'path/to/my.provisionprofile', // defaults to the current working directory\n  keychain: 'my-keychain', // defaults to the system default login keychain\n};\nsignAsync(opts)\n  .then(function () {\n    // Application signed\n  })\n  .catch(function (err) {\n    // Handle the error\n  })\n```\n\nMac App Store apps require a [Provisioning Profile](https://www.electronjs.org/docs/latest/tutorial/mac-app-store-submission-guide#prepare-provisioning-profile)\nfor submission to App Store Connect. We recommend having the provisioning profile for distribution\nplaced in the current working directory and the signing identity installed in the default keychain.\n\nThe app is not expected to run after codesigning since there is no provisioned device, and it is\nintended only for submission to App Store Connect. Since `@electron/osx-sign` adds the entry\n`com.apple.developer.team-identifier` to a temporary copy of the specified entitlements file\n(with the default option `preAutoEntitlements`), distribution builds can no longer be run directly.\n\nTo run an app codesigned for distribution locally after codesigning, you may manually add\n`ElectronTeamID` in your `Info.plist` and `com.apple.security.application-groups` in the\nentitlements file, and set `preAutoEntitlements: false` for `@electron/osx-sign` to avoid\nthis extra bit. Note that \"certain features are only allowed across apps whose team-identifier value match\"\n([Technical Note TN2415](https://developer.apple.com/library/content/technotes/tn2415/_index.html#//apple_ref/doc/uid/DTS40016427-CH1-ENTITLEMENTSLIST)).\n\nAlternatively, set the app's `type` to `development` to codesign a development version of your app,\nwhich will allow it to be run on your development provisioned machine. Apps signed for development\nwill not be eligible for submission via App Store Connect.\n\n#### Signing with `--deep`\n\nSome subresources that you may include in your Electron app may need to be signed with `--deep`.\nThis is not typically safe to apply to the entire Electron app and therefore should be applied to _just_ your file.\n\n```javascript\nsignAsync({\n  app: 'path/to/my.app',\n  optionsForFile: (filePath) => {\n    // For our one specific file we can pass extra options to be merged\n    // with the default options\n    if (path.basename(filePath) === 'myStrangeFile.jar') {\n      return {\n        additionalArguments: ['--deep'],\n      };\n    }\n\n    // Just use the default options for everything else\n    return null;\n  },\n});\n```\n\n#### Signing legacy versions of Electron\n\n`@electron/osx-sign` maintains backwards compatibility with older versions of Electron, but\ngenerally assumes that you are on the latest stable version.\n\nIf you are running an older unsupported version of Electron, you should pass in the `version`\noption as such:\n\n```javascript\nsignAsync({\n  app: 'path/to/my.app',\n  version: '0.34.0',\n});\n```\n\n## Flat installer packaging\n\nThis module also handles the creation of flat installer packages (`.pkg` installers).\n\n> [!NOTE]\n> Modern `.pkg` installers are also named \"flat\" packages for historical purposes. Prior\n> to Mac OS X Leopard (10.5), installation packages were organized in hierarchical\n> directories. OS X Leopard introduced a new flat package format that is used for modern\n> `.pkg` installers.\n\n### API usage\n\n```javascript\nconst { flatAsync } = require('@electron/osx-sign')\nflatAsync({\n  app: 'path/to/my.app'\n})\n  .then(function () {\n    // Application flattened\n  })\n  .catch(function (err) {\n    // Handle the error\n  })\n```\n\nThe only mandatory option for `flatAsync` is a path to your `.app` package.\nFor full configuration options, see the [API documentation].\n\n## CLI\n\n`@electron/osx-sign` also exposes a legacy command-line interface (CLI) for both signing\nand installer generation. However, we recommend using the JavaScript API as it has a more\ncomplete API surface (e.g. `optionsForFile` is only available via JS).\n\n```sh\n# install the package locally into devDependencies\nnpm install --save-dev @electron/osx-sign\n\n# Sign a packaged .app bundle\nnpx electron-osx-sign path/to/my.app [options ...]\n\n# Create a .pkg installer from a packaged .app bundle\nnpx electron-osx-flat path/to/my.app [options ...]\n```\n\nFor full options, use the `--help` flag for either command.\n\n\n## Debug\n\nThe [`debug`](https://www.npmjs.com/package/debug) module is used to display advanced logs and messages.\nIf you are having problems with signing your app with `@electron/osx-sign`, run your signing scripts with\nthe `DEBUG=electron-osx-sign*` environment variable.\n\n## Test\n\nThe project's configured to run automated tests on CircleCI.\n\nIf you wish to manually test the module, first comment out `opts.identity` in `test/basic.js` to enable\nauto discovery. Then run the command `npm test` from the dev directory.\n\nWhen this command is run for the first time: `@electron/get` will download macOS Electron releases defined\nin `test/config.json`, and save to `~/.electron/`, which might take up less than 1GB of disk space.\n\nA successful testing should look something like:\n\n```\n$ npm test\n\n> electron-osx-sign@0.4.17 pretest electron-osx-sign\n> rimraf test/work\n\n> electron-osx-sign@0.4.17 test electron-osx-sign\n> standard && tape test\n\nCalling @electron/get before running tests...\nRunning tests...\nTAP version 13\n# setup\n# defaults-test:v7.0.0-beta.3-darwin-x64\nok 1 app signed\n# defaults-test:v7.0.0-beta.3-mas-x64\nok 2 app signed\n# defaults-test:v6.0.3-darwin-x64\nok 3 app signed\n# defaults-test:v6.0.3-mas-x64\nok 4 app signed\n# defaults-test:v5.0.10-darwin-x64\nok 5 app signed\n# defaults-test:v5.0.10-mas-x64\nok 6 app signed\n# defaults-test:v4.2.9-darwin-x64\nok 7 app signed\n# defaults-test:v4.2.9-mas-x64\nok 8 app signed\n# defaults-test:v3.1.2-darwin-x64\nok 9 app signed\n# defaults-test:v3.1.2-mas-x64\nok 10 app signed\n# teardown\n\n1..10\n# tests 10\n# pass  10\n\n# ok\n```\n\n[Electron]: https://github.com/electron/electron\n[electron-osx-sign]: https://github.com/electron/osx-sign\n[npm_img]: https://img.shields.io/npm/v/@electron/osx-sign.svg\n[npm_url]: https://npmjs.org/package/@electron/osx-sign\n[circleci_img]: https://img.shields.io/circleci/build/github/electron/osx-sign\n[circleci_url]: https://circleci.com/gh/electron/osx-sign\n",
+ "readmeFilename": "README.md"
+}

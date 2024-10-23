@@ -1,0 +1,875 @@
+{
+ "_id": "header-case",
+ "_rev": "12-f06eb3d1a0f0f018b1b73bcc4f26b215",
+ "name": "header-case",
+ "description": "Transform into a dash separated string of capitalized words",
+ "dist-tags": {
+  "latest": "3.0.0"
+ },
+ "versions": {
+  "1.0.0": {
+   "name": "header-case",
+   "version": "1.0.0",
+   "description": "Header case a string",
+   "main": "header-case.js",
+   "typings": "header-case.d.ts",
+   "files": [
+    "header-case.js",
+    "header-case.d.ts",
+    "LICENSE"
+   ],
+   "scripts": {
+    "lint": "standard",
+    "test-spec": "mocha -- -R spec --bail",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
+    "test": "npm run lint && npm run test-cov"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/header-case.git"
+   },
+   "keywords": [
+    "header",
+    "case",
+    "upper",
+    "http"
+   ],
+   "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+   },
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/blakeembrey/header-case/issues"
+   },
+   "homepage": "https://github.com/blakeembrey/header-case",
+   "devDependencies": {
+    "istanbul": "^0.4.3",
+    "mocha": "^2.2.1",
+    "standard": "^7.1.2"
+   },
+   "dependencies": {
+    "no-case": "^2.2.0",
+    "upper-case": "^1.1.3"
+   },
+   "gitHead": "9323b0d908a1bcbe52948c8a77896b5206d46a29",
+   "_id": "header-case@1.0.0",
+   "_shasum": "d9e335909505d56051ec16a0106821889e910781",
+   "_from": ".",
+   "_npmVersion": "3.9.3",
+   "_nodeVersion": "6.2.1",
+   "_npmUser": {
+    "name": "blakeembrey",
+    "email": "hello@blakeembrey.com"
+   },
+   "dist": {
+    "shasum": "d9e335909505d56051ec16a0106821889e910781",
+    "tarball": "http://localhost:3000/header-case/-/header-case-1.0.0.tgz",
+    "integrity": "sha512-K0igo4CMyA/icp8VIpfA0Rc/jLqA4DpUj6tlx5akojqmhZz0jrj4BmHBgQHWs4VzEjh/Vn0TbU7wsX6lJh21Ag==",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEYCIQCK1F2YxxeeL+ScZabMUD49BGO+wg0JUyZb0xLZk5ThBwIhAJPB562iBrVeuffV3IQvruPbRMGM3yGDvlYYZVRwt0LK"
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/header-case-1.0.0.tgz_1465693933154_0.670644786208868"
+   },
+   "directories": {}
+  },
+  "1.0.1": {
+   "name": "header-case",
+   "version": "1.0.1",
+   "description": "Header case a string",
+   "main": "header-case.js",
+   "typings": "header-case.d.ts",
+   "files": [
+    "header-case.js",
+    "header-case.d.ts",
+    "LICENSE"
+   ],
+   "scripts": {
+    "lint": "standard",
+    "test-spec": "mocha -- -R spec --bail",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec --bail",
+    "test": "npm run lint && npm run test-cov"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/header-case.git"
+   },
+   "keywords": [
+    "header",
+    "case",
+    "upper",
+    "http"
+   ],
+   "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+   },
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/blakeembrey/header-case/issues"
+   },
+   "homepage": "https://github.com/blakeembrey/header-case",
+   "devDependencies": {
+    "istanbul": "^0.4.3",
+    "mocha": "^3.0.0",
+    "standard": "^9.0.1"
+   },
+   "dependencies": {
+    "no-case": "^2.2.0",
+    "upper-case": "^1.1.3"
+   },
+   "gitHead": "60bc941c26363c89d57ba7936b9342faa63757c6",
+   "_id": "header-case@1.0.1",
+   "_shasum": "9535973197c144b09613cd65d317ef19963bd02d",
+   "_from": ".",
+   "_npmVersion": "3.10.10",
+   "_nodeVersion": "7.3.0",
+   "_npmUser": {
+    "name": "blakeembrey",
+    "email": "hello@blakeembrey.com"
+   },
+   "dist": {
+    "shasum": "9535973197c144b09613cd65d317ef19963bd02d",
+    "tarball": "http://localhost:3000/header-case/-/header-case-1.0.1.tgz",
+    "integrity": "sha512-i0q9mkOeSuhXw6bGgiQCCBgY/jlZuV/7dZXyZ9c6LcBrqwvT8eT719E9uxE5LiZftdl+z81Ugbg/VvXV4OJOeQ==",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQDObBeO2Z8q7FrAL3qXp7ocMsl+Oxf1Xoa2uTC2sZEhngIgPWJyxJIS28G7Sjp25riShlky8SeXkyHtTnkrVf2YEKw="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/header-case-1.0.1.tgz_1489797269558_0.8118089793715626"
+   },
+   "directories": {}
+  },
+  "2.0.0": {
+   "name": "header-case",
+   "version": "2.0.0",
+   "description": "Transform into a dash separated string of capitalized words",
+   "main": "dist/index.js",
+   "typings": "dist/index.d.ts",
+   "module": "dist.es2015/index.js",
+   "sideEffects": false,
+   "jsnext:main": "dist.es2015/index.js",
+   "scripts": {
+    "lint": "tslint \"src/**/*\" --project tsconfig.json",
+    "build": "rimraf dist/ dist.es2015/ && tsc && tsc -P tsconfig.es2015.json",
+    "specs": "jest --coverage",
+    "test": "npm run build && npm run lint && npm run specs && npm run size",
+    "size": "size-limit",
+    "prepare": "npm run build"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/change-case.git"
+   },
+   "keywords": [
+    "header",
+    "case",
+    "dash",
+    "hyphen",
+    "capitalize",
+    "convert",
+    "transform"
+   ],
+   "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+   },
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/blakeembrey/change-case/issues"
+   },
+   "homepage": "https://github.com/blakeembrey/change-case/tree/master/packages/header-case#readme",
+   "size-limit": [
+    {
+     "path": "dist/index.js",
+     "limit": "400 B"
+    }
+   ],
+   "jest": {
+    "roots": [
+     "<rootDir>/src/"
+    ],
+    "transform": {
+     "\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+     "ts",
+     "tsx",
+     "js",
+     "jsx",
+     "json",
+     "node"
+    ]
+   },
+   "publishConfig": {
+    "access": "public"
+   },
+   "dependencies": {
+    "capital-case": "^1.0.0"
+   },
+   "devDependencies": {
+    "@size-limit/preset-small-lib": "^2.2.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
+    "typescript": "^3.7.2"
+   },
+   "gitHead": "55911ca17c2e0c964b9b84143e14e29ffc9ff499",
+   "_id": "header-case@2.0.0",
+   "_nodeVersion": "13.1.0",
+   "_npmVersion": "lerna/3.19.0/node@v13.1.0+x64 (darwin)",
+   "dist": {
+    "integrity": "sha512-Kxuvf8+46hSzNahERPBstRcRnKFt5sZsDwB27nSo2IgINSHULhRw+IM5pnuRL7tNtMF3ftSg4hZ5ibEocNCmzA==",
+    "shasum": "6749a20cdefeb2b7e7b70a5812cf87770ff57260",
+    "tarball": "http://localhost:3000/header-case/-/header-case-2.0.0.tgz",
+    "fileCount": 15,
+    "unpackedSize": 9480,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd41tmCRA9TVsSAnZWagAAyJMP/1VhHtM6OfFecbI1184z\nVGzSsLUOGBTLdzqEcPzw3LnhJavZJxA6HH1dt1hwqRcdxukCSN0YroY0o/0l\n7JgCCxVQCvXd7yGqQIUjuAAe9hcqWOpHHwPCxhK7jlHq46TeCqlqv+BToe7t\nYnnUlidzGuaD+k2MaEmxhoXlMHVP5t+pEqn9AW2kRbsLNZ3x4LukHHe4+5iu\nfIk8Tk0np+cZb0nm8hGo729Qj6zdNUrPW8NqcEHqTdraGVZUeKRbzQSO+iX3\n+bGdnAg++XYCLg0znk3mlDXQPel1ZfEyRUfxwlbRG1fRlQng8wTJ+ygsUZze\nio/8T40bRJyIPXds1wV1zXWej9llRz2fcUllvaeMzMzwFv32gdfxBjUfgOAX\ndkYbTkacYrIVsWz8rfXlNJjwC7BmGRRTM0Pk5AoZC5JSgGaxcYt/tKfT1T+1\nrn/GWKOE3ejv4yP9qmrFZZK+ik+hF6ingQnpGiku5sF4zjFsW+stEb7vPLyw\nsxxqKohbfTUSf3wepuvssZfPnpxYgAVk7Y4yHIc7uChLDbtQIxyZGbCMBNJ0\nKwOnVKDoMUmNxztOab/I+bDBQGjucIWnVr05mGKhSJXZlJuH+z3n7A4sEcLM\nkQ0mRkylYNf0VxPKRiaa2qufq2ycG9yKGnFcJ2uZdzyTA55eiO01HOxV+GBO\nbOp2\r\n=Qnlo\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEYCIQCAWq2XsXUCiWQjuHDbJI6Ic5EYPxGsP9RAnOl4irbLMwIhAItdp0PL0Ny8qyMn2ngfp4r6ok/ca6jh0/xIwT7lq4MF"
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    }
+   ],
+   "_npmUser": {
+    "name": "blakeembrey",
+    "email": "hello@blakeembrey.com"
+   },
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/header-case_2.0.0_1575181158271_0.3012911793456272"
+   },
+   "_hasShrinkwrap": false
+  },
+  "2.0.1": {
+   "name": "header-case",
+   "version": "2.0.1",
+   "description": "Transform into a dash separated string of capitalized words",
+   "main": "dist/index.js",
+   "typings": "dist/index.d.ts",
+   "module": "dist.es2015/index.js",
+   "sideEffects": false,
+   "jsnext:main": "dist.es2015/index.js",
+   "scripts": {
+    "lint": "tslint \"src/**/*\" --project tsconfig.json",
+    "build": "rimraf dist/ dist.es2015/ && tsc && tsc -P tsconfig.es2015.json",
+    "specs": "jest --coverage",
+    "test": "npm run build && npm run lint && npm run specs && npm run size",
+    "size": "size-limit",
+    "prepare": "npm run build"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/change-case.git"
+   },
+   "keywords": [
+    "header",
+    "case",
+    "dash",
+    "hyphen",
+    "capitalize",
+    "convert",
+    "transform"
+   ],
+   "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+   },
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/blakeembrey/change-case/issues"
+   },
+   "homepage": "https://github.com/blakeembrey/change-case/tree/master/packages/header-case#readme",
+   "size-limit": [
+    {
+     "path": "dist/index.js",
+     "limit": "400 B"
+    }
+   ],
+   "jest": {
+    "roots": [
+     "<rootDir>/src/"
+    ],
+    "transform": {
+     "\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+     "ts",
+     "tsx",
+     "js",
+     "jsx",
+     "json",
+     "node"
+    ]
+   },
+   "publishConfig": {
+    "access": "public"
+   },
+   "dependencies": {
+    "capital-case": "^1.0.1"
+   },
+   "devDependencies": {
+    "@size-limit/preset-small-lib": "^2.2.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
+    "typescript": "^3.7.2"
+   },
+   "gitHead": "a3df3a43bfd3d8e3386d0fb09b69454b91516d18",
+   "_id": "header-case@2.0.1",
+   "_nodeVersion": "13.1.0",
+   "_npmVersion": "lerna/3.19.0/node@v13.1.0+x64 (darwin)",
+   "dist": {
+    "integrity": "sha512-ITC1E6AbcL5pOOb0LNltNHikR25aCjZrf0VchS0508Izp0/0qVdZl5H37g6Y5g5amRB/hEddmoI4RwIBBPS4xQ==",
+    "shasum": "db3999f82a941f0444ed6564cd224038d8949b26",
+    "tarball": "http://localhost:3000/header-case/-/header-case-2.0.1.tgz",
+    "fileCount": 15,
+    "unpackedSize": 9572,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd5fVKCRA9TVsSAnZWagAAwwkP/37QoEXrNGY40ZBtwtan\nTK3vl/p3B5hGI7gX+4y1qOAa6kxF+UtjRBnKsn8CRfk04l3CihkpY476c+HJ\nLXJe0VKV/gdlF5TJIRRREaPauhqE+V7jqi5DHUetiJco/RvGbDG868sgd99N\nXJ/nOKC65YcN+nzgSFk427mEkOWGZsea/CJtS9eqx3tQgzlhKuGA6yChthJ5\nmC6MvUwuupBhiEDzgGKTDlq3TouZleSqTC2LsQd4C7uBzYhr60zYMzdGRAXw\noCtZ9rBXBdfOwUEInm+0fPwECK6IJirxhL5OsrVnKQg+ZAmjMQDk3ujj270q\nhz3EsnYYkxIY/onw/2QQQl1l9h1HRGLXh09jlyNRJowoQw+FFPX5PUgSPEPL\n/sKx5AAgQFm9F3l58pKLF28srsdul3Y72TjZcZrfEu52/yCHLTo+st4HhAbi\n5DLvHXGneUb3EJ1CvYrbI1mXsb+Cq9VocKDwPR8HpcExEWAVTzxd6QOWNCD+\ndr7Tdze0bBghHvdNVQzW+heig+g+KHTYb6xIsLih4301B/fTeSvRhxENEg+z\ny9Gj0pMB38dt7ypA3+VQx/IpWZb31HtOMKpZgpT7KAtoW8zCgBfWnLkA7+Jr\nCTYC0US2mGMurv6fADYA4aGmsO/qUbHSiom8F+J9re0cBwVxlSVUUzDKEulg\nTlRV\r\n=mj0D\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQCUUiBLHloJySkBPdodqfJLPZbxg2Ia+YelJJXHEMfqSwIgMd5Osn1xwSGOThSh/ZyrJRDQfHlBew+N9KrfslH67RE="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    }
+   ],
+   "_npmUser": {
+    "name": "blakeembrey",
+    "email": "hello@blakeembrey.com"
+   },
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/header-case_2.0.1_1575351625631_0.895768373525079"
+   },
+   "_hasShrinkwrap": false
+  },
+  "2.0.2": {
+   "name": "header-case",
+   "version": "2.0.2",
+   "description": "Transform into a dash separated string of capitalized words",
+   "main": "dist/index.js",
+   "typings": "dist/index.d.ts",
+   "module": "dist.es2015/index.js",
+   "sideEffects": false,
+   "jsnext:main": "dist.es2015/index.js",
+   "scripts": {
+    "lint": "tslint \"src/**/*\" --project tsconfig.json",
+    "build": "rimraf dist/ dist.es2015/ && tsc && tsc -P tsconfig.es2015.json",
+    "specs": "jest --coverage",
+    "test": "npm run build && npm run lint && npm run specs",
+    "size": "size-limit",
+    "prepare": "npm run build"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/change-case.git"
+   },
+   "keywords": [
+    "header",
+    "case",
+    "dash",
+    "hyphen",
+    "capitalize",
+    "convert",
+    "transform"
+   ],
+   "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+   },
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/blakeembrey/change-case/issues"
+   },
+   "homepage": "https://github.com/blakeembrey/change-case/tree/master/packages/header-case#readme",
+   "size-limit": [
+    {
+     "path": "dist/index.js",
+     "limit": "400 B"
+    }
+   ],
+   "jest": {
+    "roots": [
+     "<rootDir>/src/"
+    ],
+    "transform": {
+     "\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+     "ts",
+     "tsx",
+     "js",
+     "jsx",
+     "json",
+     "node"
+    ]
+   },
+   "publishConfig": {
+    "access": "public"
+   },
+   "dependencies": {
+    "capital-case": "^1.0.2",
+    "tslib": "^1.10.0"
+   },
+   "devDependencies": {
+    "@size-limit/preset-small-lib": "^2.2.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
+    "typescript": "^3.7.2"
+   },
+   "gitHead": "07b68e1a696a1a34090d4f1fc136b1bd467aaa3f",
+   "_id": "header-case@2.0.2",
+   "_nodeVersion": "13.1.0",
+   "_npmVersion": "lerna/3.19.0/node@v13.1.0+x64 (darwin)",
+   "dist": {
+    "integrity": "sha512-DkrKDkNEXG3ZC3urlbt+O9j9qbwFvJwDB1PSKBQqZLVbh2wr7PKpfjGWo/Dw9cpG1IqZM6QTsnVsB3FwdCuEkg==",
+    "shasum": "0e4105f6a2489afdf40cfb65c6b24728d1d02ab2",
+    "tarball": "http://localhost:3000/header-case/-/header-case-2.0.2.tgz",
+    "fileCount": 15,
+    "unpackedSize": 10233,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd6cWQCRA9TVsSAnZWagAAT8UP/RqvrMKzZzwsHqZFsutz\nuT0rmhHIPiN9efN12SkUb306kI1l+dlYBRrNEZuyAcHcQcsQptv7b5J2p/lI\n/ptC+okzz06mBinEvVySHVTcG48pLKreWrGssrHIZJv1Dkf1AR6TUA0xv8+2\nJOmD3p1MPBz1EY/6juB4QNoutiZJkVxtqhAONTaBJoNaLVq1ocsYZ+aUZJ94\nFmgzYeKYFUUcIABGEp7wlmOFCBcEExxH+OgI9PkNoH+pbkOJdLJnbV3onhcn\nRhgdAcNDEFeGe5Yx4wxSzgdBVU75byrngBTGAd1H0F+7x5jki4Kxg5wjqNwb\nHsnbFR9DLOkkq8FhC0h6q5SkQlpYO6siyQyXLPu3MjIe7GdfPjqEk3js8ML2\nSFLN+sWPGBe39UHOg9w2aXZpWkccf9AGdZ3b71w9deRHIECXvi4Luhw2Aq0s\nwfkMGYqdOjdqM+leYRBje3O3KuALw1zyvOzEKEy+pu5nH6sXXQCR6MfHvPKs\n8hSlJKOpw8viVK2m0dF4xWI7wq5r2G8MSMLGKdO1Ad6/UYNEdlNCxqlP11XW\ndQkcJLFOQof/shRZMk5YCeiRnS0X7UC5BIl5XPiajX5Bhss3+qoCGZjc0zuX\nvnDBSh3EJIdCeF5t16NfxdBXxNzSVY/z0zbXuP42PqqiZCTMxtNi02QBT+m8\nIClZ\r\n=pjwN\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQDB465z9beYpedubTA7iHbul5DS/13BS8ilFVSssDZNGQIgVPNjwv6Jp4u4TYlSPyMgnhePs81l6qpdupdOoim6yOA="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    }
+   ],
+   "_npmUser": {
+    "name": "blakeembrey",
+    "email": "hello@blakeembrey.com"
+   },
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/header-case_2.0.2_1575601552141_0.6332496850519294"
+   },
+   "_hasShrinkwrap": false
+  },
+  "2.0.3": {
+   "name": "header-case",
+   "version": "2.0.3",
+   "description": "Transform into a dash separated string of capitalized words",
+   "main": "dist/index.js",
+   "typings": "dist/index.d.ts",
+   "module": "dist.es2015/index.js",
+   "sideEffects": false,
+   "jsnext:main": "dist.es2015/index.js",
+   "scripts": {
+    "lint": "tslint \"src/**/*\" --project tsconfig.json",
+    "build": "rimraf dist/ dist.es2015/ && tsc && tsc -P tsconfig.es2015.json",
+    "specs": "jest --coverage",
+    "test": "npm run build && npm run lint && npm run specs",
+    "size": "size-limit",
+    "prepare": "npm run build"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/change-case.git"
+   },
+   "keywords": [
+    "header",
+    "case",
+    "dash",
+    "hyphen",
+    "capitalize",
+    "convert",
+    "transform"
+   ],
+   "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+   },
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/blakeembrey/change-case/issues"
+   },
+   "homepage": "https://github.com/blakeembrey/change-case/tree/master/packages/header-case#readme",
+   "size-limit": [
+    {
+     "path": "dist/index.js",
+     "limit": "400 B"
+    }
+   ],
+   "jest": {
+    "roots": [
+     "<rootDir>/src/"
+    ],
+    "transform": {
+     "\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+     "ts",
+     "tsx",
+     "js",
+     "jsx",
+     "json",
+     "node"
+    ]
+   },
+   "publishConfig": {
+    "access": "public"
+   },
+   "dependencies": {
+    "capital-case": "^1.0.3",
+    "tslib": "^1.10.0"
+   },
+   "devDependencies": {
+    "@size-limit/preset-small-lib": "^2.2.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
+    "typescript": "^3.7.2"
+   },
+   "gitHead": "1c1377a692d328ae01221b2a1532bade38e1eaa3",
+   "_id": "header-case@2.0.3",
+   "_nodeVersion": "13.1.0",
+   "_npmVersion": "lerna/3.19.0/node@v13.1.0+x64 (darwin)",
+   "dist": {
+    "integrity": "sha512-LChe/V32mnUQnTwTxd3aAlNMk8ia9tjCDb/LjYtoMrdAPApxLB+azejUk5ERZIZdIqvinwv6BAUuFXH/tQPdZA==",
+    "shasum": "8a7407d16edfd5c970f8ebb116e6383f855b5a72",
+    "tarball": "http://localhost:3000/header-case/-/header-case-2.0.3.tgz",
+    "fileCount": 15,
+    "unpackedSize": 10233,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+tw6CRA9TVsSAnZWagAAuY0P/26lzr8ce1KInWmQ9pQg\n5bgh/T+8gmvzjJSnHb8ZXgF2xYbCE6df97pvfCDVkBdy2s0F+9NvvdoBpgKT\n7CkUC5WaPuGcDaIzeiYFhuh+75vFvliWWn7EdnhPcyXYxJUVJLGpgfGDLjEq\nOXwRQFS7IPCZ058HMqmnwqLrgG9cxLyVpAW++jYEjjMcp7h3ZQaNlNGyinbH\n2cueyka2IkWj+fGeZ0KEyfGGLBemRbOel7ZwTetE5iqfsOOygeXSS+EUIavB\n3WyUbw53rgEOqsDuskMTLCYr7gBDcuFR5R7CXbAKUHu0MJBqkpkwdLTxSIss\nYP7mLTT+s42TDmEeVcndiFTDxN6cF+SQuFnQNNK+oIb8Frg0YFhWdmQr90NL\np9mnMhfHlDqNp9KXZe7XM1vEem155B8Lgaofu/Wy3X462vpjV/JKtvrijeXd\ncoZOaROuvVUxyhEAbCOa2BeWTe3nv5RuD0eCvfrdjf1cAjw4TPhaanp+Q3T2\nNzWbKajjI/Kx38N2CNDHyN21hmKtcr8OIbiWccgKZZox3uPQHsbYVdUA2MmU\nlN8bUVtY93FSgym+KHu2zzrhYNvkjQyvMPSyz5TArR4fLHBSgkQue45n6ta/\nioEF5Aoxbotot9l7Vl0hLlMYskMXkncsPjiFZVd2yvQDU4pP7oCbkybxyQI3\nJAVZ\r\n=dyXq\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQDLsR6gR3AMa4kgyBP6dpBMidCFIEsZ/uiEDGR5OmrN5wIgVG8TnDgLtyKP99Yc2UcvKmHIec8g6o0BmDfJs3Q3vpA="
+     }
+    ]
+   },
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    }
+   ],
+   "_npmUser": {
+    "name": "blakeembrey",
+    "email": "hello@blakeembrey.com"
+   },
+   "directories": {},
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/header-case_2.0.3_1576721465985_0.3307924294162514"
+   },
+   "_hasShrinkwrap": false
+  },
+  "2.0.4": {
+   "name": "header-case",
+   "version": "2.0.4",
+   "description": "Transform into a dash separated string of capitalized words",
+   "main": "dist/index.js",
+   "typings": "dist/index.d.ts",
+   "module": "dist.es2015/index.js",
+   "sideEffects": false,
+   "jsnext:main": "dist.es2015/index.js",
+   "scripts": {
+    "lint": "tslint \"src/**/*\" --project tsconfig.json",
+    "build": "rimraf dist/ dist.es2015/ && tsc && tsc -P tsconfig.es2015.json",
+    "specs": "jest --coverage",
+    "test": "npm run build && npm run lint && npm run specs",
+    "size": "size-limit",
+    "prepare": "npm run build"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/change-case.git"
+   },
+   "keywords": [
+    "header",
+    "case",
+    "dash",
+    "hyphen",
+    "capitalize",
+    "convert",
+    "transform"
+   ],
+   "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+   },
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/blakeembrey/change-case/issues"
+   },
+   "homepage": "https://github.com/blakeembrey/change-case/tree/master/packages/header-case#readme",
+   "size-limit": [
+    {
+     "path": "dist/index.js",
+     "limit": "400 B"
+    }
+   ],
+   "jest": {
+    "roots": [
+     "<rootDir>/src/"
+    ],
+    "transform": {
+     "\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+     "ts",
+     "tsx",
+     "js",
+     "jsx",
+     "json",
+     "node"
+    ]
+   },
+   "publishConfig": {
+    "access": "public"
+   },
+   "dependencies": {
+    "capital-case": "^1.0.4",
+    "tslib": "^2.0.3"
+   },
+   "devDependencies": {
+    "@size-limit/preset-small-lib": "^2.2.1",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "jest": "^24.9.0",
+    "rimraf": "^3.0.0",
+    "ts-jest": "^24.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^9.0.0",
+    "typescript": "^4.1.2"
+   },
+   "gitHead": "76a21a7f6f2a226521ef6abd345ff309cbd01fb0",
+   "_id": "header-case@2.0.4",
+   "_nodeVersion": "12.20.0",
+   "_npmVersion": "lerna/3.22.1/node@v12.20.0+x64 (darwin)",
+   "dist": {
+    "integrity": "sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==",
+    "shasum": "5a42e63b55177349cf405beb8d775acabb92c063",
+    "tarball": "http://localhost:3000/header-case/-/header-case-2.0.4.tgz",
+    "fileCount": 15,
+    "unpackedSize": 10288,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfxuCFCRA9TVsSAnZWagAALxgQAIGskfElUD4z8Tz8r4aY\nNaK1HuKTEtPCQlKInV0WsIvD5VS363HKUGwR2ovR1FyDDYHwPj7YxQykfbdz\nL6mI6JgjzIbyXu3uvId11FKYtwhkia5224sF5PeI6zNKMmin4ZE1iC7gRL4e\nG3ECkYzqgGs5988v3GewDgcxR+lFjkQ2e/gXasqW4wDMZIPLm9owXUyWGFp5\nlUe/9nQ4V55YazrFzEcYv3hSd79/GeeVQquNa5j8zq8ck/Gq9GQltpo+XCe0\n1A+wZ8OiQi6unEsajPX9B2XaeZJmHwfN87Ijm8jmSZxufyEAuFGiY8SqpNsW\nsw4Zx80uifwe7FVLPLlvqTtRwaVyUoE22qt5RYJ1uYaAZF0ZZjnnxVvcc+5H\n37RcCudAulsoSe+9FbLtcSAygZr9siWrTf+3gqKCvnNvhc6A+wjQ/gzaDiVk\nFqZaTsr721WnW864WifvlkWY4Dj92DcKl9Ru8Of3GvHU/vqe1ljjUD01E7SJ\ns8BdzHW2r248DOcDnlmBrrptQ5Ywg/VSVONNFbtrcKTxgDiWrWpcDEWXqC6C\nJ3sGKyRMJ1vxpO2NaZMAi5z9eC2mmROlBeIlrzjwibion1mA3LhkH3uJdOVE\nLO9VAQjbgH8lng6JR5yWwaWB2HdVv8akF5FFDu4RrHhqzXkdTgiKESrU4Khh\nI51y\r\n=lP90\r\n-----END PGP SIGNATURE-----\r\n",
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIGlzpkc0DmiIsD020k3kTy4vMbcJyLz95mfPpmM1xqXvAiEA85Io91iaIxLM65V3DE5ymK0ycpEY6DwAeruFGMOZxGQ="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "blakeembrey",
+    "email": "hello@blakeembrey.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/header-case_2.0.4_1606869124610_0.059220823233041564"
+   },
+   "_hasShrinkwrap": false
+  },
+  "3.0.0": {
+   "name": "header-case",
+   "version": "3.0.0",
+   "description": "Transform into a dash separated string of capitalized words",
+   "type": "module",
+   "exports": {
+    ".": "./dist/index.js"
+   },
+   "scripts": {
+    "format": "ts-scripts format",
+    "specs": "ts-scripts specs",
+    "test": "ts-scripts test",
+    "build": "ts-scripts build",
+    "bench": "vitest bench",
+    "prepublishOnly": "npm run build"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/blakeembrey/change-case.git"
+   },
+   "keywords": [
+    "header",
+    "case",
+    "dash",
+    "hyphen",
+    "capitalize",
+    "convert",
+    "transform"
+   ],
+   "author": {
+    "name": "Blake Embrey",
+    "email": "hello@blakeembrey.com",
+    "url": "http://blakeembrey.me"
+   },
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/blakeembrey/change-case/issues"
+   },
+   "homepage": "https://github.com/blakeembrey/change-case/tree/master/packages/header-case#readme",
+   "publishConfig": {
+    "access": "public"
+   },
+   "dependencies": {
+    "no-case": "^4.0.0"
+   },
+   "gitHead": "f272bb76c621c85339a3dee06352dd3212a293dc",
+   "_id": "header-case@3.0.0",
+   "_nodeVersion": "20.3.0",
+   "_npmVersion": "9.6.7",
+   "dist": {
+    "integrity": "sha512-M4fdJaBeiUQ4mE3C+dyfwJEfv97VP9YS8EiynN65qoy7c9zrjgSYYK53BO4GaK0LeuiMhUeHG2bWelyeIHcX7A==",
+    "shasum": "13811e03c7d6a7daa308a2ebb44f14227519cc0b",
+    "tarball": "http://localhost:3000/header-case/-/header-case-3.0.0.tgz",
+    "fileCount": 5,
+    "unpackedSize": 2947,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEQCIAIAWjzKtjrxAlfpTnNO1GDm5ykPRBbilXEmb68S54XtAiBnA8O0H0uHXTDxOnvgqDut0qtqSjZRrhzSEm9/vPDNuQ=="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "blakeembrey",
+    "email": "hello@blakeembrey.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/header-case_3.0.0_1696037454504_0.37606125832402393"
+   },
+   "_hasShrinkwrap": false,
+   "deprecated": "Use `import { trainCase } from change-case`"
+  }
+ },
+ "readme": "# Header Case\n\n> Transform into a dash separated string of capitalized words.\n\n## Installation\n\n```\nnpm install header-case --save\n```\n\n## Usage\n\n```js\nimport { headerCase } from \"header-case\";\n\nheaderCase(\"string\"); //=> \"String\"\nheaderCase(\"dot.case\"); //=> \"Dot-Case\"\nheaderCase(\"PascalCase\"); //=> \"Pascal-Case\"\nheaderCase(\"version 1.2.10\"); //=> \"Version-1-2-10\"\n```\n\nThe function also accepts [`options`](https://github.com/blakeembrey/change-case#options).\n\n## License\n\nMIT\n",
+ "maintainers": [
+  {
+   "name": "blakeembrey",
+   "email": "hello@blakeembrey.com"
+  }
+ ],
+ "time": {
+  "modified": "2023-09-30T02:19:21.706Z",
+  "created": "2016-06-12T01:12:15.745Z",
+  "1.0.0": "2016-06-12T01:12:15.745Z",
+  "1.0.1": "2017-03-18T00:34:29.805Z",
+  "2.0.0": "2019-12-01T06:19:18.455Z",
+  "2.0.1": "2019-12-03T05:40:25.739Z",
+  "2.0.2": "2019-12-06T03:05:52.351Z",
+  "2.0.3": "2019-12-19T02:11:06.094Z",
+  "2.0.4": "2020-12-02T00:32:04.785Z",
+  "3.0.0": "2023-09-30T01:30:54.698Z"
+ },
+ "homepage": "https://github.com/blakeembrey/change-case/tree/master/packages/header-case#readme",
+ "keywords": [
+  "header",
+  "case",
+  "dash",
+  "hyphen",
+  "capitalize",
+  "convert",
+  "transform"
+ ],
+ "repository": {
+  "type": "git",
+  "url": "git://github.com/blakeembrey/change-case.git"
+ },
+ "author": {
+  "name": "Blake Embrey",
+  "email": "hello@blakeembrey.com",
+  "url": "http://blakeembrey.me"
+ },
+ "bugs": {
+  "url": "https://github.com/blakeembrey/change-case/issues"
+ },
+ "license": "MIT",
+ "readmeFilename": "README.md"
+}
