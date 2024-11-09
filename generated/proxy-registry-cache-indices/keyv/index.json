@@ -1,10 +1,10 @@
 {
  "_id": "keyv",
- "_rev": "64-9bfc9b7647dcb4b346ec80b9a792c335",
+ "_rev": "67-8ca79890dc96990dac8836dc4cdcad26",
  "name": "keyv",
  "dist-tags": {
   "next": "5.0.0-rc.1",
-  "latest": "5.1.0"
+  "latest": "5.1.3"
  },
  "versions": {
   "0.0.0": {
@@ -5159,6 +5159,412 @@
   "5.1.0": {
    "name": "keyv",
    "version": "5.1.0",
+   "keywords": [
+    "key",
+    "value",
+    "store",
+    "cache",
+    "ttl",
+    "key-value",
+    "storage",
+    "backend",
+    "adapter",
+    "redis",
+    "mongodb",
+    "sqlite",
+    "mysql",
+    "postgresql",
+    "memory",
+    "node-cache",
+    "lru-cache",
+    "lru",
+    "cache-manager"
+   ],
+   "author": {
+    "url": "http://jaredwray.com",
+    "name": "Jared Wray",
+    "email": "me@jaredwray.com"
+   },
+   "license": "MIT",
+   "_id": "keyv@5.1.0",
+   "maintainers": [
+    {
+     "name": "jaredwray",
+     "email": "me@jaredwray.com"
+    },
+    {
+     "name": "lukechilds",
+     "email": "lukechilds123@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/jaredwray/keyv",
+   "bugs": {
+    "url": "https://github.com/jaredwray/keyv/issues"
+   },
+   "xo": {
+    "rules": {
+     "guard-for-in": "off",
+     "no-await-in-loop": "off",
+     "import/extensions": "off",
+     "unicorn/prefer-module": "off",
+     "import/no-named-as-default": "off",
+     "unicorn/no-typeof-undefined": "off",
+     "unicorn/prefer-event-target": "off",
+     "unicorn/prefer-node-protocol": "off",
+     "@typescript-eslint/ban-ts-comment": "off",
+     "@typescript-eslint/no-unsafe-call": "off",
+     "import/no-extraneous-dependencies": "off",
+     "@typescript-eslint/no-for-in-array": "off",
+     "@typescript-eslint/no-var-requires": "off",
+     "@typescript-eslint/no-unsafe-return": "off",
+     "@typescript-eslint/naming-convention": "off",
+     "@typescript-eslint/no-unsafe-argument": "off",
+     "@typescript-eslint/no-unsafe-assignment": "off",
+     "@typescript-eslint/prefer-ts-expect-error": "off",
+     "@typescript-eslint/consistent-type-assertions": "off",
+     "@typescript-eslint/consistent-type-definitions": "off",
+     "@typescript-eslint/no-confusing-void-expression": "off"
+    }
+   },
+   "tsd": {
+    "directory": "test"
+   },
+   "dist": {
+    "shasum": "b371f54dff428e1a1bfe71328578266ebb62c470",
+    "tarball": "http://localhost:3000/keyv/-/keyv-5.1.0.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-FUr1fbKVsj9IZkPkY9reJ80Lp2B3ldtFXH+xK0wvZYzOpwgHV1er3xP4JUhu2cgkV2X3BJQw+hzAbIGqa+hNIA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDJJ7g4s2XZ+aJ1YC+A8NjFMxPLP5p+DarTQCd+satqEQIhAOXNo/BveaRiesvrI7Imz1JgahMk+ywSxgLdZljgwUst",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 57508
+   },
+   "main": "dist/index.cjs",
+   "type": "module",
+   "types": "dist/index.d.ts",
+   "module": "dist/index.js",
+   "exports": {
+    ".": {
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "scripts": {
+    "test": "xo --fix && vitest run --coverage",
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "clean": "rimraf ./node_modules ./coverage ./test/testdb.sqlite ./dist",
+    "prepare": "yarn build",
+    "test:ci": "xo && vitest --run --sequence.setupFiles=list"
+   },
+   "_npmUser": {
+    "name": "jaredwray",
+    "email": "me@jaredwray.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/jaredwray/keyv.git",
+    "type": "git"
+   },
+   "description": "Simple key-value storage with support for multiple backends",
+   "directories": {},
+   "licenseText": "MIT License\n\nCopyright (c) 2017-2021 Luke Childs\nCopyright (c) 2021-2022 Jared Wray\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+   "dependencies": {
+    "@keyv/serialize": "*"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.59.3",
+    "tsd": "^0.31.2",
+    "rimraf": "^6.0.1",
+    "timekeeper": "^2.3.1",
+    "@keyv/test-suite": "*"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/keyv_5.1.0_1728170094905_0.133642528060115",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "5.1.1": {
+   "name": "keyv",
+   "version": "5.1.1",
+   "keywords": [
+    "key",
+    "value",
+    "store",
+    "cache",
+    "ttl",
+    "key-value",
+    "storage",
+    "backend",
+    "adapter",
+    "redis",
+    "mongodb",
+    "sqlite",
+    "mysql",
+    "postgresql",
+    "memory",
+    "node-cache",
+    "lru-cache",
+    "lru",
+    "cache-manager"
+   ],
+   "author": {
+    "url": "http://jaredwray.com",
+    "name": "Jared Wray",
+    "email": "me@jaredwray.com"
+   },
+   "license": "MIT",
+   "_id": "keyv@5.1.1",
+   "maintainers": [
+    {
+     "name": "jaredwray",
+     "email": "me@jaredwray.com"
+    },
+    {
+     "name": "lukechilds",
+     "email": "lukechilds123@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/jaredwray/keyv",
+   "bugs": {
+    "url": "https://github.com/jaredwray/keyv/issues"
+   },
+   "xo": {
+    "rules": {
+     "guard-for-in": "off",
+     "no-await-in-loop": "off",
+     "import/extensions": "off",
+     "unicorn/prefer-module": "off",
+     "import/no-named-as-default": "off",
+     "unicorn/no-typeof-undefined": "off",
+     "unicorn/prefer-event-target": "off",
+     "unicorn/prefer-node-protocol": "off",
+     "@typescript-eslint/ban-ts-comment": "off",
+     "@typescript-eslint/no-unsafe-call": "off",
+     "import/no-extraneous-dependencies": "off",
+     "@typescript-eslint/no-for-in-array": "off",
+     "@typescript-eslint/no-var-requires": "off",
+     "@typescript-eslint/no-unsafe-return": "off",
+     "@typescript-eslint/naming-convention": "off",
+     "@typescript-eslint/no-unsafe-argument": "off",
+     "@typescript-eslint/no-unsafe-assignment": "off",
+     "@typescript-eslint/prefer-ts-expect-error": "off",
+     "@typescript-eslint/consistent-type-assertions": "off",
+     "@typescript-eslint/consistent-type-definitions": "off",
+     "@typescript-eslint/no-confusing-void-expression": "off"
+    }
+   },
+   "tsd": {
+    "directory": "test"
+   },
+   "dist": {
+    "shasum": "936f692e0273294fd69654fc2c827bf766e15910",
+    "tarball": "http://localhost:3000/keyv/-/keyv-5.1.1.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-pB8Z9XLdjaIOqf5SVqxhgIjLFs5P7XlpCHSrqjNm1GgRCCMNvCM9G6BzlzW3Q+M2pYogjkQ1VA9mb0IqwqtNUA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDT2/A8bbStiJndWeWuq7kd1czUh8cynfjXpez3uuhFrQIhAKFZbMMmv8iXxampEQ3DrGNbiSUTQ7TWqohOLAhpj/0P",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 59588
+   },
+   "main": "dist/index.cjs",
+   "type": "module",
+   "_from": "file:keyv-5.1.1.tgz",
+   "types": "dist/index.d.ts",
+   "module": "dist/index.js",
+   "exports": {
+    ".": {
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "scripts": {
+    "test": "xo --fix && vitest run --coverage",
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "clean": "rimraf ./node_modules ./coverage ./test/testdb.sqlite ./dist",
+    "test:ci": "xo && vitest --run --sequence.setupFiles=list"
+   },
+   "_npmUser": {
+    "name": "jaredwray",
+    "email": "me@jaredwray.com"
+   },
+   "_resolved": "/private/var/folders/h1/n3vxgc0n1sn5_9pxftc4p6l80000gn/T/d81890306139eee44eea4cf153639eee/keyv-5.1.1.tgz",
+   "_integrity": "sha512-pB8Z9XLdjaIOqf5SVqxhgIjLFs5P7XlpCHSrqjNm1GgRCCMNvCM9G6BzlzW3Q+M2pYogjkQ1VA9mb0IqwqtNUA==",
+   "repository": {
+    "url": "git+https://github.com/jaredwray/keyv.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "Simple key-value storage with support for multiple backends",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "@keyv/serialize": "*"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.59.3",
+    "tsd": "^0.31.2",
+    "rimraf": "^6.0.1",
+    "timekeeper": "^2.3.1",
+    "@keyv/mongo": "*",
+    "@keyv/sqlite": "*",
+    "@keyv/memcache": "*",
+    "@keyv/test-suite": "*",
+    "@keyv/compress-gzip": "*",
+    "@keyv/compress-brotli": "*"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/keyv_5.1.1_1729523762091_0.9427292574863713",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "5.1.2": {
+   "name": "keyv",
+   "version": "5.1.2",
+   "keywords": [
+    "key",
+    "value",
+    "store",
+    "cache",
+    "ttl",
+    "key-value",
+    "storage",
+    "backend",
+    "adapter",
+    "redis",
+    "mongodb",
+    "sqlite",
+    "mysql",
+    "postgresql",
+    "memory",
+    "node-cache",
+    "lru-cache",
+    "lru",
+    "cache-manager"
+   ],
+   "author": {
+    "url": "http://jaredwray.com",
+    "name": "Jared Wray",
+    "email": "me@jaredwray.com"
+   },
+   "license": "MIT",
+   "_id": "keyv@5.1.2",
+   "maintainers": [
+    {
+     "name": "jaredwray",
+     "email": "me@jaredwray.com"
+    },
+    {
+     "name": "lukechilds",
+     "email": "lukechilds123@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/jaredwray/keyv",
+   "bugs": {
+    "url": "https://github.com/jaredwray/keyv/issues"
+   },
+   "xo": {
+    "rules": {
+     "guard-for-in": "off",
+     "no-await-in-loop": "off",
+     "import/extensions": "off",
+     "unicorn/prefer-module": "off",
+     "import/no-named-as-default": "off",
+     "unicorn/no-typeof-undefined": "off",
+     "unicorn/prefer-event-target": "off",
+     "unicorn/prefer-node-protocol": "off",
+     "@typescript-eslint/ban-ts-comment": "off",
+     "@typescript-eslint/no-unsafe-call": "off",
+     "import/no-extraneous-dependencies": "off",
+     "@typescript-eslint/no-for-in-array": "off",
+     "@typescript-eslint/no-var-requires": "off",
+     "@typescript-eslint/no-unsafe-return": "off",
+     "@typescript-eslint/naming-convention": "off",
+     "@typescript-eslint/no-unsafe-argument": "off",
+     "@typescript-eslint/no-unsafe-assignment": "off",
+     "@typescript-eslint/prefer-ts-expect-error": "off",
+     "@typescript-eslint/consistent-type-assertions": "off",
+     "@typescript-eslint/consistent-type-definitions": "off",
+     "@typescript-eslint/no-confusing-void-expression": "off"
+    }
+   },
+   "tsd": {
+    "directory": "test"
+   },
+   "dist": {
+    "shasum": "554772806cbc0b50fed378cb4f21cea7c3bcc8c5",
+    "tarball": "http://localhost:3000/keyv/-/keyv-5.1.2.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-gOWSYwaPJsBNB8r+ptJDHLgyw7C7YPeta3gDHfn9kEYMgWNGqw2m+GOvfl6V2CsaiuNfxd1LFz7pnXD5KsFU3w==",
+    "signatures": [
+     {
+      "sig": "MEQCIBWPmrYyru8chmwbxTIYewf2On8/0B0NDHUHQJONWvgPAiBXX93vhFvesdc+z+7NE4HsHEAH3lbK3s3eIKdu9GFiqQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 60070
+   },
+   "main": "dist/index.cjs",
+   "type": "module",
+   "_from": "file:keyv-5.1.2.tgz",
+   "types": "dist/index.d.ts",
+   "module": "dist/index.js",
+   "exports": {
+    ".": {
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "scripts": {
+    "test": "xo --fix && vitest run --coverage",
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "clean": "rimraf ./node_modules ./coverage ./test/testdb.sqlite ./dist",
+    "test:ci": "xo && vitest --run --sequence.setupFiles=list"
+   },
+   "_npmUser": {
+    "name": "jaredwray",
+    "email": "me@jaredwray.com"
+   },
+   "_resolved": "/private/var/folders/h1/n3vxgc0n1sn5_9pxftc4p6l80000gn/T/ad29c9f00a88ee32236c1a330eda5b17/keyv-5.1.2.tgz",
+   "_integrity": "sha512-gOWSYwaPJsBNB8r+ptJDHLgyw7C7YPeta3gDHfn9kEYMgWNGqw2m+GOvfl6V2CsaiuNfxd1LFz7pnXD5KsFU3w==",
+   "repository": {
+    "url": "git+https://github.com/jaredwray/keyv.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "Simple key-value storage with support for multiple backends",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "@keyv/serialize": "*"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.59.3",
+    "tsd": "^0.31.2",
+    "rimraf": "^6.0.1",
+    "timekeeper": "^2.3.1",
+    "@keyv/mongo": "*",
+    "@keyv/sqlite": "*",
+    "@keyv/memcache": "*",
+    "@keyv/test-suite": "*",
+    "@keyv/compress-gzip": "*",
+    "@keyv/compress-brotli": "*"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/keyv_5.1.2_1729538969019_0.3787309192799493",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "5.1.3": {
+   "name": "keyv",
+   "version": "5.1.3",
    "description": "Simple key-value storage with support for multiple backends",
    "type": "module",
    "main": "dist/index.cjs",
@@ -5169,13 +5575,6 @@
      "require": "./dist/index.cjs",
      "import": "./dist/index.js"
     }
-   },
-   "scripts": {
-    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
-    "prepare": "yarn build",
-    "test": "xo --fix && vitest run --coverage",
-    "test:ci": "xo && vitest --run --sequence.setupFiles=list",
-    "clean": "rimraf ./node_modules ./coverage ./test/testdb.sqlite ./dist"
    },
    "xo": {
     "rules": {
@@ -5241,6 +5640,11 @@
     "@keyv/serialize": "*"
    },
    "devDependencies": {
+    "@keyv/compress-brotli": "*",
+    "@keyv/compress-gzip": "*",
+    "@keyv/memcache": "*",
+    "@keyv/mongo": "*",
+    "@keyv/sqlite": "*",
     "@keyv/test-suite": "*",
     "rimraf": "^6.0.1",
     "timekeeper": "^2.3.1",
@@ -5250,18 +5654,28 @@
    "tsd": {
     "directory": "test"
    },
-   "licenseText": "MIT License\n\nCopyright (c) 2017-2021 Luke Childs\nCopyright (c) 2021-2022 Jared Wray\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
-   "_id": "keyv@5.1.0",
+   "scripts": {
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "xo --fix && vitest run --coverage",
+    "test:ci": "xo && vitest --run --sequence.setupFiles=list",
+    "clean": "rimraf ./node_modules ./coverage ./test/testdb.sqlite ./dist"
+   },
+   "_id": "keyv@5.1.3",
+   "_integrity": "sha512-qWefZgq3GByWFTQgn+C9U7iaHe+mwAVb1utqbna15ggTO5RiLSL91NY+5liTgzchAhGhI6MOn5NVVn/eR1FkPA==",
+   "_resolved": "/private/var/folders/h1/n3vxgc0n1sn5_9pxftc4p6l80000gn/T/0e278d0030b3bbedfea3df9f3fc95e97/keyv-5.1.3.tgz",
+   "_from": "file:keyv-5.1.3.tgz",
+   "_nodeVersion": "20.17.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "shasum": "b371f54dff428e1a1bfe71328578266ebb62c470",
-    "integrity": "sha512-FUr1fbKVsj9IZkPkY9reJ80Lp2B3ldtFXH+xK0wvZYzOpwgHV1er3xP4JUhu2cgkV2X3BJQw+hzAbIGqa+hNIA==",
-    "tarball": "http://localhost:3000/keyv/-/keyv-5.1.0.tgz",
-    "fileCount": 9,
-    "unpackedSize": 57508,
+    "integrity": "sha512-qWefZgq3GByWFTQgn+C9U7iaHe+mwAVb1utqbna15ggTO5RiLSL91NY+5liTgzchAhGhI6MOn5NVVn/eR1FkPA==",
+    "shasum": "9471f0c086ca346e648825953b6f16bd903ac062",
+    "tarball": "http://localhost:3000/keyv/-/keyv-5.1.3.tgz",
+    "fileCount": 7,
+    "unpackedSize": 60352,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDJJ7g4s2XZ+aJ1YC+A8NjFMxPLP5p+DarTQCd+satqEQIhAOXNo/BveaRiesvrI7Imz1JgahMk+ywSxgLdZljgwUst"
+      "sig": "MEQCIDlbRoCxZUOpzCUWrNam4UH4TcqIfNyPqTNx6fP1kisNAiAgZkBUvhk2SeGL88cH7zdZuoJjPz02UzbpsA75y3IOpg=="
      }
     ]
    },
@@ -5282,14 +5696,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/keyv_5.1.0_1728170094905_0.133642528060115"
+    "tmp": "tmp/keyv_5.1.3_1730564794236_0.8508280191087574"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-07-07T13:43:26.836Z",
-  "modified": "2024-10-05T23:14:55.264Z",
+  "modified": "2024-11-02T16:26:34.654Z",
   "0.0.0": "2017-07-07T13:43:26.836Z",
   "0.1.0": "2017-07-11T13:02:11.437Z",
   "0.1.1": "2017-07-11T13:54:40.726Z",
@@ -5347,7 +5761,10 @@
   "5.0.1": "2024-08-21T23:35:04.273Z",
   "5.0.2": "2024-09-22T21:55:37.703Z",
   "5.0.3": "2024-09-22T22:00:04.664Z",
-  "5.1.0": "2024-10-05T23:14:55.083Z"
+  "5.1.0": "2024-10-05T23:14:55.083Z",
+  "5.1.1": "2024-10-21T15:16:02.316Z",
+  "5.1.2": "2024-10-21T19:29:29.378Z",
+  "5.1.3": "2024-11-02T16:26:34.454Z"
  },
  "bugs": {
   "url": "https://github.com/jaredwray/keyv/issues"
@@ -5395,7 +5812,7 @@
    "email": "lukechilds123@gmail.com"
   }
  ],
- "readme": "[<img width=\"100\" align=\"right\" src=\"https://jaredwray.com/images/keyv-symbol.svg\" alt=\"keyv\">](https://github.com/jaredwra/keyv)\n\n> Simple key-value storage with support for multiple backends\n\n[![build](https://github.com/jaredwray/keyv/actions/workflows/tests.yaml/badge.svg)](https://github.com/jaredwray/keyv/actions/workflows/tests.yaml)\n[![codecov](https://codecov.io/gh/jaredwray/keyv/branch/main/graph/badge.svg?token=bRzR3RyOXZ)](https://codecov.io/gh/jaredwray/keyv)\n[![npm](https://img.shields.io/npm/dm/keyv.svg)](https://www.npmjs.com/package/keyv)\n[![npm](https://img.shields.io/npm/v/keyv.svg)](https://www.npmjs.com/package/keyv)\n\nKeyv provides a consistent interface for key-value storage across multiple backends via storage adapters. It supports TTL based expiry, making it suitable as a cache or a persistent key-value store.\n\n## Features\n\nThere are a few existing modules similar to Keyv, however Keyv is different because it:\n\n- Isn't bloated\n- Has a simple Promise based API\n- Suitable as a TTL based cache or persistent key-value store\n- [Easily embeddable](#add-cache-support-to-your-module) inside another module\n- Works with any storage that implements the [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) API\n- Handles all JSON types plus `Buffer`\n- Supports namespaces\n- Wide range of [**efficient, well tested**](#official-storage-adapters) storage adapters\n- Connection errors are passed through (db failures won't kill your app)\n- Supports the current active LTS version of Node.js or higher\n\n## Usage\n\nInstall Keyv.\n\n```\nnpm install --save keyv\n```\n\nBy default everything is stored in memory, you can optionally also install a storage adapter.\n\n```\nnpm install --save @keyv/redis\nnpm install --save @keyv/mongo\nnpm install --save @keyv/sqlite\nnpm install --save @keyv/postgres\nnpm install --save @keyv/mysql\nnpm install --save @keyv/etcd\nnpm install --save @keyv/memcache\n```\n\nFirst, create a new Keyv instance. \n\n```js\nimport Keyv from 'keyv';\n```\n\n### Type-safe Usage\n\nYou can create a `Keyv` instance with a generic type to enforce type safety for the values stored. Additionally, both the `get` and `set` methods support specifying custom types for specific use cases.\n\n#### Example with Instance-level Generic Type:\n\n```ts\nconst keyv = new Keyv<number>(); // Instance handles only numbers\nawait keyv.set('key1', 123);\nconst value = await keyv.get('key1'); // value is inferred as number\n```\n\n#### Example with Method-level Generic Type:\n\nYou can also specify a type directly in the `get` or `set` methods, allowing flexibility for different types of values within the same instance.\n\n```ts\nconst keyv = new Keyv(); // Generic type not specified at instance level\n\nawait keyv.set<string>('key2', 'some string'); // Method-level type for this value\nconst strValue = await keyv.get<string>('key2'); // Explicitly typed as string\n\nawait keyv.set<number>('key3', 456); // Storing a number in the same instance\nconst numValue = await keyv.get<number>('key3'); // Explicitly typed as number\n```\n\nThis makes `Keyv` highly adaptable to different data types while maintaining type safety.\n\n### Using Storage Adapters\n\nOnce you have created your Keyv instance you can use it as a simple key-value store with `in-memory` by default. To use a storage adapter, create an instance of the adapter and pass it to the Keyv constructor. Here are some examples:\n\n```js\n// redis\nimport KeyvRedis from '@keyv/redis';\n\nconst keyv = new Keyv(new KeyvRedis('redis://user:pass@localhost:6379'));\n```\n\nYou can also pass in a storage adapter with other options such as `ttl` and `namespace` (example using `sqlite`):\n\n```js\n//sqlite\nimport KeyvSqlite from '@keyv/sqlite';\n\nconst keyvSqlite = new KeyvSqlite('sqlite://path/to/database.sqlite');\nconst keyv = new Keyv({ store: keyvSqlite, ttl: 5000, namespace: 'cache' });\n```\n\nTo handle an event you can do the following:\n\n```js\n// Handle DB connection errors\nkeyv.on('error', err => console.log('Connection Error', err));\n```\n\nNow lets do an end-to-end example using `Keyv` and the `Redis` storage adapter:\n\n```js\nimport Keyv from 'keyv';\nimport KeyvRedis from '@keyv/redis';\n\nconst keyvRedis = new KeyvRedis('redis://user:pass@localhost:6379');\nconst keyv = new Keyv({ store: keyvRedis });\n\nawait keyv.set('foo', 'expires in 1 second', 1000); // true\nawait keyv.set('foo', 'never expires'); // true\nawait keyv.get('foo'); // 'never expires'\nawait keyv.delete('foo'); // true\nawait keyv.clear(); // undefined\n```\n\nIt's is just that simple! Keyv is designed to be simple and easy to use.\n\n### Namespaces\n\nYou can namespace your Keyv instance to avoid key collisions and allow you to clear only a certain namespace while using the same database.\n\n```js\nconst users = new Keyv(new KeyvRedis('redis://user:pass@localhost:6379'), { namespace: 'users' });\nconst cache = new Keyv(new KeyvRedis('redis://user:pass@localhost:6379'), { namespace: 'cache' });\n\nawait users.set('foo', 'users'); // true\nawait cache.set('foo', 'cache'); // true\nawait users.get('foo'); // 'users'\nawait cache.get('foo'); // 'cache'\nawait users.clear(); // undefined\nawait users.get('foo'); // undefined\nawait cache.get('foo'); // 'cache'\n```\n\n### Events\n\nKeyv is a custom `EventEmitter` and will emit an `'error'` event if there is an error. In addition it will emit a `clear` and `disconnect` event when the corresponding methods are called.\n\n```js\nconst keyv = new Keyv();\nconst handleConnectionError = err => console.log('Connection Error', err);\nconst handleClear = () => console.log('Cache Cleared');\nconst handleDisconnect = () => console.log('Disconnected');\n\nkeyv.on('error', handleConnectionError);\nkeyv.on('clear', handleClear);\nkeyv.on('disconnect', handleDisconnect);\n```\n\n### Hooks\n\nKeyv supports hooks for `get`, `set`, and `delete` methods. Hooks are useful for logging, debugging, and other custom functionality. Here is a list of all the hooks:\n\n```\nPRE_GET\nPOST_GET\nPRE_GET_MANY\nPOST_GET_MANY\nPRE_SET\nPOST_SET\nPRE_DELETE\nPOST_DELETE\n```\n\nYou can access this by importing `KeyvHooks` from the main Keyv package.\n\n```js\nimport Keyv, { KeyvHooks } from 'keyv';\n```\n\n```js\n//PRE_SET hook\nconst keyv = new Keyv();\nkeyv.hooks.addHandler(KeyvHooks.PRE_SET, (key, value) => console.log(`Setting key ${key} to ${value}`));\n\n//POST_SET hook\nconst keyv = new Keyv();\nkeyv.hooks.addHandler(KeyvHooks.POST_SET, (key, value) => console.log(`Set key ${key} to ${value}`));\n```\n\nIn these examples you can also manipulate the value before it is set. For example, you could add a prefix to all keys.\n\n```js\nconst keyv = new Keyv();\nkeyv.hooks.addHandler(KeyvHooks.PRE_SET, (key, value) => {\n  console.log(`Setting key ${key} to ${value}`);\n  key = `prefix-${key}`;\n});\n```\n\nNow this key will have prefix- added to it before it is set.\n\nIn `PRE_DELETE` and `POST_DELETE` hooks, the value could be a single item or an `Array`. This is based on the fact that `delete` can accept a single key or an `Array` of keys.\n\n\n### Custom Serializers\n\nKeyv uses [`buffer`](https://nodejs.org/api/buffer.html) for data serialization to ensure consistency across different backends.\n\nYou can optionally provide your own serialization functions to support extra data types or to serialize to something other than JSON.\n\n```js\nconst keyv = new Keyv({ serialize: JSON.stringify, deserialize: JSON.parse });\n```\n\n**Warning:** Using custom serializers means you lose any guarantee of data consistency. You should do extensive testing with your serialisation functions and chosen storage engine.\n\n## Official Storage Adapters\n\nThe official storage adapters are covered by [over 150 integration tests](https://github.com/jaredwray/keyv/actions/workflows/tests.yaml) to guarantee consistent behaviour. They are lightweight, efficient wrappers over the DB clients making use of indexes and native TTLs where available.\n\nDatabase | Adapter | Native TTL\n---|---|---\nRedis | [@keyv/redis](https://github.com/jaredwray/keyv/tree/master/packages/redis) | Yes\nMongoDB | [@keyv/mongo](https://github.com/jaredwray/keyv/tree/master/packages/mongo) | Yes \nSQLite | [@keyv/sqlite](https://github.com/jaredwray/keyv/tree/master/packages/sqlite) | No \nPostgreSQL | [@keyv/postgres](https://github.com/jaredwray/keyv/tree/master/packages/postgres) | No \nMySQL | [@keyv/mysql](https://github.com/jaredwray/keyv/tree/master/packages/mysql) | No \nEtcd | [@keyv/etcd](https://github.com/jaredwray/keyv/tree/master/packages/etcd) | Yes\nMemcache | [@keyv/memcache](https://github.com/jaredwray/keyv/tree/master/packages/memcache) | Yes\n\n## Third-party Storage Adapters\n\nYou can also use third-party storage adapters or build your own. Keyv will wrap these storage adapters in TTL functionality and handle complex types internally.\n\n```js\nimport Keyv from 'keyv';\nimport myAdapter from 'my-adapter';\n\nconst keyv = new Keyv({ store: myAdapter });\n```\n\nAny store that follows the [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) api will work.\n\n```js\nnew Keyv({ store: new Map() });\n```\n\nFor example, [`quick-lru`](https://github.com/sindresorhus/quick-lru) is a completely unrelated module that implements the Map API.\n\n```js\nimport Keyv from 'keyv';\nimport QuickLRU from 'quick-lru';\n\nconst lru = new QuickLRU({ maxSize: 1000 });\nconst keyv = new Keyv({ store: lru });\n```\n\nThe following are third-party storage adapters compatible with Keyv:\n\n- [quick-lru](https://github.com/sindresorhus/quick-lru) - Simple \"Least Recently Used\" (LRU) cache\n- [keyv-file](https://github.com/zaaack/keyv-file) - File system storage adapter for Keyv\n- [keyv-dynamodb](https://www.npmjs.com/package/keyv-dynamodb) - DynamoDB storage adapter for Keyv\n- [keyv-lru](https://www.npmjs.com/package/keyv-lru) - LRU storage adapter for Keyv\n- [keyv-null](https://www.npmjs.com/package/keyv-null) - Null storage adapter for Keyv\n- [keyv-firestore ](https://github.com/goto-bus-stop/keyv-firestore) – Firebase Cloud Firestore adapter for Keyv\n- [keyv-mssql](https://github.com/pmorgan3/keyv-mssql) - Microsoft Sql Server adapter for Keyv\n- [keyv-azuretable](https://github.com/howlowck/keyv-azuretable) - Azure Table Storage/API adapter for Keyv\n- [keyv-arango](https://github.com/TimMikeladze/keyv-arango) - ArangoDB storage adapter for Keyv\n- [keyv-momento](https://github.com/momentohq/node-keyv-adaptor/) - Momento storage adapter for Keyv\n\n## Add Cache Support to your Module\n\nKeyv is designed to be easily embedded into other modules to add cache support. The recommended pattern is to expose a `cache` option in your modules options which is passed through to Keyv. Caching will work in memory by default and users have the option to also install a Keyv storage adapter and pass in a connection string, or any other storage that implements the `Map` API.\n\nYou should also set a namespace for your module so you can safely call `.clear()` without clearing unrelated app data.\n\nInside your module:\n\n```js\nclass AwesomeModule {\n\tconstructor(opts) {\n\t\tthis.cache = new Keyv({\n\t\t\turi: typeof opts.cache === 'string' && opts.cache,\n\t\t\tstore: typeof opts.cache !== 'string' && opts.cache,\n\t\t\tnamespace: 'awesome-module'\n\t\t});\n\t}\n}\n```\n\nNow it can be consumed like this:\n\n```js\nimport AwesomeModule from 'awesome-module';\n\n// Caches stuff in memory by default\nconst awesomeModule = new AwesomeModule();\n\n// After npm install --save keyv-redis\nconst awesomeModule = new AwesomeModule({ cache: 'redis://localhost' });\n\n// Some third-party module that implements the Map API\nconst awesomeModule = new AwesomeModule({ cache: some3rdPartyStore });\n```\n\n## Compression\n\nKeyv supports `gzip` and `brotli` compression. To enable compression, pass the `compress` option to the constructor.\n\n```js\nimport Keyv from 'keyv';\nimport KeyvGzip from '@keyv/compress-gzip';\n\nconst keyvGzip = new KeyvGzip();\nconst keyv = new Keyv({ compression: KeyvGzip });\n```\n\nYou can also pass a custom compression function to the `compression` option. Following the pattern of the official compression adapters.\n\n### Want to build your own? \n\nGreat! Keyv is designed to be easily extended. You can build your own compression adapter by following the pattern of the official compression adapters based on this interface:\n\n```typescript\ninterface CompressionAdapter {\n\tasync compress(value: any, options?: any);\n\tasync decompress(value: any, options?: any);\n\tasync serialize(value: any);\n\tasync deserialize(value: any);\n}\n```\n\nIn addition to the interface, you can test it with our compression test suite using @keyv/test-suite:\n\n```js\nimport { keyvCompresstionTests } from '@keyv/test-suite';\nimport KeyvGzip from '@keyv/compress-gzip';\n\nkeyvCompresstionTests(test, new KeyvGzip());\n```\n\n## API\n\n### new Keyv([storage-adapter], [options]) or new Keyv([options])\n\nReturns a new Keyv instance.\n\nThe Keyv instance is also an `EventEmitter` that will emit an `'error'` event if the storage adapter connection fails.\n\n### storage-adapter\n\nType: `KeyvStorageAdapter`<br />\nDefault: `undefined`\n\nThe connection string URI.\n\nMerged into the options object as options.uri.\n\n### options\n\nType: `Object`\n\nThe options object is also passed through to the storage adapter. Check your storage adapter docs for any extra options.\n\n#### options.namespace\n\nType: `String`<br />\nDefault: `'keyv'`\n\nNamespace for the current instance.\n\n#### options.ttl\n\nType: `Number`<br />\nDefault: `undefined`\n\nDefault TTL. Can be overridden by specififying a TTL on `.set()`.\n\n#### options.compression\n\nType: `@keyv/compress-<compression_package_name>`<br />\nDefault: `undefined`\n\nCompression package to use. See [Compression](#compression) for more details.\n\n#### options.serialize\n\nType: `Function`<br />\nDefault: `JSONB.stringify`\n\nA custom serialization function.\n\n#### options.deserialize\n\nType: `Function`<br />\nDefault: `JSONB.parse`\n\nA custom deserialization function.\n\n#### options.store\n\nType: `Storage adapter instance`<br />\nDefault: `new Map()`\n\nThe storage adapter instance to be used by Keyv.\n\n### Instance\n\nKeys must always be strings. Values can be of any type.\n\n#### .set(key, value, [ttl])\n\nSet a value.\n\nBy default keys are persistent. You can set an expiry TTL in milliseconds.\n\nReturns a promise which resolves to `true`.\n\n#### .get(key, [options])\n\nReturns a promise which resolves to the retrieved value.\n\n##### options.raw\n\nType: `Boolean`<br />\nDefault: `false`\n\nIf set to true the raw DB object Keyv stores internally will be returned instead of just the value.\n\nThis contains the TTL timestamp.\n\n#### .delete(key)\n\nDeletes an entry.\n\nReturns a promise which resolves to `true` if the key existed, `false` if not.\n\n#### .clear()\n\nDelete all entries in the current namespace.\n\nReturns a promise which is resolved when the entries have been cleared.\n\n#### .iterator()\n\nIterate over all entries of the current namespace.\n\nReturns a iterable that can be iterated by for-of loops. For example:\n\n```js\n// please note that the \"await\" keyword should be used here\nfor await (const [key, value] of this.keyv.iterator()) {\n  console.log(key, value);\n};\n```\n\n# How to Contribute\n\nWe welcome contributions to Keyv! 🎉 Here are some guides to get you started with contributing:\n\n* [Contributing](https://github.com/jaredwray/keyv/blob/main/CONTRIBUTING.md) - Learn about how to contribute to Keyv\n* [Code of Conduct](https://github.com/jaredwray/keyv/blob/main/CODE_OF_CONDUCT.md) - Learn about the Keyv Code of Conduct\n* [How to Contribute](https://github.com/jaredwray/keyv/blob/main/README.md) - How do develop in the Keyv mono repo! \n\n# License\n\n[MIT © Jared Wray](LICENSE)\n",
+ "readme": "[<img width=\"100\" align=\"right\" src=\"https://jaredwray.com/images/keyv-symbol.svg\" alt=\"keyv\">](https://github.com/jaredwra/keyv)\n\n> Simple key-value storage with support for multiple backends\n\n[![build](https://github.com/jaredwray/keyv/actions/workflows/tests.yaml/badge.svg)](https://github.com/jaredwray/keyv/actions/workflows/tests.yaml)\n[![codecov](https://codecov.io/gh/jaredwray/keyv/branch/main/graph/badge.svg?token=bRzR3RyOXZ)](https://codecov.io/gh/jaredwray/keyv)\n[![npm](https://img.shields.io/npm/dm/keyv.svg)](https://www.npmjs.com/package/keyv)\n[![npm](https://img.shields.io/npm/v/keyv.svg)](https://www.npmjs.com/package/keyv)\n\nKeyv provides a consistent interface for key-value storage across multiple backends via storage adapters. It supports TTL based expiry, making it suitable as a cache or a persistent key-value store.\n\n## Features\n\nThere are a few existing modules similar to Keyv, however Keyv is different because it:\n\n- Isn't bloated\n- Has a simple Promise based API\n- Suitable as a TTL based cache or persistent key-value store\n- [Easily embeddable](#add-cache-support-to-your-module) inside another module\n- Works with any storage that implements the [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) API\n- Handles all JSON types plus `Buffer`\n- Supports namespaces\n- Wide range of [**efficient, well tested**](#official-storage-adapters) storage adapters\n- Connection errors are passed through (db failures won't kill your app)\n- Supports the current active LTS version of Node.js or higher\n\n## Usage\n\nInstall Keyv.\n\n```\nnpm install --save keyv\n```\n\nBy default everything is stored in memory, you can optionally also install a storage adapter.\n\n```\nnpm install --save @keyv/redis\nnpm install --save @keyv/mongo\nnpm install --save @keyv/sqlite\nnpm install --save @keyv/postgres\nnpm install --save @keyv/mysql\nnpm install --save @keyv/etcd\nnpm install --save @keyv/memcache\n```\n\nFirst, create a new Keyv instance. \n\n```js\nimport Keyv from 'keyv';\n```\n\n### Type-safe Usage\n\nYou can create a `Keyv` instance with a generic type to enforce type safety for the values stored. Additionally, both the `get` and `set` methods support specifying custom types for specific use cases.\n\n#### Example with Instance-level Generic Type:\n\n```ts\nconst keyv = new Keyv<number>(); // Instance handles only numbers\nawait keyv.set('key1', 123);\nconst value = await keyv.get('key1'); // value is inferred as number\n```\n\n#### Example with Method-level Generic Type:\n\nYou can also specify a type directly in the `get` or `set` methods, allowing flexibility for different types of values within the same instance.\n\n```ts\nconst keyv = new Keyv(); // Generic type not specified at instance level\n\nawait keyv.set<string>('key2', 'some string'); // Method-level type for this value\nconst strValue = await keyv.get<string>('key2'); // Explicitly typed as string\n\nawait keyv.set<number>('key3', 456); // Storing a number in the same instance\nconst numValue = await keyv.get<number>('key3'); // Explicitly typed as number\n```\n\nThis makes `Keyv` highly adaptable to different data types while maintaining type safety.\n\n### Using Storage Adapters\n\nOnce you have created your Keyv instance you can use it as a simple key-value store with `in-memory` by default. To use a storage adapter, create an instance of the adapter and pass it to the Keyv constructor. Here are some examples:\n\n```js\n// redis\nimport KeyvRedis from '@keyv/redis';\n\nconst keyv = new Keyv(new KeyvRedis('redis://user:pass@localhost:6379'));\n```\n\nYou can also pass in a storage adapter with other options such as `ttl` and `namespace` (example using `sqlite`):\n\n```js\n//sqlite\nimport KeyvSqlite from '@keyv/sqlite';\n\nconst keyvSqlite = new KeyvSqlite('sqlite://path/to/database.sqlite');\nconst keyv = new Keyv({ store: keyvSqlite, ttl: 5000, namespace: 'cache' });\n```\n\nTo handle an event you can do the following:\n\n```js\n// Handle DB connection errors\nkeyv.on('error', err => console.log('Connection Error', err));\n```\n\nNow lets do an end-to-end example using `Keyv` and the `Redis` storage adapter:\n\n```js\nimport Keyv from 'keyv';\nimport KeyvRedis from '@keyv/redis';\n\nconst keyvRedis = new KeyvRedis('redis://user:pass@localhost:6379');\nconst keyv = new Keyv({ store: keyvRedis });\n\nawait keyv.set('foo', 'expires in 1 second', 1000); // true\nawait keyv.set('foo', 'never expires'); // true\nawait keyv.get('foo'); // 'never expires'\nawait keyv.delete('foo'); // true\nawait keyv.clear(); // undefined\n```\n\nIt's is just that simple! Keyv is designed to be simple and easy to use.\n\n### Namespaces\n\nYou can namespace your Keyv instance to avoid key collisions and allow you to clear only a certain namespace while using the same database.\n\n```js\nconst users = new Keyv(new KeyvRedis('redis://user:pass@localhost:6379'), { namespace: 'users' });\nconst cache = new Keyv(new KeyvRedis('redis://user:pass@localhost:6379'), { namespace: 'cache' });\n\nawait users.set('foo', 'users'); // true\nawait cache.set('foo', 'cache'); // true\nawait users.get('foo'); // 'users'\nawait cache.get('foo'); // 'cache'\nawait users.clear(); // undefined\nawait users.get('foo'); // undefined\nawait cache.get('foo'); // 'cache'\n```\n\n### Events\n\nKeyv is a custom `EventEmitter` and will emit an `'error'` event if there is an error. In addition it will emit a `clear` and `disconnect` event when the corresponding methods are called.\n\n```js\nconst keyv = new Keyv();\nconst handleConnectionError = err => console.log('Connection Error', err);\nconst handleClear = () => console.log('Cache Cleared');\nconst handleDisconnect = () => console.log('Disconnected');\n\nkeyv.on('error', handleConnectionError);\nkeyv.on('clear', handleClear);\nkeyv.on('disconnect', handleDisconnect);\n```\n\n### Hooks\n\nKeyv supports hooks for `get`, `set`, and `delete` methods. Hooks are useful for logging, debugging, and other custom functionality. Here is a list of all the hooks:\n\n```\nPRE_GET\nPOST_GET\nPRE_GET_MANY\nPOST_GET_MANY\nPRE_SET\nPOST_SET\nPRE_DELETE\nPOST_DELETE\n```\n\nYou can access this by importing `KeyvHooks` from the main Keyv package.\n\n```js\nimport Keyv, { KeyvHooks } from 'keyv';\n```\n\n```js\n//PRE_SET hook\nconst keyv = new Keyv();\nkeyv.hooks.addHandler(KeyvHooks.PRE_SET, (key, value) => console.log(`Setting key ${key} to ${value}`));\n\n//POST_SET hook\nconst keyv = new Keyv();\nkeyv.hooks.addHandler(KeyvHooks.POST_SET, (key, value) => console.log(`Set key ${key} to ${value}`));\n```\n\nIn these examples you can also manipulate the value before it is set. For example, you could add a prefix to all keys.\n\n```js\nconst keyv = new Keyv();\nkeyv.hooks.addHandler(KeyvHooks.PRE_SET, (key, value) => {\n  console.log(`Setting key ${key} to ${value}`);\n  key = `prefix-${key}`;\n});\n```\n\nNow this key will have prefix- added to it before it is set.\n\nIn `PRE_DELETE` and `POST_DELETE` hooks, the value could be a single item or an `Array`. This is based on the fact that `delete` can accept a single key or an `Array` of keys.\n\n\n### Custom Serializers\n\nKeyv uses [`buffer`](https://nodejs.org/api/buffer.html) for data serialization to ensure consistency across different backends.\n\nYou can optionally provide your own serialization functions to support extra data types or to serialize to something other than JSON.\n\n```js\nconst keyv = new Keyv({ serialize: JSON.stringify, deserialize: JSON.parse });\n```\n\n**Warning:** Using custom serializers means you lose any guarantee of data consistency. You should do extensive testing with your serialisation functions and chosen storage engine.\n\n## Official Storage Adapters\n\nThe official storage adapters are covered by [over 150 integration tests](https://github.com/jaredwray/keyv/actions/workflows/tests.yaml) to guarantee consistent behaviour. They are lightweight, efficient wrappers over the DB clients making use of indexes and native TTLs where available.\n\nDatabase | Adapter | Native TTL\n---|---|---\nRedis | [@keyv/redis](https://github.com/jaredwray/keyv/tree/master/packages/redis) | Yes\nValkey | [@keyv/valkey](https://github.com/jaredwray/keyv/tree/master/packages/valkey) | Yes\nMongoDB | [@keyv/mongo](https://github.com/jaredwray/keyv/tree/master/packages/mongo) | Yes \nSQLite | [@keyv/sqlite](https://github.com/jaredwray/keyv/tree/master/packages/sqlite) | No \nPostgreSQL | [@keyv/postgres](https://github.com/jaredwray/keyv/tree/master/packages/postgres) | No \nMySQL | [@keyv/mysql](https://github.com/jaredwray/keyv/tree/master/packages/mysql) | No \nEtcd | [@keyv/etcd](https://github.com/jaredwray/keyv/tree/master/packages/etcd) | Yes\nMemcache | [@keyv/memcache](https://github.com/jaredwray/keyv/tree/master/packages/memcache) | Yes\n\n## Third-party Storage Adapters\n\nYou can also use third-party storage adapters or build your own. Keyv will wrap these storage adapters in TTL functionality and handle complex types internally.\n\n```js\nimport Keyv from 'keyv';\nimport myAdapter from 'my-adapter';\n\nconst keyv = new Keyv({ store: myAdapter });\n```\n\nAny store that follows the [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) api will work.\n\n```js\nnew Keyv({ store: new Map() });\n```\n\nFor example, [`quick-lru`](https://github.com/sindresorhus/quick-lru) is a completely unrelated module that implements the Map API.\n\n```js\nimport Keyv from 'keyv';\nimport QuickLRU from 'quick-lru';\n\nconst lru = new QuickLRU({ maxSize: 1000 });\nconst keyv = new Keyv({ store: lru });\n```\n\nThe following are third-party storage adapters compatible with Keyv:\n\n- [quick-lru](https://github.com/sindresorhus/quick-lru) - Simple \"Least Recently Used\" (LRU) cache\n- [keyv-file](https://github.com/zaaack/keyv-file) - File system storage adapter for Keyv\n- [keyv-dynamodb](https://www.npmjs.com/package/keyv-dynamodb) - DynamoDB storage adapter for Keyv\n- [keyv-lru](https://www.npmjs.com/package/keyv-lru) - LRU storage adapter for Keyv\n- [keyv-null](https://www.npmjs.com/package/keyv-null) - Null storage adapter for Keyv\n- [keyv-firestore ](https://github.com/goto-bus-stop/keyv-firestore) – Firebase Cloud Firestore adapter for Keyv\n- [keyv-mssql](https://github.com/pmorgan3/keyv-mssql) - Microsoft Sql Server adapter for Keyv\n- [keyv-azuretable](https://github.com/howlowck/keyv-azuretable) - Azure Table Storage/API adapter for Keyv\n- [keyv-arango](https://github.com/TimMikeladze/keyv-arango) - ArangoDB storage adapter for Keyv\n- [keyv-momento](https://github.com/momentohq/node-keyv-adaptor/) - Momento storage adapter for Keyv\n\n## Add Cache Support to your Module\n\nKeyv is designed to be easily embedded into other modules to add cache support. The recommended pattern is to expose a `cache` option in your modules options which is passed through to Keyv. Caching will work in memory by default and users have the option to also install a Keyv storage adapter and pass in a connection string, or any other storage that implements the `Map` API.\n\nYou should also set a namespace for your module so you can safely call `.clear()` without clearing unrelated app data.\n\nInside your module:\n\n```js\nclass AwesomeModule {\n\tconstructor(opts) {\n\t\tthis.cache = new Keyv({\n\t\t\turi: typeof opts.cache === 'string' && opts.cache,\n\t\t\tstore: typeof opts.cache !== 'string' && opts.cache,\n\t\t\tnamespace: 'awesome-module'\n\t\t});\n\t}\n}\n```\n\nNow it can be consumed like this:\n\n```js\nimport AwesomeModule from 'awesome-module';\n\n// Caches stuff in memory by default\nconst awesomeModule = new AwesomeModule();\n\n// After npm install --save keyv-redis\nconst awesomeModule = new AwesomeModule({ cache: 'redis://localhost' });\n\n// Some third-party module that implements the Map API\nconst awesomeModule = new AwesomeModule({ cache: some3rdPartyStore });\n```\n\n## Compression\n\nKeyv supports `gzip` and `brotli` compression. To enable compression, pass the `compress` option to the constructor.\n\n```js\nimport Keyv from 'keyv';\nimport KeyvGzip from '@keyv/compress-gzip';\n\nconst keyvGzip = new KeyvGzip();\nconst keyv = new Keyv({ compression: KeyvGzip });\n```\n\nYou can also pass a custom compression function to the `compression` option. Following the pattern of the official compression adapters.\n\n### Want to build your own? \n\nGreat! Keyv is designed to be easily extended. You can build your own compression adapter by following the pattern of the official compression adapters based on this interface:\n\n```typescript\ninterface CompressionAdapter {\n\tasync compress(value: any, options?: any);\n\tasync decompress(value: any, options?: any);\n\tasync serialize(value: any);\n\tasync deserialize(value: any);\n}\n```\n\nIn addition to the interface, you can test it with our compression test suite using @keyv/test-suite:\n\n```js\nimport { keyvCompresstionTests } from '@keyv/test-suite';\nimport KeyvGzip from '@keyv/compress-gzip';\n\nkeyvCompresstionTests(test, new KeyvGzip());\n```\n\n## API\n\n### new Keyv([storage-adapter], [options]) or new Keyv([options])\n\nReturns a new Keyv instance.\n\nThe Keyv instance is also an `EventEmitter` that will emit an `'error'` event if the storage adapter connection fails.\n\n### storage-adapter\n\nType: `KeyvStorageAdapter`<br />\nDefault: `undefined`\n\nThe connection string URI.\n\nMerged into the options object as options.uri.\n\n### .namespace\n\nType: `String`\nDefault: `'keyv'`\n\nThis is the namespace for the current instance. When you set it it will set it also on the storage adapter. This is the preferred way to set the namespace over `.opts.namespace`.\n\n### options\n\nType: `Object`\n\nThe options object is also passed through to the storage adapter. Check your storage adapter docs for any extra options.\n\n#### options.namespace\n\nType: `String`<br />\nDefault: `'keyv'`\n\nNamespace for the current instance.\n\n#### options.ttl\n\nType: `Number`<br />\nDefault: `undefined`\n\nDefault TTL. Can be overridden by specififying a TTL on `.set()`.\n\n#### options.compression\n\nType: `@keyv/compress-<compression_package_name>`<br />\nDefault: `undefined`\n\nCompression package to use. See [Compression](#compression) for more details.\n\n#### options.serialize\n\nType: `Function`<br />\nDefault: `JSONB.stringify`\n\nA custom serialization function.\n\n#### options.deserialize\n\nType: `Function`<br />\nDefault: `JSONB.parse`\n\nA custom deserialization function.\n\n#### options.store\n\nType: `Storage adapter instance`<br />\nDefault: `new Map()`\n\nThe storage adapter instance to be used by Keyv.\n\n### Instance\n\nKeys must always be strings. Values can be of any type.\n\n#### .set(key, value, [ttl])\n\nSet a value.\n\nBy default keys are persistent. You can set an expiry TTL in milliseconds.\n\nReturns a promise which resolves to `true`.\n\n#### .get(key, [options])\n\nReturns a promise which resolves to the retrieved value.\n\n##### options.raw\n\nType: `Boolean`<br />\nDefault: `false`\n\nIf set to true the raw DB object Keyv stores internally will be returned instead of just the value.\n\nThis contains the TTL timestamp.\n\n#### .delete(key)\n\nDeletes an entry.\n\nReturns a promise which resolves to `true` if the key existed, `false` if not.\n\n#### .clear()\n\nDelete all entries in the current namespace.\n\nReturns a promise which is resolved when the entries have been cleared.\n\n#### .iterator()\n\nIterate over all entries of the current namespace.\n\nReturns a iterable that can be iterated by for-of loops. For example:\n\n```js\n// please note that the \"await\" keyword should be used here\nfor await (const [key, value] of this.keyv.iterator()) {\n  console.log(key, value);\n};\n```\n\n# How to Contribute\n\nWe welcome contributions to Keyv! 🎉 Here are some guides to get you started with contributing:\n\n* [Contributing](https://github.com/jaredwray/keyv/blob/main/CONTRIBUTING.md) - Learn about how to contribute to Keyv\n* [Code of Conduct](https://github.com/jaredwray/keyv/blob/main/CODE_OF_CONDUCT.md) - Learn about the Keyv Code of Conduct\n* [How to Contribute](https://github.com/jaredwray/keyv/blob/main/README.md) - How do develop in the Keyv mono repo! \n\n# License\n\n[MIT © Jared Wray](LICENSE)\n",
  "readmeFilename": "README.md",
  "users": {
   "ash": true,

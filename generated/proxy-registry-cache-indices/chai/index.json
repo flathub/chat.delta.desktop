@@ -1,9 +1,10 @@
 {
  "_id": "chai",
- "_rev": "566-65ce467ae4b0aeca00d68c39424ff225",
+ "_rev": "567-5b9e198d64065c4e8294809da66f52d8",
  "name": "chai",
  "dist-tags": {
-  "latest": "5.1.1",
+  "latest": "5.1.2",
+  "next": "5.1.1",
   "canary": "5.1.1",
   "legacy": "4.5.0"
  },
@@ -8495,11 +8496,127 @@
     "tmp": "tmp/chai_4.5.0_1721910222145_0.27991147064250455",
     "host": "s3://npm-registry-packages"
    }
+  },
+  "5.1.2": {
+   "author": {
+    "name": "Jake Luer",
+    "email": "jake@alogicalparadox.com"
+   },
+   "name": "chai",
+   "type": "module",
+   "description": "BDD/TDD assertion library for node.js and the browser. Test framework agnostic.",
+   "keywords": [
+    "test",
+    "assertion",
+    "assert",
+    "testing",
+    "chai"
+   ],
+   "homepage": "http://chaijs.com",
+   "license": "MIT",
+   "contributors": [
+    {
+     "name": "Jake Luer",
+     "email": "jake@alogicalparadox.com"
+    },
+    {
+     "name": "Domenic Denicola",
+     "email": "domenic@domenicdenicola.com",
+     "url": "http://domenicdenicola.com"
+    },
+    {
+     "name": "Veselin Todorov",
+     "email": "hi@vesln.com"
+    },
+    {
+     "name": "John Firebaugh",
+     "email": "john.firebaugh@gmail.com"
+    }
+   ],
+   "version": "5.1.2",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaijs/chai.git"
+   },
+   "bugs": {
+    "url": "https://github.com/chaijs/chai/issues"
+   },
+   "main": "./chai.js",
+   "scripts": {
+    "prebuild": "npm run clean",
+    "build": "npm run build:esm",
+    "build:esm": "esbuild --bundle --format=esm --keep-names --outfile=chai.js index.js",
+    "pretest": "npm run lint && npm run build",
+    "test": "npm run test-node && npm run test-chrome",
+    "test-node": "mocha --require ./test/bootstrap/index.js --reporter dot test/*.js",
+    "test-chrome": "web-test-runner --playwright",
+    "lint": "eslint lib/",
+    "clean": "rm -f chai.js coverage"
+   },
+   "engines": {
+    "node": ">=12"
+   },
+   "dependencies": {
+    "assertion-error": "^2.0.1",
+    "check-error": "^2.1.1",
+    "deep-eql": "^5.0.1",
+    "loupe": "^3.1.0",
+    "pathval": "^2.0.0"
+   },
+   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@web/dev-server-rollup": "^0.6.1",
+    "@web/test-runner": "^0.18.0",
+    "@web/test-runner-playwright": "^0.11.0",
+    "esbuild": "^0.19.10",
+    "eslint": "^8.56.0",
+    "eslint-plugin-jsdoc": "^48.0.4",
+    "mocha": "^10.2.0"
+   },
+   "_id": "chai@5.1.2",
+   "gitHead": "1b1780582c07eefb3781333e24316865b9db7ae8",
+   "_nodeVersion": "22.10.0",
+   "_npmVersion": "10.9.0",
+   "dist": {
+    "integrity": "sha512-aGtmf24DW6MLHHG5gCx4zaI3uBq3KRtxeVs0DjFH6Z0rDNbsvTxFASFvdj79pxjxZ8/5u3PIiN3IwEIQkiiuPw==",
+    "shasum": "3afbc340b994ae3610ca519a6c70ace77ad4378d",
+    "tarball": "http://localhost:3000/chai/-/chai-5.1.2.tgz",
+    "fileCount": 51,
+    "unpackedSize": 507963,
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/chai@5.1.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCID8PUTaJwYBlmdsol8rDogy5QdnqFDLRVe47JIkJiZM4AiEA4QZZVV3b5cHLRKUv2dH71Rfa+8X4TOLZEGiJL2puua4="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "chaijs",
+    "email": "chaijs@keithcirkel.co.uk"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "chaijs",
+     "email": "chaijs@keithcirkel.co.uk"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/chai_5.1.2_1729675320716_0.39141263699390194"
+   },
+   "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2011-12-07T06:53:41.352Z",
-  "modified": "2024-07-26T10:35:06.769Z",
+  "modified": "2024-10-23T09:22:01.498Z",
   "0.0.1": "2011-12-07T06:53:41.900Z",
   "0.0.2": "2011-12-07T17:00:00.424Z",
   "0.1.0": "2011-12-15T13:08:30.039Z",
@@ -8595,7 +8712,8 @@
   "5.0.3": "2024-01-25T09:50:27.622Z",
   "5.1.0": "2024-02-12T14:03:22.065Z",
   "5.1.1": "2024-05-09T10:23:59.111Z",
-  "4.5.0": "2024-07-25T12:23:42.310Z"
+  "4.5.0": "2024-07-25T12:23:42.310Z",
+  "5.1.2": "2024-10-23T09:22:01.011Z"
  },
  "bugs": {
   "url": "https://github.com/chaijs/chai/issues"
@@ -8614,8 +8732,8 @@
   "chai"
  ],
  "repository": {
-  "url": "git+https://github.com/chaijs/chai.git",
-  "type": "git"
+  "type": "git",
+  "url": "git+https://github.com/chaijs/chai.git"
  },
  "description": "BDD/TDD assertion library for node.js and the browser. Test framework agnostic.",
  "contributors": [
@@ -8624,9 +8742,9 @@
    "email": "jake@alogicalparadox.com"
   },
   {
-   "url": "http://domenicdenicola.com",
    "name": "Domenic Denicola",
-   "email": "domenic@domenicdenicola.com"
+   "email": "domenic@domenicdenicola.com",
+   "url": "http://domenicdenicola.com"
   },
   {
    "name": "Veselin Todorov",
@@ -8643,7 +8761,7 @@
    "email": "chaijs@keithcirkel.co.uk"
   }
  ],
- "readme": "<h1 align=center>\n  <a href=\"http://chaijs.com\" title=\"Chai Documentation\">\n    <img alt=\"ChaiJS\" src=\"http://chaijs.com/img/chai-logo.png\">\n  </a>\n  <br>\n  chai\n</h1>\n\n<p align=center>\n  Chai is a BDD / TDD assertion library for <a href=\"http://nodejs.org\">node</a> and the browser that can be delightfully paired with any javascript testing framework.\n</p>\n\n<p align=center>\n  <a href=\"./LICENSE\">\n    <img\n      alt=\"license:mit\"\n      src=\"https://img.shields.io/badge/license-mit-green.svg?style=flat-square\"\n    />\n  </a>\n  <a href=\"https://github.com/chaijs/chai/releases\">\n    <img\n      alt=\"tag:?\"\n      src=\"https://img.shields.io/github/tag/chaijs/chai.svg?style=flat-square\"\n    />\n  </a>\n  <a href=\"https://www.npmjs.com/package/chai\">\n    <img\n      alt=\"node:?\"\n      src=\"https://img.shields.io/badge/node-%3E=4.0-blue.svg?style=flat-square\"\n    />\n  </a>\n  <br/>\n  <a href=\"https://saucelabs.com/u/chaijs\">\n    <img\n      alt=\"Selenium Test Status\"\n      src=\"https://saucelabs.com/browser-matrix/chaijs.svg\"\n    />\n  </a>\n  <br/>\n  <a href=\"https://www.npmjs.com/packages/chai\">\n    <img\n      alt=\"downloads:?\"\n      src=\"https://img.shields.io/npm/dm/chai.svg?style=flat-square\"\n    />\n  </a>\n  <a href=\"https://travis-ci.org/chaijs/chai\">\n    <img\n      alt=\"build:?\"\n      src=\"https://img.shields.io/travis/chaijs/chai/master.svg?style=flat-square\"\n    />\n  </a>\n  <a href=\"https://codecov.io/gh/chaijs/chai\">\n    <img\n      alt=\"coverage:?\"\n      src=\"https://img.shields.io/codecov/c/github/chaijs/chai.svg?style=flat-square\"\n    />\n  </a>\n  <a href=\"\">\n    <img\n      alt=\"devDependencies:?\"\n      src=\"https://img.shields.io/david/chaijs/chai.svg?style=flat-square\"\n    />\n  </a>\n  <br/>\n  <a href=\"https://chai-slack.herokuapp.com/\">\n    <img\n      alt=\"Join the Slack chat\"\n      src=\"https://img.shields.io/badge/slack-join%20chat-E2206F.svg?style=flat-square\"\n    />\n  </a>\n  <a href=\"https://gitter.im/chaijs/chai\">\n    <img\n      alt=\"Join the Gitter chat\"\n      src=\"https://img.shields.io/badge/gitter-join%20chat-D0104D.svg?style=flat-square\"\n    />\n  </a>\n  <a href=\"https://opencollective.com/chaijs\">\n    <img\n      alt=\"OpenCollective Backers\"\n      src=\"https://opencollective.com/chaijs/backers/badge.svg?style=flat-square\"\n    />\n  </a>\n</p>\n\nFor more information or to download plugins, view the [documentation](http://chaijs.com).\n\n## What is Chai?\n\nChai is an _assertion library_, similar to Node's built-in `assert`. It makes testing much easier by giving you lots of assertions you can run against your code.\n\n## Installation\n\n### Node.js\n\n`chai` is available on [npm](http://npmjs.org). To install it, type:\n\n    $ npm install --save-dev chai\n\n### Browsers\n\nYou can also use it within the browser; install via npm and use the `chai.js` file found within the download. For example:\n\n```html\n<script src=\"./node_modules/chai/chai.js\"></script>\n```\n\n## Usage\n\nImport the library in your code, and then pick one of the styles you'd like to use - either `assert`, `expect` or `should`:\n\n```js\nvar chai = require('chai');  \nvar assert = chai.assert;    // Using Assert style\nvar expect = chai.expect;    // Using Expect style\nvar should = chai.should();  // Using Should style\n```\n\n### Pre-Native Modules Usage (_registers the chai testing style globally_)\n\n```js\nrequire('chai/register-assert');  // Using Assert style\nrequire('chai/register-expect');  // Using Expect style\nrequire('chai/register-should');  // Using Should style\n```\n\n### Pre-Native Modules Usage (_as local variables_)\n\n```js\nconst { assert } = require('chai');  // Using Assert style\nconst { expect } = require('chai');  // Using Expect style\nconst { should } = require('chai');  // Using Should style\nshould();  // Modifies `Object.prototype`\n\nconst { expect, use } = require('chai');  // Creates local variables `expect` and `use`; useful for plugin use\n```\n\n### Native Modules Usage (_registers the chai testing style globally_)\n\n```js\nimport 'chai/register-assert';  // Using Assert style\nimport 'chai/register-expect';  // Using Expect style\nimport 'chai/register-should';  // Using Should style\n```\n\n### Native Modules Usage (_local import only_)\n\n```js\nimport { assert } from 'chai';  // Using Assert style\nimport { expect } from 'chai';  // Using Expect style\nimport { should } from 'chai';  // Using Should style\nshould();  // Modifies `Object.prototype`\n```\n\n### Usage with Mocha\n\n```bash\nmocha spec.js -r chai/register-assert  # Using Assert style\nmocha spec.js -r chai/register-expect  # Using Expect style\nmocha spec.js -r chai/register-should  # Using Should style\n```\n\n[Read more about these styles in our docs](http://chaijs.com/guide/styles/).\n\n## Plugins\n\nChai offers a robust Plugin architecture for extending Chai's assertions and interfaces.\n\n- Need a plugin? View the [official plugin list](http://chaijs.com/plugins).\n- Want to build a plugin? Read the [plugin api documentation](http://chaijs.com/guide/plugins/).\n- Have a plugin and want it listed? Simply add the following keywords to your package.json:\n  -  `chai-plugin`\n  -  `browser` if your plugin works in the browser as well as Node.js\n  -  `browser-only` if your plugin does not work with Node.js\n\n### Related Projects\n\n- [chaijs / chai-docs](https://github.com/chaijs/chai-docs): The chaijs.com website source code.\n- [chaijs / assertion-error](https://github.com/chaijs/assertion-error): Custom `Error` constructor thrown upon an assertion failing.\n- [chaijs / deep-eql](https://github.com/chaijs/deep-eql): Improved deep equality testing for Node.js and the browser.\n- [chaijs / type-detect](https://github.com/chaijs/type-detect): Improved typeof detection for Node.js and the browser.\n- [chaijs / check-error](https://github.com/chaijs/check-error): Error comparison and information related utility for Node.js and the browser.\n- [chaijs / loupe](https://github.com/chaijs/loupe): Inspect utility for Node.js and browsers.\n- [chaijs / pathval](https://github.com/chaijs/pathval): Object value retrieval given a string path.\n- [chaijs / get-func-name](https://github.com/chaijs/get-func-name): Utility for getting a function's name for node and the browser.\n\n### Contributing\n\nThank you very much for considering to contribute!\n\nPlease make sure you follow our [Code Of Conduct](https://github.com/chaijs/chai/blob/master/CODE_OF_CONDUCT.md) and we also strongly recommend reading our [Contributing Guide](https://github.com/chaijs/chai/blob/master/CONTRIBUTING.md).\n\nHere are a few issues other contributors frequently ran into when opening pull requests:\n\n- Please do not commit changes to the `chai.js` build. We do it once per release.\n- Before pushing your commits, please make sure you [rebase](https://github.com/chaijs/chai/blob/master/CONTRIBUTING.md#pull-requests) them.\n\n### Contributors\n\nPlease see the full\n[Contributors Graph](https://github.com/chaijs/chai/graphs/contributors) for our\nlist of contributors.\n\n### Core Contributors\n\nFeel free to reach out to any of the core contributors with your questions or\nconcerns. We will do our best to respond in a timely manner.\n\n[![Jake Luer](https://avatars3.githubusercontent.com/u/58988?v=3&s=50)](https://github.com/logicalparadox)\n[![Veselin Todorov](https://avatars3.githubusercontent.com/u/330048?v=3&s=50)](https://github.com/vesln)\n[![Keith Cirkel](https://avatars3.githubusercontent.com/u/118266?v=3&s=50)](https://github.com/keithamus)\n[![Lucas Fernandes da Costa](https://avatars3.githubusercontent.com/u/6868147?v=3&s=50)](https://github.com/lucasfcosta)\n[![Grant Snodgrass](https://avatars3.githubusercontent.com/u/17260989?v=3&s=50)](https://github.com/meeber)\n",
+ "readme": "<h1 align=center>\n  <a href=\"http://chaijs.com\" title=\"Chai Documentation\">\n    <img alt=\"ChaiJS\" src=\"http://chaijs.com/img/chai-logo.png\">\n  </a>\n  <br>\n  chai\n</h1>\n\n<p align=center>\n  Chai is a BDD / TDD assertion library for <a href=\"http://nodejs.org\">node</a> and the browser that can be delightfully paired with any javascript testing framework.\n</p>\n\n<p align=center>\n  <a href=\"https://www.npmjs.com/package/chai\">\n    <img\n      alt=\"downloads:?\"\n      src=\"https://img.shields.io/npm/dm/chai.svg?style=flat-square\"\n    />\n  </a>\n  <a href=\"https://www.npmjs.com/package/chai\">\n    <img\n      alt=\"node:?\"\n      src=\"https://img.shields.io/badge/node-%3E=4.0-blue.svg?style=flat-square\"\n    />\n  </a>\n  <br/>\n  <a href=\"https://chai-slack.herokuapp.com/\">\n    <img\n      alt=\"Join the Slack chat\"\n      src=\"https://img.shields.io/badge/slack-join%20chat-E2206F.svg?style=flat-square\"\n    />\n  </a>\n  <a href=\"https://gitter.im/chaijs/chai\">\n    <img\n      alt=\"Join the Gitter chat\"\n      src=\"https://img.shields.io/badge/gitter-join%20chat-D0104D.svg?style=flat-square\"\n    />\n  </a>\n  <a href=\"https://opencollective.com/chaijs\">\n    <img\n      alt=\"OpenCollective Backers\"\n      src=\"https://opencollective.com/chaijs/backers/badge.svg?style=flat-square\"\n    />\n  </a>\n</p>\n\nFor more information or to download plugins, view the [documentation](http://chaijs.com).\n\n## What is Chai?\n\nChai is an _assertion library_, similar to Node's built-in `assert`. It makes testing much easier by giving you lots of assertions you can run against your code.\n\n## Installation\n\n### Node.js\n\n`chai` is available on [npm](http://npmjs.org). To install it, type:\n\n    $ npm install --save-dev chai\n\n### Browsers\n\nYou can also use it within the browser; install via npm and use the `chai.js` file found within the download. For example:\n\n```html\n<script src=\"./node_modules/chai/chai.js\"></script>\n```\n\n## Usage\n\nImport the library in your code, and then pick one of the styles you'd like to use - either `assert`, `expect` or `should`:\n\n```js\nimport { assert } from 'chai';  // Using Assert style\nimport { expect } from 'chai';  // Using Expect style\nimport { should } from 'chai';  // Using Should style\n```\n\n### Register the chai testing style globally\n\n```js\nimport 'chai/register-assert';  // Using Assert style\nimport 'chai/register-expect';  // Using Expect style\nimport 'chai/register-should';  // Using Should style\n```\n\n### Import assertion styles as local variables\n\n```js\nimport { assert } from 'chai';  // Using Assert style\nimport { expect } from 'chai';  // Using Expect style\nimport { should } from 'chai';  // Using Should style\nshould();  // Modifies `Object.prototype`\n\nimport { expect, use } from 'chai';  // Creates local variables `expect` and `use`; useful for plugin use\n```\n\n### Usage with Mocha\n\n```bash\nmocha spec.js --require chai/register-assert.js  # Using Assert style\nmocha spec.js --require chai/register-expect.js  # Using Expect style\nmocha spec.js --require chai/register-should.js  # Using Should style\n```\n\n[Read more about these styles in our docs](http://chaijs.com/guide/styles/).\n\n## Plugins\n\nChai offers a robust Plugin architecture for extending Chai's assertions and interfaces.\n\n- Need a plugin? View the [official plugin list](http://chaijs.com/plugins).\n- Want to build a plugin? Read the [plugin api documentation](http://chaijs.com/guide/plugins/).\n- Have a plugin and want it listed? Simply add the following keywords to your package.json:\n  -  `chai-plugin`\n  -  `browser` if your plugin works in the browser as well as Node.js\n  -  `browser-only` if your plugin does not work with Node.js\n\n### Related Projects\n\n- [chaijs / chai-docs](https://github.com/chaijs/chai-docs): The chaijs.com website source code.\n- [chaijs / assertion-error](https://github.com/chaijs/assertion-error): Custom `Error` constructor thrown upon an assertion failing.\n- [chaijs / deep-eql](https://github.com/chaijs/deep-eql): Improved deep equality testing for Node.js and the browser.\n- [chaijs / check-error](https://github.com/chaijs/check-error): Error comparison and information related utility for Node.js and the browser.\n- [chaijs / loupe](https://github.com/chaijs/loupe): Inspect utility for Node.js and browsers.\n- [chaijs / pathval](https://github.com/chaijs/pathval): Object value retrieval given a string path.\n\n### Contributing\n\nThank you very much for considering to contribute!\n\nPlease make sure you follow our [Code Of Conduct](https://github.com/chaijs/chai/blob/master/CODE_OF_CONDUCT.md) and we also strongly recommend reading our [Contributing Guide](https://github.com/chaijs/chai/blob/master/CONTRIBUTING.md).\n\nHere are a few issues other contributors frequently ran into when opening pull requests:\n\n- Please do not commit changes to the `chai.js` build. We do it once per release.\n- Before pushing your commits, please make sure you [rebase](https://github.com/chaijs/chai/blob/master/CONTRIBUTING.md#pull-requests) them.\n\n### Contributors\n\nPlease see the full\n[Contributors Graph](https://github.com/chaijs/chai/graphs/contributors) for our\nlist of contributors.\n\n### Core Contributors\n\nFeel free to reach out to any of the core contributors with your questions or\nconcerns. We will do our best to respond in a timely manner.\n\n[![Jake Luer](https://avatars3.githubusercontent.com/u/58988?v=3&s=50)](https://github.com/logicalparadox)\n[![Veselin Todorov](https://avatars3.githubusercontent.com/u/330048?v=3&s=50)](https://github.com/vesln)\n[![Keith Cirkel](https://avatars3.githubusercontent.com/u/118266?v=3&s=50)](https://github.com/keithamus)\n[![Lucas Fernandes da Costa](https://avatars3.githubusercontent.com/u/6868147?v=3&s=50)](https://github.com/lucasfcosta)\n[![Grant Snodgrass](https://avatars3.githubusercontent.com/u/17260989?v=3&s=50)](https://github.com/meeber)\n",
  "readmeFilename": "README.md",
  "users": {
   "pwn": true,

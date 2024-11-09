@@ -1,10 +1,10 @@
 {
  "_id": "use-debounce",
- "_rev": "80-9a149dd6730e5b5bd06bd27ffb4aec85",
+ "_rev": "81-27fecfdbd00fb0711dc944faabad93bd",
  "name": "use-debounce",
  "dist-tags": {
-  "beta": "10.0.4-beta",
-  "latest": "10.0.3"
+  "latest": "10.0.4",
+  "beta": "10.0.4-beta"
  },
  "versions": {
   "0.0.1": {
@@ -8740,6 +8740,155 @@
   "10.0.4-beta": {
    "name": "use-debounce",
    "version": "10.0.4-beta",
+   "keywords": [
+    "debounce",
+    "react-hook",
+    "react"
+   ],
+   "author": {
+    "url": "nik@xnim.me",
+    "name": "Nik"
+   },
+   "license": "MIT",
+   "_id": "use-debounce@10.0.4-beta",
+   "maintainers": [
+    {
+     "name": "xnimorz",
+     "email": "nik.mostovoy@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/xnimorz/use-debounce#readme",
+   "bugs": {
+    "url": "https://github.com/xnimorz/use-debounce/issues"
+   },
+   "dist": {
+    "shasum": "ea9cc8fb61833caa82f6091bd8701584210823e9",
+    "tarball": "http://localhost:3000/use-debounce/-/use-debounce-10.0.4-beta.tgz",
+    "fileCount": 15,
+    "integrity": "sha512-0hIwPKVPQePPUROpB+ms/HCvqOJwXs5ub2Y3k2ShbDXY48MB4bEuvYVfBZFNBcKgFlZQ412hCz/bWWJiHqbWTQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQD9KwQyyn55KERilQLynnAN/yX9+9hCKtCnZFBKtINEeAIhAOP98WxIg/9WN3WI4E2YAgp/k2vZLlMGF4IscwNgwJe1",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 105621
+   },
+   "main": "dist/index.js",
+   "types": "./dist/index.d.ts",
+   "module": "dist/index.module.js",
+   "source": "src/index.ts",
+   "engines": {
+    "node": ">= 16.0.0"
+   },
+   "exports": {
+    ".": {
+     "types": "./dist/index.d.ts",
+     "import": "./dist/index.mjs",
+     "module": "./dist/index.module.js",
+     "require": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "gitHead": "cd102d3efb157029889deee32c13ed28a6c66296",
+   "scripts": {
+    "jest": "jest",
+    "size": "npm run build-only && size-limit",
+    "test": "jest && eslint \"src/**.ts\"",
+    "build": "npm run test && npm run build-only && size-limit",
+    "build-only": "rm -rf ./dist/*; microbundle build --entry src/index.ts --name use-debounce --tsconfig tsconfig.json",
+    "prepublishOnly": "npm run build"
+   },
+   "_npmUser": {
+    "name": "xnimorz",
+    "email": "nik.mostovoy@gmail.com"
+   },
+   "esmodule": "dist/index.mjs",
+   "umd:main": "dist/index.umd.js",
+   "repository": {
+    "url": "git+ssh://git@github.com/xnimorz/use-debounce.git",
+    "type": "git"
+   },
+   "size-limit": [
+    {
+     "path": "dist/index.js",
+     "limit": "1.2 KB"
+    },
+    {
+     "path": "dist/index.module.js",
+     "limit": "1.2 KB"
+    },
+    {
+     "path": "dist/index.umd.js",
+     "limit": "1.2 KB"
+    },
+    {
+     "path": "dist/index.js",
+     "limit": "1.2 KB",
+     "import": "{ useDebounce }"
+    },
+    {
+     "path": "dist/index.js",
+     "limit": "1.2 KB",
+     "import": "{ useDebouncedCallback }"
+    },
+    {
+     "path": "dist/index.js",
+     "limit": "1.2 KB",
+     "import": "{ useThrottledCallback }"
+    }
+   ],
+   "_npmVersion": "10.8.2",
+   "description": "Debounce hook for react",
+   "directories": {},
+   "resolutions": {
+    "kind-of": "6.0.3"
+   },
+   "sideEffects": false,
+   "_nodeVersion": "22.8.0",
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "devDependencies": {
+    "jest": "^29.7.0",
+    "react": "18.2.0",
+    "eslint": "^8.52.0",
+    "ts-jest": "^29.1.1",
+    "prettier": "^3.0.3",
+    "react-dom": "18.2.0",
+    "size-limit": "^10.0.1",
+    "typescript": "^5.2.2",
+    "@types/jest": "^29.5.7",
+    "@types/node": "^20.8.9",
+    "microbundle": "^0.15.1",
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "@testing-library/react": "^14.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@typescript-eslint/parser": "^6.9.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "@testing-library/user-event": "^14.5.1",
+    "@size-limit/preset-small-lib": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.9.1"
+   },
+   "peerDependencies": {
+    "react": "*"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/use-debounce_10.0.4-beta_1728240443122_0.44793924384516726",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "10.0.4": {
+   "name": "use-debounce",
+   "version": "10.0.4",
    "description": "Debounce hook for react",
    "source": "src/index.ts",
    "main": "dist/index.js",
@@ -8850,22 +8999,21 @@
      "limit": "1.2 KB"
     }
    ],
-   "_id": "use-debounce@10.0.4-beta",
-   "readmeFilename": "README.md",
-   "gitHead": "cd102d3efb157029889deee32c13ed28a6c66296",
+   "_id": "use-debounce@10.0.4",
+   "gitHead": "324885c22c2b79cdf8b14be4a4f65e81c8f8c12c",
    "types": "./dist/index.d.ts",
    "_nodeVersion": "22.8.0",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-0hIwPKVPQePPUROpB+ms/HCvqOJwXs5ub2Y3k2ShbDXY48MB4bEuvYVfBZFNBcKgFlZQ412hCz/bWWJiHqbWTQ==",
-    "shasum": "ea9cc8fb61833caa82f6091bd8701584210823e9",
-    "tarball": "http://localhost:3000/use-debounce/-/use-debounce-10.0.4-beta.tgz",
+    "integrity": "sha512-6Cf7Yr7Wk7Kdv77nnJMf6de4HuDE4dTxKij+RqE9rufDsI6zsbjyAxcH5y2ueJCQAnfgKbzXbZHYlkFwmBlWkw==",
+    "shasum": "2135be498ad855416c4495cfd8e0e130bd33bb24",
+    "tarball": "http://localhost:3000/use-debounce/-/use-debounce-10.0.4.tgz",
     "fileCount": 15,
-    "unpackedSize": 105621,
+    "unpackedSize": 105616,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQD9KwQyyn55KERilQLynnAN/yX9+9hCKtCnZFBKtINEeAIhAOP98WxIg/9WN3WI4E2YAgp/k2vZLlMGF4IscwNgwJe1"
+      "sig": "MEYCIQCJiKNfhH1P9dnD0WZ5d38ObLLH5S4l5Ge612c93MRa0wIhALgNOpXt2xZIEo28RTJ+Q0i0Pw1eI+GRQByM/8E2oorf"
      }
     ]
    },
@@ -8882,14 +9030,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/use-debounce_10.0.4-beta_1728240443122_0.44793924384516726"
+    "tmp": "tmp/use-debounce_10.0.4_1728842727365_0.7052490702279985"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2018-11-09T11:11:43.717Z",
-  "modified": "2024-10-06T18:47:23.516Z",
+  "modified": "2024-10-13T18:05:27.759Z",
   "0.0.1": "2018-11-09T11:11:43.887Z",
   "0.0.2": "2018-11-09T14:14:07.185Z",
   "0.0.3": "2018-11-09T14:31:13.079Z",
@@ -8968,14 +9116,15 @@
   "10.0.1": "2024-05-26T08:56:57.161Z",
   "10.0.2": "2024-07-28T11:58:19.141Z",
   "10.0.3": "2024-08-17T10:24:30.491Z",
-  "10.0.4-beta": "2024-10-06T18:47:23.330Z"
+  "10.0.4-beta": "2024-10-06T18:47:23.330Z",
+  "10.0.4": "2024-10-13T18:05:27.585Z"
  },
  "bugs": {
   "url": "https://github.com/xnimorz/use-debounce/issues"
  },
  "author": {
-  "url": "nik@xnim.me",
-  "name": "Nik"
+  "name": "Nik",
+  "url": "nik@xnim.me"
  },
  "license": "MIT",
  "homepage": "https://github.com/xnimorz/use-debounce#readme",
@@ -8985,8 +9134,8 @@
   "react"
  ],
  "repository": {
-  "url": "git+ssh://git@github.com/xnimorz/use-debounce.git",
-  "type": "git"
+  "type": "git",
+  "url": "git+ssh://git@github.com/xnimorz/use-debounce.git"
  },
  "description": "Debounce hook for react",
  "maintainers": [
@@ -8995,6 +9144,6 @@
    "email": "nik.mostovoy@gmail.com"
   }
  ],
- "readme": "",
- "readmeFilename": ""
+ "readme": "<div align=\"center\">\n  <a href=\"https://www.npmjs.com/package/use-debounce\">\n    <img src=\"logo.png\" width=\"500\" alt=\"use-debounce\" />\n  </a>\n</div>\n\n<div align=\"center\">\n  <a href=\"https://www.npmjs.com/package/use-debounce\">\n    <img alt=\"npm\" src=\"https://img.shields.io/npm/v/use-debounce.svg?labelColor=49516F&color=8994BC\" />\n  </a>\n  <a href=\"https://npmjs.org/package/use-debounce\">\n    <img alt=\"downloads\" src=\"https://badgen.net/npm/dm/use-debounce?labelColor=49516F&color=8994BC\" />\n  </a>\n  <a href=\"https://bundlephobia.com/result?p=use-debounce\">\n    <img alt=\"tree-shakeable\" src=\"https://badgen.net/bundlephobia/tree-shaking/use-debounce?labelColor=49516F&color=8994BC\" />\n  </a>\n  <a href=\"https://npmjs.org/package/use-debounce\">\n    <img alt=\"types included\" src=\"https://badgen.net/npm/types/use-debounce?labelColor=49516F&color=8994BC\" />\n  </a>\n</div>\n\n# useDebounce, useDebouncedCallback & useThrottledCallback\n\nReact libraries for debouncing without tears!\n\n- Small size < 1 Kb\n- Compatible with underscore / lodash impl — learn once, use everywhere\n- Server-rendering friendly!\n\n## Features\n\n- [classic debounced callback](#debounced-callbacks)\n- [**value** debouncing](#simple-values-debouncing)\n- [cancel, maxWait and memoization](#advanced-usage)\n\n## Install\n\n```sh\nyarn add use-debounce\n# or\nnpm i use-debounce --save\n```\n\n## Copy paste guidance:\n\n### use-debounce\n\nSimple usage: https://codesandbox.io/s/kx75xzyrq7\n\nDebounce HTTP request: https://codesandbox.io/s/rr40wnropq\n\nDebounce HTTP request with `leading` param: https://codesandbox.io/s/cache-example-with-areas-and-leading-param-119r3i\n\n### use-debounce callback\n\nSimple usage: https://codesandbox.io/s/x0jvqrwyq\n\nCombining with native event listeners: https://codesandbox.io/s/32yqlyo815\n\nCancelling, maxWait and memoization: https://codesandbox.io/s/4wvmp1xlw4\n\nHTTP requests: https://codesandbox.io/s/use-debounce-callback-http-y1h3m6\n\n## Changelog\n\nhttps://github.com/xnimorz/use-debounce/blob/master/CHANGELOG.md\n\n## Simple values debouncing\n\nAccording to https://twitter.com/dan_abramov/status/1060729512227467264\nWebArchive link: https://web.archive.org/web/20210828073432/https://twitter.com/dan_abramov/status/1060729512227467264\n\n```javascript\nimport React, { useState } from 'react';\nimport { useDebounce } from 'use-debounce';\n\nexport default function Input() {\n  const [text, setText] = useState('Hello');\n  const [value] = useDebounce(text, 1000);\n\n  return (\n    <div>\n      <input\n        defaultValue={'Hello'}\n        onChange={(e) => {\n          setText(e.target.value);\n        }}\n      />\n      <p>Actual value: {text}</p>\n      <p>Debounce value: {value}</p>\n    </div>\n  );\n}\n```\n\nThis hook compares prev and next value using shallow equal. It means, setting an object `{}` will trigger debounce timer. If you have to compare objects (https://github.com/xnimorz/use-debounce/issues/27#issuecomment-496828063), you can use `useDebouncedCallback`, that is explained below:\n\n## Debounced callbacks\n\nBesides `useDebounce` for values you can debounce callbacks, that is the more commonly understood kind of debouncing.\nExample with Input (and react callbacks): https://codesandbox.io/s/x0jvqrwyq\n\n```js\nimport { useDebouncedCallback } from 'use-debounce';\n\nfunction Input({ defaultValue }) {\n  const [value, setValue] = useState(defaultValue);\n  // Debounce callback\n  const debounced = useDebouncedCallback(\n    // function\n    (value) => {\n      setValue(value);\n    },\n    // delay in ms\n    1000\n  );\n\n  // you should use `e => debounced(e.target.value)` as react works with synthetic events\n  return (\n    <div>\n      <input\n        defaultValue={defaultValue}\n        onChange={(e) => debounced(e.target.value)}\n      />\n      <p>Debounced value: {value}</p>\n    </div>\n  );\n}\n```\n\nExample with Scroll (and native event listeners): https://codesandbox.io/s/32yqlyo815\n\n```js\nfunction ScrolledComponent() {\n  // just a counter to show, that there are no any unnessesary updates\n  const updatedCount = useRef(0);\n  updatedCount.current++;\n\n  const [position, setPosition] = useState(window.pageYOffset);\n\n  // Debounce callback\n  const debounced = useDebouncedCallback(\n    // function\n    () => {\n      setPosition(window.pageYOffset);\n    },\n    // delay in ms\n    800\n  );\n\n  useEffect(() => {\n    const unsubscribe = subscribe(window, 'scroll', debounced);\n    return () => {\n      unsubscribe();\n    };\n  }, []);\n\n  return (\n    <div style={{ height: 10000 }}>\n      <div style={{ position: 'fixed', top: 0, left: 0 }}>\n        <p>Debounced top position: {position}</p>\n        <p>Component rerendered {updatedCount.current} times</p>\n      </div>\n    </div>\n  );\n}\n```\n\n### Returned value from `debounced()`\n\nSubsequent calls to the debounced function `debounced` return the result of the last func invocation.\nNote, that if there are no previous invocations it's mean you will get undefined. You should check it in your code properly.\n\nExample:\n\n```javascript\nit('Subsequent calls to the debounced function `debounced` return the result of the last func invocation.', () => {\n  const callback = jest.fn(() => 42);\n\n  let callbackCache;\n  function Component() {\n    const debounced = useDebouncedCallback(callback, 1000);\n    callbackCache = debounced;\n    return null;\n  }\n  Enzyme.mount(<Component />);\n\n  const result = callbackCache();\n  expect(callback.mock.calls.length).toBe(0);\n  expect(result).toBeUndefined();\n\n  act(() => {\n    jest.runAllTimers();\n  });\n  expect(callback.mock.calls.length).toBe(1);\n  const subsequentResult = callbackCache();\n\n  expect(callback.mock.calls.length).toBe(1);\n  expect(subsequentResult).toBe(42);\n});\n```\n\n### Advanced usage\n\n#### Cancel, maxWait and memoization\n\n1. Both `useDebounce` and `useDebouncedCallback` works with `maxWait` option. This params describes the maximum time func is allowed to be delayed before it's invoked.\n2. You can cancel debounce cycle, by calling `cancel` callback\n\nThe full example you can see here https://codesandbox.io/s/4wvmp1xlw4\n\n```javascript\nimport React, { useState } from 'react';\nimport ReactDOM from 'react-dom';\nimport { useDebouncedCallback } from 'use-debounce';\n\nfunction Input({ defaultValue }) {\n  const [value, setValue] = useState(defaultValue);\n  const debounced = useDebouncedCallback(\n    (value) => {\n      setValue(value);\n    },\n    500,\n    // The maximum time func is allowed to be delayed before it's invoked:\n    { maxWait: 2000 }\n  );\n\n  // you should use `e => debounced(e.target.value)` as react works with synthetic events\n  return (\n    <div>\n      <input\n        defaultValue={defaultValue}\n        onChange={(e) => debounced(e.target.value)}\n      />\n      <p>Debounced value: {value}</p>\n      <button onClick={debounced.cancel}>Cancel Debounce cycle</button>\n    </div>\n  );\n}\n\nconst rootElement = document.getElementById('root');\nReactDOM.render(<Input defaultValue=\"Hello world\" />, rootElement);\n```\n\nThe same API is available for `useDebounce` calls:\n```js\nconst [value, {cancel, isPending, flush}] = useDebounce(valueToDebounce);\n...\ncancel() // cancels pending debounce request\nisPending() // returns if there is a pending debouncing request\nflush() // immediately flushes pending request\n```\n\n\n#### Flush method\n\n`useDebouncedCallback` has `flush` method. It allows to call the callback manually if it hasn't fired yet. This method is handy to use when the user takes an action that would cause the component to unmount, but you need to execute the callback.\n\n```javascript\nimport React, { useState } from 'react';\nimport { useDebouncedCallback } from 'use-debounce';\n\nfunction InputWhichFetchesSomeData({ defaultValue, asyncFetchData }) {\n  const debounced = useDebouncedCallback(\n    (value) => {\n      asyncFetchData;\n    },\n    500,\n    { maxWait: 2000 }\n  );\n\n  // When the component goes to be unmounted, we will fetch data if the input has changed.\n  useEffect(\n    () => () => {\n      debounced.flush();\n    },\n    [debounced]\n  );\n\n  return (\n    <input\n      defaultValue={defaultValue}\n      onChange={(e) => debounced(e.target.value)}\n    />\n  );\n}\n```\n\n#### isPending method\n\n`isPending` method shows whether component has pending callbacks. Works for both `useDebounce` and `useDebouncedCallback`:\n\n```javascript\nimport React, { useCallback } from 'react';\n\nfunction Component({ text }) {\n  const debounced = useDebouncedCallback(\n    useCallback(() => {}, []),\n    500\n  );\n\n  expect(debounced.isPending()).toBeFalsy();\n  debounced();\n  expect(debounced.isPending()).toBeTruthy();\n  debounced.flush();\n  expect(debounced.isPending()).toBeFalsy();\n\n  return <span>{text}</span>;\n}\n```\n\n#### leading/trailing calls\n\nBoth `useDebounce` and `useDebouncedCallback` work with the `leading` and `trailing` options. `leading` param will execute the function once immediately when called. Subsequent calls will be debounced until the timeout expires. `trailing` option controls whenever to call the callback after timeout again.\n\nFor more information on how leading debounce calls work see: https://lodash.com/docs/#debounce\n\n```javascript\nimport React, { useState } from 'react';\nimport { useDebounce } from 'use-debounce';\n\nexport default function Input() {\n  const [text, setText] = useState('Hello');\n  const [value] = useDebounce(text, 1000, { leading: true });\n\n  // value is updated immediately when text changes the first time,\n  // but all subsequent changes are debounced.\n  return (\n    <div>\n      <input\n        defaultValue={'Hello'}\n        onChange={(e) => {\n          setText(e.target.value);\n        }}\n      />\n      <p>Actual value: {text}</p>\n      <p>Debounce value: {value}</p>\n    </div>\n  );\n}\n```\n\n#### Options:\n\nYou can provide additional options as a third argument to both `useDebounce` and `useDebouncedCallback`:\n\n| option     | default                       | Description                                                                                                                      | Example                                                                |\n| ---------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |\n| maxWait    | -                             | Describes the maximum time func is allowed to be delayed before it's invoked                                                     | https://github.com/xnimorz/use-debounce#cancel-maxwait-and-memoization |\n| leading    | -                             | This param will execute the function once immediately when called. Subsequent calls will be debounced until the timeout expires. | https://github.com/xnimorz/use-debounce#leading-calls                  |\n| trailing   | true                          | This param executes the function after timeout.                                                                                  | https://github.com/xnimorz/use-debounce#leading-calls                  |\n| equalityFn | (prev, next) => prev === next | [useDebounce ONLY] Comparator function which shows if timeout should be started                                                  |                                                                        |\n\n## useThrottledCallback\n\nYou are able to use throttled callback with this library also (starting 5.2.0 version).\nFor this purpose use:\n\n```\nimport useThrottledCallback from 'use-debounce/useThrottledCallback';\n```\n\nor\n\n```\nimport { useThrottledCallback } from 'use-debounce';\n```\n\nSeveral examples:\n\n1. Avoid excessively updating the position while scrolling.\n\n   ```js\n   const scrollHandler = useThrottledCallback(updatePosition, 100);\n   window.addEventListener('scroll', scrollHandler);\n   ```\n\n2. Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.\n   ```js\n   const throttled = useThrottledCallback(renewToken, 300000, { 'trailing': false })\n   <button onClick={throttled}>click</button>\n   ```\n\nAll the params for `useThrottledCallback` are the same as for `useDebouncedCallback` except `maxWait` option. As it's not needed for throttle callbacks.\n\n# Special thanks:\n\n[@tryggvigy](https://github.com/tryggvigy) — for managing lots of new features of the library like trailing and leading params, throttle callback, etc;\n\n[@omgovich](https://github.com/omgovich) — for reducing bundle size.\n",
+ "readmeFilename": "README.md"
 }

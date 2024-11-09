@@ -1,6 +1,6 @@
 {
  "_id": "rimraf",
- "_rev": "511-0cdd7ed94a2e5aac1a13fdabe5a8646e",
+ "_rev": "512-66c8c43105e208e065761441884d9820",
  "name": "rimraf",
  "dist-tags": {
   "latest": "6.0.1",
@@ -7519,86 +7519,6 @@
   "5.0.10": {
    "name": "rimraf",
    "version": "5.0.10",
-   "publishConfig": {
-    "tag": "v5-legacy"
-   },
-   "type": "module",
-   "tshy": {
-    "main": true,
-    "exports": {
-     "./package.json": "./package.json",
-     ".": "./src/index.ts"
-    }
-   },
-   "bin": {
-    "rimraf": "dist/esm/bin.mjs"
-   },
-   "main": "./dist/commonjs/index.js",
-   "types": "./dist/commonjs/index.d.ts",
-   "exports": {
-    "./package.json": "./package.json",
-    ".": {
-     "import": {
-      "types": "./dist/esm/index.d.ts",
-      "default": "./dist/esm/index.js"
-     },
-     "require": {
-      "types": "./dist/commonjs/index.d.ts",
-      "default": "./dist/commonjs/index.js"
-     }
-    }
-   },
-   "description": "A deep deletion module for node (like `rm -rf`)",
-   "author": {
-    "name": "Isaac Z. Schlueter",
-    "email": "i@izs.me",
-    "url": "http://blog.izs.me/"
-   },
-   "license": "ISC",
-   "repository": {
-    "type": "git",
-    "url": "git://github.com/isaacs/rimraf.git"
-   },
-   "scripts": {
-    "preversion": "npm test",
-    "postversion": "npm publish",
-    "prepublishOnly": "git push origin --follow-tags",
-    "prepare": "tshy",
-    "pretest": "npm run prepare",
-    "presnap": "npm run prepare",
-    "test": "tap",
-    "snap": "tap",
-    "format": "prettier --write . --log-level warn",
-    "benchmark": "node benchmark/index.js",
-    "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts"
-   },
-   "prettier": {
-    "experimentalTernaries": true,
-    "semi": false,
-    "printWidth": 80,
-    "tabWidth": 2,
-    "useTabs": false,
-    "singleQuote": true,
-    "jsxSingleQuote": false,
-    "bracketSameLine": true,
-    "arrowParens": "avoid",
-    "endOfLine": "lf"
-   },
-   "devDependencies": {
-    "@types/node": "^20.12.11",
-    "mkdirp": "^3.0.1",
-    "prettier": "^3.2.5",
-    "tap": "^19.0.1",
-    "tshy": "^1.14.0",
-    "typedoc": "^0.25.13",
-    "typescript": "^5.4.5"
-   },
-   "funding": {
-    "url": "https://github.com/sponsors/isaacs"
-   },
-   "dependencies": {
-    "glob": "^10.3.7"
-   },
    "keywords": [
     "rm",
     "rm -rf",
@@ -7609,50 +7529,130 @@
     "rmdir",
     "recursive"
    ],
-   "module": "./dist/esm/index.js",
-   "_id": "rimraf@5.0.10",
-   "readmeFilename": "README.md",
-   "gitHead": "982faa77dc2398f5e4e1daa9a8f35d3bb82168c0",
-   "bugs": {
-    "url": "https://github.com/isaacs/rimraf/issues"
-   },
-   "homepage": "https://github.com/isaacs/rimraf#readme",
-   "_nodeVersion": "20.13.1",
-   "_npmVersion": "10.7.0",
-   "dist": {
-    "integrity": "sha512-l0OE8wL34P4nJH/H2ffoaniAokM2qSmrtXHmlpvYr5AVVX8msAyW0l8NVJFDxlSK4u3Uh/f41cQheDVdnYijwQ==",
-    "shasum": "23b9843d3dc92db71f96e1a2ce92e39fd2a8221c",
-    "tarball": "http://localhost:3000/rimraf/-/rimraf-5.0.10.tgz",
-    "fileCount": 137,
-    "unpackedSize": 281343,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQCXe67RZfcIGc3biaiAmNKVlAi/0jXV1sve5ozElbq/YwIhAKqFdsXDk4aueo6raQJAQTxlZHwUOMJSuSUzLyAT/xyP"
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "isaacs",
+   "author": {
+    "url": "http://blog.izs.me/",
+    "name": "Isaac Z. Schlueter",
     "email": "i@izs.me"
    },
-   "directories": {},
+   "license": "ISC",
+   "_id": "rimraf@5.0.10",
    "maintainers": [
     {
      "name": "isaacs",
      "email": "i@izs.me"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/rimraf_5.0.10_1722453953304_0.5738010333698311"
+   "homepage": "https://github.com/isaacs/rimraf#readme",
+   "bugs": {
+    "url": "https://github.com/isaacs/rimraf/issues"
    },
-   "_hasShrinkwrap": false
+   "bin": {
+    "rimraf": "dist/esm/bin.mjs"
+   },
+   "dist": {
+    "shasum": "23b9843d3dc92db71f96e1a2ce92e39fd2a8221c",
+    "tarball": "http://localhost:3000/rimraf/-/rimraf-5.0.10.tgz",
+    "fileCount": 137,
+    "integrity": "sha512-l0OE8wL34P4nJH/H2ffoaniAokM2qSmrtXHmlpvYr5AVVX8msAyW0l8NVJFDxlSK4u3Uh/f41cQheDVdnYijwQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCXe67RZfcIGc3biaiAmNKVlAi/0jXV1sve5ozElbq/YwIhAKqFdsXDk4aueo6raQJAQTxlZHwUOMJSuSUzLyAT/xyP",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 281343
+   },
+   "main": "./dist/commonjs/index.js",
+   "tshy": {
+    "main": true,
+    "exports": {
+     ".": "./src/index.ts",
+     "./package.json": "./package.json"
+    }
+   },
+   "type": "module",
+   "types": "./dist/commonjs/index.d.ts",
+   "module": "./dist/esm/index.js",
+   "exports": {
+    ".": {
+     "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+     },
+     "require": {
+      "types": "./dist/commonjs/index.d.ts",
+      "default": "./dist/commonjs/index.js"
+     }
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": {
+    "url": "https://github.com/sponsors/isaacs"
+   },
+   "gitHead": "982faa77dc2398f5e4e1daa9a8f35d3bb82168c0",
+   "scripts": {
+    "snap": "tap",
+    "test": "tap",
+    "format": "prettier --write . --log-level warn",
+    "prepare": "tshy",
+    "presnap": "npm run prepare",
+    "pretest": "npm run prepare",
+    "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts",
+    "benchmark": "node benchmark/index.js",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prepublishOnly": "git push origin --follow-tags"
+   },
+   "_npmUser": {
+    "name": "isaacs",
+    "email": "i@izs.me"
+   },
+   "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "endOfLine": "lf",
+    "printWidth": 80,
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "bracketSameLine": true,
+    "experimentalTernaries": true
+   },
+   "repository": {
+    "url": "git://github.com/isaacs/rimraf.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "A deep deletion module for node (like `rm -rf`)",
+   "directories": {},
+   "_nodeVersion": "20.13.1",
+   "dependencies": {
+    "glob": "^10.3.7"
+   },
+   "publishConfig": {
+    "tag": "v5-legacy"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "devDependencies": {
+    "tap": "^19.0.1",
+    "tshy": "^1.14.0",
+    "mkdirp": "^3.0.1",
+    "typedoc": "^0.25.13",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "@types/node": "^20.12.11"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/rimraf_5.0.10_1722453953304_0.5738010333698311",
+    "host": "s3://npm-registry-packages"
+   }
   }
  },
  "time": {
   "created": "2011-02-08T08:55:37.756Z",
-  "modified": "2024-07-31T19:25:53.840Z",
+  "modified": "2024-10-22T17:26:12.673Z",
   "1.0.0": "2011-02-08T08:55:39.437Z",
   "1.0.1": "2011-04-13T18:06:00.422Z",
   "1.0.2": "2011-05-30T18:33:02.093Z",
@@ -8034,7 +8034,6 @@
   "neaker15668": true,
   "phoenix-xsy": true,
   "pines-cheng": true,
-  "redmonkeydf": true,
   "russiansoon": true,
   "sadmansamee": true,
   "scytalezero": true,

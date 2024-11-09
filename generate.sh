@@ -3,8 +3,8 @@ set -e
 
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
-CORE_CHECKOUT=v1.142.12
-DESKTOP_CHECKOUT=monorepo-testrelease-rc1
+CORE_CHECKOUT=v1.148.7
+DESKTOP_CHECKOUT=v1.48.0
 
 # this script needs:
 # - serveral repos checked out next to this repo

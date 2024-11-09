@@ -1,9 +1,9 @@
 {
  "_id": "tslib",
- "_rev": "89-55ef938626b80c2103a8f90874a9e917",
+ "_rev": "91-b254e1d2ffe85666486f46d81d3d9c61",
  "name": "tslib",
  "dist-tags": {
-  "latest": "2.7.0"
+  "latest": "2.8.1"
  },
  "versions": {
   "0.0.1-security": {
@@ -3714,11 +3714,231 @@
   },
   "2.7.0": {
    "name": "tslib",
+   "version": "2.7.0",
+   "keywords": [
+    "TypeScript",
+    "Microsoft",
+    "compiler",
+    "language",
+    "javascript",
+    "tslib",
+    "runtime"
+   ],
+   "author": {
+    "name": "Microsoft Corp."
+   },
+   "license": "0BSD",
+   "_id": "tslib@2.7.0",
+   "maintainers": [
+    {
+     "name": "typescript-bot",
+     "email": "typescript@microsoft.com"
+    },
+    {
+     "name": "weswigham",
+     "email": "wwigham@gmail.com"
+    },
+    {
+     "name": "sanders_n",
+     "email": "nathan@shively-sanders.com"
+    },
+    {
+     "name": "andrewbranch",
+     "email": "andrew@wheream.io"
+    },
+    {
+     "name": "minestarks",
+     "email": "mineyalc@microsoft.com"
+    },
+    {
+     "name": "rbuckton",
+     "email": "rbuckton@chronicles.org"
+    },
+    {
+     "name": "sheetalkamat",
+     "email": "shkamat@microsoft.com"
+    },
+    {
+     "name": "typescript-deploys",
+     "email": "typescript-design@microsoft.com"
+    }
+   ],
+   "homepage": "https://www.typescriptlang.org/",
+   "bugs": {
+    "url": "https://github.com/Microsoft/TypeScript/issues"
+   },
+   "dist": {
+    "shasum": "d9b40c5c40ab59e8738f297df3087bf1a2690c01",
+    "tarball": "http://localhost:3000/tslib/-/tslib-2.7.0.tgz",
+    "fileCount": 14,
+    "integrity": "sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQD4h8NGRa8U36jhJ9oHwlZsJbFUEzwHsYu/+OAFOD1m/gIhAO3WiokPXuinAVKkvs8KWNw/scqdKs6piwRy27vfv2ah",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 86155
+   },
+   "main": "tslib.js",
+   "module": "tslib.es6.js",
+   "exports": {
+    ".": {
+     "import": {
+      "node": "./modules/index.js",
+      "default": {
+       "types": "./modules/index.d.ts",
+       "default": "./tslib.es6.mjs"
+      }
+     },
+     "module": {
+      "types": "./modules/index.d.ts",
+      "default": "./tslib.es6.mjs"
+     },
+     "default": "./tslib.js"
+    },
+    "./": "./",
+    "./*": "./*"
+   },
+   "gitHead": "6abc075910605cc5c6c74d8566190ee865c9e672",
+   "typings": "tslib.d.ts",
+   "_npmUser": {
+    "name": "typescript-bot",
+    "email": "typescript@microsoft.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/Microsoft/tslib.git",
+    "type": "git"
+   },
+   "_npmVersion": "6.14.18",
+   "description": "Runtime library for TypeScript helper functions",
+   "directories": {},
+   "jsnext:main": "tslib.es6.js",
+   "sideEffects": false,
+   "_nodeVersion": "14.21.3",
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/tslib_2.7.0_1724442787391_0.6968800392720169",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "2.8.0": {
+   "name": "tslib",
+   "version": "2.8.0",
+   "keywords": [
+    "TypeScript",
+    "Microsoft",
+    "compiler",
+    "language",
+    "javascript",
+    "tslib",
+    "runtime"
+   ],
+   "author": {
+    "name": "Microsoft Corp."
+   },
+   "license": "0BSD",
+   "_id": "tslib@2.8.0",
+   "maintainers": [
+    {
+     "name": "typescript-bot",
+     "email": "typescript@microsoft.com"
+    },
+    {
+     "name": "weswigham",
+     "email": "wwigham@gmail.com"
+    },
+    {
+     "name": "sanders_n",
+     "email": "nathan@shively-sanders.com"
+    },
+    {
+     "name": "andrewbranch",
+     "email": "andrew@wheream.io"
+    },
+    {
+     "name": "minestarks",
+     "email": "mineyalc@microsoft.com"
+    },
+    {
+     "name": "rbuckton",
+     "email": "rbuckton@chronicles.org"
+    },
+    {
+     "name": "sheetalkamat",
+     "email": "shkamat@microsoft.com"
+    },
+    {
+     "name": "typescript-deploys",
+     "email": "typescript-design@microsoft.com"
+    }
+   ],
+   "homepage": "https://www.typescriptlang.org/",
+   "bugs": {
+    "url": "https://github.com/Microsoft/TypeScript/issues"
+   },
+   "dist": {
+    "shasum": "d124c86c3c05a40a91e6fdea4021bd31d377971b",
+    "tarball": "http://localhost:3000/tslib/-/tslib-2.8.0.tgz",
+    "fileCount": 14,
+    "integrity": "sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDJJ2W2WitSkFFRx+bhrHXy9UMpQ+Jy4VZNPMp7CWglngIgInEkU7SzccSggXU/JjdUeNVxjb1/kGaWpK67Z1/chgA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 89090
+   },
+   "main": "tslib.js",
+   "module": "tslib.es6.js",
+   "exports": {
+    ".": {
+     "import": {
+      "node": "./modules/index.js",
+      "default": {
+       "types": "./modules/index.d.ts",
+       "default": "./tslib.es6.mjs"
+      }
+     },
+     "module": {
+      "types": "./modules/index.d.ts",
+      "default": "./tslib.es6.mjs"
+     },
+     "default": "./tslib.js"
+    },
+    "./": "./",
+    "./*": "./*"
+   },
+   "gitHead": "7c11588c364da4267328cfd32ed20de57494db67",
+   "typings": "tslib.d.ts",
+   "_npmUser": {
+    "name": "typescript-bot",
+    "email": "typescript@microsoft.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/Microsoft/tslib.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "Runtime library for TypeScript helper functions",
+   "directories": {},
+   "jsnext:main": "tslib.es6.js",
+   "sideEffects": false,
+   "_nodeVersion": "22.9.0",
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/tslib_2.8.0_1729014769704_0.88437145361806",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "2.8.1": {
+   "name": "tslib",
    "author": {
     "name": "Microsoft Corp."
    },
    "homepage": "https://www.typescriptlang.org/",
-   "version": "2.7.0",
+   "version": "2.8.1",
    "license": "0BSD",
    "description": "Runtime library for TypeScript helper functions",
    "keywords": [
@@ -3760,20 +3980,20 @@
     "./*": "./*",
     "./": "./"
    },
-   "gitHead": "6abc075910605cc5c6c74d8566190ee865c9e672",
-   "_id": "tslib@2.7.0",
-   "_nodeVersion": "14.21.3",
-   "_npmVersion": "6.14.18",
+   "_id": "tslib@2.8.1",
+   "gitHead": "d72d6f70b36286bc3f94a3dda1e64dcb568b1370",
+   "_nodeVersion": "22.10.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-gLXCKdN1/j47AiHiOkJN69hJmcbGTHI0ImLmbYLHykhgeN0jVGola9yVjFgzCUklsZQMW55o+dW7IXv3RCXDzA==",
-    "shasum": "d9b40c5c40ab59e8738f297df3087bf1a2690c01",
-    "tarball": "http://localhost:3000/tslib/-/tslib-2.7.0.tgz",
+    "integrity": "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==",
+    "shasum": "612efe4ed235d567e8aba5f2a5fab70280ade83f",
+    "tarball": "http://localhost:3000/tslib/-/tslib-2.8.1.tgz",
     "fileCount": 14,
-    "unpackedSize": 86155,
+    "unpackedSize": 90359,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQD4h8NGRa8U36jhJ9oHwlZsJbFUEzwHsYu/+OAFOD1m/gIhAO3WiokPXuinAVKkvs8KWNw/scqdKs6piwRy27vfv2ah"
+      "sig": "MEQCIGwCQX5/87cZTV61H/mDacqOyTtSjyRcavAmrLhEda86AiB2MqmcgfsJi/8SXZR4Ju49WkLgmhXWB8ZPMpdPSZCGTw=="
      }
     ]
    },
@@ -3818,14 +4038,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/tslib_2.7.0_1724442787391_0.6968800392720169"
+    "tmp": "tmp/tslib_2.8.1_1730414568373_0.8447792725557923"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2014-12-30T09:21:20.138Z",
-  "modified": "2024-08-23T19:53:07.878Z",
+  "modified": "2024-10-31T22:42:48.999Z",
   "0.0.1": "2014-12-30T09:21:22.769Z",
   "0.0.2": "2014-12-30T11:02:46.195Z",
   "0.0.1-security": "2016-06-16T22:56:19.306Z",
@@ -3871,7 +4091,9 @@
   "2.6.1": "2023-07-24T20:30:01.894Z",
   "2.6.2": "2023-08-18T17:41:58.755Z",
   "2.6.3": "2024-06-04T20:25:19.808Z",
-  "2.7.0": "2024-08-23T19:53:07.533Z"
+  "2.7.0": "2024-08-23T19:53:07.533Z",
+  "2.8.0": "2024-10-15T17:52:49.926Z",
+  "2.8.1": "2024-10-31T22:42:48.624Z"
  },
  "bugs": {
   "url": "https://github.com/Microsoft/TypeScript/issues"

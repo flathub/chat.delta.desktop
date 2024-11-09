@@ -1,6 +1,6 @@
 {
  "_id": "mime-types",
- "_rev": "161-b0b50734addddced5ded95b4b01b99aa",
+ "_rev": "162-432f5f4c0c2c7390e46e6562f3224e03",
  "name": "mime-types",
  "dist-tags": {
   "latest": "2.1.35",
@@ -5015,83 +5015,13 @@
   },
   "3.0.0": {
    "name": "mime-types",
-   "description": "The ultimate javascript content-type utility.",
    "version": "3.0.0",
-   "contributors": [
-    {
-     "name": "Douglas Christopher Wilson",
-     "email": "doug@somethingdoug.com"
-    },
-    {
-     "name": "Jeremiah Senkpiel",
-     "email": "fishrock123@rocketmail.com",
-     "url": "https://searchbeam.jit.su"
-    },
-    {
-     "name": "Jonathan Ong",
-     "email": "me@jongleberry.com",
-     "url": "http://jongleberry.com"
-    }
-   ],
-   "license": "MIT",
    "keywords": [
     "mime",
     "types"
    ],
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jshttp/mime-types.git"
-   },
-   "dependencies": {
-    "mime-db": "^1.53.0"
-   },
-   "devDependencies": {
-    "eslint": "8.33.0",
-    "eslint-config-standard": "14.1.1",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-markdown": "3.0.0",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "6.1.1",
-    "eslint-plugin-standard": "4.1.0",
-    "mocha": "10.2.0",
-    "nyc": "15.1.0"
-   },
-   "engines": {
-    "node": ">= 0.6"
-   },
-   "scripts": {
-    "lint": "eslint .",
-    "test": "mocha --reporter spec test/test.js",
-    "test-ci": "nyc --reporter=lcov --reporter=text npm test",
-    "test-cov": "nyc --reporter=html --reporter=text npm test"
-   },
+   "license": "MIT",
    "_id": "mime-types@3.0.0",
-   "readmeFilename": "README.md",
-   "gitHead": "4b3ae3831b18e1ce72af9ee75f691701aef8432f",
-   "bugs": {
-    "url": "https://github.com/jshttp/mime-types/issues"
-   },
-   "homepage": "https://github.com/jshttp/mime-types#readme",
-   "_nodeVersion": "22.2.0",
-   "_npmVersion": "10.7.0",
-   "dist": {
-    "integrity": "sha512-XqoSHeCGjVClAmoGFG3lVFqQFRIrTVw2OH3axRqAcfaw+gHWIfnASS92AV+Rl/mk0MupgZTRHQOjxY6YVnzK5w==",
-    "shasum": "148453a900475522d095a445355c074cca4f5217",
-    "tarball": "http://localhost:3000/mime-types/-/mime-types-3.0.0.tgz",
-    "fileCount": 6,
-    "unpackedSize": 22277,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQCVk46UyrD+LHLM8l14XNi0V4ET7cNqJ0kGXNsmAop5TwIhAOPXSGh/qdfZo8etB72Tp/l54se3tl8bbPXse+Nc2Jdc"
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "wesleytodd",
-    "email": "wes@wesleytodd.com"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "wesleytodd",
@@ -5110,16 +5040,86 @@
      "email": "jonathanrichardong@gmail.com"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/mime-types_3.0.0_1725112633991_0.3284378548950295"
+   "contributors": [
+    {
+     "name": "Douglas Christopher Wilson",
+     "email": "doug@somethingdoug.com"
+    },
+    {
+     "url": "https://searchbeam.jit.su",
+     "name": "Jeremiah Senkpiel",
+     "email": "fishrock123@rocketmail.com"
+    },
+    {
+     "url": "http://jongleberry.com",
+     "name": "Jonathan Ong",
+     "email": "me@jongleberry.com"
+    }
+   ],
+   "homepage": "https://github.com/jshttp/mime-types#readme",
+   "bugs": {
+    "url": "https://github.com/jshttp/mime-types/issues"
    },
-   "_hasShrinkwrap": false
+   "dist": {
+    "shasum": "148453a900475522d095a445355c074cca4f5217",
+    "tarball": "http://localhost:3000/mime-types/-/mime-types-3.0.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-XqoSHeCGjVClAmoGFG3lVFqQFRIrTVw2OH3axRqAcfaw+gHWIfnASS92AV+Rl/mk0MupgZTRHQOjxY6YVnzK5w==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCVk46UyrD+LHLM8l14XNi0V4ET7cNqJ0kGXNsmAop5TwIhAOPXSGh/qdfZo8etB72Tp/l54se3tl8bbPXse+Nc2Jdc",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 22277
+   },
+   "engines": {
+    "node": ">= 0.6"
+   },
+   "gitHead": "4b3ae3831b18e1ce72af9ee75f691701aef8432f",
+   "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec test/test.js",
+    "test-ci": "nyc --reporter=lcov --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test"
+   },
+   "_npmUser": {
+    "name": "wesleytodd",
+    "email": "wes@wesleytodd.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/jshttp/mime-types.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "The ultimate javascript content-type utility.",
+   "directories": {},
+   "_nodeVersion": "22.2.0",
+   "dependencies": {
+    "mime-db": "^1.53.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "devDependencies": {
+    "nyc": "15.1.0",
+    "mocha": "10.2.0",
+    "eslint": "8.33.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-markdown": "3.0.0",
+    "eslint-plugin-standard": "4.1.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/mime-types_3.0.0_1725112633991_0.3284378548950295",
+    "host": "s3://npm-registry-packages"
+   }
   }
  },
  "time": {
   "created": "2014-05-02T15:54:00.885Z",
-  "modified": "2024-08-31T13:57:14.337Z",
+  "modified": "2024-10-10T20:56:28.927Z",
   "0.1.0": "2014-05-02T15:54:00.885Z",
   "1.0.0": "2014-05-12T20:00:39.325Z",
   "1.0.1": "2014-06-24T20:45:58.288Z",
@@ -5209,20 +5209,24 @@
  ],
  "maintainers": [
   {
-   "name": "wesleytodd",
-   "email": "wes@wesleytodd.com"
+   "email": "hello@blakeembrey.com",
+   "name": "blakeembrey"
   },
   {
-   "name": "ulisesgascon",
-   "email": "ulisesgascondev@gmail.com"
+   "email": "wes@wesleytodd.com",
+   "name": "wesleytodd"
   },
   {
-   "name": "dougwilson",
-   "email": "doug@somethingdoug.com"
+   "email": "ulisesgascondev@gmail.com",
+   "name": "ulisesgascon"
   },
   {
-   "name": "jongleberry",
-   "email": "jonathanrichardong@gmail.com"
+   "email": "doug@somethingdoug.com",
+   "name": "dougwilson"
+  },
+  {
+   "email": "jonathanrichardong@gmail.com",
+   "name": "jongleberry"
   }
  ],
  "readme": "",

@@ -1,10 +1,10 @@
 {
  "_id": "builder-util",
- "_rev": "262-b3ee84cf48303024fe9aa52f56e75e09",
+ "_rev": "264-ebec97956ed4985292715fe906e28489",
  "name": "builder-util",
  "dist-tags": {
-  "next": "26.0.0-alpha.0",
-  "latest": "25.1.7"
+  "latest": "25.1.7",
+  "next": "26.0.0-alpha.3"
  },
  "versions": {
   "1.0.0": {
@@ -18555,6 +18555,176 @@
   "26.0.0-alpha.0": {
    "name": "builder-util",
    "version": "26.0.0-alpha.0",
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "_id": "builder-util@26.0.0-alpha.0",
+   "maintainers": [
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "dist": {
+    "shasum": "5629a246a0a58737f3a70c6145266c50d496050b",
+    "tarball": "http://localhost:3000/builder-util/-/builder-util-26.0.0-alpha.0.tgz",
+    "fileCount": 33,
+    "integrity": "sha512-Hr6BApQCZJKJwnMymjIjP8isq6cjNXoW3p5VUUZpjIxMunxTy1BIg/Pp3c1s2/qrMQfFfu2HZsPvuKjWXsbe+Q==",
+    "signatures": [
+     {
+      "sig": "MEUCIQD/lRDVeqlOiGD46mJanQBPnmBo8tXgQYy/1UGkmQww6wIgOw+obeot6aedtitLQBS4nxdh22zy3lqgjc7t53WlyzE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 130578
+   },
+   "main": "out/util.js",
+   "_from": "file:builder-util-26.0.0-alpha.0.tgz",
+   "typings": "./out/util.d.ts",
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/tmp/0d21ada39e587cc5c54dfaafe3cc7325/builder-util-26.0.0-alpha.0.tgz",
+   "_integrity": "sha512-Hr6BApQCZJKJwnMymjIjP8isq6cjNXoW3p5VUUZpjIxMunxTy1BIg/Pp3c1s2/qrMQfFfu2HZsPvuKjWXsbe+Q==",
+   "repository": {
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "type": "git",
+    "directory": "packages/builder-util"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "Various utilities. Used by [electron-builder](https://github.com/electron-userland/electron-builder).",
+   "directories": {},
+   "_nodeVersion": "18.20.4",
+   "dependencies": {
+    "chalk": "^4.1.2",
+    "debug": "^4.3.4",
+    "is-ci": "^3.0.0",
+    "js-yaml": "^4.1.0",
+    "7zip-bin": "~5.2.0",
+    "fs-extra": "^10.1.0",
+    "stat-mode": "^1.0.0",
+    "temp-file": "^3.4.0",
+    "cross-spawn": "^7.0.3",
+    "@types/debug": "^4.1.6",
+    "bluebird-lst": "^1.0.9",
+    "app-builder-bin": "5.0.0-alpha.10",
+    "http-proxy-agent": "^7.0.0",
+    "https-proxy-agent": "^7.0.0",
+    "source-map-support": "^0.5.19",
+    "builder-util-runtime": "9.2.10"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "readme.md",
+   "devDependencies": {
+    "@types/is-ci": "3.0.0",
+    "@types/js-yaml": "4.0.3",
+    "@types/fs-extra": "^9.0.11",
+    "@types/cross-spawn": "6.0.2",
+    "@types/source-map-support": "0.5.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/builder-util_26.0.0-alpha.0_1728486597425_0.2082372225320226",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "26.0.0-alpha.1": {
+   "name": "builder-util",
+   "version": "26.0.0-alpha.1",
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "_id": "builder-util@26.0.0-alpha.1",
+   "maintainers": [
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "dist": {
+    "shasum": "93192e6380ccd2b9363937ad0738b656f021d33b",
+    "tarball": "http://localhost:3000/builder-util/-/builder-util-26.0.0-alpha.1.tgz",
+    "fileCount": 33,
+    "integrity": "sha512-1P80rmpWcRiBpJGBDxuhXC5E0lbrk8y9Iz2QoAhifpDyMphx6k3VTbAze2+GJtGu7HXzz8YVSfpkhDVr0FIisQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDul0OM24yP+hwuytkg1u9vLSzTskzHIRmJE5AG3jRSJgIhANtf/WKRfehySL/NcQjLw9BDumA3sGVqctIl2cwOsItd",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 131064
+   },
+   "main": "out/util.js",
+   "_from": "file:builder-util-26.0.0-alpha.1.tgz",
+   "typings": "./out/util.d.ts",
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/tmp/7d212342ddf9e8f132458cc5f923c682/builder-util-26.0.0-alpha.1.tgz",
+   "_integrity": "sha512-1P80rmpWcRiBpJGBDxuhXC5E0lbrk8y9Iz2QoAhifpDyMphx6k3VTbAze2+GJtGu7HXzz8YVSfpkhDVr0FIisQ==",
+   "repository": {
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "type": "git",
+    "directory": "packages/builder-util"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "Various utilities. Used by [electron-builder](https://github.com/electron-userland/electron-builder).",
+   "directories": {},
+   "_nodeVersion": "18.20.4",
+   "dependencies": {
+    "chalk": "^4.1.2",
+    "debug": "^4.3.4",
+    "is-ci": "^3.0.0",
+    "js-yaml": "^4.1.0",
+    "7zip-bin": "~5.2.0",
+    "fs-extra": "^10.1.0",
+    "stat-mode": "^1.0.0",
+    "temp-file": "^3.4.0",
+    "cross-spawn": "^7.0.3",
+    "@types/debug": "^4.1.6",
+    "bluebird-lst": "^1.0.9",
+    "app-builder-bin": "5.0.0-alpha.10",
+    "http-proxy-agent": "^7.0.0",
+    "https-proxy-agent": "^7.0.0",
+    "source-map-support": "^0.5.19",
+    "builder-util-runtime": "9.2.10"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "readme.md",
+   "devDependencies": {
+    "@types/is-ci": "3.0.0",
+    "@types/js-yaml": "4.0.3",
+    "@types/fs-extra": "^9.0.11",
+    "@types/cross-spawn": "6.0.2",
+    "@types/source-map-support": "0.5.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/builder-util_26.0.0-alpha.1_1728582861826_0.0633180279541401",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "26.0.0-alpha.3": {
+   "name": "builder-util",
+   "version": "26.0.0-alpha.3",
    "main": "out/util.js",
    "author": {
     "name": "Vladimir Krivosheev"
@@ -18572,7 +18742,7 @@
    "dependencies": {
     "7zip-bin": "~5.2.0",
     "@types/debug": "^4.1.6",
-    "app-builder-bin": "5.0.0-alpha.10",
+    "app-builder-bin": "5.0.0-alpha.11",
     "bluebird-lst": "^1.0.9",
     "chalk": "^4.1.2",
     "cross-spawn": "^7.0.3",
@@ -18582,6 +18752,7 @@
     "https-proxy-agent": "^7.0.0",
     "is-ci": "^3.0.0",
     "js-yaml": "^4.1.0",
+    "sanitize-filename": "^1.6.3",
     "source-map-support": "^0.5.19",
     "stat-mode": "^1.0.0",
     "temp-file": "^3.4.0",
@@ -18595,24 +18766,24 @@
     "@types/js-yaml": "4.0.3",
     "@types/source-map-support": "0.5.4"
    },
-   "_id": "builder-util@26.0.0-alpha.0",
+   "_id": "builder-util@26.0.0-alpha.3",
    "readmeFilename": "readme.md",
    "description": "Various utilities. Used by [electron-builder](https://github.com/electron-userland/electron-builder).",
-   "_integrity": "sha512-Hr6BApQCZJKJwnMymjIjP8isq6cjNXoW3p5VUUZpjIxMunxTy1BIg/Pp3c1s2/qrMQfFfu2HZsPvuKjWXsbe+Q==",
-   "_resolved": "/tmp/0d21ada39e587cc5c54dfaafe3cc7325/builder-util-26.0.0-alpha.0.tgz",
-   "_from": "file:builder-util-26.0.0-alpha.0.tgz",
+   "_integrity": "sha512-OKG+aqX/1+zT+tBEdLN+EbI2cH+qc94CRyudb/Cg2oWA33d3TRUZBnUcjbod8iHw27Hbc5gyJT5V0p1QP0ApWQ==",
+   "_resolved": "/tmp/1c8c876b805c010641dc40992edfd3e8/builder-util-26.0.0-alpha.3.tgz",
+   "_from": "file:builder-util-26.0.0-alpha.3.tgz",
    "_nodeVersion": "18.20.4",
    "_npmVersion": "10.7.0",
    "dist": {
-    "integrity": "sha512-Hr6BApQCZJKJwnMymjIjP8isq6cjNXoW3p5VUUZpjIxMunxTy1BIg/Pp3c1s2/qrMQfFfu2HZsPvuKjWXsbe+Q==",
-    "shasum": "5629a246a0a58737f3a70c6145266c50d496050b",
-    "tarball": "http://localhost:3000/builder-util/-/builder-util-26.0.0-alpha.0.tgz",
-    "fileCount": 33,
-    "unpackedSize": 130578,
+    "integrity": "sha512-OKG+aqX/1+zT+tBEdLN+EbI2cH+qc94CRyudb/Cg2oWA33d3TRUZBnUcjbod8iHw27Hbc5gyJT5V0p1QP0ApWQ==",
+    "shasum": "3fa5a915dc1b8270c2aeb11c01b3eef769ebb9ff",
+    "tarball": "http://localhost:3000/builder-util/-/builder-util-26.0.0-alpha.3.tgz",
+    "fileCount": 36,
+    "unpackedSize": 135022,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQD/lRDVeqlOiGD46mJanQBPnmBo8tXgQYy/1UGkmQww6wIgOw+obeot6aedtitLQBS4nxdh22zy3lqgjc7t53WlyzE="
+      "sig": "MEYCIQC0n4qiogrt7hUYW3TEbcvCFGuP4aP50UjMRss1s/oSnQIhAJPbBbt3tZlVCJSwSObqVUhMXJlg7zXtpzZ45zn/hPWc"
      }
     ]
    },
@@ -18633,14 +18804,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/builder-util_26.0.0-alpha.0_1728486597425_0.2082372225320226"
+    "tmp": "tmp/builder-util_26.0.0-alpha.3_1729092322988_0.4979167413316863"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-08-25T07:10:13.421Z",
-  "modified": "2024-10-09T15:09:57.880Z",
+  "modified": "2024-10-16T15:25:23.523Z",
   "1.0.0": "2017-08-25T07:10:13.421Z",
   "1.0.1": "2017-08-25T11:51:44.457Z",
   "1.0.2": "2017-09-01T15:14:22.028Z",
@@ -18896,7 +19067,9 @@
   "25.1.5": "2024-09-23T19:33:45.464Z",
   "25.1.6": "2024-09-27T01:04:09.005Z",
   "25.1.7": "2024-10-02T15:59:05.042Z",
-  "26.0.0-alpha.0": "2024-10-09T15:09:57.729Z"
+  "26.0.0-alpha.0": "2024-10-09T15:09:57.729Z",
+  "26.0.0-alpha.1": "2024-10-10T17:54:22.082Z",
+  "26.0.0-alpha.3": "2024-10-16T15:25:23.311Z"
  },
  "bugs": {
   "url": "https://github.com/electron-userland/electron-builder/issues"

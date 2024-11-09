@@ -1,6 +1,6 @@
 {
  "_id": "pump",
- "_rev": "130-b5ae7cd22c3e9f4fb7029ffd5989589c",
+ "_rev": "132-9ea0afbc1c9775bbed6947b20d422eb5",
  "name": "pump",
  "dist-tags": {
   "latest": "3.0.2"
@@ -1513,15 +1513,6 @@
   "3.0.2": {
    "name": "pump",
    "version": "3.0.2",
-   "repository": {
-    "type": "git",
-    "url": "git://github.com/mafintosh/pump.git"
-   },
-   "license": "MIT",
-   "description": "pipe streams together and close all of them if one of them closes",
-   "browser": {
-    "fs": false
-   },
    "keywords": [
     "streams",
     "pipe",
@@ -1532,55 +1523,64 @@
     "name": "Mathias Buus Madsen",
     "email": "mathiasbuus@gmail.com"
    },
-   "dependencies": {
-    "end-of-stream": "^1.1.0",
-    "once": "^1.3.1"
-   },
-   "scripts": {
-    "test": "node test-browser.js && node test-node.js"
-   },
+   "license": "MIT",
    "_id": "pump@3.0.2",
-   "gitHead": "16e858ed6594ef22f8daade05613d3a9b0e3a139",
-   "bugs": {
-    "url": "https://github.com/mafintosh/pump/issues"
-   },
-   "homepage": "https://github.com/mafintosh/pump#readme",
-   "_nodeVersion": "20.11.1",
-   "_npmVersion": "10.7.0",
-   "dist": {
-    "integrity": "sha512-tUPXtzlGM8FE3P0ZL6DVs/3P58k9nk8/jZeQCurTJylQA8qFYzHFfhBJkuqyE0FifOsQ0uKWekiZ5g8wtr28cw==",
-    "shasum": "836f3edd6bc2ee599256c924ffe0d88573ddcbf8",
-    "tarball": "http://localhost:3000/pump/-/pump-3.0.2.tgz",
-    "fileCount": 9,
-    "unpackedSize": 8762,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIAK+IE4tnHrlXzTmP1pNKtUG3ISSorWI9KZFhSKcVJDhAiA5BZrmsmLnacIndJGU8Cun+ngAghpKQggBLF9E/q3e1w=="
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "mafintosh",
-    "email": "mathiasbuus@gmail.com"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "mafintosh",
      "email": "mathiasbuus@gmail.com"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/pump_3.0.2_1726041513856_0.31858505274469184"
+   "homepage": "https://github.com/mafintosh/pump#readme",
+   "bugs": {
+    "url": "https://github.com/mafintosh/pump/issues"
    },
-   "_hasShrinkwrap": false
+   "dist": {
+    "shasum": "836f3edd6bc2ee599256c924ffe0d88573ddcbf8",
+    "tarball": "http://localhost:3000/pump/-/pump-3.0.2.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-tUPXtzlGM8FE3P0ZL6DVs/3P58k9nk8/jZeQCurTJylQA8qFYzHFfhBJkuqyE0FifOsQ0uKWekiZ5g8wtr28cw==",
+    "signatures": [
+     {
+      "sig": "MEQCIAK+IE4tnHrlXzTmP1pNKtUG3ISSorWI9KZFhSKcVJDhAiA5BZrmsmLnacIndJGU8Cun+ngAghpKQggBLF9E/q3e1w==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 8762
+   },
+   "browser": {
+    "fs": false
+   },
+   "gitHead": "16e858ed6594ef22f8daade05613d3a9b0e3a139",
+   "scripts": {
+    "test": "node test-browser.js && node test-node.js"
+   },
+   "_npmUser": {
+    "name": "mafintosh",
+    "email": "mathiasbuus@gmail.com"
+   },
+   "repository": {
+    "url": "git://github.com/mafintosh/pump.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "pipe streams together and close all of them if one of them closes",
+   "directories": {},
+   "_nodeVersion": "20.11.1",
+   "dependencies": {
+    "once": "^1.3.1",
+    "end-of-stream": "^1.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/pump_3.0.2_1726041513856_0.31858505274469184",
+    "host": "s3://npm-registry-packages"
+   }
   }
  },
  "time": {
   "created": "2013-08-14T20:03:55.441Z",
-  "modified": "2024-09-11T07:58:34.181Z",
+  "modified": "2024-11-06T08:59:07.721Z",
   "0.1.0": "2013-08-14T20:03:59.214Z",
   "0.1.1": "2013-08-14T22:41:45.452Z",
   "0.1.2": "2013-08-15T05:58:55.737Z",
@@ -1625,8 +1625,8 @@
   "callback"
  ],
  "repository": {
-  "type": "git",
-  "url": "git://github.com/mafintosh/pump.git"
+  "url": "git://github.com/mafintosh/pump.git",
+  "type": "git"
  },
  "description": "pipe streams together and close all of them if one of them closes",
  "maintainers": [
@@ -1664,7 +1664,6 @@
   "ungurys": true,
   "coalesce": true,
   "eagleeye": true,
-  "evovilol": true,
   "ifeature": true,
   "lmangani": true,
   "maxogden": true,
@@ -1678,7 +1677,6 @@
   "raschdiaz": true,
   "roccomuso": true,
   "stone-jin": true,
-  "thesystem": true,
   "timhudson": true,
   "axelrindle": true,
   "davidchase": true,

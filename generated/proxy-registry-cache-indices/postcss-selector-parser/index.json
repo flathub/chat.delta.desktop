@@ -1,10 +1,10 @@
 {
  "_id": "postcss-selector-parser",
- "_rev": "73-57ca96d43b9b21981b5a7b93e0ecb3ae",
+ "_rev": "74-c08f67d936d48afc34cce0ead66e7810",
  "name": "postcss-selector-parser",
  "dist-tags": {
   "next": "5.0.0-rc.1",
-  "latest": "6.1.2"
+  "latest": "7.0.0"
  },
  "versions": {
   "0.0.1": {
@@ -6147,6 +6147,130 @@
   "6.1.2": {
    "name": "postcss-selector-parser",
    "version": "6.1.2",
+   "license": "MIT",
+   "_id": "postcss-selector-parser@6.1.2",
+   "maintainers": [
+    {
+     "name": "ai",
+     "email": "andrey@sitnik.ru"
+    },
+    {
+     "name": "chriseppstein",
+     "email": "chris@eppsteins.net"
+    },
+    {
+     "name": "jonathantneal",
+     "email": "jonathantneal@hotmail.com"
+    },
+    {
+     "name": "evilebottnawi",
+     "email": "sheo13666q@gmail.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "http://beneb.info",
+     "name": "Ben Briggs",
+     "email": "beneb.info@gmail.com"
+    },
+    {
+     "url": "http://twitter.com/chriseppstein",
+     "name": "Chris Eppstein",
+     "email": "chris@eppsteins.net"
+    }
+   ],
+   "homepage": "https://github.com/postcss/postcss-selector-parser",
+   "bugs": {
+    "url": "https://github.com/postcss/postcss-selector-parser/issues"
+   },
+   "ava": {
+    "require": [
+     "@babel/register"
+    ],
+    "timeout": "25s",
+    "concurrency": 5,
+    "nodeArguments": []
+   },
+   "nyc": {
+    "exclude": [
+     "node_modules",
+     "**/__tests__"
+    ]
+   },
+   "dist": {
+    "shasum": "27ecb41fb0e3b6ba7a1ec84fff347f734c7929de",
+    "tarball": "http://localhost:3000/postcss-selector-parser/-/postcss-selector-parser-6.1.2.tgz",
+    "fileCount": 36,
+    "integrity": "sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==",
+    "signatures": [
+     {
+      "sig": "MEQCIBkefObkW1bq5fiOLUubVkU2II3fb/LKveKmsjXqb2RCAiB86Vpj7qg9+7LQnNa3UuNqIhCY1wmPTus/keJgHmfeSw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 186430
+   },
+   "main": "dist/index.js",
+   "types": "postcss-selector-parser.d.ts",
+   "engines": {
+    "node": ">=4"
+   },
+   "gitHead": "1b1e9c3bc10ccc3bc5f07a987caa7f2684c0b52f",
+   "scripts": {
+    "test": "nyc ava src/__tests__/*.mjs",
+    "report": "nyc report --reporter=html",
+    "lintfix": "eslint --fix src",
+    "prepare": "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
+    "pretest": "eslint src && npm run typecheck",
+    "testone": "ava",
+    "typecheck": "tsc --noEmit --strict postcss-selector-parser.d.ts postcss-selector-parser.test.ts"
+   },
+   "_npmUser": {
+    "name": "evilebottnawi",
+    "email": "sheo13666q@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/postcss/postcss-selector-parser.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "> Selector parser with built in methods for working with selector strings.",
+   "directories": {},
+   "_nodeVersion": "18.20.4",
+   "dependencies": {
+    "cssesc": "^3.0.0",
+    "util-deprecate": "^1.0.2"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "ava": "^5.1.0",
+    "nyc": "^15.1.0",
+    "glob": "^8.0.3",
+    "eslint": "^8.28.0",
+    "semver": "^7.3.2",
+    "del-cli": "^5.0.0",
+    "postcss": "^8.4.31",
+    "minimist": "^1.2.5",
+    "coveralls": "^3.1.0",
+    "@babel/cli": "^7.11.6",
+    "typescript": "^4.0.3",
+    "@babel/core": "^7.11.6",
+    "@babel/register": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/eslint-parser": "^7.11.5",
+    "@babel/eslint-plugin": "^7.11.5",
+    "eslint-plugin-import": "^2.26.0",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/postcss-selector-parser_6.1.2_1723459423628_0.25455291451780027",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "7.0.0": {
+   "name": "postcss-selector-parser",
+   "version": "7.0.0",
    "devDependencies": {
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
@@ -6218,8 +6342,8 @@
      "**/__tests__"
     ]
    },
-   "_id": "postcss-selector-parser@6.1.2",
-   "gitHead": "1b1e9c3bc10ccc3bc5f07a987caa7f2684c0b52f",
+   "_id": "postcss-selector-parser@7.0.0",
+   "gitHead": "6158750aab0aed3046a5920bd58e0e0266a4ada2",
    "description": "> Selector parser with built in methods for working with selector strings.",
    "bugs": {
     "url": "https://github.com/postcss/postcss-selector-parser/issues"
@@ -6227,15 +6351,15 @@
    "_nodeVersion": "18.20.4",
    "_npmVersion": "10.7.0",
    "dist": {
-    "integrity": "sha512-Q8qQfPiZ+THO/3ZrOrO0cJJKfpYCagtMUkXbnEfmgUjwXg6z/WBeOyS9APBBPCTSiDV+s4SwQGu8yFsiMRIudg==",
-    "shasum": "27ecb41fb0e3b6ba7a1ec84fff347f734c7929de",
-    "tarball": "http://localhost:3000/postcss-selector-parser/-/postcss-selector-parser-6.1.2.tgz",
+    "integrity": "sha512-9RbEr1Y7FFfptd/1eEdntyjMwLeghW1bHX9GWjXo19vx4ytPQhANltvVxDggzJl7mnWM+dX28kb6cyS/4iQjlQ==",
+    "shasum": "41bd8b56f177c093ca49435f65731befe25d6b9c",
+    "tarball": "http://localhost:3000/postcss-selector-parser/-/postcss-selector-parser-7.0.0.tgz",
     "fileCount": 36,
-    "unpackedSize": 186430,
+    "unpackedSize": 186560,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIBkefObkW1bq5fiOLUubVkU2II3fb/LKveKmsjXqb2RCAiB86Vpj7qg9+7LQnNa3UuNqIhCY1wmPTus/keJgHmfeSw=="
+      "sig": "MEUCIC+4tBRO7xESShfQvk08G31x01hdRIGacUQTPF6XtC9kAiEA2GGTS/uzyOgQi2W5FzuZu5gdfeIJ4F4KVJPI9T2xLvY="
      }
     ]
    },
@@ -6264,14 +6388,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/postcss-selector-parser_6.1.2_1723459423628_0.25455291451780027"
+    "tmp": "tmp/postcss-selector-parser_7.0.0_1729702661821_0.4701335441667678"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2015-05-29T11:29:38.195Z",
-  "modified": "2024-08-12T10:43:43.981Z",
+  "modified": "2024-10-23T16:57:42.213Z",
   "0.0.1": "2015-05-29T11:29:38.195Z",
   "0.0.2": "2015-05-29T18:40:55.605Z",
   "0.0.3": "2015-06-02T13:26:47.816Z",
@@ -6330,7 +6454,8 @@
   "6.0.16": "2024-03-13T13:29:02.841Z",
   "6.1.0": "2024-05-22T14:02:27.840Z",
   "6.1.1": "2024-07-11T18:49:28.136Z",
-  "6.1.2": "2024-08-12T10:43:43.815Z"
+  "6.1.2": "2024-08-12T10:43:43.815Z",
+  "7.0.0": "2024-10-23T16:57:42.041Z"
  },
  "bugs": {
   "url": "https://github.com/postcss/postcss-selector-parser/issues"

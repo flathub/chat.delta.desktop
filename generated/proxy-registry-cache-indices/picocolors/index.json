@@ -1,9 +1,9 @@
 {
  "_id": "picocolors",
- "_rev": "12-33407f7ccf559e902d43e8dbbb363318",
+ "_rev": "13-58fe5f16d1f02728e1d3449e7c45aa95",
  "name": "picocolors",
  "dist-tags": {
-  "latest": "1.1.0"
+  "latest": "1.1.1"
  },
  "versions": {
   "0.0.0": {
@@ -464,6 +464,93 @@
   "1.1.0": {
    "name": "picocolors",
    "version": "1.1.0",
+   "keywords": [
+    "terminal",
+    "colors",
+    "formatting",
+    "cli",
+    "console"
+   ],
+   "author": {
+    "name": "Alexey Raspopov"
+   },
+   "license": "ISC",
+   "_id": "picocolors@1.1.0",
+   "maintainers": [
+    {
+     "name": "alexeyraspopov",
+     "email": "oleksii.raspopov@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/alexeyraspopov/picocolors#readme",
+   "bugs": {
+    "url": "https://github.com/alexeyraspopov/picocolors/issues"
+   },
+   "dist": {
+    "shasum": "5358b76a78cde483ba5cef6a9dc9671440b27d59",
+    "tarball": "http://localhost:3000/picocolors/-/picocolors-1.1.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCGdOz7aCAxkzvKMgNtO3M+vMu+g8n6qL7uzUQj2R540AIhAMhGMaNYxFxFJDBszlKINZn1UatN7BbskLVJo1EitaE7",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 11429
+   },
+   "main": "./picocolors.js",
+   "types": "./picocolors.d.ts",
+   "browser": {
+    "./picocolors.js": "./picocolors.browser.js"
+   },
+   "gitHead": "6f6011182c0f16cf119019ca9bef1fadbe86b913",
+   "scripts": {
+    "test": "node tests/test.js"
+   },
+   "_npmUser": {
+    "name": "alexeyraspopov",
+    "email": "oleksii.raspopov@gmail.com"
+   },
+   "prettier": {
+    "semi": false,
+    "useTabs": true,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "arrowParens": "avoid"
+   },
+   "repository": {
+    "url": "git+https://github.com/alexeyraspopov/picocolors.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.1",
+   "description": "The tiniest and the fastest library for terminal output formatting with ANSI colors",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "22.4.1",
+   "clean-publish": {
+    "cleanDocs": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "chalk": "^4.1.2",
+    "kleur": "^4.1.4",
+    "prettier": "^2.4.1",
+    "benchmark": "^2.1.4",
+    "cli-color": "^2.0.0",
+    "colorette": "^2.0.12",
+    "nanocolors": "^0.2.12",
+    "ansi-colors": "^4.1.1",
+    "clean-publish": "^3.0.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/picocolors_1.1.0_1725320790830_0.6018633231704895",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.1.1": {
+   "name": "picocolors",
+   "version": "1.1.1",
    "main": "./picocolors.js",
    "types": "./picocolors.d.ts",
    "browser": {
@@ -471,9 +558,6 @@
    },
    "sideEffects": false,
    "description": "The tiniest and the fastest library for terminal output formatting with ANSI colors",
-   "scripts": {
-    "test": "node tests/test.js"
-   },
    "keywords": [
     "terminal",
     "colors",
@@ -489,45 +573,24 @@
     "url": "git+https://github.com/alexeyraspopov/picocolors.git"
    },
    "license": "ISC",
-   "devDependencies": {
-    "ansi-colors": "^4.1.1",
-    "benchmark": "^2.1.4",
-    "chalk": "^4.1.2",
-    "clean-publish": "^3.0.3",
-    "cli-color": "^2.0.0",
-    "colorette": "^2.0.12",
-    "kleur": "^4.1.4",
-    "nanocolors": "^0.2.12",
-    "prettier": "^2.4.1"
-   },
-   "prettier": {
-    "printWidth": 100,
-    "useTabs": true,
-    "tabWidth": 2,
-    "semi": false,
-    "arrowParens": "avoid"
-   },
-   "clean-publish": {
-    "cleanDocs": true
-   },
-   "_id": "picocolors@1.1.0",
-   "gitHead": "6f6011182c0f16cf119019ca9bef1fadbe86b913",
+   "_id": "picocolors@1.1.1",
+   "gitHead": "6f0a4638348ed20633d623ee973f9c9a96f65104",
    "bugs": {
     "url": "https://github.com/alexeyraspopov/picocolors/issues"
    },
    "homepage": "https://github.com/alexeyraspopov/picocolors#readme",
-   "_nodeVersion": "22.4.1",
-   "_npmVersion": "10.8.1",
+   "_nodeVersion": "22.9.0",
+   "_npmVersion": "10.8.3",
    "dist": {
-    "integrity": "sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==",
-    "shasum": "5358b76a78cde483ba5cef6a9dc9671440b27d59",
-    "tarball": "http://localhost:3000/picocolors/-/picocolors-1.1.0.tgz",
+    "integrity": "sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==",
+    "shasum": "3d321af3eab939b083c8f929a1d12cda81c26b6b",
+    "tarball": "http://localhost:3000/picocolors/-/picocolors-1.1.1.tgz",
     "fileCount": 7,
-    "unpackedSize": 11429,
+    "unpackedSize": 6373,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQCGdOz7aCAxkzvKMgNtO3M+vMu+g8n6qL7uzUQj2R540AIhAMhGMaNYxFxFJDBszlKINZn1UatN7BbskLVJo1EitaE7"
+      "sig": "MEUCIQD1ga0Ghvdul0FY1X3tDEHWjLF2ImSjnhKBBPgfOq1CvAIgSrqciFjzA8uVTKSuA6NKBADmO/cxtGcYXQhHjD0U1Nw="
      }
     ]
    },
@@ -544,14 +607,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/picocolors_1.1.0_1725320790830_0.6018633231704895"
+    "tmp": "tmp/picocolors_1.1.1_1729102803686_0.7395028803649382"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2021-09-27T00:33:41.501Z",
-  "modified": "2024-09-02T23:46:31.228Z",
+  "modified": "2024-10-16T18:20:04.161Z",
   "0.0.0": "2021-09-27T00:33:41.649Z",
   "0.0.1": "2021-09-27T04:27:20.577Z",
   "0.1.0": "2021-09-27T17:09:57.265Z",
@@ -559,7 +622,8 @@
   "0.2.1": "2021-10-04T15:52:15.750Z",
   "1.0.0": "2021-10-13T02:48:42.115Z",
   "1.0.1": "2024-05-14T02:44:16.014Z",
-  "1.1.0": "2024-09-02T23:46:31.018Z"
+  "1.1.0": "2024-09-02T23:46:31.018Z",
+  "1.1.1": "2024-10-16T18:20:03.921Z"
  },
  "bugs": {
   "url": "https://github.com/alexeyraspopov/picocolors/issues"
@@ -587,7 +651,7 @@
    "email": "oleksii.raspopov@gmail.com"
   }
  ],
- "readme": "# picocolors\n\nThe tiniest and the fastest library for terminal output formatting with ANSI colors.\n\n```javascript\nimport pc from \"picocolors\"\n\nconsole.log(\n  pc.green(`How are ${pc.italic(`you`)} doing?`)\n)\n```\n\n- **No dependencies.**\n- **14 times** smaller and **2 times** faster than chalk.\n- Used by popular tools like PostCSS, SVGO, Stylelint, and Browserslist.\n- Node.js v6+ & browsers support. Support for both CJS and ESM projects.\n- TypeScript type declarations included.\n- [`NO_COLOR`](https://no-color.org/) friendly.\n\n## Motivation\n\nWith `picocolors` we are trying to draw attention to the `node_modules` size\nproblem and promote performance-first culture.\n\n## Prior Art\n\nCredits go to the following projects:\n\n- [Nanocolors](https://github.com/ai/nanocolors) by [@ai](https://github.com/ai)\n- [Colorette](https://github.com/jorgebucaran/colorette) by [@jorgebucaran](https://github.com/jorgebucaran)\n- [Kleur](https://github.com/lukeed/kleur) by [@lukeed](https://github.com/lukeed)\n- [Colors.js](https://github.com/Marak/colors.js) by [@Marak](https://github.com/Marak)\n- [Chalk](https://github.com/chalk/chalk) by [@sindresorhus](https://github.com/sindresorhus)\n\n## Benchmarks\n\nThe space in node_modules including sub-dependencies:\n\n```diff\n$ node ./benchmarks/size.js\nData from packagephobia.com\n  chalk       101 kB\n  cli-color  1249 kB\n  ansi-colors  25 kB\n  kleur        21 kB\n  colorette    17 kB\n  nanocolors   16 kB\n+ picocolors    7 kB\n```\n\nLibrary loading time:\n\n```diff\n$ node ./benchmarks/loading.js\n  chalk          6.167 ms\n  cli-color     31.431 ms\n  ansi-colors    1.585 ms\n  kleur          2.008 ms\n  kleur/colors   0.773 ms\n  colorette      2.476 ms\n  nanocolors     0.833 ms\n+ picocolors     0.466 ms\n```\n\nBenchmark for simple use case:\n\n```diff\n$ node ./benchmarks/simple.js\n  chalk         24,066,342 ops/sec\n  cli-color        938,700 ops/sec\n  ansi-colors    4,532,542 ops/sec\n  kleur         20,343,122 ops/sec\n  kleur/colors  35,415,770 ops/sec\n  colorette     34,244,834 ops/sec\n  nanocolors    33,443,265 ops/sec\n+ picocolors    33,271,645 ops/sec\n```\n\nBenchmark for complex use cases:\n\n```diff\n$ node ./benchmarks/complex.js\n  chalk            969,915 ops/sec\n  cli-color        131,639 ops/sec\n  ansi-colors      342,250 ops/sec\n  kleur            611,880 ops/sec\n  kleur/colors   1,129,526 ops/sec\n  colorette      1,747,277 ops/sec\n  nanocolors     1,251,312 ops/sec\n+ picocolors     2,024,086 ops/sec\n```\n\n## Usage\n\nPicocolors provides an object which includes a variety of text coloring and formatting functions\n\n```javascript\nimport pc from \"picocolors\"\n```\n\nThe object includes following coloring functions: `black`, `red`, `green`, `yellow`, `blue`, `magenta`, `cyan`, `white`, `gray`.\n\n```javascript\nconsole.log(`I see a ${pc.red(\"red door\")} and I want it painted ${pc.black(\"black\")}`)\n```\n\nThe object also includes following background color modifier functions: `bgBlack`, `bgRed`, `bgGreen`, `bgYellow`, `bgBlue`, `bgMagenta`, `bgCyan`, `bgWhite` and bright variants `bgBlackBright`, `bgRedBright`, `bgGreenBright`, `bgYellowBright`, `bgBlueBright`, `bgMagentaBright`, `bgCyanBright`, `bgWhiteBright`.\n\n```javascript\nconsole.log(\n  pc.bgBlack(\n    pc.white(`Tom appeared on the sidewalk with a bucket of whitewash and a long-handled brush.`)\n  )\n)\n```\n\nBesides colors, the object includes following formatting functions: `dim`, `bold`, `hidden`, `italic`, `underline`, `strikethrough`, `reset`, `inverse` and bright variants `blackBright`, `redBright`, `greenBright`, `yellowBright`, `blueBright`, `magentaBright`, `cyanBright`, `whiteBright`.\n\n```javascript\nfor (let task of tasks) {\n  console.log(`${pc.bold(task.name)} ${pc.dim(task.durationMs + \"ms\")}`)\n}\n```\n\nThe library provides additional utilities to ensure the best results for the task:\n\n- `isColorSupported` — boolean, explicitly tells whether or not the colors or formatting appear on the screen\n\n  ```javascript\n  import pc from \"picocolors\"\n\n  if (pc.isColorSupported) {\n    console.log(\"Yay! This script can use colors and formatters\")\n  }\n  ```\n\n- `createColors(enabled)` — a function that returns a new API object with manually defined color support configuration\n\n  ```javascript\n  import pc from \"picocolors\"\n\n  let { red, bgWhite } = pc.createColors(options.enableColors)\n  ```\n\n## Replacing `chalk`\n\n1. Replace package name in import:\n\n   ```diff\n   - import chalk from 'chalk'\n   + import pico from 'picocolors'\n   ```\n\n2. Replace variable:\n\n   ```diff\n   - chalk.red(text)\n   + pico.red(text)\n   ```\n\n3. Replace chains to nested calls:\n\n   ```diff\n   - chalk.red.bold(text)\n   + pico.red(pico.bold(text))\n   ```\n\n4. You can use [`colorize-template`](https://github.com/usmanyunusov/colorize-template)\n   to replace chalk’s tagged template literal.\n\n   ```diff\n   + import { createColorize } from 'colorize-template'\n\n   + let colorize = createColorize(pico)\n   - chalk.red.bold`full {yellow ${\"text\"}}`\n   + colorize`{red.bold full {yellow ${\"text\"}}}`\n   ```\n",
+ "readme": "# picocolors\n\nThe tiniest and the fastest library for terminal output formatting with ANSI colors.\n\n```javascript\nimport pc from \"picocolors\"\n\nconsole.log(\n  pc.green(`How are ${pc.italic(`you`)} doing?`)\n)\n```\n\n- **No dependencies.**\n- **14 times** smaller and **2 times** faster than chalk.\n- Used by popular tools like PostCSS, SVGO, Stylelint, and Browserslist.\n- Node.js v6+ & browsers support. Support for both CJS and ESM projects.\n- TypeScript type declarations included.\n- [`NO_COLOR`](https://no-color.org/) friendly.\n\n## Docs\nRead **[full docs](https://github.com/alexeyraspopov/picocolors#readme)** on GitHub.\n",
  "readmeFilename": "README.md",
  "users": {
   "yang.shao": true,

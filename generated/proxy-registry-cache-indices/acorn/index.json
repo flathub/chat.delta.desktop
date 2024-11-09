@@ -1,10 +1,9 @@
 {
  "_id": "acorn",
- "_rev": "216-79c412f74fc9759957d698bea24abfb6",
+ "_rev": "218-7526da3fc5f454fb658d0d8487d03889",
  "name": "acorn",
- "description": "ECMAScript parser",
  "dist-tags": {
-  "latest": "8.12.1"
+  "latest": "8.14.0"
  },
  "versions": {
   "0.0.1": {
@@ -17347,7 +17346,6 @@
    },
    "main": "dist/acorn.js",
    "module": "dist/acorn.mjs",
-   "readme": "# Acorn\n\nA tiny, fast JavaScript parser written in JavaScript.\n\n## Community\n\nAcorn is open source software released under an\n[MIT license](https://github.com/acornjs/acorn/blob/master/acorn/LICENSE).\n\nYou are welcome to\n[report bugs](https://github.com/acornjs/acorn/issues) or create pull\nrequests on [github](https://github.com/acornjs/acorn). For questions\nand discussion, please use the\n[Tern discussion forum](https://discuss.ternjs.net).\n\n## Installation\n\nThe easiest way to install acorn is from [`npm`](https://www.npmjs.com/):\n\n```sh\nnpm install acorn\n```\n\nAlternately, you can download the source and build acorn yourself:\n\n```sh\ngit clone https://github.com/acornjs/acorn.git\ncd acorn\nnpm install\n```\n\n## Interface\n\n**parse**`(input, options)` is the main interface to the library. The\n`input` parameter is a string, `options` can be undefined or an object\nsetting some of the options listed below. The return value will be an\nabstract syntax tree object as specified by the [ESTree\nspec](https://github.com/estree/estree).\n\n```javascript\nlet acorn = require(\"acorn\");\nconsole.log(acorn.parse(\"1 + 1\"));\n```\n\nWhen encountering a syntax error, the parser will raise a\n`SyntaxError` object with a meaningful message. The error object will\nhave a `pos` property that indicates the string offset at which the\nerror occurred, and a `loc` object that contains a `{line, column}`\nobject referring to that same position.\n\nOptions can be provided by passing a second argument, which should be\nan object containing any of these fields:\n\n- **ecmaVersion**: Indicates the ECMAScript version to parse. Must be\n  either 3, 5, 6 (2015), 7 (2016), 8 (2017), 9 (2018) or 10 (2019, partial\n  support). This influences support for strict mode, the set of\n  reserved words, and support for new syntax features. Default is 9.\n\n  **NOTE**: Only 'stage 4' (finalized) ECMAScript features are being\n  implemented by Acorn. Other proposed new features can be implemented\n  through plugins.\n\n- **sourceType**: Indicate the mode the code should be parsed in. Can be\n  either `\"script\"` or `\"module\"`. This influences global strict mode\n  and parsing of `import` and `export` declarations.\n\n  **NOTE**: If set to `\"module\"`, then static `import` / `export` syntax\n  will be valid, even if `ecmaVersion` is less than 6.\n\n- **onInsertedSemicolon**: If given a callback, that callback will be\n  called whenever a missing semicolon is inserted by the parser. The\n  callback will be given the character offset of the point where the\n  semicolon is inserted as argument, and if `locations` is on, also a\n  `{line, column}` object representing this position.\n\n- **onTrailingComma**: Like `onInsertedSemicolon`, but for trailing\n  commas.\n\n- **allowReserved**: If `false`, using a reserved word will generate\n  an error. Defaults to `true` for `ecmaVersion` 3, `false` for higher\n  versions. When given the value `\"never\"`, reserved words and\n  keywords can also not be used as property names (as in Internet\n  Explorer's old parser).\n\n- **allowReturnOutsideFunction**: By default, a return statement at\n  the top level raises an error. Set this to `true` to accept such\n  code.\n\n- **allowImportExportEverywhere**: By default, `import` and `export`\n  declarations can only appear at a program's top level. Setting this\n  option to `true` allows them anywhere where a statement is allowed.\n  \n- **allowAwaitOutsideFunction**: By default, `await` expressions can\n  only appear inside `async` functions. Setting this option to\n  `true` allows to have top-level `await` expressions. They are\n  still not allowed in non-`async` functions, though.\n\n- **allowHashBang**: When this is enabled (off by default), if the\n  code starts with the characters `#!` (as in a shellscript), the\n  first line will be treated as a comment.\n\n- **locations**: When `true`, each node has a `loc` object attached\n  with `start` and `end` subobjects, each of which contains the\n  one-based line and zero-based column numbers in `{line, column}`\n  form. Default is `false`.\n\n- **onToken**: If a function is passed for this option, each found\n  token will be passed in same format as tokens returned from\n  `tokenizer().getToken()`.\n\n  If array is passed, each found token is pushed to it.\n\n  Note that you are not allowed to call the parser from the\n  callback—that will corrupt its internal state.\n\n- **onComment**: If a function is passed for this option, whenever a\n  comment is encountered the function will be called with the\n  following parameters:\n\n  - `block`: `true` if the comment is a block comment, false if it\n    is a line comment.\n  - `text`: The content of the comment.\n  - `start`: Character offset of the start of the comment.\n  - `end`: Character offset of the end of the comment.\n\n  When the `locations` options is on, the `{line, column}` locations\n  of the comment’s start and end are passed as two additional\n  parameters.\n\n  If array is passed for this option, each found comment is pushed\n  to it as object in Esprima format:\n\n  ```javascript\n  {\n    \"type\": \"Line\" | \"Block\",\n    \"value\": \"comment text\",\n    \"start\": Number,\n    \"end\": Number,\n    // If `locations` option is on:\n    \"loc\": {\n      \"start\": {line: Number, column: Number}\n      \"end\": {line: Number, column: Number}\n    },\n    // If `ranges` option is on:\n    \"range\": [Number, Number]\n  }\n  ```\n\n  Note that you are not allowed to call the parser from the\n  callback—that will corrupt its internal state.\n\n- **ranges**: Nodes have their start and end characters offsets\n  recorded in `start` and `end` properties (directly on the node,\n  rather than the `loc` object, which holds line/column data. To also\n  add a\n  [semi-standardized](https://bugzilla.mozilla.org/show_bug.cgi?id=745678)\n  `range` property holding a `[start, end]` array with the same\n  numbers, set the `ranges` option to `true`.\n\n- **program**: It is possible to parse multiple files into a single\n  AST by passing the tree produced by parsing the first file as the\n  `program` option in subsequent parses. This will add the toplevel\n  forms of the parsed file to the \"Program\" (top) node of an existing\n  parse tree.\n\n- **sourceFile**: When the `locations` option is `true`, you can pass\n  this option to add a `source` attribute in every node’s `loc`\n  object. Note that the contents of this option are not examined or\n  processed in any way; you are free to use whatever format you\n  choose.\n\n- **directSourceFile**: Like `sourceFile`, but a `sourceFile` property\n  will be added (regardless of the `location` option) directly to the\n  nodes, rather than the `loc` object.\n\n- **preserveParens**: If this option is `true`, parenthesized expressions\n  are represented by (non-standard) `ParenthesizedExpression` nodes\n  that have a single `expression` property containing the expression\n  inside parentheses.\n\n**parseExpressionAt**`(input, offset, options)` will parse a single\nexpression in a string, and return its AST. It will not complain if\nthere is more of the string left after the expression.\n\n**tokenizer**`(input, options)` returns an object with a `getToken`\nmethod that can be called repeatedly to get the next token, a `{start,\nend, type, value}` object (with added `loc` property when the\n`locations` option is enabled and `range` property when the `ranges`\noption is enabled). When the token's type is `tokTypes.eof`, you\nshould stop calling the method, since it will keep returning that same\ntoken forever.\n\nIn ES6 environment, returned result can be used as any other\nprotocol-compliant iterable:\n\n```javascript\nfor (let token of acorn.tokenizer(str)) {\n  // iterate over the tokens\n}\n\n// transform code to array of tokens:\nvar tokens = [...acorn.tokenizer(str)];\n```\n\n**tokTypes** holds an object mapping names to the token type objects\nthat end up in the `type` properties of tokens.\n\n**getLineInfo**`(input, offset)` can be used to get a `{line,\ncolumn}` object for a given program string and offset.\n\n### The `Parser` class\n\nInstances of the **`Parser`** class contain all the state and logic\nthat drives a parse. It has static methods `parse`,\n`parseExpressionAt`, and `tokenizer` that match the top-level\nfunctions by the same name.\n\nWhen extending the parser with plugins, you need to call these methods\non the extended version of the class. To extend a parser with plugins,\nyou can use its static `extend` method.\n\n```javascript\nvar acorn = require(\"acorn\");\nvar jsx = require(\"acorn-jsx\");\nvar JSXParser = acorn.Parser.extend(jsx());\nJSXParser.parse(\"foo(<bar/>)\");\n```\n\nThe `extend` method takes any number of plugin values, and returns a\nnew `Parser` class that includes the extra parser logic provided by\nthe plugins.\n\n## Command line interface\n\nThe `bin/acorn` utility can be used to parse a file from the command\nline. It accepts as arguments its input file and the following\noptions:\n\n- `--ecma3|--ecma5|--ecma6|--ecma7|--ecma8|--ecma9|--ecma10`: Sets the ECMAScript version\n  to parse. Default is version 9.\n\n- `--module`: Sets the parsing mode to `\"module\"`. Is set to `\"script\"` otherwise.\n\n- `--locations`: Attaches a \"loc\" object to each node with \"start\" and\n  \"end\" subobjects, each of which contains the one-based line and\n  zero-based column numbers in `{line, column}` form.\n\n- `--allow-hash-bang`: If the code starts with the characters #! (as\n  in a shellscript), the first line will be treated as a comment.\n\n- `--compact`: No whitespace is used in the AST output.\n\n- `--silent`: Do not output the AST, just return the exit status.\n\n- `--help`: Print the usage information and quit.\n\nThe utility spits out the syntax tree as JSON data.\n\n## Existing plugins\n\n - [`acorn-jsx`](https://github.com/RReverser/acorn-jsx): Parse [Facebook JSX syntax extensions](https://github.com/facebook/jsx)\n \nPlugins for ECMAScript proposals:\n \n - [`acorn-stage3`](https://github.com/acornjs/acorn-stage3): Parse most stage 3 proposals, bundling:\n   - [`acorn-class-fields`](https://github.com/acornjs/acorn-class-fields): Parse [class fields proposal](https://github.com/tc39/proposal-class-fields)\n   - [`acorn-import-meta`](https://github.com/acornjs/acorn-import-meta): Parse [import.meta proposal](https://github.com/tc39/proposal-import-meta)\n   - [`acorn-numeric-separator`](https://github.com/acornjs/acorn-numeric-separator): Parse [numeric separator proposal](https://github.com/tc39/proposal-numeric-separator)\n   - [`acorn-private-methods`](https://github.com/acornjs/acorn-private-methods): parse [private methods, getters and setters proposal](https://github.com/tc39/proposal-private-methods)n\n",
    "engines": {
     "node": ">=0.4.0"
    },
@@ -17784,7 +17782,6 @@
    },
    "main": "dist/acorn.js",
    "module": "dist/acorn.es.js",
-   "readme": "# Acorn\n\n[![Build Status](https://travis-ci.org/acornjs/acorn.svg?branch=master)](https://travis-ci.org/acornjs/acorn)\n[![NPM version](https://img.shields.io/npm/v/acorn.svg)](https://www.npmjs.com/package/acorn)\n[![CDNJS](https://img.shields.io/cdnjs/v/acorn.svg)](https://cdnjs.com/libraries/acorn)  \n[Author funding status: ![maintainer happiness](https://marijnhaverbeke.nl/fund/status_s.png?force)](https://marijnhaverbeke.nl/fund/)\n\nA tiny, fast JavaScript parser, written completely in JavaScript.\n\n## Community\n\nAcorn is open source software released under an\n[MIT license](https://github.com/acornjs/acorn/blob/master/LICENSE).\n\nYou are welcome to\n[report bugs](https://github.com/acornjs/acorn/issues) or create pull\nrequests on [github](https://github.com/acornjs/acorn). For questions\nand discussion, please use the\n[Tern discussion forum](https://discuss.ternjs.net).\n\n## Installation\n\nThe easiest way to install acorn is with [`npm`][npm].\n\n[npm]: https://www.npmjs.com/\n\n```sh\nnpm install acorn\n```\n\nAlternately, you can download the source and build acorn yourself:\n\n```sh\ngit clone https://github.com/acornjs/acorn.git\ncd acorn\nnpm install\nnpm run build\n```\n\n## Components\n\nWhen run in a CommonJS (node.js) or AMD environment, exported values\nappear in the interfaces exposed by the individual files, as usual.\nWhen loaded in the browser (Acorn works in any JS-enabled browser more\nrecent than IE5) without any kind of module management, a single\nglobal object `acorn` will be defined, and all the exported properties\nwill be added to that.\n\n### Main parser\n\nThis is implemented in `dist/acorn.js`, and is what you get when you\n`require(\"acorn\")` in node.js.\n\n**parse**`(input, options)` is used to parse a JavaScript program.\nThe `input` parameter is a string, `options` can be undefined or an\nobject setting some of the options listed below. The return value will\nbe an abstract syntax tree object as specified by the\n[ESTree spec][estree].\n\nWhen  encountering   a  syntax   error,  the   parser  will   raise  a\n`SyntaxError` object with a meaningful  message. The error object will\nhave a `pos` property that indicates the character offset at which the\nerror occurred,  and a `loc`  object that contains a  `{line, column}`\nobject referring to that same position.\n\n[estree]: https://github.com/estree/estree\n\n- **ecmaVersion**: Indicates the ECMAScript version to parse. Must be\n  either 3, 5, 6 (2015), 7 (2016), 8 (2017), 9 (2018) or 10 (2019, partial\n  support). This influences support for strict mode, the set of\n  reserved words, and support for new syntax features. Default is 7.\n\n  **NOTE**: Only 'stage 4' (finalized) ECMAScript features are being\n  implemented by Acorn.\n\n- **sourceType**: Indicate the mode the code should be parsed in. Can be\n  either `\"script\"` or `\"module\"`. This influences global strict mode\n  and parsing of `import` and `export` declarations.\n\n- **onInsertedSemicolon**: If given a callback, that callback will be\n  called whenever a missing semicolon is inserted by the parser. The\n  callback will be given the character offset of the point where the\n  semicolon is inserted as argument, and if `locations` is on, also a\n  `{line, column}` object representing this position.\n\n- **onTrailingComma**: Like `onInsertedSemicolon`, but for trailing\n  commas.\n\n- **allowReserved**: If `false`, using a reserved word will generate\n  an error. Defaults to `true` for `ecmaVersion` 3, `false` for higher\n  versions. When given the value `\"never\"`, reserved words and\n  keywords can also not be used as property names (as in Internet\n  Explorer's old parser).\n\n- **allowReturnOutsideFunction**: By default, a return statement at\n  the top level raises an error. Set this to `true` to accept such\n  code.\n\n- **allowImportExportEverywhere**: By default, `import` and `export`\n  declarations can only appear at a program's top level. Setting this\n  option to `true` allows them anywhere where a statement is allowed.\n  \n- **allowAwaitOutsideFunction**: By default, `await` expressions can only appear inside `async` functions. Setting this option to `true` allows to have top-level `await` expressions. They are still not allowed in non-`async` functions, though.\n\n- **allowHashBang**: When this is enabled (off by default), if the\n  code starts with the characters `#!` (as in a shellscript), the\n  first line will be treated as a comment.\n\n- **locations**: When `true`, each node has a `loc` object attached\n  with `start` and `end` subobjects, each of which contains the\n  one-based line and zero-based column numbers in `{line, column}`\n  form. Default is `false`.\n\n- **onToken**: If a function is passed for this option, each found\n  token will be passed in same format as tokens returned from\n  `tokenizer().getToken()`.\n\n  If array is passed, each found token is pushed to it.\n\n  Note that you are not allowed to call the parser from the\n  callback—that will corrupt its internal state.\n\n- **onComment**: If a function is passed for this option, whenever a\n  comment is encountered the function will be called with the\n  following parameters:\n\n  - `block`: `true` if the comment is a block comment, false if it\n    is a line comment.\n  - `text`: The content of the comment.\n  - `start`: Character offset of the start of the comment.\n  - `end`: Character offset of the end of the comment.\n\n  When the `locations` options is on, the `{line, column}` locations\n  of the comment’s start and end are passed as two additional\n  parameters.\n\n  If array is passed for this option, each found comment is pushed\n  to it as object in Esprima format:\n\n  ```javascript\n  {\n    \"type\": \"Line\" | \"Block\",\n    \"value\": \"comment text\",\n    \"start\": Number,\n    \"end\": Number,\n    // If `locations` option is on:\n    \"loc\": {\n      \"start\": {line: Number, column: Number}\n      \"end\": {line: Number, column: Number}\n    },\n    // If `ranges` option is on:\n    \"range\": [Number, Number]\n  }\n  ```\n\n  Note that you are not allowed to call the parser from the\n  callback—that will corrupt its internal state.\n\n- **ranges**: Nodes have their start and end characters offsets\n  recorded in `start` and `end` properties (directly on the node,\n  rather than the `loc` object, which holds line/column data. To also\n  add a [semi-standardized][range] `range` property holding a\n  `[start, end]` array with the same numbers, set the `ranges` option\n  to `true`.\n\n- **program**: It is possible to parse multiple files into a single\n  AST by passing the tree produced by parsing the first file as the\n  `program` option in subsequent parses. This will add the toplevel\n  forms of the parsed file to the \"Program\" (top) node of an existing\n  parse tree.\n\n- **sourceFile**: When the `locations` option is `true`, you can pass\n  this option to add a `source` attribute in every node’s `loc`\n  object. Note that the contents of this option are not examined or\n  processed in any way; you are free to use whatever format you\n  choose.\n\n- **directSourceFile**: Like `sourceFile`, but a `sourceFile` property\n  will be added (regardless of the `location` option) directly to the\n  nodes, rather than the `loc` object.\n\n- **preserveParens**: If this option is `true`, parenthesized expressions\n  are represented by (non-standard) `ParenthesizedExpression` nodes\n  that have a single `expression` property containing the expression\n  inside parentheses.\n\n[range]: https://bugzilla.mozilla.org/show_bug.cgi?id=745678\n\n**parseExpressionAt**`(input, offset, options)` will parse a single\nexpression in a string, and return its AST. It will not complain if\nthere is more of the string left after the expression.\n\n**getLineInfo**`(input, offset)` can be used to get a `{line,\ncolumn}` object for a given program string and character offset.\n\n**tokenizer**`(input, options)` returns an object with a `getToken`\nmethod that can be called repeatedly to get the next token, a `{start,\nend, type, value}` object (with added `loc` property when the\n`locations` option is enabled and `range` property when the `ranges`\noption is enabled). When the token's type is `tokTypes.eof`, you\nshould stop calling the method, since it will keep returning that same\ntoken forever.\n\nIn ES6 environment, returned result can be used as any other\nprotocol-compliant iterable:\n\n```javascript\nfor (let token of acorn.tokenizer(str)) {\n  // iterate over the tokens\n}\n\n// transform code to array of tokens:\nvar tokens = [...acorn.tokenizer(str)];\n```\n\n**tokTypes** holds an object mapping names to the token type objects\nthat end up in the `type` properties of tokens.\n\n#### Note on using with [Escodegen][escodegen]\n\nEscodegen supports generating comments from AST, attached in\nEsprima-specific format. In order to simulate same format in\nAcorn, consider following example:\n\n```javascript\nvar comments = [], tokens = [];\n\nvar ast = acorn.parse('var x = 42; // answer', {\n\t// collect ranges for each node\n\tranges: true,\n\t// collect comments in Esprima's format\n\tonComment: comments,\n\t// collect token ranges\n\tonToken: tokens\n});\n\n// attach comments using collected information\nescodegen.attachComments(ast, comments, tokens);\n\n// generate code\nconsole.log(escodegen.generate(ast, {comment: true}));\n// > 'var x = 42;    // answer'\n```\n\n[escodegen]: https://github.com/estools/escodegen\n\n### dist/acorn_loose.js ###\n\nThis file implements an error-tolerant parser. It exposes a single\nfunction. The loose parser is accessible in node.js via `require(\"acorn/dist/acorn_loose\")`.\n\n**parse_dammit**`(input, options)` takes the same arguments and\nreturns the same syntax tree as the `parse` function in `acorn.js`,\nbut never raises an error, and will do its best to parse syntactically\ninvalid code in as meaningful a way as it can. It'll insert identifier\nnodes with name `\"✖\"` as placeholders in places where it can't make\nsense of the input. Depends on `acorn.js`, because it uses the same\ntokenizer.\n\n### dist/walk.js ###\n\nImplements an abstract syntax tree walker. Will store its interface in\n`acorn.walk` when loaded without a module system.\n\n**simple**`(node, visitors, base, state)` does a 'simple' walk over\na tree. `node` should be the AST node to walk, and `visitors` an\nobject with properties whose names correspond to node types in the\n[ESTree spec][estree]. The properties should contain functions\nthat will be called with the node object and, if applicable the state\nat that point. The last two arguments are optional. `base` is a walker\nalgorithm, and `state` is a start state. The default walker will\nsimply visit all statements and expressions and not produce a\nmeaningful state. (An example of a use of state is to track scope at\neach point in the tree.)\n\n```js\nconst acorn = require(\"acorn\")\nconst walk = require(\"acorn/dist/walk\")\n\nwalk.simple(acorn.parse(\"let x = 10\"), {\n  Literal(node) {\n    console.log(`Found a literal: ${node.value}`)\n  }\n})\n```\n\n**ancestor**`(node, visitors, base, state)` does a 'simple' walk over\na tree, building up an array of ancestor nodes (including the current node)\nand passing the array to the callbacks as a third parameter.\n\n```js\nconst acorn = require(\"acorn\")\nconst walk = require(\"acorn/dist/walk\")\n\nwalk.ancestor(acorn.parse(\"foo('hi')\"), {\n  Literal(_, ancestors) {\n    console.log(\"This literal's ancestors are:\",\n                ancestors.map(n => n.type))\n  }\n})\n```\n\n**recursive**`(node, state, functions, base)` does a 'recursive'\nwalk, where the walker functions are responsible for continuing the\nwalk on the child nodes of their target node. `state` is the start\nstate, and `functions` should contain an object that maps node types\nto walker functions. Such functions are called with `(node, state, c)`\narguments, and can cause the walk to continue on a sub-node by calling\nthe `c` argument on it with `(node, state)` arguments. The optional\n`base` argument provides the fallback walker functions for node types\nthat aren't handled in the `functions` object. If not given, the\ndefault walkers will be used.\n\n**make**`(functions, base)` builds a new walker object by using the\nwalker functions in `functions` and filling in the missing ones by\ntaking defaults from `base`.\n\n**full**`(node, callback, base, state)` does a 'full'\nwalk over a tree, calling the callback with the arguments (node, state, type)\nfor each node\n\n**fullAncestor**`(node, callback, base, state)` does a 'full' walk over\na tree, building up an array of ancestor nodes (including the current node)\nand passing the array to the callbacks as a third parameter.\n\n```js\nconst acorn = require(\"acorn\")\nconst walk = require(\"acorn/dist/walk\")\n\nwalk.full(acorn.parse(\"1 + 1\"), node => {\n  console.log(`There's a ${node.type} node at ${node.ch}`)\n})\n```\n\n**findNodeAt**`(node, start, end, test, base, state)` tries to\nlocate a node in a tree at the given start and/or end offsets, which\nsatisfies the predicate `test`. `start` and `end` can be either `null`\n(as wildcard) or a number. `test` may be a string (indicating a node\ntype) or a function that takes `(nodeType, node)` arguments and\nreturns a boolean indicating whether this node is interesting. `base`\nand `state` are optional, and can be used to specify a custom walker.\nNodes are tested from inner to outer, so if two nodes match the\nboundaries, the inner one will be preferred.\n\n**findNodeAround**`(node, pos, test, base, state)` is a lot like\n`findNodeAt`, but will match any node that exists 'around' (spanning)\nthe given position.\n\n**findNodeAfter**`(node, pos, test, base, state)` is similar to\n`findNodeAround`, but will match all nodes *after* the given position\n(testing outer nodes before inner nodes).\n\n## Command line interface\n\nThe `bin/acorn` utility can be used to parse a file from the command\nline. It accepts as arguments its input file and the following\noptions:\n\n- `--ecma3|--ecma5|--ecma6|--ecma7|--ecma8|--ecma9|--ecma10`: Sets the ECMAScript version\n  to parse. Default is version 7.\n\n- `--module`: Sets the parsing mode to `\"module\"`. Is set to `\"script\"` otherwise.\n\n- `--locations`: Attaches a \"loc\" object to each node with \"start\" and\n  \"end\" subobjects, each of which contains the one-based line and\n  zero-based column numbers in `{line, column}` form.\n\n- `--allow-hash-bang`: If the code starts with the characters #! (as in a shellscript), the first line will be treated as a comment.\n\n- `--compact`: No whitespace is used in the AST output.\n\n- `--silent`: Do not output the AST, just return the exit status.\n\n- `--help`: Print the usage information and quit.\n\nThe utility spits out the syntax tree as JSON data.\n\n## Build system\n\nAcorn is written in ECMAScript 6, as a set of small modules, in the\nproject's `src` directory, and compiled down to bigger ECMAScript 3\nfiles in `dist` using [Browserify](http://browserify.org) and\n[Babel](http://babeljs.io/). If you are already using Babel, you can\nconsider including the modules directly.\n\nThe command-line test runner (`npm test`) uses the ES6 modules. The\nbrowser-based test page (`test/index.html`) uses the compiled modules.\nThe `bin/build-acorn.js` script builds the latter from the former.\n\nIf you are working on Acorn, you'll probably want to try the code out\ndirectly, without an intermediate build step. In your scripts, you can\nregister the Babel require shim like this:\n\n    require(\"babel-core/register\")\n\nThat will allow you to directly `require` the ES6 modules.\n\n## Plugins\n\nAcorn is designed support allow plugins which, within reasonable\nbounds, redefine the way the parser works. Plugins can add new token\ntypes and new tokenizer contexts (if necessary), and extend methods in\nthe parser object. This is not a clean, elegant API—using it requires\nan understanding of Acorn's internals, and plugins are likely to break\nwhenever those internals are significantly changed. But still, it is\n_possible_, in this way, to create parsers for JavaScript dialects\nwithout forking all of Acorn. And in principle it is even possible to\ncombine such plugins, so that if you have, for example, a plugin for\nparsing types and a plugin for parsing JSX-style XML literals, you\ncould load them both and parse code with both JSX tags and types.\n\nA plugin should register itself by adding a property to\n`acorn.plugins`, which holds a function. Calling `acorn.parse`, a\n`plugins` option can be passed, holding an object mapping plugin names\nto configuration values (or just `true` for plugins that don't take\noptions). After the parser object has been created, the initialization\nfunctions for the chosen plugins are called with `(parser,\nconfigValue)` arguments. They are expected to use the `parser.extend`\nmethod to extend parser methods. For example, the `readToken` method\ncould be extended like this:\n\n```javascript\nparser.extend(\"readToken\", function(nextMethod) {\n  return function(code) {\n    console.log(\"Reading a token!\")\n    return nextMethod.call(this, code)\n  }\n})\n```\n\nThe `nextMethod` argument passed to `extend`'s second argument is the\nprevious value of this method, and should usually be called through to\nwhenever the extended method does not handle the call itself.\n\nSimilarly, the loose parser allows plugins to register themselves via\n`acorn.pluginsLoose`.  The extension mechanism is the same as for the\nnormal parser:\n\n```javascript\nlooseParser.extend(\"readToken\", function(nextMethod) {\n  return function() {\n    console.log(\"Reading a token in the loose parser!\")\n    return nextMethod.call(this)\n  }\n})\n```\n\n### Existing plugins\n\n - [`acorn-jsx`](https://github.com/RReverser/acorn-jsx): Parse [Facebook JSX syntax extensions](https://github.com/facebook/jsx)\n - [`acorn-objj`](https://github.com/cappuccino/acorn-objj): [Objective-J](http://www.cappuccino-project.org/learn/objective-j.html) language parser built as Acorn plugin\n \n Plugins for ECMAScript proposals:\n \n - [`acorn-stage3`](https://github.com/acornjs/acorn-stage3): Parse most stage 3 proposals, bundling:\n   - [`acorn-async-iteration`](https://github.com/acornjs/acorn-async-iteration): Parse [async iteration proposal](https://github.com/tc39/proposal-async-iteration)\n   - [`acorn-bigint`](https://github.com/acornjs/acorn-bigint): Parse [BigInt proposal](https://github.com/tc39/proposal-bigint)\n   - [`acorn-class-fields`](https://github.com/acornjs/acorn-class-fields): Parse [class fields proposal](https://github.com/tc39/proposal-class-fields)\n   - [`acorn-dynamic-import`](https://github.com/kesne/acorn-dynamic-import): Parse [import() proposal](https://github.com/tc39/proposal-dynamic-import)\n   - [`acorn-import-meta`](https://github.com/acornjs/acorn-import-meta): Parse [import.meta proposal](https://github.com/tc39/proposal-import-meta)\n   - [`acorn-numeric-separator`](https://github.com/acornjs/acorn-numeric-separator): Parse [numeric separator proposal](https://github.com/tc39/proposal-numeric-separator)\n   - [`acorn-optional-catch-binding`](https://github.com/acornjs/acorn-optional-catch-binding): Parse [optional catch binding proposal](https://github.com/tc39/proposal-optional-catch-binding)\n   - [`acorn-private-methods`](https://github.com/acornjs/acorn-private-methods): parse [private methods, getters and setters proposal](https://github.com/tc39/proposal-private-methods)\n   - [`acorn5-object-spread`](https://github.com/adrianheine/acorn5-object-spread): Parse [Object Rest/Spread Properties proposal](https://github.com/tc39/proposal-object-rest-spread)\n - [`acorn-object-rest-spread`](https://github.com/victor-homyakov/acorn-object-rest-spread): Parse [Object Rest/Spread Properties proposal](https://github.com/tc39/proposal-object-rest-spread)\n - [`acorn-es7`](https://github.com/angelozerr/acorn-es7): Parse [decorator syntax proposal](https://github.com/wycats/javascript-decorators)\n - [`acorn-static-class-property-initializer`](https://github.com/victor-homyakov/acorn-static-class-property-initializer): Partial support for static class properties from [ES Class Fields & Static Properties Proposal](https://github.com/tc39/proposal-class-public-fields) to support static property initializers in [React components written as ES6+ classes](https://babeljs.io/blog/2015/07/07/react-on-es6-plus)\n",
    "engines": {
     "node": ">=0.4.0"
    },
@@ -20842,6 +20839,162 @@
   },
   "8.12.1": {
    "name": "acorn",
+   "version": "8.12.1",
+   "license": "MIT",
+   "_id": "acorn@8.12.1",
+   "maintainers": [
+    {
+     "name": "marijn",
+     "email": "marijn@haverbeke.berlin"
+    },
+    {
+     "name": "adrianheine",
+     "email": "mail@adrianheine.de"
+    },
+    {
+     "name": "rreverser",
+     "email": "me@rreverser.com"
+    }
+   ],
+   "homepage": "https://github.com/acornjs/acorn",
+   "bugs": {
+    "url": "https://github.com/acornjs/acorn/issues"
+   },
+   "bin": {
+    "acorn": "bin/acorn"
+   },
+   "dist": {
+    "shasum": "71616bdccbe25e27a54439e0046e89ca76df2248",
+    "tarball": "http://localhost:3000/acorn/-/acorn-8.12.1.tgz",
+    "fileCount": 10,
+    "integrity": "sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==",
+    "signatures": [
+     {
+      "sig": "MEUCIFNAgwAf76UGRoci1ml7ouMTiTX+7IEguK4WCCdidvttAiEAr/MN8uTUljtMi0KUlusJzgYqahCTe2MGnnWPs2DiYkc=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 537602
+   },
+   "main": "dist/acorn.js",
+   "types": "dist/acorn.d.ts",
+   "module": "dist/acorn.mjs",
+   "engines": {
+    "node": ">=0.4.0"
+   },
+   "exports": {
+    ".": [
+     {
+      "import": "./dist/acorn.mjs",
+      "default": "./dist/acorn.js",
+      "require": "./dist/acorn.js"
+     },
+     "./dist/acorn.js"
+    ],
+    "./package.json": "./package.json"
+   },
+   "gitHead": "12ad1164a70dbe804f1ece822f34d100545f1afa",
+   "scripts": {
+    "prepare": "cd ..; npm run build:main"
+   },
+   "_npmUser": {
+    "name": "marijn",
+    "email": "marijn@haverbeke.berlin"
+   },
+   "repository": {
+    "url": "git+https://github.com/acornjs/acorn.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.0",
+   "description": "ECMAScript parser",
+   "directories": {},
+   "_nodeVersion": "20.13.1",
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/acorn_8.12.1_1719987192027_0.8825365736099033",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "8.13.0": {
+   "name": "acorn",
+   "version": "8.13.0",
+   "license": "MIT",
+   "_id": "acorn@8.13.0",
+   "maintainers": [
+    {
+     "name": "marijn",
+     "email": "marijn@haverbeke.berlin"
+    },
+    {
+     "name": "adrianheine",
+     "email": "mail@adrianheine.de"
+    },
+    {
+     "name": "rreverser",
+     "email": "me@rreverser.com"
+    }
+   ],
+   "homepage": "https://github.com/acornjs/acorn",
+   "bugs": {
+    "url": "https://github.com/acornjs/acorn/issues"
+   },
+   "bin": {
+    "acorn": "bin/acorn"
+   },
+   "dist": {
+    "shasum": "2a30d670818ad16ddd6a35d3842dacec9e5d7ca3",
+    "tarball": "http://localhost:3000/acorn/-/acorn-8.13.0.tgz",
+    "fileCount": 10,
+    "integrity": "sha512-8zSiw54Oxrdym50NlZ9sUusyO1Z1ZchgRLWRaK6c86XJFClyCgFKetdowBg5bKxyp/u+CDBJG4Mpp0m3HLZl9w==",
+    "signatures": [
+     {
+      "sig": "MEQCIGI7qmcIqru2RbV3yj5FKuI4D+8JFFpfzs/yZxUGaLs6AiBNqBglJKHlX3MFLS4Oc8CkwBOz26I8AgC/iM4f254qYQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 538136
+   },
+   "main": "dist/acorn.js",
+   "types": "dist/acorn.d.ts",
+   "module": "dist/acorn.mjs",
+   "engines": {
+    "node": ">=0.4.0"
+   },
+   "exports": {
+    ".": [
+     {
+      "import": "./dist/acorn.mjs",
+      "default": "./dist/acorn.js",
+      "require": "./dist/acorn.js"
+     },
+     "./dist/acorn.js"
+    ],
+    "./package.json": "./package.json"
+   },
+   "gitHead": "cc5ec013e7dae1b2ad60cbbb87c1b9e1fe252df9",
+   "scripts": {
+    "prepare": "cd ..; npm run build:main"
+   },
+   "_npmUser": {
+    "name": "marijn",
+    "email": "marijn@haverbeke.berlin"
+   },
+   "repository": {
+    "url": "git+https://github.com/acornjs/acorn.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.0",
+   "description": "ECMAScript parser",
+   "directories": {},
+   "_nodeVersion": "20.13.1",
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/acorn_8.13.0_1729059057308_0.6006114417366586",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "8.14.0": {
+   "name": "acorn",
    "description": "ECMAScript parser",
    "homepage": "https://github.com/acornjs/acorn",
    "main": "dist/acorn.js",
@@ -20858,7 +21011,7 @@
     ],
     "./package.json": "./package.json"
    },
-   "version": "8.12.1",
+   "version": "8.14.0",
    "engines": {
     "node": ">=0.4.0"
    },
@@ -20887,23 +21040,23 @@
    "bin": {
     "acorn": "bin/acorn"
    },
-   "_id": "acorn@8.12.1",
-   "gitHead": "12ad1164a70dbe804f1ece822f34d100545f1afa",
+   "_id": "acorn@8.14.0",
+   "gitHead": "3c6a5a98e8c6dcefef391e6114cc7e64657979d3",
    "bugs": {
     "url": "https://github.com/acornjs/acorn/issues"
    },
    "_nodeVersion": "20.13.1",
    "_npmVersion": "10.8.0",
    "dist": {
-    "integrity": "sha512-tcpGyI9zbizT9JbV6oYE477V6mTlXvvi0T0G3SNIYE2apm/G5huBa1+K89VGeovbg+jycCrfhl3ADxErOuO6Jg==",
-    "shasum": "71616bdccbe25e27a54439e0046e89ca76df2248",
-    "tarball": "http://localhost:3000/acorn/-/acorn-8.12.1.tgz",
+    "integrity": "sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==",
+    "shasum": "063e2c70cac5fb4f6467f0b11152e04c682795b0",
+    "tarball": "http://localhost:3000/acorn/-/acorn-8.14.0.tgz",
     "fileCount": 10,
-    "unpackedSize": 537602,
+    "unpackedSize": 546788,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIFNAgwAf76UGRoci1ml7ouMTiTX+7IEguK4WCCdidvttAiEAr/MN8uTUljtMi0KUlusJzgYqahCTe2MGnnWPs2DiYkc="
+      "sig": "MEUCIC3l9a35FCnhsEvB6lmhV3X89R6p4yuyl/OlbcbqsVBNAiEAoFtAAcViAxs3xO+IBWidxlaIR9m2sCm1pimKFAKk4n8="
      }
     ]
    },
@@ -20914,14 +21067,14 @@
    "directories": {},
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/acorn_8.12.1_1719987192027_0.8825365736099033"
+    "tmp": "tmp/acorn_8.14.0_1730028229729_0.7267547946361241"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2012-09-24T10:10:49.310Z",
-  "modified": "2024-07-03T06:13:12.389Z",
+  "modified": "2024-10-27T11:23:50.150Z",
   "0.0.1": "2012-09-24T10:10:52.687Z",
   "0.1.0": "2013-02-14T08:59:47.842Z",
   "0.2.0": "2013-05-03T09:53:34.809Z",
@@ -21055,8 +21208,20 @@
   "8.11.2": "2023-10-27T08:05:30.548Z",
   "8.11.3": "2023-12-29T09:04:19.934Z",
   "8.12.0": "2024-06-14T07:08:36.203Z",
-  "8.12.1": "2024-07-03T06:13:12.194Z"
+  "8.12.1": "2024-07-03T06:13:12.194Z",
+  "8.13.0": "2024-10-16T06:10:57.587Z",
+  "8.14.0": "2024-10-27T11:23:49.958Z"
  },
+ "bugs": {
+  "url": "https://github.com/acornjs/acorn/issues"
+ },
+ "license": "MIT",
+ "homepage": "https://github.com/acornjs/acorn",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/acornjs/acorn.git"
+ },
+ "description": "ECMAScript parser",
  "maintainers": [
   {
    "name": "marijn",
@@ -21071,15 +21236,6 @@
    "email": "me@rreverser.com"
   }
  ],
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/acornjs/acorn.git"
- },
- "license": "MIT",
- "homepage": "https://github.com/acornjs/acorn",
- "bugs": {
-  "url": "https://github.com/acornjs/acorn/issues"
- },
  "readme": "# Acorn\n\nA tiny, fast JavaScript parser written in JavaScript.\n\n## Community\n\nAcorn is open source software released under an\n[MIT license](https://github.com/acornjs/acorn/blob/master/acorn/LICENSE).\n\nYou are welcome to\n[report bugs](https://github.com/acornjs/acorn/issues) or create pull\nrequests on [github](https://github.com/acornjs/acorn).\n\n## Installation\n\nThe easiest way to install acorn is from [`npm`](https://www.npmjs.com/):\n\n```sh\nnpm install acorn\n```\n\nAlternately, you can download the source and build acorn yourself:\n\n```sh\ngit clone https://github.com/acornjs/acorn.git\ncd acorn\nnpm install\n```\n\n## Interface\n\n**parse**`(input, options)` is the main interface to the library. The\n`input` parameter is a string, `options` must be an object setting\nsome of the options listed below. The return value will be an abstract\nsyntax tree object as specified by the [ESTree\nspec](https://github.com/estree/estree).\n\n```javascript\nlet acorn = require(\"acorn\");\nconsole.log(acorn.parse(\"1 + 1\", {ecmaVersion: 2020}));\n```\n\nWhen encountering a syntax error, the parser will raise a\n`SyntaxError` object with a meaningful message. The error object will\nhave a `pos` property that indicates the string offset at which the\nerror occurred, and a `loc` object that contains a `{line, column}`\nobject referring to that same position.\n\nOptions are provided by in a second argument, which should be an\nobject containing any of these fields (only `ecmaVersion` is\nrequired):\n\n- **ecmaVersion**: Indicates the ECMAScript version to parse. Can be a\n  number, either in year (`2022`) or plain version number (`6`) form,\n  or `\"latest\"` (the latest the library supports). This influences\n  support for strict mode, the set of reserved words, and support for\n  new syntax features.\n\n  **NOTE**: Only 'stage 4' (finalized) ECMAScript features are being\n  implemented by Acorn. Other proposed new features must be\n  implemented through plugins.\n\n- **sourceType**: Indicate the mode the code should be parsed in. Can be\n  either `\"script\"` or `\"module\"`. This influences global strict mode\n  and parsing of `import` and `export` declarations.\n\n  **NOTE**: If set to `\"module\"`, then static `import` / `export` syntax\n  will be valid, even if `ecmaVersion` is less than 6.\n\n- **onInsertedSemicolon**: If given a callback, that callback will be\n  called whenever a missing semicolon is inserted by the parser. The\n  callback will be given the character offset of the point where the\n  semicolon is inserted as argument, and if `locations` is on, also a\n  `{line, column}` object representing this position.\n\n- **onTrailingComma**: Like `onInsertedSemicolon`, but for trailing\n  commas.\n\n- **allowReserved**: If `false`, using a reserved word will generate\n  an error. Defaults to `true` for `ecmaVersion` 3, `false` for higher\n  versions. When given the value `\"never\"`, reserved words and\n  keywords can also not be used as property names (as in Internet\n  Explorer's old parser).\n\n- **allowReturnOutsideFunction**: By default, a return statement at\n  the top level raises an error. Set this to `true` to accept such\n  code.\n\n- **allowImportExportEverywhere**: By default, `import` and `export`\n  declarations can only appear at a program's top level. Setting this\n  option to `true` allows them anywhere where a statement is allowed,\n  and also allows `import.meta` expressions to appear in scripts\n  (when `sourceType` is not `\"module\"`).\n\n- **allowAwaitOutsideFunction**: If `false`, `await` expressions can\n  only appear inside `async` functions. Defaults to `true` in modules\n  for `ecmaVersion` 2022 and later, `false` for lower versions.\n  Setting this option to `true` allows to have top-level `await`\n  expressions. They are still not allowed in non-`async` functions,\n  though.\n\n- **allowSuperOutsideMethod**: By default, `super` outside a method\n  raises an error. Set this to `true` to accept such code.\n\n- **allowHashBang**: When this is enabled, if the code starts with the\n  characters `#!` (as in a shellscript), the first line will be\n  treated as a comment. Defaults to true when `ecmaVersion` >= 2023.\n\n- **checkPrivateFields**: By default, the parser will verify that\n  private properties are only used in places where they are valid and\n  have been declared. Set this to false to turn such checks off.\n\n- **locations**: When `true`, each node has a `loc` object attached\n  with `start` and `end` subobjects, each of which contains the\n  one-based line and zero-based column numbers in `{line, column}`\n  form. Default is `false`.\n\n- **onToken**: If a function is passed for this option, each found\n  token will be passed in same format as tokens returned from\n  `tokenizer().getToken()`.\n\n  If array is passed, each found token is pushed to it.\n\n  Note that you are not allowed to call the parser from the\n  callback—that will corrupt its internal state.\n\n- **onComment**: If a function is passed for this option, whenever a\n  comment is encountered the function will be called with the\n  following parameters:\n\n  - `block`: `true` if the comment is a block comment, false if it\n    is a line comment.\n  - `text`: The content of the comment.\n  - `start`: Character offset of the start of the comment.\n  - `end`: Character offset of the end of the comment.\n\n  When the `locations` options is on, the `{line, column}` locations\n  of the comment’s start and end are passed as two additional\n  parameters.\n\n  If array is passed for this option, each found comment is pushed\n  to it as object in Esprima format:\n\n  ```javascript\n  {\n    \"type\": \"Line\" | \"Block\",\n    \"value\": \"comment text\",\n    \"start\": Number,\n    \"end\": Number,\n    // If `locations` option is on:\n    \"loc\": {\n      \"start\": {line: Number, column: Number}\n      \"end\": {line: Number, column: Number}\n    },\n    // If `ranges` option is on:\n    \"range\": [Number, Number]\n  }\n  ```\n\n  Note that you are not allowed to call the parser from the\n  callback—that will corrupt its internal state.\n\n- **ranges**: Nodes have their start and end characters offsets\n  recorded in `start` and `end` properties (directly on the node,\n  rather than the `loc` object, which holds line/column data. To also\n  add a\n  [semi-standardized](https://bugzilla.mozilla.org/show_bug.cgi?id=745678)\n  `range` property holding a `[start, end]` array with the same\n  numbers, set the `ranges` option to `true`.\n\n- **program**: It is possible to parse multiple files into a single\n  AST by passing the tree produced by parsing the first file as the\n  `program` option in subsequent parses. This will add the toplevel\n  forms of the parsed file to the \"Program\" (top) node of an existing\n  parse tree.\n\n- **sourceFile**: When the `locations` option is `true`, you can pass\n  this option to add a `source` attribute in every node’s `loc`\n  object. Note that the contents of this option are not examined or\n  processed in any way; you are free to use whatever format you\n  choose.\n\n- **directSourceFile**: Like `sourceFile`, but a `sourceFile` property\n  will be added (regardless of the `location` option) directly to the\n  nodes, rather than the `loc` object.\n\n- **preserveParens**: If this option is `true`, parenthesized expressions\n  are represented by (non-standard) `ParenthesizedExpression` nodes\n  that have a single `expression` property containing the expression\n  inside parentheses.\n\n**parseExpressionAt**`(input, offset, options)` will parse a single\nexpression in a string, and return its AST. It will not complain if\nthere is more of the string left after the expression.\n\n**tokenizer**`(input, options)` returns an object with a `getToken`\nmethod that can be called repeatedly to get the next token, a `{start,\nend, type, value}` object (with added `loc` property when the\n`locations` option is enabled and `range` property when the `ranges`\noption is enabled). When the token's type is `tokTypes.eof`, you\nshould stop calling the method, since it will keep returning that same\ntoken forever.\n\nNote that tokenizing JavaScript without parsing it is, in modern\nversions of the language, not really possible due to the way syntax is\noverloaded in ways that can only be disambiguated by the parse\ncontext. This package applies a bunch of heuristics to try and do a\nreasonable job, but you are advised to use `parse` with the `onToken`\noption instead of this.\n\nIn ES6 environment, returned result can be used as any other\nprotocol-compliant iterable:\n\n```javascript\nfor (let token of acorn.tokenizer(str)) {\n  // iterate over the tokens\n}\n\n// transform code to array of tokens:\nvar tokens = [...acorn.tokenizer(str)];\n```\n\n**tokTypes** holds an object mapping names to the token type objects\nthat end up in the `type` properties of tokens.\n\n**getLineInfo**`(input, offset)` can be used to get a `{line,\ncolumn}` object for a given program string and offset.\n\n### The `Parser` class\n\nInstances of the **`Parser`** class contain all the state and logic\nthat drives a parse. It has static methods `parse`,\n`parseExpressionAt`, and `tokenizer` that match the top-level\nfunctions by the same name.\n\nWhen extending the parser with plugins, you need to call these methods\non the extended version of the class. To extend a parser with plugins,\nyou can use its static `extend` method.\n\n```javascript\nvar acorn = require(\"acorn\");\nvar jsx = require(\"acorn-jsx\");\nvar JSXParser = acorn.Parser.extend(jsx());\nJSXParser.parse(\"foo(<bar/>)\", {ecmaVersion: 2020});\n```\n\nThe `extend` method takes any number of plugin values, and returns a\nnew `Parser` class that includes the extra parser logic provided by\nthe plugins.\n\n## Command line interface\n\nThe `bin/acorn` utility can be used to parse a file from the command\nline. It accepts as arguments its input file and the following\noptions:\n\n- `--ecma3|--ecma5|--ecma6|--ecma7|--ecma8|--ecma9|--ecma10`: Sets the ECMAScript version\n  to parse. Default is version 9.\n\n- `--module`: Sets the parsing mode to `\"module\"`. Is set to `\"script\"` otherwise.\n\n- `--locations`: Attaches a \"loc\" object to each node with \"start\" and\n  \"end\" subobjects, each of which contains the one-based line and\n  zero-based column numbers in `{line, column}` form.\n\n- `--allow-hash-bang`: If the code starts with the characters #! (as\n  in a shellscript), the first line will be treated as a comment.\n\n- `--allow-await-outside-function`: Allows top-level `await` expressions.\n  See the `allowAwaitOutsideFunction` option for more information.\n\n- `--compact`: No whitespace is used in the AST output.\n\n- `--silent`: Do not output the AST, just return the exit status.\n\n- `--help`: Print the usage information and quit.\n\nThe utility spits out the syntax tree as JSON data.\n\n## Existing plugins\n\n - [`acorn-jsx`](https://github.com/RReverser/acorn-jsx): Parse [Facebook JSX syntax extensions](https://github.com/facebook/jsx)\n",
  "readmeFilename": "README.md",
  "users": {

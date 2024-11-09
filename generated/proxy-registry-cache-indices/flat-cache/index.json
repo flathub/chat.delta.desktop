@@ -1,9 +1,9 @@
 {
  "_id": "flat-cache",
- "_rev": "47-ce7aa98705bf97e962cf212ea2854b27",
+ "_rev": "48-04b9a207ddce7cd8c0825ae73cc6bdb6",
  "name": "flat-cache",
  "dist-tags": {
-  "latest": "6.1.0"
+  "latest": "6.1.1"
  },
  "versions": {
   "1.0.0": {
@@ -3248,6 +3248,100 @@
   "6.1.0": {
    "name": "flat-cache",
    "version": "6.1.0",
+   "keywords": [
+    "cache",
+    "caching",
+    "node",
+    "nodejs",
+    "cacheable",
+    "cacheable-node-cache",
+    "node-cache",
+    "cacheable-node"
+   ],
+   "author": {
+    "name": "Jared Wray",
+    "email": "me@jaredwray.com"
+   },
+   "license": "MIT",
+   "_id": "flat-cache@6.1.0",
+   "maintainers": [
+    {
+     "name": "jaredwray",
+     "email": "me@jaredwray.com"
+    }
+   ],
+   "homepage": "https://github.com/jaredwray/cacheable#readme",
+   "bugs": {
+    "url": "https://github.com/jaredwray/cacheable/issues"
+   },
+   "dist": {
+    "shasum": "6f04899a05d2ba84c3d16c43cc4075c96e83400e",
+    "tarball": "http://localhost:3000/flat-cache/-/flat-cache-6.1.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-txr9o9zCbXvMOWZ1wZAID4U+CnYxdkSFqxxvd8Bs/a0ZidSs8V8diyv0CviKkPYEWHtbFJloF/QQO2WnkarnlA==",
+    "signatures": [
+     {
+      "sig": "MEUCIA9g9+mVgexRYPSzYD71pLXUXDMmp4uFTKX+IUR1zIlZAiEA4LsEIAc/EX3olJVX19aijKgNCVPG/n6GgvwbgsRkoGY=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 50249
+   },
+   "main": "./dist/index.cjs",
+   "type": "module",
+   "_from": "file:flat-cache-6.1.0.tgz",
+   "types": "./dist/index.d.ts",
+   "module": "./dist/index.js",
+   "exports": {
+    ".": {
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "private": false,
+   "scripts": {
+    "test": "xo --fix && vitest run --coverage",
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "clean": "rimraf ./dist ./coverage ./node_modules",
+    "test:ci": "xo && vitest run"
+   },
+   "_npmUser": {
+    "name": "jaredwray",
+    "email": "me@jaredwray.com"
+   },
+   "_resolved": "/private/var/folders/h1/n3vxgc0n1sn5_9pxftc4p6l80000gn/T/29c0b0fb7bc0576d237d82f3ace27b98/flat-cache-6.1.0.tgz",
+   "_integrity": "sha512-txr9o9zCbXvMOWZ1wZAID4U+CnYxdkSFqxxvd8Bs/a0ZidSs8V8diyv0CviKkPYEWHtbFJloF/QQO2WnkarnlA==",
+   "repository": {
+    "url": "git+https://github.com/jaredwray/cacheable.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "A simple key/value storage using files to persist the data",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "flatted": "^3.3.1",
+    "cacheable": "^1.7.1",
+    "hookified": "^1.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.59.3",
+    "tsup": "^8.3.0",
+    "rimraf": "^6.0.1",
+    "vitest": "^2.1.1",
+    "typescript": "^5.6.2",
+    "@types/node": "^22.7.4",
+    "@vitest/coverage-v8": "^2.1.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/flat-cache_6.1.0_1727628915131_0.755252084055875",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "6.1.1": {
+   "name": "flat-cache",
+   "version": "6.1.1",
    "description": "A simple key/value storage using files to persist the data",
    "type": "module",
    "main": "./dist/index.cjs",
@@ -3261,7 +3355,8 @@
    },
    "repository": {
     "type": "git",
-    "url": "git+https://github.com/jaredwray/cacheable.git"
+    "url": "git+https://github.com/jaredwray/cacheable.git",
+    "directory": "packages/flat-cache"
    },
    "author": {
     "name": "Jared Wray",
@@ -3272,26 +3367,47 @@
    "keywords": [
     "cache",
     "caching",
-    "node",
-    "nodejs",
     "cacheable",
-    "cacheable-node-cache",
-    "node-cache",
-    "cacheable-node"
+    "flat-cache",
+    "flat",
+    "file",
+    "file-cache",
+    "file-caching",
+    "file-based-cache",
+    "file-persist",
+    "file-persistence",
+    "file-storage",
+    "file-system",
+    "file-management",
+    "filesystem-cache",
+    "disk-cache",
+    "cache-persistence",
+    "cache-persist",
+    "persistent-cache",
+    "persistent-storage",
+    "cache-to-file",
+    "cache-on-disk",
+    "cache-file",
+    "cache-expiration",
+    "cache-lifetime",
+    "data-persistence",
+    "data-storage",
+    "local-storage",
+    "file-system-cache"
    ],
    "devDependencies": {
-    "@types/node": "^22.7.4",
-    "@vitest/coverage-v8": "^2.1.1",
+    "@types/node": "^22.7.8",
+    "@vitest/coverage-v8": "^2.1.3",
     "rimraf": "^6.0.1",
     "tsup": "^8.3.0",
-    "typescript": "^5.6.2",
-    "vitest": "^2.1.1",
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.3",
     "xo": "^0.59.3"
    },
    "dependencies": {
-    "cacheable": "^1.7.1",
+    "cacheable": "^1.8.1",
     "flatted": "^3.3.1",
-    "hookified": "^1.1.0"
+    "hookified": "^1.4.0"
    },
    "scripts": {
     "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
@@ -3299,26 +3415,26 @@
     "test:ci": "xo && vitest run",
     "clean": "rimraf ./dist ./coverage ./node_modules"
    },
-   "_id": "flat-cache@6.1.0",
+   "_id": "flat-cache@6.1.1",
    "bugs": {
     "url": "https://github.com/jaredwray/cacheable/issues"
    },
    "homepage": "https://github.com/jaredwray/cacheable#readme",
-   "_integrity": "sha512-txr9o9zCbXvMOWZ1wZAID4U+CnYxdkSFqxxvd8Bs/a0ZidSs8V8diyv0CviKkPYEWHtbFJloF/QQO2WnkarnlA==",
-   "_resolved": "/private/var/folders/h1/n3vxgc0n1sn5_9pxftc4p6l80000gn/T/29c0b0fb7bc0576d237d82f3ace27b98/flat-cache-6.1.0.tgz",
-   "_from": "file:flat-cache-6.1.0.tgz",
+   "_integrity": "sha512-5erc2YgI7Xheo1JCAaRvpiwSaUQl/rtJmeHGIXD3mqpUyuGhFptBEMNy3TuuUFYyuTkjRUODFTr4EIwa6dO9eA==",
+   "_resolved": "/private/var/folders/gs/5m4m2s857ts7l7nbvv0b57r80000gn/T/5e7d2f779fade093956015c4b6f1d8c2/flat-cache-6.1.1.tgz",
+   "_from": "file:flat-cache-6.1.1.tgz",
    "_nodeVersion": "20.17.0",
-   "_npmVersion": "10.8.2",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-txr9o9zCbXvMOWZ1wZAID4U+CnYxdkSFqxxvd8Bs/a0ZidSs8V8diyv0CviKkPYEWHtbFJloF/QQO2WnkarnlA==",
-    "shasum": "6f04899a05d2ba84c3d16c43cc4075c96e83400e",
-    "tarball": "http://localhost:3000/flat-cache/-/flat-cache-6.1.0.tgz",
+    "integrity": "sha512-5erc2YgI7Xheo1JCAaRvpiwSaUQl/rtJmeHGIXD3mqpUyuGhFptBEMNy3TuuUFYyuTkjRUODFTr4EIwa6dO9eA==",
+    "shasum": "8e056088a97b7783cc8002efb89ec3d44a26879f",
+    "tarball": "http://localhost:3000/flat-cache/-/flat-cache-6.1.1.tgz",
     "fileCount": 7,
-    "unpackedSize": 50249,
+    "unpackedSize": 51918,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIA9g9+mVgexRYPSzYD71pLXUXDMmp4uFTKX+IUR1zIlZAiEA4LsEIAc/EX3olJVX19aijKgNCVPG/n6GgvwbgsRkoGY="
+      "sig": "MEYCIQDpkcJ4QN+RPP+H5RvL3QBkC+COZ58KCkQBNft6apSNnAIhANa0uDJK5350PB7FvIkOXu1GO99bGxjgmDaIX7nNo09Z"
      }
     ]
    },
@@ -3335,14 +3451,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/flat-cache_6.1.0_1727628915131_0.755252084055875"
+    "tmp": "tmp/flat-cache_6.1.1_1729574261253_0.1337603338095099"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2015-02-26T12:20:02.550Z",
-  "modified": "2024-09-29T16:55:15.545Z",
+  "modified": "2024-10-22T05:17:41.699Z",
   "1.0.0": "2015-02-26T12:20:02.550Z",
   "1.0.1": "2015-02-26T12:30:21.242Z",
   "1.0.2": "2015-03-02T07:39:37.226Z",
@@ -3373,7 +3489,8 @@
   "4.0.1": "2024-03-02T16:09:41.118Z",
   "5.0.0": "2024-05-24T15:51:30.689Z",
   "6.0.0": "2024-09-29T06:02:53.265Z",
-  "6.1.0": "2024-09-29T16:55:15.361Z"
+  "6.1.0": "2024-09-29T16:55:15.361Z",
+  "6.1.1": "2024-10-22T05:17:41.500Z"
  },
  "bugs": {
   "url": "https://github.com/jaredwray/cacheable/issues"
@@ -3387,16 +3504,38 @@
  "keywords": [
   "cache",
   "caching",
-  "node",
-  "nodejs",
   "cacheable",
-  "cacheable-node-cache",
-  "node-cache",
-  "cacheable-node"
+  "flat-cache",
+  "flat",
+  "file",
+  "file-cache",
+  "file-caching",
+  "file-based-cache",
+  "file-persist",
+  "file-persistence",
+  "file-storage",
+  "file-system",
+  "file-management",
+  "filesystem-cache",
+  "disk-cache",
+  "cache-persistence",
+  "cache-persist",
+  "persistent-cache",
+  "persistent-storage",
+  "cache-to-file",
+  "cache-on-disk",
+  "cache-file",
+  "cache-expiration",
+  "cache-lifetime",
+  "data-persistence",
+  "data-storage",
+  "local-storage",
+  "file-system-cache"
  ],
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/jaredwray/cacheable.git"
+  "url": "git+https://github.com/jaredwray/cacheable.git",
+  "directory": "packages/flat-cache"
  },
  "description": "A simple key/value storage using files to persist the data",
  "maintainers": [
@@ -3405,7 +3544,7 @@
    "email": "me@jaredwray.com"
   }
  ],
- "readme": "[<img align=\"center\" src=\"https://cacheable.org/logo.svg\" alt=\"Cacheable\" />](https://github.com/jaredwray/cacheable)\n\n# flat-cache\n> A simple key/value storage using files to persist the data\n\n[![codecov](https://codecov.io/gh/jaredwray/cacheable/graph/badge.svg?token=lWZ9OBQ7GM)](https://codecov.io/gh/jaredwray/cacheable)\n[![tests](https://github.com/jaredwray/cacheable/actions/workflows/tests.yml/badge.svg)](https://github.com/jaredwray/cacheable/actions/workflows/tests.yml)\n[![npm](https://img.shields.io/npm/dm/flat-cache.svg)](https://www.npmjs.com/package/flat-cache)\n[![npm](https://img.shields.io/npm/v/flat-cache)](https://www.npmjs.com/package/flat-cache)\n[![GitHub](https://img.shields.io/github/license/jaredwray/cacheable)](https://github.com/jaredwray/cacheable/blob/main/LICENSE)\n\n# Features\n- A simple key/value storage using files to persist the data\n- Uses a in-memory cache (via `CacheableMemory`) as the primary storage and then persists the data to disk\n- Automatically saves the data to disk via `persistInterval` setting. Off By Default\n- Easily Loads the data from disk and into memory with `load` or `loadFile`\n- Uses `ttl` and `lruSize` to manage the cache and persist the data\n- Only saves the data to disk if the data has changed even when using `persistInterval` or calling `save()`\n- Uses `flatted` to parse and stringify the data by default but can be overridden using `parse` and `stringify` in options\n\n# Table of Contents\n- [Installation](#installation)\n- [Getting Started](#getting-started)\n- [Breaking Changes from v5 to v6](#breaking-changes-from-v5-to-v6)\n- [Global Functions](#global-functions)\n- [FlatCache Options (FlatCacheOptions)](#flatcache-options-flatcacheoptions)\n- [API](#api)\n- [Events (FlatCacheEvents)](#events-flatcacheevents)\n- [Parse and Stringify for File Caching](#parse-and-stringify-for-file-caching)\n- [How to Contribute](#how-to-contribute)\n- [License and Copyright](#license-and-copyright)\n\n# Installation\n```bash\nnpm install flat-cache\n```\n\n# Getting Started\n```javascript\nimport { FlatCache } from 'flat-cache';\nconst cache = new FlatCache();\ncache.setKey('key', 'value');\ncache.save(); // Saves the data to disk\n```\n\nlets add it with `ttl`, `lruSize`, and `persistInterval`\n```javascript\nimport { FlatCache } from 'flat-cache';\nconst cache = new FlatCache({\n  ttl: 60 * 60 * 1000 , // 1 hour\n  lruSize: 10000, // 10,000 items\n  expirationInterval: 5 * 1000 * 60, // 5 minutes\n  persistInterval: 5 * 1000 * 60, // 5 minutes\n});\ncache.setKey('key', 'value');\n```\n\nThis will save the data to disk every 5 minutes and will remove any data that has not been accessed in 1 hour or if the cache has more than 10,000 items. The `expirationInterval` will check every 5 minutes for expired items and evict them. This is replacement to the `save()` method with a `prune` option as it is no longer needed due to the fact that the in-memory cache handles pruning by `ttl` expiration or `lruSize` which will keep the most recent there.\n\nhere is an example doing load from already existing persisted cache\n\n```javascript\nimport { load } from 'flat-cache';\nconst cache = load('cache1', './cacheAltDirectory');\n```\n\nThis will load the cache from the `./cacheAltDirectory` directory with the `cache1` id. If it doesnt exist it will not throw an error but will just return an empty cache.\n\n# Breaking Changes from v5 to v6\n\nThere have been many features added and changes made to the `FlatCache` class. Here are the main changes:\n- `FlatCache` is now a class and not a function which you can create instances of or using legacy method `load`, `loadFile`, or `create`\n- `FlatCache` now uses `CacheableMemory` as the primary storage and then persists the data to disk\n- `FlatCache` now uses `ttl` and `lruSize` to manage the cache and persist the data\n- `FlatCache` now uses `expirationInterval` to check for expired items in the cache. If it is not set it will do a lazy check on `get` or `getKey`\n- `getKey` still exists but is now is an alias to `get` and will be removed in the future\n- `setKey` still exists but is now is an alias to `set` and will be removed in the future\n- `removeKey` still exists but is now is an alias to `delete` and will be removed in the future\n\nHere is an example of the legacy method `load`:\n```javascript\nconst flatCache = require('flat-cache');\n// loads the cache, if one does not exists for the given\n// Id a new one will be prepared to be created\nconst cache = flatCache.load('cacheId');\n```\n\nNow you can use the `load` method and ES6 imports:\n```javascript\nimport { FlatCache } from 'flat-cache';\nconst cache = new FlatCache();\ncache.load('cacheId');\n```\nIf you do not specify a `cacheId` it will default to what was set in `FlatCacheOptions` or the default property `cacheId` of `cache1` and default `cacheDir` of `./cache`.\n\nIf you want to create a new cache and load from disk if it exists you can use the `create` method:\n```javascript\nimport { create } from 'flat-cache';\nconst cache = create({ cacheId: 'myCacheId', cacheDir: './mycache', ttl: 60 * 60 * 1000 });\n```\n\n# Global Functions\n\nIn version 6 we attempted to keep as much as the functionality as possible which includes these functions:\n\n- `create(options?: FlatCacheOptions)` - Creates a new cache and will load the data from disk if it exists\n- `createFromFile(filePath, options?: FlatCacheOptions)` - Creates a new cache from a file\n- `clearByCacheId(cacheId: string, cacheDir?: string)` - Clears the cache by the cacheId\n- `clearAll(cacheDirectory?: string)` - Clears all the caches\n\n\n# FlatCache Options (FlatCacheOptions)\n- `ttl?` - The time to live for the cache in milliseconds. Default is `0` which means no expiration\n- `lruSize?` - The number of items to keep in the cache. Default is `0` which means no limit\n- `useClone?` - If `true` it will clone the data before returning it. Default is `false`\n- `expirationInterval?` - The interval to check for expired items in the cache. Default is `0` which means no expiration\n- `persistInterval?` - The interval to save the data to disk. Default is `0` which means no persistence\n- `cacheDir?` - The directory to save the cache files. Default is `./cache`\n- `cacheId?` - The id of the cache. Default is `cache1`\n- `parse?` - The function to parse the data. Default is `flatted.parse`\n- `stringify?` - The function to stringify the data. Default is `flatted.stringify`\n\n# API\n\n- `cache` - The in-memory cache as a `CacheableMemory` instance\n- `cacheDir` - The directory to save the cache files\n- `cacheId` - The id of the cache\n- `cacheFilePath` - The full path to the cache file\n- `cacheDirPath` - The full path to the cache directory\n- `persistInterval` - The interval to save the data to disk\n- `changesSinceLastSave` - If there have been changes since the last save\n- `load(cacheId: string, cacheDir?: string)` - Loads the data from disk\n- `loadFile(pathToFile: string)` - Loads the data from disk\n- `all()` - Gets all the data in the cache\n- `items()` - Gets all the items in the cache\n- `keys()` - Gets all the keys in the cache\n- `setKey(key: string, value: any, ttl?: string | number)` - (legacy) Sets the key/value pair in the cache\n- `set(key: string, value: any, ttl?: string | number)` - Sets the key/value pair in the cache\n- `getKey<T>(key: string)` - Gets the value for the key or the default value\n- `get<T>(key: string)` - Gets the value for the key or the default value\n- `removeKey(key: string)` - Removes the key from the cache\n- `delete(key: string)` - Removes the key from the cache\n- `clear()` - Clears the cache\n- `save(force? boolean)` - Saves the data to disk. If `force` is `true` it will save even if `changesSinceLastSave` is `false`\n- `destroy()` - Destroys the cache and remove files\n\n# Events (FlatCacheEvents)\n\nEvents have been added since v6 to allow for more control and visibility into the cache. Here are the events that are available:\n\n- `on(event: 'save', listener: () => void)` - Emitted when the cache is saved\n- `on(event: 'load', listener: () => void)` - Emitted when the cache is loaded\n- `on(event: 'delete', listener: (key: string) => void)` - Emitted when the cache is changed\n- `on(event: 'clear', listener: () => void)` - Emitted when the cache is cleared\n- `on(event: 'destroy', listener: () => void)` - Emitted when the cache is destroyed\n- `on(event: 'error', listener: (error: Error) => void)` - Emitted when there is an error\n\nHere is an example of how to use the `error` events:\n\n```javascript\nimport { FlatCache, FlatCacheEvents } from 'flat-cache';\nconst cache = new FlatCache();\ncache.on(FlatCacheEvents.error, (error) => {\n  console.error(error);\n});\n```\n\n`FlatCacheEvents` is an enum that contains the event names for the `on` method. You do not have to use it but makes it easier to know what events are available.\n\n# Parse and Stringify for File Caching\n\nBy default `flat-cache` uses `flatted` to parse and stringify the data. This is to allow for more complex data structures to be saved to disk. If you want to override this you can pass in your own `parse` and `stringify` functions. Here is an example:\n\n```javascript\nimport { FlatCache } from 'flat-cache';\nconst cache = new FlatCache({\n  parse: JSON.parse,\n  stringify: JSON.stringify,\n});\n```\n\nThis will use `JSON.parse` and `JSON.stringify` to parse and stringify the data. This is useful if you want to use a different library or have a custom way of parsing and stringifying the data.\n\n**NOTE: This could cause issues if you are trying to load data that was saved with a different parser or stringifier.** \n\n# How to Contribute\n\nYou can contribute by forking the repo and submitting a pull request. Please make sure to add tests and update the documentation. To learn more about how to contribute go to our main README [https://github.com/jaredwray/cacheable](https://github.com/jaredwray/cacheable). This will talk about how to `Open a Pull Request`, `Ask a Question`, or `Post an Issue`.\n\n# License and Copyright\n[MIT © Jared Wray](./LICENSE)",
+ "readme": "[<img align=\"center\" src=\"https://cacheable.org/symbol.svg\" alt=\"Cacheable\" />](https://github.com/jaredwray/cacheable)\n\n# flat-cache\n> A simple key/value storage using files to persist the data\n\n[![codecov](https://codecov.io/gh/jaredwray/cacheable/graph/badge.svg?token=lWZ9OBQ7GM)](https://codecov.io/gh/jaredwray/cacheable)\n[![tests](https://github.com/jaredwray/cacheable/actions/workflows/tests.yml/badge.svg)](https://github.com/jaredwray/cacheable/actions/workflows/tests.yml)\n[![npm](https://img.shields.io/npm/dm/flat-cache.svg)](https://www.npmjs.com/package/flat-cache)\n[![npm](https://img.shields.io/npm/v/flat-cache)](https://www.npmjs.com/package/flat-cache)\n[![license](https://img.shields.io/github/license/jaredwray/cacheable)](https://github.com/jaredwray/cacheable/blob/main/LICENSE)\n\n# Features\n- A simple key/value storage using files to persist the data\n- Uses a in-memory cache (via `CacheableMemory`) as the primary storage and then persists the data to disk\n- Automatically saves the data to disk via `persistInterval` setting. Off By Default\n- Uses `expirationInterval` to check for expired items in the cache. If it is not set it will do a lazy check on `get` or `getKey`\n- Easily Loads the data from disk and into memory with `load` or `loadFile`\n- Uses `ttl` and `lruSize` to manage the cache and persist the data\n- Only saves the data to disk if the data has changed even when using `persistInterval` or calling `save()`\n- Uses `flatted` to parse and stringify the data by default but can be overridden using `parse` and `stringify` in options\n- ESM and CommonJS support with TypeScript typings and maintained regularly!\n\n# Table of Contents\n- [Installation](#installation)\n- [Getting Started](#getting-started)\n- [Breaking Changes from v5 to v6](#breaking-changes-from-v5-to-v6)\n- [Global Functions](#global-functions)\n- [FlatCache Options (FlatCacheOptions)](#flatcache-options-flatcacheoptions)\n- [API](#api)\n- [Events (FlatCacheEvents)](#events-flatcacheevents)\n- [Parse and Stringify for File Caching](#parse-and-stringify-for-file-caching)\n- [How to Contribute](#how-to-contribute)\n- [License and Copyright](#license-and-copyright)\n\n# Installation\n```bash\nnpm install flat-cache\n```\n\n# Getting Started\n```javascript\nimport { FlatCache } from 'flat-cache';\nconst cache = new FlatCache();\ncache.setKey('key', 'value');\ncache.save(); // Saves the data to disk\n```\n\nlets add it with `ttl`, `lruSize`, and `persistInterval`\n```javascript\nimport { FlatCache } from 'flat-cache';\nconst cache = new FlatCache({\n  ttl: 60 * 60 * 1000 , // 1 hour\n  lruSize: 10000, // 10,000 items\n  expirationInterval: 5 * 1000 * 60, // 5 minutes\n  persistInterval: 5 * 1000 * 60, // 5 minutes\n});\ncache.setKey('key', 'value');\n```\n\nThis will save the data to disk every 5 minutes and will remove any data that has not been accessed in 1 hour or if the cache has more than 10,000 items. The `expirationInterval` will check every 5 minutes for expired items and evict them. This is replacement to the `save()` method with a `prune` option as it is no longer needed due to the fact that the in-memory cache handles pruning by `ttl` expiration or `lruSize` which will keep the most recent there.\n\nhere is an example doing load from already existing persisted cache\n\n```javascript\nimport { load } from 'flat-cache';\nconst cache = load('cache1', './cacheAltDirectory');\n```\n\nThis will load the cache from the `./cacheAltDirectory` directory with the `cache1` id. If it doesnt exist it will not throw an error but will just return an empty cache.\n\n# Breaking Changes from v5 to v6\n\nThere have been many features added and changes made to the `FlatCache` class. Here are the main changes:\n- `FlatCache` is now a class and not a function which you can create instances of or using legacy method `load`, `loadFile`, or `create`\n- `FlatCache` now uses `CacheableMemory` as the primary storage and then persists the data to disk\n- `FlatCache` now uses `ttl` and `lruSize` to manage the cache and persist the data\n- `FlatCache` now uses `expirationInterval` to check for expired items in the cache. If it is not set it will do a lazy check on `get` or `getKey`\n- `getKey` still exists but is now is an alias to `get` and will be removed in the future\n- `setKey` still exists but is now is an alias to `set` and will be removed in the future\n- `removeKey` still exists but is now is an alias to `delete` and will be removed in the future\n\nHere is an example of the legacy method `load`:\n```javascript\nconst flatCache = require('flat-cache');\n// loads the cache, if one does not exists for the given\n// Id a new one will be prepared to be created\nconst cache = flatCache.load('cacheId');\n```\n\nNow you can use the `load` method and ES6 imports:\n```javascript\nimport { FlatCache } from 'flat-cache';\nconst cache = new FlatCache();\ncache.load('cacheId');\n```\nIf you do not specify a `cacheId` it will default to what was set in `FlatCacheOptions` or the default property `cacheId` of `cache1` and default `cacheDir` of `./cache`.\n\nIf you want to create a new cache and load from disk if it exists you can use the `create` method:\n```javascript\nimport { create } from 'flat-cache';\nconst cache = create({ cacheId: 'myCacheId', cacheDir: './mycache', ttl: 60 * 60 * 1000 });\n```\n\n# Global Functions\n\nIn version 6 we attempted to keep as much as the functionality as possible which includes these functions:\n\n- `create(options?: FlatCacheOptions)` - Creates a new cache and will load the data from disk if it exists\n- `createFromFile(filePath, options?: FlatCacheOptions)` - Creates a new cache from a file\n- `clearByCacheId(cacheId: string, cacheDir?: string)` - Clears the cache by the cacheId\n- `clearAll(cacheDirectory?: string)` - Clears all the caches\n\n\n# FlatCache Options (FlatCacheOptions)\n- `ttl?` - The time to live for the cache in milliseconds. Default is `0` which means no expiration\n- `lruSize?` - The number of items to keep in the cache. Default is `0` which means no limit\n- `useClone?` - If `true` it will clone the data before returning it. Default is `false`\n- `expirationInterval?` - The interval to check for expired items in the cache. Default is `0` which means no expiration\n- `persistInterval?` - The interval to save the data to disk. Default is `0` which means no persistence\n- `cacheDir?` - The directory to save the cache files. Default is `./cache`\n- `cacheId?` - The id of the cache. Default is `cache1`\n- `serialize?` - The function to parse the data. Default is `flatted.parse`\n- `deserialize?` - The function to stringify the data. Default is `flatted.stringify`\n\n# API\n\n- `cache` - The in-memory cache as a `CacheableMemory` instance\n- `cacheDir` - The directory to save the cache files\n- `cacheId` - The id of the cache\n- `cacheFilePath` - The full path to the cache file\n- `cacheDirPath` - The full path to the cache directory\n- `persistInterval` - The interval to save the data to disk\n- `changesSinceLastSave` - If there have been changes since the last save\n- `load(cacheId: string, cacheDir?: string)` - Loads the data from disk\n- `loadFile(pathToFile: string)` - Loads the data from disk\n- `all()` - Gets all the data in the cache\n- `items()` - Gets all the items in the cache\n- `keys()` - Gets all the keys in the cache\n- `setKey(key: string, value: any, ttl?: string | number)` - (legacy) Sets the key/value pair in the cache\n- `set(key: string, value: any, ttl?: string | number)` - Sets the key/value pair in the cache\n- `getKey<T>(key: string)` - Gets the value for the key or the default value\n- `get<T>(key: string)` - Gets the value for the key or the default value\n- `removeKey(key: string)` - Removes the key from the cache\n- `delete(key: string)` - Removes the key from the cache\n- `clear()` - Clears the cache\n- `save(force? boolean)` - Saves the data to disk. If `force` is `true` it will save even if `changesSinceLastSave` is `false`\n- `destroy()` - Destroys the cache and remove files\n\n# Events (FlatCacheEvents)\n\nEvents have been added since v6 to allow for more control and visibility into the cache. Here are the events that are available:\n\n- `on(event: 'save', listener: () => void)` - Emitted when the cache is saved\n- `on(event: 'load', listener: () => void)` - Emitted when the cache is loaded\n- `on(event: 'delete', listener: (key: string) => void)` - Emitted when the cache is changed\n- `on(event: 'clear', listener: () => void)` - Emitted when the cache is cleared\n- `on(event: 'destroy', listener: () => void)` - Emitted when the cache is destroyed\n- `on(event: 'error', listener: (error: Error) => void)` - Emitted when there is an error\n\nHere is an example of how to use the `error` events:\n\n```javascript\nimport { FlatCache, FlatCacheEvents } from 'flat-cache';\nconst cache = new FlatCache();\ncache.on(FlatCacheEvents.error, (error) => {\n  console.error(error);\n});\n```\n\n`FlatCacheEvents` is an enum that contains the event names for the `on` method. You do not have to use it but makes it easier to know what events are available.\n\n# Parse and Stringify for File Caching\n\nBy default `flat-cache` uses `flatted` to parse and stringify the data. This is to allow for more complex data structures to be saved to disk. If you want to override this you can pass in your own `parse` and `stringify` functions. Here is an example:\n\n```javascript\nimport { FlatCache } from 'flat-cache';\nconst cache = new FlatCache({\n  parse: JSON.parse,\n  stringify: JSON.stringify,\n});\n```\n\nThis will use `JSON.parse` and `JSON.stringify` to parse and stringify the data. This is useful if you want to use a different library or have a custom way of parsing and stringifying the data.\n\n**NOTE: This could cause issues if you are trying to load data that was saved with a different parser or stringifier.** \n\n# How to Contribute\n\nYou can contribute by forking the repo and submitting a pull request. Please make sure to add tests and update the documentation. To learn more about how to contribute go to our main README [https://github.com/jaredwray/cacheable](https://github.com/jaredwray/cacheable). This will talk about how to `Open a Pull Request`, `Ask a Question`, or `Post an Issue`.\n\n# License and Copyright\n[MIT © Jared Wray](./LICENSE)",
  "readmeFilename": "README.md",
  "users": {
   "dron": true,

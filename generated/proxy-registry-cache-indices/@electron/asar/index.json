@@ -1,9 +1,9 @@
 {
  "_id": "@electron/asar",
- "_rev": "15-9f5d64655d8923047c421f49f0d66345",
+ "_rev": "19-75ffe374ea5297cd55bac1e1a0e400f7",
  "name": "@electron/asar",
  "dist-tags": {
-  "latest": "3.2.13"
+  "latest": "3.2.17"
  },
  "versions": {
   "0.0.0": {
@@ -1123,8 +1123,337 @@
   },
   "3.2.13": {
    "name": "@electron/asar",
-   "description": "Creating Electron app packages",
    "version": "3.2.13",
+   "license": "MIT",
+   "_id": "@electron/asar@3.2.13",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/asar",
+   "bugs": {
+    "url": "https://github.com/electron/asar/issues"
+   },
+   "bin": {
+    "asar": "bin/asar.js"
+   },
+   "dist": {
+    "shasum": "56565ea423ead184465adfa72663b2c70d9835f2",
+    "tarball": "http://localhost:3000/@electron/asar/-/asar-3.2.13.tgz",
+    "fileCount": 25,
+    "integrity": "sha512-pY5z2qQSwbFzJsBdgfJIzXf5ElHTVMutC2dxh0FD60njknMu3n1NnTABOcQwbb5/v5soqE79m9UjaJryBf3epg==",
+    "signatures": [
+     {
+      "sig": "MEQCIHiwj6qnCDajei+LUDt6MWpUYqeg6rR8wiGSjh7VBw0vAiB4JsIibTCoyXqK7YZxVJtBd8BYgTgNLkOFaE3S2n5Zig==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 85383
+   },
+   "main": "./lib/asar.js",
+   "types": "./lib/asar.d.ts",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "baf479c2c4c963bbadb2785a7e0e1451cdd51650",
+   "scripts": {
+    "lint": "yarn prettier:check",
+    "test": "yarn lint && yarn mocha",
+    "build": "tsc",
+    "mocha": "xvfb-maybe electron-mocha --reporter spec && mocha --reporter spec",
+    "prepare": "tsc",
+    "prettier": "prettier \"src/**/*.ts\" \"test/**/*.ts\" \"test/**/*.js\"",
+    "prettier:check": "yarn prettier --check",
+    "prettier:write": "yarn prettier --write"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/asar.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Creating Electron app packages",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "glob": "^7.1.6",
+    "commander": "^5.0.0",
+    "minimatch": "^3.0.4",
+    "@types/glob": "^7.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^10.1.0",
+    "lodash": "^4.17.15",
+    "rimraf": "^3.0.2",
+    "electron": "^22.0.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "xvfb-maybe": "^0.2.1",
+    "@types/node": "^12.0.0",
+    "electron-mocha": "^11.0.2",
+    "@types/minimatch": "^3.0.5"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/asar_3.2.13_1726015691025_0.11551388307699506",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.2.14": {
+   "name": "@electron/asar",
+   "version": "3.2.14",
+   "license": "MIT",
+   "_id": "@electron/asar@3.2.14",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/asar",
+   "bugs": {
+    "url": "https://github.com/electron/asar/issues"
+   },
+   "bin": {
+    "asar": "bin/asar.js"
+   },
+   "dist": {
+    "shasum": "8ae3d49e8548aa0b6847c62e021f829a88794408",
+    "tarball": "http://localhost:3000/@electron/asar/-/asar-3.2.14.tgz",
+    "fileCount": 25,
+    "integrity": "sha512-hc52QkesULqbxTRC1vOmSBN1YndUkieoNMfvpe988h0MEoGGqbijkOqv4/2M9PufBJxiTVoDdBmBFfXPowZDQg==",
+    "signatures": [
+     {
+      "sig": "MEUCIAPpH2rLP4ennBxcHigTjWi4O7iR6st7e2avdUzd+eGsAiEAjn6us1+CeIy3pgQAneRAV0rB6vOmjwxzpqLSIKlKdjQ=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 85358
+   },
+   "main": "./lib/asar.js",
+   "types": "./lib/asar.d.ts",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "8a9959e2250eb58155e22c257dae242eda3efa0f",
+   "scripts": {
+    "lint": "yarn prettier:check",
+    "test": "yarn lint && yarn mocha",
+    "build": "tsc",
+    "mocha": "xvfb-maybe electron-mocha --reporter spec && mocha --reporter spec",
+    "prepare": "tsc",
+    "prettier": "prettier \"src/**/*.ts\" \"test/**/*.ts\" \"test/**/*.js\"",
+    "prettier:check": "yarn prettier --check",
+    "prettier:write": "yarn prettier --write"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/asar.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Creating Electron app packages",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "dependencies": {
+    "glob": "^7.1.6",
+    "commander": "^5.0.0",
+    "minimatch": "^3.0.4"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^10.1.0",
+    "lodash": "^4.17.15",
+    "rimraf": "^3.0.2",
+    "electron": "^22.0.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "xvfb-maybe": "^0.2.1",
+    "@types/node": "^12.0.0",
+    "electron-mocha": "^11.0.2",
+    "@types/minimatch": "^3.0.5"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/asar_3.2.14_1729821682965_0.4106444913752978",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.2.15": {
+   "name": "@electron/asar",
+   "version": "3.2.15",
+   "license": "MIT",
+   "_id": "@electron/asar@3.2.15",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/asar",
+   "bugs": {
+    "url": "https://github.com/electron/asar/issues"
+   },
+   "bin": {
+    "asar": "bin/asar.js"
+   },
+   "dist": {
+    "shasum": "b75ee015db4de446d498f83e05c22640ac62ea18",
+    "tarball": "http://localhost:3000/@electron/asar/-/asar-3.2.15.tgz",
+    "fileCount": 28,
+    "integrity": "sha512-AerUbRZpkDVRs58WP32t4U2bx85sfwRkQI8RMIEi6s2NBE++sgjsgAAMtXvnfTISKUkXo386pxFW7sa7WtMCrw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDGjR+V9GPO6/snjReOvPDWyTRBvEKUqTaV2pId4b5pUgIgNEUX/KcrAW2gkqflre3I4TaiTMoHa4L7sy+G0ilqxSw=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 90791
+   },
+   "main": "./lib/asar.js",
+   "types": "./lib/asar.d.ts",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "e313c0a920ed4fd5b196aed85ca51bec5ffe4f5a",
+   "scripts": {
+    "lint": "yarn prettier:check",
+    "test": "yarn lint && yarn mocha",
+    "build": "tsc",
+    "mocha": "xvfb-maybe electron-mocha --reporter spec && mocha --reporter spec",
+    "prepare": "tsc",
+    "prettier": "prettier \"src/**/*.ts\" \"test/**/*.ts\" \"test/**/*.js\"",
+    "prettier:check": "yarn prettier --check",
+    "prettier:write": "yarn prettier --write"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/asar.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Creating Electron app packages",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "dependencies": {
+    "glob": "^7.1.6",
+    "commander": "^5.0.0",
+    "minimatch": "^3.0.4"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^10.1.0",
+    "lodash": "^4.17.15",
+    "rimraf": "^3.0.2",
+    "electron": "^22.0.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "xvfb-maybe": "^0.2.1",
+    "@types/node": "^12.0.0",
+    "electron-mocha": "^11.0.2",
+    "@types/minimatch": "^3.0.5"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/asar_3.2.15_1730298838707_0.44663485309119744",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.2.16": {
+   "name": "@electron/asar",
+   "version": "3.2.16",
+   "license": "MIT",
+   "_id": "@electron/asar@3.2.16",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/asar",
+   "bugs": {
+    "url": "https://github.com/electron/asar/issues"
+   },
+   "bin": {
+    "asar": "bin/asar.js"
+   },
+   "dist": {
+    "shasum": "7bc6c33f915a8e4d900389d9aa17f0cead67a76a",
+    "tarball": "http://localhost:3000/@electron/asar/-/asar-3.2.16.tgz",
+    "fileCount": 28,
+    "integrity": "sha512-5M6EyPGmU35bYdXGOvjlzLE5bAVPN2nbcNtHPMt407KR8wNoHj+36AhUTwGUSZ03u2LleAp4qz9ga9lfNxak8g==",
+    "signatures": [
+     {
+      "sig": "MEUCIGeTMNykeZ4tJNCfPLE7LaJPr9GGXsxadnYaRyAxr+e0AiEAwd4qoCghIryOJnlSamX8Sr+IhN10xt03F0LEPPhLwIY=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 91137
+   },
+   "main": "./lib/asar.js",
+   "types": "./lib/asar.d.ts",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "f30b93d214c03b02cf1035b662e4bf003864978c",
+   "scripts": {
+    "lint": "yarn prettier:check",
+    "test": "yarn lint && yarn mocha",
+    "build": "tsc",
+    "mocha": "xvfb-maybe electron-mocha --reporter spec && mocha --reporter spec",
+    "prepare": "tsc",
+    "prettier": "prettier \"src/**/*.ts\" \"test/**/*.ts\" \"test/**/*.js\"",
+    "prettier:check": "yarn prettier --check",
+    "prettier:write": "yarn prettier --write"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/asar.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Creating Electron app packages",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "dependencies": {
+    "glob": "^7.1.6",
+    "commander": "^5.0.0",
+    "minimatch": "^3.0.4"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^10.1.0",
+    "lodash": "^4.17.15",
+    "rimraf": "^3.0.2",
+    "electron": "^22.0.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "xvfb-maybe": "^0.2.1",
+    "@types/node": "^12.0.0",
+    "electron-mocha": "^11.0.2",
+    "@types/minimatch": "^3.0.5"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/asar_3.2.16_1730816591812_0.035505468089065184",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.2.17": {
+   "name": "@electron/asar",
+   "description": "Creating Electron app packages",
+   "version": "3.2.17",
    "main": "./lib/asar.js",
    "types": "./lib/asar.d.ts",
    "bin": {
@@ -1153,7 +1482,6 @@
     "prepare": "tsc"
    },
    "dependencies": {
-    "@types/glob": "^7.1.0",
     "commander": "^5.0.0",
     "glob": "^7.1.6",
     "minimatch": "^3.0.4"
@@ -1170,20 +1498,20 @@
     "typescript": "^5.5.4",
     "xvfb-maybe": "^0.2.1"
    },
-   "_id": "@electron/asar@3.2.13",
-   "gitHead": "baf479c2c4c963bbadb2785a7e0e1451cdd51650",
-   "_nodeVersion": "20.17.0",
+   "_id": "@electron/asar@3.2.17",
+   "gitHead": "4df48cd53e68299db9ebf8f3bf002cc1fc5111f7",
+   "_nodeVersion": "20.18.0",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-pY5z2qQSwbFzJsBdgfJIzXf5ElHTVMutC2dxh0FD60njknMu3n1NnTABOcQwbb5/v5soqE79m9UjaJryBf3epg==",
-    "shasum": "56565ea423ead184465adfa72663b2c70d9835f2",
-    "tarball": "http://localhost:3000/@electron/asar/-/asar-3.2.13.tgz",
-    "fileCount": 25,
-    "unpackedSize": 85383,
+    "integrity": "sha512-OcWImUI686w8LkghQj9R2ynZ2ME693Ek6L1SiaAgqGKzBaTIZw3fHDqN82Rcl+EU1Gm9EgkJ5KLIY/q5DCRbbA==",
+    "shasum": "91d28087aad80d1a1c8cc4e667c6476edf50f949",
+    "tarball": "http://localhost:3000/@electron/asar/-/asar-3.2.17.tgz",
+    "fileCount": 28,
+    "unpackedSize": 92863,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIHiwj6qnCDajei+LUDt6MWpUYqeg6rR8wiGSjh7VBw0vAiB4JsIibTCoyXqK7YZxVJtBd8BYgTgNLkOFaE3S2n5Zig=="
+      "sig": "MEQCID/QFeG/Me1iHrJDO7qd0DaR6DfPVykFRiOv01b+a21KAiAifPEwFIiniqUMnubbAHsmEnk3vUTM9yUh5ZVR3dLZiA=="
      }
     ]
    },
@@ -1200,14 +1528,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/asar_3.2.13_1726015691025_0.11551388307699506"
+    "tmp": "tmp/asar_3.2.17_1730956612752_0.24835358681148056"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2022-10-18T22:53:35.785Z",
-  "modified": "2024-09-11T00:48:11.495Z",
+  "modified": "2024-11-07T05:16:53.150Z",
   "0.0.0": "2022-10-18T22:53:35.991Z",
   "3.2.1": "2022-10-18T22:59:27.661Z",
   "3.2.2": "2022-11-03T22:15:23.849Z",
@@ -1221,7 +1549,11 @@
   "3.2.10": "2024-05-02T22:10:51.775Z",
   "3.2.11": "2024-09-10T01:49:21.964Z",
   "3.2.12": "2024-09-11T00:00:43.924Z",
-  "3.2.13": "2024-09-11T00:48:11.268Z"
+  "3.2.13": "2024-09-11T00:48:11.268Z",
+  "3.2.14": "2024-10-25T02:01:23.256Z",
+  "3.2.15": "2024-10-30T14:33:58.954Z",
+  "3.2.16": "2024-11-05T14:23:12.130Z",
+  "3.2.17": "2024-11-07T05:16:52.971Z"
  },
  "bugs": {
   "url": "https://github.com/electron/asar/issues"

@@ -1,6 +1,6 @@
 {
  "_id": "lru-cache",
- "_rev": "314-909fa78f99fe39caa29e147d3ba5c05d",
+ "_rev": "315-c58516c6a29d0a5827e7ca09916a6a4d",
  "name": "lru-cache",
  "dist-tags": {
   "legacy": "4.1.5",
@@ -12,10 +12,74 @@
   "v7.2-backport": "7.2.3",
   "v7.1-backport": "7.1.3",
   "v7.0-backport": "7.0.4",
-  "latest": "11.0.1",
-  "legacy-v10": "10.4.3"
+  "legacy-v10": "10.4.3",
+  "latest": "11.0.2"
  },
  "versions": {
+  "1.0.2": {
+   "name": "lru-cache",
+   "version": "1.0.2",
+   "author": {
+    "name": "Isaac Z. Schlueter",
+    "email": "i@izs.me"
+   },
+   "_id": "lru-cache@1.0.2",
+   "dist": {
+    "shasum": "04deae53134b6583567c849d868a2d10d5991bfd",
+    "tarball": "http://localhost:3000/lru-cache/-/lru-cache-1.0.2.tgz",
+    "integrity": "sha512-xrRAw9qb4GaHCm0QyJbldrYBbSYgL34hk2FFXgFOsrO0R7lnSVjQXVfDKF4RmlpkHU87JG58JZDRAjteN9gEvA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQD4h++jdoYHafR5Ju510yIpwFjPlcDTUd3tCEj2xnqxzAIhAJGD0iWgJzYPZvl3Zd++9KVtMrfLnaQkjrODhu6wXc7J",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "lib/lru-cache",
+   "engines": {
+    "node": "*"
+   },
+   "scripts": {
+    "test": "node lib/lru-cache.js"
+   },
+   "_npmVersion": "0.2.7-3",
+   "description": "A cache object that deletes the least-recently-used items.",
+   "directories": {},
+   "_nodeVersion": "v0.3.1-pre",
+   "_nodeSupported": true
+  },
+  "1.0.1": {
+   "name": "lru-cache",
+   "version": "1.0.1",
+   "author": {
+    "name": "Isaac Z. Schlueter",
+    "email": "i@izs.me"
+   },
+   "_id": "lru-cache@1.0.1",
+   "dist": {
+    "shasum": "fbfcd2d6e2d8f4519be9826bca3cb70900ffcd4b",
+    "tarball": "http://localhost:3000/lru-cache/-/lru-cache-1.0.1.tgz",
+    "integrity": "sha512-z0Jr4NF2G+dPi1P98wARYOq0b0CTI2izu3gX2ZkndnKim4ZE4e0qIiI+6k48KF4FueBXakPqF0R3y9xJEFE/VA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQC2D0SqSc/RzFRCr3a7c3w3VeQ6QuEDXgh22iCmEaMlzAIgYdlYMbZCkYpkNXoknF4I1EzkA3VuEkpdogDaP8z1z8Q=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "lib/lru-cache",
+   "engines": {
+    "node": "*"
+   },
+   "scripts": {
+    "test": "node lib/lru-cache.js"
+   },
+   "_npmVersion": "0.2.7-2",
+   "description": "A cache object that deletes the least-recently-used items.",
+   "directories": {},
+   "_nodeVersion": "v0.3.1-pre",
+   "_nodeSupported": true
+  },
   "1.0.3": {
    "name": "lru-cache",
    "version": "1.0.3",
@@ -60,70 +124,6 @@
    "_defaultsLoaded": true,
    "devDependencies": {},
    "_engineSupported": true
-  },
-  "1.0.1": {
-   "name": "lru-cache",
-   "version": "1.0.1",
-   "author": {
-    "name": "Isaac Z. Schlueter",
-    "email": "i@izs.me"
-   },
-   "_id": "lru-cache@1.0.1",
-   "dist": {
-    "shasum": "fbfcd2d6e2d8f4519be9826bca3cb70900ffcd4b",
-    "tarball": "http://localhost:3000/lru-cache/-/lru-cache-1.0.1.tgz",
-    "integrity": "sha512-z0Jr4NF2G+dPi1P98wARYOq0b0CTI2izu3gX2ZkndnKim4ZE4e0qIiI+6k48KF4FueBXakPqF0R3y9xJEFE/VA==",
-    "signatures": [
-     {
-      "sig": "MEUCIQC2D0SqSc/RzFRCr3a7c3w3VeQ6QuEDXgh22iCmEaMlzAIgYdlYMbZCkYpkNXoknF4I1EzkA3VuEkpdogDaP8z1z8Q=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "lib/lru-cache",
-   "engines": {
-    "node": "*"
-   },
-   "scripts": {
-    "test": "node lib/lru-cache.js"
-   },
-   "_npmVersion": "0.2.7-2",
-   "description": "A cache object that deletes the least-recently-used items.",
-   "directories": {},
-   "_nodeVersion": "v0.3.1-pre",
-   "_nodeSupported": true
-  },
-  "1.0.2": {
-   "name": "lru-cache",
-   "version": "1.0.2",
-   "author": {
-    "name": "Isaac Z. Schlueter",
-    "email": "i@izs.me"
-   },
-   "_id": "lru-cache@1.0.2",
-   "dist": {
-    "shasum": "04deae53134b6583567c849d868a2d10d5991bfd",
-    "tarball": "http://localhost:3000/lru-cache/-/lru-cache-1.0.2.tgz",
-    "integrity": "sha512-xrRAw9qb4GaHCm0QyJbldrYBbSYgL34hk2FFXgFOsrO0R7lnSVjQXVfDKF4RmlpkHU87JG58JZDRAjteN9gEvA==",
-    "signatures": [
-     {
-      "sig": "MEYCIQD4h++jdoYHafR5Ju510yIpwFjPlcDTUd3tCEj2xnqxzAIhAJGD0iWgJzYPZvl3Zd++9KVtMrfLnaQkjrODhu6wXc7J",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "lib/lru-cache",
-   "engines": {
-    "node": "*"
-   },
-   "scripts": {
-    "test": "node lib/lru-cache.js"
-   },
-   "_npmVersion": "0.2.7-3",
-   "description": "A cache object that deletes the least-recently-used items.",
-   "directories": {},
-   "_nodeVersion": "v0.3.1-pre",
-   "_nodeSupported": true
   },
   "1.0.4": {
    "name": "lru-cache",
@@ -13909,8 +13909,160 @@
   },
   "11.0.1": {
    "name": "lru-cache",
-   "description": "A cache object that deletes the least-recently-used items.",
    "version": "11.0.1",
+   "keywords": [
+    "mru",
+    "lru",
+    "cache"
+   ],
+   "author": {
+    "name": "Isaac Z. Schlueter",
+    "email": "i@izs.me"
+   },
+   "license": "ISC",
+   "_id": "lru-cache@11.0.1",
+   "maintainers": [
+    {
+     "name": "isaacs",
+     "email": "i@izs.me"
+    }
+   ],
+   "homepage": "https://github.com/isaacs/node-lru-cache#readme",
+   "bugs": {
+    "url": "https://github.com/isaacs/node-lru-cache/issues"
+   },
+   "tap": {
+    "plugin": [
+     "@tapjs/clock"
+    ],
+    "node-arg": [
+     "--expose-gc"
+    ]
+   },
+   "dist": {
+    "shasum": "3a732fbfedb82c5ba7bca6564ad3f42afcb6e147",
+    "tarball": "http://localhost:3000/lru-cache/-/lru-cache-11.0.1.tgz",
+    "fileCount": 17,
+    "integrity": "sha512-CgeuL5uom6j/ZVrg7G/+1IXqRY8JXX4Hghfy5YE0EhoYQWvndP1kufu58cmZLNIDKnRhZrXfdS9urVWx98AipQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCBAXzukOQcYJLVMrIdRR1FFh7eEbKJmNU0UeC1f0AWUQIhAInNuD6vQ8KGpMVFPaCdqR1q83W64kTLMJcYBVt4FP15",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 807826
+   },
+   "main": "./dist/commonjs/index.js",
+   "tshy": {
+    "exports": {
+     ".": "./src/index.ts",
+     "./min": {
+      "import": {
+       "types": "./dist/esm/index.d.ts",
+       "default": "./dist/esm/index.min.js"
+      },
+      "require": {
+       "types": "./dist/commonjs/index.d.ts",
+       "default": "./dist/commonjs/index.min.js"
+      }
+     }
+    }
+   },
+   "type": "module",
+   "types": "./dist/commonjs/index.d.ts",
+   "module": "./dist/esm/index.js",
+   "engines": {
+    "node": "20 || >=22"
+   },
+   "exports": {
+    ".": {
+     "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+     },
+     "require": {
+      "types": "./dist/commonjs/index.d.ts",
+      "default": "./dist/commonjs/index.js"
+     }
+    },
+    "./min": {
+     "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.min.js"
+     },
+     "require": {
+      "types": "./dist/commonjs/index.d.ts",
+      "default": "./dist/commonjs/index.min.js"
+     }
+    }
+   },
+   "gitHead": "cbdd1d0eff9d1a4d89dfe756678ca92a27d1551c",
+   "scripts": {
+    "snap": "tap",
+    "test": "tap",
+    "build": "npm run prepare",
+    "format": "prettier --write .",
+    "prepare": "tshy && bash fixup.sh",
+    "presnap": "npm run prepare",
+    "pretest": "npm run prepare",
+    "profile": "make -C benchmark profile",
+    "typedoc": "typedoc --tsconfig ./.tshy/esm.json ./src/*.ts",
+    "benchmark": "make -C benchmark",
+    "preprofile": "npm run prepare",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prebenchmark": "npm run prepare",
+    "prepublishOnly": "git push origin --follow-tags",
+    "benchmark-results-typedoc": "bash scripts/benchmark-results-typedoc.sh"
+   },
+   "_npmUser": {
+    "name": "isaacs",
+    "email": "i@izs.me"
+   },
+   "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "endOfLine": "lf",
+    "printWidth": 70,
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "bracketSameLine": true
+   },
+   "repository": {
+    "url": "git://github.com/isaacs/node-lru-cache.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "A cache object that deletes the least-recently-used items.",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "20.13.1",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^21.0.1",
+    "tshy": "^3.0.2",
+    "tslib": "^2.4.0",
+    "marked": "^4.2.12",
+    "mkdirp": "^2.1.5",
+    "esbuild": "^0.17.11",
+    "typedoc": "^0.26.6",
+    "prettier": "^2.6.2",
+    "benchmark": "^2.1.4",
+    "@types/tap": "^15.0.6",
+    "@types/node": "^22.5.4",
+    "eslint-config-prettier": "^8.5.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/lru-cache_11.0.1_1725592639089_0.4055454916510839",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "11.0.2": {
+   "name": "lru-cache",
+   "description": "A cache object that deletes the least-recently-used items.",
+   "version": "11.0.2",
    "author": {
     "name": "Isaac Z. Schlueter",
     "email": "i@izs.me"
@@ -14021,24 +14173,24 @@
    },
    "type": "module",
    "module": "./dist/esm/index.js",
-   "_id": "lru-cache@11.0.1",
-   "gitHead": "cbdd1d0eff9d1a4d89dfe756678ca92a27d1551c",
+   "_id": "lru-cache@11.0.2",
+   "gitHead": "65c9971e3fef123ff0f17d67add53b2d99b461b0",
    "bugs": {
     "url": "https://github.com/isaacs/node-lru-cache/issues"
    },
    "homepage": "https://github.com/isaacs/node-lru-cache#readme",
-   "_nodeVersion": "20.13.1",
-   "_npmVersion": "10.7.0",
+   "_nodeVersion": "22.10.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-CgeuL5uom6j/ZVrg7G/+1IXqRY8JXX4Hghfy5YE0EhoYQWvndP1kufu58cmZLNIDKnRhZrXfdS9urVWx98AipQ==",
-    "shasum": "3a732fbfedb82c5ba7bca6564ad3f42afcb6e147",
-    "tarball": "http://localhost:3000/lru-cache/-/lru-cache-11.0.1.tgz",
+    "integrity": "sha512-123qHRfJBmo2jXDbo/a5YOQrJoHF/GNQTLzQ5+IdK5pWpceK17yRc6ozlWd25FxvGKQbIUs91fDFkXmDHTKcyA==",
+    "shasum": "fbd8e7cf8211f5e7e5d91905c415a3f55755ca39",
+    "tarball": "http://localhost:3000/lru-cache/-/lru-cache-11.0.2.tgz",
     "fileCount": 17,
-    "unpackedSize": 807826,
+    "unpackedSize": 807860,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQCBAXzukOQcYJLVMrIdRR1FFh7eEbKJmNU0UeC1f0AWUQIhAInNuD6vQ8KGpMVFPaCdqR1q83W64kTLMJcYBVt4FP15"
+      "sig": "MEYCIQCoOEDA5ZwfskJK7UkLiszBmmv0GxggpYShS7aIcDimCgIhANeyvSCuvuRqhNfUU06gvXEsC4Jb3TAMPYwMftv88Cna"
      }
     ]
    },
@@ -14055,17 +14207,17 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/lru-cache_11.0.1_1725592639089_0.4055454916510839"
+    "tmp": "tmp/lru-cache_11.0.2_1730397080054_0.9058538021200011"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2011-07-16T09:09:00.041Z",
-  "modified": "2024-09-06T03:17:19.599Z",
-  "1.0.3": "2011-07-16T09:09:00.041Z",
-  "1.0.1": "2011-07-16T09:09:00.041Z",
+  "modified": "2024-10-31T17:51:20.557Z",
   "1.0.2": "2011-07-16T09:09:00.041Z",
+  "1.0.1": "2011-07-16T09:09:00.041Z",
+  "1.0.3": "2011-07-16T09:09:00.041Z",
   "1.0.4": "2011-07-29T19:12:01.745Z",
   "1.0.5": "2011-12-09T01:12:43.326Z",
   "1.0.6": "2012-03-27T20:58:02.558Z",
@@ -14204,7 +14356,8 @@
   "11.0.0": "2024-07-08T21:54:07.840Z",
   "10.4.2": "2024-07-09T02:54:48.371Z",
   "10.4.3": "2024-07-09T17:20:52.211Z",
-  "11.0.1": "2024-09-06T03:17:19.396Z"
+  "11.0.1": "2024-09-06T03:17:19.396Z",
+  "11.0.2": "2024-10-31T17:51:20.390Z"
  },
  "bugs": {
   "url": "https://github.com/isaacs/node-lru-cache/issues"

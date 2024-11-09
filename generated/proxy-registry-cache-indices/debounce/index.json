@@ -1,9 +1,9 @@
 {
  "_id": "debounce",
- "_rev": "94-dd57b861aad0ecb1f5caf0dafc322984",
+ "_rev": "95-f287978e9a9822ef73e83cb0143f4896",
  "name": "debounce",
  "dist-tags": {
-  "latest": "2.1.1"
+  "latest": "2.2.0"
  },
  "versions": {
   "0.0.2": {
@@ -1203,6 +1203,89 @@
   "2.1.1": {
    "name": "debounce",
    "version": "2.1.1",
+   "keywords": [
+    "debounce",
+    "debouncing",
+    "function",
+    "throttle",
+    "invoke",
+    "limit",
+    "limited",
+    "interval",
+    "rate",
+    "batch",
+    "ratelimit"
+   ],
+   "license": "MIT",
+   "_id": "debounce@2.1.1",
+   "maintainers": [
+    {
+     "name": "sindresorhus",
+     "email": "sindresorhus@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/sindresorhus/debounce#readme",
+   "bugs": {
+    "url": "https://github.com/sindresorhus/debounce/issues"
+   },
+   "xo": {
+    "rules": {
+     "unicorn/prefer-module": "off"
+    }
+   },
+   "dist": {
+    "shasum": "8ae1d5233ec5abd1c8edf3e994a9286a73d0f4ff",
+    "tarball": "http://localhost:3000/debounce/-/debounce-2.1.1.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-+xRWxgel9LgTC4PwKlm7TJUK6B6qsEK77NaiNvXmeQ7Y3e6OVVsBC4a9BSptS/mAYceyAz37Oa8JTTuPRft7uQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDZhNN/I31MNkaBgsRPc/VJo6KAYW7jl34/qpSfeGoS+wIhAPRD6yqKe7/Gb2Uh4TIOSNEsw/PUZeRoJVQ+cAz8tNYQ",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 6775
+   },
+   "main": "./index.js",
+   "types": "./index.d.ts",
+   "engines": {
+    "node": ">=18"
+   },
+   "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+   },
+   "funding": "https://github.com/sponsors/sindresorhus",
+   "gitHead": "dc9d9ecc3e00bfa9ad56edd1144c539ec8c09ec8",
+   "scripts": {
+    "test": "xo && node --test"
+   },
+   "_npmUser": {
+    "name": "sindresorhus",
+    "email": "sindresorhus@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/sindresorhus/debounce.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.6.0",
+   "description": "Delay function calls until a set time elapses after the last invocation",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "18.20.4",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.56.0",
+    "sinon": "^17.0.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/debounce_2.1.1_1725897674192_0.7640689216993264",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "2.2.0": {
+   "name": "debounce",
+   "version": "2.2.0",
    "description": "Delay function calls until a set time elapses after the last invocation",
    "license": "MIT",
    "repository": {
@@ -1245,24 +1328,24 @@
      "unicorn/prefer-module": "off"
     }
    },
-   "_id": "debounce@2.1.1",
-   "gitHead": "dc9d9ecc3e00bfa9ad56edd1144c539ec8c09ec8",
+   "_id": "debounce@2.2.0",
+   "gitHead": "12050fccb40bc34c7b8d03067a12a7e9fb2266df",
    "bugs": {
     "url": "https://github.com/sindresorhus/debounce/issues"
    },
    "homepage": "https://github.com/sindresorhus/debounce#readme",
-   "_nodeVersion": "18.20.4",
+   "_nodeVersion": "22.6.0",
    "_npmVersion": "10.6.0",
    "dist": {
-    "integrity": "sha512-+xRWxgel9LgTC4PwKlm7TJUK6B6qsEK77NaiNvXmeQ7Y3e6OVVsBC4a9BSptS/mAYceyAz37Oa8JTTuPRft7uQ==",
-    "shasum": "8ae1d5233ec5abd1c8edf3e994a9286a73d0f4ff",
-    "tarball": "http://localhost:3000/debounce/-/debounce-2.1.1.tgz",
+    "integrity": "sha512-Xks6RUDLZFdz8LIdR6q0MTH44k7FikOmnh5xkSjMig6ch45afc8sjTjRQf3P6ax8dMgcQrYO/AR2RGWURrruqw==",
+    "shasum": "f895fa2fbdb579a0f0d3dcf5dde19657e50eaad5",
+    "tarball": "http://localhost:3000/debounce/-/debounce-2.2.0.tgz",
     "fileCount": 5,
-    "unpackedSize": 6775,
+    "unpackedSize": 7148,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDZhNN/I31MNkaBgsRPc/VJo6KAYW7jl34/qpSfeGoS+wIhAPRD6yqKe7/Gb2Uh4TIOSNEsw/PUZeRoJVQ+cAz8tNYQ"
+      "sig": "MEUCIGh5zTGCHQRD5nZoM8cPNlrlU4k/tTFyN7XmoJHvC86qAiEA2TGi3UK8zdPZ1lJ4OpDZu+pLw4U5+5FQRni3SQOb+JI="
      }
     ]
    },
@@ -1279,14 +1362,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/debounce_2.1.1_1725897674192_0.7640689216993264"
+    "tmp": "tmp/debounce_2.2.0_1728923910988_0.7269666090014484"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2013-08-21T18:08:50.713Z",
-  "modified": "2024-09-09T16:01:14.585Z",
+  "modified": "2024-10-14T16:38:31.355Z",
   "0.0.2": "2013-08-21T18:08:51.880Z",
   "0.0.3": "2013-08-21T18:30:31.260Z",
   "1.0.0": "2014-06-21T18:38:11.876Z",
@@ -1296,7 +1379,8 @@
   "1.2.1": "2021-03-09T18:32:25.739Z",
   "2.0.0": "2023-11-15T18:55:03.719Z",
   "2.1.0": "2024-05-25T10:42:51.554Z",
-  "2.1.1": "2024-09-09T16:01:14.394Z"
+  "2.1.1": "2024-09-09T16:01:14.394Z",
+  "2.2.0": "2024-10-14T16:38:31.183Z"
  },
  "bugs": {
   "url": "https://github.com/sindresorhus/debounce/issues"
@@ -1327,7 +1411,7 @@
    "email": "sindresorhus@gmail.com"
   }
  ],
- "readme": "# debounce\n\n> Delay function calls until a set time elapses after the last invocation\n\n## Install\n\n```sh\nnpm install debounce\n```\n\n## Usage\n\n```js\nimport debounce from 'debounce';\n\nfunction resize() {\n\tconsole.log('height', window.innerHeight);\n\tconsole.log('width', window.innerWidth);\n}\n\nwindow.onresize = debounce(resize, 200);\n```\n\n*(You can also use `const debounce = require('debounce')`)*\n\nTo later clear the timer and cancel currently scheduled executions:\n\n```js\nwindow.onresize.clear();\n```\n\nTo execute immediately only if you have scheduled invocations and reset the timer:\n\n```js\nwindow.onresize.flush();\n```\n\nTo execute immediately and reset the timer if it was previously set:\n\n```js\nwindow.onresize.trigger();\n```\n\n## API\n\n### debounce(fn, wait, options?)\n\nCreates a debounced function that delays execution until `wait` milliseconds have passed since its last invocation.\n\nSet the `immediate` option to `true` to execute the function immediately at the start of the `wait` interval, preventing issues such as double-clicks on a button.\n\nThe returned function has the following methods:\n\n- `.clear()` cancels any scheduled executions.\n- `.flush()` if an execution is scheduled then it will be immediately executed and the timer will be cleared.\n- `.trigger()` executes the function immediately and clears the timer if it was previously set.\n\n## Related\n\n- [p-debounce](https://github.com/sindresorhus/p-debounce) - Similar but handles promises\n- [throttleit](https://github.com/sindresorhus/throttleit) - Throttle a function to limit its execution rate\n",
+ "readme": "# debounce\n\n> Delay function calls until a set time elapses after the last invocation\n\n## Install\n\n```sh\nnpm install debounce\n```\n\n## Usage\n\n```js\nimport debounce from 'debounce';\n\nfunction resize() {\n\tconsole.log('height', window.innerHeight);\n\tconsole.log('width', window.innerWidth);\n}\n\nwindow.onresize = debounce(resize, 200);\n```\n\n*(You can also use `const debounce = require('debounce')`)*\n\nTo check if the debounce delay is currently active:\n\n```js\nwindow.onresize.isPending;\n```\n\nTo later clear the timer and cancel currently scheduled executions:\n\n```js\nwindow.onresize.clear();\n```\n\nTo execute immediately only if you have scheduled invocations and reset the timer:\n\n```js\nwindow.onresize.flush();\n```\n\nTo execute immediately and reset the timer if it was previously set:\n\n```js\nwindow.onresize.trigger();\n```\n\n## API\n\n### debounce(fn, wait, options?)\n\nCreates a debounced function that delays execution until `wait` milliseconds have passed since its last invocation.\n\nSet the `immediate` option to `true` to execute the function immediately at the start of the `wait` interval, preventing issues such as double-clicks on a button.\n\nThe returned function has the following methods:\n\n- `.isPending` indicates whether the debounce delay is currently active.\n- `.clear()` cancels any scheduled executions.\n- `.flush()` if an execution is scheduled then it will be immediately executed and the timer will be cleared.\n- `.trigger()` executes the function immediately and clears the timer if it was previously set.\n\n## Related\n\n- [p-debounce](https://github.com/sindresorhus/p-debounce) - Similar but handles promises\n- [throttleit](https://github.com/sindresorhus/throttleit) - Throttle a function to limit its execution rate\n",
  "readmeFilename": "readme.md",
  "users": {
   "ash": true,

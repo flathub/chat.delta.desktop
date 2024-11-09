@@ -1,9 +1,9 @@
 {
  "_id": "eslint-visitor-keys",
- "_rev": "34-c7484f342289728483466a23d3044c6b",
+ "_rev": "35-ae46900f5c35b4e6f50a14b1a3e3172e",
  "name": "eslint-visitor-keys",
  "dist-tags": {
-  "latest": "4.1.0"
+  "latest": "4.2.0"
  },
  "versions": {
   "0.1.0": {
@@ -1495,6 +1495,115 @@
   "4.1.0": {
    "name": "eslint-visitor-keys",
    "version": "4.1.0",
+   "keywords": [],
+   "author": {
+    "url": "https://github.com/mysticatea",
+    "name": "Toru Nagashima"
+   },
+   "license": "Apache-2.0",
+   "_id": "eslint-visitor-keys@4.1.0",
+   "maintainers": [
+    {
+     "name": "openjsfoundation",
+     "email": "npm@openjsf.org"
+    },
+    {
+     "name": "eslintbot",
+     "email": "nicholas@eslint.org"
+    }
+   ],
+   "homepage": "https://github.com/eslint/js/blob/main/packages/eslint-visitor-keys/README.md",
+   "bugs": {
+    "url": "https://github.com/eslint/js/issues"
+   },
+   "dist": {
+    "shasum": "1f785cc5e81eb7534523d85922248232077d2f8c",
+    "tarball": "http://localhost:3000/eslint-visitor-keys/-/eslint-visitor-keys-4.1.0.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-Q7lok0mqMUSf5a/AdAZkA5a/gHcO6snwQClVNNvFKCAVlxXucdU8pKydU5ZVZjBx5xr37vGbFFWtLQYreLzrZg==",
+    "signatures": [
+     {
+      "sig": "MEQCIE9ivToSBxI8dnnpd44iyjW2rl9+nd5E7kqpuRTsD/EFAiBJVnmeMX2RXmWFW4Ej39QvcBcrdIMGEXTvbVi/bs1vtQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/eslint-visitor-keys@4.1.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 35721
+   },
+   "main": "dist/eslint-visitor-keys.cjs",
+   "type": "module",
+   "types": "./dist/index.d.ts",
+   "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+   },
+   "exports": {
+    ".": [
+     {
+      "import": "./lib/index.js",
+      "require": "./dist/eslint-visitor-keys.cjs"
+     },
+     "./dist/eslint-visitor-keys.cjs"
+    ],
+    "./package.json": "./package.json"
+   },
+   "funding": "https://opencollective.com/eslint",
+   "gitHead": "6e899c70236294192402a22bfeba509ec8f72566",
+   "scripts": {
+    "test": "mocha tests/lib/**/*.cjs && c8 mocha tests/lib/**/*.js && npm run test:types",
+    "build": "npm run build:cjs && npm run build:types",
+    "build:cjs": "rollup -c",
+    "test:types": "tsd",
+    "build:debug": "npm run build:cjs -- -m && npm run build:types",
+    "build:types": "tsc -v && tsc",
+    "release:publish": "eslint-publish-release",
+    "test:open-coverage": "c8 report --reporter lcov && opener coverage/lcov-report/index.html",
+    "release:generate:rc": "eslint-generate-prerelease rc",
+    "release:generate:beta": "eslint-generate-prerelease beta",
+    "release:generate:alpha": "eslint-generate-prerelease alpha",
+    "release:generate:latest": "eslint-generate-release"
+   },
+   "_npmUser": {
+    "name": "eslintbot",
+    "email": "nicholas@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint/js.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Constants and utilities about visitor keys to traverse AST.",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "^7.11.0",
+    "tsd": "^0.31.2",
+    "chai": "^4.3.6",
+    "mocha": "^9.2.1",
+    "opener": "^1.5.2",
+    "rollup": "^4.22.4",
+    "esquery": "^1.4.0",
+    "json-diff": "^0.7.3",
+    "typescript": "^5.6.2",
+    "@types/estree": "^0.0.51",
+    "eslint-release": "^3.2.0",
+    "@types/estree-jsx": "^0.0.1",
+    "rollup-plugin-dts": "^6.1.1",
+    "@typescript-eslint/parser": "^8.7.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/eslint-visitor-keys_4.1.0_1727448931763_0.14126902026092258",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "4.2.0": {
+   "name": "eslint-visitor-keys",
+   "version": "4.2.0",
    "description": "Constants and utilities about visitor keys to traverse AST.",
    "type": "module",
    "main": "dist/eslint-visitor-keys.cjs",
@@ -1557,18 +1666,18 @@
     "url": "https://github.com/eslint/js/issues"
    },
    "homepage": "https://github.com/eslint/js/blob/main/packages/eslint-visitor-keys/README.md",
-   "_id": "eslint-visitor-keys@4.1.0",
-   "gitHead": "6e899c70236294192402a22bfeba509ec8f72566",
-   "_nodeVersion": "20.17.0",
+   "_id": "eslint-visitor-keys@4.2.0",
+   "gitHead": "844078a1df7736019eee52665b67393ffcfd4c18",
+   "_nodeVersion": "20.18.0",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-Q7lok0mqMUSf5a/AdAZkA5a/gHcO6snwQClVNNvFKCAVlxXucdU8pKydU5ZVZjBx5xr37vGbFFWtLQYreLzrZg==",
-    "shasum": "1f785cc5e81eb7534523d85922248232077d2f8c",
-    "tarball": "http://localhost:3000/eslint-visitor-keys/-/eslint-visitor-keys-4.1.0.tgz",
+    "integrity": "sha512-UyLnSehNt62FFhSwjZlHmeokpRK59rcz29j+F1/aDgbkbRTk7wIc9XzdoasMUbRNKDM0qQt/+BJ4BrpFeABemw==",
+    "shasum": "687bacb2af884fcdda8a6e7d65c606f46a14cd45",
+    "tarball": "http://localhost:3000/eslint-visitor-keys/-/eslint-visitor-keys-4.2.0.tgz",
     "fileCount": 9,
-    "unpackedSize": 35721,
+    "unpackedSize": 36136,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/eslint-visitor-keys@4.1.0",
+     "url": "http://localhost:3000/-/npm/v1/attestations/eslint-visitor-keys@4.2.0",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -1576,7 +1685,7 @@
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIE9ivToSBxI8dnnpd44iyjW2rl9+nd5E7kqpuRTsD/EFAiBJVnmeMX2RXmWFW4Ej39QvcBcrdIMGEXTvbVi/bs1vtQ=="
+      "sig": "MEUCIQCpx5uJDF+dGFl6Xa4Aqfkxxdaw9FisNBgimKkJ2f18yQIgEtXYNCFL5iXHelh6OxSIzY4x16aFWHVRvKoC98GL4pY="
      }
     ]
    },
@@ -1597,14 +1706,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/eslint-visitor-keys_4.1.0_1727448931763_0.14126902026092258"
+    "tmp": "tmp/eslint-visitor-keys_4.2.0_1730229899449_0.7978560229924121"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-11-17T08:52:53.415Z",
-  "modified": "2024-09-27T14:55:32.485Z",
+  "modified": "2024-10-29T19:25:00.490Z",
   "0.1.0": "2017-11-17T08:52:53.415Z",
   "1.0.0": "2017-12-18T10:55:27.110Z",
   "1.1.0": "2019-08-13T14:11:08.272Z",
@@ -1621,7 +1730,8 @@
   "3.4.2": "2023-07-28T15:16:06.173Z",
   "3.4.3": "2023-08-11T14:49:54.383Z",
   "4.0.0": "2024-02-09T22:31:44.490Z",
-  "4.1.0": "2024-09-27T14:55:31.960Z"
+  "4.1.0": "2024-09-27T14:55:31.960Z",
+  "4.2.0": "2024-10-29T19:24:59.637Z"
  },
  "bugs": {
   "url": "https://github.com/eslint/js/issues"
@@ -1648,7 +1758,7 @@
    "email": "nicholas@eslint.org"
   }
  ],
- "readme": "# eslint-visitor-keys\n\n[![npm version](https://img.shields.io/npm/v/eslint-visitor-keys.svg)](https://www.npmjs.com/package/eslint-visitor-keys)\n[![Downloads/month](https://img.shields.io/npm/dm/eslint-visitor-keys.svg)](http://www.npmtrends.com/eslint-visitor-keys)\n[![Build Status](https://github.com/eslint/js/workflows/CI/badge.svg)](https://github.com/eslint/js/actions)\n\nConstants and utilities about visitor keys to traverse AST.\n\n## 💿 Installation\n\nUse [npm] to install.\n\n```bash\n$ npm install eslint-visitor-keys\n```\n\n### Requirements\n\n- [Node.js] `^18.18.0`, `^20.9.0`, or `>=21.1.0`\n\n## 📖 Usage\n\nTo use in an ESM file:\n\n```js\nimport * as evk from \"eslint-visitor-keys\"\n```\n\nTo use in a CommonJS file:\n\n```js\nconst evk = require(\"eslint-visitor-keys\")\n```\n\n### evk.KEYS\n\n> type: `{ [type: string]: string[] | undefined }`\n\nVisitor keys. This keys are frozen.\n\nThis is an object. Keys are the type of [ESTree] nodes. Their values are an array of property names which have child nodes.\n\nFor example:\n\n```\nconsole.log(evk.KEYS.AssignmentExpression) // → [\"left\", \"right\"]\n```\n\n### evk.getKeys(node)\n\n> type: `(node: object) => string[]`\n\nGet the visitor keys of a given AST node.\n\nThis is similar to `Object.keys(node)` of ES Standard, but some keys are excluded: `parent`, `leadingComments`, `trailingComments`, and names which start with `_`.\n\nThis will be used to traverse unknown nodes.\n\nFor example:\n\n```js\nconst node = {\n    type: \"AssignmentExpression\",\n    left: { type: \"Identifier\", name: \"foo\" },\n    right: { type: \"Literal\", value: 0 }\n}\nconsole.log(evk.getKeys(node)) // → [\"type\", \"left\", \"right\"]\n```\n\n### evk.unionWith(additionalKeys)\n\n> type: `(additionalKeys: object) => { [type: string]: string[] | undefined }`\n\nMake the union set with `evk.KEYS` and the given keys.\n\n- The order of keys is, `additionalKeys` is at first, then `evk.KEYS` is concatenated after that.\n- It removes duplicated keys as keeping the first one.\n\nFor example:\n\n```js\nconsole.log(evk.unionWith({\n    MethodDefinition: [\"decorators\"]\n})) // → { ..., MethodDefinition: [\"decorators\", \"key\", \"value\"], ... }\n```\n\n## 📰 Change log\n\nSee [GitHub releases](https://github.com/eslint/js/releases).\n\n## 🍻 Contributing\n\nWelcome. See [ESLint contribution guidelines](https://eslint.org/docs/developer-guide/contributing/).\n\n### Development commands\n\n- `npm test` runs tests and measures code coverage.\n- `npm run lint` checks source codes with ESLint.\n- `npm run test:open-coverage` opens the code coverage report of the previous test with your default browser.\n\n[npm]: https://www.npmjs.com/\n[Node.js]: https://nodejs.org/\n[ESTree]: https://github.com/estree/estree\n\n## Sponsors\n\nThe following companies, organizations, and individuals support ESLint's ongoing maintenance and development. [Become a Sponsor](https://eslint.org/donate) to get your logo on our README and website.\n\n<!-- NOTE: This section is autogenerated. Do not manually edit.-->\n<!--sponsorsstart-->\n<h3>Platinum Sponsors</h3>\n<p><a href=\"https://automattic.com\"><img src=\"https://images.opencollective.com/automattic/d0ef3e1/logo.png\" alt=\"Automattic\" height=\"128\"></a> <a href=\"https://www.airbnb.com/\"><img src=\"https://images.opencollective.com/airbnb/d327d66/logo.png\" alt=\"Airbnb\" height=\"128\"></a></p><h3>Gold Sponsors</h3>\n<p><a href=\"https://trunk.io/\"><img src=\"https://images.opencollective.com/trunkio/fb92d60/avatar.png\" alt=\"trunk.io\" height=\"96\"></a></p><h3>Silver Sponsors</h3>\n<p><a href=\"https://www.jetbrains.com/\"><img src=\"https://images.opencollective.com/jetbrains/fe76f99/logo.png\" alt=\"JetBrains\" height=\"64\"></a> <a href=\"https://liftoff.io/\"><img src=\"https://images.opencollective.com/liftoff/5c4fa84/logo.png\" alt=\"Liftoff\" height=\"64\"></a> <a href=\"https://americanexpress.io\"><img src=\"https://avatars.githubusercontent.com/u/3853301?v=4\" alt=\"American Express\" height=\"64\"></a> <a href=\"https://www.workleap.com\"><img src=\"https://avatars.githubusercontent.com/u/53535748?u=d1e55d7661d724bf2281c1bfd33cb8f99fe2465f&v=4\" alt=\"Workleap\" height=\"64\"></a></p><h3>Bronze Sponsors</h3>\n<p><a href=\"https://www.crosswordsolver.org/anagram-solver/\"><img src=\"https://images.opencollective.com/anagram-solver/2666271/logo.png\" alt=\"Anagram Solver\" height=\"32\"></a> <a href=\"https://icons8.com/\"><img src=\"https://images.opencollective.com/icons8/7fa1641/logo.png\" alt=\"Icons8\" height=\"32\"></a> <a href=\"https://discord.com\"><img src=\"https://images.opencollective.com/discordapp/f9645d9/logo.png\" alt=\"Discord\" height=\"32\"></a> <a href=\"https://www.gitbook.com\"><img src=\"https://avatars.githubusercontent.com/u/7111340?v=4\" alt=\"GitBook\" height=\"32\"></a> <a href=\"https://nx.dev\"><img src=\"https://avatars.githubusercontent.com/u/23692104?v=4\" alt=\"Nx\" height=\"32\"></a> <a href=\"https://herocoders.com\"><img src=\"https://avatars.githubusercontent.com/u/37549774?v=4\" alt=\"HeroCoders\" height=\"32\"></a> <a href=\"https://usenextbase.com\"><img src=\"https://avatars.githubusercontent.com/u/145838380?v=4\" alt=\"Nextbase Starter Kit\" height=\"32\"></a></p>\n<!--sponsorsend-->\n\n<!--techsponsorsstart-->\n<h2>Technology Sponsors</h2>\n<p><a href=\"https://netlify.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/netlify-icon.svg\" alt=\"Netlify\" height=\"32\"></a> <a href=\"https://algolia.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/algolia-icon.svg\" alt=\"Algolia\" height=\"32\"></a> <a href=\"https://1password.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/1password-icon.svg\" alt=\"1Password\" height=\"32\"></a></p>\n<!--techsponsorsend-->\n",
+ "readme": "# eslint-visitor-keys\n\n[![npm version](https://img.shields.io/npm/v/eslint-visitor-keys.svg)](https://www.npmjs.com/package/eslint-visitor-keys)\n[![Downloads/month](https://img.shields.io/npm/dm/eslint-visitor-keys.svg)](http://www.npmtrends.com/eslint-visitor-keys)\n[![Build Status](https://github.com/eslint/js/workflows/CI/badge.svg)](https://github.com/eslint/js/actions)\n\nConstants and utilities about visitor keys to traverse AST.\n\n## 💿 Installation\n\nUse [npm] to install.\n\n```bash\n$ npm install eslint-visitor-keys\n```\n\n### Requirements\n\n- [Node.js] `^18.18.0`, `^20.9.0`, or `>=21.1.0`\n\n## 📖 Usage\n\nTo use in an ESM file:\n\n```js\nimport * as evk from \"eslint-visitor-keys\"\n```\n\nTo use in a CommonJS file:\n\n```js\nconst evk = require(\"eslint-visitor-keys\")\n```\n\n### evk.KEYS\n\n> type: `{ [type: string]: string[] | undefined }`\n\nVisitor keys. This keys are frozen.\n\nThis is an object. Keys are the type of [ESTree] nodes. Their values are an array of property names which have child nodes.\n\nFor example:\n\n```\nconsole.log(evk.KEYS.AssignmentExpression) // → [\"left\", \"right\"]\n```\n\n### evk.getKeys(node)\n\n> type: `(node: object) => string[]`\n\nGet the visitor keys of a given AST node.\n\nThis is similar to `Object.keys(node)` of ES Standard, but some keys are excluded: `parent`, `leadingComments`, `trailingComments`, and names which start with `_`.\n\nThis will be used to traverse unknown nodes.\n\nFor example:\n\n```js\nconst node = {\n    type: \"AssignmentExpression\",\n    left: { type: \"Identifier\", name: \"foo\" },\n    right: { type: \"Literal\", value: 0 }\n}\nconsole.log(evk.getKeys(node)) // → [\"type\", \"left\", \"right\"]\n```\n\n### evk.unionWith(additionalKeys)\n\n> type: `(additionalKeys: object) => { [type: string]: string[] | undefined }`\n\nMake the union set with `evk.KEYS` and the given keys.\n\n- The order of keys is, `additionalKeys` is at first, then `evk.KEYS` is concatenated after that.\n- It removes duplicated keys as keeping the first one.\n\nFor example:\n\n```js\nconsole.log(evk.unionWith({\n    MethodDefinition: [\"decorators\"]\n})) // → { ..., MethodDefinition: [\"decorators\", \"key\", \"value\"], ... }\n```\n\n## 📰 Change log\n\nSee [GitHub releases](https://github.com/eslint/js/releases).\n\n## 🍻 Contributing\n\nWelcome. See [ESLint contribution guidelines](https://eslint.org/docs/developer-guide/contributing/).\n\n### Development commands\n\n- `npm test` runs tests and measures code coverage.\n- `npm run lint` checks source codes with ESLint.\n- `npm run test:open-coverage` opens the code coverage report of the previous test with your default browser.\n\n[npm]: https://www.npmjs.com/\n[Node.js]: https://nodejs.org/\n[ESTree]: https://github.com/estree/estree\n\n<!-- NOTE: This section is autogenerated. Do not manually edit.-->\n<!--sponsorsstart-->\n## Sponsors\n\nThe following companies, organizations, and individuals support ESLint's ongoing maintenance and development. [Become a Sponsor](https://eslint.org/donate)\nto get your logo on our READMEs and [website](https://eslint.org/sponsors).\n\n<h3>Platinum Sponsors</h3>\n<p><a href=\"https://automattic.com\"><img src=\"https://images.opencollective.com/automattic/d0ef3e1/logo.png\" alt=\"Automattic\" height=\"128\"></a> <a href=\"https://www.airbnb.com/\"><img src=\"https://images.opencollective.com/airbnb/d327d66/logo.png\" alt=\"Airbnb\" height=\"128\"></a></p><h3>Gold Sponsors</h3>\n<p><a href=\"https://trunk.io/\"><img src=\"https://images.opencollective.com/trunkio/fb92d60/avatar.png\" alt=\"trunk.io\" height=\"96\"></a></p><h3>Silver Sponsors</h3>\n<p><a href=\"https://www.jetbrains.com/\"><img src=\"https://images.opencollective.com/jetbrains/fe76f99/logo.png\" alt=\"JetBrains\" height=\"64\"></a> <a href=\"https://liftoff.io/\"><img src=\"https://images.opencollective.com/liftoff/5c4fa84/logo.png\" alt=\"Liftoff\" height=\"64\"></a> <a href=\"https://americanexpress.io\"><img src=\"https://avatars.githubusercontent.com/u/3853301?v=4\" alt=\"American Express\" height=\"64\"></a> <a href=\"https://www.workleap.com\"><img src=\"https://avatars.githubusercontent.com/u/53535748?u=d1e55d7661d724bf2281c1bfd33cb8f99fe2465f&v=4\" alt=\"Workleap\" height=\"64\"></a></p><h3>Bronze Sponsors</h3>\n<p><a href=\"https://www.wordhint.net/\"><img src=\"https://images.opencollective.com/wordhint/be86813/avatar.png\" alt=\"WordHint\" height=\"32\"></a> <a href=\"https://www.crosswordsolver.org/anagram-solver/\"><img src=\"https://images.opencollective.com/anagram-solver/2666271/logo.png\" alt=\"Anagram Solver\" height=\"32\"></a> <a href=\"https://icons8.com/\"><img src=\"https://images.opencollective.com/icons8/7fa1641/logo.png\" alt=\"Icons8\" height=\"32\"></a> <a href=\"https://discord.com\"><img src=\"https://images.opencollective.com/discordapp/f9645d9/logo.png\" alt=\"Discord\" height=\"32\"></a> <a href=\"https://www.gitbook.com\"><img src=\"https://avatars.githubusercontent.com/u/7111340?v=4\" alt=\"GitBook\" height=\"32\"></a> <a href=\"https://nx.dev\"><img src=\"https://avatars.githubusercontent.com/u/23692104?v=4\" alt=\"Nx\" height=\"32\"></a> <a href=\"https://herocoders.com\"><img src=\"https://avatars.githubusercontent.com/u/37549774?v=4\" alt=\"HeroCoders\" height=\"32\"></a></p>\n<h3>Technology Sponsors</h3>\nTechnology sponsors allow us to use their products and services for free as part of a contribution to the open source ecosystem and our work.\n<p><a href=\"https://netlify.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/netlify-icon.svg\" alt=\"Netlify\" height=\"32\"></a> <a href=\"https://algolia.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/algolia-icon.svg\" alt=\"Algolia\" height=\"32\"></a> <a href=\"https://1password.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/1password-icon.svg\" alt=\"1Password\" height=\"32\"></a></p>\n<!--sponsorsend-->\n",
  "readmeFilename": "README.md",
  "users": {
   "flumpus-dev": true

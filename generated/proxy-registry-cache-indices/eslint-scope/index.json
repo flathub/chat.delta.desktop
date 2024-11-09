@@ -1,11 +1,11 @@
 {
  "_id": "eslint-scope",
- "_rev": "47-d4a7e5fafcc55869f1dba8567fd29a70",
+ "_rev": "48-fd7c16c0da6376a8db220c0d77772ad9",
  "name": "eslint-scope",
  "dist-tags": {
   "next": "4.0.0-rc.0",
   "v3-latest": "3.7.3",
-  "latest": "8.1.0"
+  "latest": "8.2.0"
  },
  "versions": {
   "3.7.0": {
@@ -2151,6 +2151,113 @@
   },
   "8.1.0": {
    "name": "eslint-scope",
+   "version": "8.1.0",
+   "license": "BSD-2-Clause",
+   "_id": "eslint-scope@8.1.0",
+   "maintainers": [
+    {
+     "name": "openjsfoundation",
+     "email": "npm@openjsf.org"
+    },
+    {
+     "name": "eslintbot",
+     "email": "nicholas@eslint.org"
+    },
+    {
+     "name": "nzakas",
+     "email": "nicholas@nczconsulting.com"
+    },
+    {
+     "name": "ivolodin",
+     "email": "ivolodin@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/eslint/js/blob/main/packages/eslint-scope/README.md",
+   "bugs": {
+    "url": "https://github.com/eslint/js/issues"
+   },
+   "dist": {
+    "shasum": "70214a174d4cbffbc3e8a26911d8bf51b9ae9d30",
+    "tarball": "http://localhost:3000/eslint-scope/-/eslint-scope-8.1.0.tgz",
+    "fileCount": 14,
+    "integrity": "sha512-14dSvlhaVhKKsa9Fx1l8A17s7ah7Ef7wCakJ10LYk6+GYmP9yDti2oq2SEwcyndt6knfcZyhyxwY3i9yL78EQw==",
+    "signatures": [
+     {
+      "sig": "MEQCICdXpv3y240grChENsuwHABggC8WzxTiLeg10beVzX6LAiAZsVUKyoBIbqaxKfSH6HyrEwEp2mgfV4o11xQBdFychw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/eslint-scope@8.1.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 151445
+   },
+   "main": "./dist/eslint-scope.cjs",
+   "type": "module",
+   "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+   },
+   "exports": {
+    ".": {
+     "import": "./lib/index.js",
+     "require": "./dist/eslint-scope.cjs"
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": "https://opencollective.com/eslint",
+   "gitHead": "6e899c70236294192402a22bfeba509ec8f72566",
+   "scripts": {
+    "test": "node Makefile.js test",
+    "build": "rollup -c",
+    "pretest": "npm run build",
+    "prepublishOnly": "npm run build:update-version && npm run build",
+    "release:publish": "eslint-publish-release",
+    "release:generate:rc": "eslint-generate-prerelease rc",
+    "build:update-version": "node tools/update-version.js",
+    "release:generate:beta": "eslint-generate-prerelease beta",
+    "release:generate:alpha": "eslint-generate-prerelease alpha",
+    "release:generate:latest": "eslint-generate-release"
+   },
+   "_npmUser": {
+    "name": "eslintbot",
+    "email": "nicholas@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint/js.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "ECMAScript scope analyzer for ESLint",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "esrecurse": "^4.3.0",
+    "estraverse": "^5.2.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "^7.7.3",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.1",
+    "espree": "^10.2.0",
+    "rollup": "^2.52.7",
+    "shelljs": "^0.8.5",
+    "typescript": "^5.4.2",
+    "npm-license": "^0.3.3",
+    "eslint-release": "^3.2.0",
+    "eslint-visitor-keys": "^4.1.0",
+    "@typescript-eslint/parser": "^8.7.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/eslint-scope_8.1.0_1727448949939_0.7428064534167123",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "8.2.0": {
+   "name": "eslint-scope",
    "description": "ECMAScript scope analyzer for ESLint",
    "homepage": "https://github.com/eslint/js/blob/main/packages/eslint-scope/README.md",
    "main": "./dist/eslint-scope.cjs",
@@ -2162,7 +2269,7 @@
     },
     "./package.json": "./package.json"
    },
-   "version": "8.1.0",
+   "version": "8.2.0",
    "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
    },
@@ -2196,26 +2303,26 @@
     "c8": "^7.7.3",
     "chai": "^4.3.4",
     "eslint-release": "^3.2.0",
-    "eslint-visitor-keys": "^4.1.0",
-    "espree": "^10.2.0",
+    "eslint-visitor-keys": "^4.2.0",
+    "espree": "^10.3.0",
     "mocha": "^9.0.1",
     "npm-license": "^0.3.3",
     "rollup": "^2.52.7",
     "shelljs": "^0.8.5",
     "typescript": "^5.4.2"
    },
-   "_id": "eslint-scope@8.1.0",
-   "gitHead": "6e899c70236294192402a22bfeba509ec8f72566",
-   "_nodeVersion": "20.17.0",
+   "_id": "eslint-scope@8.2.0",
+   "gitHead": "844078a1df7736019eee52665b67393ffcfd4c18",
+   "_nodeVersion": "20.18.0",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-14dSvlhaVhKKsa9Fx1l8A17s7ah7Ef7wCakJ10LYk6+GYmP9yDti2oq2SEwcyndt6knfcZyhyxwY3i9yL78EQw==",
-    "shasum": "70214a174d4cbffbc3e8a26911d8bf51b9ae9d30",
-    "tarball": "http://localhost:3000/eslint-scope/-/eslint-scope-8.1.0.tgz",
+    "integrity": "sha512-PHlWUfG6lvPc3yvP5A4PNyBL1W8fkDUccmI21JUu/+GKZBoH/W5u6usENXUrWFRsyoW5ACUjFGgAFQp5gUlb/A==",
+    "shasum": "377aa6f1cb5dc7592cfd0b7f892fd0cf352ce442",
+    "tarball": "http://localhost:3000/eslint-scope/-/eslint-scope-8.2.0.tgz",
     "fileCount": 14,
-    "unpackedSize": 151445,
+    "unpackedSize": 151568,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/eslint-scope@8.1.0",
+     "url": "http://localhost:3000/-/npm/v1/attestations/eslint-scope@8.2.0",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -2223,7 +2330,7 @@
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCICdXpv3y240grChENsuwHABggC8WzxTiLeg10beVzX6LAiAZsVUKyoBIbqaxKfSH6HyrEwEp2mgfV4o11xQBdFychw=="
+      "sig": "MEUCIBd3OscBZCGnXoIbX/4uEVO3qqmPV2IOFJugvayxnASmAiEArFF0NcuDWUu1y6XFFpjHgmqsC+7lVlBW71FDT+T3E2w="
      }
     ]
    },
@@ -2252,14 +2359,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/eslint-scope_8.1.0_1727448949939_0.7428064534167123"
+    "tmp": "tmp/eslint-scope_8.2.0_1730229916966_0.7700301011335413"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-03-17T22:10:11.109Z",
-  "modified": "2024-09-27T14:55:51.610Z",
+  "modified": "2024-10-29T19:25:17.637Z",
   "3.7.0": "2017-03-17T22:10:11.109Z",
   "3.7.1": "2017-04-12T21:13:31.158Z",
   "4.0.0-alpha.0": "2018-04-28T01:47:18.036Z",
@@ -2283,7 +2390,8 @@
   "8.0.0": "2024-01-04T19:11:41.516Z",
   "8.0.1": "2024-03-22T20:12:53.123Z",
   "8.0.2": "2024-07-12T20:04:16.052Z",
-  "8.1.0": "2024-09-27T14:55:50.098Z"
+  "8.1.0": "2024-09-27T14:55:50.098Z",
+  "8.2.0": "2024-10-29T19:25:17.155Z"
  },
  "bugs": {
   "url": "https://github.com/eslint/js/issues"
@@ -2313,7 +2421,7 @@
    "email": "ivolodin@gmail.com"
   }
  ],
- "readme": "[![npm version](https://img.shields.io/npm/v/eslint-scope.svg)](https://www.npmjs.com/package/eslint-scope)\n[![Downloads](https://img.shields.io/npm/dm/eslint-scope.svg)](https://www.npmjs.com/package/eslint-scope)\n[![Build Status](https://github.com/eslint/js/workflows/CI/badge.svg)](https://github.com/eslint/js/actions)\n\n# ESLint Scope\n\nESLint Scope is the [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm) scope analyzer used in ESLint. It is a fork of [escope](http://github.com/estools/escope).\n\n## Install\n\n```\nnpm i eslint-scope --save\n```\n\n## 📖 Usage\n\nTo use in an ESM file:\n\n```js\nimport * as eslintScope from 'eslint-scope';\n```\n\nTo use in a CommonJS file:\n\n```js\nconst eslintScope = require('eslint-scope');\n```\n\nIn order to analyze scope, you'll need to have an [ESTree](https://github.com/estree/estree) compliant AST structure to run it on. The primary method is `eslintScope.analyze()`, which takes two arguments:\n\n1. `ast` - the ESTree-compliant AST structure to analyze.\n2. `options` (optional) - Options to adjust how the scope is analyzed, including:\n  * `ignoreEval` (default: `false`) - Set to `true` to ignore all `eval()` calls (which would normally create scopes).\n  * `nodejsScope` (default: `false`) - Set to `true` to create a top-level function scope needed for CommonJS evaluation.\n  * `impliedStrict` (default: `false`) - Set to `true` to evaluate the code in strict mode even outside of modules and without `\"use strict\"`.\n  * `ecmaVersion` (default: `5`) - The version of ECMAScript to use to evaluate the code.\n  * `sourceType` (default: `\"script\"`) - The type of JavaScript file to evaluate. Change to `\"module\"` for ECMAScript module code.\n  * `childVisitorKeys` (default: `null`) - An object with visitor key information (like [`eslint-visitor-keys`](https://github.com/eslint/js/tree/main/packages/eslint-visitor-keys)). Without this, `eslint-scope` finds child nodes to visit algorithmically. Providing this option is a performance enhancement.\n  * `fallback` (default: `\"iteration\"`) - The strategy to use when `childVisitorKeys` is not specified. May be a function.\n\nExample:\n\n```js\nimport * as eslintScope from 'eslint-scope';\nimport * as espree from 'espree';\nimport estraverse from 'estraverse';\n\nconst options = {\n    ecmaVersion: 2022,\n    sourceType: \"module\"\n};\n\nconst ast = espree.parse(code, { range: true, ...options });\nconst scopeManager = eslintScope.analyze(ast, options);\n\nconst currentScope = scopeManager.acquire(ast);   // global scope\n\nestraverse.traverse(ast, {\n    enter (node, parent) {\n        // do stuff\n\n        if (/Function/.test(node.type)) {\n            currentScope = scopeManager.acquire(node);  // get current function scope\n        }\n    },\n    leave(node, parent) {\n        if (/Function/.test(node.type)) {\n            currentScope = currentScope.upper;  // set to parent scope\n        }\n\n        // do stuff\n    }\n});\n```\n\n## Contributing\n\nIssues and pull requests will be triaged and responded to as quickly as possible. We operate under the [ESLint Contributor Guidelines](http://eslint.org/docs/developer-guide/contributing), so please be sure to read them before contributing. If you're not sure where to dig in, check out the [issues](https://github.com/eslint/js/issues).\n\n## Security Policy\n\nWe work hard to ensure that ESLint Scope is safe for everyone and that security issues are addressed quickly and responsibly. Read the full [security policy](https://github.com/eslint/.github/blob/master/SECURITY.md).\n\n## Build Commands\n\n* `npm test` - run all linting and tests\n* `npm run lint` - run all linting\n\n## License\n\nESLint Scope is licensed under a permissive BSD 2-clause license.\n\n## Sponsors\n\nThe following companies, organizations, and individuals support ESLint's ongoing maintenance and development. [Become a Sponsor](https://eslint.org/donate) to get your logo on our README and website.\n\n<!-- NOTE: This section is autogenerated. Do not manually edit.-->\n<!--sponsorsstart-->\n<h3>Platinum Sponsors</h3>\n<p><a href=\"https://automattic.com\"><img src=\"https://images.opencollective.com/automattic/d0ef3e1/logo.png\" alt=\"Automattic\" height=\"128\"></a> <a href=\"https://www.airbnb.com/\"><img src=\"https://images.opencollective.com/airbnb/d327d66/logo.png\" alt=\"Airbnb\" height=\"128\"></a></p><h3>Gold Sponsors</h3>\n<p><a href=\"https://trunk.io/\"><img src=\"https://images.opencollective.com/trunkio/fb92d60/avatar.png\" alt=\"trunk.io\" height=\"96\"></a></p><h3>Silver Sponsors</h3>\n<p><a href=\"https://www.jetbrains.com/\"><img src=\"https://images.opencollective.com/jetbrains/fe76f99/logo.png\" alt=\"JetBrains\" height=\"64\"></a> <a href=\"https://liftoff.io/\"><img src=\"https://images.opencollective.com/liftoff/5c4fa84/logo.png\" alt=\"Liftoff\" height=\"64\"></a> <a href=\"https://americanexpress.io\"><img src=\"https://avatars.githubusercontent.com/u/3853301?v=4\" alt=\"American Express\" height=\"64\"></a> <a href=\"https://www.workleap.com\"><img src=\"https://avatars.githubusercontent.com/u/53535748?u=d1e55d7661d724bf2281c1bfd33cb8f99fe2465f&v=4\" alt=\"Workleap\" height=\"64\"></a></p><h3>Bronze Sponsors</h3>\n<p><a href=\"https://www.crosswordsolver.org/anagram-solver/\"><img src=\"https://images.opencollective.com/anagram-solver/2666271/logo.png\" alt=\"Anagram Solver\" height=\"32\"></a> <a href=\"https://icons8.com/\"><img src=\"https://images.opencollective.com/icons8/7fa1641/logo.png\" alt=\"Icons8\" height=\"32\"></a> <a href=\"https://discord.com\"><img src=\"https://images.opencollective.com/discordapp/f9645d9/logo.png\" alt=\"Discord\" height=\"32\"></a> <a href=\"https://www.gitbook.com\"><img src=\"https://avatars.githubusercontent.com/u/7111340?v=4\" alt=\"GitBook\" height=\"32\"></a> <a href=\"https://nx.dev\"><img src=\"https://avatars.githubusercontent.com/u/23692104?v=4\" alt=\"Nx\" height=\"32\"></a> <a href=\"https://herocoders.com\"><img src=\"https://avatars.githubusercontent.com/u/37549774?v=4\" alt=\"HeroCoders\" height=\"32\"></a> <a href=\"https://usenextbase.com\"><img src=\"https://avatars.githubusercontent.com/u/145838380?v=4\" alt=\"Nextbase Starter Kit\" height=\"32\"></a></p>\n<!--sponsorsend-->\n\n<!--techsponsorsstart-->\n<h2>Technology Sponsors</h2>\n<p><a href=\"https://netlify.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/netlify-icon.svg\" alt=\"Netlify\" height=\"32\"></a> <a href=\"https://algolia.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/algolia-icon.svg\" alt=\"Algolia\" height=\"32\"></a> <a href=\"https://1password.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/1password-icon.svg\" alt=\"1Password\" height=\"32\"></a></p>\n<!--techsponsorsend-->\n",
+ "readme": "[![npm version](https://img.shields.io/npm/v/eslint-scope.svg)](https://www.npmjs.com/package/eslint-scope)\n[![Downloads](https://img.shields.io/npm/dm/eslint-scope.svg)](https://www.npmjs.com/package/eslint-scope)\n[![Build Status](https://github.com/eslint/js/workflows/CI/badge.svg)](https://github.com/eslint/js/actions)\n\n# ESLint Scope\n\nESLint Scope is the [ECMAScript](http://www.ecma-international.org/publications/standards/Ecma-262.htm) scope analyzer used in ESLint. It is a fork of [escope](http://github.com/estools/escope).\n\n## Install\n\n```\nnpm i eslint-scope --save\n```\n\n## 📖 Usage\n\nTo use in an ESM file:\n\n```js\nimport * as eslintScope from 'eslint-scope';\n```\n\nTo use in a CommonJS file:\n\n```js\nconst eslintScope = require('eslint-scope');\n```\n\nIn order to analyze scope, you'll need to have an [ESTree](https://github.com/estree/estree) compliant AST structure to run it on. The primary method is `eslintScope.analyze()`, which takes two arguments:\n\n1. `ast` - the ESTree-compliant AST structure to analyze.\n2. `options` (optional) - Options to adjust how the scope is analyzed, including:\n  * `ignoreEval` (default: `false`) - Set to `true` to ignore all `eval()` calls (which would normally create scopes).\n  * `nodejsScope` (default: `false`) - Set to `true` to create a top-level function scope needed for CommonJS evaluation.\n  * `impliedStrict` (default: `false`) - Set to `true` to evaluate the code in strict mode even outside of modules and without `\"use strict\"`.\n  * `ecmaVersion` (default: `5`) - The version of ECMAScript to use to evaluate the code.\n  * `sourceType` (default: `\"script\"`) - The type of JavaScript file to evaluate. Change to `\"module\"` for ECMAScript module code.\n  * `childVisitorKeys` (default: `null`) - An object with visitor key information (like [`eslint-visitor-keys`](https://github.com/eslint/js/tree/main/packages/eslint-visitor-keys)). Without this, `eslint-scope` finds child nodes to visit algorithmically. Providing this option is a performance enhancement.\n  * `fallback` (default: `\"iteration\"`) - The strategy to use when `childVisitorKeys` is not specified. May be a function.\n\nExample:\n\n```js\nimport * as eslintScope from 'eslint-scope';\nimport * as espree from 'espree';\nimport estraverse from 'estraverse';\n\nconst options = {\n    ecmaVersion: 2022,\n    sourceType: \"module\"\n};\n\nconst ast = espree.parse(code, { range: true, ...options });\nconst scopeManager = eslintScope.analyze(ast, options);\n\nconst currentScope = scopeManager.acquire(ast);   // global scope\n\nestraverse.traverse(ast, {\n    enter (node, parent) {\n        // do stuff\n\n        if (/Function/.test(node.type)) {\n            currentScope = scopeManager.acquire(node);  // get current function scope\n        }\n    },\n    leave(node, parent) {\n        if (/Function/.test(node.type)) {\n            currentScope = currentScope.upper;  // set to parent scope\n        }\n\n        // do stuff\n    }\n});\n```\n\n## Contributing\n\nIssues and pull requests will be triaged and responded to as quickly as possible. We operate under the [ESLint Contributor Guidelines](http://eslint.org/docs/developer-guide/contributing), so please be sure to read them before contributing. If you're not sure where to dig in, check out the [issues](https://github.com/eslint/js/issues).\n\n## Security Policy\n\nWe work hard to ensure that ESLint Scope is safe for everyone and that security issues are addressed quickly and responsibly. Read the full [security policy](https://github.com/eslint/.github/blob/master/SECURITY.md).\n\n## Build Commands\n\n* `npm test` - run all linting and tests\n* `npm run lint` - run all linting\n\n## License\n\nESLint Scope is licensed under a permissive BSD 2-clause license.\n\n<!-- NOTE: This section is autogenerated. Do not manually edit.-->\n<!--sponsorsstart-->\n## Sponsors\n\nThe following companies, organizations, and individuals support ESLint's ongoing maintenance and development. [Become a Sponsor](https://eslint.org/donate)\nto get your logo on our READMEs and [website](https://eslint.org/sponsors).\n\n<h3>Platinum Sponsors</h3>\n<p><a href=\"https://automattic.com\"><img src=\"https://images.opencollective.com/automattic/d0ef3e1/logo.png\" alt=\"Automattic\" height=\"128\"></a> <a href=\"https://www.airbnb.com/\"><img src=\"https://images.opencollective.com/airbnb/d327d66/logo.png\" alt=\"Airbnb\" height=\"128\"></a></p><h3>Gold Sponsors</h3>\n<p><a href=\"https://trunk.io/\"><img src=\"https://images.opencollective.com/trunkio/fb92d60/avatar.png\" alt=\"trunk.io\" height=\"96\"></a></p><h3>Silver Sponsors</h3>\n<p><a href=\"https://www.jetbrains.com/\"><img src=\"https://images.opencollective.com/jetbrains/fe76f99/logo.png\" alt=\"JetBrains\" height=\"64\"></a> <a href=\"https://liftoff.io/\"><img src=\"https://images.opencollective.com/liftoff/5c4fa84/logo.png\" alt=\"Liftoff\" height=\"64\"></a> <a href=\"https://americanexpress.io\"><img src=\"https://avatars.githubusercontent.com/u/3853301?v=4\" alt=\"American Express\" height=\"64\"></a> <a href=\"https://www.workleap.com\"><img src=\"https://avatars.githubusercontent.com/u/53535748?u=d1e55d7661d724bf2281c1bfd33cb8f99fe2465f&v=4\" alt=\"Workleap\" height=\"64\"></a></p><h3>Bronze Sponsors</h3>\n<p><a href=\"https://www.wordhint.net/\"><img src=\"https://images.opencollective.com/wordhint/be86813/avatar.png\" alt=\"WordHint\" height=\"32\"></a> <a href=\"https://www.crosswordsolver.org/anagram-solver/\"><img src=\"https://images.opencollective.com/anagram-solver/2666271/logo.png\" alt=\"Anagram Solver\" height=\"32\"></a> <a href=\"https://icons8.com/\"><img src=\"https://images.opencollective.com/icons8/7fa1641/logo.png\" alt=\"Icons8\" height=\"32\"></a> <a href=\"https://discord.com\"><img src=\"https://images.opencollective.com/discordapp/f9645d9/logo.png\" alt=\"Discord\" height=\"32\"></a> <a href=\"https://www.gitbook.com\"><img src=\"https://avatars.githubusercontent.com/u/7111340?v=4\" alt=\"GitBook\" height=\"32\"></a> <a href=\"https://nx.dev\"><img src=\"https://avatars.githubusercontent.com/u/23692104?v=4\" alt=\"Nx\" height=\"32\"></a> <a href=\"https://herocoders.com\"><img src=\"https://avatars.githubusercontent.com/u/37549774?v=4\" alt=\"HeroCoders\" height=\"32\"></a></p>\n<h3>Technology Sponsors</h3>\nTechnology sponsors allow us to use their products and services for free as part of a contribution to the open source ecosystem and our work.\n<p><a href=\"https://netlify.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/netlify-icon.svg\" alt=\"Netlify\" height=\"32\"></a> <a href=\"https://algolia.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/algolia-icon.svg\" alt=\"Algolia\" height=\"32\"></a> <a href=\"https://1password.com\"><img src=\"https://raw.githubusercontent.com/eslint/eslint.org/main/src/assets/images/techsponsors/1password-icon.svg\" alt=\"1Password\" height=\"32\"></a></p>\n<!--sponsorsend-->\n",
  "readmeFilename": "README.md",
  "users": {
   "flumpus-dev": true
