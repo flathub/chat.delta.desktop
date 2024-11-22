@@ -1,6 +1,28 @@
 # Flatpak packaging for Delta Chat Desktop
 
-## Building
+## Trigger a new release using Codespaces
+
+These are the steps to trigger a new release using github Codespaces:
+
+- create a new PR release-x.x.x
+- edit `generate.sh` in codespace and change the tags for
+  
+  ```
+    CORE_CHECKOUT=vx.x.x
+    DESKTOP_CHECKOUT=vx.x.x
+  ```
+ - add the new release in `<releases>` in chat.delta.desktop.appdata.xml
+   - add a link to the Release Changelog
+   - add some more info about the release
+   - see [Release info](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines/#release)
+ - start the setup script in console `./setup.sh`
+ - start the generate script in console `./generate.sh`
+ - wait for the build of the preview
+ - install the preview locally and check if it works
+ - after merging the PR the new version will be released
+
+
+## Building locally
 
 If you'd like to locally build this flapak, you'll need both `flatpak`
 and `flatpak-builder` installed.  E.g. on Debian you can run `apt
@@ -75,8 +97,6 @@ Then edit (put in the tags/branches you want to update to) and run the `generate
 CORE_CHECKOUT=v1.140.0
 DESKTOP_CHECKOUT=v1.45.4
 ```
-
-~~The script then gives you the commit hashes you should add to the build manifest, there you need to also specify branch/tag.~~ not nessesary anymore.
 
 After that, build it locally (if your computer is likely faster than CI, so debugging locally is quicker).
 ```
