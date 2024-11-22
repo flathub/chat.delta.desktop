@@ -1,0 +1,646 @@
+{
+ "_id": "readdir-glob",
+ "_rev": "8-bec3a626feb6e2c9f58d5f04702b79bb",
+ "name": "readdir-glob",
+ "dist-tags": {
+  "latest": "2.0.1"
+ },
+ "versions": {
+  "1.0.0": {
+   "name": "readdir-glob",
+   "version": "1.0.0",
+   "keywords": [
+    "recursive",
+    "fs",
+    "stream",
+    "streams",
+    "readdir",
+    "filesystem",
+    "find",
+    "filter",
+    "glob"
+   ],
+   "author": {
+    "name": "Yann Armelin"
+   },
+   "license": "Apache-2.0",
+   "_id": "readdir-glob@1.0.0",
+   "maintainers": [
+    {
+     "name": "yqnn",
+     "email": "ynn@free.fr"
+    }
+   ],
+   "homepage": "https://github.com/Yqnn/node-readdir-glob",
+   "bugs": {
+    "url": "https://github.com/Yqnn/node-readdir-glob/issues"
+   },
+   "dist": {
+    "shasum": "a495436934bbe57be6a68039d16e8946621eb8c5",
+    "tarball": "http://localhost:3000/readdir-glob/-/readdir-glob-1.0.0.tgz",
+    "fileCount": 4,
+    "integrity": "sha512-km0DIcwQVZ1ZUhXhMWpF74/Wm5aFEd5/jDiVWF1Hkw2myPQovG8vCQ8+FQO2KXE9npQQvCnAMZhhWuUee4WcCQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIC1YhfAOVRwYwqDc8ATUYlsd8Pnsovzv+b66TJ150yOkAiEArg9rRKJ7yhysvUPM8rqfQv7P6rcF1W1sT/ocFTHUqWk=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 21127,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfGDKaCRA9TVsSAnZWagAAIMwP/3CXjjIYBpFeUoI6lFxY\nHNwiSQt8lLqf2XY+9V0wxaAUdYYO7qghQYSs4YqLDOxTrJwRElx/7VWfg8ci\nzQkA/ACe0QF0qg3WC+c2Dbl9ZlmtHsxeEttb1pZ7GRkZMub4BH4YgVF0NQ8m\nKrfe0Mkr/BWToKPGLDowiPMIiC1YHnS4k8stMb8yLCxCswvqykIJg16uidnd\nQ3ZeOYIgQqY7bD7fEOwlLGURPXUY+hV0XuaI0hKPr/c0c6CZJPNnmQatCMjJ\nUvcQACKDRXW3ZHLr7eZBot34outw8OXy2V1ETTOr5hbriPXh1ycAkv1+fsKc\nAhvseIg5kaD72C8CWPpP3bZuq1zEaMBI1SGVqBTmj9DamHug4zBIkPxh0dbi\np4A736Jq45/Yr++yT8EvYF5Yl93DAE5EY8jfjOfAHkoSTz+xIU+wSHT4PxCf\n8vnQJdwWnO0p/ePgH1I08vgTaVoKOwmWrBOukD8U6ranjBhE3dRnXuAk11Hn\n0HIQ5qEFcObb1sfd7Oh1nIeihDpfcgHU+32c2bTgTNTtNr9zasyZZ0CPcjfG\nCkmclMfMrBzX0+3H6U6t68ccSv1i+aWpnPiedUT26DwWAIMzQxqVerJE+Tl0\nvDbx3knGdCw54Qpz5a2XELgDn0Nw0ahRs1wbSB5DWBXXrtrrrBhjuvw3906k\nQRIl\r\n=mJTd\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "gitHead": "cc5370eab4649bd093292d37ada8a6bc0d993ad5",
+   "scripts": {
+    "test": "jest --collect-coverage",
+    "bench": "bash scripts/benchmark.sh",
+    "profile": "bash scripts/profile.sh && cat profile.txt",
+    "test-regen": "TEST_REGEN=1 jest --collect-coverage"
+   },
+   "_npmUser": {
+    "name": "yqnn",
+    "email": "ynn@free.fr"
+   },
+   "repository": {
+    "url": "git://github.com/Yqnn/node-readdir-glob.git",
+    "type": "git"
+   },
+   "_npmVersion": "6.14.4",
+   "description": "Recursive fs.readdir with streaming API and glob filtering.",
+   "directories": {},
+   "_nodeVersion": "12.16.3",
+   "dependencies": {
+    "minimatch": "^3.0.4"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^26.1.0",
+    "tick": "0.0.6",
+    "mkdirp": "^1.0.0",
+    "rimraf": "^2.2.8",
+    "path-is-absolute": "^1.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/readdir-glob_1.0.0_1595421338474_0.6720568650751251",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.1.0": {
+   "name": "readdir-glob",
+   "version": "1.1.0",
+   "keywords": [
+    "recursive",
+    "fs",
+    "stream",
+    "streams",
+    "readdir",
+    "filesystem",
+    "find",
+    "filter",
+    "glob"
+   ],
+   "author": {
+    "name": "Yann Armelin"
+   },
+   "license": "Apache-2.0",
+   "_id": "readdir-glob@1.1.0",
+   "maintainers": [
+    {
+     "name": "yqnn",
+     "email": "ynn@free.fr"
+    }
+   ],
+   "homepage": "https://github.com/Yqnn/node-readdir-glob",
+   "bugs": {
+    "url": "https://github.com/Yqnn/node-readdir-glob/issues"
+   },
+   "dist": {
+    "shasum": "a3def6f7b61343e8a1274dbb872b9a2ad055d086",
+    "tarball": "http://localhost:3000/readdir-glob/-/readdir-glob-1.1.0.tgz",
+    "fileCount": 4,
+    "integrity": "sha512-KgT0oXPIDQRRRYFf+06AUaodICTep2Q5635BORLzTEzp7rEqcR14a47j3Vzm3ix7FeI1lp8mYyG7r8lTB06Pyg==",
+    "signatures": [
+     {
+      "sig": "MEUCIFdhi71QUINd5oyKY5j1400028vr8l3pp5BTF/T2VprvAiEAzYpfz6UVEIivsF6kLOx5eaRy4ES6sH2ZRvDEKDJTgCM=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 22592,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfaRs8CRA9TVsSAnZWagAA9xwP+wetDZNPJ2HpSEKQxGgY\n4t+XDSRVut+9eoQ4v4SsFIwUZLy5MwDJCI6r9qitD0c/kDypS43SCXWkzygb\nJ4Xvsk+65HXzADDu6CbBZ56PDofHmRioSUEIuNswkoUXF8fB0dXKmhkPZMz9\nHI6Z3LI7+Ik+80L2lJGEf19NNAYgXozfftu/7/PfHAsBVuMODO0QuhHCJqcL\nj6konbq6FG1EH+xr4fFL9NQdrjZacmZhZSl8JqGGM/21G26wkv4A5VAo8Rcb\nERKUOlELukTEtBvk2wxMBkzaM/TSK8YKmbWf0vL5HvH7gBDmByAwM2TXcEv9\nh2d7knxEKsAc2cp44KaRVdbjpDnIMxIalb3NeAY/EzwNPHVv/Fq0IPPkN7Q4\nnKvxkOuZReqj5MnhNdWGqnKwvTBE2xM2xl4iiax2sR6Llji49qpxfpNd9J31\nxv2FMwQMQd1QzhRLRRueEQzmXKTLC3QUZkoawl7dYbw+Z0Xc+xiDBZu3NvkD\n+JmqO8lg1EWZ5PSSP+JsDXSdNOR+2G0e79E0LmBNACqlsuAEJrHA69vHY8Qd\nvrhGWnxjQsLF4X714UhglcaS2foiAz6cPaOTsSF2RrzGk50b6YwnvXn3iIie\nLwYqeYePpF7i/TYSoH/Czl3introIV2FSVf9LMXBRe8M73sxqEZdf/fw6t+H\n+jx2\r\n=noEm\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "gitHead": "2a97b77ccb030cedc2b8d55c82f0a3e12beb9312",
+   "scripts": {
+    "test": "jest --coverage",
+    "bench": "bash scripts/benchmark.sh",
+    "profile": "bash scripts/profile.sh && cat profile.txt",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "test-regen": "TEST_REGEN=1 jest --coverage"
+   },
+   "_npmUser": {
+    "name": "yqnn",
+    "email": "ynn@free.fr"
+   },
+   "repository": {
+    "url": "git://github.com/Yqnn/node-readdir-glob.git",
+    "type": "git"
+   },
+   "_npmVersion": "6.14.4",
+   "description": "Recursive fs.readdir with streaming API and glob filtering.",
+   "directories": {},
+   "_nodeVersion": "12.16.3",
+   "dependencies": {
+    "minimatch": "^3.0.4"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^26.1.0",
+    "tick": "0.0.6",
+    "mkdirp": "^1.0.0",
+    "rimraf": "^2.2.8",
+    "coveralls": "^3.1.0",
+    "path-is-absolute": "^1.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/readdir-glob_1.1.0_1600723771786_0.10314907017893082",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.1.1": {
+   "name": "readdir-glob",
+   "version": "1.1.1",
+   "keywords": [
+    "recursive",
+    "fs",
+    "stream",
+    "streams",
+    "readdir",
+    "filesystem",
+    "find",
+    "filter",
+    "glob"
+   ],
+   "author": {
+    "name": "Yann Armelin"
+   },
+   "license": "Apache-2.0",
+   "_id": "readdir-glob@1.1.1",
+   "maintainers": [
+    {
+     "name": "yqnn",
+     "email": "ynn@free.fr"
+    }
+   ],
+   "homepage": "https://github.com/Yqnn/node-readdir-glob",
+   "bugs": {
+    "url": "https://github.com/Yqnn/node-readdir-glob/issues"
+   },
+   "dist": {
+    "shasum": "f0e10bb7bf7bfa7e0add8baffdc54c3f7dbee6c4",
+    "tarball": "http://localhost:3000/readdir-glob/-/readdir-glob-1.1.1.tgz",
+    "fileCount": 4,
+    "integrity": "sha512-91/k1EzZwDx6HbERR+zucygRFfiPl2zkIYZtv3Jjr6Mn7SkKcVct8aVO+sSRiGMc6fLf72du3d92/uY63YPdEA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQD/XCHOsMN74lOJ+T0Yh3tAY+dVk50Yrim40Owq1KEmjwIhAPyk0ydOCdrUUrug0dxj0UpGNlKTIabFpdsARp19NE9U",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 22997,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJffOm1CRA9TVsSAnZWagAA9MgP/2HPX5Ps8bo+nmgs6RQE\nkRwUqmvWrG2CMSOQHIKDkMl2tm3X3cZVXWbFgcWi6nxpNOEVU0A+WRKX+aPw\niPkYCIMhN7IJoZlWCx9s2zAvKLn9lNE2k299dI6ZZOT1rnwe52ntts4fUhSy\nFOpX/VDdZRqyLV6akmJ3NlJ55gCcWxvfAEgo4d/vhrWsR8EgyNRF+mFG79CU\nT190db8W7YeDIFlHNnyh3s3fo9yBN+MMokRc77odPDLN/n6ZZS/lhPsMVnNR\nyla2l11+C9cxT9xthRsIwX+HBl3AN+8LsqqVVBuhitvdqopCKQuj7bOlnVMH\n3jZnq+ISoLKUzuxk6kv1yQgQS2U5UDHWF0DJnmy0lJ/eZhCFzwvwZ2jXvfAg\nttaVDVyHzkoJYkAlXS8xEt2AnZfE9q2Ssrhj6ws1bVQkMot2JyzgkYP7Tcb3\nEzgAA6woX09vGZKii2IQr4sT/ZGjih9meFTci9ESNHU5FLPNAT0izGQP42OW\nmB3CHqvkz2G+NcZgqgt7+bcXRBPvvmJNxqfUjMadEaUrfUp3KwrgMwYDC1OY\nvbMhGMDSGSg7YbcB1lzHr4cNZ1sUbf9ZQ0v5b8ncrZbAYuOtA95a7GHrAvQM\nNuk7R5WUi/5WtCuIJMeN+0XyjH3UB74up35eN8ItkdPVT63DjXGVqPeKkRkT\noY79\r\n=FX90\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "gitHead": "c4087e26217c5caf55ce7f269d6f2c0de5a75301",
+   "scripts": {
+    "test": "jest --coverage",
+    "bench": "bash scripts/benchmark.sh",
+    "profile": "bash scripts/profile.sh && cat profile.txt",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "test-regen": "TEST_REGEN=1 jest --coverage"
+   },
+   "_npmUser": {
+    "name": "yqnn",
+    "email": "ynn@free.fr"
+   },
+   "repository": {
+    "url": "git://github.com/Yqnn/node-readdir-glob.git",
+    "type": "git"
+   },
+   "_npmVersion": "6.14.6",
+   "description": "Recursive fs.readdir with streaming API and glob filtering.",
+   "directories": {},
+   "_nodeVersion": "12.18.4",
+   "dependencies": {
+    "minimatch": "^3.0.4"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^25.5.4",
+    "tick": "0.0.6",
+    "mkdirp": "^1.0.0",
+    "rimraf": "^2.2.8",
+    "coveralls": "^3.1.0",
+    "path-is-absolute": "^1.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/readdir-glob_1.1.1_1602021813333_0.3556821262237304",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.1.2": {
+   "name": "readdir-glob",
+   "version": "1.1.2",
+   "keywords": [
+    "recursive",
+    "fs",
+    "stream",
+    "streams",
+    "readdir",
+    "filesystem",
+    "find",
+    "filter",
+    "glob"
+   ],
+   "author": {
+    "name": "Yann Armelin"
+   },
+   "license": "Apache-2.0",
+   "_id": "readdir-glob@1.1.2",
+   "maintainers": [
+    {
+     "name": "yqnn",
+     "email": "ynn@free.fr"
+    }
+   ],
+   "homepage": "https://github.com/Yqnn/node-readdir-glob",
+   "bugs": {
+    "url": "https://github.com/Yqnn/node-readdir-glob/issues"
+   },
+   "dist": {
+    "shasum": "b185789b8e6a43491635b6953295c5c5e3fd224c",
+    "tarball": "http://localhost:3000/readdir-glob/-/readdir-glob-1.1.2.tgz",
+    "fileCount": 4,
+    "integrity": "sha512-6RLVvwJtVwEDfPdn6X6Ille4/lxGl0ATOY4FN/B9nxQcgOazvvI0nodiD19ScKq0PvA/29VpaOQML36o5IzZWA==",
+    "signatures": [
+     {
+      "sig": "MEUCIDGPe4hLR1PQuVqSrekb3LaSMDaW5Xgtgh6/niBVSRjyAiEAudu181nFrxQ5P3g/hhIbcwUo/gIdTuMzcTK2Sg1GkK4=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 23366,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJivzdIACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpiHRAAh9mthgr7F6WETabdu2stPMXtQqHYh1OpgjPbyrrcf8VaP3Oz\r\nkf98ArduqRzktZJZ2vJx8nun3/1dWAl81RuUxeoYz/N6DXV00vipxhchgm1W\r\ntsQHr7rRYLYxRnJsf22egVCKwR/lQ/2VvdsI3HAZiHy0um93Wv2aXixgeIbj\r\ngTxUuy6LdkbzGI0FcNDJ9zU5OCbI41DdRoXldZGNjEegU2JV9/kjFunN6EVK\r\nigV0nN+DV0QBa2ikRT49n8eryFJkC1TFHuq773vfnXtHciucC9L/TCs+x9zR\r\nCcL4DBfzsfvii8fiRRlCjeFXQm8zqPGoWPCJvBsbxK5s4xomJ16f8yBY5zq1\r\npE+oakcsm3s4TDg1do8eZOm0pncqgHKSNlcFh5uK3xA88mhEMdWlUJ70eOjY\r\n2pYAH7Qmm0Bw1PUOHWHuGJt0kR+Imq9q1VAjc7U+ZHBe8jdPThSi8Y4t6MWe\r\ntynkBUe+iDTVNZjQlcRU4CXLdySjvcNZUEUarW0x+bB211y0KmM7U5yEnYGP\r\nKZoCTEMc2GTahGpc4vWuErRnaryJ2SNXWNRwVU5TP6EnQP/Lma1zN0dVvFkc\r\n4Ktfa+5Cot2WR6p9rOVEYPVIdAfR+dYLwKcq48xgyGnL3w/YhUFdVSSmVzzK\r\nFzQ06a61pTgT+Kgs+/fWNCPmla0myLhjhWM=\r\n=KpCS\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "gitHead": "b87c97e5ee47834d0b8aa48212d5244204566d1c",
+   "scripts": {
+    "test": "npx nyc --reporter=lcov --reporter=text-summary --reporter=html jasmine --config=jasmine.json",
+    "bench": "bash scripts/benchmark.sh",
+    "profile": "bash scripts/profile.sh && cat profile.txt",
+    "test-regen": "TEST_REGEN=1 jest --coverage"
+   },
+   "_npmUser": {
+    "name": "yqnn",
+    "email": "ynn@free.fr"
+   },
+   "repository": {
+    "url": "git://github.com/Yqnn/node-readdir-glob.git",
+    "type": "git"
+   },
+   "_npmVersion": "8.3.2",
+   "description": "Recursive fs.readdir with streaming API and glob filtering.",
+   "directories": {},
+   "_nodeVersion": "16.13.0",
+   "dependencies": {
+    "minimatch": "^5.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "tick": "0.0.6",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "jasmine": "^3.9.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/readdir-glob_1.1.2_1656698695853_0.11773616474845405",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.1.3": {
+   "name": "readdir-glob",
+   "version": "1.1.3",
+   "keywords": [
+    "recursive",
+    "fs",
+    "stream",
+    "streams",
+    "readdir",
+    "filesystem",
+    "find",
+    "filter",
+    "glob"
+   ],
+   "author": {
+    "name": "Yann Armelin"
+   },
+   "license": "Apache-2.0",
+   "_id": "readdir-glob@1.1.3",
+   "maintainers": [
+    {
+     "name": "yqnn",
+     "email": "ynn@free.fr"
+    }
+   ],
+   "homepage": "https://github.com/Yqnn/node-readdir-glob",
+   "bugs": {
+    "url": "https://github.com/Yqnn/node-readdir-glob/issues"
+   },
+   "dist": {
+    "shasum": "c3d831f51f5e7bfa62fa2ffbe4b508c640f09584",
+    "tarball": "http://localhost:3000/readdir-glob/-/readdir-glob-1.1.3.tgz",
+    "fileCount": 4,
+    "integrity": "sha512-v05I2k7xN8zXvPD9N+z/uhXPaj0sUFCe2rcWZIpBsqxfP7xXFQ0tipAd/wjj1YxWyWtUS5IDJpOG82JKt2EAVA==",
+    "signatures": [
+     {
+      "sig": "MEUCIDrQCo8KFQ27i5dO4GZc2IrFe4Qnm9PWWnvSNhQutTSUAiEApSyIY9IGTWj/ZDHEduHbGeRpaDKSU7EX+YsGkzPLe2o=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 23380,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkLchCACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmoQVRAAi3RBJ4e3LPIGpDC5xXJjK7BmkeQP7oSrzGl1s9BKBigtLwFE\r\npdvLL1Ikl58Q8r5/Dt09faJHwI6mnASVzhge334DoP5F77RWE1HGzF9vR3Mo\r\n8wzTLdMbM2f6H83l6ueYT/6Ve13ah+ozw1FgioJGoiFc4kMmPdjSYid4VIST\r\nJovgFpDfh+8wkr6j3knSRRObfUflHZWmG4IRVatB+5+PZneqMZzOwwVV4qHS\r\nc08v9Rxom8U364Ze0U6rqxRufC3sy3V42sOnAiMiGcXiPSQnGbPCnvMabATc\r\neCiwrQetnDo5+byLO9mPj6VBhqgUuIppw0f1XshaD69PqwiluvyDieAgZqwo\r\nGnwKGswxnulk7x58hEHQwPM6Kf6tU27Qv2cWSa6Oj1qv0V7TJwwvEqPN+Bnl\r\nhmVgSg+5Fm5XyCHKb8a3wCSpeI34PH+hq0NyrXT+wk72x4L3azvulrTuJGI7\r\nhueQyrmP8WjYFtCcfKZJcbgHsqjMspx/MKNLjqcgfxtwNJD7Yybp7whQUTvu\r\nBu5HdjPKLyH/TiRYp+CHxPmhLHwS53BqrAdJiJj+XYylRfuq9ROxHxtWayNE\r\nHcvOggEBhDP/pXssLVYscNkUfKDXoUauYuJyY8KdsGK/3UKbBzzbpi532aBv\r\nnNZ1Bvx2chACPuZjV9WWRRiMOT5iv0ReKFg=\r\n=GNg+\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "gitHead": "4b8c7d169824af423113de31b15189ad28746fcd",
+   "scripts": {
+    "test": "npx nyc --reporter=lcov --reporter=text-summary --reporter=html jasmine --config=jasmine.json",
+    "bench": "bash scripts/benchmark.sh",
+    "profile": "bash scripts/profile.sh && cat profile.txt",
+    "test-regen": "TEST_REGEN=1 jasmine --config=jasmine.json"
+   },
+   "_npmUser": {
+    "name": "yqnn",
+    "email": "ynn@free.fr"
+   },
+   "repository": {
+    "url": "git://github.com/Yqnn/node-readdir-glob.git",
+    "type": "git"
+   },
+   "_npmVersion": "8.11.0",
+   "description": "Recursive fs.readdir with streaming API and glob filtering.",
+   "directories": {},
+   "_nodeVersion": "16.16.0",
+   "dependencies": {
+    "minimatch": "^5.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "tick": "0.0.6",
+    "mkdirp": "^2.1.6",
+    "rimraf": "^3.0.2",
+    "jasmine": "^4.6.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/readdir-glob_1.1.3_1680721986659_0.9138951939715061",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "2.0.0": {
+   "name": "readdir-glob",
+   "version": "2.0.0",
+   "keywords": [
+    "recursive",
+    "fs",
+    "stream",
+    "streams",
+    "readdir",
+    "filesystem",
+    "find",
+    "filter",
+    "glob"
+   ],
+   "author": {
+    "name": "Yann Armelin"
+   },
+   "license": "Apache-2.0",
+   "_id": "readdir-glob@2.0.0",
+   "maintainers": [
+    {
+     "name": "yqnn",
+     "email": "ynn@free.fr"
+    }
+   ],
+   "homepage": "https://github.com/Yqnn/node-readdir-glob",
+   "bugs": {
+    "url": "https://github.com/Yqnn/node-readdir-glob/issues"
+   },
+   "dist": {
+    "shasum": "b7569a3ee8454a0774edaaad8425d78feb7b9de2",
+    "tarball": "http://localhost:3000/readdir-glob/-/readdir-glob-2.0.0.tgz",
+    "fileCount": 14,
+    "integrity": "sha512-Wlx1ZhthH6jlb7WgcvamQ/HRhJJhaC48565pH2LdYGZxh6B5rNeyYptuz6HrDjKn6Pb0a35jxd/u7ecRQ3GKrQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIGN8eDm5OOnL0xjuyAdOarNNypkRtZBeNN6dbQxtwQoHAiEAuFPkBxo4CEEpPDCyenE9pHXih8A7Y3Y4KjX2IkB3Jcg=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 66355
+   },
+   "main": "./dist/cjs/index.cjs.js",
+   "types": "./dist/cjs/index.cjs.d.ts",
+   "exports": {
+    "import": {
+     "types": "./dist/esm/index.d.ts",
+     "default": "./dist/esm/index.js"
+    },
+    "require": {
+     "types": "./dist/cjs/index.cjs.d.ts",
+     "default": "./dist/cjs/index.cjs.js"
+    }
+   },
+   "funding": {
+    "url": "https://github.com/sponsors/yqnn"
+   },
+   "gitHead": "e1b2513c35cf409eacf488fd624e53acfb8e0131",
+   "scripts": {
+    "test": "npx nyc --reporter=lcov --reporter=text-summary --reporter=html jasmine --config=jasmine.json",
+    "bench": "bash scripts/benchmark.sh",
+    "build": "rimraf dist && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json",
+    "profile": "bash scripts/profile.sh && cat profile.txt",
+    "test-regen": "TEST_REGEN=1 jasmine --config=jasmine.json"
+   },
+   "_npmUser": {
+    "name": "yqnn",
+    "email": "ynn@free.fr"
+   },
+   "repository": {
+    "url": "git://github.com/Yqnn/node-readdir-glob.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.5.0",
+   "description": "Recursive fs.readdir with streaming API and glob filtering.",
+   "directories": {},
+   "_nodeVersion": "20.12.1",
+   "dependencies": {
+    "minimatch": "^9.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "tick": "0.0.6",
+    "mkdirp": "^2.1.6",
+    "rimraf": "^3.0.2",
+    "jasmine": "^4.6.0",
+    "typescript": "^5.4.4",
+    "@types/node": "^20.12.5"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/readdir-glob_2.0.0_1712956856717_0.8271386362805886",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "2.0.1": {
+   "author": {
+    "name": "Yann Armelin"
+   },
+   "name": "readdir-glob",
+   "description": "Recursive fs.readdir with streaming API and glob filtering.",
+   "version": "2.0.1",
+   "homepage": "https://github.com/Yqnn/node-readdir-glob",
+   "repository": {
+    "type": "git",
+    "url": "git://github.com/Yqnn/node-readdir-glob.git"
+   },
+   "main": "./dist/cjs/index.cjs.js",
+   "funding": {
+    "url": "https://github.com/sponsors/yqnn"
+   },
+   "exports": {
+    "import": {
+     "default": "./dist/esm/index.js",
+     "types": "./dist/esm/index.d.ts"
+    },
+    "require": {
+     "default": "./dist/cjs/index.cjs.js",
+     "types": "./dist/cjs/index.cjs.d.ts"
+    }
+   },
+   "types": "./dist/cjs/index.cjs.d.ts",
+   "dependencies": {
+    "minimatch": "^9.0.0"
+   },
+   "devDependencies": {
+    "@types/node": "^20.12.5",
+    "jasmine": "^4.6.0",
+    "mkdirp": "^2.1.6",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2",
+    "tick": "0.0.6",
+    "tsconfig-to-dual-package": "^1.2.0",
+    "typescript": "^5.4.4"
+   },
+   "keywords": [
+    "recursive",
+    "fs",
+    "stream",
+    "streams",
+    "readdir",
+    "filesystem",
+    "find",
+    "filter",
+    "glob"
+   ],
+   "scripts": {
+    "test": "npx nyc --reporter=lcov --reporter=text-summary --reporter=html jasmine --config=jasmine.json",
+    "test-regen": "TEST_REGEN=1 jasmine --config=jasmine.json",
+    "build": "rimraf dist && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && tsconfig-to-dual-package tsconfig.esm.json tsconfig.cjs.json",
+    "bench": "bash scripts/benchmark.sh",
+    "profile": "bash scripts/profile.sh && cat profile.txt"
+   },
+   "license": "Apache-2.0",
+   "_id": "readdir-glob@2.0.1",
+   "gitHead": "d4858516ae2924e21a2b58673143103c0538e2c5",
+   "bugs": {
+    "url": "https://github.com/Yqnn/node-readdir-glob/issues"
+   },
+   "_nodeVersion": "20.12.1",
+   "_npmVersion": "10.5.0",
+   "dist": {
+    "integrity": "sha512-SDKnVa/A7eA/YigKmgFzVKfTqtS3iPcWckEGk3FsKWESt27PEchLo8Rk76FcCAvc10NAQHRRov3q5EUNN9L55A==",
+    "shasum": "5142992b486a455e3c5dd67d9682e6040fad53ce",
+    "tarball": "http://localhost:3000/readdir-glob/-/readdir-glob-2.0.1.tgz",
+    "fileCount": 16,
+    "unpackedSize": 69177,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIDWqYVSa27t7qnKp+5zgI3fzTyyxF54XYd0B/bu/fUyJAiEAg7kGR5m7H6/pxkJENCYIvyU2B30ehOUEUS9Lcc7y2UE="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "yqnn",
+    "email": "ynn@free.fr"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "yqnn",
+     "email": "ynn@free.fr"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/readdir-glob_2.0.1_1730148978332_0.24531472283978517"
+   },
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2020-07-22T12:35:38.474Z",
+  "modified": "2024-10-28T20:56:18.719Z",
+  "1.0.0": "2020-07-22T12:35:38.614Z",
+  "1.1.0": "2020-09-21T21:29:31.920Z",
+  "1.1.1": "2020-10-06T22:03:33.433Z",
+  "1.1.2": "2022-07-01T18:04:56.038Z",
+  "1.1.3": "2023-04-05T19:13:06.840Z",
+  "2.0.0": "2024-04-12T21:20:56.919Z",
+  "2.0.1": "2024-10-28T20:56:18.538Z"
+ },
+ "bugs": {
+  "url": "https://github.com/Yqnn/node-readdir-glob/issues"
+ },
+ "author": {
+  "name": "Yann Armelin"
+ },
+ "license": "Apache-2.0",
+ "homepage": "https://github.com/Yqnn/node-readdir-glob",
+ "keywords": [
+  "recursive",
+  "fs",
+  "stream",
+  "streams",
+  "readdir",
+  "filesystem",
+  "find",
+  "filter",
+  "glob"
+ ],
+ "repository": {
+  "type": "git",
+  "url": "git://github.com/Yqnn/node-readdir-glob.git"
+ },
+ "description": "Recursive fs.readdir with streaming API and glob filtering.",
+ "maintainers": [
+  {
+   "name": "yqnn",
+   "email": "ynn@free.fr"
+  }
+ ],
+ "readme": "# Readdir-Glob\n![Build Status](https://github.com/Yqnn/node-readdir-glob/actions/workflows/test.yml/badge.svg?branch=master) [![Coverage Status](https://coveralls.io/repos/github/Yqnn/node-readdir-glob/badge.svg?branch=master)](https://coveralls.io/github/Yqnn/node-readdir-glob?branch=master)\n\nRecursive version of fs.readdir wih stream API and glob filtering.\nUses the `minimatch` library to do its matching.\n\nRequirements:\n- 1.x.x requires Node.js 10.0 or later.\n- 2.x.x requires Node.js 14.0 or later.\n\n## Performances\n\nCompared to `glob`, `readdir-glob` is memory efficient: no matter the file system size, or the number of returned files, the memory usage is constant.\n\nThe CPU cost is proportional to the number of files in `root` folder, minus the number files in `options.skip` folders.\n\n**Advice**: For better performances use `options.skip` to restrict the search as much as possible.\n\n## Usage\n\nInstall with npm\n```\nnpm i readdir-glob\n```\n\n```javascript\nconst readdirGlob = require('readdir-glob');\nconst globber = readdirGlob('.', {pattern: '**/*.js'});\nglobber.on('match', match => {\n    // m.relative: relative path of the matched file\n    // m.absolute: absolute path of the matched file\n    // m.stat: stat of the matched file (only if stat:true option is used)\n});\nglobber.on('error', err => {\n    console.error('fatal error', err);\n});\nglobber.on('end', (m) => {\n    console.log('done');\n});\n```\n\n## readdirGlob(root, [options])\n\n* `root` `{String}` Path to be read recursively, *default*: `'.'`\n* `options` `{Object}` Options, *default*: `{}`\n\nReturns a EventEmitter reading given root recursively.\n\n### Properties\n\n* `options`: The options object passed in.\n* `paused`: Boolean which is set to true when calling `pause()`.\n* `aborted` Boolean which is set to true when calling `abort()`.  There is no way at this time to continue a glob search after aborting.\n\n### Events\n\n* `match`: Every time a match is found, this is emitted with the specific thing that matched.\n* `end`: When the matching is finished, this is emitted with all the matches found. \n* `error`: Emitted when an unexpected error is encountered.\n\n### Methods\n\n* `pause()`: Temporarily stop the search\n* `resume()`: Resume the search\n* `abort()`: Stop the search forever\n\n### Options\n\n* `pattern`: Glob pattern or Array of Glob patterns to match the found files with. A file has to match at least one of the provided patterns to be returned.\n* `ignore`: Glob pattern or Array of Glob patterns to exclude matches. If a file or a folder matches at least one of the provided patterns, it's not returned. It doesn't prevent files from folder content to be returned. Note: `ignore` patterns are *always* in `dot:true` mode.\n* `skip`: Glob pattern or Array of Glob patterns to exclude folders. If a folder matches one of the provided patterns, it's not returned, and it's not explored: this prevents any of its children to be returned. Note: `skip` patterns are *always* in `dot:true` mode.\n* `mark`: Add a `/` character to directory matches.\n* `stat`: Set to true to stat *all* results.  This reduces performance.\n* `silent`: When an unusual error is encountered when attempting to read a directory, a warning will be printed to stderr.  Set the `silent` option to true to suppress these warnings.\n* `nodir`: Do not match directories, only files.\n* `follow`: Follow symlinked directories. Note that requires to stat *all* results, and so reduces performance.\n\nThe following options apply only if `pattern` option is set, and are forwarded to `minimatch`:\n* `dot`: Allow `pattern` to match filenames starting with a period, even if the pattern does not explicitly have a period in that spot.\n* `noglobstar`: Disable `**` matching against multiple folder names.\n* `nocase`: Perform a case-insensitive match.  Note: on case-insensitive filesystems, non-magic patterns will match by default, since `stat` and `readdir` will not raise errors.\n* `matchBase`: Perform a basename-only match if the pattern does not  contain any slash characters.  That is, `*.js` would be treated as equivalent to `**/*.js`, matching all js files in all directories.\n\n\n## References\n\nUnit-test set is based on [node-glob](https://www.npmjs.com/package/glob) tests.\n",
+ "readmeFilename": "README.md",
+ "users": {
+  "flumpus-dev": true
+ }
+}
