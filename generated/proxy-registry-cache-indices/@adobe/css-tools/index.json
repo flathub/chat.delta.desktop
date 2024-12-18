@@ -1,9 +1,9 @@
 {
  "_id": "@adobe/css-tools",
- "_rev": "24-9076176b00a1e75a6bdc1f4bc43ad6dd",
+ "_rev": "25-0e86b3da2122c88d3d97afe9ff9801b8",
  "name": "@adobe/css-tools",
  "dist-tags": {
-  "latest": "4.4.0"
+  "latest": "4.4.1"
  },
  "versions": {
   "4.0.0-rc.2": {
@@ -3049,11 +3049,215 @@
     "tmp": "tmp/css-tools_4.4.0_1717539751984_0.48638802214444077",
     "host": "s3://npm-registry-packages"
    }
+  },
+  "4.4.1": {
+   "name": "@adobe/css-tools",
+   "version": "4.4.1",
+   "description": "CSS parser / stringifier",
+   "source": "src/index.ts",
+   "main": "./dist/index.cjs",
+   "module": "./dist/index.mjs",
+   "exports": {
+    "import": "./dist/index.mjs",
+    "types": "./dist/types.d.ts",
+    "require": "./dist/index.cjs"
+   },
+   "types": "./dist/types.d.ts",
+   "type": "module",
+   "devDependencies": {
+    "@parcel/packager-ts": "2.13.0",
+    "@parcel/transformer-typescript-types": "2.13.0",
+    "@types/benchmark": "^2.1.1",
+    "@types/bytes": "^3.1.1",
+    "@types/jest": "^29.5.3",
+    "@types/node": "^22.7.5",
+    "benchmark": "^2.1.4",
+    "bytes": "^3.1.0",
+    "gts": "^6.0.2",
+    "jest": "^29.6.2",
+    "parcel": "^2.13.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.0.2"
+   },
+   "scripts": {
+    "benchmark": "node benchmark/index.mjs",
+    "test": "jest",
+    "clean": "gts clean && rm -rf ./dist",
+    "build": "parcel build && node ./utils/fix-type-generation.cjs",
+    "fix": "gts fix",
+    "lint": "gts lint",
+    "prepack": "npm run build",
+    "prepare": "npm run build",
+    "pretest": "npm run build",
+    "posttest": "npm run lint"
+   },
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "contributors": [
+    {
+     "name": "Jean-Philippe Zolesio",
+     "email": "holblin@gmail.com"
+    }
+   ],
+   "license": "MIT",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adobe/css-tools.git"
+   },
+   "keywords": [
+    "css",
+    "parser",
+    "stringifier",
+    "stylesheet"
+   ],
+   "_id": "@adobe/css-tools@4.4.1",
+   "gitHead": "d7452810f05573b1ec54816833b83a5030f3af7d",
+   "bugs": {
+    "url": "https://github.com/adobe/css-tools/issues"
+   },
+   "homepage": "https://github.com/adobe/css-tools#readme",
+   "_nodeVersion": "18.20.4",
+   "_npmVersion": "10.7.0",
+   "dist": {
+    "integrity": "sha512-12WGKBQzjUAI4ayyF4IAtfw2QR/IDoqk6jTddXDhtYTJF9ASmoE1zst7cVtP0aL/F1jUJL5r+JxKXKEgHNbEUQ==",
+    "shasum": "2447a230bfe072c1659e6815129c03cf170710e3",
+    "tarball": "http://localhost:3000/@adobe/css-tools/-/css-tools-4.4.1.tgz",
+    "fileCount": 9,
+    "unpackedSize": 190257,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEYCIQDxbwM1bJXzo5toUJ4O3xEimLCLLeDQTSVQuvLfPAZEFwIhANHtQu+GgEnpwfvnh8MS4JA3YMo49RtOu979le2bfLGb"
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "adobe-admin",
+    "email": "grp-opensourceoffice@adobe.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "mhaack",
+     "email": "mhaack@adobe.com"
+    },
+    {
+     "name": "amol-anand",
+     "email": "amol@adobe.com"
+    },
+    {
+     "name": "doten",
+     "email": "doten@adobe.com"
+    },
+    {
+     "name": "stopp-adobe",
+     "email": "stopp@adobe.com"
+    },
+    {
+     "name": "dylandepass",
+     "email": "dylandepass@gmail.com"
+    },
+    {
+     "name": "djaeggi",
+     "email": "djaeggi@adobe.com"
+    },
+    {
+     "name": "adobehalls",
+     "email": "halls@adobe.com"
+    },
+    {
+     "name": "fullcolorcoder",
+     "email": "bradjohn@adobe.com"
+    },
+    {
+     "name": "marbec",
+     "email": "mabecker@adobe.com"
+    },
+    {
+     "name": "tripod",
+     "email": "tripod@bocanegra.ch"
+    },
+    {
+     "name": "garthdb",
+     "email": "garthdb@gmail.com"
+    },
+    {
+     "name": "lazd",
+     "email": "lazdnet@gmail.com"
+    },
+    {
+     "name": "adobe-admin",
+     "email": "grp-opensourceoffice@adobe.com"
+    },
+    {
+     "name": "patrickfulton",
+     "email": "patrickfulton@gmail.com"
+    },
+    {
+     "name": "trieloff",
+     "email": "lars@trieloff.net"
+    },
+    {
+     "name": "shazron",
+     "email": "shazron@gmail.com"
+    },
+    {
+     "name": "krisnye",
+     "email": "krisnye@gmail.com"
+    },
+    {
+     "name": "dcpfsdk",
+     "email": "dcpfsdk@adobe.com"
+    },
+    {
+     "name": "natebaldwin",
+     "email": "natebaldwindesign@gmail.com"
+    },
+    {
+     "name": "devongovett",
+     "email": "devongovett@gmail.com"
+    },
+    {
+     "name": "aspro83",
+     "email": "danniintheus@gmail.com"
+    },
+    {
+     "name": "symanovi",
+     "email": "symanovi@adobe.com"
+    },
+    {
+     "name": "dpfister",
+     "email": "dominique.pfister@gmail.com"
+    },
+    {
+     "name": "stefan-guggisberg",
+     "email": "sg@adobe.com"
+    },
+    {
+     "name": "korra",
+     "email": "npmjs.karo@cupdev.net"
+    },
+    {
+     "name": "rofe",
+     "email": "npm@rofe.com"
+    },
+    {
+     "name": "kptdobe",
+     "email": "kptdobe@gmail.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/css-tools_4.4.1_1731606491732_0.821356192088095"
+   },
+   "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2022-06-10T00:36:56.548Z",
-  "modified": "2024-11-04T14:12:28.034Z",
+  "modified": "2024-11-14T17:48:12.554Z",
   "4.0.0-rc.2": "2022-06-10T00:36:56.910Z",
   "4.0.0-rc.3": "2022-06-10T17:29:18.734Z",
   "4.0.0-rc.4": "2022-06-10T18:12:00.484Z",
@@ -3070,7 +3274,8 @@
   "4.3.1": "2023-08-15T22:13:49.361Z",
   "4.3.2": "2023-11-30T18:29:52.049Z",
   "4.3.3": "2024-01-25T02:06:31.290Z",
-  "4.4.0": "2024-06-04T22:22:32.248Z"
+  "4.4.0": "2024-06-04T22:22:32.248Z",
+  "4.4.1": "2024-11-14T17:48:12.091Z"
  },
  "bugs": {
   "url": "https://github.com/adobe/css-tools/issues"
@@ -3088,8 +3293,8 @@
   "stylesheet"
  ],
  "repository": {
-  "url": "git+https://github.com/adobe/css-tools.git",
-  "type": "git"
+  "type": "git",
+  "url": "git+https://github.com/adobe/css-tools.git"
  },
  "description": "CSS parser / stringifier",
  "contributors": [
@@ -3100,112 +3305,112 @@
  ],
  "maintainers": [
   {
-   "email": "mhaack@adobe.com",
-   "name": "mhaack"
+   "name": "mhaack",
+   "email": "mhaack@adobe.com"
   },
   {
-   "email": "amol@adobe.com",
-   "name": "amol-anand"
+   "name": "amol-anand",
+   "email": "amol@adobe.com"
   },
   {
-   "email": "doten@adobe.com",
-   "name": "doten"
+   "name": "doten",
+   "email": "doten@adobe.com"
   },
   {
-   "email": "stopp@adobe.com",
-   "name": "stopp-adobe"
+   "name": "stopp-adobe",
+   "email": "stopp@adobe.com"
   },
   {
-   "email": "dylandepass@gmail.com",
-   "name": "dylandepass"
+   "name": "dylandepass",
+   "email": "dylandepass@gmail.com"
   },
   {
-   "email": "djaeggi@adobe.com",
-   "name": "djaeggi"
+   "name": "djaeggi",
+   "email": "djaeggi@adobe.com"
   },
   {
-   "email": "halls@adobe.com",
-   "name": "adobehalls"
+   "name": "adobehalls",
+   "email": "halls@adobe.com"
   },
   {
-   "email": "bradjohn@adobe.com",
-   "name": "fullcolorcoder"
+   "name": "fullcolorcoder",
+   "email": "bradjohn@adobe.com"
   },
   {
-   "email": "mabecker@adobe.com",
-   "name": "marbec"
+   "name": "marbec",
+   "email": "mabecker@adobe.com"
   },
   {
-   "email": "tripod@bocanegra.ch",
-   "name": "tripod"
+   "name": "tripod",
+   "email": "tripod@bocanegra.ch"
   },
   {
-   "email": "garthdb@gmail.com",
-   "name": "garthdb"
+   "name": "garthdb",
+   "email": "garthdb@gmail.com"
   },
   {
-   "email": "lazdnet@gmail.com",
-   "name": "lazd"
+   "name": "lazd",
+   "email": "lazdnet@gmail.com"
   },
   {
-   "email": "grp-opensourceoffice@adobe.com",
-   "name": "adobe-admin"
+   "name": "adobe-admin",
+   "email": "grp-opensourceoffice@adobe.com"
   },
   {
-   "email": "patrickfulton@gmail.com",
-   "name": "patrickfulton"
+   "name": "patrickfulton",
+   "email": "patrickfulton@gmail.com"
   },
   {
-   "email": "lars@trieloff.net",
-   "name": "trieloff"
+   "name": "trieloff",
+   "email": "lars@trieloff.net"
   },
   {
-   "email": "shazron@gmail.com",
-   "name": "shazron"
+   "name": "shazron",
+   "email": "shazron@gmail.com"
   },
   {
-   "email": "krisnye@gmail.com",
-   "name": "krisnye"
+   "name": "krisnye",
+   "email": "krisnye@gmail.com"
   },
   {
-   "email": "dcpfsdk@adobe.com",
-   "name": "dcpfsdk"
+   "name": "dcpfsdk",
+   "email": "dcpfsdk@adobe.com"
   },
   {
-   "email": "natebaldwindesign@gmail.com",
-   "name": "natebaldwin"
+   "name": "natebaldwin",
+   "email": "natebaldwindesign@gmail.com"
   },
   {
-   "email": "devongovett@gmail.com",
-   "name": "devongovett"
+   "name": "devongovett",
+   "email": "devongovett@gmail.com"
   },
   {
-   "email": "danniintheus@gmail.com",
-   "name": "aspro83"
+   "name": "aspro83",
+   "email": "danniintheus@gmail.com"
   },
   {
-   "email": "symanovi@adobe.com",
-   "name": "symanovi"
+   "name": "symanovi",
+   "email": "symanovi@adobe.com"
   },
   {
-   "email": "dominique.pfister@gmail.com",
-   "name": "dpfister"
+   "name": "dpfister",
+   "email": "dominique.pfister@gmail.com"
   },
   {
-   "email": "sg@adobe.com",
-   "name": "stefan-guggisberg"
+   "name": "stefan-guggisberg",
+   "email": "sg@adobe.com"
   },
   {
-   "email": "npmjs.karo@cupdev.net",
-   "name": "korra"
+   "name": "korra",
+   "email": "npmjs.karo@cupdev.net"
   },
   {
-   "email": "npm@rofe.com",
-   "name": "rofe"
+   "name": "rofe",
+   "email": "npm@rofe.com"
   },
   {
-   "email": "kptdobe@gmail.com",
-   "name": "kptdobe"
+   "name": "kptdobe",
+   "email": "kptdobe@gmail.com"
   }
  ],
  "readme": "# @adobe/css-tools\n\n> This is a fork of the npm css package due to low maintenance\n\nCSS parser / stringifier.\n\n## Installation\n\n    $ npm install @adobe/css-tools\n\n## Usage\n\n```js\nimport { parse, stringify } from '@adobe/css-tools'\nlet obj = parse('body { font-size: 12px; }', options);\nlet css = stringify(obj, options);\n```\n\n## API\n\n### parse(code, [options])\n\nAccepts a CSS string and returns an AST `object`.\n\n`options`:\n\n- silent: silently fail on parse errors.\n- source: the path to the file containing `css`. Makes errors and source\n  maps more helpful, by letting them know where code comes from.\n\n### stringify(object, [options])\n\nAccepts an AST `object` (as `css.parse` produces) and returns a CSS string.\n\n`options`:\n\n- indent: the string used to indent the output. Defaults to two spaces.\n- compress: omit comments and extraneous whitespace.\n\n### Example\n\n```js\nvar ast = parse('body { font-size: 12px; }', { source: 'source.css' });\n\nvar css = stringify(ast);\n```\n\n### Errors\n\nErrors thrown during parsing have the following properties:\n\n- message: `String`. The full error message with the source position.\n- reason: `String`. The error message without position.\n- filename: `String` or `undefined`. The value of `options.source` if\n  passed to `css.parse`. Otherwise `undefined`.\n- line: `Integer`.\n- column: `Integer`.\n- source: `String`. The portion of code that couldn't be parsed.\n\nWhen parsing with the `silent` option, errors are listed in the\n`parsingErrors` property of the [`stylesheet`](#stylesheet) node instead\nof being thrown.\n\nIf you create any errors in plugins such as in\n[rework](https://github.com/reworkcss/rework), you __must__ set the same\nproperties for consistency.\n\n## AST\n\nInteractively explore the AST with <http://iamdustan.com/reworkcss_ast_explorer/>.\n\n### Common properties\n\nAll nodes have the following properties.\n\n#### position\n\nInformation about the position in the source string that corresponds to\nthe node.\n\n`Object`:\n\n- start: `Object`:\n  - line: `Number`.\n  - column: `Number`.\n- end: `Object`:\n  - line: `Number`.\n  - column: `Number`.\n- source: `String` or `undefined`. The value of `options.source` if passed to\n  `css.parse`. Otherwise `undefined`.\n- content: `String`. The full source string passed to `css.parse`.\n\nThe line and column numbers are 1-based: The first line is 1 and the first\ncolumn of a line is 1 (not 0).\n\nThe `position` property lets you know from which source file the node comes\nfrom (if available), what that file contains, and what part of that file was\nparsed into the node.\n\n#### type\n\n`String`. The possible values are the ones listed in the Types section below.\n\n#### parent\n\nA reference to the parent node, or `null` if the node has no parent.\n\n### Types\n\nThe available values of `node.type` are listed below, as well as the available\nproperties of each node (other than the common properties listed above.)\n\n#### stylesheet\n\nThe root node returned by `css.parse`.\n\n- stylesheet: `Object`:\n  - rules: `Array` of nodes with the types `rule`, `comment` and any of the\n    at-rule types.\n  - parsingErrors: `Array` of `Error`s. Errors collected during parsing when\n    option `silent` is true.\n\n#### rule\n\n- selectors: `Array` of `String`s. The list of selectors of the rule, split\n  on commas. Each selector is trimmed from whitespace and comments.\n- declarations: `Array` of nodes with the types `declaration` and `comment`.\n\n#### declaration\n\n- property: `String`. The property name, trimmed from whitespace and\n  comments. May not be empty.\n- value: `String`. The value of the property, trimmed from whitespace and\n  comments. Empty values are allowed.\n\n#### comment\n\nA rule-level or declaration-level comment. Comments inside selectors,\nproperties and values etc. are lost.\n\n- comment: `String`. The part between the starting `/*` and the ending `*/`\n  of the comment, including whitespace.\n\n#### charset\n\nThe `@charset` at-rule.\n\n- charset: `String`. The part following `@charset `.\n\n#### custom-media\n\nThe `@custom-media` at-rule.\n\n- name: `String`. The `--`-prefixed name.\n- media: `String`. The part following the name.\n\n#### document\n\nThe `@document` at-rule.\n\n- document: `String`. The part following `@document `.\n- vendor: `String` or `undefined`. The vendor prefix in `@document`, or\n  `undefined` if there is none.\n- rules: `Array` of nodes with the types `rule`, `comment` and any of the\n  at-rule types.\n\n#### font-face\n\nThe `@font-face` at-rule.\n\n- declarations: `Array` of nodes with the types `declaration` and `comment`.\n\n#### host\n\nThe `@host` at-rule.\n\n- rules: `Array` of nodes with the types `rule`, `comment` and any of the\n  at-rule types.\n\n#### import\n\nThe `@import` at-rule.\n\n- import: `String`. The part following `@import `.\n\n#### keyframes\n\nThe `@keyframes` at-rule.\n\n- name: `String`. The name of the keyframes rule.\n- vendor: `String` or `undefined`. The vendor prefix in `@keyframes`, or\n  `undefined` if there is none.\n- keyframes: `Array` of nodes with the types `keyframe` and `comment`.\n\n#### keyframe\n\n- values: `Array` of `String`s. The list of “selectors” of the keyframe rule,\n  split on commas. Each “selector” is trimmed from whitespace.\n- declarations: `Array` of nodes with the types `declaration` and `comment`.\n\n#### media\n\nThe `@media` at-rule.\n\n- media: `String`. The part following `@media `.\n- rules: `Array` of nodes with the types `rule`, `comment` and any of the\n  at-rule types.\n\n#### namespace\n\nThe `@namespace` at-rule.\n\n- namespace: `String`. The part following `@namespace `.\n\n#### page\n\nThe `@page` at-rule.\n\n- selectors: `Array` of `String`s. The list of selectors of the rule, split\n  on commas. Each selector is trimmed from whitespace and comments.\n- declarations: `Array` of nodes with the types `declaration` and `comment`.\n\n#### supports\n\nThe `@supports` at-rule.\n\n- supports: `String`. The part following `@supports `.\n- rules: `Array` of nodes with the types `rule`, `comment` and any of the\n  at-rule types.\n\n### container\n\nThe `@container` at-rule.\n\n- conatiner: `String`. The part following `@container `.\n- rules: `Array` of nodes with the types `rule`, `comment` and any of the\n  at-rule types.\n\n### layer\n\nThe `@layer` at-rule.\n\n- layer: `String`. The part following `@layer `.\n- rules: `Array` of nodes with the types `rule`, `comment` and any of the\n  at-rule types. This may be null, if the rule did not contain any.\n\n### starting-style\n\nThe `@starting-style` at-rule.\n\n- rules: `Array` of nodes with the types `rule`, `comment` and any of the\n  at-rule types.\n\n### Example\n\nCSS:\n\n```css\nbody {\n  background: #eee;\n  color: #888;\n}\n```\n\nParse tree:\n\n```json\n{\n  \"type\": \"stylesheet\",\n  \"stylesheet\": {\n    \"rules\": [\n      {\n        \"type\": \"rule\",\n        \"selectors\": [\n          \"body\"\n        ],\n        \"declarations\": [\n          {\n            \"type\": \"declaration\",\n            \"property\": \"background\",\n            \"value\": \"#eee\",\n            \"position\": {\n              \"start\": {\n                \"line\": 2,\n                \"column\": 3\n              },\n              \"end\": {\n                \"line\": 2,\n                \"column\": 19\n              }\n            }\n          },\n          {\n            \"type\": \"declaration\",\n            \"property\": \"color\",\n            \"value\": \"#888\",\n            \"position\": {\n              \"start\": {\n                \"line\": 3,\n                \"column\": 3\n              },\n              \"end\": {\n                \"line\": 3,\n                \"column\": 14\n              }\n            }\n          }\n        ],\n        \"position\": {\n          \"start\": {\n            \"line\": 1,\n            \"column\": 1\n          },\n          \"end\": {\n            \"line\": 4,\n            \"column\": 2\n          }\n        }\n      }\n    ]\n  }\n}\n```\n\n## License\n\nMIT\n",

@@ -1,10 +1,9 @@
 {
  "_id": "lilconfig",
- "_rev": "18-31a93853814f911d13df1c8b2bce58ae",
+ "_rev": "19-6ae6de082c35083237f7d71a9b4824b2",
  "name": "lilconfig",
- "description": "A zero-dependency alternative to cosmiconfig",
  "dist-tags": {
-  "latest": "3.1.2"
+  "latest": "3.1.3"
  },
  "versions": {
   "0.0.1": {
@@ -1205,6 +1204,83 @@
   "3.1.2": {
    "name": "lilconfig",
    "version": "3.1.2",
+   "keywords": [
+    "cosmiconfig",
+    "config",
+    "configuration",
+    "search"
+   ],
+   "author": {
+    "name": "antonk52"
+   },
+   "license": "MIT",
+   "_id": "lilconfig@3.1.2",
+   "maintainers": [
+    {
+     "name": "antonk52",
+     "email": "halloy52@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/antonk52/lilconfig#readme",
+   "bugs": {
+    "url": "https://github.com/antonk52/lilconfig/issues"
+   },
+   "dist": {
+    "shasum": "e4a7c3cb549e3a606c8dcc32e5ae1005e62c05cb",
+    "tarball": "http://localhost:3000/lilconfig/-/lilconfig-3.1.2.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-eop+wDAvpItUys0FWkHIKeC9ybYrTGbU41U5K7+bttZZeohvnY7M9dZ5kB21GNWiFT2q1OoPTvncPCgSOVO5ow==",
+    "signatures": [
+     {
+      "sig": "MEUCIGnlRczLYl4KuueAANXrEby7q8D8XXyiF+B9apVxkr6ZAiEAufHHCsRvs9GWJg1qPdSX41FOQ6v5/uBWuC7iKh9xNWM=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 17879
+   },
+   "main": "src/index.js",
+   "types": "src/index.d.ts",
+   "engines": {
+    "node": ">=14"
+   },
+   "funding": "https://github.com/sponsors/antonk52",
+   "gitHead": "d06ee70948c65a0a49925bceb5037d9e97034854",
+   "scripts": {
+    "lint": "biome ci ./src",
+    "test": "NODE_OPTIONS=--experimental-vm-modules ./node_modules/.bin/jest --coverage",
+    "types": "tsc"
+   },
+   "_npmUser": {
+    "name": "antonk52",
+    "email": "halloy52@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/antonk52/lilconfig.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.2.4",
+   "description": "A zero-dependency alternative to cosmiconfig",
+   "directories": {},
+   "_nodeVersion": "20.11.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "uvu": "^0.5.6",
+    "jest": "^29.7.0",
+    "typescript": "^5.3.3",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^14.18.63",
+    "cosmiconfig": "^8.3.6",
+    "@biomejs/biome": "^1.6.0",
+    "@types/webpack-env": "^1.18.5"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/lilconfig_3.1.2_1717958353367_0.979094239401266",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.1.3": {
+   "name": "lilconfig",
+   "version": "3.1.3",
    "description": "A zero-dependency alternative to cosmiconfig",
    "main": "src/index.js",
    "types": "src/index.d.ts",
@@ -1244,21 +1320,21 @@
    "engines": {
     "node": ">=14"
    },
-   "_id": "lilconfig@3.1.2",
-   "gitHead": "d06ee70948c65a0a49925bceb5037d9e97034854",
+   "_id": "lilconfig@3.1.3",
+   "gitHead": "77d7186c37a3838c85d03e126172f82a8a474ece",
    "homepage": "https://github.com/antonk52/lilconfig#readme",
-   "_nodeVersion": "20.11.0",
-   "_npmVersion": "10.2.4",
+   "_nodeVersion": "23.3.0",
+   "_npmVersion": "10.8.1",
    "dist": {
-    "integrity": "sha512-eop+wDAvpItUys0FWkHIKeC9ybYrTGbU41U5K7+bttZZeohvnY7M9dZ5kB21GNWiFT2q1OoPTvncPCgSOVO5ow==",
-    "shasum": "e4a7c3cb549e3a606c8dcc32e5ae1005e62c05cb",
-    "tarball": "http://localhost:3000/lilconfig/-/lilconfig-3.1.2.tgz",
+    "integrity": "sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==",
+    "shasum": "a1bcfd6257f9585bf5ae14ceeebb7b559025e4c4",
+    "tarball": "http://localhost:3000/lilconfig/-/lilconfig-3.1.3.tgz",
     "fileCount": 5,
-    "unpackedSize": 17879,
+    "unpackedSize": 17959,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIGnlRczLYl4KuueAANXrEby7q8D8XXyiF+B9apVxkr6ZAiEAufHHCsRvs9GWJg1qPdSX41FOQ6v5/uBWuC7iKh9xNWM="
+      "sig": "MEYCIQD8bwR048YWsbpn+/l/UM2kAZZ2EDS7c7OJgJ4FCJbnRwIhAKl6XH03p7VR9iefq/Ai5yz0vL8ttFe8ReA2iyYUIIj7"
      }
     ]
    },
@@ -1275,14 +1351,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/lilconfig_3.1.2_1717958353367_0.979094239401266"
+    "tmp": "tmp/lilconfig_3.1.3_1733226557018_0.7852559988205983"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2020-02-09T22:28:01.685Z",
-  "modified": "2024-06-09T18:39:13.681Z",
+  "modified": "2024-12-03T11:49:17.366Z",
   "0.0.1": "2020-02-09T22:28:01.818Z",
   "0.0.2": "2020-06-08T21:18:39.442Z",
   "0.0.3": "2020-07-11T08:15:27.179Z",
@@ -1298,32 +1374,34 @@
   "3.0.0": "2023-11-18T23:26:59.320Z",
   "3.1.0": "2024-02-14T21:40:14.810Z",
   "3.1.1": "2024-02-18T14:22:33.423Z",
-  "3.1.2": "2024-06-09T18:39:13.514Z"
+  "3.1.2": "2024-06-09T18:39:13.514Z",
+  "3.1.3": "2024-12-03T11:49:17.194Z"
  },
- "maintainers": [
-  {
-   "name": "antonk52",
-   "email": "halloy52@gmail.com"
-  }
- ],
+ "bugs": {
+  "url": "https://github.com/antonk52/lilconfig/issues"
+ },
  "author": {
   "name": "antonk52"
  },
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/antonk52/lilconfig.git"
- },
+ "license": "MIT",
+ "homepage": "https://github.com/antonk52/lilconfig#readme",
  "keywords": [
   "cosmiconfig",
   "config",
   "configuration",
   "search"
  ],
- "license": "MIT",
- "homepage": "https://github.com/antonk52/lilconfig#readme",
- "bugs": {
-  "url": "https://github.com/antonk52/lilconfig/issues"
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/antonk52/lilconfig.git"
  },
+ "description": "A zero-dependency alternative to cosmiconfig",
+ "maintainers": [
+  {
+   "name": "antonk52",
+   "email": "halloy52@gmail.com"
+  }
+ ],
  "readme": "# Lilconfig ⚙️\n[![npm version](https://badge.fury.io/js/lilconfig.svg)](https://badge.fury.io/js/lilconfig)\n[![install size](https://packagephobia.now.sh/badge?p=lilconfig)](https://packagephobia.now.sh/result?p=lilconfig)\n[![Coverage Status](https://coveralls.io/repos/github/antonk52/lilconfig/badge.svg)](https://coveralls.io/github/antonk52/lilconfig)\n\nA zero-dependency alternative to [cosmiconfig](https://www.npmjs.com/package/cosmiconfig) with the same API.\n\n## Installation\n\n```sh\nnpm install lilconfig\n```\n\n## Usage\n\n```js\nimport {lilconfig, lilconfigSync} from 'lilconfig';\n\n// all keys are optional\nconst options = {\n    stopDir: '/Users/you/some/dir',\n    searchPlaces: ['package.json', 'myapp.conf.js'],\n    ignoreEmptySearchPlaces: false\n}\n\nlilconfig(\n    'myapp',\n    options // optional\n).search() // Promise<LilconfigResult>\n\nlilconfigSync(\n    'myapp',\n    options // optional\n).load(pathToConfig) // LilconfigResult\n\n/**\n * LilconfigResult\n * {\n *   config: any; // your config\n *   filepath: string;\n * }\n */\n```\n\n## ESM\n\nESM configs can be loaded with **async API only**. Specifically `js` files in projects with `\"type\": \"module\"` in `package.json` or `mjs` files.\n\n## Difference to `cosmiconfig`\nLilconfig does not intend to be 100% compatible with `cosmiconfig` but tries to mimic it where possible. The key difference is **no** support for yaml files out of the box(`lilconfig` attempts to parse files with no extension as JSON instead of YAML). You can still add the support for YAML files by providing a loader, see an [example](#yaml-loader) below.\n\n### Options difference between the two.\n\n|cosmiconfig option      | lilconfig |\n|------------------------|-----------|\n|cache                   | ✅        |\n|loaders                 | ✅        |\n|ignoreEmptySearchPlaces | ✅        |\n|packageProp             | ✅        |\n|searchPlaces            | ✅        |\n|stopDir                 | ✅        |\n|transform               | ✅        |\n\n## Loaders examples\n\n### Yaml loader\n\nIf you need the YAML support you can provide your own loader\n\n```js\nimport {lilconfig} from 'lilconfig';\nimport yaml from 'yaml';\n\nfunction loadYaml(filepath, content) {\n    return yaml.parse(content);\n}\n\nconst options = {\n    loaders: {\n        '.yaml': loadYaml,\n        '.yml': loadYaml,\n        // loader for files with no extension\n        noExt: loadYaml\n    }\n};\n\nlilconfig('myapp', options)\n    .search()\n    .then(result => {\n        result // {config, filepath}\n    });\n```\n\n## Version correlation\n\n- lilconig v1 → cosmiconfig v6\n- lilconig v2 → cosmiconfig v7\n- lilconig v3 → cosmiconfig v8\n",
  "readmeFilename": "readme.md"
 }

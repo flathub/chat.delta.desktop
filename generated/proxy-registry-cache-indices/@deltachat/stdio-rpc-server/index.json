@@ -1,9 +1,9 @@
 {
  "_id": "@deltachat/stdio-rpc-server",
- "_rev": "38-bc2bd277ec4dc84acb86049744c1aec7",
+ "_rev": "48-5e5edb30086a8ed7a392fc96668f5fd7",
  "name": "@deltachat/stdio-rpc-server",
  "dist-tags": {
-  "latest": "1.149.0"
+  "latest": "1.152.1"
  },
  "versions": {
   "1.137.4": {
@@ -3431,69 +3431,10 @@
    }
   },
   "1.149.0": {
-   "license": "MPL-2.0",
-   "main": "index.js",
    "name": "@deltachat/stdio-rpc-server",
-   "optionalDependencies": {
-    "@deltachat/stdio-rpc-server-darwin-arm64": "1.149.0",
-    "@deltachat/stdio-rpc-server-android-arm64": "1.149.0",
-    "@deltachat/stdio-rpc-server-linux-arm64": "1.149.0",
-    "@deltachat/stdio-rpc-server-linux-arm": "1.149.0",
-    "@deltachat/stdio-rpc-server-android-arm": "1.149.0",
-    "@deltachat/stdio-rpc-server-win32-ia32": "1.149.0",
-    "@deltachat/stdio-rpc-server-linux-ia32": "1.149.0",
-    "@deltachat/stdio-rpc-server-darwin-x64": "1.149.0",
-    "@deltachat/stdio-rpc-server-win32-x64": "1.149.0",
-    "@deltachat/stdio-rpc-server-linux-x64": "1.149.0"
-   },
-   "peerDependencies": {
-    "@deltachat/jsonrpc-client": "*"
-   },
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/deltachat/deltachat-core-rust.git"
-   },
-   "scripts": {
-    "prepack": "node scripts/update_optional_dependencies_and_version.js"
-   },
-   "type": "module",
-   "types": "index.d.ts",
    "version": "1.149.0",
+   "license": "MPL-2.0",
    "_id": "@deltachat/stdio-rpc-server@1.149.0",
-   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
-   "bugs": {
-    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
-   },
-   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
-   "_integrity": "sha512-smPa2QTrctIHiTVdkS5pEhuLW5tOItHoZXHueF9QDEtZiFLFyT5c+3Lr8p0XhobrdH/FJWsAfLMO6XJEqE4NFw==",
-   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.149.0.tgz",
-   "_from": "file:deltachat-stdio-rpc-server-1.149.0.tgz",
-   "_nodeVersion": "20.18.0",
-   "_npmVersion": "10.8.2",
-   "dist": {
-    "integrity": "sha512-smPa2QTrctIHiTVdkS5pEhuLW5tOItHoZXHueF9QDEtZiFLFyT5c+3Lr8p0XhobrdH/FJWsAfLMO6XJEqE4NFw==",
-    "shasum": "8c010d0d2b3fe34eb576933e146bdd85b1b20c37",
-    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.149.0.tgz",
-    "fileCount": 6,
-    "unpackedSize": 10418,
-    "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.149.0",
-     "provenance": {
-      "predicateType": "https://slsa.dev/provenance/v1"
-     }
-    },
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQD9hno65hlXE1WyyaPjMuzx0pi4kwxCA5Fj6qiiPVoe4wIgcYwaOM7yOB/s07QrWvh46kZBP1O7EzNx72QKeUowBKE="
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "link2xt",
-    "email": "link2xt@testrun.org"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "link2xt",
@@ -3512,16 +3453,955 @@
      "email": "npm-package-manager@simonlaux.de"
     }
    ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "8c010d0d2b3fe34eb576933e146bdd85b1b20c37",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.149.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-smPa2QTrctIHiTVdkS5pEhuLW5tOItHoZXHueF9QDEtZiFLFyT5c+3Lr8p0XhobrdH/FJWsAfLMO6XJEqE4NFw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQD9hno65hlXE1WyyaPjMuzx0pi4kwxCA5Fj6qiiPVoe4wIgcYwaOM7yOB/s07QrWvh46kZBP1O7EzNx72QKeUowBKE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.149.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 10418
+   },
+   "main": "index.js",
+   "type": "module",
+   "_from": "file:deltachat-stdio-rpc-server-1.149.0.tgz",
+   "types": "index.d.ts",
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.149.0.tgz",
+   "_integrity": "sha512-smPa2QTrctIHiTVdkS5pEhuLW5tOItHoZXHueF9QDEtZiFLFyT5c+3Lr8p0XhobrdH/FJWsAfLMO6XJEqE4NFw==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-linux-arm": "1.149.0",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.149.0",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.149.0",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.149.0",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.149.0",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.149.0",
+    "@deltachat/stdio-rpc-server-android-arm": "1.149.0",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.149.0",
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.149.0",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.149.0"
+   },
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/stdio-rpc-server_1.149.0_1730811218110_0.6198533539801478"
+    "tmp": "tmp/stdio-rpc-server_1.149.0_1730811218110_0.6198533539801478",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.150.0": {
+   "name": "@deltachat/stdio-rpc-server",
+   "version": "1.150.0",
+   "license": "MPL-2.0",
+   "_id": "@deltachat/stdio-rpc-server@1.150.0",
+   "maintainers": [
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    },
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "5f92568051c19a552a709faa60ed2e827b7b1f54",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.150.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-dzpEIlFTQt+nGMTrKiE3GxQTj6fpMcXqzzxxwqJKyUAZoGONZ8WciNuRXwA+TXfYJ27ymZPiOV5SfEQJlhlqYg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCv+MwTClaGA0GPZC32fXh3oCnvxigiOjGEAwIOMJzxVQIgKy1GwLPaC4cIKDmoZElUQYmD0UxkIIiQyK4mVh+rfMA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.150.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 10418
+   },
+   "main": "index.js",
+   "type": "module",
+   "_from": "file:deltachat-stdio-rpc-server-1.150.0.tgz",
+   "types": "index.d.ts",
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.150.0.tgz",
+   "_integrity": "sha512-dzpEIlFTQt+nGMTrKiE3GxQTj6fpMcXqzzxxwqJKyUAZoGONZ8WciNuRXwA+TXfYJ27ymZPiOV5SfEQJlhlqYg==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-linux-arm": "1.150.0",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.150.0",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.150.0",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.150.0",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.150.0",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.150.0",
+    "@deltachat/stdio-rpc-server-android-arm": "1.150.0",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.150.0",
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.150.0",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.150.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/stdio-rpc-server_1.150.0_1732203168086_0.9912181539284979",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.151.0": {
+   "name": "@deltachat/stdio-rpc-server",
+   "version": "1.151.0",
+   "license": "MPL-2.0",
+   "_id": "@deltachat/stdio-rpc-server@1.151.0",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "93b52cbfbb76b5620f7c22dc722212aaedc686ee",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.151.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-p+ogat24H5w3Nf+BJOKJulzWcupMAWdSDXZ3LRVHW0Z+0xASK8fwmsUN10asEqPmcR0Z1M8P8qu5TU2YY73lQQ==",
+    "signatures": [
+     {
+      "sig": "MEUCID/2z7iBlSJ3vl++HiW6lZMmk3dwFCo9rMOOocijJGqoAiEA0e+HFuEuLuutAk8XlLhju9P1AR6sh6AgQKIfHLxH1DM=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.151.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 10418
+   },
+   "main": "index.js",
+   "type": "module",
+   "_from": "file:deltachat-stdio-rpc-server-1.151.0.tgz",
+   "types": "index.d.ts",
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.151.0.tgz",
+   "_integrity": "sha512-p+ogat24H5w3Nf+BJOKJulzWcupMAWdSDXZ3LRVHW0Z+0xASK8fwmsUN10asEqPmcR0Z1M8P8qu5TU2YY73lQQ==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-linux-arm": "1.151.0",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.151.0",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.151.0",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.151.0",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.151.0",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.151.0",
+    "@deltachat/stdio-rpc-server-android-arm": "1.151.0",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.151.0",
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.151.0",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.151.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/stdio-rpc-server_1.151.0_1732401724008_0.316078562799575",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.151.1": {
+   "name": "@deltachat/stdio-rpc-server",
+   "version": "1.151.1",
+   "license": "MPL-2.0",
+   "_id": "@deltachat/stdio-rpc-server@1.151.1",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "8c0d4ab40162d3b11c6e58397d2eae8b2ed3ed8f",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.151.1.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-LX9tf1HDvzONslxsVWuSW8qlrM+/8/ETlGX+ct9TEuXUb7Hv63f52NkVZVMiwuUkmrl0ZE9Q1eBt36KKZ4mBEQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIBsDlKaEe5mQOgcEEqye6pnuLlNMv5+WlxpN/VXJ0tkQAiApKJNYLkZFD+5FTy3bKGdJP27/zqBvq1NuuPz35wcWrQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.151.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 10418
+   },
+   "main": "index.js",
+   "type": "module",
+   "_from": "file:deltachat-stdio-rpc-server-1.151.1.tgz",
+   "types": "index.d.ts",
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.151.1.tgz",
+   "_integrity": "sha512-LX9tf1HDvzONslxsVWuSW8qlrM+/8/ETlGX+ct9TEuXUb7Hv63f52NkVZVMiwuUkmrl0ZE9Q1eBt36KKZ4mBEQ==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-linux-arm": "1.151.1",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.151.1",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.151.1",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.151.1",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.151.1",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.151.1",
+    "@deltachat/stdio-rpc-server-android-arm": "1.151.1",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.151.1",
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.151.1",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.151.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/stdio-rpc-server_1.151.1_1732460705119_0.8475410908268777",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.151.2": {
+   "name": "@deltachat/stdio-rpc-server",
+   "version": "1.151.2",
+   "license": "MPL-2.0",
+   "_id": "@deltachat/stdio-rpc-server@1.151.2",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "efbbb2b76b3606c2e27e8b88cf5a853cd5c34dab",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.151.2.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-zuYvtpApD9ds+wIFc/QtcD9aKis5BLmwGmIiAxJQxFxS1ds/0+RbCwqKW8ORE69efM5/eCQk2nGwmwRHsjQibg==",
+    "signatures": [
+     {
+      "sig": "MEQCIHAnT82agLxsI64LiL+JUTkzyLtPW+JZQc3+Xxp6qdXrAiA/C8KHh8eqqoki5PWec0Rw6tFmG/6lGWd8bD6lmG8BKA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.151.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 10418
+   },
+   "main": "index.js",
+   "type": "module",
+   "_from": "file:deltachat-stdio-rpc-server-1.151.2.tgz",
+   "types": "index.d.ts",
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.151.2.tgz",
+   "_integrity": "sha512-zuYvtpApD9ds+wIFc/QtcD9aKis5BLmwGmIiAxJQxFxS1ds/0+RbCwqKW8ORE69efM5/eCQk2nGwmwRHsjQibg==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "directories": {},
+   "_nodeVersion": "20.18.1",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-linux-arm": "1.151.2",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.151.2",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.151.2",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.151.2",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.151.2",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.151.2",
+    "@deltachat/stdio-rpc-server-android-arm": "1.151.2",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.151.2",
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.151.2",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.151.2"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/stdio-rpc-server_1.151.2_1732895576480_0.445450995589481",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.151.3": {
+   "name": "@deltachat/stdio-rpc-server",
+   "version": "1.151.3",
+   "license": "MPL-2.0",
+   "_id": "@deltachat/stdio-rpc-server@1.151.3",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "617b672ce17009493f812b1c9949ea8a1e076901",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.151.3.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-nWrjHVbObZWp8sGKd9gIsm7i6qUsK00VgoNQMkeB8ZtA7vHjtxS98LzBYjo9EknUn9ZBsHKiCf/PGJKmfgi9OQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIFdlFzOtRDO/fCaQmgg+AkQl6Vk23MBZLevMbKhkgTAjAiEAzDjlc9yMr7eU/l8u2RB11CouKFVLL1Gub+GKcL0JytQ=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.151.3",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 10418
+   },
+   "main": "index.js",
+   "type": "module",
+   "_from": "file:deltachat-stdio-rpc-server-1.151.3.tgz",
+   "types": "index.d.ts",
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.151.3.tgz",
+   "_integrity": "sha512-nWrjHVbObZWp8sGKd9gIsm7i6qUsK00VgoNQMkeB8ZtA7vHjtxS98LzBYjo9EknUn9ZBsHKiCf/PGJKmfgi9OQ==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "directories": {},
+   "_nodeVersion": "20.18.1",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-linux-arm": "1.151.3",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.151.3",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.151.3",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.151.3",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.151.3",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.151.3",
+    "@deltachat/stdio-rpc-server-android-arm": "1.151.3",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.151.3",
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.151.3",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.151.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/stdio-rpc-server_1.151.3_1733164462199_0.967250537036987",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.151.4": {
+   "name": "@deltachat/stdio-rpc-server",
+   "version": "1.151.4",
+   "license": "MPL-2.0",
+   "_id": "@deltachat/stdio-rpc-server@1.151.4",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "7678512eba983058ded41e681d3f12431a3a6ab1",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.151.4.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-RS1ECIHzm5d2GLZd3EH4FrDh8Xi1kPeg+W/g5cSjJmxzjRpQdCJgKh/E6K55UBR4u7fCQVz/EXd8k7DHJruFxw==",
+    "signatures": [
+     {
+      "sig": "MEQCIFnR72Dnl3bdB+em82hxioaWg+jcYu6JsOkYyRAFTrbXAiAbwBjPZZKu5iNuVuRuDBn2560dbKLefCeEoNJMLY2sOw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.151.4",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 10419
+   },
+   "main": "index.js",
+   "type": "module",
+   "_from": "file:deltachat-stdio-rpc-server-1.151.4.tgz",
+   "types": "index.d.ts",
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.151.4.tgz",
+   "_integrity": "sha512-RS1ECIHzm5d2GLZd3EH4FrDh8Xi1kPeg+W/g5cSjJmxzjRpQdCJgKh/E6K55UBR4u7fCQVz/EXd8k7DHJruFxw==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "directories": {},
+   "_nodeVersion": "20.18.1",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-linux-arm": "1.151.4",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.151.4",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.151.4",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.151.4",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.151.4",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.151.4",
+    "@deltachat/stdio-rpc-server-android-arm": "1.151.4",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.151.4",
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.151.4",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.151.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/stdio-rpc-server_1.151.4_1733239994025_0.38783074850662214",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.151.5": {
+   "name": "@deltachat/stdio-rpc-server",
+   "version": "1.151.5",
+   "license": "MPL-2.0",
+   "_id": "@deltachat/stdio-rpc-server@1.151.5",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "a35b11130647b44bac1ca3c08436908e08192c33",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.151.5.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-A4BqNj0uBEHB2v6yn68VQN97WBqDB3tviZ8L+MtVuCHcNBSmHRgj3/hpaxGHD/+ZBKrzs8MIkBRr6pBeHsa5xw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCtGveM0vPiwfxMbEV1p/miQ/MKto+1+ps3yXrVwTeDmQIhAOKWF/PeUQptOSFa9g1AILgsI8TUlQlTK9jUBqEcujzV",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.151.5",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 10419
+   },
+   "main": "index.js",
+   "type": "module",
+   "_from": "file:deltachat-stdio-rpc-server-1.151.5.tgz",
+   "types": "index.d.ts",
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.151.5.tgz",
+   "_integrity": "sha512-A4BqNj0uBEHB2v6yn68VQN97WBqDB3tviZ8L+MtVuCHcNBSmHRgj3/hpaxGHD/+ZBKrzs8MIkBRr6pBeHsa5xw==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "directories": {},
+   "_nodeVersion": "20.18.1",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-linux-arm": "1.151.5",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.151.5",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.151.5",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.151.5",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.151.5",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.151.5",
+    "@deltachat/stdio-rpc-server-android-arm": "1.151.5",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.151.5",
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.151.5",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.151.5"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/stdio-rpc-server_1.151.5_1733407196488_0.04114638386264402",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.151.6": {
+   "name": "@deltachat/stdio-rpc-server",
+   "version": "1.151.6",
+   "license": "MPL-2.0",
+   "_id": "@deltachat/stdio-rpc-server@1.151.6",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "dd2c740a3c071f2fc7a0c08133ac0f86f8df16bf",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.151.6.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-jCtN3yxF22hj/lsxzOaTP7v8gQ9bSrXQc96tqzA+qYNDuxJnexvPye40aBSg3aYQphpgobpao2iOPewWbUAc4Q==",
+    "signatures": [
+     {
+      "sig": "MEUCIGbNglThoKNB+Kcl9xv3wIC9jjihgwDkg+C7YadFl1saAiEAyTKdmWHfvf7EnQ0XDqTSXwXHJiFFTiPndcf+7f7/dFY=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.151.6",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 10419
+   },
+   "main": "index.js",
+   "type": "module",
+   "_from": "file:deltachat-stdio-rpc-server-1.151.6.tgz",
+   "types": "index.d.ts",
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.151.6.tgz",
+   "_integrity": "sha512-jCtN3yxF22hj/lsxzOaTP7v8gQ9bSrXQc96tqzA+qYNDuxJnexvPye40aBSg3aYQphpgobpao2iOPewWbUAc4Q==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "directories": {},
+   "_nodeVersion": "20.18.1",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-linux-arm": "1.151.6",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.151.6",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.151.6",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.151.6",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.151.6",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.151.6",
+    "@deltachat/stdio-rpc-server-android-arm": "1.151.6",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.151.6",
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.151.6",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.151.6"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/stdio-rpc-server_1.151.6_1733914198723_0.48361380164506773",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.152.0": {
+   "name": "@deltachat/stdio-rpc-server",
+   "version": "1.152.0",
+   "license": "MPL-2.0",
+   "_id": "@deltachat/stdio-rpc-server@1.152.0",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "17a6a338bca35e307b0ae0261ec324b9bec46d40",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.152.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-A3zthtdlJrEsAP7AFxpWK7XZDuhCScOVzCAqeWWUjTzhB71BNvvSxSmpmSeX9VIHLoXhIh2vgmzTx4LduV1rFA==",
+    "signatures": [
+     {
+      "sig": "MEUCICMf5gbHhDgJHkFq9l8HdITUeGaoG3jyAYmeO3Id5ZkFAiEAg+Wlnmlw8SE580CJUkveaQa57bA8a3tcHtxmBjfpLts=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.152.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 10419
+   },
+   "main": "index.js",
+   "type": "module",
+   "_from": "file:deltachat-stdio-rpc-server-1.152.0.tgz",
+   "types": "index.d.ts",
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.152.0.tgz",
+   "_integrity": "sha512-A3zthtdlJrEsAP7AFxpWK7XZDuhCScOVzCAqeWWUjTzhB71BNvvSxSmpmSeX9VIHLoXhIh2vgmzTx4LduV1rFA==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "directories": {},
+   "_nodeVersion": "20.18.1",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-linux-arm": "1.152.0",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.152.0",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.152.0",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.152.0",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.152.0",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.152.0",
+    "@deltachat/stdio-rpc-server-android-arm": "1.152.0",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.152.0",
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.152.0",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.152.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/stdio-rpc-server_1.152.0_1734020826493_0.7771899661659347",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.152.1": {
+   "license": "MPL-2.0",
+   "main": "index.js",
+   "name": "@deltachat/stdio-rpc-server",
+   "optionalDependencies": {
+    "@deltachat/stdio-rpc-server-darwin-arm64": "1.152.1",
+    "@deltachat/stdio-rpc-server-android-arm64": "1.152.1",
+    "@deltachat/stdio-rpc-server-linux-arm64": "1.152.1",
+    "@deltachat/stdio-rpc-server-linux-arm": "1.152.1",
+    "@deltachat/stdio-rpc-server-android-arm": "1.152.1",
+    "@deltachat/stdio-rpc-server-win32-ia32": "1.152.1",
+    "@deltachat/stdio-rpc-server-linux-ia32": "1.152.1",
+    "@deltachat/stdio-rpc-server-darwin-x64": "1.152.1",
+    "@deltachat/stdio-rpc-server-win32-x64": "1.152.1",
+    "@deltachat/stdio-rpc-server-linux-x64": "1.152.1"
+   },
+   "peerDependencies": {
+    "@deltachat/jsonrpc-client": "*"
+   },
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git"
+   },
+   "scripts": {
+    "prepack": "node scripts/update_optional_dependencies_and_version.js"
+   },
+   "type": "module",
+   "types": "index.d.ts",
+   "version": "1.152.1",
+   "_id": "@deltachat/stdio-rpc-server@1.152.1",
+   "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "_integrity": "sha512-cBfiVV5wvyLF054wYinjvg+iFGssbiqkRra6OmP+eiS08NfYC8ZtiLko29nV4R7BCX8ERb4YG6IE/wSvyZRq4g==",
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-1.152.1.tgz",
+   "_from": "file:deltachat-stdio-rpc-server-1.152.1.tgz",
+   "_nodeVersion": "20.18.1",
+   "_npmVersion": "10.8.2",
+   "dist": {
+    "integrity": "sha512-cBfiVV5wvyLF054wYinjvg+iFGssbiqkRra6OmP+eiS08NfYC8ZtiLko29nV4R7BCX8ERb4YG6IE/wSvyZRq4g==",
+    "shasum": "440ceb40dcddc041fba6ecde8ad1b85c17fdb7ef",
+    "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-1.152.1.tgz",
+    "fileCount": 6,
+    "unpackedSize": 10419,
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@1.152.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQCe7/d9hOEJiD33m5gLKWAszR8Xfxa9C+X/MIuRF5jDzgIgD+rEBd114ElDKjCGOgSVBSGbKkyYAK3EMo5syULSKDU="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/stdio-rpc-server_1.152.1_1734467459890_0.33910216505666146"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2024-05-10T04:29:06.206Z",
-  "modified": "2024-11-05T12:53:38.729Z",
+  "modified": "2024-12-17T20:31:00.549Z",
   "1.137.4": "2024-05-10T04:29:06.569Z",
   "1.138.0": "2024-05-14T16:14:41.329Z",
   "1.138.5": "2024-05-16T16:06:55.085Z",
@@ -3560,7 +4440,17 @@
   "1.148.5": "2024-10-27T17:50:24.494Z",
   "1.148.6": "2024-10-31T17:18:05.544Z",
   "1.148.7": "2024-11-03T22:35:36.670Z",
-  "1.149.0": "2024-11-05T12:53:38.282Z"
+  "1.149.0": "2024-11-05T12:53:38.282Z",
+  "1.150.0": "2024-11-21T15:32:48.271Z",
+  "1.151.0": "2024-11-23T22:42:04.186Z",
+  "1.151.1": "2024-11-24T15:05:05.293Z",
+  "1.151.2": "2024-11-29T15:52:56.632Z",
+  "1.151.3": "2024-12-02T18:34:22.379Z",
+  "1.151.4": "2024-12-03T15:33:14.212Z",
+  "1.151.5": "2024-12-05T13:59:56.636Z",
+  "1.151.6": "2024-12-11T10:49:58.891Z",
+  "1.152.0": "2024-12-12T16:27:06.698Z",
+  "1.152.1": "2024-12-17T20:31:00.083Z"
  },
  "bugs": {
   "url": "https://github.com/deltachat/deltachat-core-rust/issues"
@@ -3574,22 +4464,22 @@
  "description": "This is the successor of `deltachat-node`, it does not use NAPI bindings but instead uses stdio executables to let you talk to core over jsonrpc over stdio. This simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).",
  "maintainers": [
   {
-   "name": "link2xt",
-   "email": "link2xt@testrun.org"
-  },
-  {
    "name": "missytake",
    "email": "missytake@systemli.org"
+  },
+  {
+   "name": "simon-laux",
+   "email": "npm-package-manager@simonlaux.de"
   },
   {
    "name": "jikstra",
    "email": "jikstra@disroot.org"
   },
   {
-   "name": "simon-laux",
-   "email": "npm-package-manager@simonlaux.de"
+   "name": "link2xt",
+   "email": "link2xt@testrun.org"
   }
  ],
- "readme": "## npm package for deltachat-rpc-server\n\nThis is the successor of `deltachat-node`,\nit does not use NAPI bindings but instead uses stdio executables\nto let you talk to core over jsonrpc over stdio.\nThis simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).\n\n## Usage\n\n> The **minimum** nodejs version for this package is `16`\n\n```\nnpm i @deltachat/stdio-rpc-server @deltachat/jsonrpc-client\n```\n\n```js\nimport { startDeltaChat } from \"@deltachat/stdio-rpc-server\";\nimport { C } from \"@deltachat/jsonrpc-client\";\n\nasync function main() {\n    const dc = await startDeltaChat(\"deltachat-data\");\n    console.log(await dc.rpc.getSystemInfo());\n    dc.close()\n}\nmain()\n```\n\nFor a more complete example refer to https://github.com/deltachat-bot/echo/pull/69/files (TODO change link when pr is merged).\n\n## How to use on an unsupported platform\n\n<!-- todo instructions, will uses an env var for pointing to `deltachat-rpc-server` binary -->\n\n<!-- todo copy parts from https://github.com/deltachat/deltachat-desktop/blob/7045c6f549e4b9d5caa0709d5bd314bbd9fd53db/docs/UPDATE_CORE.md -->\n\n## How does it work when you install it\n\nNPM automatically installs platform dependent optional dependencies when `os` and `cpu` fields are set correctly.\n\nreferences:\n\n- https://napi.rs/docs/deep-dive/release#3-the-native-addon-for-different-platforms-is-distributed-through-different-npm-packages, [webarchive version](https://web.archive.org/web/20240309234250/https://napi.rs/docs/deep-dive/release#3-the-native-addon-for-different-platforms-is-distributed-through-different-npm-packages)\n- https://docs.npmjs.com/cli/v6/configuring-npm/package-json#cpu\n- https://docs.npmjs.com/cli/v6/configuring-npm/package-json#os\n\nWhen you import this package it searches for the rpc server in the following locations and order:\n\n1. `DELTA_CHAT_RPC_SERVER` environment variable\n2. use the PATH when `{takeVersionFromPATH: true}` is supplied in the options. \n3. prebuilds in npm packages\n\nso by default it uses the prebuilds.\n\n## How do you built this package in CI\n\n- To build platform packages, run the `build_platform_package.py` script:\n  ```\n  python3 build_platform_package.py <cargo-target>\n  # example\n  python3 build_platform_package.py x86_64-apple-darwin\n  ```\n- Then pass it as an artifact to the last CI action that publishes the main package.\n- upload all packages from `deltachat-rpc-server/npm-package/platform_package`.\n- then publish `deltachat-rpc-server/npm-package`,\n  - this will run `update_optional_dependencies_and_version.js` (in the `prepack` script),\n    which puts all platform packages into `optionalDependencies` and updates the `version` in `package.json`\n\n## How to build a version you can use localy on your host machine for development\n\nYou can not install the npm packet from the previous section locally, unless you have a local npm registry set up where you upload it too. This is why we have seperate scripts for making it work for local installation.\n\n- If you just need your host platform run `python scripts/make_local_dev_version.py`\n- note: this clears the `platform_package` folder\n- (advanced) If you need more than one platform for local install you can just run `node scripts/update_optional_dependencies_and_version.js` after building multiple plaftorms with `build_platform_package.py`\n\n## Thanks to nlnet\n\nThe initial work on this package was funded by nlnet as part of the [Delta Tauri](https://nlnet.nl/project/DeltaTauri/) Project.\n",
+ "readme": "## npm package for deltachat-rpc-server\n\nThis is the successor of `deltachat-node`,\nit does not use NAPI bindings but instead uses stdio executables\nto let you talk to core over jsonrpc over stdio.\nThis simplifies cross-compilation and even reduces binary size (no CFFI layer and no NAPI layer).\n\n## Usage\n\n> The **minimum** nodejs version for this package is `16`\n\n```\nnpm i @deltachat/stdio-rpc-server @deltachat/jsonrpc-client\n```\n\n```js\nimport { startDeltaChat } from \"@deltachat/stdio-rpc-server\";\nimport { C } from \"@deltachat/jsonrpc-client\";\n\nasync function main() {\n    const dc = await startDeltaChat(\"deltachat-data\");\n    console.log(await dc.rpc.getSystemInfo());\n    dc.close()\n}\nmain()\n```\n\nFor a more complete example refer to https://github.com/deltachat-bot/echo/pull/69/files (TODO change link when pr is merged).\n\n## How to use on an unsupported platform\n\n<!-- todo instructions, will uses an env var for pointing to `deltachat-rpc-server` binary -->\n\n<!-- todo copy parts from https://github.com/deltachat/deltachat-desktop/blob/7045c6f549e4b9d5caa0709d5bd314bbd9fd53db/docs/UPDATE_CORE.md -->\n\n## How does it work when you install it\n\nNPM automatically installs platform dependent optional dependencies when `os` and `cpu` fields are set correctly.\n\nreferences:\n\n- https://napi.rs/docs/deep-dive/release#3-the-native-addon-for-different-platforms-is-distributed-through-different-npm-packages, [webarchive version](https://web.archive.org/web/20240309234250/https://napi.rs/docs/deep-dive/release#3-the-native-addon-for-different-platforms-is-distributed-through-different-npm-packages)\n- https://docs.npmjs.com/cli/v6/configuring-npm/package-json#cpu\n- https://docs.npmjs.com/cli/v6/configuring-npm/package-json#os\n\nWhen you import this package it searches for the rpc server in the following locations and order:\n\n1. `DELTA_CHAT_RPC_SERVER` environment variable\n2. use the PATH when `{takeVersionFromPATH: true}` is supplied in the options. \n3. prebuilds in npm packages\n\nso by default it uses the prebuilds.\n\n## How do you built this package in CI\n\n- To build platform packages, run the `build_platform_package.py` script:\n  ```\n  python3 build_platform_package.py <cargo-target>\n  # example\n  python3 build_platform_package.py x86_64-apple-darwin\n  ```\n- Then pass it as an artifact to the last CI action that publishes the main package.\n- upload all packages from `deltachat-rpc-server/npm-package/platform_package`.\n- then publish `deltachat-rpc-server/npm-package`,\n  - this will run `update_optional_dependencies_and_version.js` (in the `prepack` script),\n    which puts all platform packages into `optionalDependencies` and updates the `version` in `package.json`\n\n## How to build a version you can use locally on your host machine for development\n\nYou can not install the npm packet from the previous section locally, unless you have a local npm registry set up where you upload it too. This is why we have separate scripts for making it work for local installation.\n\n- If you just need your host platform run `python scripts/make_local_dev_version.py`\n- note: this clears the `platform_package` folder\n- (advanced) If you need more than one platform for local install you can just run `node scripts/update_optional_dependencies_and_version.js` after building multiple platforms with `build_platform_package.py`\n\n## Thanks to nlnet\n\nThe initial work on this package was funded by nlnet as part of the [Delta Tauri](https://nlnet.nl/project/DeltaTauri/) Project.\n",
  "readmeFilename": "README.md"
 }
