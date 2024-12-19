@@ -1,10 +1,11 @@
 {
  "_id": "hosted-git-info",
- "_rev": "117-5e163e05b707dea74b5e1a384efd717a",
+ "_rev": "121-00f0f67001ceebb31f81a1e8a2ada8f2",
  "name": "hosted-git-info",
  "dist-tags": {
   "ancient-legacy-fixes": "2.8.9",
-  "latest": "8.0.0"
+  "latest": "8.0.2",
+  "backport-v6": "6.1.3"
  },
  "versions": {
   "1.0.0": {
@@ -5501,6 +5502,464 @@
   "8.0.0": {
    "name": "hosted-git-info",
    "version": "8.0.0",
+   "keywords": [
+    "git",
+    "github",
+    "bitbucket",
+    "gitlab"
+   ],
+   "author": {
+    "name": "GitHub Inc."
+   },
+   "license": "ISC",
+   "_id": "hosted-git-info@8.0.0",
+   "maintainers": [
+    {
+     "name": "hashtagchris",
+     "email": "hashtagchris@github.com"
+    },
+    {
+     "name": "reggi",
+     "email": "reggi@github.com"
+    },
+    {
+     "name": "npm-cli-ops",
+     "email": "npm-cli+bot@github.com"
+    },
+    {
+     "name": "saquibkhan",
+     "email": "saquibkhan@github.com"
+    },
+    {
+     "name": "fritzy",
+     "email": "fritzy@github.com"
+    },
+    {
+     "name": "gar",
+     "email": "gar+npm@danger.computer"
+    }
+   ],
+   "homepage": "https://github.com/npm/hosted-git-info",
+   "bugs": {
+    "url": "https://github.com/npm/hosted-git-info/issues"
+   },
+   "tap": {
+    "color": 1,
+    "nyc-arg": [
+     "--exclude",
+     "tap-snapshots/**"
+    ],
+    "coverage": true
+   },
+   "dist": {
+    "shasum": "b20f1d55d492eb18d70a252d456a2158aab9f244",
+    "tarball": "http://localhost:3000/hosted-git-info/-/hosted-git-info-8.0.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-4nw3vOVR+vHUOT8+U4giwe2tcGv+R3pwwRidUe67DoMBTjhrfr6rZYJVVwdkBE+Um050SG+X9tf0Jo4fOpn01w==",
+    "signatures": [
+     {
+      "sig": "MEQCID0YZmCvuAVXtQgRuTspuszfBg47oHF3W4CJueKFMyt/AiAMoiY0zuxPPCfL1o3yWT2nDjExs7MBxO+Hjd36qnAlYQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/hosted-git-info@8.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 26621
+   },
+   "main": "./lib/index.js",
+   "engines": {
+    "node": "^18.17.0 || >=20.5.0"
+   },
+   "gitHead": "9b07068a083af94b26ab71e07f618c45dd8f7ce6",
+   "scripts": {
+    "lint": "npm run eslint",
+    "snap": "tap",
+    "test": "tap",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lintfix": "npm run eslint -- --fix",
+    "postlint": "template-oss-check",
+    "posttest": "npm run lint",
+    "test:coverage": "tap --coverage-report=html",
+    "template-oss-apply": "template-oss-apply --force"
+   },
+   "_npmUser": {
+    "name": "npm-cli-ops",
+    "email": "npm-cli+bot@github.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/npm/hosted-git-info.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "Provides metadata and conversions from repository urls for GitHub, Bitbucket and GitLab",
+   "directories": {},
+   "templateOSS": {
+    "publish": "true",
+    "version": "4.23.3",
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+   },
+   "_nodeVersion": "22.8.0",
+   "dependencies": {
+    "lru-cache": "^10.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.0.1",
+    "@npmcli/template-oss": "4.23.3",
+    "@npmcli/eslint-config": "^5.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/hosted-git-info_8.0.0_1725486544609_0.407825434037858",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "8.0.1": {
+   "name": "hosted-git-info",
+   "version": "8.0.1",
+   "keywords": [
+    "git",
+    "github",
+    "bitbucket",
+    "gitlab"
+   ],
+   "author": {
+    "name": "GitHub Inc."
+   },
+   "license": "ISC",
+   "_id": "hosted-git-info@8.0.1",
+   "maintainers": [
+    {
+     "name": "hashtagchris",
+     "email": "hashtagchris@github.com"
+    },
+    {
+     "name": "reggi",
+     "email": "reggi@github.com"
+    },
+    {
+     "name": "npm-cli-ops",
+     "email": "npm-cli+bot@github.com"
+    },
+    {
+     "name": "saquibkhan",
+     "email": "saquibkhan@github.com"
+    },
+    {
+     "name": "fritzy",
+     "email": "fritzy@github.com"
+    },
+    {
+     "name": "gar",
+     "email": "gar+npm@danger.computer"
+    }
+   ],
+   "homepage": "https://github.com/npm/hosted-git-info",
+   "bugs": {
+    "url": "https://github.com/npm/hosted-git-info/issues"
+   },
+   "tap": {
+    "color": 1,
+    "nyc-arg": [
+     "--exclude",
+     "tap-snapshots/**"
+    ],
+    "coverage": true
+   },
+   "dist": {
+    "shasum": "ca24f5b5efae20b0e6895d5f1138525ce1c8fc77",
+    "tarball": "http://localhost:3000/hosted-git-info/-/hosted-git-info-8.0.1.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-/rLVQvNpQDQ2wG90ooueQe3hsRuoNBT3kh/vwcjgPjWCEODZbm44YwrShVr4Pnb9tNCIJlI6Q+OKxXLngV591g==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCC3gDSb4t0xnMXgpZLvjx5R5ADOjmIIgacaj3LBWEM+wIhAL3fyaQKzssMFyYSjRSJ+ygtGzLKEOBkwHYaJZ0uhHhd",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/hosted-git-info@8.0.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 26796
+   },
+   "main": "./lib/index.js",
+   "engines": {
+    "node": "^18.17.0 || >=20.5.0"
+   },
+   "gitHead": "1547692ad93cf2b1ede7ee7c3c3a66734a8f468e",
+   "scripts": {
+    "lint": "npm run eslint",
+    "snap": "tap",
+    "test": "tap",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lintfix": "npm run eslint -- --fix",
+    "postlint": "template-oss-check",
+    "posttest": "npm run lint",
+    "test:coverage": "tap --coverage-report=html",
+    "template-oss-apply": "template-oss-apply --force"
+   },
+   "_npmUser": {
+    "name": "npm-cli-ops",
+    "email": "npm-cli+bot@github.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/npm/hosted-git-info.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Provides metadata and conversions from repository urls for GitHub, Bitbucket and GitLab",
+   "directories": {},
+   "templateOSS": {
+    "publish": "true",
+    "version": "4.23.4",
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+   },
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "lru-cache": "^10.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.0.1",
+    "@npmcli/template-oss": "4.23.4",
+    "@npmcli/eslint-config": "^5.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/hosted-git-info_8.0.1_1732140063019_0.9591245237954829",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "6.1.2": {
+   "name": "hosted-git-info",
+   "version": "6.1.2",
+   "keywords": [
+    "git",
+    "github",
+    "bitbucket",
+    "gitlab"
+   ],
+   "author": {
+    "name": "GitHub Inc."
+   },
+   "license": "ISC",
+   "_id": "hosted-git-info@6.1.2",
+   "maintainers": [
+    {
+     "name": "hashtagchris",
+     "email": "hashtagchris@github.com"
+    },
+    {
+     "name": "reggi",
+     "email": "reggi@github.com"
+    },
+    {
+     "name": "npm-cli-ops",
+     "email": "npm-cli+bot@github.com"
+    },
+    {
+     "name": "saquibkhan",
+     "email": "saquibkhan@github.com"
+    },
+    {
+     "name": "fritzy",
+     "email": "fritzy@github.com"
+    },
+    {
+     "name": "gar",
+     "email": "gar+npm@danger.computer"
+    }
+   ],
+   "homepage": "https://github.com/npm/hosted-git-info",
+   "bugs": {
+    "url": "https://github.com/npm/hosted-git-info/issues"
+   },
+   "tap": {
+    "color": 1,
+    "nyc-arg": [
+     "--exclude",
+     "tap-snapshots/**"
+    ],
+    "coverage": true
+   },
+   "dist": {
+    "shasum": "515dff87c3a2c053920d8897f1fe273f3504e078",
+    "tarball": "http://localhost:3000/hosted-git-info/-/hosted-git-info-6.1.2.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-BGqEHfzDiVmLEV5uzvXn1qKrmXfNPVDBh86Epw5S6P4XYl+4yx4dawEj7p+B9NVVolIkX11DwmKiZ3YHK7XMwg==",
+    "signatures": [
+     {
+      "sig": "MEQCIAPus0mz1pFWU69CaJ0y+WjRKgnQeff/dRHKaF97n1PkAiBbFjO8ZOQK9MQeCNku9M3dHGnmA9Ri6ZXoG7Kl9OBEcw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 26826
+   },
+   "main": "./lib/index.js",
+   "engines": {
+    "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+   },
+   "scripts": {
+    "lint": "npm run eslint",
+    "snap": "tap",
+    "test": "tap",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lintfix": "npm run eslint -- --fix",
+    "postlint": "template-oss-check",
+    "posttest": "npm run lint",
+    "test:coverage": "tap --coverage-report=html",
+    "template-oss-apply": "template-oss-apply --force"
+   },
+   "_npmUser": {
+    "name": "gar",
+    "email": "gar+npm@danger.computer"
+   },
+   "repository": {
+    "url": "git+https://github.com/npm/hosted-git-info.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.1",
+   "description": "Provides metadata and conversions from repository urls for GitHub, Bitbucket and GitLab",
+   "directories": {},
+   "templateOSS": {
+    "version": "4.23.4",
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+   },
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "lru-cache": "^7.5.1"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "devDependencies": {
+    "tap": "^16.0.1",
+    "@npmcli/template-oss": "4.23.4",
+    "@npmcli/eslint-config": "^4.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/hosted-git-info_6.1.2_1732210905574_0.6878463280320932",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "6.1.3": {
+   "name": "hosted-git-info",
+   "version": "6.1.3",
+   "keywords": [
+    "git",
+    "github",
+    "bitbucket",
+    "gitlab"
+   ],
+   "author": {
+    "name": "GitHub Inc."
+   },
+   "license": "ISC",
+   "_id": "hosted-git-info@6.1.3",
+   "maintainers": [
+    {
+     "name": "hashtagchris",
+     "email": "hashtagchris@github.com"
+    },
+    {
+     "name": "reggi",
+     "email": "reggi@github.com"
+    },
+    {
+     "name": "npm-cli-ops",
+     "email": "npm-cli+bot@github.com"
+    },
+    {
+     "name": "saquibkhan",
+     "email": "saquibkhan@github.com"
+    },
+    {
+     "name": "fritzy",
+     "email": "fritzy@github.com"
+    },
+    {
+     "name": "gar",
+     "email": "gar+npm@danger.computer"
+    }
+   ],
+   "homepage": "https://github.com/npm/hosted-git-info",
+   "bugs": {
+    "url": "https://github.com/npm/hosted-git-info/issues"
+   },
+   "tap": {
+    "color": 1,
+    "nyc-arg": [
+     "--exclude",
+     "tap-snapshots/**"
+    ],
+    "coverage": true
+   },
+   "dist": {
+    "shasum": "2ee1a14a097a1236bddf8672c35b613c46c55946",
+    "tarball": "http://localhost:3000/hosted-git-info/-/hosted-git-info-6.1.3.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-HVJyzUrLIL1c0QmviVh5E8VGyUS7xCFPS6yydaVd1UegW+ibV/CohqTH9MkOLDp5o+rb82DMo77PTuc9F/8GKw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDNIK73cFbJsyiUFQTTq+iNLasNFTYTmGar0NCgiLXC/gIhAL03fnWarFs+OyY9Z1CrM7co6DLPGEshHXU8VGKNNRZ0",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 26832
+   },
+   "main": "./lib/index.js",
+   "engines": {
+    "node": "^14.17.0 || ^16.13.0 || >=18.0.0"
+   },
+   "scripts": {
+    "lint": "npm run eslint",
+    "snap": "tap",
+    "test": "tap",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lintfix": "npm run eslint -- --fix",
+    "postlint": "template-oss-check",
+    "posttest": "npm run lint",
+    "test:coverage": "tap --coverage-report=html",
+    "template-oss-apply": "template-oss-apply --force"
+   },
+   "_npmUser": {
+    "name": "gar",
+    "email": "gar+npm@danger.computer"
+   },
+   "repository": {
+    "url": "git+https://github.com/npm/hosted-git-info.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.1",
+   "description": "Provides metadata and conversions from repository urls for GitHub, Bitbucket and GitLab",
+   "directories": {},
+   "templateOSS": {
+    "version": "4.23.4",
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+   },
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "lru-cache": "^7.5.1"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "devDependencies": {
+    "tap": "^16.0.1",
+    "@npmcli/template-oss": "4.23.4",
+    "@npmcli/eslint-config": "^4.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/hosted-git-info_6.1.3_1732222371248_0.038856090432837664",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "8.0.2": {
+   "name": "hosted-git-info",
+   "version": "8.0.2",
    "description": "Provides metadata and conversions from repository urls for GitHub, Bitbucket and GitLab",
    "main": "./lib/index.js",
    "repository": {
@@ -5537,7 +5996,7 @@
    },
    "devDependencies": {
     "@npmcli/eslint-config": "^5.0.0",
-    "@npmcli/template-oss": "4.23.3",
+    "@npmcli/template-oss": "4.23.4",
     "tap": "^16.0.1"
    },
    "engines": {
@@ -5553,21 +6012,21 @@
    },
    "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.23.3",
+    "version": "4.23.4",
     "publish": "true"
    },
-   "_id": "hosted-git-info@8.0.0",
-   "gitHead": "9b07068a083af94b26ab71e07f618c45dd8f7ce6",
-   "_nodeVersion": "22.8.0",
-   "_npmVersion": "10.8.3",
+   "_id": "hosted-git-info@8.0.2",
+   "gitHead": "3baf85298e5fd6f1363d060ec9e826ce51971cd1",
+   "_nodeVersion": "22.11.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-4nw3vOVR+vHUOT8+U4giwe2tcGv+R3pwwRidUe67DoMBTjhrfr6rZYJVVwdkBE+Um050SG+X9tf0Jo4fOpn01w==",
-    "shasum": "b20f1d55d492eb18d70a252d456a2158aab9f244",
-    "tarball": "http://localhost:3000/hosted-git-info/-/hosted-git-info-8.0.0.tgz",
+    "integrity": "sha512-sYKnA7eGln5ov8T8gnYlkSOxFJvywzEx9BueN6xo/GKO8PGiI6uK6xx+DIGe45T3bdVjLAQDQW1aicT8z8JwQg==",
+    "shasum": "5bd7d8b5395616e41cc0d6578381a32f669b14b2",
+    "tarball": "http://localhost:3000/hosted-git-info/-/hosted-git-info-8.0.2.tgz",
     "fileCount": 7,
-    "unpackedSize": 26621,
+    "unpackedSize": 26802,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/hosted-git-info@8.0.0",
+     "url": "http://localhost:3000/-/npm/v1/attestations/hosted-git-info@8.0.2",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -5575,7 +6034,7 @@
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCID0YZmCvuAVXtQgRuTspuszfBg47oHF3W4CJueKFMyt/AiAMoiY0zuxPPCfL1o3yWT2nDjExs7MBxO+Hjd36qnAlYQ=="
+      "sig": "MEUCIBdkEc+eXB84bN6nREAhjXg1oWtq1FmwWHZkr08qN8MiAiEA9TtaX/OrRn5NwvDhoBaj7LJZ9sH+6zNFrdWYCkZu6cI="
      }
     ]
    },
@@ -5612,14 +6071,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/hosted-git-info_8.0.0_1725486544609_0.407825434037858"
+    "tmp": "tmp/hosted-git-info_8.0.2_1732222840963_0.5901203556112569"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2014-10-09T18:34:13.442Z",
-  "modified": "2024-09-04T21:49:05.301Z",
+  "modified": "2024-11-21T21:00:41.785Z",
   "1.0.0": "2014-10-09T18:34:13.442Z",
   "1.1.0": "2014-10-17T11:13:06.236Z",
   "1.2.0": "2014-10-28T02:04:51.706Z",
@@ -5685,7 +6144,11 @@
   "7.0.0": "2023-08-14T23:19:55.232Z",
   "7.0.1": "2023-09-13T14:45:42.729Z",
   "7.0.2": "2024-05-04T01:10:57.235Z",
-  "8.0.0": "2024-09-04T21:49:04.763Z"
+  "8.0.0": "2024-09-04T21:49:04.763Z",
+  "8.0.1": "2024-11-20T22:01:03.260Z",
+  "6.1.2": "2024-11-21T17:41:45.729Z",
+  "6.1.3": "2024-11-21T20:52:51.496Z",
+  "8.0.2": "2024-11-21T21:00:41.213Z"
  },
  "bugs": {
   "url": "https://github.com/npm/hosted-git-info/issues"

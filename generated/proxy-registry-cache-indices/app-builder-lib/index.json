@@ -1,10 +1,10 @@
 {
  "_id": "app-builder-lib",
- "_rev": "245-62e90979f325c0c16c0f4630342e40b8",
+ "_rev": "247-cad631a3da5da3c92f9b8b84e0e7033e",
  "name": "app-builder-lib",
  "dist-tags": {
   "latest": "25.1.8",
-  "next": "26.0.0-alpha.6"
+  "next": "26.0.0-alpha.8"
  },
  "versions": {
   "20.24.0": {
@@ -31349,8 +31349,324 @@
   },
   "26.0.0-alpha.6": {
    "name": "app-builder-lib",
-   "description": "electron-builder lib",
    "version": "26.0.0-alpha.6",
+   "keywords": [
+    "electron",
+    "builder",
+    "build",
+    "installer",
+    "install",
+    "packager",
+    "pack",
+    "nsis",
+    "app",
+    "dmg",
+    "pkg",
+    "msi",
+    "exe",
+    "setup",
+    "Windows",
+    "OS X",
+    "MacOS",
+    "Mac",
+    "appx",
+    "snap",
+    "flatpak",
+    "portable"
+   ],
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "_id": "app-builder-lib@26.0.0-alpha.6",
+   "maintainers": [
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "//": "electron-builder-squirrel-windows and dmg-builder added as dev dep for tests (as otherwise `require` doesn't work using Yarn 2)",
+   "///": "babel in devDependencies for proton tests",
+   "dist": {
+    "shasum": "93fed112b79f03282c154e594d9bf609c323a20e",
+    "tarball": "http://localhost:3000/app-builder-lib/-/app-builder-lib-26.0.0-alpha.6.tgz",
+    "fileCount": 370,
+    "integrity": "sha512-aIDVXdStmWPbG9Hi+H4JrDp7Lua4+ZjFRE9HxXWTNl17Ke/mRn1y3DvqVuwNd/CDlkINTlBez/zsGQJ1XnrXxA==",
+    "signatures": [
+     {
+      "sig": "MEUCICPpJ30R9Dx9lZBPBWG3XbpOgxzcp1NwMXpkK3zs5W/eAiEAvWqIibcifSKIh1xX+D0zWMyNxBMbf2iYAr6IPKAzmtk=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 3051061
+   },
+   "main": "out/index.js",
+   "_from": "file:app-builder-lib-26.0.0-alpha.6.tgz",
+   "engines": {
+    "node": ">=14.0.0"
+   },
+   "typings": "./out/index.d.ts",
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/tmp/062e582cb18371d5ef384551127d9975/app-builder-lib-26.0.0-alpha.6.tgz",
+   "_integrity": "sha512-aIDVXdStmWPbG9Hi+H4JrDp7Lua4+ZjFRE9HxXWTNl17Ke/mRn1y3DvqVuwNd/CDlkINTlBez/zsGQJ1XnrXxA==",
+   "repository": {
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "type": "git",
+    "directory": "packages/app-builder-lib"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "electron-builder lib",
+   "directories": {},
+   "_nodeVersion": "18.20.4",
+   "dependencies": {
+    "ejs": "^3.1.8",
+    "tar": "^6.1.12",
+    "debug": "^4.3.4",
+    "is-ci": "^3.0.0",
+    "json5": "^2.2.3",
+    "dotenv": "^16.4.5",
+    "semver": "^7.3.8",
+    "js-yaml": "^4.1.0",
+    "resedit": "^1.7.0",
+    "fs-extra": "^10.1.0",
+    "lazy-val": "^1.0.5",
+    "minimatch": "^10.0.0",
+    "temp-file": "^3.4.0",
+    "bluebird-lst": "^1.0.9",
+    "builder-util": "26.0.0-alpha.3",
+    "isbinaryfile": "^5.0.0",
+    "dotenv-expand": "^11.0.6",
+    "@electron/asar": "3.2.17",
+    "config-file-ts": "0.2.8-rc1",
+    "@electron/fuses": "^1.8.0",
+    "@types/fs-extra": "9.0.13",
+    "async-exit-hook": "^2.0.1",
+    "hosted-git-info": "^4.1.0",
+    "electron-publish": "26.0.0-alpha.4",
+    "@electron/rebuild": "3.7.0",
+    "@electron/notarize": "2.5.0",
+    "@electron/osx-sign": "1.3.1",
+    "chromium-pickle-js": "^0.2.0",
+    "@electron/universal": "2.0.1",
+    "builder-util-runtime": "9.2.10",
+    "@develar/schema-utils": "~2.6.5",
+    "@malept/flatpak-bundler": "^0.4.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "devDependencies": {
+    "toml": "^3.0.0",
+    "@types/ejs": "3.1.0",
+    "@types/tar": "^6.1.3",
+    "@babel/core": "7.24.9",
+    "dmg-builder": "26.0.0-alpha.6",
+    "@types/debug": "4.1.7",
+    "@types/is-ci": "3.0.0",
+    "@types/semver": "7.3.8",
+    "@types/js-yaml": "4.0.3",
+    "@babel/preset-env": "7.24.8",
+    "@babel/preset-react": "7.24.7",
+    "@types/hosted-git-info": "3.0.2",
+    "@babel/plugin-syntax-import-meta": "7.10.4",
+    "@babel/plugin-proposal-decorators": "7.24.7",
+    "electron-builder-squirrel-windows": "26.0.0-alpha.6",
+    "@babel/plugin-proposal-json-strings": "7.18.6",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/plugin-proposal-function-bind": "7.24.7",
+    "@babel/plugin-proposal-function-sent": "7.24.7",
+    "@babel/plugin-proposal-do-expressions": "7.24.7",
+    "@babel/plugin-proposal-class-properties": "7.18.6",
+    "@babel/plugin-proposal-numeric-separator": "7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "7.21.0",
+    "@babel/plugin-proposal-pipeline-operator": "7.24.7",
+    "@babel/plugin-proposal-throw-expressions": "7.24.7",
+    "@babel/plugin-proposal-export-default-from": "7.24.7",
+    "@babel/plugin-proposal-export-namespace-from": "7.18.9",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.18.6",
+    "@babel/plugin-proposal-logical-assignment-operators": "7.20.7"
+   },
+   "peerDependencies": {
+    "dmg-builder": "26.0.0-alpha.6",
+    "electron-builder-squirrel-windows": "26.0.0-alpha.6"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/app-builder-lib_26.0.0-alpha.6_1730994491615_0.8318353347327982",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "26.0.0-alpha.7": {
+   "name": "app-builder-lib",
+   "version": "26.0.0-alpha.7",
+   "keywords": [
+    "electron",
+    "builder",
+    "build",
+    "installer",
+    "install",
+    "packager",
+    "pack",
+    "nsis",
+    "app",
+    "dmg",
+    "pkg",
+    "msi",
+    "exe",
+    "setup",
+    "Windows",
+    "OS X",
+    "MacOS",
+    "Mac",
+    "appx",
+    "snap",
+    "flatpak",
+    "portable"
+   ],
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "_id": "app-builder-lib@26.0.0-alpha.7",
+   "maintainers": [
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "//": "electron-builder-squirrel-windows and dmg-builder added as dev dep for tests (as otherwise `require` doesn't work using Yarn 2)",
+   "///": "babel in devDependencies for proton tests",
+   "dist": {
+    "shasum": "b567c6788eb1b9a45c1563e003b2931385613b71",
+    "tarball": "http://localhost:3000/app-builder-lib/-/app-builder-lib-26.0.0-alpha.7.tgz",
+    "fileCount": 370,
+    "integrity": "sha512-4dGBqu8gN7yOtNfjDSnPGUKU6fEh9aFXA1VPFsEbuSB142WiQL9hgZ9iAxcIfqy0YsJeQp+SIQtxdAJ8+7XqOw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDC82VZOGibrpJ2JUtL64hsv9XoQbH6Nz+umUz0xzkLogIgatqeWnJdyAK1Y93EMQb1l6kJdV1mqD9duWBReCTNZeA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 3051909
+   },
+   "main": "out/index.js",
+   "_from": "file:app-builder-lib-26.0.0-alpha.7.tgz",
+   "engines": {
+    "node": ">=14.0.0"
+   },
+   "typings": "./out/index.d.ts",
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/tmp/aec7ce7ffa160654f38acbd2378279f8/app-builder-lib-26.0.0-alpha.7.tgz",
+   "_integrity": "sha512-4dGBqu8gN7yOtNfjDSnPGUKU6fEh9aFXA1VPFsEbuSB142WiQL9hgZ9iAxcIfqy0YsJeQp+SIQtxdAJ8+7XqOw==",
+   "repository": {
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "type": "git",
+    "directory": "packages/app-builder-lib"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "electron-builder lib",
+   "directories": {},
+   "_nodeVersion": "18.20.5",
+   "dependencies": {
+    "ejs": "^3.1.8",
+    "tar": "^6.1.12",
+    "debug": "^4.3.4",
+    "is-ci": "^3.0.0",
+    "json5": "^2.2.3",
+    "dotenv": "^16.4.5",
+    "semver": "^7.3.8",
+    "js-yaml": "^4.1.0",
+    "resedit": "^1.7.0",
+    "fs-extra": "^10.1.0",
+    "lazy-val": "^1.0.5",
+    "minimatch": "^10.0.0",
+    "temp-file": "^3.4.0",
+    "bluebird-lst": "^1.0.9",
+    "builder-util": "26.0.0-alpha.7",
+    "isbinaryfile": "^5.0.0",
+    "dotenv-expand": "^11.0.6",
+    "@electron/asar": "3.2.17",
+    "config-file-ts": "0.2.8-rc1",
+    "@electron/fuses": "^1.8.0",
+    "@types/fs-extra": "9.0.13",
+    "async-exit-hook": "^2.0.1",
+    "hosted-git-info": "^4.1.0",
+    "electron-publish": "26.0.0-alpha.7",
+    "@electron/rebuild": "3.7.0",
+    "@electron/notarize": "2.5.0",
+    "@electron/osx-sign": "1.3.1",
+    "chromium-pickle-js": "^0.2.0",
+    "@electron/universal": "2.0.1",
+    "builder-util-runtime": "9.2.10",
+    "@develar/schema-utils": "~2.6.5",
+    "@malept/flatpak-bundler": "^0.4.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "devDependencies": {
+    "toml": "^3.0.0",
+    "@types/ejs": "3.1.0",
+    "@types/tar": "^6.1.3",
+    "@babel/core": "7.24.9",
+    "dmg-builder": "26.0.0-alpha.7",
+    "@types/debug": "4.1.7",
+    "@types/is-ci": "3.0.0",
+    "@types/semver": "7.3.8",
+    "@types/js-yaml": "4.0.3",
+    "@babel/preset-env": "7.24.8",
+    "@babel/preset-react": "7.24.7",
+    "@types/hosted-git-info": "3.0.2",
+    "@babel/plugin-syntax-import-meta": "7.10.4",
+    "@babel/plugin-proposal-decorators": "7.24.7",
+    "electron-builder-squirrel-windows": "26.0.0-alpha.7",
+    "@babel/plugin-proposal-json-strings": "7.18.6",
+    "@babel/plugin-syntax-dynamic-import": "7.8.3",
+    "@babel/plugin-proposal-function-bind": "7.24.7",
+    "@babel/plugin-proposal-function-sent": "7.24.7",
+    "@babel/plugin-proposal-do-expressions": "7.24.7",
+    "@babel/plugin-proposal-class-properties": "7.18.6",
+    "@babel/plugin-proposal-numeric-separator": "7.18.6",
+    "@babel/plugin-proposal-optional-chaining": "7.21.0",
+    "@babel/plugin-proposal-pipeline-operator": "7.24.7",
+    "@babel/plugin-proposal-throw-expressions": "7.24.7",
+    "@babel/plugin-proposal-export-default-from": "7.24.7",
+    "@babel/plugin-proposal-export-namespace-from": "7.18.9",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.18.6",
+    "@babel/plugin-proposal-logical-assignment-operators": "7.20.7"
+   },
+   "peerDependencies": {
+    "dmg-builder": "26.0.0-alpha.7",
+    "electron-builder-squirrel-windows": "26.0.0-alpha.7"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/app-builder-lib_26.0.0-alpha.7_1733240182438_0.6481901741774041",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "26.0.0-alpha.8": {
+   "name": "app-builder-lib",
+   "description": "electron-builder lib",
+   "version": "26.0.0-alpha.8",
    "main": "out/index.js",
    "repository": {
     "type": "git",
@@ -31422,9 +31738,9 @@
     "semver": "^7.3.8",
     "tar": "^6.1.12",
     "temp-file": "^3.4.0",
-    "electron-publish": "26.0.0-alpha.4",
-    "builder-util": "26.0.0-alpha.3",
-    "builder-util-runtime": "9.2.10"
+    "builder-util": "26.0.0-alpha.8",
+    "electron-publish": "26.0.0-alpha.8",
+    "builder-util-runtime": "9.3.0-alpha.0"
    },
    "///": "babel in devDependencies for proton tests",
    "devDependencies": {
@@ -31455,32 +31771,32 @@
     "@types/semver": "7.3.8",
     "@types/tar": "^6.1.3",
     "toml": "^3.0.0",
-    "electron-builder-squirrel-windows": "26.0.0-alpha.6",
-    "dmg-builder": "26.0.0-alpha.6"
+    "dmg-builder": "26.0.0-alpha.8",
+    "electron-builder-squirrel-windows": "26.0.0-alpha.8"
    },
    "peerDependencies": {
-    "electron-builder-squirrel-windows": "26.0.0-alpha.6",
-    "dmg-builder": "26.0.0-alpha.6"
+    "dmg-builder": "26.0.0-alpha.8",
+    "electron-builder-squirrel-windows": "26.0.0-alpha.8"
    },
    "//": "electron-builder-squirrel-windows and dmg-builder added as dev dep for tests (as otherwise `require` doesn't work using Yarn 2)",
    "typings": "./out/index.d.ts",
-   "_id": "app-builder-lib@26.0.0-alpha.6",
+   "_id": "app-builder-lib@26.0.0-alpha.8",
    "readmeFilename": "README.md",
-   "_integrity": "sha512-aIDVXdStmWPbG9Hi+H4JrDp7Lua4+ZjFRE9HxXWTNl17Ke/mRn1y3DvqVuwNd/CDlkINTlBez/zsGQJ1XnrXxA==",
-   "_resolved": "/tmp/062e582cb18371d5ef384551127d9975/app-builder-lib-26.0.0-alpha.6.tgz",
-   "_from": "file:app-builder-lib-26.0.0-alpha.6.tgz",
-   "_nodeVersion": "18.20.4",
-   "_npmVersion": "10.7.0",
+   "_integrity": "sha512-IvvGAa/RXwuNPiSckIBPjBxI4et8PWb+TsJnhKa/XtxOH64ncs6hDtV7bSxIeUmbvUj3R8dm32dej7UO0Cgtng==",
+   "_resolved": "/tmp/f2f2f01ee24128d193d24af55578a6e4/app-builder-lib-26.0.0-alpha.8.tgz",
+   "_from": "file:app-builder-lib-26.0.0-alpha.8.tgz",
+   "_nodeVersion": "18.20.5",
+   "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-aIDVXdStmWPbG9Hi+H4JrDp7Lua4+ZjFRE9HxXWTNl17Ke/mRn1y3DvqVuwNd/CDlkINTlBez/zsGQJ1XnrXxA==",
-    "shasum": "93fed112b79f03282c154e594d9bf609c323a20e",
-    "tarball": "http://localhost:3000/app-builder-lib/-/app-builder-lib-26.0.0-alpha.6.tgz",
+    "integrity": "sha512-IvvGAa/RXwuNPiSckIBPjBxI4et8PWb+TsJnhKa/XtxOH64ncs6hDtV7bSxIeUmbvUj3R8dm32dej7UO0Cgtng==",
+    "shasum": "2ecc525692fa300414e4906dc001adec0ecb2567",
+    "tarball": "http://localhost:3000/app-builder-lib/-/app-builder-lib-26.0.0-alpha.8.tgz",
     "fileCount": 370,
-    "unpackedSize": 3051061,
+    "unpackedSize": 3051910,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCICPpJ30R9Dx9lZBPBWG3XbpOgxzcp1NwMXpkK3zs5W/eAiEAvWqIibcifSKIh1xX+D0zWMyNxBMbf2iYAr6IPKAzmtk="
+      "sig": "MEYCIQCw7AtPBSZK/h2zcVW+OcUs/LMd0EI1bdzfRIKwAyplvQIhAJ49OOVRmckpDL4E3CYa1dfe+7LaeNKKisMCujAD0Ip5"
      }
     ]
    },
@@ -31500,15 +31816,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/app-builder-lib_26.0.0-alpha.6_1730994491615_0.8318353347327982"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/app-builder-lib_26.0.0-alpha.8_1734463584860_0.7770152118082425"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2018-07-20T12:10:07.251Z",
-  "modified": "2024-11-07T15:48:12.032Z",
+  "modified": "2024-12-17T19:26:25.344Z",
   "0.0.0-semantic-release": "2018-07-20T12:10:07.390Z",
   "20.24.0": "2018-07-20T12:10:18.562Z",
   "20.24.2": "2018-07-20T13:01:33.156Z",
@@ -31749,7 +32065,9 @@
   "26.0.0-alpha.3": "2024-10-16T15:25:28.923Z",
   "26.0.0-alpha.4": "2024-10-28T15:19:42.919Z",
   "26.0.0-alpha.5": "2024-11-01T19:08:14.591Z",
-  "26.0.0-alpha.6": "2024-11-07T15:48:11.875Z"
+  "26.0.0-alpha.6": "2024-11-07T15:48:11.875Z",
+  "26.0.0-alpha.7": "2024-12-03T15:36:22.763Z",
+  "26.0.0-alpha.8": "2024-12-17T19:26:25.178Z"
  },
  "bugs": {
   "url": "https://github.com/electron-userland/electron-builder/issues"

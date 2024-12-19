@@ -1,9 +1,10 @@
 {
  "_id": "cross-spawn",
- "_rev": "148-75bce8d60bc8027884494403942e2347",
+ "_rev": "150-aba683f22511fbeb213c3db3e70462c7",
  "name": "cross-spawn",
  "dist-tags": {
-  "latest": "7.0.5"
+  "latest": "7.0.6",
+  "6x": "6.0.6"
  },
  "versions": {
   "0.1.0": {
@@ -4526,6 +4527,224 @@
   "7.0.5": {
    "name": "cross-spawn",
    "version": "7.0.5",
+   "keywords": [
+    "spawn",
+    "spawnSync",
+    "windows",
+    "cross-platform",
+    "path-ext",
+    "shebang",
+    "cmd",
+    "execute"
+   ],
+   "author": {
+    "name": "André Cruz",
+    "email": "andre@moxy.studio"
+   },
+   "license": "MIT",
+   "_id": "cross-spawn@7.0.5",
+   "maintainers": [
+    {
+     "name": "satazor",
+     "email": "andremiguelcruz@msn.com"
+    }
+   ],
+   "homepage": "https://github.com/moxystudio/node-cross-spawn",
+   "bugs": {
+    "url": "https://github.com/moxystudio/node-cross-spawn/issues"
+   },
+   "dist": {
+    "shasum": "910aac880ff5243da96b728bc6521a5f6c2f2f82",
+    "tarball": "http://localhost:3000/cross-spawn/-/cross-spawn-7.0.5.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-ZVJrKKYunU38/76t0RMOulHOnUcbU9GbpWKAOZ0mhjr7CX6FVrH+4FrAapSOekrgFQ3f/8gwMEuIft0aKq6Hug==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCmzE3Ma1tXcUTB39atFDTxEjWOec2PIrAVnFgWc32stwIgTaw4E38H6R9hX7t89c2ZQu6RfYNjrQyjNdZpaNPV5CA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 16089
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged"
+    }
+   },
+   "engines": {
+    "node": ">= 8"
+   },
+   "gitHead": "085268352dcbcad8064c64c5efb25268b4023184",
+   "scripts": {
+    "lint": "eslint .",
+    "test": "jest --env node --coverage",
+    "release": "standard-version",
+    "prerelease": "npm t && npm run lint",
+    "postrelease": "git push --follow-tags origin HEAD && npm publish"
+   },
+   "_npmUser": {
+    "name": "satazor",
+    "email": "andremiguelcruz@msn.com"
+   },
+   "commitlint": {
+    "extends": [
+     "@commitlint/config-conventional"
+    ]
+   },
+   "repository": {
+    "url": "git+ssh://git@github.com/moxystudio/node-cross-spawn.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.5.2",
+   "description": "Cross platform child_process#spawn and child_process#spawnSync",
+   "directories": {},
+   "lint-staged": {
+    "*.js": [
+     "eslint --fix",
+     "git add"
+    ]
+   },
+   "_nodeVersion": "20.13.1",
+   "dependencies": {
+    "which": "^2.0.1",
+    "path-key": "^3.1.0",
+    "shebang-command": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^24.9.0",
+    "husky": "^3.0.5",
+    "eslint": "^5.16.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^3.0.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "@commitlint/cli": "^8.1.0",
+    "standard-version": "^7.0.0",
+    "babel-preset-moxy": "^3.1.0",
+    "eslint-config-moxy": "^7.1.0",
+    "@commitlint/config-conventional": "^8.1.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/cross-spawn_7.0.5_1730984427297_0.04158949037392223",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "7.0.6": {
+   "name": "cross-spawn",
+   "version": "7.0.6",
+   "keywords": [
+    "spawn",
+    "spawnSync",
+    "windows",
+    "cross-platform",
+    "path-ext",
+    "shebang",
+    "cmd",
+    "execute"
+   ],
+   "author": {
+    "name": "André Cruz",
+    "email": "andre@moxy.studio"
+   },
+   "license": "MIT",
+   "_id": "cross-spawn@7.0.6",
+   "maintainers": [
+    {
+     "name": "satazor",
+     "email": "andremiguelcruz@msn.com"
+    }
+   ],
+   "homepage": "https://github.com/moxystudio/node-cross-spawn",
+   "bugs": {
+    "url": "https://github.com/moxystudio/node-cross-spawn/issues"
+   },
+   "dist": {
+    "shasum": "8a58fe78f00dcd70c370451759dfbfaf03e8ee9f",
+    "tarball": "http://localhost:3000/cross-spawn/-/cross-spawn-7.0.6.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-uV2QOWP2nWzsy2aMp8aRibhi9dlzF5Hgh5SHaB9OiTGEyDTiJJyx0uy51QXdyWbtAHNua4XJzUKca3OzKUd3vA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCdXEXhFHQR/UhPwcpnO2Gp3L2/lh5roLTkR5Ozu5uwfQIgHOjOf19lt7Lxdfxw8kjmcjbwtpwAMrLNvYJqvlfkVss=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 16094
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged"
+    }
+   },
+   "engines": {
+    "node": ">= 8"
+   },
+   "gitHead": "77cd97f3ca7b62c904a63a698fc4a79bf41977d0",
+   "scripts": {
+    "lint": "eslint .",
+    "test": "jest --env node --coverage",
+    "release": "standard-version",
+    "prerelease": "npm t && npm run lint",
+    "postrelease": "git push --follow-tags origin HEAD && npm publish"
+   },
+   "_npmUser": {
+    "name": "satazor",
+    "email": "andremiguelcruz@msn.com"
+   },
+   "commitlint": {
+    "extends": [
+     "@commitlint/config-conventional"
+    ]
+   },
+   "repository": {
+    "url": "git+ssh://git@github.com/moxystudio/node-cross-spawn.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.5.2",
+   "description": "Cross platform child_process#spawn and child_process#spawnSync",
+   "directories": {},
+   "lint-staged": {
+    "*.js": [
+     "eslint --fix",
+     "git add"
+    ]
+   },
+   "_nodeVersion": "20.13.1",
+   "dependencies": {
+    "which": "^2.0.1",
+    "path-key": "^3.1.0",
+    "shebang-command": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^24.9.0",
+    "husky": "^3.0.5",
+    "eslint": "^5.16.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^3.0.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.9.0",
+    "lint-staged": "^9.2.5",
+    "@commitlint/cli": "^8.1.0",
+    "standard-version": "^9.5.0",
+    "babel-preset-moxy": "^3.1.0",
+    "eslint-config-moxy": "^7.1.0",
+    "@commitlint/config-conventional": "^8.1.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/cross-spawn_7.0.6_1731938391951_0.24409455021062265",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "6.0.6": {
+   "name": "cross-spawn",
+   "version": "6.0.6",
    "description": "Cross platform child_process#spawn and child_process#spawnSync",
    "keywords": [
     "spawn",
@@ -4551,14 +4770,13 @@
    "scripts": {
     "lint": "eslint .",
     "test": "jest --env node --coverage",
-    "prerelease": "npm t && npm run lint",
     "release": "standard-version",
-    "postrelease": "git push --follow-tags origin HEAD && npm publish"
+    "precommit": "lint-staged",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
    },
-   "husky": {
-    "hooks": {
-     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-     "pre-commit": "lint-staged"
+   "standard-version": {
+    "scripts": {
+     "posttag": "git push --follow-tags origin v6"
     }
    },
    "lint-staged": {
@@ -4573,45 +4791,49 @@
     ]
    },
    "dependencies": {
-    "path-key": "^3.1.0",
-    "shebang-command": "^2.0.0",
-    "which": "^2.0.1"
+    "nice-try": "^1.0.4",
+    "path-key": "^2.0.1",
+    "semver": "^5.5.0",
+    "shebang-command": "^1.2.0",
+    "which": "^1.2.9"
    },
    "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
-    "@commitlint/config-conventional": "^8.1.0",
-    "babel-core": "^6.26.3",
-    "babel-jest": "^24.9.0",
-    "babel-preset-moxy": "^3.1.0",
-    "eslint": "^5.16.0",
-    "eslint-config-moxy": "^7.1.0",
-    "husky": "^3.0.5",
-    "jest": "^24.9.0",
-    "lint-staged": "^9.2.5",
+    "@commitlint/cli": "^6.0.0",
+    "@commitlint/config-conventional": "^6.0.2",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
+    "babel-preset-moxy": "^2.2.1",
+    "eslint": "^4.3.0",
+    "eslint-config-moxy": "^5.0.0",
+    "husky": "^0.14.3",
+    "jest": "^22.0.0",
+    "lint-staged": "^7.0.0",
     "mkdirp": "^0.5.1",
-    "rimraf": "^3.0.0",
-    "standard-version": "^7.0.0"
+    "regenerator-runtime": "^0.11.1",
+    "rimraf": "^2.6.2",
+    "standard-version": "^4.2.0"
    },
    "engines": {
-    "node": ">= 8"
+    "node": ">=4.8"
    },
-   "_id": "cross-spawn@7.0.5",
-   "gitHead": "085268352dcbcad8064c64c5efb25268b4023184",
+   "_id": "cross-spawn@6.0.6",
+   "readmeFilename": "README.md",
+   "gitHead": "d35c865b877d2f9ded7c1ed87521c2fdb689c8dd",
    "bugs": {
     "url": "https://github.com/moxystudio/node-cross-spawn/issues"
    },
    "_nodeVersion": "20.13.1",
    "_npmVersion": "10.5.2",
    "dist": {
-    "integrity": "sha512-ZVJrKKYunU38/76t0RMOulHOnUcbU9GbpWKAOZ0mhjr7CX6FVrH+4FrAapSOekrgFQ3f/8gwMEuIft0aKq6Hug==",
-    "shasum": "910aac880ff5243da96b728bc6521a5f6c2f2f82",
-    "tarball": "http://localhost:3000/cross-spawn/-/cross-spawn-7.0.5.tgz",
+    "integrity": "sha512-VqCUuhcd1iB+dsv8gxPttb5iZh/D0iubSP21g36KXdEuf6I5JiioesUVjpCdHV9MZRUfVFlvwtIUyPfxo5trtw==",
+    "shasum": "30d0efa0712ddb7eb5a76e1e8721bffafa6b5d57",
+    "tarball": "http://localhost:3000/cross-spawn/-/cross-spawn-6.0.6.tgz",
     "fileCount": 9,
-    "unpackedSize": 16089,
+    "unpackedSize": 18317,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCmzE3Ma1tXcUTB39atFDTxEjWOec2PIrAVnFgWc32stwIgTaw4E38H6R9hX7t89c2ZQu6RfYNjrQyjNdZpaNPV5CA="
+      "sig": "MEUCIQDrz4w5vrADmpw9q+NhRU/KxG/Vw9TdDeL8XP5pCnYPsQIgRea9VZV05uFEnD3nhEeMF9IYVJ2tkaFUIzFSdrAbkbA="
      }
     ]
    },
@@ -4628,14 +4850,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/cross-spawn_7.0.5_1730984427297_0.04158949037392223"
+    "tmp": "tmp/cross-spawn_6.0.6_1731939694654_0.21490256190668"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2014-06-30T01:04:42.962Z",
-  "modified": "2024-11-07T13:00:27.631Z",
+  "modified": "2024-11-18T14:21:35.065Z",
   "0.1.0": "2014-06-30T01:04:42.962Z",
   "0.1.1": "2014-06-30T13:22:52.138Z",
   "0.1.2": "2014-06-30T21:29:40.550Z",
@@ -4691,7 +4913,9 @@
   "7.0.2": "2020-04-04T09:56:44.815Z",
   "7.0.3": "2020-05-25T15:35:07.209Z",
   "7.0.4": "2024-11-07T10:50:15.781Z",
-  "7.0.5": "2024-11-07T13:00:27.448Z"
+  "7.0.5": "2024-11-07T13:00:27.448Z",
+  "7.0.6": "2024-11-18T13:59:52.129Z",
+  "6.0.6": "2024-11-18T14:21:34.889Z"
  },
  "bugs": {
   "url": "https://github.com/moxystudio/node-cross-spawn/issues"
@@ -4713,8 +4937,8 @@
   "execute"
  ],
  "repository": {
-  "type": "git",
-  "url": "git+ssh://git@github.com/moxystudio/node-cross-spawn.git"
+  "url": "git+ssh://git@github.com/moxystudio/node-cross-spawn.git",
+  "type": "git"
  },
  "description": "Cross platform child_process#spawn and child_process#spawnSync",
  "maintainers": [
@@ -4723,8 +4947,8 @@
    "email": "andremiguelcruz@msn.com"
   }
  ],
- "readme": "# cross-spawn\n\n[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][ci-image]][ci-url] [![Build status][appveyor-image]][appveyor-url]\n\n[npm-url]:https://npmjs.org/package/cross-spawn\n[downloads-image]:https://img.shields.io/npm/dm/cross-spawn.svg\n[npm-image]:https://img.shields.io/npm/v/cross-spawn.svg\n[ci-url]:https://github.com/moxystudio/cross-spawn/actions/workflows/ci.yaml\n[ci-image]:https://github.com/moxystudio/node-cross-spawn/actions/workflows/ci.yaml/badge.svg\n[appveyor-url]:https://ci.appveyor.com/project/satazor/node-cross-spawn\n[appveyor-image]:https://img.shields.io/appveyor/ci/satazor/node-cross-spawn/master.svg\n\nA cross platform solution to node's spawn and spawnSync.\n\n## Installation\n\nNode.js version 8 and up:\n`$ npm install cross-spawn`\n\nNode.js version 7 and under:\n`$ npm install cross-spawn@6`\n\n## Why\n\nNode has issues when using spawn on Windows:\n\n- It ignores [PATHEXT](https://github.com/joyent/node/issues/2318)\n- It does not support [shebangs](https://en.wikipedia.org/wiki/Shebang_(Unix))\n- Has problems running commands with [spaces](https://github.com/nodejs/node/issues/7367)\n- Has problems running commands with posix relative paths (e.g.: `./my-folder/my-executable`)\n- Has an [issue](https://github.com/moxystudio/node-cross-spawn/issues/82) with command shims (files in `node_modules/.bin/`), where arguments with quotes and parenthesis would result in [invalid syntax error](https://github.com/moxystudio/node-cross-spawn/blob/e77b8f22a416db46b6196767bcd35601d7e11d54/test/index.test.js#L149)\n- No `options.shell` support on node `<v4.8`\n\nAll these issues are handled correctly by `cross-spawn`.\nThere are some known modules, such as [win-spawn](https://github.com/ForbesLindesay/win-spawn), that try to solve this but they are either broken or provide faulty escaping of shell arguments.\n\n\n## Usage\n\nExactly the same way as node's [`spawn`](https://nodejs.org/api/child_process.html#child_process_child_process_spawn_command_args_options) or [`spawnSync`](https://nodejs.org/api/child_process.html#child_process_child_process_spawnsync_command_args_options), so it's a drop in replacement.\n\n\n```js\nconst spawn = require('cross-spawn');\n\n// Spawn NPM asynchronously\nconst child = spawn('npm', ['list', '-g', '-depth', '0'], { stdio: 'inherit' });\n\n// Spawn NPM synchronously\nconst result = spawn.sync('npm', ['list', '-g', '-depth', '0'], { stdio: 'inherit' });\n```\n\n\n## Caveats\n\n### Using `options.shell` as an alternative to `cross-spawn`\n\nStarting from node `v4.8`, `spawn` has a `shell` option that allows you run commands from within a shell. This new option solves\nthe [PATHEXT](https://github.com/joyent/node/issues/2318) issue but:\n\n- It's not supported in node `<v4.8`\n- You must manually escape the command and arguments which is very error prone, specially when passing user input\n- There are a lot of other unresolved issues from the [Why](#why) section that you must take into account\n\nIf you are using the `shell` option to spawn a command in a cross platform way, consider using `cross-spawn` instead. You have been warned.\n\n### `options.shell` support\n\nWhile `cross-spawn` adds support for `options.shell` in node `<v4.8`, all of its enhancements are disabled.\n\nThis mimics the Node.js behavior. More specifically, the command and its arguments will not be automatically escaped nor shebang support will be offered. This is by design because if you are using `options.shell` you are probably targeting a specific platform anyway and you don't want things to get into your way.\n\n### Shebangs support\n\nWhile `cross-spawn` handles shebangs on Windows, its support is limited. More specifically, it just supports `#!/usr/bin/env <program>` where `<program>` must not contain any arguments.   \nIf you would like to have the shebang support improved, feel free to contribute via a pull-request.\n\nRemember to always test your code on Windows!\n\n\n## Tests\n\n`$ npm test`   \n`$ npm test -- --watch` during development\n\n\n## License\n\nReleased under the [MIT License](https://www.opensource.org/licenses/mit-license.php).\n",
- "readmeFilename": "README.md",
+ "readme": "",
+ "readmeFilename": "",
  "users": {
   "xch": true,
   "kael": true,

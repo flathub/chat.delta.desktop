@@ -1,9 +1,9 @@
 {
  "_id": "nanoid",
- "_rev": "127-aac95cd2b84ea228c01141cfad6963d7",
+ "_rev": "129-7670af292c5140eaa7b01c70357d2dc8",
  "name": "nanoid",
  "dist-tags": {
-  "latest": "5.0.8"
+  "latest": "5.0.9"
  },
  "versions": {
   "0.1.0": {
@@ -8986,7 +8986,226 @@
   "5.0.8": {
    "name": "nanoid",
    "version": "5.0.8",
+   "keywords": [
+    "uuid",
+    "random",
+    "id",
+    "url"
+   ],
+   "author": {
+    "name": "Andrey Sitnik",
+    "email": "andrey@sitnik.ru"
+   },
+   "license": "MIT",
+   "_id": "nanoid@5.0.8",
+   "maintainers": [
+    {
+     "name": "ai",
+     "email": "andrey@sitnik.ru"
+    }
+   ],
+   "homepage": "https://github.com/ai/nanoid#readme",
+   "bugs": {
+    "url": "https://github.com/ai/nanoid/issues"
+   },
+   "bin": {
+    "nanoid": "bin/nanoid.js"
+   },
+   "dist": {
+    "shasum": "7610003f6b3b761b5c244bb342c112c5312512bf",
+    "tarball": "http://localhost:3000/nanoid/-/nanoid-5.0.8.tgz",
+    "fileCount": 11,
+    "integrity": "sha512-TcJPw+9RV9dibz1hHUzlLVy8N4X9TnwirAjrU08Juo6BNKggzVfP2ZJ/3ZUSq15Xl5i85i+Z89XBO90pB2PghQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCsHCOmLPIlmncC51V8OFR84lmGqh6zLPzz9Gl/xit54QIgDnM5J+f16haZwu494QqQjhtzx7p+0X7Z5s++QI3uETE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 10930
+   },
+   "type": "module",
+   "types": "./index.d.ts",
+   "browser": {
+    "./index.js": "./index.browser.js"
+   },
+   "engines": {
+    "node": "^18 || >=20"
+   },
+   "exports": {
+    ".": {
+     "browser": "./index.browser.js",
+     "default": "./index.js"
+    },
+    "./non-secure": "./non-secure/index.js",
+    "./package.json": "./package.json"
+   },
+   "funding": [
+    {
+     "url": "https://github.com/sponsors/ai",
+     "type": "github"
+    }
+   ],
+   "gitHead": "55cd90d7f90d4ffedbeff4734a5d0d9abfec0aca",
+   "_npmUser": {
+    "name": "ai",
+    "email": "andrey@sitnik.ru"
+   },
+   "repository": {
+    "url": "git+https://github.com/ai/nanoid.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.1",
    "description": "A tiny (116 bytes), secure URL-friendly unique string ID generator",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "22.4.1",
+   "react-native": {
+    "./index.js": "./index.browser.js"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/nanoid_5.0.8_1730114953273_0.5680609875847602",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.3.8": {
+   "name": "nanoid",
+   "version": "3.3.8",
+   "keywords": [
+    "uuid",
+    "random",
+    "id",
+    "url"
+   ],
+   "author": {
+    "name": "Andrey Sitnik",
+    "email": "andrey@sitnik.ru"
+   },
+   "license": "MIT",
+   "_id": "nanoid@3.3.8",
+   "maintainers": [
+    {
+     "name": "ai",
+     "email": "andrey@sitnik.ru"
+    }
+   ],
+   "homepage": "https://github.com/ai/nanoid#readme",
+   "bugs": {
+    "url": "https://github.com/ai/nanoid/issues"
+   },
+   "bin": {
+    "nanoid": "bin/nanoid.cjs"
+   },
+   "dist": {
+    "shasum": "b1be3030bee36aaff18bacb375e5cce521684baf",
+    "tarball": "http://localhost:3000/nanoid/-/nanoid-3.3.8.tgz",
+    "fileCount": 26,
+    "integrity": "sha512-WNLf5Sd8oZxOm+TzppcYk8gVOgP+l58xNy58D0nbUnOxOWRWvlcCV4kUF7ltmI6PsrLl/BgKEyS4mqsGChFN0w==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDCX22b8tPTFFfeVn/MBBfBrZ0shZDoRq2+Hf0q1mEZTwIgVJnZoBHJMCIIYCkzTyy9Hjblcv5P0uBC/x5+5JeD2CE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 57113
+   },
+   "main": "index.cjs",
+   "type": "module",
+   "types": "./index.d.ts",
+   "module": "index.js",
+   "browser": {
+    "./index.js": "./index.browser.js",
+    "./index.cjs": "./index.browser.cjs",
+    "./async/index.js": "./async/index.browser.js",
+    "./async/index.cjs": "./async/index.browser.cjs"
+   },
+   "engines": {
+    "node": "^10 || ^12 || ^13.7 || ^14 || >=15.0.1"
+   },
+   "exports": {
+    ".": {
+     "import": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+     },
+     "browser": "./index.browser.js",
+     "default": "./index.js",
+     "require": {
+      "types": "./index.d.cts",
+      "default": "./index.cjs"
+     }
+    },
+    "./async": {
+     "import": {
+      "types": "./index.d.ts",
+      "default": "./async/index.js"
+     },
+     "browser": "./async/index.browser.js",
+     "default": "./async/index.js",
+     "require": {
+      "types": "./index.d.cts",
+      "default": "./async/index.cjs"
+     }
+    },
+    "./non-secure": {
+     "import": {
+      "types": "./index.d.ts",
+      "default": "./non-secure/index.js"
+     },
+     "default": "./non-secure/index.js",
+     "require": {
+      "types": "./index.d.cts",
+      "default": "./non-secure/index.cjs"
+     }
+    },
+    "./package.json": "./package.json",
+    "./url-alphabet": {
+     "import": {
+      "types": "./index.d.ts",
+      "default": "./url-alphabet/index.js"
+     },
+     "default": "./url-alphabet/index.js",
+     "require": {
+      "types": "./index.d.cts",
+      "default": "./url-alphabet/index.cjs"
+     }
+    },
+    "./async/package.json": "./async/package.json",
+    "./non-secure/package.json": "./non-secure/package.json",
+    "./url-alphabet/package.json": "./url-alphabet/package.json"
+   },
+   "funding": [
+    {
+     "url": "https://github.com/sponsors/ai",
+     "type": "github"
+    }
+   ],
+   "gitHead": "3044cd5e73f4cf31795f61f6e6b961c8c0a5c744",
+   "_npmUser": {
+    "name": "ai",
+    "email": "andrey@sitnik.ru"
+   },
+   "repository": {
+    "url": "git+https://github.com/ai/nanoid.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "A tiny (116 bytes), secure URL-friendly unique string ID generator",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "22.11.0",
+   "react-native": "index.js",
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/nanoid_3.3.8_1732622105796_0.7625183651230416",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "5.0.9": {
+   "name": "nanoid",
+   "version": "5.0.9",
+   "description": "A tiny (118 bytes), secure URL-friendly unique string ID generator",
    "keywords": [
     "uuid",
     "random",
@@ -9031,24 +9250,24 @@
    },
    "sideEffects": false,
    "types": "./index.d.ts",
-   "_id": "nanoid@5.0.8",
-   "gitHead": "55cd90d7f90d4ffedbeff4734a5d0d9abfec0aca",
+   "_id": "nanoid@5.0.9",
+   "gitHead": "65a38ac63a0709c420b9de30b15511b84e87c423",
    "bugs": {
     "url": "https://github.com/ai/nanoid/issues"
    },
    "homepage": "https://github.com/ai/nanoid#readme",
-   "_nodeVersion": "22.4.1",
-   "_npmVersion": "10.8.1",
+   "_nodeVersion": "22.11.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-TcJPw+9RV9dibz1hHUzlLVy8N4X9TnwirAjrU08Juo6BNKggzVfP2ZJ/3ZUSq15Xl5i85i+Z89XBO90pB2PghQ==",
-    "shasum": "7610003f6b3b761b5c244bb342c112c5312512bf",
-    "tarball": "http://localhost:3000/nanoid/-/nanoid-5.0.8.tgz",
+    "integrity": "sha512-Aooyr6MXU6HpvvWXKoVoXwKMs/KyVakWwg7xQfv5/S/RIgJMy0Ifa45H9qqYy7pTCszrHzP21Uk4PZq2HpEM8Q==",
+    "shasum": "977dcbaac055430ce7b1e19cf0130cea91a20e50",
+    "tarball": "http://localhost:3000/nanoid/-/nanoid-5.0.9.tgz",
     "fileCount": 11,
-    "unpackedSize": 10930,
+    "unpackedSize": 10951,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCsHCOmLPIlmncC51V8OFR84lmGqh6zLPzz9Gl/xit54QIgDnM5J+f16haZwu494QqQjhtzx7p+0X7Z5s++QI3uETE="
+      "sig": "MEYCIQDF6Nyp8ClPi6RuG0y1xR+p9mXkG/yLRKOguSClCoFPDAIhAPpT2e1c0oiJFXbTE1CB4iba8mWXV4/nqSEV5W6CV4pK"
      }
     ]
    },
@@ -9065,14 +9284,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/nanoid_5.0.8_1730114953273_0.5680609875847602"
+    "tmp": "tmp/nanoid_5.0.9_1732622393022_0.5274708047807377"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-08-06T05:04:00.915Z",
-  "modified": "2024-10-28T11:29:13.700Z",
+  "modified": "2024-11-26T11:59:53.424Z",
   "0.1.0": "2017-08-06T05:04:00.915Z",
   "0.1.1": "2017-08-09T04:50:56.744Z",
   "0.2.0": "2017-08-10T05:59:22.305Z",
@@ -9173,7 +9392,9 @@
   "5.0.5": "2024-02-01T20:07:26.003Z",
   "5.0.6": "2024-02-20T13:56:46.276Z",
   "5.0.7": "2024-04-07T16:44:04.485Z",
-  "5.0.8": "2024-10-28T11:29:13.535Z"
+  "5.0.8": "2024-10-28T11:29:13.535Z",
+  "3.3.8": "2024-11-26T11:55:05.967Z",
+  "5.0.9": "2024-11-26T11:59:53.257Z"
  },
  "bugs": {
   "url": "https://github.com/ai/nanoid/issues"
@@ -9194,14 +9415,14 @@
   "type": "git",
   "url": "git+https://github.com/ai/nanoid.git"
  },
- "description": "A tiny (116 bytes), secure URL-friendly unique string ID generator",
+ "description": "A tiny (118 bytes), secure URL-friendly unique string ID generator",
  "maintainers": [
   {
    "name": "ai",
    "email": "andrey@sitnik.ru"
   }
  ],
- "readme": "# Nano ID\n\n<img src=\"https://ai.github.io/nanoid/logo.svg\" align=\"right\"\n     alt=\"Nano ID logo by Anton Lovchikov\" width=\"180\" height=\"94\">\n\n**English** | [Русский](./README.ru.md) | [简体中文](./README.zh-CN.md) | [Bahasa Indonesia](./README.id-ID.md)\n\nA tiny, secure, URL-friendly, unique string ID generator for JavaScript.\n\n> “An amazing level of senseless perfectionism,\n> which is simply impossible not to respect.”\n\n* **Small.** 116 bytes (minified and brotlied). No dependencies.\n  [Size Limit] controls the size.\n* **Safe.** It uses hardware random generator. Can be used in clusters.\n* **Short IDs.** It uses a larger alphabet than UUID (`A-Za-z0-9_-`).\n  So ID size was reduced from 36 to 21 symbols.\n* **Portable.** Nano ID was ported\n  to over [20 programming languages](./README.md#other-programming-languages).\n\n```js\nimport { nanoid } from 'nanoid'\nmodel.id = nanoid() //=> \"V1StGXR8_Z5jdHi6B-myT\"\n```\n\n---\n\n<img src=\"https://cdn.evilmartians.com/badges/logo-no-label.svg\" alt=\"\" width=\"22\" height=\"16\" />  Made at <b><a href=\"https://evilmartians.com/devtools?utm_source=nanoid&utm_campaign=devtools-button&utm_medium=github\">Evil Martians</a></b>, product consulting for <b>developer tools</b>.\n\n---\n\n[online tool]: https://gitpod.io/#https://github.com/ai/nanoid/\n[with Babel]:  https://developer.epages.com/blog/coding/how-to-transpile-node-modules-with-babel-and-webpack-in-a-monorepo/\n[Size Limit]:  https://github.com/ai/size-limit\n\n\n## Docs\nRead full docs **[here](https://github.com/ai/nanoid#readme)**.\n",
+ "readme": "# Nano ID\n\n<img src=\"https://ai.github.io/nanoid/logo.svg\" align=\"right\"\n     alt=\"Nano ID logo by Anton Lovchikov\" width=\"180\" height=\"94\">\n\n**English** | [Русский](./README.ru.md) | [简体中文](./README.zh-CN.md) | [Bahasa Indonesia](./README.id-ID.md)\n\nA tiny, secure, URL-friendly, unique string ID generator for JavaScript.\n\n> “An amazing level of senseless perfectionism,\n> which is simply impossible not to respect.”\n\n* **Small.** 118 bytes (minified and brotlied). No dependencies.\n  [Size Limit] controls the size.\n* **Safe.** It uses hardware random generator. Can be used in clusters.\n* **Short IDs.** It uses a larger alphabet than UUID (`A-Za-z0-9_-`).\n  So ID size was reduced from 36 to 21 symbols.\n* **Portable.** Nano ID was ported\n  to over [20 programming languages](./README.md#other-programming-languages).\n\n```js\nimport { nanoid } from 'nanoid'\nmodel.id = nanoid() //=> \"V1StGXR8_Z5jdHi6B-myT\"\n```\n\n---\n\n<img src=\"https://cdn.evilmartians.com/badges/logo-no-label.svg\" alt=\"\" width=\"22\" height=\"16\" />  Made at <b><a href=\"https://evilmartians.com/devtools?utm_source=nanoid&utm_campaign=devtools-button&utm_medium=github\">Evil Martians</a></b>, product consulting for <b>developer tools</b>.\n\n---\n\n[online tool]: https://gitpod.io/#https://github.com/ai/nanoid/\n[with Babel]:  https://developer.epages.com/blog/coding/how-to-transpile-node-modules-with-babel-and-webpack-in-a-monorepo/\n[Size Limit]:  https://github.com/ai/size-limit\n\n\n## Docs\nRead full docs **[here](https://github.com/ai/nanoid#readme)**.\n",
  "readmeFilename": "README.md",
  "users": {
   "dwqs": true,

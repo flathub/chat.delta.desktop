@@ -1,10 +1,10 @@
 {
  "_id": "yaml",
- "_rev": "145-d00dcb97bafb15ca073fac049d7ac85e",
+ "_rev": "146-fd8b008615fb1410fff42285f780b629",
  "name": "yaml",
  "dist-tags": {
   "next": "2.3.0",
-  "latest": "2.6.0"
+  "latest": "2.6.1"
  },
  "versions": {
   "0.1.0": {
@@ -11286,6 +11286,142 @@
   "2.6.0": {
    "name": "yaml",
    "version": "2.6.0",
+   "keywords": [
+    "YAML",
+    "parser",
+    "stringifier"
+   ],
+   "author": {
+    "name": "Eemeli Aro",
+    "email": "eemeli@gmail.com"
+   },
+   "license": "ISC",
+   "_id": "yaml@2.6.0",
+   "maintainers": [
+    {
+     "name": "eemeli",
+     "email": "eemeli@gmail.com"
+    }
+   ],
+   "homepage": "https://eemeli.org/yaml/",
+   "bugs": {
+    "url": "https://github.com/eemeli/yaml/issues"
+   },
+   "bin": {
+    "yaml": "bin.mjs"
+   },
+   "dist": {
+    "shasum": "14059ad9d0b1680d0f04d3a60fe00f3a857303c3",
+    "tarball": "http://localhost:3000/yaml/-/yaml-2.6.0.tgz",
+    "fileCount": 233,
+    "integrity": "sha512-a6ae//JvKDEra2kdi1qzCyrJW/WZCgFi8ydDV+eXExl95t+5R+ijnqHJbz9tmMh8FUjx3iv2fCQ4dclAQlO2UQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDRB/SQezAh4DB1Zefj91yCbsNQmGBrOfEhAPGXJq4ceAIhAIj13hq9wV7AYq4ISf0IvEe4X+3034OemTwb9U+0Er6I",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 680893
+   },
+   "main": "./dist/index.js",
+   "type": "commonjs",
+   "types": "./dist/index.d.ts",
+   "browser": {
+    "./util.js": "./browser/dist/util.js",
+    "./dist/util.js": "./browser/dist/util.js",
+    "./dist/index.js": "./browser/index.js"
+   },
+   "engines": {
+    "node": ">= 14"
+   },
+   "exports": {
+    ".": {
+     "node": "./dist/index.js",
+     "types": "./dist/index.d.ts",
+     "default": "./browser/index.js"
+    },
+    "./util": {
+     "node": "./dist/util.js",
+     "types": "./dist/util.d.ts",
+     "default": "./browser/dist/util.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "gitHead": "808fba3cdef86b5d12085fd9c6343d47f168cbc3",
+   "scripts": {
+    "docs": "cd docs-slate && bundle exec middleman server",
+    "lint": "eslint config/ src/",
+    "test": "jest --config config/jest.config.js",
+    "build": "npm run build:node && npm run build:browser",
+    "clean": "git clean -fdxe node_modules",
+    "start": "node --enable-source-maps -i -e 'YAML=require(\"./dist/index.js\");const{parse,parseDocument,parseAllDocuments}=YAML'",
+    "predocs": "node docs/prepare-docs.mjs",
+    "prestart": "rollup --sourcemap -c config/rollup.node-config.mjs",
+    "prettier": "prettier --write .",
+    "test:all": "npm test && npm run test:types && npm run test:dist && npm run test:dist:types",
+    "test:dist": "npm run build:node && jest --config config/jest.config.js",
+    "build:node": "rollup -c config/rollup.node-config.mjs",
+    "preversion": "npm test && npm run build",
+    "test:types": "tsc --noEmit && tsc --noEmit -p tests/tsconfig.json",
+    "docs:deploy": "cd docs-slate && ./deploy.sh",
+    "docs:install": "cd docs-slate && bundle install",
+    "build:browser": "rollup -c config/rollup.browser-config.mjs",
+    "test:browsers": "cd playground && npm test",
+    "predocs:deploy": "node docs/prepare-docs.mjs",
+    "prepublishOnly": "npm run clean && npm test && npm run build",
+    "test:dist:types": "tsc --allowJs --moduleResolution node --noEmit --target es5 dist/index.js"
+   },
+   "_npmUser": {
+    "name": "eemeli",
+    "email": "eemeli@gmail.com"
+   },
+   "prettier": {
+    "semi": false,
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "trailingComma": "none"
+   },
+   "repository": {
+    "url": "git+https://github.com/eemeli/yaml.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "JavaScript parser and stringifier for YAML",
+   "directories": {},
+   "_nodeVersion": "22.8.0",
+   "browserslist": "defaults, not ie 11",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^29.0.1",
+    "tslib": "^2.1.0",
+    "eslint": "^9.9.1",
+    "rollup": "^4.12.0",
+    "prettier": "^3.0.2",
+    "cross-env": "^7.0.3",
+    "@eslint/js": "^9.9.1",
+    "babel-jest": "^29.0.1",
+    "fast-check": "^2.12.0",
+    "typescript": "^5.0.3",
+    "@babel/core": "^7.12.10",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^20.11.20",
+    "@babel/preset-env": "^7.12.11",
+    "typescript-eslint": "^8.4.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-replace": "^5.0.2",
+    "eslint-config-prettier": "^9.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "jest-ts-webcompat-resolver": "^1.0.0",
+    "@babel/plugin-transform-typescript": "^7.12.17"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/yaml_2.6.0_1728815781097_0.5789709535367382",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "2.6.1": {
+   "name": "yaml",
+   "version": "2.6.1",
    "license": "ISC",
    "author": {
     "name": "Eemeli Aro",
@@ -11381,24 +11517,24 @@
    "engines": {
     "node": ">= 14"
    },
-   "_id": "yaml@2.6.0",
-   "gitHead": "808fba3cdef86b5d12085fd9c6343d47f168cbc3",
+   "_id": "yaml@2.6.1",
+   "gitHead": "aa1898ae61605ea09bb79621d25ad5e7fd9b4217",
    "types": "./dist/index.d.ts",
    "bugs": {
     "url": "https://github.com/eemeli/yaml/issues"
    },
    "_nodeVersion": "22.8.0",
-   "_npmVersion": "10.8.2",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-a6ae//JvKDEra2kdi1qzCyrJW/WZCgFi8ydDV+eXExl95t+5R+ijnqHJbz9tmMh8FUjx3iv2fCQ4dclAQlO2UQ==",
-    "shasum": "14059ad9d0b1680d0f04d3a60fe00f3a857303c3",
-    "tarball": "http://localhost:3000/yaml/-/yaml-2.6.0.tgz",
+    "integrity": "sha512-7r0XPzioN/Q9kXBro/XPnA6kznR73DHq+GXh5ON7ZozRO6aMjbmiBuKste2wslTFkC5d1dw0GooOCepZXJ2SAg==",
+    "shasum": "42f2b1ba89203f374609572d5349fb8686500773",
+    "tarball": "http://localhost:3000/yaml/-/yaml-2.6.1.tgz",
     "fileCount": 233,
-    "unpackedSize": 680893,
+    "unpackedSize": 681592,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDRB/SQezAh4DB1Zefj91yCbsNQmGBrOfEhAPGXJq4ceAIhAIj13hq9wV7AYq4ISf0IvEe4X+3034OemTwb9U+0Er6I"
+      "sig": "MEUCIHNfQHuurcbUBdQHYfP/c1MmL5ozBFT7RdXHPbK+iTyrAiEAww5ls80YtBnhaOQ8VCyxZf72S83DMDYbELczqfKsZm0="
      }
     ]
    },
@@ -11415,14 +11551,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/yaml_2.6.0_1728815781097_0.5789709535367382"
+    "tmp": "tmp/yaml_2.6.1_1732013272350_0.41795267368019196"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2011-04-15T16:25:52.216Z",
-  "modified": "2024-10-13T10:36:21.489Z",
+  "modified": "2024-11-19T10:47:52.690Z",
   "0.1.0": "2011-04-15T16:25:52.216Z",
   "0.1.1": "2011-04-15T16:25:52.216Z",
   "0.1.2": "2011-04-15T16:25:52.216Z",
@@ -11513,7 +11649,8 @@
   "2.4.5": "2024-06-08T21:42:26.758Z",
   "2.5.0": "2024-07-24T10:36:40.581Z",
   "2.5.1": "2024-09-03T23:13:27.622Z",
-  "2.6.0": "2024-10-13T10:36:21.312Z"
+  "2.6.0": "2024-10-13T10:36:21.312Z",
+  "2.6.1": "2024-11-19T10:47:52.527Z"
  },
  "bugs": {
   "url": "https://github.com/eemeli/yaml/issues"

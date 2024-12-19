@@ -1,10 +1,10 @@
 {
  "_id": "builder-util-runtime",
- "_rev": "107-b39928ca7165f27cb2ff03bbd23363bd",
+ "_rev": "108-96a39bff31b60fb6db3e8ac9fc23cb55",
  "name": "builder-util-runtime",
  "dist-tags": {
-  "latest": "9.2.10",
-  "next": "9.2.10"
+  "next": "9.3.0-alpha.0",
+  "latest": "9.2.10"
  },
  "versions": {
   "0.0.0-semantic-release": {
@@ -6569,7 +6569,6 @@
     "debug": "^4.3.4"
    },
    "_hasShrinkwrap": false,
-   "readmeFilename": "readme.md",
    "devDependencies": {
     "@types/sax": "1.2.3",
     "@types/debug": "4.1.7"
@@ -6578,11 +6577,82 @@
     "tmp": "tmp/builder-util-runtime_9.2.10_1727884742489_0.09541467482406008",
     "host": "s3://npm-registry-packages"
    }
+  },
+  "9.3.0-alpha.0": {
+   "name": "builder-util-runtime",
+   "version": "9.3.0-alpha.0",
+   "main": "out/index.js",
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "directory": "packages/builder-util-runtime"
+   },
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "dependencies": {
+    "debug": "^4.3.4",
+    "sax": "^1.2.4"
+   },
+   "devDependencies": {
+    "@types/debug": "4.1.7",
+    "@types/sax": "1.2.3"
+   },
+   "types": "./out/index.d.ts",
+   "_id": "builder-util-runtime@9.3.0-alpha.0",
+   "readmeFilename": "readme.md",
+   "description": "HTTP utilities. Used by [electron-builder](https://github.com/electron-userland/electron-builder).",
+   "_integrity": "sha512-EriE6Uf15niqdkyjBOS09OrXlhEV0HKhnATlI9n63vCoisnvvRTQNgoR2MV9vnBmNGhavBPZXPWPItv4QMDVfw==",
+   "_resolved": "/tmp/b27ba1edfe084354d591966db9e9282a/builder-util-runtime-9.3.0-alpha.0.tgz",
+   "_from": "file:builder-util-runtime-9.3.0-alpha.0.tgz",
+   "_nodeVersion": "18.20.5",
+   "_npmVersion": "10.8.2",
+   "dist": {
+    "integrity": "sha512-EriE6Uf15niqdkyjBOS09OrXlhEV0HKhnATlI9n63vCoisnvvRTQNgoR2MV9vnBmNGhavBPZXPWPItv4QMDVfw==",
+    "shasum": "c4639ae24a74d2e0f4eb324100af3040300bae62",
+    "tarball": "http://localhost:3000/builder-util-runtime/-/builder-util-runtime-9.3.0-alpha.0.tgz",
+    "fileCount": 42,
+    "unpackedSize": 159119,
+    "signatures": [
+     {
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+      "sig": "MEUCIQC8KsYHwRZ7p+OUh9gJQ1PTlnGWPixnhJd91hNPyV5uqAIgZgQJ0eaMNaEmSVBiu+6NUe/MSSOO/jOjGAHM/yU6UUc="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/builder-util-runtime_9.3.0-alpha.0_1734463574166_0.9232875310203927"
+   },
+   "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-09-06T17:09:16.067Z",
-  "modified": "2024-10-03T15:35:47.721Z",
+  "modified": "2024-12-17T19:26:14.554Z",
   "0.0.0-semantic-release": "2017-09-06T17:09:16.067Z",
   "1.0.0": "2017-09-10T05:21:23.962Z",
   "1.0.1": "2017-09-10T07:33:43.050Z",
@@ -6685,7 +6755,8 @@
   "9.2.7": "2024-09-14T21:13:23.366Z",
   "9.2.8": "2024-09-17T21:25:01.203Z",
   "9.2.9": "2024-09-23T19:33:43.370Z",
-  "9.2.10": "2024-10-02T15:59:02.682Z"
+  "9.2.10": "2024-10-02T15:59:02.682Z",
+  "9.3.0-alpha.0": "2024-12-17T19:26:14.356Z"
  },
  "bugs": {
   "url": "https://github.com/electron-userland/electron-builder/issues"

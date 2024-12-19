@@ -1,10 +1,10 @@
 {
  "_id": "debug",
- "_rev": "953-65b69af0bafc8f629d162de8bda55c05",
+ "_rev": "955-1b7718f7bbcee9db63bfb6981e67f5db",
  "name": "debug",
  "dist-tags": {
   "beta": "4.3.3",
-  "latest": "4.3.7"
+  "latest": "4.4.0"
  },
  "versions": {
   "0.0.1": {
@@ -6530,96 +6530,17 @@
   "4.3.7": {
    "name": "debug",
    "version": "4.3.7",
-   "repository": {
-    "type": "git",
-    "url": "git://github.com/debug-js/debug.git"
-   },
-   "description": "Lightweight debugging utility for Node.js and the browser",
    "keywords": [
     "debug",
     "log",
     "debugger"
    ],
    "author": {
-    "name": "Josh Junon",
-    "url": "https://github.com/qix-"
+    "url": "https://github.com/qix-",
+    "name": "Josh Junon"
    },
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Nathan Rajlich",
-     "email": "nathan@tootallnate.net",
-     "url": "http://n8.io"
-    },
-    {
-     "name": "Andrew Rhyne",
-     "email": "rhyneandrew@gmail.com"
-    }
-   ],
    "license": "MIT",
-   "scripts": {
-    "lint": "xo",
-    "test": "npm run test:node && npm run test:browser && npm run lint",
-    "test:node": "istanbul cover _mocha -- test.js test.node.js",
-    "test:browser": "karma start --single-run",
-    "test:coverage": "cat ./coverage/lcov.info | coveralls"
-   },
-   "dependencies": {
-    "ms": "^2.1.3"
-   },
-   "devDependencies": {
-    "brfs": "^2.0.1",
-    "browserify": "^16.2.3",
-    "coveralls": "^3.0.2",
-    "istanbul": "^0.4.5",
-    "karma": "^3.1.4",
-    "karma-browserify": "^6.0.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-mocha": "^1.3.0",
-    "mocha": "^5.2.0",
-    "mocha-lcov-reporter": "^1.2.0",
-    "sinon": "^14.0.0",
-    "xo": "^0.23.0"
-   },
-   "peerDependenciesMeta": {
-    "supports-color": {
-     "optional": true
-    }
-   },
-   "main": "./src/index.js",
-   "browser": "./src/browser.js",
-   "engines": {
-    "node": ">=6.0"
-   },
    "_id": "debug@4.3.7",
-   "gitHead": "bc60914816e5e45a5fff1cd638410438fc317521",
-   "bugs": {
-    "url": "https://github.com/debug-js/debug/issues"
-   },
-   "homepage": "https://github.com/debug-js/debug#readme",
-   "_nodeVersion": "20.5.1",
-   "_npmVersion": "9.8.0",
-   "dist": {
-    "integrity": "sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==",
-    "shasum": "87945b4151a011d76d95a198d7111c865c360a52",
-    "tarball": "http://localhost:3000/debug/-/debug-4.3.7.tgz",
-    "fileCount": 7,
-    "unpackedSize": 42060,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCMQx9T+oP2ZGPLho8hL50/ibLz9EuJF2iS6VVaDwS96QIgVC4PdM67/9mYyo/GRZXILo/xg+gUPfdsrHsM5IOOBsY="
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "qix",
-    "email": "npm@josh.junon.me"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "qix",
@@ -6638,16 +6559,217 @@
      "email": "tj@vision-media.ca"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/debug_4.3.7_1725583977461_0.3189367575089168"
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "url": "http://n8.io",
+     "name": "Nathan Rajlich",
+     "email": "nathan@tootallnate.net"
+    },
+    {
+     "name": "Andrew Rhyne",
+     "email": "rhyneandrew@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/debug-js/debug#readme",
+   "bugs": {
+    "url": "https://github.com/debug-js/debug/issues"
    },
-   "_hasShrinkwrap": false
+   "dist": {
+    "shasum": "87945b4151a011d76d95a198d7111c865c360a52",
+    "tarball": "http://localhost:3000/debug/-/debug-4.3.7.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCMQx9T+oP2ZGPLho8hL50/ibLz9EuJF2iS6VVaDwS96QIgVC4PdM67/9mYyo/GRZXILo/xg+gUPfdsrHsM5IOOBsY=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 42060
+   },
+   "main": "./src/index.js",
+   "browser": "./src/browser.js",
+   "engines": {
+    "node": ">=6.0"
+   },
+   "gitHead": "bc60914816e5e45a5fff1cd638410438fc317521",
+   "scripts": {
+    "lint": "xo",
+    "test": "npm run test:node && npm run test:browser && npm run lint",
+    "test:node": "istanbul cover _mocha -- test.js test.node.js",
+    "test:browser": "karma start --single-run",
+    "test:coverage": "cat ./coverage/lcov.info | coveralls"
+   },
+   "_npmUser": {
+    "name": "qix",
+    "email": "npm@josh.junon.me"
+   },
+   "repository": {
+    "url": "git://github.com/debug-js/debug.git",
+    "type": "git"
+   },
+   "_npmVersion": "9.8.0",
+   "description": "Lightweight debugging utility for Node.js and the browser",
+   "directories": {},
+   "_nodeVersion": "20.5.1",
+   "dependencies": {
+    "ms": "^2.1.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.23.0",
+    "brfs": "^2.0.1",
+    "karma": "^3.1.4",
+    "mocha": "^5.2.0",
+    "sinon": "^14.0.0",
+    "istanbul": "^0.4.5",
+    "coveralls": "^3.0.2",
+    "browserify": "^16.2.3",
+    "karma-mocha": "^1.3.0",
+    "karma-browserify": "^6.0.0",
+    "mocha-lcov-reporter": "^1.2.0",
+    "karma-chrome-launcher": "^2.2.0"
+   },
+   "peerDependenciesMeta": {
+    "supports-color": {
+     "optional": true
+    }
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/debug_4.3.7_1725583977461_0.3189367575089168",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "4.4.0": {
+   "name": "debug",
+   "version": "4.4.0",
+   "keywords": [
+    "debug",
+    "log",
+    "debugger"
+   ],
+   "author": {
+    "url": "https://github.com/qix-",
+    "name": "Josh Junon"
+   },
+   "license": "MIT",
+   "_id": "debug@4.4.0",
+   "maintainers": [
+    {
+     "name": "qix",
+     "email": "npm@josh.junon.me"
+    },
+    {
+     "name": "thebigredgeek",
+     "email": "rhyneandrew@gmail.com"
+    },
+    {
+     "name": "tootallnate",
+     "email": "nathan@tootallnate.net"
+    },
+    {
+     "name": "tjholowaychuk",
+     "email": "tj@vision-media.ca"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "url": "http://n8.io",
+     "name": "Nathan Rajlich",
+     "email": "nathan@tootallnate.net"
+    },
+    {
+     "name": "Andrew Rhyne",
+     "email": "rhyneandrew@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/debug-js/debug#readme",
+   "bugs": {
+    "url": "https://github.com/debug-js/debug/issues"
+   },
+   "xo": {
+    "rules": {
+     "import/extensions": "off"
+    }
+   },
+   "dist": {
+    "shasum": "2b3f2aea2ffeb776477460267377dc8710faba8a",
+    "tarball": "http://localhost:3000/debug/-/debug-4.4.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==",
+    "signatures": [
+     {
+      "sig": "MEQCIAOUmdup8dsL7tpvMHDHweICku/LOxrG65yY7CZtqlhJAiAfx4wuksiMJlmkVdO/tCvfps4NFVnFhyH7k/lD64R/Sw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 42798
+   },
+   "main": "./src/index.js",
+   "browser": "./src/browser.js",
+   "engines": {
+    "node": ">=6.0"
+   },
+   "gitHead": "7e3814cc603bf64fdd69e714e0cf5611ec31f43b",
+   "scripts": {
+    "lint": "xo",
+    "test": "npm run test:node && npm run test:browser && npm run lint",
+    "test:node": "istanbul cover _mocha -- test.js test.node.js",
+    "test:browser": "karma start --single-run",
+    "test:coverage": "cat ./coverage/lcov.info | coveralls"
+   },
+   "_npmUser": {
+    "name": "qix",
+    "email": "npm@josh.junon.me"
+   },
+   "repository": {
+    "url": "git://github.com/debug-js/debug.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Lightweight debugging utility for Node.js and the browser",
+   "directories": {},
+   "_nodeVersion": "20.5.1",
+   "dependencies": {
+    "ms": "^2.1.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.23.0",
+    "brfs": "^2.0.1",
+    "karma": "^3.1.4",
+    "mocha": "^5.2.0",
+    "sinon": "^14.0.0",
+    "istanbul": "^0.4.5",
+    "coveralls": "^3.0.2",
+    "browserify": "^16.2.3",
+    "karma-mocha": "^1.3.0",
+    "karma-browserify": "^6.0.0",
+    "mocha-lcov-reporter": "^1.2.0",
+    "karma-chrome-launcher": "^2.2.0"
+   },
+   "peerDependenciesMeta": {
+    "supports-color": {
+     "optional": true
+    }
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/debug_4.4.0_1733488366116_0.7027776010484381",
+    "host": "s3://npm-registry-packages"
+   }
   }
  },
  "time": {
   "created": "2011-11-29T01:11:23.618Z",
-  "modified": "2024-09-06T00:52:57.861Z",
+  "modified": "2024-12-13T19:06:03.154Z",
   "0.0.1": "2011-11-29T01:11:25.405Z",
   "0.1.0": "2011-12-02T23:16:56.971Z",
   "0.2.0": "2012-01-22T18:26:41.329Z",
@@ -6721,14 +6843,15 @@
   "4.3.4": "2022-03-17T13:38:47.641Z",
   "4.3.5": "2024-05-31T11:40:15.895Z",
   "4.3.6": "2024-07-27T09:23:24.842Z",
-  "4.3.7": "2024-09-06T00:52:57.702Z"
+  "4.3.7": "2024-09-06T00:52:57.702Z",
+  "4.4.0": "2024-12-06T12:32:46.280Z"
  },
  "bugs": {
   "url": "https://github.com/debug-js/debug/issues"
  },
  "author": {
-  "name": "Josh Junon",
-  "url": "https://github.com/qix-"
+  "url": "https://github.com/qix-",
+  "name": "Josh Junon"
  },
  "license": "MIT",
  "homepage": "https://github.com/debug-js/debug#readme",
@@ -6738,8 +6861,8 @@
   "debugger"
  ],
  "repository": {
-  "type": "git",
-  "url": "git://github.com/debug-js/debug.git"
+  "url": "git://github.com/debug-js/debug.git",
+  "type": "git"
  },
  "description": "Lightweight debugging utility for Node.js and the browser",
  "contributors": [
@@ -6748,9 +6871,9 @@
    "email": "tj@vision-media.ca"
   },
   {
+   "url": "http://n8.io",
    "name": "Nathan Rajlich",
-   "email": "nathan@tootallnate.net",
-   "url": "http://n8.io"
+   "email": "nathan@tootallnate.net"
   },
   {
    "name": "Andrew Rhyne",
@@ -7051,7 +7174,6 @@
   "ahvonenj": true,
   "akinjide": true,
   "alexkval": true,
-  "almccann": true,
   "arifulhb": true,
   "bapinney": true,
   "bblackwo": true,

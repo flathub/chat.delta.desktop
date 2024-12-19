@@ -1,11 +1,11 @@
 {
  "_id": "path-to-regexp",
- "_rev": "292-892c4379976bd4d4223b735ba9a5e1bb",
+ "_rev": "293-b9c0f20b631822cc9e525a3d08c73ae6",
  "name": "path-to-regexp",
  "dist-tags": {
-  "latest": "8.2.0",
   "old": "6.3.0",
-  "express": "0.1.11"
+  "express": "0.1.12",
+  "latest": "8.2.0"
  },
  "versions": {
   "0.0.1": {
@@ -9274,46 +9274,77 @@
   "8.2.0": {
    "name": "path-to-regexp",
    "version": "8.2.0",
-   "description": "Express style path to RegExp utility",
    "keywords": [
     "express",
     "regexp",
     "route",
     "routing"
    ],
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pillarjs/path-to-regexp.git"
-   },
    "license": "MIT",
-   "exports": "./dist/index.js",
+   "_id": "path-to-regexp@8.2.0",
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    },
+    {
+     "name": "dougwilson",
+     "email": "doug@somethingdoug.com"
+    },
+    {
+     "name": "jonathanong",
+     "email": "jonathanrichardong@gmail.com"
+    },
+    {
+     "name": "jongleberry",
+     "email": "jonathanrichardong@gmail.com"
+    },
+    {
+     "name": "defunctzombie",
+     "email": "shtylman@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/pillarjs/path-to-regexp#readme",
+   "bugs": {
+    "url": "https://github.com/pillarjs/path-to-regexp/issues"
+   },
+   "dist": {
+    "shasum": "73990cc29e57a3ff2a0d914095156df5db79e8b4",
+    "tarball": "http://localhost:3000/path-to-regexp/-/path-to-regexp-8.2.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-TdrF7fW9Rphjq4RjrW0Kp2AW0Ahwu9sRGTkS6bvDi0SCwZlEZYmcfDbEsTz8RVk0EHIS/Vd1bv3JhG+1xZuAyQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCzxrAh1w12TdT2L1DO+JsACm/lUDw3NolWeOnen8jtKgIgch/ZxiVSnYOLIltVnG5lJbQbSb0YL3+jNv72k2NeWT8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 55246
+   },
    "main": "dist/index.js",
-   "typings": "dist/index.d.ts",
-   "scripts": {
-    "bench": "vitest bench",
-    "build": "ts-scripts build",
-    "format": "ts-scripts format",
-    "lint": "ts-scripts lint",
-    "prepare": "ts-scripts install && npm run build",
-    "size": "size-limit",
-    "specs": "ts-scripts specs",
-    "test": "ts-scripts test && npm run size"
-   },
-   "devDependencies": {
-    "@borderless/ts-scripts": "^0.15.0",
-    "@size-limit/preset-small-lib": "^11.1.2",
-    "@types/node": "^22.7.2",
-    "@types/semver": "^7.3.1",
-    "@vitest/coverage-v8": "^2.1.1",
-    "recheck": "^4.4.5",
-    "size-limit": "^11.1.2",
-    "typescript": "^5.5.3"
-   },
    "engines": {
     "node": ">=16"
    },
-   "publishConfig": {
-    "access": "public"
+   "exports": "./dist/index.js",
+   "gitHead": "776c8986b89b29a368f22c1a6c598242b67fb832",
+   "scripts": {
+    "lint": "ts-scripts lint",
+    "size": "size-limit",
+    "test": "ts-scripts test && npm run size",
+    "bench": "vitest bench",
+    "build": "ts-scripts build",
+    "specs": "ts-scripts specs",
+    "format": "ts-scripts format",
+    "prepare": "ts-scripts install && npm run build"
+   },
+   "typings": "dist/index.d.ts",
+   "_npmUser": {
+    "name": "blakeembrey",
+    "email": "hello@blakeembrey.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/pillarjs/path-to-regexp.git",
+    "type": "git"
    },
    "size-limit": [
     {
@@ -9329,24 +9360,73 @@
      "tsconfig.build.json"
     ]
    },
-   "_id": "path-to-regexp@8.2.0",
-   "gitHead": "776c8986b89b29a368f22c1a6c598242b67fb832",
+   "_npmVersion": "10.5.0",
+   "description": "Express style path to RegExp utility",
+   "directories": {},
+   "_nodeVersion": "20.12.1",
+   "publishConfig": {
+    "access": "public"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "recheck": "^4.4.5",
+    "size-limit": "^11.1.2",
+    "typescript": "^5.5.3",
+    "@types/node": "^22.7.2",
+    "@types/semver": "^7.3.1",
+    "@vitest/coverage-v8": "^2.1.1",
+    "@borderless/ts-scripts": "^0.15.0",
+    "@size-limit/preset-small-lib": "^11.1.2"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/path-to-regexp_8.2.0_1727321173373_0.36649469104292254",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "0.1.12": {
+   "name": "path-to-regexp",
+   "description": "Express style path to RegExp utility",
+   "version": "0.1.12",
+   "scripts": {
+    "test": "istanbul cover _mocha -- -R spec"
+   },
+   "keywords": [
+    "express",
+    "regexp"
+   ],
+   "component": {
+    "scripts": {
+     "path-to-regexp": "index.js"
+    }
+   },
+   "license": "MIT",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pillarjs/path-to-regexp.git"
+   },
+   "devDependencies": {
+    "mocha": "^1.17.1",
+    "istanbul": "^0.2.6"
+   },
+   "_id": "path-to-regexp@0.1.12",
+   "readmeFilename": "Readme.md",
+   "gitHead": "640e694c6fd971f78268439df9cf44040855e669",
    "bugs": {
     "url": "https://github.com/pillarjs/path-to-regexp/issues"
    },
    "homepage": "https://github.com/pillarjs/path-to-regexp#readme",
-   "_nodeVersion": "20.12.1",
-   "_npmVersion": "10.5.0",
+   "_nodeVersion": "22.9.0",
+   "_npmVersion": "10.8.3",
    "dist": {
-    "integrity": "sha512-TdrF7fW9Rphjq4RjrW0Kp2AW0Ahwu9sRGTkS6bvDi0SCwZlEZYmcfDbEsTz8RVk0EHIS/Vd1bv3JhG+1xZuAyQ==",
-    "shasum": "73990cc29e57a3ff2a0d914095156df5db79e8b4",
-    "tarball": "http://localhost:3000/path-to-regexp/-/path-to-regexp-8.2.0.tgz",
-    "fileCount": 6,
-    "unpackedSize": 55246,
+    "integrity": "sha512-RA1GjUVMnvYFxuqovrEqZoxxW5NUZqbwKtYz/Tt7nXerk0LbLblQmrsgdeOxV5SFHf0UDggjS/bSeOZwt1pmEQ==",
+    "shasum": "d5e1a12e478a976d432ef3c58d534b9923164bb7",
+    "tarball": "http://localhost:3000/path-to-regexp/-/path-to-regexp-0.1.12.tgz",
+    "fileCount": 4,
+    "unpackedSize": 6598,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCzxrAh1w12TdT2L1DO+JsACm/lUDw3NolWeOnen8jtKgIgch/ZxiVSnYOLIltVnG5lJbQbSb0YL3+jNv72k2NeWT8="
+      "sig": "MEQCIG0SIXzS6C/SxbHFz7/1pw7shL2U2kBFTJayVEXCVTojAiAGQ1VQqYW+a+xVt5oXZqiMk6MSmVOmBQ5nw5ZadAcyMg=="
      }
     ]
    },
@@ -9379,14 +9459,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages",
-    "tmp": "tmp/path-to-regexp_8.2.0_1727321173373_0.36649469104292254"
+    "tmp": "tmp/path-to-regexp_0.1.12_1733436486404_0.21783883627456158"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2012-08-01T22:49:08.434Z",
-  "modified": "2024-09-26T03:26:13.699Z",
+  "modified": "2024-12-05T22:08:06.748Z",
   "0.0.1": "2012-08-01T22:49:10.343Z",
   "0.0.2": "2013-02-10T17:41:48.985Z",
   "0.1.0": "2014-03-06T06:35:14.721Z",
@@ -9453,7 +9533,8 @@
   "3.3.0": "2024-09-10T22:04:18.308Z",
   "6.3.0": "2024-09-12T01:09:36.065Z",
   "0.1.11": "2024-09-12T18:14:53.729Z",
-  "8.2.0": "2024-09-26T03:26:13.535Z"
+  "8.2.0": "2024-09-26T03:26:13.535Z",
+  "0.1.12": "2024-12-05T22:08:06.588Z"
  },
  "bugs": {
   "url": "https://github.com/pillarjs/path-to-regexp/issues"
@@ -9467,8 +9548,8 @@
   "routing"
  ],
  "repository": {
-  "type": "git",
-  "url": "git+https://github.com/pillarjs/path-to-regexp.git"
+  "url": "git+https://github.com/pillarjs/path-to-regexp.git",
+  "type": "git"
  },
  "description": "Express style path to RegExp utility",
  "maintainers": [
@@ -9493,8 +9574,8 @@
    "email": "shtylman@gmail.com"
   }
  ],
- "readme": "# Path-to-RegExp\n\n> Turn a path string such as `/user/:name` into a regular expression.\n\n[![NPM version][npm-image]][npm-url]\n[![NPM downloads][downloads-image]][downloads-url]\n[![Build status][build-image]][build-url]\n[![Build coverage][coverage-image]][coverage-url]\n[![License][license-image]][license-url]\n\n## Installation\n\n```\nnpm install path-to-regexp --save\n```\n\n## Usage\n\n```js\nconst {\n  match,\n  pathToRegexp,\n  compile,\n  parse,\n  stringify,\n} = require(\"path-to-regexp\");\n```\n\n### Parameters\n\nParameters match arbitrary strings in a path by matching up to the end of the segment, or up to any proceeding tokens. They are defined by prefixing a colon to the parameter name (`:foo`). Parameter names can use any valid JavaScript identifier, or be double quoted to use other characters (`:\"param-name\"`).\n\n```js\nconst fn = match(\"/:foo/:bar\");\n\nfn(\"/test/route\");\n//=> { path: '/test/route', params: { foo: 'test', bar: 'route' } }\n```\n\n### Wildcard\n\nWildcard parameters match one or more characters across multiple segments. They are defined the same way as regular parameters, but are prefixed with an asterisk (`*foo`).\n\n```js\nconst fn = match(\"/*splat\");\n\nfn(\"/bar/baz\");\n//=> { path: '/bar/baz', params: { splat: [ 'bar', 'baz' ] } }\n```\n\n### Optional\n\nBraces can be used to define parts of the path that are optional.\n\n```js\nconst fn = match(\"/users{/:id}/delete\");\n\nfn(\"/users/delete\");\n//=> { path: '/users/delete', params: {} }\n\nfn(\"/users/123/delete\");\n//=> { path: '/users/123/delete', params: { id: '123' } }\n```\n\n## Match\n\nThe `match` function returns a function for matching strings against a path:\n\n- **path** String or array of strings.\n- **options** _(optional)_ (Extends [pathToRegexp](#pathToRegexp) options)\n  - **decode** Function for decoding strings to params, or `false` to disable all processing. (default: `decodeURIComponent`)\n\n```js\nconst fn = match(\"/foo/:bar\");\n```\n\n**Please note:** `path-to-regexp` is intended for ordered data (e.g. paths, hosts). It can not handle arbitrarily ordered data (e.g. query strings, URL fragments, JSON, etc).\n\n## PathToRegexp\n\nThe `pathToRegexp` function returns a regular expression for matching strings against paths. It\n\n- **path** String or array of strings.\n- **options** _(optional)_ (See [parse](#parse) for more options)\n  - **sensitive** Regexp will be case sensitive. (default: `false`)\n  - **end** Validate the match reaches the end of the string. (default: `true`)\n  - **delimiter** The default delimiter for segments, e.g. `[^/]` for `:named` parameters. (default: `'/'`)\n  - **trailing** Allows optional trailing delimiter to match. (default: `true`)\n\n```js\nconst { regexp, keys } = pathToRegexp(\"/foo/:bar\");\n```\n\n## Compile (\"Reverse\" Path-To-RegExp)\n\nThe `compile` function will return a function for transforming parameters into a valid path:\n\n- **path** A string.\n- **options** (See [parse](#parse) for more options)\n  - **delimiter** The default delimiter for segments, e.g. `[^/]` for `:named` parameters. (default: `'/'`)\n  - **encode** Function for encoding input strings for output into the path, or `false` to disable entirely. (default: `encodeURIComponent`)\n\n```js\nconst toPath = compile(\"/user/:id\");\n\ntoPath({ id: \"name\" }); //=> \"/user/name\"\ntoPath({ id: \"café\" }); //=> \"/user/caf%C3%A9\"\n\nconst toPathRepeated = compile(\"/*segment\");\n\ntoPathRepeated({ segment: [\"foo\"] }); //=> \"/foo\"\ntoPathRepeated({ segment: [\"a\", \"b\", \"c\"] }); //=> \"/a/b/c\"\n\n// When disabling `encode`, you need to make sure inputs are encoded correctly. No arrays are accepted.\nconst toPathRaw = compile(\"/user/:id\", { encode: false });\n\ntoPathRaw({ id: \"%3A%2F\" }); //=> \"/user/%3A%2F\"\n```\n\n## Stringify\n\nTransform `TokenData` (a sequence of tokens) back into a Path-to-RegExp string.\n\n- **data** A `TokenData` instance\n\n```js\nconst data = new TokenData([\n  { type: \"text\", value: \"/\" },\n  { type: \"param\", name: \"foo\" },\n]);\n\nconst path = stringify(data); //=> \"/:foo\"\n```\n\n## Developers\n\n- If you are rewriting paths with match and compile, consider using `encode: false` and `decode: false` to keep raw paths passed around.\n- To ensure matches work on paths containing characters usually encoded, such as emoji, consider using [encodeurl](https://github.com/pillarjs/encodeurl) for `encodePath`.\n\n### Parse\n\nThe `parse` function accepts a string and returns `TokenData`, the set of tokens and other metadata parsed from the input string. `TokenData` is can used with `match` and `compile`.\n\n- **path** A string.\n- **options** _(optional)_\n  - **encodePath** A function for encoding input strings. (default: `x => x`, recommended: [`encodeurl`](https://github.com/pillarjs/encodeurl))\n\n### Tokens\n\n`TokenData` is a sequence of tokens, currently of types `text`, `parameter`, `wildcard`, or `group`.\n\n### Custom path\n\nIn some applications, you may not be able to use the `path-to-regexp` syntax, but still want to use this library for `match` and `compile`. For example:\n\n```js\nimport { TokenData, match } from \"path-to-regexp\";\n\nconst tokens = [\n  { type: \"text\", value: \"/\" },\n  { type: \"parameter\", name: \"foo\" },\n];\nconst path = new TokenData(tokens);\nconst fn = match(path);\n\nfn(\"/test\"); //=> { path: '/test', index: 0, params: { foo: 'test' } }\n```\n\n## Errors\n\nAn effort has been made to ensure ambiguous paths from previous releases throw an error. This means you might be seeing an error when things worked before.\n\n### Unexpected `?` or `+`\n\nIn past releases, `?`, `*`, and `+` were used to denote optional or repeating parameters. As an alternative, try these:\n\n- For optional (`?`), use an empty segment in a group such as `/:file{.:ext}`.\n- For repeating (`+`), only wildcard matching is supported, such as `/*path`.\n- For optional repeating (`*`), use a group and a wildcard parameter such as `/files{/*path}`.\n\n### Unexpected `(`, `)`, `[`, `]`, etc.\n\nPrevious versions of Path-to-RegExp used these for RegExp features. This version no longer supports them so they've been reserved to avoid ambiguity. To use these characters literally, escape them with a backslash, e.g. `\"\\\\(\"`.\n\n### Missing parameter name\n\nParameter names must be provided after `:` or `*`, and they must be a valid JavaScript identifier. If you want an parameter name that isn't a JavaScript identifier, such as starting with a number, you can wrap the name in quotes like `:\"my-name\"`.\n\n### Unterminated quote\n\nParameter names can be wrapped in double quote characters, and this error means you forgot to close the quote character.\n\n### Express <= 4.x\n\nPath-To-RegExp breaks compatibility with Express <= `4.x` in the following ways:\n\n- The wildcard `*` must have a name, matching the behavior of parameters `:`.\n- The optional character `?` is no longer supported, use braces instead: `/:file{.:ext}`.\n- Regexp characters are not supported.\n- Some characters have been reserved to avoid confusion during upgrade (`()[]?+!`).\n- Parameter names now support valid JavaScript identifiers, or quoted like `:\"this\"`.\n\n## License\n\nMIT\n\n[npm-image]: https://img.shields.io/npm/v/path-to-regexp\n[npm-url]: https://npmjs.org/package/path-to-regexp\n[downloads-image]: https://img.shields.io/npm/dm/path-to-regexp\n[downloads-url]: https://npmjs.org/package/path-to-regexp\n[build-image]: https://img.shields.io/github/actions/workflow/status/pillarjs/path-to-regexp/ci.yml?branch=master\n[build-url]: https://github.com/pillarjs/path-to-regexp/actions/workflows/ci.yml?query=branch%3Amaster\n[coverage-image]: https://img.shields.io/codecov/c/gh/pillarjs/path-to-regexp\n[coverage-url]: https://codecov.io/gh/pillarjs/path-to-regexp\n[license-image]: http://img.shields.io/npm/l/path-to-regexp.svg?style=flat\n[license-url]: LICENSE.md\n",
- "readmeFilename": "Readme.md",
+ "readme": "",
+ "readmeFilename": "",
  "users": {
   "285858315": true,
   "nex": true,
