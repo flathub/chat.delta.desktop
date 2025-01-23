@@ -1,12 +1,12 @@
 {
  "_id": "bl",
- "_rev": "171-9afdeb5542490ad03a6155289411665a",
+ "_rev": "173-2fd860fb1e786d148fa75845dbb53273",
  "name": "bl",
  "dist-tags": {
   "v0_9_x": "0.9.5",
   "stable-3x": "3.0.1",
   "stable-2x": "2.2.1",
-  "latest": "6.0.16"
+  "latest": "6.0.18"
  },
  "versions": {
   "0.0.0": {
@@ -5962,6 +5962,332 @@
   "6.0.16": {
    "name": "bl",
    "version": "6.0.16",
+   "keywords": [
+    "buffer",
+    "buffers",
+    "stream",
+    "awesomesauce"
+   ],
+   "license": "MIT",
+   "_id": "bl@6.0.16",
+   "maintainers": [
+    {
+     "name": "matteo.collina",
+     "email": "hello@matteocollina.com"
+    },
+    {
+     "name": "rvagg",
+     "email": "r@va.gg"
+    }
+   ],
+   "homepage": "https://github.com/rvagg/bl",
+   "bugs": {
+    "url": "https://github.com/rvagg/bl/issues"
+   },
+   "dist": {
+    "shasum": "29b190f1a754e2d168de3dc8c74ed8d12bf78e6e",
+    "tarball": "http://localhost:3000/bl/-/bl-6.0.16.tgz",
+    "fileCount": 14,
+    "integrity": "sha512-V/kz+z2Mx5/6qDfRCilmrukUXcXuCoXKg3/3hDvzKKoSUx8CJKudfIoT29XZc3UE9xBvxs5qictiHdprwtteEg==",
+    "signatures": [
+     {
+      "sig": "MEUCIEWDk+aPGgrZG/fe1fhaeFnpgPAaPQ/uoyHUtBOp/RZLAiEAhRVXSAh7bMXq7aE8CRSxdMiKdhMKYk/g8dZjSXIqDFE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 92782
+   },
+   "main": "bl.js",
+   "authors": [
+    "Rod Vagg <rod@vagg.org> (https://github.com/rvagg)",
+    "Matteo Collina <matteo.collina@gmail.com> (https://github.com/mcollina)",
+    "Jarett Cruger <jcrugzz@gmail.com> (https://github.com/jcrugzz)"
+   ],
+   "gitHead": "2dd9100c82a1d691d193a65bd2885c5fe3ec4266",
+   "release": {
+    "plugins": [
+     [
+      "@semantic-release/commit-analyzer",
+      {
+       "preset": "conventionalcommits",
+       "releaseRules": [
+        {
+         "release": "major",
+         "breaking": true
+        },
+        {
+         "revert": true,
+         "release": "patch"
+        },
+        {
+         "type": "feat",
+         "release": "minor"
+        },
+        {
+         "type": "fix",
+         "release": "patch"
+        },
+        {
+         "type": "chore",
+         "release": "patch"
+        },
+        {
+         "type": "docs",
+         "release": "patch"
+        },
+        {
+         "type": "test",
+         "release": "patch"
+        },
+        {
+         "scope": "no-release",
+         "release": false
+        }
+       ]
+      }
+     ],
+     [
+      "@semantic-release/release-notes-generator",
+      {
+       "preset": "conventionalcommits",
+       "presetConfig": {
+        "types": [
+         {
+          "type": "feat",
+          "section": "Features"
+         },
+         {
+          "type": "fix",
+          "section": "Bug Fixes"
+         },
+         {
+          "type": "chore",
+          "section": "Trivial Changes"
+         },
+         {
+          "type": "docs",
+          "section": "Trivial Changes"
+         },
+         {
+          "type": "test",
+          "section": "Tests"
+         }
+        ]
+       }
+      }
+     ],
+     "@semantic-release/changelog",
+     "@semantic-release/npm",
+     "@semantic-release/github",
+     "@semantic-release/git"
+    ],
+    "branches": [
+     "master"
+    ]
+   },
+   "scripts": {
+    "lint": "standard *.js test/*.js",
+    "test": "npm run lint && npm run test:types && node test/test.js | faucet",
+    "build": "true",
+    "test:ci": "npm run lint && node test/test.js && npm run test:types",
+    "test:types": "tsc --target esnext --moduleResolution node --allowJs --noEmit test/test.js"
+   },
+   "_npmUser": {
+    "name": "rvagg",
+    "email": "r@va.gg"
+   },
+   "repository": {
+    "url": "git+https://github.com/rvagg/bl.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "buffer": "^6.0.3",
+    "inherits": "^2.0.4",
+    "readable-stream": "^4.2.0",
+    "@types/readable-stream": "^4.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^5.2.2",
+    "faucet": "~0.0.1",
+    "standard": "^17.0.0",
+    "typescript": "~5.6.2"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/bl_6.0.16_1727246520854_0.25913115088891936",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "6.0.17": {
+   "name": "bl",
+   "version": "6.0.17",
+   "keywords": [
+    "buffer",
+    "buffers",
+    "stream",
+    "awesomesauce"
+   ],
+   "license": "MIT",
+   "_id": "bl@6.0.17",
+   "maintainers": [
+    {
+     "name": "matteo.collina",
+     "email": "hello@matteocollina.com"
+    },
+    {
+     "name": "rvagg",
+     "email": "r@va.gg"
+    }
+   ],
+   "homepage": "https://github.com/rvagg/bl",
+   "bugs": {
+    "url": "https://github.com/rvagg/bl/issues"
+   },
+   "dist": {
+    "shasum": "c39d6540c5d61cd1b50cad8bf266e290da5a92c8",
+    "tarball": "http://localhost:3000/bl/-/bl-6.0.17.tgz",
+    "fileCount": 14,
+    "integrity": "sha512-JefHDTdhP1If6svGja+TOfFkGosSrx+WZ9OMrqBcrVNX9DkCS2S7zgwlIU670GG3cs6AJH74iaf3YE0Ufi9MBg==",
+    "signatures": [
+     {
+      "sig": "MEQCIA+W8V88YJeQbzl77+HmCqV880Yuf0paHyLScfWxDtWNAiBLeq6Dm5I+ilhrFGRlZ4I4/lNyz5JAIeAbnKvkoHUS9A==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 93016
+   },
+   "main": "bl.js",
+   "authors": [
+    "Rod Vagg <rod@vagg.org> (https://github.com/rvagg)",
+    "Matteo Collina <matteo.collina@gmail.com> (https://github.com/mcollina)",
+    "Jarett Cruger <jcrugzz@gmail.com> (https://github.com/jcrugzz)"
+   ],
+   "gitHead": "da1fcf7b804bfdbdcce36f8598aa9643583cf262",
+   "release": {
+    "plugins": [
+     [
+      "@semantic-release/commit-analyzer",
+      {
+       "preset": "conventionalcommits",
+       "releaseRules": [
+        {
+         "release": "major",
+         "breaking": true
+        },
+        {
+         "revert": true,
+         "release": "patch"
+        },
+        {
+         "type": "feat",
+         "release": "minor"
+        },
+        {
+         "type": "fix",
+         "release": "patch"
+        },
+        {
+         "type": "chore",
+         "release": "patch"
+        },
+        {
+         "type": "docs",
+         "release": "patch"
+        },
+        {
+         "type": "test",
+         "release": "patch"
+        },
+        {
+         "scope": "no-release",
+         "release": false
+        }
+       ]
+      }
+     ],
+     [
+      "@semantic-release/release-notes-generator",
+      {
+       "preset": "conventionalcommits",
+       "presetConfig": {
+        "types": [
+         {
+          "type": "feat",
+          "section": "Features"
+         },
+         {
+          "type": "fix",
+          "section": "Bug Fixes"
+         },
+         {
+          "type": "chore",
+          "section": "Trivial Changes"
+         },
+         {
+          "type": "docs",
+          "section": "Trivial Changes"
+         },
+         {
+          "type": "test",
+          "section": "Tests"
+         }
+        ]
+       }
+      }
+     ],
+     "@semantic-release/changelog",
+     "@semantic-release/npm",
+     "@semantic-release/github",
+     "@semantic-release/git"
+    ],
+    "branches": [
+     "master"
+    ]
+   },
+   "scripts": {
+    "lint": "standard *.js test/*.js",
+    "test": "npm run lint && npm run test:types && node test/test.js | faucet",
+    "build": "true",
+    "test:ci": "npm run lint && node test/test.js && npm run test:types",
+    "test:types": "tsc --target esnext --moduleResolution node --allowJs --noEmit --skipLibCheck test/test.js"
+   },
+   "_npmUser": {
+    "name": "rvagg",
+    "email": "r@va.gg"
+   },
+   "repository": {
+    "url": "git+https://github.com/rvagg/bl.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "buffer": "^6.0.3",
+    "inherits": "^2.0.4",
+    "readable-stream": "^4.2.0",
+    "@types/readable-stream": "^4.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^5.2.2",
+    "faucet": "~0.0.1",
+    "standard": "^17.0.0",
+    "typescript": "~5.6.2"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/bl_6.0.17_1735528060806_0.2683525114007619",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "6.0.18": {
+   "name": "bl",
+   "version": "6.0.18",
    "description": "Buffer List: collect buffers and access with a standard readable Buffer interface, streamable too!",
    "license": "MIT",
    "main": "bl.js",
@@ -5969,7 +6295,7 @@
     "lint": "standard *.js test/*.js",
     "test": "npm run lint && npm run test:types && node test/test.js | faucet",
     "test:ci": "npm run lint && node test/test.js && npm run test:types",
-    "test:types": "tsc --target esnext --moduleResolution node --allowJs --noEmit test/test.js",
+    "test:types": "tsc --target esnext --moduleResolution node --allowJs --noEmit --skipLibCheck test/test.js",
     "build": "true"
    },
    "repository": {
@@ -5998,7 +6324,7 @@
     "faucet": "~0.0.1",
     "standard": "^17.0.0",
     "tape": "^5.2.2",
-    "typescript": "~5.6.2"
+    "typescript": "~5.7.2"
    },
    "release": {
     "branches": [
@@ -6081,23 +6407,23 @@
      "@semantic-release/git"
     ]
    },
-   "_id": "bl@6.0.16",
-   "gitHead": "2dd9100c82a1d691d193a65bd2885c5fe3ec4266",
+   "_id": "bl@6.0.18",
+   "gitHead": "e0b40392a722b3294b5cbcc513b4619fdf0fb215",
    "bugs": {
     "url": "https://github.com/rvagg/bl/issues"
    },
-   "_nodeVersion": "20.17.0",
-   "_npmVersion": "10.8.3",
+   "_nodeVersion": "22.12.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-V/kz+z2Mx5/6qDfRCilmrukUXcXuCoXKg3/3hDvzKKoSUx8CJKudfIoT29XZc3UE9xBvxs5qictiHdprwtteEg==",
-    "shasum": "29b190f1a754e2d168de3dc8c74ed8d12bf78e6e",
-    "tarball": "http://localhost:3000/bl/-/bl-6.0.16.tgz",
+    "integrity": "sha512-2k76XmWCuvu9HTvu3tFOl5HDdCH0wLZ/jHYva/LBVJmc9oX8yUtNQjxrFmbTdXsCSmIxwVTANZPNDfMQrvHFUw==",
+    "shasum": "eaf008d00fbb53eaade7ffc2fb8c527b9f66ead5",
+    "tarball": "http://localhost:3000/bl/-/bl-6.0.18.tgz",
     "fileCount": 14,
-    "unpackedSize": 92782,
+    "unpackedSize": 93454,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIEWDk+aPGgrZG/fe1fhaeFnpgPAaPQ/uoyHUtBOp/RZLAiEAhRVXSAh7bMXq7aE8CRSxdMiKdhMKYk/g8dZjSXIqDFE="
+      "sig": "MEQCIDf9P62mNOfrIJV+T0hVatOoaAPPobttLm3zjzNN5NRTAiAgy8GRHfhKb+6jVTTexxAKucbuZZwJ9tMUnnqjXyXEtA=="
      }
     ]
    },
@@ -6117,15 +6443,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/bl_6.0.16_1727246520854_0.25913115088891936"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/bl_6.0.18_1735528267022_0.8001867729518946"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2013-06-15T12:35:42.237Z",
-  "modified": "2024-09-25T06:42:01.195Z",
+  "modified": "2024-12-30T03:11:07.348Z",
   "0.0.0": "2013-06-15T12:35:47.051Z",
   "0.1.0": "2013-06-16T01:04:03.168Z",
   "0.1.1": "2013-06-16T04:59:00.527Z",
@@ -6190,7 +6516,9 @@
   "6.0.13": "2024-06-21T01:38:15.631Z",
   "6.0.14": "2024-07-10T02:07:21.660Z",
   "6.0.15": "2024-09-10T00:26:50.992Z",
-  "6.0.16": "2024-09-25T06:42:01.005Z"
+  "6.0.16": "2024-09-25T06:42:01.005Z",
+  "6.0.17": "2024-12-30T03:07:41.019Z",
+  "6.0.18": "2024-12-30T03:11:07.205Z"
  },
  "bugs": {
   "url": "https://github.com/rvagg/bl/issues"

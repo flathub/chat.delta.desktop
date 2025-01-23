@@ -1,10 +1,10 @@
 {
  "_id": "@xmldom/xmldom",
- "_rev": "52-d8671b27235355afc921e75e7a5b93b7",
+ "_rev": "53-79023ea81e3d9bd1e1f9dba449f8ad59",
  "name": "@xmldom/xmldom",
  "dist-tags": {
   "lts": "0.8.10",
-  "latest": "0.9.6"
+  "latest": "0.9.7"
  },
  "versions": {
   "0.7.0": {
@@ -4450,6 +4450,106 @@
   "0.9.6": {
    "name": "@xmldom/xmldom",
    "version": "0.9.6",
+   "keywords": [
+    "w3c",
+    "dom",
+    "xml",
+    "parser",
+    "javascript",
+    "DOMParser",
+    "XMLSerializer",
+    "ponyfill"
+   ],
+   "license": "MIT",
+   "_id": "@xmldom/xmldom@0.9.6",
+   "maintainers": [
+    {
+     "name": "karfau",
+     "email": "coder@karfau.de"
+    }
+   ],
+   "homepage": "https://github.com/xmldom/xmldom",
+   "bugs": {
+    "url": "https://github.com/xmldom/xmldom/issues"
+   },
+   "dist": {
+    "shasum": "3eaefb585c1f920e06fb35e6dcb8d505445621c0",
+    "tarball": "http://localhost:3000/@xmldom/xmldom/-/xmldom-0.9.6.tgz",
+    "fileCount": 15,
+    "integrity": "sha512-Su4xcxR0CPGwlDHNmVP09fqET9YxbyDXHaSob6JlBH7L6reTYaeim6zbk9o08UarO0L5GTRo3uzl0D+9lSxmvw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDwNpVlL6IpX1x5xEPvWGIWA2drYh61sGnM8sKQYms1pAIhAI1kaHxNlCVdb+AZKf+MMvfFzu78ZOCQ9r4BwMnFJ00Y",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 362336
+   },
+   "main": "lib/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=14.6"
+   },
+   "gitHead": "0a64f48a968fe247aeaaeaa685739cfc611e459e",
+   "scripts": {
+    "fuzz": "jest --config=./jest.fuzz.config.js",
+    "lint": "eslint examples lib test",
+    "test": "jest",
+    "start": "nodemon --watch package.json --watch lib --watch test --exec 'npm --silent run test && npm --silent run lint'",
+    "format": "prettier --write examples lib test index.d.ts",
+    "release": "np --no-yarn --test-script testrelease",
+    "version": "./changelog-has-version.sh",
+    "changelog": "auto-changelog --unreleased-only",
+    "test:types": "cd examples/typescript-node-es6 && ./pretest.sh 3 && ./pretest.sh 4 && ./pretest.sh 5 && node dist/index.js",
+    "testrelease": "npm test && eslint lib"
+   },
+   "_npmUser": {
+    "name": "karfau",
+    "email": "coder@karfau.de"
+   },
+   "repository": {
+    "url": "git://github.com/xmldom/xmldom.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "A pure JavaScript W3C standard-based (XML DOM Level 2 Core) DOMParser and XMLSerializer module.",
+   "directories": {},
+   "_nodeVersion": "18.20.4",
+   "_hasShrinkwrap": false,
+   "auto-changelog": {
+    "remote": "origin",
+    "prepend": true,
+    "template": "./auto-changelog.hbs",
+    "tagPrefix": ""
+   },
+   "devDependencies": {
+    "np": "8.0.4",
+    "jest": "29.7.0",
+    "rxjs": "7.8.1",
+    "yauzl": "3.2.0",
+    "eslint": "8.57.1",
+    "nodemon": "3.1.7",
+    "xmltest": "2.0.3",
+    "prettier": "3.4.1",
+    "get-stream": "6.0.1",
+    "auto-changelog": "2.5.0",
+    "@jazzer.js/core": "2.1.0",
+    "eslint-plugin-n": "17.14.0",
+    "eslint-plugin-es5": "1.5.0",
+    "@jazzer.js/jest-runner": "2.1.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "@homer0/prettier-plugin-jsdoc": "9.1.0",
+    "eslint-plugin-anti-trojan-source": "1.1.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/xmldom_0.9.6_1733380003145_0.3138004795295497",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "0.9.7": {
+   "name": "@xmldom/xmldom",
+   "version": "0.9.7",
    "description": "A pure JavaScript W3C standard-based (XML DOM Level 2 Core) DOMParser and XMLSerializer module.",
    "keywords": [
     "w3c",
@@ -4489,16 +4589,16 @@
     "@jazzer.js/jest-runner": "2.1.0",
     "auto-changelog": "2.5.0",
     "eslint": "8.57.1",
-    "eslint-config-prettier": "9.1.0",
+    "eslint-config-prettier": "10.0.1",
     "eslint-plugin-anti-trojan-source": "1.1.1",
     "eslint-plugin-es5": "1.5.0",
-    "eslint-plugin-n": "17.14.0",
-    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-n": "17.15.1",
+    "eslint-plugin-prettier": "5.2.2",
     "get-stream": "6.0.1",
     "jest": "29.7.0",
-    "nodemon": "3.1.7",
+    "nodemon": "3.1.9",
     "np": "8.0.4",
-    "prettier": "3.4.1",
+    "prettier": "3.4.2",
     "rxjs": "7.8.1",
     "xmltest": "2.0.3",
     "yauzl": "3.2.0"
@@ -4513,20 +4613,20 @@
     "tagPrefix": "",
     "template": "./auto-changelog.hbs"
    },
-   "_id": "@xmldom/xmldom@0.9.6",
-   "gitHead": "0a64f48a968fe247aeaaeaa685739cfc611e459e",
-   "_nodeVersion": "18.20.4",
-   "_npmVersion": "10.7.0",
+   "_id": "@xmldom/xmldom@0.9.7",
+   "gitHead": "e10cdf11e83f90da3d0d8dcb73bd02977e1ea767",
+   "_nodeVersion": "18.20.5",
+   "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-Su4xcxR0CPGwlDHNmVP09fqET9YxbyDXHaSob6JlBH7L6reTYaeim6zbk9o08UarO0L5GTRo3uzl0D+9lSxmvw==",
-    "shasum": "3eaefb585c1f920e06fb35e6dcb8d505445621c0",
-    "tarball": "http://localhost:3000/@xmldom/xmldom/-/xmldom-0.9.6.tgz",
+    "integrity": "sha512-syvR8iIJjpTZ/stv7l89UAViwGFh6lbheeOaqSxkYx9YNmIVvPTRH+CT/fpykFtUx5N+8eSMDRvggF9J8GEPzQ==",
+    "shasum": "f21bebdcde4af682a810062b14585c89bb7fab07",
+    "tarball": "http://localhost:3000/@xmldom/xmldom/-/xmldom-0.9.7.tgz",
     "fileCount": 15,
-    "unpackedSize": 362336,
+    "unpackedSize": 365466,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDwNpVlL6IpX1x5xEPvWGIWA2drYh61sGnM8sKQYms1pAIhAI1kaHxNlCVdb+AZKf+MMvfFzu78ZOCQ9r4BwMnFJ00Y"
+      "sig": "MEUCIFjd4stE8srXLLEPUsEl37WOYQRPmTg8no58Ruwq6deaAiEAmhyUJOIOWShfKPaQVlCIabrhGlKTE3lYHf0ilh3Cwsk="
      }
     ]
    },
@@ -4542,15 +4642,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/xmldom_0.9.6_1733380003145_0.3138004795295497"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/xmldom_0.9.7_1737315577923_0.5758649538836671"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2021-08-19T19:35:11.285Z",
-  "modified": "2024-12-05T06:26:43.703Z",
+  "modified": "2025-01-19T19:39:38.436Z",
   "0.7.0": "2021-08-19T19:35:11.460Z",
   "0.7.1": "2021-08-20T05:21:30.919Z",
   "0.7.2": "2021-08-20T12:53:11.322Z",
@@ -4593,7 +4693,8 @@
   "0.9.3": "2024-09-21T11:28:39.388Z",
   "0.9.4": "2024-10-13T22:59:40.959Z",
   "0.9.5": "2024-10-26T09:28:38.234Z",
-  "0.9.6": "2024-12-05T06:26:43.332Z"
+  "0.9.6": "2024-12-05T06:26:43.332Z",
+  "0.9.7": "2025-01-19T19:39:38.162Z"
  },
  "bugs": {
   "url": "https://github.com/xmldom/xmldom/issues"

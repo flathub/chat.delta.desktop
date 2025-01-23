@@ -1,8 +1,17 @@
 {
  "_id": "@types/ms",
- "_rev": "563-cba1667b24358bf6f7ea32e9fcf0f2f7",
+ "_rev": "573-ec8d24fc830e37b764d44cfdbe2b77cf",
  "name": "@types/ms",
  "dist-tags": {
+  "ts3.6": "0.7.31",
+  "ts4.4": "0.7.31",
+  "ts4.3": "0.7.31",
+  "ts4.2": "0.7.31",
+  "ts4.1": "0.7.31",
+  "ts4.0": "0.7.31",
+  "ts3.9": "0.7.31",
+  "ts3.8": "0.7.31",
+  "ts3.7": "0.7.31",
   "ts2.0": "0.7.31",
   "ts2.1": "0.7.31",
   "ts2.2": "0.7.31",
@@ -19,30 +28,21 @@
   "ts3.3": "0.7.31",
   "ts3.4": "0.7.31",
   "ts3.5": "0.7.31",
-  "ts3.6": "0.7.31",
-  "ts3.7": "0.7.31",
-  "ts3.8": "0.7.31",
-  "ts3.9": "0.7.31",
-  "ts4.0": "0.7.31",
-  "ts4.1": "0.7.31",
-  "ts4.2": "0.7.31",
-  "ts4.3": "0.7.31",
-  "ts4.4": "0.7.31",
-  "ts5.7": "0.7.34",
-  "ts5.6": "0.7.34",
-  "latest": "0.7.34",
+  "ts5.8": "2.1.0",
   "ts4.5": "0.7.34",
   "ts4.6": "0.7.34",
   "ts4.7": "0.7.34",
   "ts4.8": "0.7.34",
   "ts4.9": "0.7.34",
-  "ts5.0": "0.7.34",
-  "ts5.1": "0.7.34",
-  "ts5.2": "0.7.34",
-  "ts5.3": "0.7.34",
-  "ts5.4": "0.7.34",
-  "ts5.5": "0.7.34",
-  "ts5.8": "0.7.34"
+  "latest": "2.1.0",
+  "ts5.5": "2.1.0",
+  "ts5.7": "2.1.0",
+  "ts5.6": "2.1.0",
+  "ts5.4": "2.1.0",
+  "ts5.3": "2.1.0",
+  "ts5.2": "2.1.0",
+  "ts5.1": "2.1.0",
+  "ts5.0": "2.1.0"
  },
  "versions": {
   "0.7.15-alpha": {
@@ -839,11 +839,67 @@
     "host": "s3://npm-registry-packages"
    },
    "typesPublisherContentHash": "4ee80538a62ddf0c1ada0b6ae194e895a89f19de73c78f2afdcba2e91a66480e"
+  },
+  "2.1.0": {
+   "name": "@types/ms",
+   "version": "2.1.0",
+   "license": "MIT",
+   "_id": "@types/ms@2.1.0",
+   "maintainers": [
+    {
+     "name": "types",
+     "email": "ts-npm-types@microsoft.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "https://github.com/danny8002",
+     "name": "Zhiyuan Wang",
+     "githubUsername": "danny8002"
+    }
+   ],
+   "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/ms",
+   "dist": {
+    "shasum": "052aa67a48eccc4309d7f0191b7e41434b90bb78",
+    "tarball": "http://localhost:3000/@types/ms/-/ms-2.1.0.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==",
+    "signatures": [
+     {
+      "sig": "MEUCIEQ2QDtF7l1l7Qnnly5roFJ4csogIK7dXOtzAEajLYLDAiEA8W7GVUO/CzRwutehGyj67/LAV1VSSfzSidIyz29/QRE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 5101
+   },
+   "main": "",
+   "types": "index.d.ts",
+   "scripts": {},
+   "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+   },
+   "repository": {
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "type": "git",
+    "directory": "types/ms"
+   },
+   "description": "TypeScript definitions for ms",
+   "directories": {},
+   "dependencies": {},
+   "_hasShrinkwrap": false,
+   "peerDependencies": {},
+   "typeScriptVersion": "5.0",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ms_2.1.0_1737061366019_0.030047406084618755",
+    "host": "s3://npm-registry-packages-npm-production"
+   },
+   "typesPublisherContentHash": "2c8651ce1714fdc6bcbc0f262c93a790f1d127fb1c2dc8edbb583decef56fd39"
   }
  },
  "time": {
   "created": "2016-05-17T18:23:02.430Z",
-  "modified": "2024-11-11T09:20:23.584Z",
+  "modified": "2025-01-16T21:02:52.800Z",
   "0.7.15-alpha": "2016-05-17T18:23:02.430Z",
   "0.7.16-alpha": "2016-05-19T21:46:16.243Z",
   "0.7.21-alpha": "2016-05-20T20:13:02.170Z",
@@ -859,7 +915,8 @@
   "0.7.31": "2019-09-04T20:48:44.923Z",
   "0.7.32": "2023-09-27T10:26:06.002Z",
   "0.7.33": "2023-10-18T09:02:51.915Z",
-  "0.7.34": "2023-11-07T11:26:21.925Z"
+  "0.7.34": "2023-11-07T11:26:21.925Z",
+  "2.1.0": "2025-01-16T21:02:46.181Z"
  },
  "license": "MIT",
  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/ms",

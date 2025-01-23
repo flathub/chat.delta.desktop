@@ -1,9 +1,9 @@
 {
  "_id": "flat-cache",
- "_rev": "51-dd339d91ba56d22bc38197da3b7f51ec",
+ "_rev": "52-9cca439d3b4001cfa5edd8b0c38cbc7c",
  "name": "flat-cache",
  "dist-tags": {
-  "latest": "6.1.4"
+  "latest": "6.1.5"
  },
  "versions": {
   "1.0.0": {
@@ -3690,6 +3690,123 @@
   "6.1.4": {
    "name": "flat-cache",
    "version": "6.1.4",
+   "keywords": [
+    "cache",
+    "caching",
+    "cacheable",
+    "flat-cache",
+    "flat",
+    "file",
+    "file-cache",
+    "file-caching",
+    "file-based-cache",
+    "file-persist",
+    "file-persistence",
+    "file-storage",
+    "file-system",
+    "file-management",
+    "filesystem-cache",
+    "disk-cache",
+    "cache-persistence",
+    "cache-persist",
+    "persistent-cache",
+    "persistent-storage",
+    "cache-to-file",
+    "cache-on-disk",
+    "cache-file",
+    "cache-expiration",
+    "cache-lifetime",
+    "data-persistence",
+    "data-storage",
+    "local-storage",
+    "file-system-cache"
+   ],
+   "author": {
+    "name": "Jared Wray",
+    "email": "me@jaredwray.com"
+   },
+   "license": "MIT",
+   "_id": "flat-cache@6.1.4",
+   "maintainers": [
+    {
+     "name": "jaredwray",
+     "email": "me@jaredwray.com"
+    }
+   ],
+   "homepage": "https://github.com/jaredwray/cacheable#readme",
+   "bugs": {
+    "url": "https://github.com/jaredwray/cacheable/issues"
+   },
+   "dist": {
+    "shasum": "8e1cb12ee2467121513fdc23791f6e94daa5da77",
+    "tarball": "http://localhost:3000/flat-cache/-/flat-cache-6.1.4.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-Km+tVF9BLnxaYqX2R9OKLkwSPvGjDXXlciDC8oBr/nSM4xMCNO8X9s0w5i6lNoE8E/6BEzSJBUF5Bar+TXmKJQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIHnBQmz9oht35HuRzmJFJEO45zHHqcZJq+ATXMt8P+2hAiACSLwjDBORLq3MQa6yiGFYVevdu1jvFT50ESLFc9w3Hw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 52099
+   },
+   "main": "./dist/index.cjs",
+   "type": "module",
+   "_from": "file:flat-cache-6.1.4.tgz",
+   "types": "./dist/index.d.ts",
+   "module": "./dist/index.js",
+   "exports": {
+    ".": {
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "private": false,
+   "scripts": {
+    "test": "xo --fix && vitest run --coverage",
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "clean": "rimraf ./dist ./coverage ./node_modules",
+    "test:ci": "xo && vitest run",
+    "prepublish": "pnpm build"
+   },
+   "_npmUser": {
+    "name": "jaredwray",
+    "email": "me@jaredwray.com"
+   },
+   "_resolved": "/private/var/folders/gs/5m4m2s857ts7l7nbvv0b57r80000gn/T/f01909eda2cf58551934e3dbc147eb47/flat-cache-6.1.4.tgz",
+   "_integrity": "sha512-Km+tVF9BLnxaYqX2R9OKLkwSPvGjDXXlciDC8oBr/nSM4xMCNO8X9s0w5i6lNoE8E/6BEzSJBUF5Bar+TXmKJQ==",
+   "repository": {
+    "url": "git+https://github.com/jaredwray/cacheable.git",
+    "type": "git",
+    "directory": "packages/flat-cache"
+   },
+   "_npmVersion": "10.9.1",
+   "description": "A simple key/value storage using files to persist the data",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "flatted": "^3.3.2",
+    "cacheable": "^1.8.6",
+    "hookified": "^1.5.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.60.0",
+    "tsup": "^8.3.5",
+    "rimraf": "^6.0.1",
+    "vitest": "^2.1.8",
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.2",
+    "@vitest/coverage-v8": "^2.1.8"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/flat-cache_6.1.4_1733965713019_0.17366512672957457",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "6.1.5": {
+   "name": "flat-cache",
+   "version": "6.1.5",
    "description": "A simple key/value storage using files to persist the data",
    "type": "module",
    "main": "./dist/index.cjs",
@@ -3754,8 +3871,8 @@
    },
    "dependencies": {
     "flatted": "^3.3.2",
-    "hookified": "^1.5.1",
-    "cacheable": "^1.8.6"
+    "hookified": "^1.6.0",
+    "cacheable": "^1.8.7"
    },
    "scripts": {
     "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
@@ -3764,26 +3881,26 @@
     "test:ci": "xo && vitest run",
     "clean": "rimraf ./dist ./coverage ./node_modules"
    },
-   "_id": "flat-cache@6.1.4",
+   "_id": "flat-cache@6.1.5",
    "bugs": {
     "url": "https://github.com/jaredwray/cacheable/issues"
    },
    "homepage": "https://github.com/jaredwray/cacheable#readme",
-   "_integrity": "sha512-Km+tVF9BLnxaYqX2R9OKLkwSPvGjDXXlciDC8oBr/nSM4xMCNO8X9s0w5i6lNoE8E/6BEzSJBUF5Bar+TXmKJQ==",
-   "_resolved": "/private/var/folders/gs/5m4m2s857ts7l7nbvv0b57r80000gn/T/f01909eda2cf58551934e3dbc147eb47/flat-cache-6.1.4.tgz",
-   "_from": "file:flat-cache-6.1.4.tgz",
-   "_nodeVersion": "20.17.0",
-   "_npmVersion": "10.9.1",
+   "_integrity": "sha512-QR+2kN38f8nMfiIQ1LHYjuDEmZNZVjxuxY+HufbS3BW0EX01Q5OnH7iduOYRutmgiXb797HAKcXUeXrvRjjgSQ==",
+   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/d5f15524d112ddff5bb573e64d0641f4/flat-cache-6.1.5.tgz",
+   "_from": "file:flat-cache-6.1.5.tgz",
+   "_nodeVersion": "22.12.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-Km+tVF9BLnxaYqX2R9OKLkwSPvGjDXXlciDC8oBr/nSM4xMCNO8X9s0w5i6lNoE8E/6BEzSJBUF5Bar+TXmKJQ==",
-    "shasum": "8e1cb12ee2467121513fdc23791f6e94daa5da77",
-    "tarball": "http://localhost:3000/flat-cache/-/flat-cache-6.1.4.tgz",
+    "integrity": "sha512-QR+2kN38f8nMfiIQ1LHYjuDEmZNZVjxuxY+HufbS3BW0EX01Q5OnH7iduOYRutmgiXb797HAKcXUeXrvRjjgSQ==",
+    "shasum": "a3e0077571aa340c85c011aa6b9150b4606e2b0d",
+    "tarball": "http://localhost:3000/flat-cache/-/flat-cache-6.1.5.tgz",
     "fileCount": 7,
-    "unpackedSize": 52099,
+    "unpackedSize": 52105,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIHnBQmz9oht35HuRzmJFJEO45zHHqcZJq+ATXMt8P+2hAiACSLwjDBORLq3MQa6yiGFYVevdu1jvFT50ESLFc9w3Hw=="
+      "sig": "MEYCIQDUk/gaLQZUotpNNOp+zV/8E0BE6TZcCQJ5rztIRebzWAIhAK2G7O4JGGVUPBkzee1s/GZnDtjDAm/Lk6fuTNUpE99I"
      }
     ]
    },
@@ -3800,14 +3917,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/flat-cache_6.1.4_1733965713019_0.17366512672957457"
+    "tmp": "tmp/flat-cache_6.1.5_1735258502059_0.13736542700474863"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2015-02-26T12:20:02.550Z",
-  "modified": "2024-12-12T01:08:33.375Z",
+  "modified": "2024-12-27T00:15:02.460Z",
   "1.0.0": "2015-02-26T12:20:02.550Z",
   "1.0.1": "2015-02-26T12:30:21.242Z",
   "1.0.2": "2015-03-02T07:39:37.226Z",
@@ -3842,7 +3959,8 @@
   "6.1.1": "2024-10-22T05:17:41.500Z",
   "6.1.2": "2024-11-10T21:58:45.862Z",
   "6.1.3": "2024-11-27T16:33:38.800Z",
-  "6.1.4": "2024-12-12T01:08:33.207Z"
+  "6.1.4": "2024-12-12T01:08:33.207Z",
+  "6.1.5": "2024-12-27T00:15:02.254Z"
  },
  "bugs": {
   "url": "https://github.com/jaredwray/cacheable/issues"

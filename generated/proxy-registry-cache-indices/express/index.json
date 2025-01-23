@@ -1,12 +1,77 @@
 {
  "_id": "express",
- "_rev": "4152-2fc1e0db0aa6515a1ebfad31e77d7b5b",
+ "_rev": "4157-7dd7916011125262380f169f61b31a02",
  "name": "express",
  "dist-tags": {
   "next": "5.0.1",
   "latest": "4.21.2"
  },
  "versions": {
+  "1.0.1": {
+   "name": "express",
+   "version": "1.0.1",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@1.0.1",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "53ad8442c3feb46588f08698f1872c4dbf24137f",
+    "tarball": "http://localhost:3000/express/-/express-1.0.1.tgz",
+    "integrity": "sha512-JHRGK6BRZSNy4i/9kzk7R8l0IlyVdpAvA6421fgkEqpLpZqO1prIbgXe5i9l6o8XI8krYI1euecawL1jzv5yeQ==",
+    "signatures": [
+     {
+      "sig": "MEUCICcPcOan8O27LA8LyDzu6Oq5sMQB/MldUgIzGU3Ui/psAiEAlDf7/FIzTmbGyJ7I6JFKXAqYS2pYv1UVIl5KVwWi850=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "engines": {
+    "node": ">= 0.2.0"
+   },
+   "scripts": {
+    "test": "make test"
+   },
+   "deprecated": "express 1.x series is deprecated",
+   "_npmVersion": "0.2.13-1",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "lib": "./lib/express"
+   },
+   "_nodeVersion": "v0.2.5",
+   "dependencies": {
+    "connect": ">= 0.3.0"
+   },
+   "_engineSupported": true
+  },
   "0.14.0": {
    "name": "express",
    "version": "0.14.0",
@@ -43,61 +108,6 @@
     "signatures": [
      {
       "sig": "MEYCIQCGihQqfDiARxIfslKVGe5vzfxCGOh+vhulZER4lO9oBQIhAO2VvApOYRVumT9XVDffvpYimysO/Hm1Qd59+KBublcM",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "engines": {
-    "node": ">= 0.1.98"
-   },
-   "scripts": {
-    "test": "make test"
-   },
-   "deprecated": "express 0.x series is deprecated",
-   "_npmVersion": "0.2.7-2",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "lib": "./lib"
-   },
-   "_nodeVersion": "v0.3.1-pre",
-   "_nodeSupported": true
-  },
-  "0.14.1": {
-   "name": "express",
-   "version": "0.14.1",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@0.14.1",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    }
-   ],
-   "dist": {
-    "shasum": "40b0119ea0549892b03b5bb56c79cdff468d04b4",
-    "tarball": "http://localhost:3000/express/-/express-0.14.1.tgz",
-    "integrity": "sha512-Hjpy5WUGnlZEx05p2f8h4jiIXoijUmwAcGeRyNRvG/Z0M54GG5KIopCaMQBCBGCwSYzUdxYt2pnTHRk+RzoSYg==",
-    "signatures": [
-     {
-      "sig": "MEUCIQDDMYWVRarLQDdVxEFb8vC9TPyO0jkrbzCcZCFhpESpRQIgJMXEWyuJ/r2KKM3T9C9gRB5EReaQx8A5+Fklw9uVops=",
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
@@ -182,9 +192,9 @@
    },
    "_nodeSupported": true
   },
-  "1.0.1": {
+  "0.14.1": {
    "name": "express",
-   "version": "1.0.1",
+   "version": "0.14.1",
    "keywords": [
     "framework",
     "sinatra",
@@ -196,7 +206,7 @@
     "name": "TJ Holowaychuk",
     "email": "tj@vision-media.ca"
    },
-   "_id": "express@1.0.1",
+   "_id": "express@0.14.1",
    "contributors": [
     {
      "name": "TJ Holowaychuk",
@@ -209,43 +219,33 @@
     {
      "name": "Ciaran Jessup",
      "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
     }
    ],
-   "bin": {
-    "express": "./bin/express"
-   },
    "dist": {
-    "shasum": "53ad8442c3feb46588f08698f1872c4dbf24137f",
-    "tarball": "http://localhost:3000/express/-/express-1.0.1.tgz",
-    "integrity": "sha512-JHRGK6BRZSNy4i/9kzk7R8l0IlyVdpAvA6421fgkEqpLpZqO1prIbgXe5i9l6o8XI8krYI1euecawL1jzv5yeQ==",
+    "shasum": "40b0119ea0549892b03b5bb56c79cdff468d04b4",
+    "tarball": "http://localhost:3000/express/-/express-0.14.1.tgz",
+    "integrity": "sha512-Hjpy5WUGnlZEx05p2f8h4jiIXoijUmwAcGeRyNRvG/Z0M54GG5KIopCaMQBCBGCwSYzUdxYt2pnTHRk+RzoSYg==",
     "signatures": [
      {
-      "sig": "MEUCICcPcOan8O27LA8LyDzu6Oq5sMQB/MldUgIzGU3Ui/psAiEAlDf7/FIzTmbGyJ7I6JFKXAqYS2pYv1UVIl5KVwWi850=",
+      "sig": "MEUCIQDDMYWVRarLQDdVxEFb8vC9TPyO0jkrbzCcZCFhpESpRQIgJMXEWyuJ/r2KKM3T9C9gRB5EReaQx8A5+Fklw9uVops=",
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
    },
    "engines": {
-    "node": ">= 0.2.0"
+    "node": ">= 0.1.98"
    },
    "scripts": {
     "test": "make test"
    },
-   "deprecated": "express 1.x series is deprecated",
-   "_npmVersion": "0.2.13-1",
+   "deprecated": "express 0.x series is deprecated",
+   "_npmVersion": "0.2.7-2",
    "description": "Sinatra inspired web development framework",
    "directories": {
-    "lib": "./lib/express"
+    "lib": "./lib"
    },
-   "_nodeVersion": "v0.2.5",
-   "dependencies": {
-    "connect": ">= 0.3.0"
-   },
-   "_engineSupported": true
+   "_nodeVersion": "v0.3.1-pre",
+   "_nodeSupported": true
   },
   "1.0.2": {
    "name": "express",
@@ -6548,9 +6548,69 @@
     "connect-redis": "*"
    }
   },
-  "3.0.0-rc2": {
+  "1.0.0-rc": {
    "name": "express",
-   "version": "3.0.0-rc2",
+   "version": "1.0.0-rc",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@1.0.0-rc",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "cc9545ae107dac12821f997e3dd43c5df223ba13",
+    "tarball": "http://localhost:3000/express/-/express-1.0.0rc.tgz",
+    "integrity": "sha512-qagPpCEW0cdM/L+LKLUr491Gk5Kayc8ryZlE0mRgHUSHNam3vN5tYfZmjFuqPvwsto7B4VE4wxJK+F78GyCJoQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIEX5zEim83LuECuGchljgrJEPzum4xSj19h+v8Fl3BO1AiEA+6pd1bOZjgMAeJPakBmFhCPmpHbCTDthwe3PCAnIOBI=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "engines": {
+    "node": ">= 0.1.98"
+   },
+   "scripts": {
+    "test": "make test"
+   },
+   "_npmVersion": "0.2.7-2",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "lib": "./lib/express"
+   },
+   "_nodeVersion": "v0.3.1-pre",
+   "dependencies": {
+    "connect": ">= 0.2.2"
+   },
+   "_nodeSupported": true
+  },
+  "3.0.0-rc1": {
+   "name": "express",
+   "version": "3.0.0-rc1",
    "keywords": [
     "express",
     "framework",
@@ -6566,7 +6626,7 @@
     "name": "TJ Holowaychuk",
     "email": "tj@vision-media.ca"
    },
-   "_id": "express@3.0.0-rc2",
+   "_id": "express@3.0.0-rc1",
    "maintainers": [
     {
      "name": "tjholowaychuk",
@@ -6595,12 +6655,12 @@
     "express": "./bin/express"
    },
    "dist": {
-    "shasum": "ffa79ccee41abc97f2c57576cc433339200fcd33",
-    "tarball": "http://localhost:3000/express/-/express-3.0.0rc2.tgz",
-    "integrity": "sha512-lp8LQWLzVBQHBp20GgpHp+ScBNwl70W1oYwbLZ8hcmq1OeqO3HnW2yTmFdrJIiXcE3i7487H10M929bhWBorHQ==",
+    "shasum": "b96bc45e19a0fece6b4c26c297db2f958a50643a",
+    "tarball": "http://localhost:3000/express/-/express-3.0.0rc1.tgz",
+    "integrity": "sha512-IB1XN2wmQNqHkseNaqsWy7Q0bTRCVBwme6LJkq4vJ1oVLI4lNmVM6XGzYGpamzCF0SqZhUdPGBSAP0faQsPGmA==",
     "signatures": [
      {
-      "sig": "MEQCIFE9AVWQUyHF6k5XsRlhT/6l55rhOG0MsNG5Y34VBG88AiAHw0mfWN8RpL2i3cUt7xB7F+Z22SfXptyhmEdXJCkODw==",
+      "sig": "MEQCIASXqTAWi4W16MR+HxRkf4SL89JfoP1SJI1Ko1MxK8R1AiBSKFZj2xCjKsKVf0qxLM0iQ0RZMdV7zQhJqkmpRSKf6g==",
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
@@ -6626,7 +6686,7 @@
     "fresh": "0.1.0",
     "cookie": "0.0.4",
     "mkdirp": "0.3.3",
-    "connect": "2.4.2",
+    "connect": "2.4.1",
     "methods": "0.0.1",
     "commander": "0.6.1",
     "range-parser": "0.0.4"
@@ -6646,9 +6706,9 @@
     "github-flavored-markdown": "*"
    }
   },
-  "3.0.0-alpha3": {
+  "3.0.0-beta4": {
    "name": "express",
-   "version": "3.0.0-alpha3",
+   "version": "3.0.0-beta4",
    "keywords": [
     "express",
     "framework",
@@ -6662,7 +6722,7 @@
     "name": "TJ Holowaychuk",
     "email": "tj@vision-media.ca"
    },
-   "_id": "express@3.0.0-alpha3",
+   "_id": "express@3.0.0-beta4",
    "maintainers": [
     {
      "name": "tjholowaychuk",
@@ -6691,12 +6751,12 @@
     "express": "./bin/express"
    },
    "dist": {
-    "shasum": "a65af40b696d39310c434d810adc9c4942fc2f9c",
-    "tarball": "http://localhost:3000/express/-/express-3.0.0alpha3.tgz",
-    "integrity": "sha512-A+ti/ChoNqX+IR1J9D9xOFTQI72Xzuy+/IPXlVMLgkXTPFx299ec3lCw2qsP+owY2WxIhUAvPR8yYPV46WW8Xw==",
+    "shasum": "0f7e5bb2db67e81b4d1c752300954133df276063",
+    "tarball": "http://localhost:3000/express/-/express-3.0.0beta4.tgz",
+    "integrity": "sha512-1KbnqOEUCBnw1OM94GgyzDqEopX2gPfB8dV9+HK9LNqE816/J1r36m0oMR1F4r2MRdpR6P3ArtGoYQBa02OzDQ==",
     "signatures": [
      {
-      "sig": "MEYCIQCIroIJ7VILvMDdUEDE5cAB3klCWsl4nrYv6fuDiGZxYAIhALxSC0yFX9IR15bBEFU2hvsf/JyKXglCjoiwyKkNys19",
+      "sig": "MEQCICllfeY0wh1oCX8l9MB2zf9ARYeAJYrmZdOm+99dbBjlAiB9mHrb5aRGXC2bblpWk5eo4GTR6XakwhMjYKrt8bvc5g==",
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
@@ -6709,41 +6769,37 @@
     "test": "make test",
     "prepublish": "npm prune"
    },
-   "_npmUser": {
-    "name": "tjholowaychuk",
-    "email": "tj@vision-media.ca"
-   },
    "repository": {
-    "url": "git://github.com/visionmedia/express.git",
+    "url": "git://github.com/visionmedia/express",
     "type": "git"
    },
-   "_npmVersion": "1.1.0-3",
    "description": "Sinatra inspired web development framework",
    "directories": {},
-   "_nodeVersion": "v0.6.12",
    "dependencies": {
     "crc": "0.2.0",
-    "mime": "1.2.5",
     "debug": "*",
-    "mkdirp": "0.3.1",
-    "connect": "2.2.2",
-    "commander": "0.5.2"
+    "fresh": "0.1.0",
+    "cookie": "0.0.3",
+    "mkdirp": "0.3.3",
+    "connect": "2.3.4",
+    "methods": "0.0.1",
+    "commander": "0.6.1",
+    "range-parser": "0.0.4"
    },
    "publishConfig": {
     "tag": "3.0"
    },
-   "_defaultsLoaded": true,
    "devDependencies": {
     "ejs": "*",
+    "hjs": "*",
     "jade": "*",
     "mocha": "*",
     "should": "*",
     "stylus": "*",
+    "supertest": "0.0.1",
     "connect-redis": "*",
     "github-flavored-markdown": "*"
-   },
-   "_engineSupported": true,
-   "optionalDependencies": {}
+   }
   },
   "3.0.0-alpha2": {
    "name": "express",
@@ -6844,147 +6900,9 @@
    "_engineSupported": true,
    "optionalDependencies": {}
   },
-  "2.0.0-beta2": {
+  "3.0.0-alpha3": {
    "name": "express",
-   "version": "2.0.0-beta2",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@2.0.0-beta2",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "274e49af300145688e87ed2f5c5e59f6e26af135",
-    "tarball": "http://localhost:3000/express/-/express-2.0.0beta2.tgz",
-    "integrity": "sha512-5X6MJse/UhJ8XJ/htQmTLQjuWMyjnthhB+dApMpUXpmk7zO7jg3DSDVxg+on/CYOcYdoZnX7tjdd90P2zu468g==",
-    "signatures": [
-     {
-      "sig": "MEUCIQCVUNMHZ5LVu7+XTkwMtsjAZyXJ72GDm9A96VDBrW+NcwIgTAjY2LV3INk958BFUV31EIZzyMXJfhRVSa2Vx3nPfqM=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "files": [
-    ""
-   ],
-   "engines": {
-    "node": ">= 0.4.1 < 0.5.0"
-   },
-   "_npmVersion": "0.3.15",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "bin": "./bin",
-    "lib": "./lib"
-   },
-   "_nodeVersion": "v0.4.1",
-   "dependencies": {
-    "qs": ">= 0.0.6",
-    "mime": ">= 0.0.1",
-    "connect": ">= 1.0.1 < 2.0.0"
-   },
-   "_defaultsLoaded": true,
-   "_engineSupported": true
-  },
-  "2.0.0-rc2": {
-   "name": "express",
-   "version": "2.0.0-rc2",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@2.0.0-rc2",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "381e1388bcd56d0449dbbf2272975f907488f710",
-    "tarball": "http://localhost:3000/express/-/express-2.0.0rc2.tgz",
-    "integrity": "sha512-4oBhCb0WH+/ftwIWGrtJxbN8NDcchioolcYrKckKUdu7Zy4vOQaZAks+TSSiMtOS8IYkJXIDrBMAfuerJwnLGw==",
-    "signatures": [
-     {
-      "sig": "MEUCIEP4/GfEJ1WkEDmlv3mrh3wmjmHaVEFkewLP6TixshMlAiEAvI0UmPM7PeMl2OmAhENUmDgS+PZnbEocsfAnJnSLhko=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "files": [
-    ""
-   ],
-   "engines": {
-    "node": ">= 0.4.1 < 0.5.0"
-   },
-   "_npmVersion": "0.3.15",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "bin": "./bin",
-    "lib": "./lib"
-   },
-   "_nodeVersion": "v0.4.2",
-   "dependencies": {
-    "qs": ">= 0.0.6",
-    "mime": ">= 0.0.1",
-    "connect": ">= 1.1.0 < 2.0.0"
-   },
-   "_defaultsLoaded": true,
-   "_engineSupported": true
-  },
-  "3.0.0-beta2": {
-   "name": "express",
-   "version": "3.0.0-beta2",
+   "version": "3.0.0-alpha3",
    "keywords": [
     "express",
     "framework",
@@ -6998,7 +6916,7 @@
     "name": "TJ Holowaychuk",
     "email": "tj@vision-media.ca"
    },
-   "_id": "express@3.0.0-beta2",
+   "_id": "express@3.0.0-alpha3",
    "maintainers": [
     {
      "name": "tjholowaychuk",
@@ -7027,181 +6945,12 @@
     "express": "./bin/express"
    },
    "dist": {
-    "shasum": "2755a16a2f7054c06d93f3a17dd6cbd0d5aa8698",
-    "tarball": "http://localhost:3000/express/-/express-3.0.0beta2.tgz",
-    "integrity": "sha512-+ydx45TtZs2FuXimLEUAFNX3rLd+V1WY1PObVtNSzEi+knO7ALSvTL86RrIJRoegP1bcRQRPCUKgTkmkN1lw6g==",
+    "shasum": "a65af40b696d39310c434d810adc9c4942fc2f9c",
+    "tarball": "http://localhost:3000/express/-/express-3.0.0alpha3.tgz",
+    "integrity": "sha512-A+ti/ChoNqX+IR1J9D9xOFTQI72Xzuy+/IPXlVMLgkXTPFx299ec3lCw2qsP+owY2WxIhUAvPR8yYPV46WW8Xw==",
     "signatures": [
      {
-      "sig": "MEQCIDfWoS4LFJefXnbiqkACOpbwkgQ0jWsIF6ZWJKVpZEBkAiA241HG74mQmzhyK7+QBmvzwU6Da2iCmt7dKvH7x9FoxQ==",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "engines": {
-    "node": "*"
-   },
-   "scripts": {
-    "test": "make test",
-    "prepublish": "npm prune"
-   },
-   "_npmUser": {
-    "name": "tjholowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "repository": {
-    "url": "git://github.com/visionmedia/express.git",
-    "type": "git"
-   },
-   "_npmVersion": "1.1.0-3",
-   "description": "Sinatra inspired web development framework",
-   "directories": {},
-   "_nodeVersion": "v0.6.12",
-   "dependencies": {
-    "crc": "0.2.0",
-    "mime": "1.2.5",
-    "debug": "*",
-    "cookie": "0.0.3",
-    "mkdirp": "0.3.2",
-    "connect": "2.3.1",
-    "commander": "0.6.1"
-   },
-   "publishConfig": {
-    "tag": "3.0"
-   },
-   "_defaultsLoaded": true,
-   "devDependencies": {
-    "ejs": "*",
-    "jade": "*",
-    "mocha": "*",
-    "should": "*",
-    "stylus": "*",
-    "connect-redis": "*",
-    "github-flavored-markdown": "*"
-   },
-   "_engineSupported": true,
-   "optionalDependencies": {}
-  },
-  "2.0.0-rc3": {
-   "name": "express",
-   "version": "2.0.0-rc3",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@2.0.0-rc3",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "538a35c8b0e2b08c455a20528b8d6a5568e901c1",
-    "tarball": "http://localhost:3000/express/-/express-2.0.0rc3.tgz",
-    "integrity": "sha512-LfsL0Y+8Y/bRNtlGpTDt+FOcD1c/R3dwZxdE9xRy8sOz9yqWYBiEggILWoq7jk8U1snVo47Ah495RwZkVWNVqg==",
-    "signatures": [
-     {
-      "sig": "MEQCIFeYa/PV/aaAaIeYbYDOI2erKvao0sehyFA6GNrb3tybAiA8LdO4q99lrgpr10UOxNF7N84irVP0ZzV08+McBj3byw==",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "files": [
-    ""
-   ],
-   "engines": {
-    "node": ">= 0.4.1 < 0.5.0"
-   },
-   "_npmVersion": "0.3.15",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "bin": "./bin",
-    "lib": "./lib"
-   },
-   "_nodeVersion": "v0.4.2",
-   "dependencies": {
-    "qs": ">= 0.0.6",
-    "mime": ">= 0.0.1",
-    "connect": ">= 1.1.0 < 2.0.0"
-   },
-   "_defaultsLoaded": true,
-   "_engineSupported": true
-  },
-  "3.0.0-alpha4": {
-   "name": "express",
-   "version": "3.0.0-alpha4",
-   "keywords": [
-    "express",
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful",
-    "router"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@3.0.0-alpha4",
-   "maintainers": [
-    {
-     "name": "tjholowaychuk",
-     "email": "tj@vision-media.ca"
-    }
-   ],
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "9bc6be2bcfbbd74dba66063808d3a75ad4bd7edb",
-    "tarball": "http://localhost:3000/express/-/express-3.0.0alpha4.tgz",
-    "integrity": "sha512-Mvjh3iIHgvt5GL0da80IObef3blVPDrjtB327JMvMYbXsl570gcPSKpi8IaXBM+Rbb4pCOCD4ePZf1tTn9e3KA==",
-    "signatures": [
-     {
-      "sig": "MEUCIHV1R+bvm6hKBEFDF4T8bZ3Ra5kKXThjFi+vjBRqTOzzAiEAz2hyLFW6Z+emvnvkKf11YCOWWQRl+aXIFeSQ6+G65vo=",
+      "sig": "MEYCIQCIroIJ7VILvMDdUEDE5cAB3klCWsl4nrYv6fuDiGZxYAIhALxSC0yFX9IR15bBEFU2hvsf/JyKXglCjoiwyKkNys19",
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
@@ -7250,9 +6999,9 @@
    "_engineSupported": true,
    "optionalDependencies": {}
   },
-  "3.0.0-rc4": {
+  "3.0.0-rc2": {
    "name": "express",
-   "version": "3.0.0-rc4",
+   "version": "3.0.0-rc2",
    "keywords": [
     "express",
     "framework",
@@ -7268,7 +7017,7 @@
     "name": "TJ Holowaychuk",
     "email": "tj@vision-media.ca"
    },
-   "_id": "express@3.0.0-rc4",
+   "_id": "express@3.0.0-rc2",
    "maintainers": [
     {
      "name": "tjholowaychuk",
@@ -7297,403 +7046,12 @@
     "express": "./bin/express"
    },
    "dist": {
-    "shasum": "f07490f3578a87e06d4244d58c18d6f6e2c5fc33",
-    "tarball": "http://localhost:3000/express/-/express-3.0.0rc4.tgz",
-    "integrity": "sha512-Vx40pGbuHjmtjIlZfqGxksj3lsAH2uCVT1n1L+w9exylRv506klbjA3+U/qr0lY7s/4P0h780+gUcC8Uom7BYg==",
+    "shasum": "ffa79ccee41abc97f2c57576cc433339200fcd33",
+    "tarball": "http://localhost:3000/express/-/express-3.0.0rc2.tgz",
+    "integrity": "sha512-lp8LQWLzVBQHBp20GgpHp+ScBNwl70W1oYwbLZ8hcmq1OeqO3HnW2yTmFdrJIiXcE3i7487H10M929bhWBorHQ==",
     "signatures": [
      {
-      "sig": "MEUCIQDnZfboOkKSlCR+PXpI+Rw8gSWRT1Or3S8OFlTzSQleIQIgFFONd+L0TTqWEqjIyoibQUm2VpxMBQUMNVHX0qZyMfI=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "engines": {
-    "node": "*"
-   },
-   "scripts": {
-    "test": "make test",
-    "prepublish": "npm prune"
-   },
-   "repository": {
-    "url": "git://github.com/visionmedia/express",
-    "type": "git"
-   },
-   "description": "Sinatra inspired web development framework",
-   "directories": {},
-   "dependencies": {
-    "crc": "0.2.0",
-    "send": "0.0.4",
-    "debug": "*",
-    "fresh": "0.1.0",
-    "cookie": "0.0.4",
-    "mkdirp": "0.3.3",
-    "connect": "2.4.4",
-    "methods": "0.0.1",
-    "commander": "0.6.1",
-    "range-parser": "0.0.4"
-   },
-   "publishConfig": {
-    "tag": "3.0"
-   },
-   "devDependencies": {
-    "ejs": "*",
-    "hjs": "*",
-    "jade": "*",
-    "mocha": "*",
-    "should": "*",
-    "stylus": "*",
-    "supertest": "0.0.1",
-    "connect-redis": "*",
-    "github-flavored-markdown": "*"
-   }
-  },
-  "1.0.0-rc2": {
-   "name": "express",
-   "version": "1.0.0-rc2",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@1.0.0-rc2",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "040b7790e1ab041e8218835376c5d21bba634bac",
-    "tarball": "http://localhost:3000/express/-/express-1.0.0rc2.tgz",
-    "integrity": "sha512-af090XKSGWlAe2u3NyZpYzj6yYImoYEDwSPAnqqJ4w5Wzgy4THJ9bmO9G29XDy5/s4FkMa2ftvmn2oHxovrlKg==",
-    "signatures": [
-     {
-      "sig": "MEQCIG7SacQhKorgU6rON2Yc5y/JK3iUMH8aDs74aCiwhbNVAiBolVX1AvvtE0Bbq9KLAQ8gAY4zTVgY5G1n3bbZ3qGtLg==",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "engines": {
-    "node": ">= 0.1.98"
-   },
-   "scripts": {
-    "test": "make test"
-   },
-   "_npmVersion": "0.2.7-2",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "lib": "./lib/express"
-   },
-   "_nodeVersion": "v0.3.1-pre",
-   "dependencies": {
-    "connect": ">= 0.2.4"
-   },
-   "_nodeSupported": true
-  },
-  "2.0.0-rc": {
-   "name": "express",
-   "version": "2.0.0-rc",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@2.0.0-rc",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "6d3da0301b6cdce94ee437ae40ae6c8c7f5d7ccf",
-    "tarball": "http://localhost:3000/express/-/express-2.0.0rc.tgz",
-    "integrity": "sha512-fQCbCn5TveLwoBOa54pyhOh8W7siaLL6VqE2XJMRuXbsnb5K2M9rrrpTwnlfBA0OZ8eRV9K4Wbbc5ZEk6mVQCg==",
-    "signatures": [
-     {
-      "sig": "MEUCIE6vhm+XWwDlkDkAZcvVrM9Y3kICKzSpitN04todUE5QAiEAxpxcQzLXafEwLHODx5RIGutqzGtBrUht3V3MSau0tzA=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "files": [
-    ""
-   ],
-   "engines": {
-    "node": ">= 0.4.1 < 0.5.0"
-   },
-   "_npmVersion": "0.3.15",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "bin": "./bin",
-    "lib": "./lib"
-   },
-   "_nodeVersion": "v0.4.2",
-   "dependencies": {
-    "qs": ">= 0.0.6",
-    "mime": ">= 0.0.1",
-    "connect": ">= 1.0.1 < 2.0.0"
-   },
-   "_defaultsLoaded": true,
-   "_engineSupported": true
-  },
-  "3.0.0-beta4": {
-   "name": "express",
-   "version": "3.0.0-beta4",
-   "keywords": [
-    "express",
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful",
-    "router"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@3.0.0-beta4",
-   "maintainers": [
-    {
-     "name": "tjholowaychuk",
-     "email": "tj@vision-media.ca"
-    }
-   ],
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "0f7e5bb2db67e81b4d1c752300954133df276063",
-    "tarball": "http://localhost:3000/express/-/express-3.0.0beta4.tgz",
-    "integrity": "sha512-1KbnqOEUCBnw1OM94GgyzDqEopX2gPfB8dV9+HK9LNqE816/J1r36m0oMR1F4r2MRdpR6P3ArtGoYQBa02OzDQ==",
-    "signatures": [
-     {
-      "sig": "MEQCICllfeY0wh1oCX8l9MB2zf9ARYeAJYrmZdOm+99dbBjlAiB9mHrb5aRGXC2bblpWk5eo4GTR6XakwhMjYKrt8bvc5g==",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "engines": {
-    "node": "*"
-   },
-   "scripts": {
-    "test": "make test",
-    "prepublish": "npm prune"
-   },
-   "repository": {
-    "url": "git://github.com/visionmedia/express",
-    "type": "git"
-   },
-   "description": "Sinatra inspired web development framework",
-   "directories": {},
-   "dependencies": {
-    "crc": "0.2.0",
-    "debug": "*",
-    "fresh": "0.1.0",
-    "cookie": "0.0.3",
-    "mkdirp": "0.3.3",
-    "connect": "2.3.4",
-    "methods": "0.0.1",
-    "commander": "0.6.1",
-    "range-parser": "0.0.4"
-   },
-   "publishConfig": {
-    "tag": "3.0"
-   },
-   "devDependencies": {
-    "ejs": "*",
-    "hjs": "*",
-    "jade": "*",
-    "mocha": "*",
-    "should": "*",
-    "stylus": "*",
-    "supertest": "0.0.1",
-    "connect-redis": "*",
-    "github-flavored-markdown": "*"
-   }
-  },
-  "2.0.0-beta3": {
-   "name": "express",
-   "version": "2.0.0-beta3",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@2.0.0-beta3",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "f9c1324023729c4eb96688023e989fe2f8565c61",
-    "tarball": "http://localhost:3000/express/-/express-2.0.0beta3.tgz",
-    "integrity": "sha512-dZoDukf5t2VJTsTBicHDLHRTLre3A3w6PV/epzw8Kkx2JJVc9dbbIRd1vfDd5zYXhP66tdPk1UmfBiipb5MdjA==",
-    "signatures": [
-     {
-      "sig": "MEUCIHct6bgiPwGMyp4KXWepm5kkMfbGUZ8VYLSMWOKNthEmAiEAo3krZXqn4DkQ3R5xY+HFEZHWxF4cGYIxkbUUpXDf2y8=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "files": [
-    ""
-   ],
-   "engines": {
-    "node": ">= 0.4.1 < 0.5.0"
-   },
-   "_npmVersion": "0.3.15",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "bin": "./bin",
-    "lib": "./lib"
-   },
-   "_nodeVersion": "v0.4.2",
-   "dependencies": {
-    "qs": ">= 0.0.6",
-    "mime": ">= 0.0.1",
-    "connect": ">= 1.0.1 < 2.0.0"
-   },
-   "_defaultsLoaded": true,
-   "_engineSupported": true
-  },
-  "3.0.0-rc1": {
-   "name": "express",
-   "version": "3.0.0-rc1",
-   "keywords": [
-    "express",
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful",
-    "router",
-    "app",
-    "api"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@3.0.0-rc1",
-   "maintainers": [
-    {
-     "name": "tjholowaychuk",
-     "email": "tj@vision-media.ca"
-    }
-   ],
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "b96bc45e19a0fece6b4c26c297db2f958a50643a",
-    "tarball": "http://localhost:3000/express/-/express-3.0.0rc1.tgz",
-    "integrity": "sha512-IB1XN2wmQNqHkseNaqsWy7Q0bTRCVBwme6LJkq4vJ1oVLI4lNmVM6XGzYGpamzCF0SqZhUdPGBSAP0faQsPGmA==",
-    "signatures": [
-     {
-      "sig": "MEQCIASXqTAWi4W16MR+HxRkf4SL89JfoP1SJI1Ko1MxK8R1AiBSKFZj2xCjKsKVf0qxLM0iQ0RZMdV7zQhJqkmpRSKf6g==",
+      "sig": "MEQCIFE9AVWQUyHF6k5XsRlhT/6l55rhOG0MsNG5Y34VBG88AiAHw0mfWN8RpL2i3cUt7xB7F+Z22SfXptyhmEdXJCkODw==",
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
@@ -7719,7 +7077,7 @@
     "fresh": "0.1.0",
     "cookie": "0.0.4",
     "mkdirp": "0.3.3",
-    "connect": "2.4.1",
+    "connect": "2.4.2",
     "methods": "0.0.1",
     "commander": "0.6.1",
     "range-parser": "0.0.4"
@@ -7738,176 +7096,6 @@
     "connect-redis": "*",
     "github-flavored-markdown": "*"
    }
-  },
-  "3.0.0-beta3": {
-   "name": "express",
-   "version": "3.0.0-beta3",
-   "keywords": [
-    "express",
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful",
-    "router"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@3.0.0-beta3",
-   "maintainers": [
-    {
-     "name": "tjholowaychuk",
-     "email": "tj@vision-media.ca"
-    }
-   ],
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "e8425ee5f1d1c649c2e0627f437a331e9b9da867",
-    "tarball": "http://localhost:3000/express/-/express-3.0.0beta3.tgz",
-    "integrity": "sha512-eTV9u5nDsH+fzJZPQVCOOF/Oewlr8SS2pA74TQvP9fudVWfZ+pPxvNoUewK4L8kGrYXDRIbHIvJp9qnvkK3tCA==",
-    "signatures": [
-     {
-      "sig": "MEYCIQCkqVxRMsDaxYkPwT2Z5E9beIGsGhTCPM/azoNbvx+RAgIhAPiajYTqDEA5bDiX87ytKt/n5MMfmS0FD9iFHdlXcHO2",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "engines": {
-    "node": "*"
-   },
-   "scripts": {
-    "test": "make test",
-    "prepublish": "npm prune"
-   },
-   "_npmUser": {
-    "name": "tjholowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "repository": {
-    "url": "git://github.com/visionmedia/express.git",
-    "type": "git"
-   },
-   "_npmVersion": "1.1.24",
-   "description": "Sinatra inspired web development framework",
-   "directories": {},
-   "_nodeVersion": "v0.6.19",
-   "dependencies": {
-    "crc": "0.2.0",
-    "debug": "*",
-    "fresh": "0.0.1",
-    "cookie": "0.0.3",
-    "mkdirp": "0.3.2",
-    "connect": "2.3.3",
-    "commander": "0.6.1"
-   },
-   "publishConfig": {
-    "tag": "3.0"
-   },
-   "_defaultsLoaded": true,
-   "devDependencies": {
-    "ejs": "*",
-    "hjs": "*",
-    "jade": "*",
-    "mocha": "*",
-    "should": "*",
-    "stylus": "*",
-    "connect-redis": "*",
-    "github-flavored-markdown": "*"
-   },
-   "_engineSupported": true,
-   "optionalDependencies": {}
-  },
-  "2.0.0-beta": {
-   "name": "express",
-   "version": "2.0.0-beta",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@2.0.0-beta",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "c2095479887128f161ee13211e7b886edb4d9f98",
-    "tarball": "http://localhost:3000/express/-/express-2.0.0beta.tgz",
-    "integrity": "sha512-TphlIsE43fwc+ERX8ICA+IFfuwQv8hUIO84QJt3vwWdKyjLHhGfZYIhoZPIoOCvok0EbLngb5bBKDs7Oih1yhw==",
-    "signatures": [
-     {
-      "sig": "MEUCICfVU+/M7uU5YwlHpasuGNpHdPIO7e66NwJjOwunpAOKAiEA61UnvCToXMkicLLkHwRuxPdGvfShoGjQOg2P+ZA7u/g=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "files": [
-    ""
-   ],
-   "engines": {
-    "node": ">= 0.4.1 < 0.5.0"
-   },
-   "_npmVersion": "0.3.13",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "bin": "./bin",
-    "lib": "./lib"
-   },
-   "_nodeVersion": "v0.4.2",
-   "dependencies": {
-    "qs": ">= 0.0.6",
-    "mime": ">= 0.0.1",
-    "connect": ">= 1.0.1"
-   },
-   "_defaultsLoaded": true,
-   "_engineSupported": true
   },
   "3.0.0-alpha5": {
    "name": "express",
@@ -8008,126 +7196,6 @@
    "_engineSupported": true,
    "optionalDependencies": {}
   },
-  "1.0.0-rc": {
-   "name": "express",
-   "version": "1.0.0-rc",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@1.0.0-rc",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "cc9545ae107dac12821f997e3dd43c5df223ba13",
-    "tarball": "http://localhost:3000/express/-/express-1.0.0rc.tgz",
-    "integrity": "sha512-qagPpCEW0cdM/L+LKLUr491Gk5Kayc8ryZlE0mRgHUSHNam3vN5tYfZmjFuqPvwsto7B4VE4wxJK+F78GyCJoQ==",
-    "signatures": [
-     {
-      "sig": "MEUCIEX5zEim83LuECuGchljgrJEPzum4xSj19h+v8Fl3BO1AiEA+6pd1bOZjgMAeJPakBmFhCPmpHbCTDthwe3PCAnIOBI=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "engines": {
-    "node": ">= 0.1.98"
-   },
-   "scripts": {
-    "test": "make test"
-   },
-   "_npmVersion": "0.2.7-2",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "lib": "./lib/express"
-   },
-   "_nodeVersion": "v0.3.1-pre",
-   "dependencies": {
-    "connect": ">= 0.2.2"
-   },
-   "_nodeSupported": true
-  },
-  "1.0.0-rc3": {
-   "name": "express",
-   "version": "1.0.0-rc3",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@1.0.0-rc3",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "ae5ee7dfbe436192adad65c7817c5ae78a8b4f93",
-    "tarball": "http://localhost:3000/express/-/express-1.0.0rc3.tgz",
-    "integrity": "sha512-ydlKi0qmj0MJGdfUWKGtcw7RTHtDhXHoFWfFCpSIiMueLv6ZEtf8uIuwTxAVSp/zkKbJDTP1xPMYKd405/mK4A==",
-    "signatures": [
-     {
-      "sig": "MEYCIQCD+4qXeCsGy2YzvcMcB12CJ1DZOVH+hT8gDrMu7xMWMAIhALhRsyoZ5z/CpVUnEdYoo6Sa9APjRhYz5gDXrOlSMprM",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "engines": {
-    "node": ">= 0.2.0"
-   },
-   "scripts": {
-    "test": "make test"
-   },
-   "_npmVersion": "0.2.7-2",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "lib": "./lib/express"
-   },
-   "_nodeVersion": "v0.3.1-pre",
-   "dependencies": {
-    "connect": ">= 0.2.5"
-   },
-   "_nodeSupported": true
-  },
   "3.0.0-rc3": {
    "name": "express",
    "version": "3.0.0-rc3",
@@ -8225,127 +7293,6 @@
     "connect-redis": "*",
     "github-flavored-markdown": "*"
    }
-  },
-  "1.0.0-beta2": {
-   "name": "express",
-   "version": "1.0.0-beta2",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@1.0.0-beta2",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "4e9f6f94405c969173e09a20ba3f0d27020ec9e9",
-    "tarball": "http://localhost:3000/express/-/express-1.0.0beta2.tgz",
-    "integrity": "sha512-gKUkVZbi2Y5e8yYXIe1DQus13PtgOtr0dSEpbrTxxfPixVtsc1luol7Ke4/rvYAnEtzcVqv2l5f/Q4nRwPQV9Q==",
-    "signatures": [
-     {
-      "sig": "MEQCIHPPaQqNuMY0p9/zZ8g4b4SE2y5KS7Bd3w34z3oL8mCIAiApXeasOM2Io3jcuNwU3BQ6re4DmXZBJm51Do1WL2RefQ==",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "engines": {
-    "node": ">= 0.1.98"
-   },
-   "scripts": {
-    "test": "make test"
-   },
-   "_npmVersion": "0.2.7-2",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "lib": "./lib/express"
-   },
-   "_nodeVersion": "v0.3.1-pre",
-   "_nodeSupported": true
-  },
-  "1.0.0-rc4": {
-   "name": "express",
-   "version": "1.0.0-rc4",
-   "keywords": [
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@1.0.0-rc4",
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "c5363c021717c02728c692fedc632cac9a869160",
-    "tarball": "http://localhost:3000/express/-/express-1.0.0rc4.tgz",
-    "integrity": "sha512-OgxMiewmSH12ZIQyCU9183l6B/sn1Z/aF78Mi60T8j7nu+ReXNGLhxZ5aRjQBmVSEJ7thWzFJYF4oOJx9KpJKA==",
-    "signatures": [
-     {
-      "sig": "MEUCIQDV+ckhXWsXKBbrSOaGn6eZgC+Mxg9BKtnflruRGaTO9AIgILrMPN583XoniXzjdADf36yH31WEfUYucgvxesAPraA=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "engines": {
-    "node": ">= 0.2.0"
-   },
-   "scripts": {
-    "test": "make test"
-   },
-   "_npmVersion": "0.2.7-2",
-   "description": "Sinatra inspired web development framework",
-   "directories": {
-    "lib": "./lib/express"
-   },
-   "_nodeVersion": "v0.3.1-pre",
-   "dependencies": {
-    "connect": ">= 0.2.6"
-   },
-   "_nodeSupported": true
   },
   "3.0.0-beta7": {
    "name": "express",
@@ -8543,9 +7490,503 @@
    "_engineSupported": true,
    "optionalDependencies": {}
   },
-  "1.0.0-beta": {
+  "3.0.0-beta6": {
    "name": "express",
-   "version": "1.0.0-beta",
+   "version": "3.0.0-beta6",
+   "keywords": [
+    "express",
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful",
+    "router",
+    "app",
+    "api"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@3.0.0-beta6",
+   "maintainers": [
+    {
+     "name": "tjholowaychuk",
+     "email": "tj@vision-media.ca"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "3eef2ed7ce7511170df4d15f4d2dade10dbc6614",
+    "tarball": "http://localhost:3000/express/-/express-3.0.0beta6.tgz",
+    "integrity": "sha512-A7e//BYZKcK4SfCy0H4e9e7geapDlNx/mkrwRzT13f3f6AhrysaucxVZ5pQWVAW3p10QGmOa0YAo/wEqJcKtBg==",
+    "signatures": [
+     {
+      "sig": "MEUCICNCKCwd/c9ocqJrc/awpwlXi3e0W+ZSpiVYYeisRcOwAiEAvDTfQY+4rSFAlPkwqyk3JKkzLcG8pvRY+4fjByc1CxE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "engines": {
+    "node": "*"
+   },
+   "scripts": {
+    "test": "make test",
+    "prepublish": "npm prune"
+   },
+   "repository": {
+    "url": "git://github.com/visionmedia/express",
+    "type": "git"
+   },
+   "description": "Sinatra inspired web development framework",
+   "directories": {},
+   "dependencies": {
+    "send": "0.0.2",
+    "debug": "*",
+    "fresh": "0.1.0",
+    "cookie": "0.0.3",
+    "mkdirp": "0.3.3",
+    "connect": "2.3.8",
+    "methods": "0.0.1",
+    "commander": "0.6.1",
+    "range-parser": "0.0.4",
+    "response-send": "0.0.1"
+   },
+   "publishConfig": {
+    "tag": "3.0"
+   },
+   "devDependencies": {
+    "ejs": "*",
+    "hjs": "*",
+    "jade": "*",
+    "mocha": "*",
+    "should": "*",
+    "stylus": "*",
+    "supertest": "0.0.1",
+    "connect-redis": "*",
+    "github-flavored-markdown": "*"
+   }
+  },
+  "3.0.0-rc4": {
+   "name": "express",
+   "version": "3.0.0-rc4",
+   "keywords": [
+    "express",
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful",
+    "router",
+    "app",
+    "api"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@3.0.0-rc4",
+   "maintainers": [
+    {
+     "name": "tjholowaychuk",
+     "email": "tj@vision-media.ca"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "f07490f3578a87e06d4244d58c18d6f6e2c5fc33",
+    "tarball": "http://localhost:3000/express/-/express-3.0.0rc4.tgz",
+    "integrity": "sha512-Vx40pGbuHjmtjIlZfqGxksj3lsAH2uCVT1n1L+w9exylRv506klbjA3+U/qr0lY7s/4P0h780+gUcC8Uom7BYg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDnZfboOkKSlCR+PXpI+Rw8gSWRT1Or3S8OFlTzSQleIQIgFFONd+L0TTqWEqjIyoibQUm2VpxMBQUMNVHX0qZyMfI=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "engines": {
+    "node": "*"
+   },
+   "scripts": {
+    "test": "make test",
+    "prepublish": "npm prune"
+   },
+   "repository": {
+    "url": "git://github.com/visionmedia/express",
+    "type": "git"
+   },
+   "description": "Sinatra inspired web development framework",
+   "directories": {},
+   "dependencies": {
+    "crc": "0.2.0",
+    "send": "0.0.4",
+    "debug": "*",
+    "fresh": "0.1.0",
+    "cookie": "0.0.4",
+    "mkdirp": "0.3.3",
+    "connect": "2.4.4",
+    "methods": "0.0.1",
+    "commander": "0.6.1",
+    "range-parser": "0.0.4"
+   },
+   "publishConfig": {
+    "tag": "3.0"
+   },
+   "devDependencies": {
+    "ejs": "*",
+    "hjs": "*",
+    "jade": "*",
+    "mocha": "*",
+    "should": "*",
+    "stylus": "*",
+    "supertest": "0.0.1",
+    "connect-redis": "*",
+    "github-flavored-markdown": "*"
+   }
+  },
+  "3.0.0-alpha4": {
+   "name": "express",
+   "version": "3.0.0-alpha4",
+   "keywords": [
+    "express",
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful",
+    "router"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@3.0.0-alpha4",
+   "maintainers": [
+    {
+     "name": "tjholowaychuk",
+     "email": "tj@vision-media.ca"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "9bc6be2bcfbbd74dba66063808d3a75ad4bd7edb",
+    "tarball": "http://localhost:3000/express/-/express-3.0.0alpha4.tgz",
+    "integrity": "sha512-Mvjh3iIHgvt5GL0da80IObef3blVPDrjtB327JMvMYbXsl570gcPSKpi8IaXBM+Rbb4pCOCD4ePZf1tTn9e3KA==",
+    "signatures": [
+     {
+      "sig": "MEUCIHV1R+bvm6hKBEFDF4T8bZ3Ra5kKXThjFi+vjBRqTOzzAiEAz2hyLFW6Z+emvnvkKf11YCOWWQRl+aXIFeSQ6+G65vo=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "engines": {
+    "node": "*"
+   },
+   "scripts": {
+    "test": "make test",
+    "prepublish": "npm prune"
+   },
+   "_npmUser": {
+    "name": "tjholowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "repository": {
+    "url": "git://github.com/visionmedia/express.git",
+    "type": "git"
+   },
+   "_npmVersion": "1.1.0-3",
+   "description": "Sinatra inspired web development framework",
+   "directories": {},
+   "_nodeVersion": "v0.6.12",
+   "dependencies": {
+    "crc": "0.2.0",
+    "mime": "1.2.5",
+    "debug": "*",
+    "mkdirp": "0.3.1",
+    "connect": "2.2.2",
+    "commander": "0.5.2"
+   },
+   "publishConfig": {
+    "tag": "3.0"
+   },
+   "_defaultsLoaded": true,
+   "devDependencies": {
+    "ejs": "*",
+    "jade": "*",
+    "mocha": "*",
+    "should": "*",
+    "stylus": "*",
+    "connect-redis": "*",
+    "github-flavored-markdown": "*"
+   },
+   "_engineSupported": true,
+   "optionalDependencies": {}
+  },
+  "3.0.0-beta1": {
+   "name": "express",
+   "version": "3.0.0-beta1",
+   "keywords": [
+    "express",
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful",
+    "router"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@3.0.0-beta1",
+   "maintainers": [
+    {
+     "name": "tjholowaychuk",
+     "email": "tj@vision-media.ca"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "557dda7815bffb84dea4cd3c09e1fe6538b2262f",
+    "tarball": "http://localhost:3000/express/-/express-3.0.0beta1.tgz",
+    "integrity": "sha512-louxpob+X36z2q6B5nSXV3Z2P6nu/+lUaiOan6aBAcBJdGHSXIJ7boJMUgulEMPB23MisDbqaFl1n0IMqLWMkg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDxR7oZuds8+XXv8gOvGkfuUhZBES+4gYPvH7PPtEcz2QIhAMNxnQ2bmqOhNS2QrseevN5YaO7w0AEtIuL8vnsYc9+j",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "engines": {
+    "node": "*"
+   },
+   "scripts": {
+    "test": "make test",
+    "prepublish": "npm prune"
+   },
+   "_npmUser": {
+    "name": "tjholowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "repository": {
+    "url": "git://github.com/visionmedia/express.git",
+    "type": "git"
+   },
+   "_npmVersion": "1.1.0-3",
+   "description": "Sinatra inspired web development framework",
+   "directories": {},
+   "_nodeVersion": "v0.6.12",
+   "dependencies": {
+    "crc": "0.2.0",
+    "mime": "1.2.5",
+    "debug": "*",
+    "mkdirp": "0.3.2",
+    "connect": "2.3.0",
+    "commander": "0.6.1"
+   },
+   "publishConfig": {
+    "tag": "3.0"
+   },
+   "_defaultsLoaded": true,
+   "devDependencies": {
+    "ejs": "*",
+    "jade": "*",
+    "mocha": "*",
+    "should": "*",
+    "stylus": "*",
+    "connect-redis": "*",
+    "github-flavored-markdown": "*"
+   },
+   "_engineSupported": true,
+   "optionalDependencies": {}
+  },
+  "3.0.0-beta2": {
+   "name": "express",
+   "version": "3.0.0-beta2",
+   "keywords": [
+    "express",
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful",
+    "router"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@3.0.0-beta2",
+   "maintainers": [
+    {
+     "name": "tjholowaychuk",
+     "email": "tj@vision-media.ca"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "2755a16a2f7054c06d93f3a17dd6cbd0d5aa8698",
+    "tarball": "http://localhost:3000/express/-/express-3.0.0beta2.tgz",
+    "integrity": "sha512-+ydx45TtZs2FuXimLEUAFNX3rLd+V1WY1PObVtNSzEi+knO7ALSvTL86RrIJRoegP1bcRQRPCUKgTkmkN1lw6g==",
+    "signatures": [
+     {
+      "sig": "MEQCIDfWoS4LFJefXnbiqkACOpbwkgQ0jWsIF6ZWJKVpZEBkAiA241HG74mQmzhyK7+QBmvzwU6Da2iCmt7dKvH7x9FoxQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "engines": {
+    "node": "*"
+   },
+   "scripts": {
+    "test": "make test",
+    "prepublish": "npm prune"
+   },
+   "_npmUser": {
+    "name": "tjholowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "repository": {
+    "url": "git://github.com/visionmedia/express.git",
+    "type": "git"
+   },
+   "_npmVersion": "1.1.0-3",
+   "description": "Sinatra inspired web development framework",
+   "directories": {},
+   "_nodeVersion": "v0.6.12",
+   "dependencies": {
+    "crc": "0.2.0",
+    "mime": "1.2.5",
+    "debug": "*",
+    "cookie": "0.0.3",
+    "mkdirp": "0.3.2",
+    "connect": "2.3.1",
+    "commander": "0.6.1"
+   },
+   "publishConfig": {
+    "tag": "3.0"
+   },
+   "_defaultsLoaded": true,
+   "devDependencies": {
+    "ejs": "*",
+    "jade": "*",
+    "mocha": "*",
+    "should": "*",
+    "stylus": "*",
+    "connect-redis": "*",
+    "github-flavored-markdown": "*"
+   },
+   "_engineSupported": true,
+   "optionalDependencies": {}
+  },
+  "2.0.0-rc3": {
+   "name": "express",
+   "version": "2.0.0-rc3",
    "keywords": [
     "framework",
     "sinatra",
@@ -8557,7 +7998,76 @@
     "name": "TJ Holowaychuk",
     "email": "tj@vision-media.ca"
    },
-   "_id": "express@1.0.0-beta",
+   "_id": "express@2.0.0-rc3",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "538a35c8b0e2b08c455a20528b8d6a5568e901c1",
+    "tarball": "http://localhost:3000/express/-/express-2.0.0rc3.tgz",
+    "integrity": "sha512-LfsL0Y+8Y/bRNtlGpTDt+FOcD1c/R3dwZxdE9xRy8sOz9yqWYBiEggILWoq7jk8U1snVo47Ah495RwZkVWNVqg==",
+    "signatures": [
+     {
+      "sig": "MEQCIFeYa/PV/aaAaIeYbYDOI2erKvao0sehyFA6GNrb3tybAiA8LdO4q99lrgpr10UOxNF7N84irVP0ZzV08+McBj3byw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "files": [
+    ""
+   ],
+   "engines": {
+    "node": ">= 0.4.1 < 0.5.0"
+   },
+   "_npmVersion": "0.3.15",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+   },
+   "_nodeVersion": "v0.4.2",
+   "dependencies": {
+    "qs": ">= 0.0.6",
+    "mime": ">= 0.0.1",
+    "connect": ">= 1.1.0 < 2.0.0"
+   },
+   "_defaultsLoaded": true,
+   "_engineSupported": true
+  },
+  "1.0.0-rc2": {
+   "name": "express",
+   "version": "1.0.0-rc2",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@1.0.0-rc2",
    "contributors": [
     {
      "name": "TJ Holowaychuk",
@@ -8576,12 +8086,302 @@
     "express": "./bin/express"
    },
    "dist": {
-    "shasum": "f8c485ec1aa2d8612c667a0fca08603abdb27246",
-    "tarball": "http://localhost:3000/express/-/express-1.0.0beta.tgz",
-    "integrity": "sha512-rEDXYkD9v9wpt8O5/q9wWsiZa34xleLhL17feQ9i19W2987uymLU1WSwvDsqWeJHUkzKMC6GKITRsOKlnmC5XA==",
+    "shasum": "040b7790e1ab041e8218835376c5d21bba634bac",
+    "tarball": "http://localhost:3000/express/-/express-1.0.0rc2.tgz",
+    "integrity": "sha512-af090XKSGWlAe2u3NyZpYzj6yYImoYEDwSPAnqqJ4w5Wzgy4THJ9bmO9G29XDy5/s4FkMa2ftvmn2oHxovrlKg==",
     "signatures": [
      {
-      "sig": "MEQCIHAEt5SAyLAQO9dNV7wW6EIvkEnwCqob9DVCTQmfVrSXAiA6NmoLASoMFbtnneCvmELF4odRPii+uwV0c9B9E2i3lQ==",
+      "sig": "MEQCIG7SacQhKorgU6rON2Yc5y/JK3iUMH8aDs74aCiwhbNVAiBolVX1AvvtE0Bbq9KLAQ8gAY4zTVgY5G1n3bbZ3qGtLg==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "engines": {
+    "node": ">= 0.1.98"
+   },
+   "scripts": {
+    "test": "make test"
+   },
+   "_npmVersion": "0.2.7-2",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "lib": "./lib/express"
+   },
+   "_nodeVersion": "v0.3.1-pre",
+   "dependencies": {
+    "connect": ">= 0.2.4"
+   },
+   "_nodeSupported": true
+  },
+  "3.0.0-beta3": {
+   "name": "express",
+   "version": "3.0.0-beta3",
+   "keywords": [
+    "express",
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful",
+    "router"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@3.0.0-beta3",
+   "maintainers": [
+    {
+     "name": "tjholowaychuk",
+     "email": "tj@vision-media.ca"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "e8425ee5f1d1c649c2e0627f437a331e9b9da867",
+    "tarball": "http://localhost:3000/express/-/express-3.0.0beta3.tgz",
+    "integrity": "sha512-eTV9u5nDsH+fzJZPQVCOOF/Oewlr8SS2pA74TQvP9fudVWfZ+pPxvNoUewK4L8kGrYXDRIbHIvJp9qnvkK3tCA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCkqVxRMsDaxYkPwT2Z5E9beIGsGhTCPM/azoNbvx+RAgIhAPiajYTqDEA5bDiX87ytKt/n5MMfmS0FD9iFHdlXcHO2",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "engines": {
+    "node": "*"
+   },
+   "scripts": {
+    "test": "make test",
+    "prepublish": "npm prune"
+   },
+   "_npmUser": {
+    "name": "tjholowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "repository": {
+    "url": "git://github.com/visionmedia/express.git",
+    "type": "git"
+   },
+   "_npmVersion": "1.1.24",
+   "description": "Sinatra inspired web development framework",
+   "directories": {},
+   "_nodeVersion": "v0.6.19",
+   "dependencies": {
+    "crc": "0.2.0",
+    "debug": "*",
+    "fresh": "0.0.1",
+    "cookie": "0.0.3",
+    "mkdirp": "0.3.2",
+    "connect": "2.3.3",
+    "commander": "0.6.1"
+   },
+   "publishConfig": {
+    "tag": "3.0"
+   },
+   "_defaultsLoaded": true,
+   "devDependencies": {
+    "ejs": "*",
+    "hjs": "*",
+    "jade": "*",
+    "mocha": "*",
+    "should": "*",
+    "stylus": "*",
+    "connect-redis": "*",
+    "github-flavored-markdown": "*"
+   },
+   "_engineSupported": true,
+   "optionalDependencies": {}
+  },
+  "2.0.0-beta": {
+   "name": "express",
+   "version": "2.0.0-beta",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@2.0.0-beta",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "c2095479887128f161ee13211e7b886edb4d9f98",
+    "tarball": "http://localhost:3000/express/-/express-2.0.0beta.tgz",
+    "integrity": "sha512-TphlIsE43fwc+ERX8ICA+IFfuwQv8hUIO84QJt3vwWdKyjLHhGfZYIhoZPIoOCvok0EbLngb5bBKDs7Oih1yhw==",
+    "signatures": [
+     {
+      "sig": "MEUCICfVU+/M7uU5YwlHpasuGNpHdPIO7e66NwJjOwunpAOKAiEA61UnvCToXMkicLLkHwRuxPdGvfShoGjQOg2P+ZA7u/g=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "files": [
+    ""
+   ],
+   "engines": {
+    "node": ">= 0.4.1 < 0.5.0"
+   },
+   "_npmVersion": "0.3.13",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+   },
+   "_nodeVersion": "v0.4.2",
+   "dependencies": {
+    "qs": ">= 0.0.6",
+    "mime": ">= 0.0.1",
+    "connect": ">= 1.0.1"
+   },
+   "_defaultsLoaded": true,
+   "_engineSupported": true
+  },
+  "1.0.0-rc3": {
+   "name": "express",
+   "version": "1.0.0-rc3",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@1.0.0-rc3",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "ae5ee7dfbe436192adad65c7817c5ae78a8b4f93",
+    "tarball": "http://localhost:3000/express/-/express-1.0.0rc3.tgz",
+    "integrity": "sha512-ydlKi0qmj0MJGdfUWKGtcw7RTHtDhXHoFWfFCpSIiMueLv6ZEtf8uIuwTxAVSp/zkKbJDTP1xPMYKd405/mK4A==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCD+4qXeCsGy2YzvcMcB12CJ1DZOVH+hT8gDrMu7xMWMAIhALhRsyoZ5z/CpVUnEdYoo6Sa9APjRhYz5gDXrOlSMprM",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "engines": {
+    "node": ">= 0.2.0"
+   },
+   "scripts": {
+    "test": "make test"
+   },
+   "_npmVersion": "0.2.7-2",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "lib": "./lib/express"
+   },
+   "_nodeVersion": "v0.3.1-pre",
+   "dependencies": {
+    "connect": ">= 0.2.5"
+   },
+   "_nodeSupported": true
+  },
+  "1.0.0-beta2": {
+   "name": "express",
+   "version": "1.0.0-beta2",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@1.0.0-beta2",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "4e9f6f94405c969173e09a20ba3f0d27020ec9e9",
+    "tarball": "http://localhost:3000/express/-/express-1.0.0beta2.tgz",
+    "integrity": "sha512-gKUkVZbi2Y5e8yYXIe1DQus13PtgOtr0dSEpbrTxxfPixVtsc1luol7Ke4/rvYAnEtzcVqv2l5f/Q4nRwPQV9Q==",
+    "signatures": [
+     {
+      "sig": "MEQCIHPPaQqNuMY0p9/zZ8g4b4SE2y5KS7Bd3w34z3oL8mCIAiApXeasOM2Io3jcuNwU3BQ6re4DmXZBJm51Do1WL2RefQ==",
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
@@ -8700,31 +8500,21 @@
     "github-flavored-markdown": "*"
    }
   },
-  "3.0.0-beta6": {
+  "2.0.0-rc2": {
    "name": "express",
-   "version": "3.0.0-beta6",
+   "version": "2.0.0-rc2",
    "keywords": [
-    "express",
     "framework",
     "sinatra",
     "web",
     "rest",
-    "restful",
-    "router",
-    "app",
-    "api"
+    "restful"
    ],
    "author": {
     "name": "TJ Holowaychuk",
     "email": "tj@vision-media.ca"
    },
-   "_id": "express@3.0.0-beta6",
-   "maintainers": [
-    {
-     "name": "tjholowaychuk",
-     "email": "tj@vision-media.ca"
-    }
-   ],
+   "_id": "express@2.0.0-rc2",
    "contributors": [
     {
      "name": "TJ Holowaychuk",
@@ -8747,155 +8537,365 @@
     "express": "./bin/express"
    },
    "dist": {
-    "shasum": "3eef2ed7ce7511170df4d15f4d2dade10dbc6614",
-    "tarball": "http://localhost:3000/express/-/express-3.0.0beta6.tgz",
-    "integrity": "sha512-A7e//BYZKcK4SfCy0H4e9e7geapDlNx/mkrwRzT13f3f6AhrysaucxVZ5pQWVAW3p10QGmOa0YAo/wEqJcKtBg==",
+    "shasum": "381e1388bcd56d0449dbbf2272975f907488f710",
+    "tarball": "http://localhost:3000/express/-/express-2.0.0rc2.tgz",
+    "integrity": "sha512-4oBhCb0WH+/ftwIWGrtJxbN8NDcchioolcYrKckKUdu7Zy4vOQaZAks+TSSiMtOS8IYkJXIDrBMAfuerJwnLGw==",
     "signatures": [
      {
-      "sig": "MEUCICNCKCwd/c9ocqJrc/awpwlXi3e0W+ZSpiVYYeisRcOwAiEAvDTfQY+4rSFAlPkwqyk3JKkzLcG8pvRY+4fjByc1CxE=",
+      "sig": "MEUCIEP4/GfEJ1WkEDmlv3mrh3wmjmHaVEFkewLP6TixshMlAiEAvI0UmPM7PeMl2OmAhENUmDgS+PZnbEocsfAnJnSLhko=",
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
    },
    "main": "index",
+   "files": [
+    ""
+   ],
    "engines": {
-    "node": "*"
+    "node": ">= 0.4.1 < 0.5.0"
    },
-   "scripts": {
-    "test": "make test",
-    "prepublish": "npm prune"
-   },
-   "repository": {
-    "url": "git://github.com/visionmedia/express",
-    "type": "git"
-   },
+   "_npmVersion": "0.3.15",
    "description": "Sinatra inspired web development framework",
-   "directories": {},
+   "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+   },
+   "_nodeVersion": "v0.4.2",
    "dependencies": {
-    "send": "0.0.2",
-    "debug": "*",
-    "fresh": "0.1.0",
-    "cookie": "0.0.3",
-    "mkdirp": "0.3.3",
-    "connect": "2.3.8",
-    "methods": "0.0.1",
-    "commander": "0.6.1",
-    "range-parser": "0.0.4",
-    "response-send": "0.0.1"
-   },
-   "publishConfig": {
-    "tag": "3.0"
-   },
-   "devDependencies": {
-    "ejs": "*",
-    "hjs": "*",
-    "jade": "*",
-    "mocha": "*",
-    "should": "*",
-    "stylus": "*",
-    "supertest": "0.0.1",
-    "connect-redis": "*",
-    "github-flavored-markdown": "*"
-   }
-  },
-  "3.0.0-beta1": {
-   "name": "express",
-   "version": "3.0.0-beta1",
-   "keywords": [
-    "express",
-    "framework",
-    "sinatra",
-    "web",
-    "rest",
-    "restful",
-    "router"
-   ],
-   "author": {
-    "name": "TJ Holowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "_id": "express@3.0.0-beta1",
-   "maintainers": [
-    {
-     "name": "tjholowaychuk",
-     "email": "tj@vision-media.ca"
-    }
-   ],
-   "contributors": [
-    {
-     "name": "TJ Holowaychuk",
-     "email": "tj@vision-media.ca"
-    },
-    {
-     "name": "Aaron Heckmann",
-     "email": "aaron.heckmann+github@gmail.com"
-    },
-    {
-     "name": "Ciaran Jessup",
-     "email": "ciaranj@gmail.com"
-    },
-    {
-     "name": "Guillermo Rauch",
-     "email": "rauchg@gmail.com"
-    }
-   ],
-   "bin": {
-    "express": "./bin/express"
-   },
-   "dist": {
-    "shasum": "557dda7815bffb84dea4cd3c09e1fe6538b2262f",
-    "tarball": "http://localhost:3000/express/-/express-3.0.0beta1.tgz",
-    "integrity": "sha512-louxpob+X36z2q6B5nSXV3Z2P6nu/+lUaiOan6aBAcBJdGHSXIJ7boJMUgulEMPB23MisDbqaFl1n0IMqLWMkg==",
-    "signatures": [
-     {
-      "sig": "MEYCIQDxR7oZuds8+XXv8gOvGkfuUhZBES+4gYPvH7PPtEcz2QIhAMNxnQ2bmqOhNS2QrseevN5YaO7w0AEtIuL8vnsYc9+j",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "index",
-   "engines": {
-    "node": "*"
-   },
-   "scripts": {
-    "test": "make test",
-    "prepublish": "npm prune"
-   },
-   "_npmUser": {
-    "name": "tjholowaychuk",
-    "email": "tj@vision-media.ca"
-   },
-   "repository": {
-    "url": "git://github.com/visionmedia/express.git",
-    "type": "git"
-   },
-   "_npmVersion": "1.1.0-3",
-   "description": "Sinatra inspired web development framework",
-   "directories": {},
-   "_nodeVersion": "v0.6.12",
-   "dependencies": {
-    "crc": "0.2.0",
-    "mime": "1.2.5",
-    "debug": "*",
-    "mkdirp": "0.3.2",
-    "connect": "2.3.0",
-    "commander": "0.6.1"
-   },
-   "publishConfig": {
-    "tag": "3.0"
+    "qs": ">= 0.0.6",
+    "mime": ">= 0.0.1",
+    "connect": ">= 1.1.0 < 2.0.0"
    },
    "_defaultsLoaded": true,
-   "devDependencies": {
-    "ejs": "*",
-    "jade": "*",
-    "mocha": "*",
-    "should": "*",
-    "stylus": "*",
-    "connect-redis": "*",
-    "github-flavored-markdown": "*"
+   "_engineSupported": true
+  },
+  "1.0.0-beta": {
+   "name": "express",
+   "version": "1.0.0-beta",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
    },
-   "_engineSupported": true,
-   "optionalDependencies": {}
+   "_id": "express@1.0.0-beta",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "f8c485ec1aa2d8612c667a0fca08603abdb27246",
+    "tarball": "http://localhost:3000/express/-/express-1.0.0beta.tgz",
+    "integrity": "sha512-rEDXYkD9v9wpt8O5/q9wWsiZa34xleLhL17feQ9i19W2987uymLU1WSwvDsqWeJHUkzKMC6GKITRsOKlnmC5XA==",
+    "signatures": [
+     {
+      "sig": "MEQCIHAEt5SAyLAQO9dNV7wW6EIvkEnwCqob9DVCTQmfVrSXAiA6NmoLASoMFbtnneCvmELF4odRPii+uwV0c9B9E2i3lQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "engines": {
+    "node": ">= 0.1.98"
+   },
+   "scripts": {
+    "test": "make test"
+   },
+   "_npmVersion": "0.2.7-2",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "lib": "./lib/express"
+   },
+   "_nodeVersion": "v0.3.1-pre",
+   "_nodeSupported": true
+  },
+  "1.0.0-rc4": {
+   "name": "express",
+   "version": "1.0.0-rc4",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@1.0.0-rc4",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "c5363c021717c02728c692fedc632cac9a869160",
+    "tarball": "http://localhost:3000/express/-/express-1.0.0rc4.tgz",
+    "integrity": "sha512-OgxMiewmSH12ZIQyCU9183l6B/sn1Z/aF78Mi60T8j7nu+ReXNGLhxZ5aRjQBmVSEJ7thWzFJYF4oOJx9KpJKA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDV+ckhXWsXKBbrSOaGn6eZgC+Mxg9BKtnflruRGaTO9AIgILrMPN583XoniXzjdADf36yH31WEfUYucgvxesAPraA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "engines": {
+    "node": ">= 0.2.0"
+   },
+   "scripts": {
+    "test": "make test"
+   },
+   "_npmVersion": "0.2.7-2",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "lib": "./lib/express"
+   },
+   "_nodeVersion": "v0.3.1-pre",
+   "dependencies": {
+    "connect": ">= 0.2.6"
+   },
+   "_nodeSupported": true
+  },
+  "2.0.0-beta3": {
+   "name": "express",
+   "version": "2.0.0-beta3",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@2.0.0-beta3",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "f9c1324023729c4eb96688023e989fe2f8565c61",
+    "tarball": "http://localhost:3000/express/-/express-2.0.0beta3.tgz",
+    "integrity": "sha512-dZoDukf5t2VJTsTBicHDLHRTLre3A3w6PV/epzw8Kkx2JJVc9dbbIRd1vfDd5zYXhP66tdPk1UmfBiipb5MdjA==",
+    "signatures": [
+     {
+      "sig": "MEUCIHct6bgiPwGMyp4KXWepm5kkMfbGUZ8VYLSMWOKNthEmAiEAo3krZXqn4DkQ3R5xY+HFEZHWxF4cGYIxkbUUpXDf2y8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "files": [
+    ""
+   ],
+   "engines": {
+    "node": ">= 0.4.1 < 0.5.0"
+   },
+   "_npmVersion": "0.3.15",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+   },
+   "_nodeVersion": "v0.4.2",
+   "dependencies": {
+    "qs": ">= 0.0.6",
+    "mime": ">= 0.0.1",
+    "connect": ">= 1.0.1 < 2.0.0"
+   },
+   "_defaultsLoaded": true,
+   "_engineSupported": true
+  },
+  "2.0.0-rc": {
+   "name": "express",
+   "version": "2.0.0-rc",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@2.0.0-rc",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "6d3da0301b6cdce94ee437ae40ae6c8c7f5d7ccf",
+    "tarball": "http://localhost:3000/express/-/express-2.0.0rc.tgz",
+    "integrity": "sha512-fQCbCn5TveLwoBOa54pyhOh8W7siaLL6VqE2XJMRuXbsnb5K2M9rrrpTwnlfBA0OZ8eRV9K4Wbbc5ZEk6mVQCg==",
+    "signatures": [
+     {
+      "sig": "MEUCIE6vhm+XWwDlkDkAZcvVrM9Y3kICKzSpitN04todUE5QAiEAxpxcQzLXafEwLHODx5RIGutqzGtBrUht3V3MSau0tzA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "files": [
+    ""
+   ],
+   "engines": {
+    "node": ">= 0.4.1 < 0.5.0"
+   },
+   "_npmVersion": "0.3.15",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+   },
+   "_nodeVersion": "v0.4.2",
+   "dependencies": {
+    "qs": ">= 0.0.6",
+    "mime": ">= 0.0.1",
+    "connect": ">= 1.0.1 < 2.0.0"
+   },
+   "_defaultsLoaded": true,
+   "_engineSupported": true
+  },
+  "2.0.0-beta2": {
+   "name": "express",
+   "version": "2.0.0-beta2",
+   "keywords": [
+    "framework",
+    "sinatra",
+    "web",
+    "rest",
+    "restful"
+   ],
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "_id": "express@2.0.0-beta2",
+   "contributors": [
+    {
+     "name": "TJ Holowaychuk",
+     "email": "tj@vision-media.ca"
+    },
+    {
+     "name": "Aaron Heckmann",
+     "email": "aaron.heckmann+github@gmail.com"
+    },
+    {
+     "name": "Ciaran Jessup",
+     "email": "ciaranj@gmail.com"
+    },
+    {
+     "name": "Guillermo Rauch",
+     "email": "rauchg@gmail.com"
+    }
+   ],
+   "bin": {
+    "express": "./bin/express"
+   },
+   "dist": {
+    "shasum": "274e49af300145688e87ed2f5c5e59f6e26af135",
+    "tarball": "http://localhost:3000/express/-/express-2.0.0beta2.tgz",
+    "integrity": "sha512-5X6MJse/UhJ8XJ/htQmTLQjuWMyjnthhB+dApMpUXpmk7zO7jg3DSDVxg+on/CYOcYdoZnX7tjdd90P2zu468g==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCVUNMHZ5LVu7+XTkwMtsjAZyXJ72GDm9A96VDBrW+NcwIgTAjY2LV3INk958BFUV31EIZzyMXJfhRVSa2Vx3nPfqM=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "index",
+   "files": [
+    ""
+   ],
+   "engines": {
+    "node": ">= 0.4.1 < 0.5.0"
+   },
+   "_npmVersion": "0.3.15",
+   "description": "Sinatra inspired web development framework",
+   "directories": {
+    "bin": "./bin",
+    "lib": "./lib"
+   },
+   "_nodeVersion": "v0.4.1",
+   "dependencies": {
+    "qs": ">= 0.0.6",
+    "mime": ">= 0.0.1",
+    "connect": ">= 1.0.1 < 2.0.0"
+   },
+   "_defaultsLoaded": true,
+   "_engineSupported": true
   },
   "3.3.7": {
    "name": "express",
@@ -36459,17 +36459,17 @@
  },
  "time": {
   "created": "2010-12-29T19:38:25.450Z",
-  "modified": "2024-12-06T07:44:28.229Z",
-  "1.0.0beta2": "2010-12-29T19:38:25.450Z",
-  "1.0.0rc2": "2010-12-29T19:38:25.450Z",
-  "0.14.0": "2010-12-29T19:38:25.450Z",
+  "modified": "2025-01-22T13:27:54.861Z",
+  "1.0.1": "2010-12-29T19:38:25.450Z",
   "1.0.0rc4": "2010-12-29T19:38:25.450Z",
   "1.0.0rc3": "2010-12-29T19:38:25.450Z",
-  "0.14.1": "2010-12-29T19:38:25.450Z",
+  "0.14.0": "2010-12-29T19:38:25.450Z",
   "1.0.0": "2010-12-29T19:38:25.450Z",
-  "1.0.0beta": "2010-12-29T19:38:25.450Z",
-  "1.0.1": "2010-12-29T19:38:25.450Z",
+  "0.14.1": "2010-12-29T19:38:25.450Z",
   "1.0.0rc": "2010-12-29T19:38:25.450Z",
+  "1.0.0rc2": "2010-12-29T19:38:25.450Z",
+  "1.0.0beta2": "2010-12-29T19:38:25.450Z",
+  "1.0.0beta": "2010-12-29T19:38:25.450Z",
   "1.0.2": "2011-01-11T02:09:30.004Z",
   "1.0.3": "2011-01-13T22:09:07.840Z",
   "1.0.4": "2011-02-05T19:13:15.043Z",
@@ -36564,34 +36564,34 @@
   "3.3.4": "2013-07-08T21:42:52.735Z",
   "3.3.5": "2013-08-10T21:51:21.087Z",
   "3.3.6": "2013-08-27T20:49:22.441Z",
-  "3.0.0-rc2": "2013-08-28T17:04:36.588Z",
-  "3.0.0-alpha3": "2013-08-28T17:04:36.588Z",
-  "3.0.0-alpha2": "2013-08-28T17:04:36.588Z",
-  "2.0.0-beta2": "2013-08-28T17:04:36.588Z",
-  "2.0.0-rc2": "2013-08-28T17:04:36.588Z",
-  "3.0.0-beta2": "2013-08-28T17:04:36.588Z",
-  "2.0.0-rc3": "2013-08-28T17:04:36.588Z",
-  "3.0.0-alpha4": "2013-08-28T17:04:36.588Z",
-  "3.0.0-rc4": "2013-08-28T17:04:36.588Z",
-  "1.0.0-rc2": "2013-08-28T17:04:36.588Z",
-  "2.0.0-rc": "2013-08-28T17:04:36.588Z",
-  "3.0.0-beta4": "2013-08-28T17:04:36.588Z",
-  "2.0.0-beta3": "2013-08-28T17:04:36.588Z",
-  "3.0.0-rc1": "2013-08-28T17:04:36.588Z",
-  "3.0.0-beta3": "2013-08-28T17:04:36.588Z",
-  "2.0.0-beta": "2013-08-28T17:04:36.588Z",
-  "3.0.0-alpha5": "2013-08-28T17:04:36.588Z",
   "1.0.0-rc": "2013-08-28T17:04:36.588Z",
-  "1.0.0-rc3": "2013-08-28T17:04:36.588Z",
+  "3.0.0-rc1": "2013-08-28T17:04:36.588Z",
+  "3.0.0-beta4": "2013-08-28T17:04:36.588Z",
+  "3.0.0-alpha2": "2013-08-28T17:04:36.588Z",
+  "3.0.0-alpha3": "2013-08-28T17:04:36.588Z",
+  "3.0.0-rc2": "2013-08-28T17:04:36.588Z",
+  "3.0.0-alpha5": "2013-08-28T17:04:36.588Z",
   "3.0.0-rc3": "2013-08-28T17:04:36.588Z",
-  "1.0.0-beta2": "2013-08-28T17:04:36.588Z",
-  "1.0.0-rc4": "2013-08-28T17:04:36.588Z",
   "3.0.0-beta7": "2013-08-28T17:04:36.588Z",
   "3.0.0-alpha1": "2013-08-28T17:04:36.588Z",
-  "1.0.0-beta": "2013-08-28T17:04:36.588Z",
-  "3.0.0-rc5": "2013-08-28T17:04:36.588Z",
   "3.0.0-beta6": "2013-08-28T17:04:36.588Z",
+  "3.0.0-rc4": "2013-08-28T17:04:36.588Z",
+  "3.0.0-alpha4": "2013-08-28T17:04:36.588Z",
   "3.0.0-beta1": "2013-08-28T17:04:36.588Z",
+  "3.0.0-beta2": "2013-08-28T17:04:36.588Z",
+  "2.0.0-rc3": "2013-08-28T17:04:36.588Z",
+  "1.0.0-rc2": "2013-08-28T17:04:36.588Z",
+  "3.0.0-beta3": "2013-08-28T17:04:36.588Z",
+  "2.0.0-beta": "2013-08-28T17:04:36.588Z",
+  "1.0.0-rc3": "2013-08-28T17:04:36.588Z",
+  "1.0.0-beta2": "2013-08-28T17:04:36.588Z",
+  "3.0.0-rc5": "2013-08-28T17:04:36.588Z",
+  "2.0.0-rc2": "2013-08-28T17:04:36.588Z",
+  "1.0.0-beta": "2013-08-28T17:04:36.588Z",
+  "1.0.0-rc4": "2013-08-28T17:04:36.588Z",
+  "2.0.0-beta3": "2013-08-28T17:04:36.588Z",
+  "2.0.0-rc": "2013-08-28T17:04:36.588Z",
+  "2.0.0-beta2": "2013-08-28T17:04:36.588Z",
   "3.3.7": "2013-08-28T17:04:42.417Z",
   "3.3.8": "2013-09-02T15:01:16.142Z",
   "3.4.0": "2013-09-07T19:25:10.243Z",
@@ -38082,7 +38082,6 @@
   "paazmaya": true,
   "pablaber": true,
   "paeblits": true,
-  "palelion": true,
   "parmentf": true,
   "pddivine": true,
   "pedrozgz": true,
@@ -38393,7 +38392,6 @@
   "markymark": true,
   "mattevigo": true,
   "maxwelldu": true,
-  "mbovbjerg": true,
   "mbrevoort": true,
   "megadrive": true,
   "mistkafka": true,
@@ -38428,6 +38426,7 @@
   "psicodead": true,
   "pwaleczek": true,
   "qinyuhang": true,
+  "quangngdg": true,
   "rackyrose": true,
   "rainrivas": true,
   "raitucarp": true,
@@ -38686,6 +38685,7 @@
   "leonardorb": true,
   "leoribeiro": true,
   "lesterzone": true,
+  "lgill-1304": true,
   "lisafrench": true,
   "liushoukai": true,
   "longbuxu03": true,
@@ -39470,6 +39470,7 @@
   "daniel-lewis-bsc-hons": true,
   "developers-loginradius": true,
   "nguyenvanhoang26041994": true,
-  "jeffersonwilliammachado": true
+  "jeffersonwilliammachado": true,
+  "zudun123": true
  }
 }

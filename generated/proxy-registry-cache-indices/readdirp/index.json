@@ -1,9 +1,9 @@
 {
  "_id": "readdirp",
- "_rev": "115-38a66e534f0af27cf7dccf3fa8a502eb",
+ "_rev": "117-f15a93381ac49863d8348e4783fa89d8",
  "name": "readdirp",
  "dist-tags": {
-  "latest": "4.0.2"
+  "latest": "4.1.1"
  },
  "versions": {
   "0.1.0": {
@@ -3663,8 +3663,251 @@
   },
   "4.0.2": {
    "name": "readdirp",
-   "description": "Recursive version of fs.readdir with streaming API.",
    "version": "4.0.2",
+   "keywords": [
+    "recursive",
+    "fs",
+    "stream",
+    "streams",
+    "readdir",
+    "filesystem",
+    "find",
+    "filter"
+   ],
+   "author": {
+    "url": "thlorenz.com",
+    "name": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de"
+   },
+   "license": "MIT",
+   "_id": "readdirp@4.0.2",
+   "maintainers": [
+    {
+     "name": "paulmillr",
+     "email": "paul@paulmillr.com"
+    },
+    {
+     "name": "thlorenz",
+     "email": "thlorenz10@gmail.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "thlorenz.com",
+     "name": "Thorsten Lorenz",
+     "email": "thlorenz@gmx.de"
+    },
+    {
+     "url": "https://paulmillr.com",
+     "name": "Paul Miller"
+    }
+   ],
+   "homepage": "https://github.com/paulmillr/readdirp",
+   "bugs": {
+    "url": "https://github.com/paulmillr/readdirp/issues"
+   },
+   "nyc": {
+    "reporter": [
+     "html",
+     "text"
+    ]
+   },
+   "dist": {
+    "shasum": "388fccb8b75665da3abffe2d8f8ed59fe74c230a",
+    "tarball": "http://localhost:3000/readdirp/-/readdirp-4.0.2.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-yDMz9g+VaZkqBYS/ozoBJwaBhTbZo3UNYQHNRw1D3UFQB8oHB4uS/tAODO+ZLjGWmUbKnIlOWO+aaIiAxrUWHA==",
+    "signatures": [
+     {
+      "sig": "MEUCIAvq5GJPHpgS+otEhGDL7E1gh6OqfXGJH3boDg7KG5bGAiEAxCb90QplQU9xdL7IJSygVC1VFRHE/5xFVsP9kKLezQg=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/readdirp@4.0.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 32182
+   },
+   "main": "./index.js",
+   "types": "./index.d.ts",
+   "module": "./esm/index.js",
+   "engines": {
+    "node": ">= 14.16.0"
+   },
+   "exports": {
+    ".": {
+     "import": "./esm/index.js",
+     "require": "./index.js"
+    }
+   },
+   "funding": {
+    "url": "https://paulmillr.com/funding/",
+    "type": "individual"
+   },
+   "gitHead": "367f35f961436e6fd9df18f2c0066ced03b11f8a",
+   "scripts": {
+    "nyc": "nyc",
+    "lint": "prettier --check index.ts",
+    "test": "nyc npm run mocha",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "mocha": "mocha --exit",
+    "format": "prettier --write index.ts"
+   },
+   "_npmUser": {
+    "name": "paulmillr",
+    "email": "paul@paulmillr.com"
+   },
+   "repository": {
+    "url": "git://github.com/paulmillr/readdirp.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "Recursive version of fs.readdir with streaming API.",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "20.17.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "15.0.1",
+    "chai": "4.3.4",
+    "mocha": "10.7.3",
+    "rimraf": "6.0.1",
+    "prettier": "3.1.1",
+    "typescript": "5.5.2",
+    "@types/node": "20.14.8",
+    "chai-subset": "1.6.0",
+    "@paulmillr/jsbt": "0.2.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/readdirp_4.0.2_1727965945803_0.2810957524453961",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "4.1.0": {
+   "name": "readdirp",
+   "version": "4.1.0",
+   "keywords": [
+    "recursive",
+    "fs",
+    "stream",
+    "streams",
+    "readdir",
+    "filesystem",
+    "find",
+    "filter"
+   ],
+   "author": {
+    "url": "thlorenz.com",
+    "name": "Thorsten Lorenz",
+    "email": "thlorenz@gmx.de"
+   },
+   "license": "MIT",
+   "_id": "readdirp@4.1.0",
+   "maintainers": [
+    {
+     "name": "paulmillr",
+     "email": "paul@paulmillr.com"
+    },
+    {
+     "name": "thlorenz",
+     "email": "thlorenz10@gmail.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "thlorenz.com",
+     "name": "Thorsten Lorenz",
+     "email": "thlorenz@gmx.de"
+    },
+    {
+     "url": "https://paulmillr.com",
+     "name": "Paul Miller"
+    }
+   ],
+   "homepage": "https://github.com/paulmillr/readdirp",
+   "bugs": {
+    "url": "https://github.com/paulmillr/readdirp/issues"
+   },
+   "dist": {
+    "shasum": "84f8c468aebc665a83fc423c332894f35e50db49",
+    "tarball": "http://localhost:3000/readdirp/-/readdirp-4.1.0.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-4+hHiVsxlm4OVSNFpAIrOGyGeG9kNLGcLMqvSGL5Rj2NOYBDQiQ6lJRViwAZ80i8SNbY8kCpdjgJy5PNALARew==",
+    "signatures": [
+     {
+      "sig": "MEQCIBNjKIz8PYtETLPe4uO8HgvNBWwnwgzIrhh9KOVn1wNOAiAfiYaIK//a/CBupD6denEKRtrBucI7MTlHAqagJBl1rA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/readdirp@4.1.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 36253
+   },
+   "main": "./index.js",
+   "type": "module",
+   "types": "./index.d.ts",
+   "module": "./esm/index.js",
+   "engines": {
+    "node": ">= 14.18.0"
+   },
+   "exports": {
+    ".": {
+     "import": "./esm/index.js",
+     "require": "./index.js"
+    }
+   },
+   "funding": {
+    "url": "https://paulmillr.com/funding/",
+    "type": "individual"
+   },
+   "gitHead": "3600b8765d6bdc3c20eb4052fdd58930868619bb",
+   "scripts": {
+    "lint": "prettier --check index.ts index.test.js",
+    "test": "node index.test.js",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "format": "prettier --write index.ts index.test.js",
+    "test:coverage": "c8 node index.test.js"
+   },
+   "_npmUser": {
+    "name": "paulmillr",
+    "email": "paul@paulmillr.com"
+   },
+   "repository": {
+    "url": "git://github.com/paulmillr/readdirp.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Recursive version of fs.readdir with small RAM & CPU footprint.",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "22.12.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "10.1.3",
+    "chai": "4.3.4",
+    "prettier": "3.1.1",
+    "typescript": "5.5.2",
+    "@types/node": "20.14.8",
+    "chai-subset": "1.6.0",
+    "micro-should": "0.4.0",
+    "@paulmillr/jsbt": "0.2.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/readdirp_4.1.0_1736613032222_0.31533607529239305",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "4.1.1": {
+   "name": "readdirp",
+   "description": "Recursive version of fs.readdir with small RAM & CPU footprint.",
+   "version": "4.1.1",
    "homepage": "https://github.com/paulmillr/readdirp",
    "repository": {
     "type": "git",
@@ -3691,7 +3934,7 @@
     }
    ],
    "engines": {
-    "node": ">= 14.16.0"
+    "node": ">= 14.18.0"
    },
    "main": "./index.js",
    "module": "./esm/index.js",
@@ -3715,45 +3958,37 @@
    ],
    "scripts": {
     "build": "tsc && tsc -p tsconfig.esm.json",
-    "nyc": "nyc",
-    "mocha": "mocha --exit",
-    "lint": "prettier --check index.ts",
-    "format": "prettier --write index.ts",
-    "test": "nyc npm run mocha"
+    "lint": "prettier --check index.ts test/index.test.js",
+    "format": "prettier --write index.ts test/index.test.js",
+    "test": "node test/index.test.js",
+    "test:coverage": "c8 node test/index.test.js"
    },
    "devDependencies": {
     "@paulmillr/jsbt": "0.2.1",
     "@types/node": "20.14.8",
+    "c8": "10.1.3",
     "chai": "4.3.4",
     "chai-subset": "1.6.0",
-    "mocha": "10.7.3",
-    "nyc": "15.0.1",
+    "micro-should": "0.4.0",
     "prettier": "3.1.1",
-    "rimraf": "6.0.1",
     "typescript": "5.5.2"
-   },
-   "nyc": {
-    "reporter": [
-     "html",
-     "text"
-    ]
    },
    "funding": {
     "type": "individual",
     "url": "https://paulmillr.com/funding/"
    },
-   "_id": "readdirp@4.0.2",
-   "gitHead": "367f35f961436e6fd9df18f2c0066ced03b11f8a",
-   "_nodeVersion": "20.17.0",
-   "_npmVersion": "10.8.3",
+   "_id": "readdirp@4.1.1",
+   "gitHead": "3dbe87b67c3f7fe7908e8164a29df2b5580f6e53",
+   "_nodeVersion": "22.12.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-yDMz9g+VaZkqBYS/ozoBJwaBhTbZo3UNYQHNRw1D3UFQB8oHB4uS/tAODO+ZLjGWmUbKnIlOWO+aaIiAxrUWHA==",
-    "shasum": "388fccb8b75665da3abffe2d8f8ed59fe74c230a",
-    "tarball": "http://localhost:3000/readdirp/-/readdirp-4.0.2.tgz",
+    "integrity": "sha512-h80JrZu/MHUZCyHu5ciuoI0+WxsCxzxJTILn6Fs8rxSnFPh+UVHYfeIxK1nVGugMqkfC4vJcBOYbkfkwYK0+gw==",
+    "shasum": "bd115327129672dc47f87408f05df9bd9ca3ef55",
+    "tarball": "http://localhost:3000/readdirp/-/readdirp-4.1.1.tgz",
     "fileCount": 8,
-    "unpackedSize": 32182,
+    "unpackedSize": 36253,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/readdirp@4.0.2",
+     "url": "http://localhost:3000/-/npm/v1/attestations/readdirp@4.1.1",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -3761,7 +3996,7 @@
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIAvq5GJPHpgS+otEhGDL7E1gh6OqfXGJH3boDg7KG5bGAiEAxCb90QplQU9xdL7IJSygVC1VFRHE/5xFVsP9kKLezQg="
+      "sig": "MEQCIBm4aKY80a6GiV1tSaFs4tVwGkN0ycxy9tGglski8hAfAiAm02Euo2CfXdBkYSkvkFz3NalIyRPm9UvKQEhyLb+C7Q=="
      }
     ]
    },
@@ -3781,15 +4016,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/readdirp_4.0.2_1727965945803_0.2810957524453961"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/readdirp_4.1.1_1736617895445_0.412630955945823"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2012-07-18T11:44:10.802Z",
-  "modified": "2024-10-03T14:32:26.461Z",
+  "modified": "2025-01-11T17:51:36.028Z",
   "0.1.0": "2012-07-18T11:44:11.200Z",
   "0.1.1": "2012-07-18T12:08:10.372Z",
   "0.1.2": "2012-09-13T02:55:04.808Z",
@@ -3832,7 +4067,9 @@
   "3.6.0": "2021-03-14T10:22:31.129Z",
   "4.0.0": "2024-08-25T19:51:30.850Z",
   "4.0.1": "2024-08-25T19:57:37.090Z",
-  "4.0.2": "2024-10-03T14:32:25.960Z"
+  "4.0.2": "2024-10-03T14:32:25.960Z",
+  "4.1.0": "2025-01-11T16:30:32.431Z",
+  "4.1.1": "2025-01-11T17:51:35.641Z"
  },
  "bugs": {
   "url": "https://github.com/paulmillr/readdirp/issues"
@@ -3858,7 +4095,7 @@
   "type": "git",
   "url": "git://github.com/paulmillr/readdirp.git"
  },
- "description": "Recursive version of fs.readdir with streaming API.",
+ "description": "Recursive version of fs.readdir with small RAM & CPU footprint.",
  "contributors": [
   {
    "name": "Thorsten Lorenz",
@@ -3880,7 +4117,7 @@
    "email": "thlorenz10@gmail.com"
   }
  ],
- "readme": "# readdirp [![Weekly downloads](https://img.shields.io/npm/dw/readdirp.svg)](https://github.com/paulmillr/readdirp)\n\nRecursive version of [fs.readdir](https://nodejs.org/api/fs.html#fs_fs_readdir_path_options_callback). Exposes a **stream API** and a **promise API**.\n\nSupports both ESM and common.js.\n\n```sh\nnpm install readdirp\n```\n\n```javascript\n// Use streams to achieve small RAM & CPU footprint.\n// 1) Streams example with for-await.\nimport readdirp from 'readdirp';\nfor await (const entry of readdirp('.')) {\n  const {path} = entry;\n  console.log(`${JSON.stringify({path})}`);\n}\n\n// 2) Streams example, non for-await.\n// Print out all JS files along with their size within the current folder & subfolders.\nimport readdirp from 'readdirp';\nreaddirp('.', {alwaysStat: true, fileFilter: (f) => f.basename.endsWith('.js')})\n  .on('data', (entry) => {\n    const {path, stats: {size}} = entry;\n    console.log(`${JSON.stringify({path, size})}`);\n  })\n  // Optionally call stream.destroy() in `warn()` in order to abort and cause 'close' to be emitted\n  .on('warn', error => console.error('non-fatal error', error))\n  .on('error', error => console.error('fatal error', error))\n  .on('end', () => console.log('done'));\n\n// 3) Promise example. More RAM and CPU than streams / for-await.\nimport { readdirpPromise } from 'readdirp';\nconst files = await readdirpPromise('.');\nconsole.log(files.map(file => file.path));\n\n// Other options.\nimport readdirp from 'readdirp';\nreaddirp('test', {\n  fileFilter: (f) => f.basename.endsWith('.js'),\n  directoryFilter: (d) => d.basename !== '.git',\n  // directoryFilter: (di) => di.basename.length === 9\n  type: 'files_directories',\n  depth: 1\n});\n```\n\n## API\n\n`const stream = readdirp(root[, options])` — **Stream API**\n\n- Reads given root recursively and returns a `stream` of [entry infos](#entryinfo)\n- Optionally can be used like `for await (const entry of stream)` with node.js 10+ (`asyncIterator`).\n- `on('data', (entry) => {})` [entry info](#entryinfo) for every file / dir.\n- `on('warn', (error) => {})` non-fatal `Error` that prevents a file / dir from being processed. Example: inaccessible to the user.\n- `on('error', (error) => {})` fatal `Error` which also ends the stream. Example: illegal options where passed.\n- `on('end')` — we are done. Called when all entries were found and no more will be emitted.\n- `on('close')` — stream is destroyed via `stream.destroy()`.\n  Could be useful if you want to manually abort even on a non fatal error.\n  At that point the stream is no longer `readable` and no more entries, warning or errors are emitted\n- To learn more about streams, consult the very detailed [nodejs streams documentation](https://nodejs.org/api/stream.html)\n  or the [stream-handbook](https://github.com/substack/stream-handbook)\n\n`const entries = await readdirp.promise(root[, options])` — **Promise API**. Returns a list of [entry infos](#entryinfo).\n\nFirst argument is awalys `root`, path in which to start reading and recursing into subdirectories.\n\n### options\n\n- `fileFilter`: filter to include or exclude files\n    - **Function**: a function that takes an entry info as a parameter and returns true to include or false to exclude the entry\n- `directoryFilter`: filter to include/exclude directories found and to recurse into. Directories that do not pass a filter will not be recursed into.\n- `depth: 5`: depth at which to stop recursing even if more subdirectories are found\n- `type: 'files'`: determines if data events on the stream should be emitted for `'files'` (default), `'directories'`, `'files_directories'`, or `'all'`. Setting to `'all'` will also include entries for other types of file descriptors like character devices, unix sockets and named pipes.\n- `alwaysStat: false`: always return `stats` property for every file. Default is `false`, readdirp will return `Dirent` entries. Setting it to `true` can double readdir execution time - use it only when you need file `size`, `mtime` etc. Cannot be enabled on node <10.10.0.\n- `lstat: false`: include symlink entries in the stream along with files. When `true`, `fs.lstat` would be used instead of `fs.stat`\n\n### `EntryInfo`\n\nHas the following properties:\n\n- `path: 'assets/javascripts/react.js'`: path to the file/directory (relative to given root)\n- `fullPath: '/Users/dev/projects/app/assets/javascripts/react.js'`: full path to the file/directory found\n- `basename: 'react.js'`: name of the file/directory\n- `dirent: fs.Dirent`: built-in [dir entry object](https://nodejs.org/api/fs.html#fs_class_fs_dirent) - only with `alwaysStat: false`\n- `stats: fs.Stats`: built in [stat object](https://nodejs.org/api/fs.html#fs_class_fs_stats) - only with `alwaysStat: true`\n\n## Changelog\n\n- 4.0 (Aug 25, 2024) rewritten in typescript, producing hybrid common.js / esm module.\n    - Remove glob support and all dependencies\n    - Make sure you're using `let {readdirp} = require('readdirp')` in common.js\n- 3.5 (Oct 13, 2020) disallows recursive directory-based symlinks.\n  Before, it could have entered infinite loop.\n- 3.4 (Mar 19, 2020) adds support for directory-based symlinks.\n- 3.3 (Dec 6, 2019) stabilizes RAM consumption and enables perf management with `highWaterMark` option. Fixes race conditions related to `for-await` looping.\n- 3.2 (Oct 14, 2019) improves performance by 250% and makes streams implementation more idiomatic.\n- 3.1 (Jul 7, 2019) brings `bigint` support to `stat` output on Windows. This is backwards-incompatible for some cases. Be careful. It you use it incorrectly, you'll see \"TypeError: Cannot mix BigInt and other types, use explicit conversions\".\n- 3.0 brings huge performance improvements and stream backpressure support.\n- Upgrading 2.x to 3.x:\n    - Signature changed from `readdirp(options)` to `readdirp(root, options)`\n    - Replaced callback API with promise API.\n    - Renamed `entryType` option to `type`\n    - Renamed `entryType: 'both'` to `'files_directories'`\n    - `EntryInfo`\n        - Renamed `stat` to `stats`\n            - Emitted only when `alwaysStat: true`\n            - `dirent` is emitted instead of `stats` by default with `alwaysStat: false`\n        - Renamed `name` to `basename`\n        - Removed `parentDir` and `fullParentDir` properties\n- Supported node.js versions:\n    - 4.x: node 14+\n    - 3.x: node 8+\n    - 2.x: node 0.6+\n\n## License\n\nCopyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (<https://paulmillr.com>)\n\nMIT License, see [LICENSE](LICENSE) file.\n",
+ "readme": "# readdirp [![Weekly downloads](https://img.shields.io/npm/dw/readdirp.svg)](https://github.com/paulmillr/readdirp)\n\nRecursive version of fs.readdir. Exposes a **stream API** (with small RAM & CPU footprint) and a **promise API**.\n\n```sh\nnpm install readdirp\njsr add jsr:@paulmillr/readdirp\n```\n\n```javascript\n// Use streams to achieve small RAM & CPU footprint.\n// 1) Streams example with for-await.\nimport readdirp from 'readdirp';\nfor await (const entry of readdirp('.')) {\n  const {path} = entry;\n  console.log(`${JSON.stringify({path})}`);\n}\n\n// 2) Streams example, non for-await.\n// Print out all JS files along with their size within the current folder & subfolders.\nimport readdirp from 'readdirp';\nreaddirp('.', {alwaysStat: true, fileFilter: (f) => f.basename.endsWith('.js')})\n  .on('data', (entry) => {\n    const {path, stats: {size}} = entry;\n    console.log(`${JSON.stringify({path, size})}`);\n  })\n  // Optionally call stream.destroy() in `warn()` in order to abort and cause 'close' to be emitted\n  .on('warn', error => console.error('non-fatal error', error))\n  .on('error', error => console.error('fatal error', error))\n  .on('end', () => console.log('done'));\n\n// 3) Promise example. More RAM and CPU than streams / for-await.\nimport { readdirpPromise } from 'readdirp';\nconst files = await readdirpPromise('.');\nconsole.log(files.map(file => file.path));\n\n// Other options.\nimport readdirp from 'readdirp';\nreaddirp('test', {\n  fileFilter: (f) => f.basename.endsWith('.js'),\n  directoryFilter: (d) => d.basename !== '.git',\n  // directoryFilter: (di) => di.basename.length === 9\n  type: 'files_directories',\n  depth: 1\n});\n```\n\n## API\n\n`const stream = readdirp(root[, options])` — **Stream API**\n\n- Reads given root recursively and returns a `stream` of [entry infos](#entryinfo)\n- Optionally can be used like `for await (const entry of stream)` with node.js 10+ (`asyncIterator`).\n- `on('data', (entry) => {})` [entry info](#entryinfo) for every file / dir.\n- `on('warn', (error) => {})` non-fatal `Error` that prevents a file / dir from being processed. Example: inaccessible to the user.\n- `on('error', (error) => {})` fatal `Error` which also ends the stream. Example: illegal options where passed.\n- `on('end')` — we are done. Called when all entries were found and no more will be emitted.\n- `on('close')` — stream is destroyed via `stream.destroy()`.\n  Could be useful if you want to manually abort even on a non fatal error.\n  At that point the stream is no longer `readable` and no more entries, warning or errors are emitted\n- To learn more about streams, consult the very detailed [nodejs streams documentation](https://nodejs.org/api/stream.html)\n  or the [stream-handbook](https://github.com/substack/stream-handbook)\n\n`const entries = await readdirp.promise(root[, options])` — **Promise API**. Returns a list of [entry infos](#entryinfo).\n\nFirst argument is awalys `root`, path in which to start reading and recursing into subdirectories.\n\n### options\n\n- `fileFilter`: filter to include or exclude files\n    - **Function**: a function that takes an entry info as a parameter and returns true to include or false to exclude the entry\n- `directoryFilter`: filter to include/exclude directories found and to recurse into. Directories that do not pass a filter will not be recursed into.\n- `depth: 5`: depth at which to stop recursing even if more subdirectories are found\n- `type: 'files'`: determines if data events on the stream should be emitted for `'files'` (default), `'directories'`, `'files_directories'`, or `'all'`. Setting to `'all'` will also include entries for other types of file descriptors like character devices, unix sockets and named pipes.\n- `alwaysStat: false`: always return `stats` property for every file. Default is `false`, readdirp will return `Dirent` entries. Setting it to `true` can double readdir execution time - use it only when you need file `size`, `mtime` etc. Cannot be enabled on node <10.10.0.\n- `lstat: false`: include symlink entries in the stream along with files. When `true`, `fs.lstat` would be used instead of `fs.stat`\n\n### `EntryInfo`\n\nHas the following properties:\n\n- `path: 'assets/javascripts/react.js'`: path to the file/directory (relative to given root)\n- `fullPath: '/Users/dev/projects/app/assets/javascripts/react.js'`: full path to the file/directory found\n- `basename: 'react.js'`: name of the file/directory\n- `dirent: fs.Dirent`: built-in [dir entry object](https://nodejs.org/api/fs.html#fs_class_fs_dirent) - only with `alwaysStat: false`\n- `stats: fs.Stats`: built in [stat object](https://nodejs.org/api/fs.html#fs_class_fs_stats) - only with `alwaysStat: true`\n\n## Changelog\n\n- 4.0 (Aug 25, 2024) rewritten in typescript, producing hybrid common.js / esm module.\n    - Remove glob support and all dependencies\n    - Make sure you're using `let {readdirp} = require('readdirp')` in common.js\n- 3.5 (Oct 13, 2020) disallows recursive directory-based symlinks.\n  Before, it could have entered infinite loop.\n- 3.4 (Mar 19, 2020) adds support for directory-based symlinks.\n- 3.3 (Dec 6, 2019) stabilizes RAM consumption and enables perf management with `highWaterMark` option. Fixes race conditions related to `for-await` looping.\n- 3.2 (Oct 14, 2019) improves performance by 250% and makes streams implementation more idiomatic.\n- 3.1 (Jul 7, 2019) brings `bigint` support to `stat` output on Windows. This is backwards-incompatible for some cases. Be careful. It you use it incorrectly, you'll see \"TypeError: Cannot mix BigInt and other types, use explicit conversions\".\n- 3.0 brings huge performance improvements and stream backpressure support.\n- Upgrading 2.x to 3.x:\n    - Signature changed from `readdirp(options)` to `readdirp(root, options)`\n    - Replaced callback API with promise API.\n    - Renamed `entryType` option to `type`\n    - Renamed `entryType: 'both'` to `'files_directories'`\n    - `EntryInfo`\n        - Renamed `stat` to `stats`\n            - Emitted only when `alwaysStat: true`\n            - `dirent` is emitted instead of `stats` by default with `alwaysStat: false`\n        - Renamed `name` to `basename`\n        - Removed `parentDir` and `fullParentDir` properties\n- Supported node.js versions:\n    - 4.x: node 14+\n    - 3.x: node 8+\n    - 2.x: node 0.6+\n\n## License\n\nCopyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (<https://paulmillr.com>)\n\nMIT License, see [LICENSE](LICENSE) file.\n",
  "readmeFilename": "README.md",
  "users": {
   "hr.": true,

@@ -1,9 +1,9 @@
 {
  "_id": "@ungap/structured-clone",
- "_rev": "22-4130adc92cea79154b46b28989c1bb40",
+ "_rev": "23-3bcaac954ea21e29185b48d3ed922489",
  "name": "@ungap/structured-clone",
  "dist-tags": {
-  "latest": "1.2.1"
+  "latest": "1.3.0"
  },
  "versions": {
   "0.0.0": {
@@ -1647,6 +1647,94 @@
   "1.2.1": {
    "name": "@ungap/structured-clone",
    "version": "1.2.1",
+   "keywords": [
+    "recursion",
+    "structured",
+    "clone",
+    "algorithm"
+   ],
+   "author": {
+    "name": "Andrea Giammarchi"
+   },
+   "license": "ISC",
+   "_id": "@ungap/structured-clone@1.2.1",
+   "maintainers": [
+    {
+     "name": "webreflection",
+     "email": "andrea.giammarchi@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/ungap/structured-clone#readme",
+   "bugs": {
+    "url": "https://github.com/ungap/structured-clone/issues"
+   },
+   "dist": {
+    "shasum": "28fa185f67daaf7b7a1a8c1d445132c5d979f8bd",
+    "tarball": "http://localhost:3000/@ungap/structured-clone/-/structured-clone-1.2.1.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-fEzPV3hSkSMltkw152tJKNARhOupqbH96MZWyRjNaYZOMIzbrTeQDG+MTc6Mr2pgzFQzFxAfmhGDNP5QK++2ZA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCeKp2GCUfGmuVvRBEDWnUhqbuarn5Nq2jgMf14GlDwIgIgO8qsLNOrXSdvmMcqvw5Yl969pCAswfNGhPQ+PR+5FsM=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 26225
+   },
+   "main": "./cjs/index.js",
+   "type": "module",
+   "module": "./esm/index.js",
+   "exports": {
+    ".": {
+     "import": "./esm/index.js",
+     "default": "./cjs/index.js"
+    },
+    "./json": {
+     "import": "./esm/json.js",
+     "default": "./cjs/json.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "gitHead": "1a255c58e32387d03c95574ee9d2f4dc89a06061",
+   "scripts": {
+    "cjs": "ascjs esm cjs",
+    "test": "c8 node test/index.js",
+    "build": "npm run cjs && npm run rollup:json && npm run test",
+    "coverage": "c8 report --reporter=text-lcov > ./coverage/lcov.info",
+    "rollup:json": "rollup --config rollup/json.config.js"
+   },
+   "_npmUser": {
+    "name": "webreflection",
+    "email": "andrea.giammarchi@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/ungap/structured-clone.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "A structuredClone polyfill",
+   "directories": {
+    "test": "test"
+   },
+   "sideEffects": false,
+   "_nodeVersion": "23.1.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "^10.1.2",
+    "ascjs": "^6.0.3",
+    "rollup": "^4.28.1",
+    "coveralls": "^3.1.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-node-resolve": "^15.3.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/structured-clone_1.2.1_1733603946084_0.9680224301233455",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.3.0": {
+   "name": "@ungap/structured-clone",
+   "version": "1.3.0",
    "description": "A structuredClone polyfill",
    "main": "./cjs/index.js",
    "scripts": {
@@ -1667,12 +1755,12 @@
    },
    "license": "ISC",
    "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "ascjs": "^6.0.3",
-    "c8": "^10.1.2",
+    "c8": "^10.1.3",
     "coveralls": "^3.1.1",
-    "rollup": "^4.28.1"
+    "rollup": "^4.31.0"
    },
    "module": "./esm/index.js",
    "type": "module",
@@ -1699,20 +1787,20 @@
     "url": "https://github.com/ungap/structured-clone/issues"
    },
    "homepage": "https://github.com/ungap/structured-clone#readme",
-   "_id": "@ungap/structured-clone@1.2.1",
-   "gitHead": "1a255c58e32387d03c95574ee9d2f4dc89a06061",
-   "_nodeVersion": "23.1.0",
-   "_npmVersion": "10.9.0",
+   "_id": "@ungap/structured-clone@1.3.0",
+   "gitHead": "4a9d039fd266495f8b9e5485f73747ef3ea46d85",
+   "_nodeVersion": "23.4.0",
+   "_npmVersion": "11.0.0",
    "dist": {
-    "integrity": "sha512-fEzPV3hSkSMltkw152tJKNARhOupqbH96MZWyRjNaYZOMIzbrTeQDG+MTc6Mr2pgzFQzFxAfmhGDNP5QK++2ZA==",
-    "shasum": "28fa185f67daaf7b7a1a8c1d445132c5d979f8bd",
-    "tarball": "http://localhost:3000/@ungap/structured-clone/-/structured-clone-1.2.1.tgz",
+    "integrity": "sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==",
+    "shasum": "d06bbb384ebcf6c505fde1c3d0ed4ddffe0aaff8",
+    "tarball": "http://localhost:3000/@ungap/structured-clone/-/structured-clone-1.3.0.tgz",
     "fileCount": 16,
-    "unpackedSize": 26225,
+    "unpackedSize": 27500,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCeKp2GCUfGmuVvRBEDWnUhqbuarn5Nq2jgMf14GlDwIgIgO8qsLNOrXSdvmMcqvw5Yl969pCAswfNGhPQ+PR+5FsM="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIQCaTsLP4LRQckcG2yWkqL8loMo9rHn3Xv/HFtejcgv8BQIgZqDhFOn28YVncgPqusCYohmtSiGVcFDikfRQEqCwXAo="
      }
     ]
    },
@@ -1727,15 +1815,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/structured-clone_1.2.1_1733603946084_0.9680224301233455"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/structured-clone_1.3.0_1737641581069_0.6700397134620162"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2021-10-29T18:41:57.090Z",
-  "modified": "2024-12-07T20:39:06.478Z",
+  "modified": "2025-01-23T14:13:01.460Z",
   "0.0.0": "2021-10-29T18:41:57.277Z",
   "0.0.1": "2021-10-29T18:48:36.009Z",
   "0.0.2": "2021-10-29T19:52:10.822Z",
@@ -1756,7 +1844,8 @@
   "1.1.1": "2023-05-03T12:55:29.726Z",
   "1.1.2": "2023-05-03T13:13:53.464Z",
   "1.2.0": "2023-05-04T08:22:20.434Z",
-  "1.2.1": "2024-12-07T20:39:06.273Z"
+  "1.2.1": "2024-12-07T20:39:06.273Z",
+  "1.3.0": "2025-01-23T14:13:01.275Z"
  },
  "bugs": {
   "url": "https://github.com/ungap/structured-clone/issues"
@@ -1783,6 +1872,6 @@
    "email": "andrea.giammarchi@gmail.com"
   }
  ],
- "readme": "# structuredClone polyfill\n\n[![Downloads](https://img.shields.io/npm/dm/@ungap/structured-clone.svg)](https://www.npmjs.com/package/@ungap/structured-clone) [![build status](https://github.com/ungap/structured-clone/actions/workflows/node.js.yml/badge.svg)](https://github.com/ungap/structured-clone/actions) [![Coverage Status](https://coveralls.io/repos/github/ungap/structured-clone/badge.svg?branch=main)](https://coveralls.io/github/ungap/structured-clone?branch=main)\n\nAn env agnostic serializer and deserializer with recursion ability and types beyond *JSON* from the *HTML* standard itself.\n\n  * [Supported Types](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)\n    * *not supported yet*: Blob, File, FileList, ImageBitmap, ImageData, and ArrayBuffer, but typed arrays are supported without major issues, but u/int8, u/int16, and u/int32 are the only safely suppored (right now).\n    * *not possible to implement*: the `{transfer: []}` option can be passed but it's completely ignored.\n  * [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone)\n  * [Serializer](https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeinternal)\n  * [Deserializer](https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize)\n\nSerialized values can be safely stringified as *JSON* too, and deserialization resurrect all values, even recursive, or more complex than what *JSON* allows.\n\n\n### Examples\n\nCheck the [100% test coverage](./test/index.js) to know even more.\n\n```js\n// as default export\nimport structuredClone from '@ungap/structured-clone';\nconst cloned = structuredClone({any: 'serializable'});\n\n// as independent serializer/deserializer\nimport {serialize, deserialize} from '@ungap/structured-clone';\n\n// the result can be stringified as JSON without issues\n// even if there is recursive data, bigint values,\n// typed arrays, and so on\nconst serialized = serialize({any: 'serializable'});\n\n// the result will be a replica of the original object\nconst deserialized = deserialize(serialized);\n```\n\n#### Global Polyfill\nNote: Only monkey patch the global if needed. This polyfill works just fine as an explicit import: `import structuredClone from \"@ungap/structured-clone\"`\n```js\n// Attach the polyfill as a Global function\nimport structuredClone from \"@ungap/structured-clone\";\nif (!(\"structuredClone\" in globalThis)) {\n  globalThis.structuredClone = structuredClone;\n}\n\n// Or don't monkey patch\nimport structuredClone from \"@ungap/structured-clone\"\n// Just use it in the file\nstructuredClone()\n```\n\n**Note**: Do not attach this module's default export directly to the global scope, whithout a conditional guard to detect a native implementation. In environments where there is a native global implementation of `structuredClone()` already, assignment to the global object will result in an infinite loop when `globalThis.structuredClone()` is called. See the example above for a safe way to provide the polyfill globally in your project.\n\n### Extra Features\n\nThere is no middle-ground between the structured clone algorithm and JSON:\n\n  * JSON is more relaxed about incompatible values: it just ignores these\n  * Structured clone is inflexible regarding incompatible values, yet it makes specialized instances impossible to reconstruct, plus it doesn't offer any helper, such as `toJSON()`, to make serialization possible, or better, with specific cases\n\nThis module specialized `serialize` export offers, within the optional extra argument, a **lossy** property to avoid throwing when incompatible types are found down the road (function, symbol, ...), so that it is possible to send with less worrying about thrown errors.\n\n```js\n// as default export\nimport structuredClone from '@ungap/structured-clone';\nconst cloned = structuredClone(\n  {\n    method() {\n      // ignored, won't be cloned\n    },\n    special: Symbol('also ignored')\n  },\n  {\n    // avoid throwing\n    lossy: true,\n    // avoid throwing *and* looks for toJSON\n    json: true\n  }\n);\n```\n\nThe behavior is the same found in *JSON* when it comes to *Array*, so that unsupported values will result as `null` placeholders instead.\n\n#### toJSON\n\nIf `lossy` option is not enough, `json` will actually enforce `lossy` and also check for `toJSON` method when objects are parsed.\n\nAlternative, the `json` exports combines all features:\n\n```js\nimport {stringify, parse} from '@ungap/structured-clone/json';\n\nparse(stringify({any: 'serializable'}));\n```\n",
+ "readme": "# structuredClone polyfill\n\n[![Downloads](https://img.shields.io/npm/dm/@ungap/structured-clone.svg)](https://www.npmjs.com/package/@ungap/structured-clone) [![build status](https://github.com/ungap/structured-clone/actions/workflows/node.js.yml/badge.svg)](https://github.com/ungap/structured-clone/actions) [![Coverage Status](https://coveralls.io/repos/github/ungap/structured-clone/badge.svg?branch=main)](https://coveralls.io/github/ungap/structured-clone?branch=main)\n\nAn env agnostic serializer and deserializer with recursion ability and types beyond *JSON* from the *HTML* standard itself.\n\n  * [Supported Types](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#supported_types)\n    * *not supported yet*: Blob, File, FileList, ImageBitmap, ImageData or others non *JS* types but typed arrays are supported without major issues, but u/int8, u/int16, and u/int32 are the only safely suppored (right now).\n    * *not possible to implement*: the `{transfer: []}` option can be passed but it's completely ignored.\n  * [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/structuredClone)\n  * [Serializer](https://html.spec.whatwg.org/multipage/structured-data.html#structuredserializeinternal)\n  * [Deserializer](https://html.spec.whatwg.org/multipage/structured-data.html#structureddeserialize)\n\nSerialized values can be safely stringified as *JSON* too, and deserialization resurrect all values, even recursive, or more complex than what *JSON* allows.\n\n\n### Examples\n\nCheck the [100% test coverage](./test/index.js) to know even more.\n\n```js\n// as default export\nimport structuredClone from '@ungap/structured-clone';\nconst cloned = structuredClone({any: 'serializable'});\n\n// as independent serializer/deserializer\nimport {serialize, deserialize} from '@ungap/structured-clone';\n\n// the result can be stringified as JSON without issues\n// even if there is recursive data, bigint values,\n// typed arrays, and so on\nconst serialized = serialize({any: 'serializable'});\n\n// the result will be a replica of the original object\nconst deserialized = deserialize(serialized);\n```\n\n#### Global Polyfill\nNote: Only monkey patch the global if needed. This polyfill works just fine as an explicit import: `import structuredClone from \"@ungap/structured-clone\"`\n```js\n// Attach the polyfill as a Global function\nimport structuredClone from \"@ungap/structured-clone\";\nif (!(\"structuredClone\" in globalThis)) {\n  globalThis.structuredClone = structuredClone;\n}\n\n// Or don't monkey patch\nimport structuredClone from \"@ungap/structured-clone\"\n// Just use it in the file\nstructuredClone()\n```\n\n**Note**: Do not attach this module's default export directly to the global scope, whithout a conditional guard to detect a native implementation. In environments where there is a native global implementation of `structuredClone()` already, assignment to the global object will result in an infinite loop when `globalThis.structuredClone()` is called. See the example above for a safe way to provide the polyfill globally in your project.\n\n### Extra Features\n\nThere is no middle-ground between the structured clone algorithm and JSON:\n\n  * JSON is more relaxed about incompatible values: it just ignores these\n  * Structured clone is inflexible regarding incompatible values, yet it makes specialized instances impossible to reconstruct, plus it doesn't offer any helper, such as `toJSON()`, to make serialization possible, or better, with specific cases\n\nThis module specialized `serialize` export offers, within the optional extra argument, a **lossy** property to avoid throwing when incompatible types are found down the road (function, symbol, ...), so that it is possible to send with less worrying about thrown errors.\n\n```js\n// as default export\nimport structuredClone from '@ungap/structured-clone';\nconst cloned = structuredClone(\n  {\n    method() {\n      // ignored, won't be cloned\n    },\n    special: Symbol('also ignored')\n  },\n  {\n    // avoid throwing\n    lossy: true,\n    // avoid throwing *and* looks for toJSON\n    json: true\n  }\n);\n```\n\nThe behavior is the same found in *JSON* when it comes to *Array*, so that unsupported values will result as `null` placeholders instead.\n\n#### toJSON\n\nIf `lossy` option is not enough, `json` will actually enforce `lossy` and also check for `toJSON` method when objects are parsed.\n\nAlternative, the `json` exports combines all features:\n\n```js\nimport {stringify, parse} from '@ungap/structured-clone/json';\n\nparse(stringify({any: 'serializable'}));\n```\n",
  "readmeFilename": "README.md"
 }
