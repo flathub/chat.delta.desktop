@@ -1,6 +1,6 @@
 {
  "_id": "finalhandler",
- "_rev": "88-b9cc6f1e9cdba9db7778c6ab9ac4afd1",
+ "_rev": "89-7441e507ce80ce9c9cf6eb7285c16bed",
  "name": "finalhandler",
  "dist-tags": {
   "next": "2.0.0",
@@ -2605,76 +2605,13 @@
   },
   "1.3.1": {
    "name": "finalhandler",
-   "description": "Node.js final http responder",
    "version": "1.3.1",
    "author": {
     "name": "Douglas Christopher Wilson",
     "email": "doug@somethingdoug.com"
    },
    "license": "MIT",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pillarjs/finalhandler.git"
-   },
-   "dependencies": {
-    "debug": "2.6.9",
-    "encodeurl": "~2.0.0",
-    "escape-html": "~1.0.3",
-    "on-finished": "2.4.1",
-    "parseurl": "~1.3.3",
-    "statuses": "2.0.1",
-    "unpipe": "~1.0.0"
-   },
-   "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-standard": "14.1.1",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-markdown": "2.2.1",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.2.0",
-    "eslint-plugin-standard": "4.1.0",
-    "mocha": "10.0.0",
-    "nyc": "15.1.0",
-    "readable-stream": "2.3.6",
-    "safe-buffer": "5.2.1",
-    "supertest": "6.2.4"
-   },
-   "engines": {
-    "node": ">= 0.8"
-   },
-   "scripts": {
-    "lint": "eslint .",
-    "test": "mocha --reporter spec --check-leaks test/",
-    "test-ci": "nyc --reporter=lcovonly --reporter=text npm test",
-    "test-cov": "nyc --reporter=html --reporter=text npm test",
-    "test-inspect": "mocha --reporter spec --inspect --inspect-brk test/"
-   },
    "_id": "finalhandler@1.3.1",
-   "gitHead": "fbbe1da05b22331a24e7eb8d891b447dfd8f7cf1",
-   "bugs": {
-    "url": "https://github.com/pillarjs/finalhandler/issues"
-   },
-   "homepage": "https://github.com/pillarjs/finalhandler#readme",
-   "_nodeVersion": "22.2.0",
-   "_npmVersion": "10.7.0",
-   "dist": {
-    "integrity": "sha512-6BN9trH7bp3qvnrRyzsBz+g3lZxTNZTbVO2EV1CS0WIcDbawYVdYvGflME/9QP0h0pYlCDBCTjYa9nZzMDpyxQ==",
-    "shasum": "0c575f1d1d324ddd1da35ad7ece3df7d19088019",
-    "tarball": "http://localhost:3000/finalhandler/-/finalhandler-1.3.1.tgz",
-    "fileCount": 6,
-    "unpackedSize": 19034,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIE+EO/mk2fLe3N7K3OOcWPOFd6nwxaSD8Of20x9DmgJTAiAiaTR92i7LmC4vR59PUGWFDc7zfYEG//Cx25uyMLsuFQ=="
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "wesleytodd",
-    "email": "wes@wesleytodd.com"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "wesleytodd",
@@ -2685,16 +2622,79 @@
      "email": "doug@somethingdoug.com"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/finalhandler_1.3.1_1726084302565_0.9367007895358868"
+   "homepage": "https://github.com/pillarjs/finalhandler#readme",
+   "bugs": {
+    "url": "https://github.com/pillarjs/finalhandler/issues"
    },
-   "_hasShrinkwrap": false
+   "dist": {
+    "shasum": "0c575f1d1d324ddd1da35ad7ece3df7d19088019",
+    "tarball": "http://localhost:3000/finalhandler/-/finalhandler-1.3.1.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-6BN9trH7bp3qvnrRyzsBz+g3lZxTNZTbVO2EV1CS0WIcDbawYVdYvGflME/9QP0h0pYlCDBCTjYa9nZzMDpyxQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIE+EO/mk2fLe3N7K3OOcWPOFd6nwxaSD8Of20x9DmgJTAiAiaTR92i7LmC4vR59PUGWFDc7zfYEG//Cx25uyMLsuFQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 19034
+   },
+   "engines": {
+    "node": ">= 0.8"
+   },
+   "gitHead": "fbbe1da05b22331a24e7eb8d891b447dfd8f7cf1",
+   "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec --check-leaks test/",
+    "test-ci": "nyc --reporter=lcovonly --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test",
+    "test-inspect": "mocha --reporter spec --inspect --inspect-brk test/"
+   },
+   "_npmUser": {
+    "name": "wesleytodd",
+    "email": "wes@wesleytodd.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/pillarjs/finalhandler.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "Node.js final http responder",
+   "directories": {},
+   "_nodeVersion": "22.2.0",
+   "dependencies": {
+    "debug": "2.6.9",
+    "unpipe": "~1.0.0",
+    "parseurl": "~1.3.3",
+    "statuses": "2.0.1",
+    "encodeurl": "~2.0.0",
+    "escape-html": "~1.0.3",
+    "on-finished": "2.4.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "15.1.0",
+    "mocha": "10.0.0",
+    "eslint": "7.32.0",
+    "supertest": "6.2.4",
+    "safe-buffer": "5.2.1",
+    "readable-stream": "2.3.6",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-promise": "5.2.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-markdown": "2.2.1",
+    "eslint-plugin-standard": "4.1.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/finalhandler_1.3.1_1726084302565_0.9367007895358868",
+    "host": "s3://npm-registry-packages"
+   }
   }
  },
  "time": {
   "created": "2014-06-06T02:46:23.972Z",
-  "modified": "2024-09-11T19:51:42.937Z",
+  "modified": "2024-12-23T13:11:50.112Z",
   "0.0.0": "2014-06-06T02:46:23.972Z",
   "0.0.1": "2014-06-17T03:16:02.504Z",
   "0.0.2": "2014-06-19T22:45:27.016Z",
@@ -2738,18 +2738,22 @@
  "license": "MIT",
  "homepage": "https://github.com/pillarjs/finalhandler#readme",
  "repository": {
-  "type": "git",
-  "url": "git+https://github.com/pillarjs/finalhandler.git"
+  "url": "git+https://github.com/pillarjs/finalhandler.git",
+  "type": "git"
  },
  "description": "Node.js final http responder",
  "maintainers": [
   {
-   "name": "wesleytodd",
-   "email": "wes@wesleytodd.com"
+   "email": "wes@wesleytodd.com",
+   "name": "wesleytodd"
   },
   {
-   "name": "dougwilson",
-   "email": "doug@somethingdoug.com"
+   "email": "ulisesgascondev@gmail.com",
+   "name": "ulisesgascon"
+  },
+  {
+   "email": "doug@somethingdoug.com",
+   "name": "dougwilson"
   }
  ],
  "readme": "# finalhandler\n\n[![NPM Version][npm-image]][npm-url]\n[![NPM Downloads][downloads-image]][downloads-url]\n[![Node.js Version][node-image]][node-url]\n[![Build Status][github-actions-ci-image]][github-actions-ci-url]\n[![Test Coverage][coveralls-image]][coveralls-url]\n\nNode.js function to invoke as the final step to respond to HTTP request.\n\n## Installation\n\nThis is a [Node.js](https://nodejs.org/en/) module available through the\n[npm registry](https://www.npmjs.com/). Installation is done using the\n[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):\n\n```sh\n$ npm install finalhandler\n```\n\n## API\n\n```js\nvar finalhandler = require('finalhandler')\n```\n\n### finalhandler(req, res, [options])\n\nReturns function to be invoked as the final step for the given `req` and `res`.\nThis function is to be invoked as `fn(err)`. If `err` is falsy, the handler will\nwrite out a 404 response to the `res`. If it is truthy, an error response will\nbe written out to the `res` or `res` will be terminated if a response has already\nstarted.\n\nWhen an error is written, the following information is added to the response:\n\n  * The `res.statusCode` is set from `err.status` (or `err.statusCode`). If\n    this value is outside the 4xx or 5xx range, it will be set to 500.\n  * The `res.statusMessage` is set according to the status code.\n  * The body will be the HTML of the status code message if `env` is\n    `'production'`, otherwise will be `err.stack`.\n  * Any headers specified in an `err.headers` object.\n\nThe final handler will also unpipe anything from `req` when it is invoked.\n\n#### options.env\n\nBy default, the environment is determined by `NODE_ENV` variable, but it can be\noverridden by this option.\n\n#### options.onerror\n\nProvide a function to be called with the `err` when it exists. Can be used for\nwriting errors to a central location without excessive function generation. Called\nas `onerror(err, req, res)`.\n\n## Examples\n\n### always 404\n\n```js\nvar finalhandler = require('finalhandler')\nvar http = require('http')\n\nvar server = http.createServer(function (req, res) {\n  var done = finalhandler(req, res)\n  done()\n})\n\nserver.listen(3000)\n```\n\n### perform simple action\n\n```js\nvar finalhandler = require('finalhandler')\nvar fs = require('fs')\nvar http = require('http')\n\nvar server = http.createServer(function (req, res) {\n  var done = finalhandler(req, res)\n\n  fs.readFile('index.html', function (err, buf) {\n    if (err) return done(err)\n    res.setHeader('Content-Type', 'text/html')\n    res.end(buf)\n  })\n})\n\nserver.listen(3000)\n```\n\n### use with middleware-style functions\n\n```js\nvar finalhandler = require('finalhandler')\nvar http = require('http')\nvar serveStatic = require('serve-static')\n\nvar serve = serveStatic('public')\n\nvar server = http.createServer(function (req, res) {\n  var done = finalhandler(req, res)\n  serve(req, res, done)\n})\n\nserver.listen(3000)\n```\n\n### keep log of all errors\n\n```js\nvar finalhandler = require('finalhandler')\nvar fs = require('fs')\nvar http = require('http')\n\nvar server = http.createServer(function (req, res) {\n  var done = finalhandler(req, res, { onerror: logerror })\n\n  fs.readFile('index.html', function (err, buf) {\n    if (err) return done(err)\n    res.setHeader('Content-Type', 'text/html')\n    res.end(buf)\n  })\n})\n\nserver.listen(3000)\n\nfunction logerror (err) {\n  console.error(err.stack || err.toString())\n}\n```\n\n## License\n\n[MIT](LICENSE)\n\n[npm-image]: https://img.shields.io/npm/v/finalhandler.svg\n[npm-url]: https://npmjs.org/package/finalhandler\n[node-image]: https://img.shields.io/node/v/finalhandler.svg\n[node-url]: https://nodejs.org/en/download\n[coveralls-image]: https://img.shields.io/coveralls/pillarjs/finalhandler.svg\n[coveralls-url]: https://coveralls.io/r/pillarjs/finalhandler?branch=master\n[downloads-image]: https://img.shields.io/npm/dm/finalhandler.svg\n[downloads-url]: https://npmjs.org/package/finalhandler\n[github-actions-ci-image]: https://github.com/pillarjs/finalhandler/actions/workflows/ci.yml/badge.svg\n[github-actions-ci-url]: https://github.com/pillarjs/finalhandler/actions/workflows/ci.yml\n",

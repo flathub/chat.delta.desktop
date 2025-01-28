@@ -1,10 +1,9 @@
 {
  "_id": "p-limit",
- "_rev": "31-0fdd376a50923f7f283f45478c6baa50",
+ "_rev": "32-00ea6c4acd61e57d4535b0b3b7c18289",
  "name": "p-limit",
- "description": "Run multiple promise-returning & async functions with limited concurrency",
  "dist-tags": {
-  "latest": "6.1.0"
+  "latest": "6.2.0"
  },
  "versions": {
   "1.0.0": {
@@ -1535,6 +1534,101 @@
   "6.1.0": {
    "name": "p-limit",
    "version": "6.1.0",
+   "keywords": [
+    "promise",
+    "limit",
+    "limited",
+    "concurrency",
+    "throttle",
+    "throat",
+    "rate",
+    "batch",
+    "ratelimit",
+    "task",
+    "queue",
+    "async",
+    "await",
+    "promises",
+    "bluebird"
+   ],
+   "author": {
+    "url": "https://sindresorhus.com",
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com"
+   },
+   "license": "MIT",
+   "_id": "p-limit@6.1.0",
+   "maintainers": [
+    {
+     "name": "sindresorhus",
+     "email": "sindresorhus@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/sindresorhus/p-limit#readme",
+   "bugs": {
+    "url": "https://github.com/sindresorhus/p-limit/issues"
+   },
+   "dist": {
+    "shasum": "d91f9364d3fdff89b0a45c70d04ad4e0df30a0e8",
+    "tarball": "http://localhost:3000/p-limit/-/p-limit-6.1.0.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-H0jc0q1vOzlEk0TqAKXKZxdl7kX3OFUzCnNVUnq5Pc3DGo0kpeaMuPqxQn235HibwBEb0/pm9dgKTjXy66fBkg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCoW8tbBJRJTan6bOEsfYe7wmTNn/zl4rBqrOkjus5t1AIgGEyAC4D7CKSLCH2lOdaq5sEPBIVMNla9Ts87rrqwA9A=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 8230
+   },
+   "type": "module",
+   "types": "./index.d.ts",
+   "engines": {
+    "node": ">=18"
+   },
+   "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+   },
+   "funding": "https://github.com/sponsors/sindresorhus",
+   "gitHead": "98c8fef5562fabd900dfd9172013962889e13df6",
+   "scripts": {
+    "test": "xo && ava && tsd"
+   },
+   "_npmUser": {
+    "name": "sindresorhus",
+    "email": "sindresorhus@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/sindresorhus/p-limit.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.6.0",
+   "description": "Run multiple promise-returning & async functions with limited concurrency",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "18.20.2",
+   "dependencies": {
+    "yocto-queue": "^1.1.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.58.0",
+    "ava": "^6.1.3",
+    "tsd": "^0.31.1",
+    "delay": "^6.0.0",
+    "in-range": "^3.0.0",
+    "time-span": "^5.1.0",
+    "random-int": "^3.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/p-limit_6.1.0_1720440244518_0.8585718405141409",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "6.2.0": {
+   "name": "p-limit",
+   "version": "6.2.0",
    "description": "Run multiple promise-returning & async functions with limited concurrency",
    "license": "MIT",
    "repository": {
@@ -1588,25 +1682,25 @@
     "tsd": "^0.31.1",
     "xo": "^0.58.0"
    },
-   "_id": "p-limit@6.1.0",
-   "gitHead": "98c8fef5562fabd900dfd9172013962889e13df6",
+   "_id": "p-limit@6.2.0",
+   "gitHead": "7d14b3f04aa990f621a853e24e2a4b796baf1ec9",
    "types": "./index.d.ts",
    "bugs": {
     "url": "https://github.com/sindresorhus/p-limit/issues"
    },
    "homepage": "https://github.com/sindresorhus/p-limit#readme",
-   "_nodeVersion": "18.20.2",
-   "_npmVersion": "10.6.0",
+   "_nodeVersion": "23.3.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-H0jc0q1vOzlEk0TqAKXKZxdl7kX3OFUzCnNVUnq5Pc3DGo0kpeaMuPqxQn235HibwBEb0/pm9dgKTjXy66fBkg==",
-    "shasum": "d91f9364d3fdff89b0a45c70d04ad4e0df30a0e8",
-    "tarball": "http://localhost:3000/p-limit/-/p-limit-6.1.0.tgz",
+    "integrity": "sha512-kuUqqHNUqoIWp/c467RI4X6mmyuojY5jGutNU0wVTmEOOfcuwLqyMVoAi9MKi2Ak+5i9+nhmrK4ufZE8069kHA==",
+    "shasum": "c254d22ba6aeef441a3564c5e6c2f2da59268a0f",
+    "tarball": "http://localhost:3000/p-limit/-/p-limit-6.2.0.tgz",
     "fileCount": 5,
-    "unpackedSize": 8230,
+    "unpackedSize": 10346,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCoW8tbBJRJTan6bOEsfYe7wmTNn/zl4rBqrOkjus5t1AIgGEyAC4D7CKSLCH2lOdaq5sEPBIVMNla9Ts87rrqwA9A="
+      "sig": "MEQCIChD0ByVg/3T5/wvgWX2TMFc3pj1opQbet4p+P8Ba4Q2AiAf66z8PLZGW/yXNt0fuwNAlQNUPGYwYX++jg4/wLim9g=="
      }
     ]
    },
@@ -1622,15 +1716,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/p-limit_6.1.0_1720440244518_0.8585718405141409"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/p-limit_6.2.0_1734623197970_0.6282986687976977"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2016-10-21T07:59:41.638Z",
-  "modified": "2024-07-08T12:04:04.856Z",
+  "modified": "2024-12-19T15:46:38.334Z",
   "1.0.0": "2016-10-21T07:59:41.638Z",
   "1.1.0": "2016-11-21T06:59:47.875Z",
   "1.2.0": "2018-01-04T00:24:17.334Z",
@@ -1648,23 +1742,19 @@
   "4.0.0": "2021-08-12T23:58:23.464Z",
   "5.0.0": "2023-11-01T06:31:04.353Z",
   "6.0.0": "2024-07-04T11:55:53.803Z",
-  "6.1.0": "2024-07-08T12:04:04.684Z"
+  "6.1.0": "2024-07-08T12:04:04.684Z",
+  "6.2.0": "2024-12-19T15:46:38.158Z"
  },
- "maintainers": [
-  {
-   "name": "sindresorhus",
-   "email": "sindresorhus@gmail.com"
-  }
- ],
+ "bugs": {
+  "url": "https://github.com/sindresorhus/p-limit/issues"
+ },
  "author": {
   "name": "Sindre Sorhus",
   "email": "sindresorhus@gmail.com",
   "url": "https://sindresorhus.com"
  },
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/sindresorhus/p-limit.git"
- },
+ "license": "MIT",
+ "homepage": "https://github.com/sindresorhus/p-limit#readme",
  "keywords": [
   "promise",
   "limit",
@@ -1682,12 +1772,18 @@
   "promises",
   "bluebird"
  ],
- "license": "MIT",
- "homepage": "https://github.com/sindresorhus/p-limit#readme",
- "bugs": {
-  "url": "https://github.com/sindresorhus/p-limit/issues"
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/sindresorhus/p-limit.git"
  },
- "readme": "# p-limit\n\n> Run multiple promise-returning & async functions with limited concurrency\n\n*Works in Node.js and browsers.*\n\n## Install\n\n```sh\nnpm install p-limit\n```\n\n## Usage\n\n```js\nimport pLimit from 'p-limit';\n\nconst limit = pLimit(1);\n\nconst input = [\n\tlimit(() => fetchSomething('foo')),\n\tlimit(() => fetchSomething('bar')),\n\tlimit(() => doSomething())\n];\n\n// Only one promise is run at once\nconst result = await Promise.all(input);\nconsole.log(result);\n```\n\n## API\n\n### pLimit(concurrency)\n\nReturns a `limit` function.\n\n#### concurrency\n\nType: `number`\\\nMinimum: `1`\\\nDefault: `Infinity`\n\nConcurrency limit.\n\n### limit(fn, ...args)\n\nReturns the promise returned by calling `fn(...args)`.\n\n#### fn\n\nType: `Function`\n\nPromise-returning/async function.\n\n#### args\n\nAny arguments to pass through to `fn`.\n\nSupport for passing arguments on to the `fn` is provided in order to be able to avoid creating unnecessary closures. You probably don't need this optimization unless you're pushing a *lot* of functions.\n\n### limit.activeCount\n\nThe number of promises that are currently running.\n\n### limit.pendingCount\n\nThe number of promises that are waiting to run (i.e. their internal `fn` was not called yet).\n\n### limit.clearQueue()\n\nDiscard pending promises that are waiting to run.\n\nThis might be useful if you want to teardown the queue at the end of your program's lifecycle or discard any function calls referencing an intermediary state of your app.\n\nNote: This does not cancel promises that are already running.\n\n### limit.concurrency\n\nGet or set the concurrency limit.\n\n## FAQ\n\n### How is this different from the [`p-queue`](https://github.com/sindresorhus/p-queue) package?\n\nThis package is only about limiting the number of concurrent executions, while `p-queue` is a fully featured queue implementation with lots of different options, introspection, and ability to pause the queue.\n\n## Related\n\n- [p-throttle](https://github.com/sindresorhus/p-throttle) - Throttle promise-returning & async functions\n- [p-debounce](https://github.com/sindresorhus/p-debounce) - Debounce promise-returning & async functions\n- [p-all](https://github.com/sindresorhus/p-all) - Run promise-returning & async functions concurrently with optional limited concurrency\n- [More…](https://github.com/sindresorhus/promise-fun)\n",
+ "description": "Run multiple promise-returning & async functions with limited concurrency",
+ "maintainers": [
+  {
+   "name": "sindresorhus",
+   "email": "sindresorhus@gmail.com"
+  }
+ ],
+ "readme": "# p-limit\n\n> Run multiple promise-returning & async functions with limited concurrency\n\n*Works in Node.js and browsers.*\n\n## Install\n\n```sh\nnpm install p-limit\n```\n\n## Usage\n\n```js\nimport pLimit from 'p-limit';\n\nconst limit = pLimit(1);\n\nconst input = [\n\tlimit(() => fetchSomething('foo')),\n\tlimit(() => fetchSomething('bar')),\n\tlimit(() => doSomething())\n];\n\n// Only one promise is run at once\nconst result = await Promise.all(input);\nconsole.log(result);\n```\n\n## API\n\n### pLimit(concurrency) <sup>default export</sup>\n\nReturns a `limit` function.\n\n#### concurrency\n\nType: `number`\\\nMinimum: `1`\n\nConcurrency limit.\n\n### limit(fn, ...args)\n\nReturns the promise returned by calling `fn(...args)`.\n\n#### fn\n\nType: `Function`\n\nPromise-returning/async function.\n\n#### args\n\nAny arguments to pass through to `fn`.\n\nSupport for passing arguments on to the `fn` is provided in order to be able to avoid creating unnecessary closures. You probably don't need this optimization unless you're pushing a *lot* of functions.\n\n### limit.activeCount\n\nThe number of promises that are currently running.\n\n### limit.pendingCount\n\nThe number of promises that are waiting to run (i.e. their internal `fn` was not called yet).\n\n### limit.clearQueue()\n\nDiscard pending promises that are waiting to run.\n\nThis might be useful if you want to teardown the queue at the end of your program's lifecycle or discard any function calls referencing an intermediary state of your app.\n\nNote: This does not cancel promises that are already running.\n\n### limit.concurrency\n\nGet or set the concurrency limit.\n\n### limitFunction(fn, options) <sup>named export</sup>\n\nReturns a function with limited concurrency.\n\nThe returned function manages its own concurrent executions, allowing you to call it multiple times without exceeding the specified concurrency limit.\n\nIdeal for scenarios where you need to control the number of simultaneous executions of a single function, rather than managing concurrency across multiple functions.\n\n```js\nimport {limitFunction} from 'p-limit';\n\nconst limitedFunction = limitFunction(async () => {\n\treturn doSomething();\n}, {concurrency: 1});\n\nconst input = Array.from({length: 10}, limitedFunction);\n\n// Only one promise is run at once.\nawait Promise.all(input);\n```\n\n#### fn\n\nType: `Function`\n\nPromise-returning/async function.\n\n#### options\n\nType: `object`\n\n#### concurrency\n\nType: `number`\\\nMinimum: `1`\n\nConcurrency limit.\n\n## FAQ\n\n### How is this different from the [`p-queue`](https://github.com/sindresorhus/p-queue) package?\n\nThis package is only about limiting the number of concurrent executions, while `p-queue` is a fully featured queue implementation with lots of different options, introspection, and ability to pause the queue.\n\n## Related\n\n- [p-throttle](https://github.com/sindresorhus/p-throttle) - Throttle promise-returning & async functions\n- [p-debounce](https://github.com/sindresorhus/p-debounce) - Debounce promise-returning & async functions\n- [p-all](https://github.com/sindresorhus/p-all) - Run promise-returning & async functions concurrently with optional limited concurrency\n- [More…](https://github.com/sindresorhus/promise-fun)\n",
  "readmeFilename": "readme.md",
  "users": {
   "kah": true,
