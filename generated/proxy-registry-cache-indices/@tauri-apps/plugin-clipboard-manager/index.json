@@ -1,9 +1,9 @@
 {
  "_id": "@tauri-apps/plugin-clipboard-manager",
- "_rev": "23-cc15aaee8f2be7f2b0f9c3493e37ec86",
+ "_rev": "24-27b73b5fa0cf577284a527b483c5797c",
  "name": "@tauri-apps/plugin-clipboard-manager",
  "dist-tags": {
-  "latest": "2.2.0"
+  "latest": "2.2.1"
  },
  "versions": {
   "2.0.0-alpha.0": {
@@ -1647,6 +1647,93 @@
    "name": "@tauri-apps/plugin-clipboard-manager",
    "version": "2.2.0",
    "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-clipboard-manager@2.2.0",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "3d8f60457da3054454d93dd3fb5a3ca10eef0e5b",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-clipboard-manager/-/plugin-clipboard-manager-2.2.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-sIBrW/HioKq2vqomwwcU/Y8ygAv3DlS32yKPBX5XijCc0IyQKiDxYpGqmvE9DC5Y0lNJ/G53dfS961B31wjJ1g==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDJKX6NcLn7OrRkk88Pt5HyjdEzudKvaD+FR0Jktz1RYwIhALt+iqntA4iu8XtYDmcHYgtogbH9clS7DCPTEosMgbEg",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-clipboard-manager@2.2.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 14799
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "6fcb2f5f401fcaca98d40243e7def282875827de",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "![plugin-clipboard-manager](https://github.com/tauri-apps/plugins-workspace/raw/v2/plugins/clipboard-manager/banner.png)",
+   "directories": {},
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-clipboard-manager_2.2.0_1733759227155_0.47158390215878754",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.1": {
+   "name": "@tauri-apps/plugin-clipboard-manager",
+   "version": "2.2.1",
+   "license": "MIT OR Apache-2.0",
    "authors": [
     "Tauri Programme within The Commons Conservancy"
    ],
@@ -1669,31 +1756,31 @@
    "dependencies": {
     "@tauri-apps/api": "^2.0.0"
    },
-   "_id": "@tauri-apps/plugin-clipboard-manager@2.2.0",
-   "gitHead": "6fcb2f5f401fcaca98d40243e7def282875827de",
+   "_id": "@tauri-apps/plugin-clipboard-manager@2.2.1",
+   "gitHead": "ad1726627365e44c1841129be1871fb9509f5eb3",
    "description": "![plugin-clipboard-manager](https://github.com/tauri-apps/plugins-workspace/raw/v2/plugins/clipboard-manager/banner.png)",
    "bugs": {
     "url": "https://github.com/tauri-apps/plugins-workspace/issues"
    },
    "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
-   "_nodeVersion": "22.11.0",
-   "_npmVersion": "10.9.0",
+   "_nodeVersion": "22.13.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-sIBrW/HioKq2vqomwwcU/Y8ygAv3DlS32yKPBX5XijCc0IyQKiDxYpGqmvE9DC5Y0lNJ/G53dfS961B31wjJ1g==",
-    "shasum": "3d8f60457da3054454d93dd3fb5a3ca10eef0e5b",
-    "tarball": "http://localhost:3000/@tauri-apps/plugin-clipboard-manager/-/plugin-clipboard-manager-2.2.0.tgz",
+    "integrity": "sha512-+7YDULB9Bk4fejxYrVNBQcxs3KsjPA3A3r53wwn7K8zOQvxjNBSYBRx/FW1OUBPGzm8BrreJFBkPVzQZSF2R4A==",
+    "shasum": "a5d35b197748d900a4281b38a380fb57dd076983",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-clipboard-manager/-/plugin-clipboard-manager-2.2.1.tgz",
     "fileCount": 6,
-    "unpackedSize": 14799,
+    "unpackedSize": 15069,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-clipboard-manager@2.2.0",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-clipboard-manager@2.2.1",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
     },
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDJKX6NcLn7OrRkk88Pt5HyjdEzudKvaD+FR0Jktz1RYwIhALt+iqntA4iu8XtYDmcHYgtogbH9clS7DCPTEosMgbEg"
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIQDYl77j52oPTsB2MsHbVX+WzcwP21JtyrigdgzqB1fzcwIgW1ut+SabGGnyheqvllxt9YRJknB9JVGQyjcpw3O9q30="
      }
     ]
    },
@@ -1726,14 +1813,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/plugin-clipboard-manager_2.2.0_1733759227155_0.47158390215878754"
+    "tmp": "tmp/plugin-clipboard-manager_2.2.1_1738002942802_0.7806537558449933"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2023-05-24T15:13:08.092Z",
-  "modified": "2024-12-09T15:47:08.241Z",
+  "modified": "2025-01-27T18:35:43.527Z",
   "2.0.0-alpha.0": "2023-05-24T15:13:08.304Z",
   "2.0.0-alpha.1": "2023-08-14T20:50:15.825Z",
   "2.0.0-alpha.2": "2023-10-23T14:34:36.546Z",
@@ -1755,7 +1842,8 @@
   "2.0.0-rc.2": "2024-09-15T14:56:22.755Z",
   "2.0.0": "2024-10-02T15:10:17.293Z",
   "2.0.1": "2024-12-02T12:46:05.976Z",
-  "2.2.0": "2024-12-09T15:47:07.312Z"
+  "2.2.0": "2024-12-09T15:47:07.312Z",
+  "2.2.1": "2025-01-27T18:35:43.007Z"
  },
  "bugs": {
   "url": "https://github.com/tauri-apps/plugins-workspace/issues"
@@ -1789,6 +1877,6 @@
    "email": "beanow@oscp.info"
   }
  ],
- "readme": "![plugin-clipboard-manager](https://github.com/tauri-apps/plugins-workspace/raw/v2/plugins/clipboard-manager/banner.png)\n\nRead and write to the system clipboard.\n\n| Platform | Supported |\n| -------- | --------- |\n| Linux    | ✓         |\n| Windows  | ✓         |\n| macOS    | ✓         |\n| Android  | ✓         |\n| iOS      | ✓         |\n\n## Install\n\n_This plugin requires a Rust version of at least **1.77.2**_\n\nThere are three general methods of installation that we can recommend.\n\n1. Use crates.io and npm (easiest, and requires you to trust that our publishing pipeline worked)\n2. Pull sources directly from Github using git tags / revision hashes (most secure)\n3. Git submodule install this repo in your tauri project and then use file protocol to ingest the source (most secure, but inconvenient to use)\n\nInstall the Core plugin by adding the following to your `Cargo.toml` file:\n\n`src-tauri/Cargo.toml`\n\n```toml\n[dependencies]\ntauri-plugin-clipboard-manager = \"2.0.0\"\n# alternatively with Git:\ntauri-plugin-clipboard-manager = { git = \"https://github.com/tauri-apps/plugins-workspace\", branch = \"v2\" }\n```\n\nYou can install the JavaScript Guest bindings using your preferred JavaScript package manager:\n\n> Note: Since most JavaScript package managers are unable to install packages from git monorepos we provide read-only mirrors of each plugin. This makes installation option 2 more ergonomic to use.\n\n```sh\npnpm add @tauri-apps/plugin-clipboard-manager\n# or\nnpm add @tauri-apps/plugin-clipboard-manager\n# or\nyarn add @tauri-apps/plugin-clipboard-manager\n\n# alternatively with Git:\npnpm add https://github.com/tauri-apps/tauri-plugin-clipboard-manager#v2\n# or\nnpm add https://github.com/tauri-apps/tauri-plugin-clipboard-manager#v2\n# or\nyarn add https://github.com/tauri-apps/tauri-plugin-clipboard-manager#v2\n```\n\n## Usage\n\nFirst you need to register the core plugin with Tauri:\n\n`src-tauri/src/lib.rs`\n\n```rust\nfn main() {\n    tauri::Builder::default()\n        .plugin(tauri_plugin_clipboard_manager::init())\n        .run(tauri::generate_context!())\n        .expect(\"error while running tauri application\");\n}\n```\n\nAfterwards all the plugin's APIs are available through the JavaScript guest bindings:\n\n```javascript\nimport {\n  writeText,\n  readText,\n  writeHtml,\n  readHtml,\n  clear\n} from '@tauri-apps/plugin-clipboard-manager'\nawait writeText('Tauri is awesome!')\nassert(await readText(), 'Tauri is awesome!')\n```\n\n## Contributing\n\nPRs accepted. Please make sure to read the Contributing Guide before making a pull request.\n\n## Partners\n\n<table>\n  <tbody>\n    <tr>\n      <td align=\"center\" valign=\"middle\">\n        <a href=\"https://crabnebula.dev\" target=\"_blank\">\n          <img src=\"https://github.com/tauri-apps/plugins-workspace/raw/v2/.github/sponsors/crabnebula.svg\" alt=\"CrabNebula\" width=\"283\">\n        </a>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\nFor the complete list of sponsors please visit our [website](https://tauri.app#sponsors) and [Open Collective](https://opencollective.com/tauri).\n\n## License\n\nCode: (c) 2015 - Present - The Tauri Programme within The Commons Conservancy.\n\nMIT or MIT/Apache 2.0 where applicable.\n",
+ "readme": "![plugin-clipboard-manager](https://github.com/tauri-apps/plugins-workspace/raw/v2/plugins/clipboard-manager/banner.png)\n\nRead and write to the system clipboard.\n\n| Platform | Supported |\n| -------- | --------- |\n| Linux    | ✓         |\n| Windows  | ✓         |\n| macOS    | ✓         |\n| Android  | ✓         |\n| iOS      | ✓         |\n\n## Install\n\n_This plugin requires a Rust version of at least **1.77.2**_\n\nThere are three general methods of installation that we can recommend.\n\n1. Use crates.io and npm (easiest, and requires you to trust that our publishing pipeline worked)\n2. Pull sources directly from Github using git tags / revision hashes (most secure)\n3. Git submodule install this repo in your tauri project and then use file protocol to ingest the source (most secure, but inconvenient to use)\n\nInstall the Core plugin by adding the following to your `Cargo.toml` file:\n\n`src-tauri/Cargo.toml`\n\n```toml\n[dependencies]\ntauri-plugin-clipboard-manager = \"2.0.0\"\n# alternatively with Git:\ntauri-plugin-clipboard-manager = { git = \"https://github.com/tauri-apps/plugins-workspace\", branch = \"v2\" }\n```\n\nYou can install the JavaScript Guest bindings using your preferred JavaScript package manager:\n\n> Note: Since most JavaScript package managers are unable to install packages from git monorepos we provide read-only mirrors of each plugin. This makes installation option 2 more ergonomic to use.\n\n```sh\npnpm add @tauri-apps/plugin-clipboard-manager\n# or\nnpm add @tauri-apps/plugin-clipboard-manager\n# or\nyarn add @tauri-apps/plugin-clipboard-manager\n\n# alternatively with Git:\npnpm add https://github.com/tauri-apps/tauri-plugin-clipboard-manager#v2\n# or\nnpm add https://github.com/tauri-apps/tauri-plugin-clipboard-manager#v2\n# or\nyarn add https://github.com/tauri-apps/tauri-plugin-clipboard-manager#v2\n```\n\n## Usage\n\nFirst you need to register the core plugin with Tauri:\n\n`src-tauri/src/lib.rs`\n\n```rust\nfn main() {\n    tauri::Builder::default()\n        .plugin(tauri_plugin_clipboard_manager::init())\n        .run(tauri::generate_context!())\n        .expect(\"error while running tauri application\");\n}\n```\n\nAfterwards all the plugin's APIs are available through the JavaScript guest bindings:\n\n```javascript\nimport {\n  writeText,\n  readText,\n  writeHtml,\n  clear\n} from '@tauri-apps/plugin-clipboard-manager'\nawait writeText('Tauri is awesome!')\nassert(await readText(), 'Tauri is awesome!')\n```\n\n## Contributing\n\nPRs accepted. Please make sure to read the Contributing Guide before making a pull request.\n\n## Partners\n\n<table>\n  <tbody>\n    <tr>\n      <td align=\"center\" valign=\"middle\">\n        <a href=\"https://crabnebula.dev\" target=\"_blank\">\n          <img src=\"https://github.com/tauri-apps/plugins-workspace/raw/v2/.github/sponsors/crabnebula.svg\" alt=\"CrabNebula\" width=\"283\">\n        </a>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\nFor the complete list of sponsors please visit our [website](https://tauri.app#sponsors) and [Open Collective](https://opencollective.com/tauri).\n\n## License\n\nCode: (c) 2015 - Present - The Tauri Programme within The Commons Conservancy.\n\nMIT or MIT/Apache 2.0 where applicable.\n",
  "readmeFilename": "README.md"
 }
