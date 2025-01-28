@@ -1,9 +1,9 @@
 {
  "_id": "chokidar",
- "_rev": "425-87247ac71d410f07426dd2046c3e73e1",
+ "_rev": "426-71bc4b90d3f3fbe3d7ef36534ecd360b",
  "name": "chokidar",
  "dist-tags": {
-  "latest": "4.0.2"
+  "latest": "4.0.3"
  },
  "versions": {
   "0.1.1": {
@@ -10104,8 +10104,106 @@
   },
   "4.0.2": {
    "name": "chokidar",
-   "description": "Minimal and efficient cross-platform file watching library",
    "version": "4.0.2",
+   "keywords": [
+    "fs",
+    "watch",
+    "watchFile",
+    "watcher",
+    "watching",
+    "file",
+    "fsevents"
+   ],
+   "author": {
+    "url": "https://paulmillr.com",
+    "name": "Paul Miller"
+   },
+   "license": "MIT",
+   "_id": "chokidar@4.0.2",
+   "maintainers": [
+    {
+     "name": "paulmillr",
+     "email": "paul@paulmillr.com"
+    }
+   ],
+   "homepage": "https://github.com/paulmillr/chokidar",
+   "bugs": {
+    "url": "https://github.com/paulmillr/chokidar/issues"
+   },
+   "dist": {
+    "shasum": "97b9562c9f59de559177f069eadf5dcc67d24798",
+    "tarball": "http://localhost:3000/chokidar/-/chokidar-4.0.2.tgz",
+    "fileCount": 12,
+    "integrity": "sha512-/b57FK+bblSU+dfewfFe0rT1YjVDfOmeLQwCAuC+vwvgLkXboATqqmy+Ipux6JrF6L5joe5CBnFOw+gLWH6yKg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCXb2E4SC1KywYUnfmcZMh7ll5ZKuv/pkhIs4iZ3iXC8gIhAOUBw9GMVnKkHPe6n5M9Fi4aFxur6Fx4jQPICRy4Xkg+",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 148603
+   },
+   "main": "./index.js",
+   "types": "./index.d.ts",
+   "module": "./esm/index.js",
+   "engines": {
+    "node": ">= 14.16.0"
+   },
+   "exports": {
+    ".": {
+     "import": "./esm/index.js",
+     "require": "./index.js"
+    },
+    "./handler.js": {
+     "import": "./esm/handler.js",
+     "require": "./handler.js"
+    }
+   },
+   "funding": "https://paulmillr.com/funding/",
+   "gitHead": "69c115a3684a5e72e0ac68aa0a57c204f081132a",
+   "scripts": {
+    "lint": "prettier --check src",
+    "test": "node --test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "format": "prettier --write src"
+   },
+   "_npmUser": {
+    "name": "paulmillr",
+    "email": "paul@paulmillr.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/paulmillr/chokidar.git",
+    "type": "git"
+   },
+   "_npmVersion": "11.0.0",
+   "description": "Minimal and efficient cross-platform file watching library",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "20.18.1",
+   "dependencies": {
+    "readdirp": "^4.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "chai": "4.3.4",
+    "sinon": "12.0.1",
+    "upath": "2.0.1",
+    "rimraf": "5.0.5",
+    "prettier": "3.1.1",
+    "sinon-chai": "3.7.0",
+    "typescript": "5.5.2",
+    "@types/node": "20.14.8",
+    "@paulmillr/jsbt": "0.2.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/chokidar_4.0.2_1734376005760_0.571471273784744",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "4.0.3": {
+   "name": "chokidar",
+   "description": "Minimal and efficient cross-platform file watching library",
+   "version": "4.0.3",
    "homepage": "https://github.com/paulmillr/chokidar",
    "author": {
     "name": "Paul Miller",
@@ -10166,20 +10264,20 @@
     "fsevents"
    ],
    "funding": "https://paulmillr.com/funding/",
-   "_id": "chokidar@4.0.2",
-   "gitHead": "69c115a3684a5e72e0ac68aa0a57c204f081132a",
+   "_id": "chokidar@4.0.3",
+   "gitHead": "1182965a0d3d884f15db423009262778ddba0ac4",
    "_nodeVersion": "20.18.1",
    "_npmVersion": "11.0.0",
    "dist": {
-    "integrity": "sha512-/b57FK+bblSU+dfewfFe0rT1YjVDfOmeLQwCAuC+vwvgLkXboATqqmy+Ipux6JrF6L5joe5CBnFOw+gLWH6yKg==",
-    "shasum": "97b9562c9f59de559177f069eadf5dcc67d24798",
-    "tarball": "http://localhost:3000/chokidar/-/chokidar-4.0.2.tgz",
+    "integrity": "sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==",
+    "shasum": "7be37a4c03c9aee1ecfe862a4a23b2c70c205d30",
+    "tarball": "http://localhost:3000/chokidar/-/chokidar-4.0.3.tgz",
     "fileCount": 12,
-    "unpackedSize": 148603,
+    "unpackedSize": 148759,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQCXb2E4SC1KywYUnfmcZMh7ll5ZKuv/pkhIs4iZ3iXC8gIhAOUBw9GMVnKkHPe6n5M9Fi4aFxur6Fx4jQPICRy4Xkg+"
+      "sig": "MEUCIBdNPZNFgCQB0Av+H+o5aEev/7DL+txX2or2RCLYBpsbAiEA/qduexHQP8lKlFX2+jqYF/YFTtKsLT8TIUTLXcsa3Uk="
      }
     ]
    },
@@ -10196,14 +10294,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/chokidar_4.0.2_1734376005760_0.571471273784744"
+    "tmp": "tmp/chokidar_4.0.3_1734560494275_0.7907735207628055"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2012-04-26T01:32:10.158Z",
-  "modified": "2024-12-16T19:06:46.188Z",
+  "modified": "2024-12-18T22:21:34.619Z",
   "0.1.1": "2012-04-26T01:32:12.087Z",
   "0.2.0": "2012-05-04T13:53:24.862Z",
   "0.2.1": "2012-05-04T14:20:02.520Z",
@@ -10312,7 +10410,8 @@
   "3.6.0": "2024-02-06T22:57:34.159Z",
   "4.0.0": "2024-09-13T00:30:16.656Z",
   "4.0.1": "2024-09-22T13:10:17.466Z",
-  "4.0.2": "2024-12-16T19:06:45.997Z"
+  "4.0.2": "2024-12-16T19:06:45.997Z",
+  "4.0.3": "2024-12-18T22:21:34.451Z"
  },
  "bugs": {
   "url": "https://github.com/paulmillr/chokidar/issues"

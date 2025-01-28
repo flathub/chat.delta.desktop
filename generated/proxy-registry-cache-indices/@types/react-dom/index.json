@@ -1,6 +1,6 @@
 {
  "_id": "@types/react-dom",
- "_rev": "1359-b0568262ddc00db6227bca23612f64a0",
+ "_rev": "1369-baf562ee8d41530f35c9297b257dc65d",
  "name": "@types/react-dom",
  "dist-tags": {
   "ts2.0": "0.14.20",
@@ -9,12 +9,12 @@
   "ts2.5": "16.0.3",
   "ts2.3": "16.0.3",
   "ts2.4": "16.0.3",
-  "ts2.7": "16.0.6",
   "ts2.6": "16.0.6",
+  "ts2.7": "16.0.6",
   "ts2.8": "16.9.7",
+  "ts3.0": "16.9.8",
   "ts3.1": "16.9.8",
   "ts2.9": "16.9.8",
-  "ts3.0": "16.9.8",
   "ts3.2": "16.9.9",
   "ts3.3": "17.0.0",
   "ts3.4": "17.0.1",
@@ -26,23 +26,23 @@
   "ts4.0": "18.0.6",
   "ts4.1": "18.0.9",
   "ts4.2": "18.0.11",
-  "ts4.3": "18.2.7",
   "ts4.4": "18.2.7",
+  "ts4.3": "18.2.7",
   "ts4.5": "18.2.17",
   "ts4.6": "18.2.21",
   "ts4.7": "18.3.0",
   "ts4.9": "18.3.1",
   "ts4.8": "18.3.1",
-  "ts5.5": "19.0.2",
-  "ts5.8": "19.0.2",
-  "ts5.7": "19.0.2",
-  "ts5.3": "19.0.2",
-  "ts5.2": "19.0.2",
-  "ts5.4": "19.0.2",
-  "ts5.6": "19.0.2",
-  "ts5.0": "19.0.2",
-  "ts5.1": "19.0.2",
-  "latest": "19.0.2"
+  "ts5.8": "19.0.3",
+  "ts5.7": "19.0.3",
+  "ts5.3": "19.0.3",
+  "ts5.2": "19.0.3",
+  "latest": "19.0.3",
+  "ts5.4": "19.0.3",
+  "ts5.6": "19.0.3",
+  "ts5.5": "19.0.3",
+  "ts5.0": "19.0.3",
+  "ts5.1": "19.0.3"
  },
  "versions": {
   "0.14.1-alpha": {
@@ -13617,11 +13617,134 @@
     "host": "s3://npm-registry-packages-npm-production"
    },
    "typesPublisherContentHash": "15456a5462ef352f9e36979359f3f69058800e6b78eb73df502bca624fc31eb5"
+  },
+  "19.0.3": {
+   "name": "@types/react-dom",
+   "version": "19.0.3",
+   "license": "MIT",
+   "_id": "@types/react-dom@19.0.3",
+   "maintainers": [
+    {
+     "name": "types",
+     "email": "ts-npm-types@microsoft.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "https://asana.com",
+     "name": "Asana"
+    },
+    {
+     "url": "http://www.assuresign.com",
+     "name": "AssureSign"
+    },
+    {
+     "url": "https://microsoft.com",
+     "name": "Microsoft"
+    },
+    {
+     "url": "https://github.com/MartynasZilinskas",
+     "name": "MartynasZilinskas",
+     "githubUsername": "MartynasZilinskas"
+    },
+    {
+     "url": "https://github.com/theruther4d",
+     "name": "Josh Rutherford",
+     "githubUsername": "theruther4d"
+    },
+    {
+     "url": "https://github.com/Jessidhia",
+     "name": "Jessica Franco",
+     "githubUsername": "Jessidhia"
+    },
+    {
+     "url": "https://github.com/eps1lon",
+     "name": "Sebastian Silbermann",
+     "githubUsername": "eps1lon"
+    }
+   ],
+   "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom",
+   "dist": {
+    "shasum": "0804dfd279a165d5a0ad8b53a5b9e65f338050a4",
+    "tarball": "http://localhost:3000/@types/react-dom/-/react-dom-19.0.3.tgz",
+    "fileCount": 12,
+    "integrity": "sha512-0Knk+HJiMP/qOZgMyNFamlIjw9OFCsyC2ZbigmEEyXXixgre6IQpm/4V+r3qH4GC1JPvRJKInw+on2rV6YZLeA==",
+    "signatures": [
+     {
+      "sig": "MEUCICwMvgYL65ScE0/fJkAIdCbgvN1864weyr1xJKEN9j/7AiEAlI+aB24WgSqWrN4gTbVzSUEZ9YFGSTbrlFs2eQ0QKMs=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 20634
+   },
+   "main": "",
+   "types": "index.d.ts",
+   "exports": {
+    ".": {
+     "types": {
+      "default": "./index.d.ts"
+     }
+    },
+    "./canary": {
+     "types": {
+      "default": "./canary.d.ts"
+     }
+    },
+    "./client": {
+     "types": {
+      "default": "./client.d.ts"
+     }
+    },
+    "./server": {
+     "types": {
+      "default": "./server.d.ts"
+     }
+    },
+    "./static": {
+     "types": {
+      "default": "./static.d.ts"
+     }
+    },
+    "./test-utils": {
+     "types": {
+      "default": "./test-utils/index.d.ts"
+     }
+    },
+    "./experimental": {
+     "types": {
+      "default": "./experimental.d.ts"
+     }
+    },
+    "./package.json": "./package.json"
+   },
+   "scripts": {},
+   "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+   },
+   "repository": {
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "type": "git",
+    "directory": "types/react-dom"
+   },
+   "description": "TypeScript definitions for react-dom",
+   "directories": {},
+   "dependencies": {},
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "@types/react": "^19.0.0"
+   },
+   "typeScriptVersion": "5.0",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/react-dom_19.0.3_1736678083092_0.9924919094113276",
+    "host": "s3://npm-registry-packages-npm-production"
+   },
+   "typesPublisherContentHash": "b4f8417d8ef73a0ebc72e2b519998b2e511d9830a45f2bf31562fbcbd6fea691"
   }
  },
  "time": {
   "created": "2016-05-17T18:44:31.682Z",
-  "modified": "2024-12-11T02:54:16.031Z",
+  "modified": "2025-01-12T10:34:50.395Z",
   "0.14.1-alpha": "2016-05-17T18:44:31.682Z",
   "0.14.2-alpha": "2016-05-19T22:09:40.802Z",
   "0.14.7-alpha": "2016-05-20T20:31:38.770Z",
@@ -13781,7 +13904,8 @@
   "16.9.25": "2024-12-09T19:32:30.264Z",
   "15.5.22": "2024-12-09T19:32:32.799Z",
   "18.3.4": "2024-12-10T23:33:03.689Z",
-  "18.3.5": "2024-12-11T02:54:14.608Z"
+  "18.3.5": "2024-12-11T02:54:14.608Z",
+  "19.0.3": "2025-01-12T10:34:43.269Z"
  },
  "license": "MIT",
  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/react-dom",

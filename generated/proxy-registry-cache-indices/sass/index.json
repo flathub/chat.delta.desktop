@@ -1,11 +1,11 @@
 {
  "_id": "sass",
- "_rev": "347-afa997a3a60d976652b768ba57d1c3a6",
+ "_rev": "351-5e51c033b13230fd3d17cc61a33c9ee1",
  "name": "sass",
  "dist-tags": {
   "test": "1.26.0-test.3",
   "rc": "1.45.0-rc.2",
-  "latest": "1.83.0"
+  "latest": "1.83.4"
  },
  "versions": {
   "0.5.0": {
@@ -23520,6 +23520,382 @@
   },
   "1.83.0": {
    "name": "sass",
+   "version": "1.83.0",
+   "keywords": [
+    "style",
+    "scss",
+    "sass",
+    "preprocessor",
+    "css"
+   ],
+   "author": {
+    "url": "https://github.com/nex3",
+    "name": "Natalie Weizenbaum",
+    "email": "nweiz@google.com"
+   },
+   "license": "MIT",
+   "_id": "sass@1.83.0",
+   "maintainers": [
+    {
+     "name": "nex3",
+     "email": "nex342@gmail.com"
+    },
+    {
+     "name": "hcatlin",
+     "email": "hcatlin@gmail.com"
+    },
+    {
+     "name": "sassbot",
+     "email": "sass.bot.beep.boop@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/sass/dart-sass",
+   "bugs": {
+    "url": "https://github.com/sass/dart-sass/issues"
+   },
+   "bin": {
+    "sass": "sass.js"
+   },
+   "dist": {
+    "shasum": "e36842c0b88a94ed336fd16249b878a0541d536f",
+    "tarball": "http://localhost:3000/sass/-/sass-1.83.0.tgz",
+    "fileCount": 36,
+    "integrity": "sha512-qsSxlayzoOjdvXMVLkzF84DJFc2HZEL/rFyGIKbbilYtAvlCxyuzUeff9LawTn4btVnLKg75Z8MMr1lxU1lfGw==",
+    "signatures": [
+     {
+      "sig": "MEQCICUOVGKjqAikfLgWgA4I7uqhUODuI7ajisjy7Zd0vYqCAiAIV89zzT6BApimdzG35xLwPV/XTFj+lhedDOgu7rBQ+w==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 5657600
+   },
+   "main": "sass.node.js",
+   "types": "types/index.d.ts",
+   "engines": {
+    "node": ">=14.0.0"
+   },
+   "exports": {
+    "node": {
+     "default": "./sass.node.mjs",
+     "require": "./sass.node.js"
+    },
+    "types": "./types/index.d.ts",
+    "default": {
+     "default": "./sass.default.js",
+     "require": "./sass.default.cjs"
+    }
+   },
+   "gitHead": "f38dbb00db942592c64a259bdfd9f961316597f6",
+   "_npmUser": {
+    "name": "sassbot",
+    "email": "sass.bot.beep.boop@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/sass/dart-sass.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "A pure JavaScript implementation of Sass.",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "chokidar": "^4.0.0",
+    "immutable": "^5.0.2",
+    "source-map-js": ">=0.6.2 <2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "optionalDependencies": {
+    "@parcel/watcher": "^2.4.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/sass_1.83.0_1734042719078_0.9873137837323029",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.83.1": {
+   "name": "sass",
+   "version": "1.83.1",
+   "keywords": [
+    "style",
+    "scss",
+    "sass",
+    "preprocessor",
+    "css"
+   ],
+   "author": {
+    "url": "https://github.com/nex3",
+    "name": "Natalie Weizenbaum",
+    "email": "nweiz@google.com"
+   },
+   "license": "MIT",
+   "_id": "sass@1.83.1",
+   "maintainers": [
+    {
+     "name": "nex3",
+     "email": "nex342@gmail.com"
+    },
+    {
+     "name": "hcatlin",
+     "email": "hcatlin@gmail.com"
+    },
+    {
+     "name": "sassbot",
+     "email": "sass.bot.beep.boop@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/sass/dart-sass",
+   "bugs": {
+    "url": "https://github.com/sass/dart-sass/issues"
+   },
+   "bin": {
+    "sass": "sass.js"
+   },
+   "dist": {
+    "shasum": "dee1ab94b47a6f9993d3195d36f556bcbda64846",
+    "tarball": "http://localhost:3000/sass/-/sass-1.83.1.tgz",
+    "fileCount": 36,
+    "integrity": "sha512-EVJbDaEs4Rr3F0glJzFSOvtg2/oy2V/YrGFPqPY24UqcLDWcI9ZY5sN+qyO3c/QCZwzgfirvhXvINiJCE/OLcA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDaR1QBrheajimfZuGeyfhoFNz93UFXjzk0zzGWTgpIxAIhAOFdxd3lyF+zSCfh28vj4wJbytg0eRpG5gCHO2411iI2",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 5657357
+   },
+   "main": "sass.node.js",
+   "types": "types/index.d.ts",
+   "engines": {
+    "node": ">=14.0.0"
+   },
+   "exports": {
+    "node": {
+     "default": "./sass.node.mjs",
+     "require": "./sass.node.js"
+    },
+    "types": "./types/index.d.ts",
+    "default": {
+     "default": "./sass.default.js",
+     "require": "./sass.default.cjs"
+    }
+   },
+   "gitHead": "3d3e925c9f44b25ead011538edd89e1665ae6392",
+   "_npmUser": {
+    "name": "sassbot",
+    "email": "sass.bot.beep.boop@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/sass/dart-sass.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "A pure JavaScript implementation of Sass.",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "chokidar": "^4.0.0",
+    "immutable": "^5.0.2",
+    "source-map-js": ">=0.6.2 <2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "optionalDependencies": {
+    "@parcel/watcher": "^2.4.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/sass_1.83.1_1735953918491_0.3415078908050133",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.83.2": {
+   "name": "sass",
+   "version": "1.83.2",
+   "keywords": [
+    "style",
+    "scss",
+    "sass",
+    "preprocessor",
+    "css"
+   ],
+   "author": {
+    "url": "https://github.com/nex3",
+    "name": "Natalie Weizenbaum",
+    "email": "nweiz@google.com"
+   },
+   "license": "MIT",
+   "_id": "sass@1.83.2",
+   "maintainers": [
+    {
+     "name": "nex3",
+     "email": "nex342@gmail.com"
+    },
+    {
+     "name": "hcatlin",
+     "email": "hcatlin@gmail.com"
+    },
+    {
+     "name": "sassbot",
+     "email": "sass.bot.beep.boop@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/sass/dart-sass",
+   "bugs": {
+    "url": "https://github.com/sass/dart-sass/issues"
+   },
+   "bin": {
+    "sass": "sass.js"
+   },
+   "dist": {
+    "shasum": "907ee2813ea8d2570311fa0d92dc1e1964fdbae8",
+    "tarball": "http://localhost:3000/sass/-/sass-1.83.2.tgz",
+    "fileCount": 36,
+    "integrity": "sha512-1evIZT01aymzDxc72k8vjTa2wkPfkso4x3lVlZvWr388X7zNzVK4Xaz12rGC1E+8fGmoJW+suF3+kK7+NNwQXQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIAEX8iH4t66PzRvyy4/tv1KiCHDLxmPy3LwPOidge5QgAiAY+F+ZgtPuiuoiOMXxIu2TJ8nftvGt0fYQo2RYMEtXAg==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 5658648
+   },
+   "main": "sass.node.js",
+   "types": "types/index.d.ts",
+   "engines": {
+    "node": ">=14.0.0"
+   },
+   "exports": {
+    "node": {
+     "default": "./sass.node.mjs",
+     "require": "./sass.node.js"
+    },
+    "types": "./types/index.d.ts",
+    "default": {
+     "default": "./sass.default.js",
+     "require": "./sass.default.cjs"
+    }
+   },
+   "gitHead": "ddb14b2c39e297167f418abfd63fd216463ad72d",
+   "_npmUser": {
+    "name": "sassbot",
+    "email": "sass.bot.beep.boop@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/sass/dart-sass.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "A pure JavaScript implementation of Sass.",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "chokidar": "^4.0.0",
+    "immutable": "^5.0.2",
+    "source-map-js": ">=0.6.2 <2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "optionalDependencies": {
+    "@parcel/watcher": "^2.4.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/sass_1.83.2_1736815811542_0.028734830758452512",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.83.3": {
+   "name": "sass",
+   "version": "1.83.3",
+   "keywords": [
+    "style",
+    "scss",
+    "sass",
+    "preprocessor",
+    "css"
+   ],
+   "author": {
+    "url": "https://github.com/nex3",
+    "name": "Natalie Weizenbaum",
+    "email": "nweiz@google.com"
+   },
+   "license": "MIT",
+   "_id": "sass@1.83.3",
+   "maintainers": [
+    {
+     "name": "nex3",
+     "email": "nex342@gmail.com"
+    },
+    {
+     "name": "hcatlin",
+     "email": "hcatlin@gmail.com"
+    },
+    {
+     "name": "sassbot",
+     "email": "sass.bot.beep.boop@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/sass/dart-sass",
+   "bugs": {
+    "url": "https://github.com/sass/dart-sass/issues"
+   },
+   "bin": {
+    "sass": "sass.js"
+   },
+   "dist": {
+    "shasum": "26acbd0f272a13b827c3017e9f833ef0eaa26b7d",
+    "tarball": "http://localhost:3000/sass/-/sass-1.83.3.tgz",
+    "fileCount": 36,
+    "integrity": "sha512-t4gb+nTrUeaPb+xzdqDmaMyi8evP0QuUB8o57dYHZF/lIGniqZ/PR/iWGcWoS8vr46F9V7buXFv290fMV6vTIQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIC1D0UehRGS8QvxJbIwPpPDQP//CCwuCtwRaPT7CiiUNAiAgfliFnR6PuDzGLqr2WpR13nl6yE6KeM4emIBRqnhQnA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 5658648
+   },
+   "main": "sass.node.js",
+   "types": "types/index.d.ts",
+   "engines": {
+    "node": ">=14.0.0"
+   },
+   "exports": {
+    "node": {
+     "default": "./sass.node.mjs",
+     "require": "./sass.node.js"
+    },
+    "types": "./types/index.d.ts",
+    "default": {
+     "default": "./sass.default.js",
+     "require": "./sass.default.cjs"
+    }
+   },
+   "gitHead": "46686eddcaee5a85f43bc300ee8650f8ac198f6c",
+   "_npmUser": {
+    "name": "sassbot",
+    "email": "sass.bot.beep.boop@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/sass/dart-sass.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "A pure JavaScript implementation of Sass.",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "chokidar": "^4.0.0",
+    "immutable": "^5.0.2",
+    "source-map-js": ">=0.6.2 <2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "optionalDependencies": {
+    "@parcel/watcher": "^2.4.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/sass_1.83.3_1736818922386_0.7853981718953913",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.83.4": {
+   "name": "sass",
    "description": "A pure JavaScript implementation of Sass.",
    "license": "MIT",
    "bugs": {
@@ -23565,25 +23941,25 @@
      "default": "./sass.default.js"
     }
    },
-   "version": "1.83.0",
+   "version": "1.83.4",
    "bin": {
     "sass": "sass.js"
    },
    "main": "sass.node.js",
-   "_id": "sass@1.83.0",
-   "gitHead": "f38dbb00db942592c64a259bdfd9f961316597f6",
+   "_id": "sass@1.83.4",
+   "gitHead": "89a5394639688ad5ad5677fb6258f39fd74f95b9",
    "_nodeVersion": "22.12.0",
    "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-qsSxlayzoOjdvXMVLkzF84DJFc2HZEL/rFyGIKbbilYtAvlCxyuzUeff9LawTn4btVnLKg75Z8MMr1lxU1lfGw==",
-    "shasum": "e36842c0b88a94ed336fd16249b878a0541d536f",
-    "tarball": "http://localhost:3000/sass/-/sass-1.83.0.tgz",
+    "integrity": "sha512-B1bozCeNQiOgDcLd33e2Cs2U60wZwjUUXzh900ZyQF5qUasvMdDZYbQ566LJu7cqR+sAHlAfO6RMkaID5s6qpA==",
+    "shasum": "5ccf60f43eb61eeec300b780b8dcb85f16eec6d1",
+    "tarball": "http://localhost:3000/sass/-/sass-1.83.4.tgz",
     "fileCount": 36,
-    "unpackedSize": 5657600,
+    "unpackedSize": 5658648,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCICUOVGKjqAikfLgWgA4I7uqhUODuI7ajisjy7Zd0vYqCAiAIV89zzT6BApimdzG35xLwPV/XTFj+lhedDOgu7rBQ+w=="
+      "sig": "MEUCIQCVSTLpdYmae7kcfUDzQM2xGKBz1Kge4ieaqQjo3Ze0vwIgE8y4BAUem+AsQGarXleLzympsh0nF5gxPkEe53Cp924="
      }
     ]
    },
@@ -23608,14 +23984,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/sass_1.83.0_1734042719078_0.9873137837323029"
+    "tmp": "tmp/sass_1.83.4_1736836330371_0.3594874582881711"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-06-06T20:36:44.615Z",
-  "modified": "2024-12-12T22:31:59.683Z",
+  "modified": "2025-01-14T06:32:10.810Z",
   "0.5.0": "2017-06-06T20:36:44.615Z",
   "0.4.2": "2017-06-06T20:36:44.615Z",
   "0.4.3": "2017-06-06T20:36:44.615Z",
@@ -23892,7 +24268,11 @@
   "1.81.0": "2024-11-15T01:30:56.500Z",
   "1.81.1": "2024-12-03T01:25:13.208Z",
   "1.82.0": "2024-12-03T23:06:52.291Z",
-  "1.83.0": "2024-12-12T22:31:59.445Z"
+  "1.83.0": "2024-12-12T22:31:59.445Z",
+  "1.83.1": "2025-01-04T01:25:18.746Z",
+  "1.83.2": "2025-01-14T00:50:11.807Z",
+  "1.83.3": "2025-01-14T01:42:02.690Z",
+  "1.83.4": "2025-01-14T06:32:10.642Z"
  },
  "bugs": {
   "url": "https://github.com/sass/dart-sass/issues"

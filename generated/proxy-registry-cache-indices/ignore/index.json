@@ -1,9 +1,9 @@
 {
  "_id": "ignore",
- "_rev": "152-b26baca82c298652d697b77acae63c48",
+ "_rev": "156-970059f01961b096e633bf760901ca15",
  "name": "ignore",
  "dist-tags": {
-  "latest": "6.0.2"
+  "latest": "7.0.3"
  },
  "versions": {
   "0.1.0": {
@@ -7775,25 +7775,465 @@
   "6.0.2": {
    "name": "ignore",
    "version": "6.0.2",
+   "keywords": [
+    "ignore",
+    ".gitignore",
+    "gitignore",
+    "npmignore",
+    "rules",
+    "manager",
+    "filter",
+    "regexp",
+    "regex",
+    "fnmatch",
+    "glob",
+    "asterisks",
+    "regular-expression"
+   ],
+   "author": {
+    "name": "kael"
+   },
+   "license": "MIT",
+   "_id": "ignore@6.0.2",
+   "maintainers": [
+    {
+     "name": "kael",
+     "email": "i@kael.me"
+    }
+   ],
+   "homepage": "https://github.com/kaelzhang/node-ignore#readme",
+   "bugs": {
+    "url": "https://github.com/kaelzhang/node-ignore/issues"
+   },
+   "dist": {
+    "shasum": "77cccb72a55796af1b6d2f9eb14fa326d24f4283",
+    "tarball": "http://localhost:3000/ignore/-/ignore-6.0.2.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-InwqeHHN2XpumIkMvpl/DCJVrAHgCsG5+cn1XlnLWGwtZBm8QJfSusItfrwx81CTp5agNZqpKU2J/ccC5nGT4A==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCUhd4zGOf3Qm/Ba7pIjQqRkTTRjT2CQfKTlnOGg9+kpQIgeQ0ee+wt2V69AhYRc2zZfrOv4azPyhU+zkrN04wlQS0=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 53630
+   },
+   "types": "./index.d.ts",
+   "engines": {
+    "node": ">= 4"
+   },
+   "gitHead": "ee70c66d32e900f6e793c733a4ca27a1dafb3819",
+   "scripts": {
+    "tap": "tap --reporter classic",
+    "test": "npm run test:only",
+    "build": "babel -o legacy.js index.js",
+    "report": "tap --coverage-report=html",
+    "test:ts": "node ./test/ts/simple.js",
+    "posttest": "npm run report && codecov",
+    "test:git": "npm run tap test/git-check-ignore.js",
+    "test:tsc": "tsc ./test/ts/simple.ts --lib ES6",
+    "test:lint": "eslint .",
+    "test:only": "npm run test:lint && npm run test:tsc && npm run test:ts && npm run test:cases",
+    "test:cases": "npm run tap test/*.js -- --coverage",
+    "test:win32": "IGNORE_TEST_WIN32=1 npm run test",
+    "test:ignore": "npm run tap test/ignore.js",
+    "test:others": "npm run tap test/others.js",
+    "prepublishOnly": "npm run build",
+    "test:ignore:only": "IGNORE_ONLY_IGNORES=1 npm run tap test/ignore.js",
+    "test:no-coverage": "npm run tap test/*.js -- --no-check-coverage"
+   },
+   "_npmUser": {
+    "name": "kael",
+    "email": "i@kael.me"
+   },
+   "repository": {
+    "url": "git+ssh://git@github.com/kaelzhang/node-ignore.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.2.4",
    "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
+   "directories": {},
+   "_nodeVersion": "21.6.2",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.3.9",
+    "tmp": "0.2.3",
+    "debug": "^4.3.4",
+    "eslint": "^8.46.0",
+    "mkdirp": "^3.0.1",
+    "rimraf": "^6.0.1",
+    "codecov": "^3.8.2",
+    "pre-suf": "^1.1.1",
+    "@babel/cli": "^7.22.9",
+    "spawn-sync": "^2.0.0",
+    "typescript": "^5.1.6",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "eslint-config-ostai": "^3.0.0",
+    "eslint-plugin-import": "^2.28.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ignore_6.0.2_1726580133759_0.6457717894906843",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "7.0.0": {
+   "name": "ignore",
+   "version": "7.0.0",
+   "keywords": [
+    "ignore",
+    ".gitignore",
+    "gitignore",
+    "npmignore",
+    "rules",
+    "manager",
+    "filter",
+    "regexp",
+    "regex",
+    "fnmatch",
+    "glob",
+    "asterisks",
+    "regular-expression"
+   ],
+   "author": {
+    "name": "kael"
+   },
+   "license": "MIT",
+   "_id": "ignore@7.0.0",
+   "maintainers": [
+    {
+     "name": "kael",
+     "email": "i@kael.me"
+    }
+   ],
+   "homepage": "https://github.com/kaelzhang/node-ignore#readme",
+   "bugs": {
+    "url": "https://github.com/kaelzhang/node-ignore/issues"
+   },
+   "dist": {
+    "shasum": "52da780b009bd0845d1f9dd4d8ae6a7569ae73c4",
+    "tarball": "http://localhost:3000/ignore/-/ignore-7.0.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-lcX8PNQygAa22u/0BysEY8VhaFRzlOkvdlKczDPnJvrkJD1EuqzEky5VYYKM2iySIuaVIDv9N190DfSreSLw2A==",
+    "signatures": [
+     {
+      "sig": "MEUCIB3rLrwTeI75RfssTIbnula1AlYOBIwh19kMCZ3IcG/lAiEAvYhofscdcMMo63cpcUJt8ql4AyXUEG+fkEFqKVuiK6g=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 81505
+   },
+   "main": "index.js",
+   "types": "index.d.ts",
+   "module": "index.mjs",
+   "engines": {
+    "node": ">= 4"
+   },
+   "gitHead": "872d495954bf97e5eb426984d46a22062e6f2e2f",
+   "scripts": {
+    "tap": "tap --reporter classic",
+    "test": "npm run test:only",
+    "build": "babel -o legacy.js index.js && node ./scripts/build.js",
+    "report": "tap --coverage-report=html",
+    "test:ts": "node ./test/ts/simple.js",
+    "test:git": "npm run tap test/git-check-ignore.test.js",
+    "test:tsc": "tsc ./test/ts/simple.ts --lib ES6",
+    "test:lint": "eslint .",
+    "test:only": "npm run test:lint && npm run build && npm run test:tsc && npm run test:tsc:16 && npm run test:ts && npm run test:cases",
+    "test:cases": "npm run tap test/*.test.js -- --coverage",
+    "test:win32": "IGNORE_TEST_WIN32=1 npm run test",
+    "// posttest": "npm run report && codecov",
+    "test:ignore": "npm run tap test/ignore.test.js",
+    "test:others": "npm run tap test/others.test.js",
+    "test:tsc:16": "tsc ./test/ts/simple.ts --lib ES6 --moduleResolution Node16 --module Node16",
+    "prepublishOnly": "npm run build",
+    "test:ignore:only": "IGNORE_ONLY_IGNORES=1 npm run tap test/ignore.test.js",
+    "test:no-coverage": "npm run tap test/*.test.js -- --no-check-coverage"
+   },
+   "_npmUser": {
+    "name": "kael",
+    "email": "i@kael.me"
+   },
+   "repository": {
+    "url": "git+ssh://git@github.com/kaelzhang/node-ignore.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
+   "directories": {},
+   "_nodeVersion": "22.8.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.3.9",
+    "tmp": "0.2.3",
+    "debug": "^4.3.4",
+    "eslint": "^8.46.0",
+    "mkdirp": "^3.0.1",
+    "rimraf": "^6.0.1",
+    "codecov": "^3.8.3",
+    "pre-suf": "^1.1.1",
+    "@babel/cli": "^7.22.9",
+    "spawn-sync": "^2.0.0",
+    "typescript": "^5.6.2",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "eslint-config-ostai": "^3.0.0",
+    "eslint-plugin-import": "^2.28.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ignore_7.0.0_1734954650506_0.155141357103046",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "7.0.1": {
+   "name": "ignore",
+   "version": "7.0.1",
+   "keywords": [
+    "ignore",
+    ".gitignore",
+    "gitignore",
+    "npmignore",
+    "rules",
+    "manager",
+    "filter",
+    "regexp",
+    "regex",
+    "fnmatch",
+    "glob",
+    "asterisks",
+    "regular-expression"
+   ],
+   "author": {
+    "name": "kael"
+   },
+   "license": "MIT",
+   "_id": "ignore@7.0.1",
+   "maintainers": [
+    {
+     "name": "kael",
+     "email": "i@kael.me"
+    }
+   ],
+   "homepage": "https://github.com/kaelzhang/node-ignore#readme",
+   "bugs": {
+    "url": "https://github.com/kaelzhang/node-ignore/issues"
+   },
+   "dist": {
+    "shasum": "e0aca8bd28ed81f45bfbc042c57f24eb682aa2b9",
+    "tarball": "http://localhost:3000/ignore/-/ignore-7.0.1.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-D1gVletsbVOoiXF963rgZnfobGAbq7Lb+dz3fcBmlOmZg6hHkpbycLqL8PLNB8f4GVv6dOVYwhPL/r7hwiH0Fw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDlBitKLhfuqkazrrSCsbVu3gmZ2LjOehOlqIOIRSFHbAIgaHCz+Fiv5uBDSzZoWxhiHQsB5Q2hA1ne9qxMc/x7T34=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 62461
+   },
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">= 4"
+   },
+   "gitHead": "cd9f6405c56dae9382a5c31e209411a66df30583",
+   "scripts": {
+    "ts": "npm run test:ts && npm run test:16",
+    "tap": "tap --reporter classic",
+    "lint": "eslint .",
+    "test": "npm run lint && npm run ts && npm run build && npm run test:cases",
+    "build": "babel -o legacy.js index.js",
+    "report": "tap --coverage-report=html",
+    "test:16": "npm run test:ts:16 && npm run test:cjs:16 && npm run test:mjs:16",
+    "test:ts": "ts-node ./test/ts/simple.ts",
+    "test:git": "npm run tap test/git-check-ignore.test.js",
+    "test:cases": "npm run tap test/*.test.js -- --coverage",
+    "test:ts:16": "ts-node --compilerOptions '{\"moduleResolution\": \"Node16\", \"module\": \"Node16\"}' ./test/ts/simple.ts",
+    "test:win32": "IGNORE_TEST_WIN32=1 npm run test",
+    "test:cjs:16": "ts-node --compilerOptions '{\"moduleResolution\": \"Node16\", \"module\": \"Node16\"}' ./test/ts/simple.cjs",
+    "test:ignore": "npm run tap test/ignore.test.js",
+    "test:mjs:16": "ts-node --compilerOptions '{\"moduleResolution\": \"Node16\", \"module\": \"Node16\"}' ./test/ts/simple.mjs",
+    "test:others": "npm run tap test/others.test.js",
+    "prepublishOnly": "npm run build",
+    "test:ignore:only": "IGNORE_ONLY_IGNORES=1 npm run tap test/ignore.test.js",
+    "test:no-coverage": "npm run tap test/*.test.js -- --no-check-coverage",
+    "=================== typescript ====================": "",
+    "==================== linting ======================": "",
+    "===================== cases =======================": ""
+   },
+   "_npmUser": {
+    "name": "kael",
+    "email": "i@kael.me"
+   },
+   "repository": {
+    "url": "git+ssh://git@github.com/kaelzhang/node-ignore.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
+   "directories": {},
+   "_nodeVersion": "22.8.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.3.9",
+    "tmp": "0.2.3",
+    "debug": "^4.3.4",
+    "eslint": "^8.46.0",
+    "mkdirp": "^3.0.1",
+    "rimraf": "^6.0.1",
+    "codecov": "^3.8.3",
+    "pre-suf": "^1.1.1",
+    "ts-node": "^10.9.2",
+    "@babel/cli": "^7.22.9",
+    "spawn-sync": "^2.0.0",
+    "typescript": "^5.6.2",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "eslint-config-ostai": "^3.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "@typescript-eslint/eslint-plugin": "^8.19.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ignore_7.0.1_1736774047097_0.9385385056951592",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "7.0.2": {
+   "name": "ignore",
+   "version": "7.0.2",
+   "keywords": [
+    "ignore",
+    ".gitignore",
+    "gitignore",
+    "npmignore",
+    "rules",
+    "manager",
+    "filter",
+    "regexp",
+    "regex",
+    "fnmatch",
+    "glob",
+    "asterisks",
+    "regular-expression"
+   ],
+   "author": {
+    "name": "kael"
+   },
+   "license": "MIT",
+   "_id": "ignore@7.0.2",
+   "maintainers": [
+    {
+     "name": "kael",
+     "email": "i@kael.me"
+    }
+   ],
+   "homepage": "https://github.com/kaelzhang/node-ignore#readme",
+   "bugs": {
+    "url": "https://github.com/kaelzhang/node-ignore/issues"
+   },
+   "dist": {
+    "shasum": "f3159fb41f147eab6bbc1242a5469ba5d9af6f65",
+    "tarball": "http://localhost:3000/ignore/-/ignore-7.0.2.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-Wx5VKTZatJNNa26J1dMfJF1bZu4Lw31EHwhFRcSjTvro8Mqsrd3rJanyW48W43Eyd+gpaiDNkveYd62DvXaZeQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDWeENFurlTZB7N/JLsWfAXhVGtJgw4QG2rcLb7XLdVVgIgT641E2xYIZZ0lAYIX8rAjemxVRn/W2gidKjhloR15n4=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 81505
+   },
+   "main": "index.js",
+   "types": "index.d.ts",
+   "module": "index.mjs",
+   "engines": {
+    "node": ">= 4"
+   },
+   "gitHead": "52f8e855b6aca711579c008f38829f48e5a4c78b",
+   "scripts": {
+    "tap": "tap --reporter classic",
+    "test": "npm run test:only",
+    "build": "babel -o legacy.js index.js && node ./scripts/build.js",
+    "report": "tap --coverage-report=html",
+    "test:ts": "node ./test/ts/simple.js",
+    "test:git": "npm run tap test/git-check-ignore.test.js",
+    "test:tsc": "tsc ./test/ts/simple.ts --lib ES6",
+    "test:lint": "eslint .",
+    "test:only": "npm run test:lint && npm run build && npm run test:tsc && npm run test:tsc:16 && npm run test:ts && npm run test:cases",
+    "test:cases": "npm run tap test/*.test.js -- --coverage",
+    "test:win32": "IGNORE_TEST_WIN32=1 npm run test",
+    "// posttest": "npm run report && codecov",
+    "test:ignore": "npm run tap test/ignore.test.js",
+    "test:others": "npm run tap test/others.test.js",
+    "test:tsc:16": "tsc ./test/ts/simple.ts --lib ES6 --moduleResolution Node16 --module Node16",
+    "prepublishOnly": "npm run build",
+    "test:ignore:only": "IGNORE_ONLY_IGNORES=1 npm run tap test/ignore.test.js",
+    "test:no-coverage": "npm run tap test/*.test.js -- --no-check-coverage"
+   },
+   "_npmUser": {
+    "name": "kael",
+    "email": "i@kael.me"
+   },
+   "repository": {
+    "url": "git+ssh://git@github.com/kaelzhang/node-ignore.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
+   "directories": {},
+   "_nodeVersion": "22.8.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.3.9",
+    "tmp": "0.2.3",
+    "debug": "^4.3.4",
+    "eslint": "^8.46.0",
+    "mkdirp": "^3.0.1",
+    "rimraf": "^6.0.1",
+    "codecov": "^3.8.3",
+    "pre-suf": "^1.1.1",
+    "@babel/cli": "^7.22.9",
+    "spawn-sync": "^2.0.0",
+    "typescript": "^5.6.2",
+    "@babel/core": "^7.22.9",
+    "@babel/preset-env": "^7.22.9",
+    "eslint-config-ostai": "^3.0.0",
+    "eslint-plugin-import": "^2.28.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ignore_7.0.2_1736820820947_0.7632781711956833",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "7.0.3": {
+   "name": "ignore",
+   "version": "7.0.3",
+   "description": "Ignore is a manager and filter for .gitignore rules, the one used by eslint, gitbook and many others.",
+   "types": "index.d.ts",
    "scripts": {
     "prepublishOnly": "npm run build",
     "build": "babel -o legacy.js index.js",
-    "test:lint": "eslint .",
-    "test:tsc": "tsc ./test/ts/simple.ts --lib ES6",
-    "test:ts": "node ./test/ts/simple.js",
+    "==================== linting ======================": "",
+    "lint": "eslint .",
+    "===================== import ======================": "",
+    "ts": "npm run test:ts && npm run test:16",
+    "test:ts": "ts-node ./test/import/simple.ts",
+    "test:16": "npm run test:ts:16 && npm run test:cjs:16 && npm run test:mjs:16",
+    "test:ts:16": "ts-node --compilerOptions '{\"moduleResolution\": \"Node16\", \"module\": \"Node16\"}' ./test/import/simple.ts && tsc ./test/import/simple.ts --lib ES6 --moduleResolution Node16 --module Node16 && node ./test/import/simple.js",
+    "test:cjs:16": "ts-node --compilerOptions '{\"moduleResolution\": \"Node16\", \"module\": \"Node16\"}' ./test/import/simple.cjs",
+    "test:mjs:16": "ts-node --compilerOptions '{\"moduleResolution\": \"Node16\", \"module\": \"Node16\"}' ./test/import/simple.mjs && babel -o ./test/import/simple-mjs.js ./test/import/simple.mjs && node ./test/import/simple-mjs.js",
+    "===================== cases =======================": "",
+    "test:cases": "npm run tap test/*.test.js -- --coverage",
     "tap": "tap --reporter classic",
-    "test:git": "npm run tap test/git-check-ignore.js",
-    "test:ignore": "npm run tap test/ignore.js",
-    "test:ignore:only": "IGNORE_ONLY_IGNORES=1 npm run tap test/ignore.js",
-    "test:others": "npm run tap test/others.js",
-    "test:cases": "npm run tap test/*.js -- --coverage",
-    "test:no-coverage": "npm run tap test/*.js -- --no-check-coverage",
-    "test:only": "npm run test:lint && npm run test:tsc && npm run test:ts && npm run test:cases",
-    "test": "npm run test:only",
+    "===================== debug =======================": "",
+    "test:git": "npm run tap test/git-check-ignore.test.js",
+    "test:ignore": "npm run tap test/ignore.test.js",
+    "test:ignore:only": "IGNORE_ONLY_IGNORES=1 npm run tap test/ignore.test.js",
+    "test:others": "npm run tap test/others.test.js",
+    "test:no-coverage": "npm run tap test/*.test.js -- --no-check-coverage",
+    "test": "npm run lint && npm run ts && npm run build && npm run test:cases",
     "test:win32": "IGNORE_TEST_WIN32=1 npm run test",
-    "report": "tap --coverage-report=html",
-    "posttest": "npm run report && codecov"
+    "report": "tap --coverage-report=html"
    },
    "repository": {
     "type": "git",
@@ -7825,7 +8265,8 @@
     "@babel/cli": "^7.22.9",
     "@babel/core": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
-    "codecov": "^3.8.2",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "codecov": "^3.8.3",
     "debug": "^4.3.4",
     "eslint": "^8.46.0",
     "eslint-config-ostai": "^3.0.0",
@@ -7836,27 +8277,27 @@
     "spawn-sync": "^2.0.0",
     "tap": "^16.3.9",
     "tmp": "0.2.3",
-    "typescript": "^5.1.6"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
    },
    "engines": {
     "node": ">= 4"
    },
-   "_id": "ignore@6.0.2",
-   "gitHead": "ee70c66d32e900f6e793c733a4ca27a1dafb3819",
-   "types": "./index.d.ts",
+   "_id": "ignore@7.0.3",
+   "gitHead": "f0bd5340a18a45433f231523c1604a36e18a5931",
    "homepage": "https://github.com/kaelzhang/node-ignore#readme",
-   "_nodeVersion": "21.6.2",
-   "_npmVersion": "10.2.4",
+   "_nodeVersion": "22.8.0",
+   "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-InwqeHHN2XpumIkMvpl/DCJVrAHgCsG5+cn1XlnLWGwtZBm8QJfSusItfrwx81CTp5agNZqpKU2J/ccC5nGT4A==",
-    "shasum": "77cccb72a55796af1b6d2f9eb14fa326d24f4283",
-    "tarball": "http://localhost:3000/ignore/-/ignore-6.0.2.tgz",
+    "integrity": "sha512-bAH5jbK/F3T3Jls4I0SO1hmPR0dKU0a7+SY6n1yzRtG54FLO8d6w/nxLFX2Nb7dBu6cCWXPaAME6cYqFUMmuCA==",
+    "shasum": "397ef9315dfe0595671eefe8b633fec6943ab733",
+    "tarball": "http://localhost:3000/ignore/-/ignore-7.0.3.tgz",
     "fileCount": 6,
-    "unpackedSize": 53630,
+    "unpackedSize": 63148,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCUhd4zGOf3Qm/Ba7pIjQqRkTTRjT2CQfKTlnOGg9+kpQIgeQ0ee+wt2V69AhYRc2zZfrOv4azPyhU+zkrN04wlQS0="
+      "sig": "MEUCIQCf+xD/td3ut8+nqNebo96773yMc3NKNz0lJMNOvbu28wIgSeFamXXPPFbewYRHDOvMsfAniVHvCFLQmBAUBdHfqRQ="
      }
     ]
    },
@@ -7872,15 +8313,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/ignore_6.0.2_1726580133759_0.6457717894906843"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/ignore_7.0.3_1736826761173_0.4683158000951846"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2013-09-02T07:32:08.169Z",
-  "modified": "2024-09-17T13:35:34.115Z",
+  "modified": "2025-01-14T03:52:41.535Z",
   "0.1.0": "2013-09-02T07:32:13.699Z",
   "0.1.2": "2013-09-26T02:32:50.111Z",
   "1.1.2": "2013-10-07T07:16:23.194Z",
@@ -7973,7 +8414,11 @@
   "5.3.2": "2024-08-12T08:51:00.065Z",
   "6.0.0": "2024-09-17T11:55:38.818Z",
   "6.0.1": "2024-09-17T11:59:04.980Z",
-  "6.0.2": "2024-09-17T13:35:33.937Z"
+  "6.0.2": "2024-09-17T13:35:33.937Z",
+  "7.0.0": "2024-12-23T11:50:50.714Z",
+  "7.0.1": "2025-01-13T13:14:07.290Z",
+  "7.0.2": "2025-01-14T02:13:41.127Z",
+  "7.0.3": "2025-01-14T03:52:41.363Z"
  },
  "bugs": {
   "url": "https://github.com/kaelzhang/node-ignore/issues"
@@ -8009,7 +8454,7 @@
    "email": "i@kael.me"
   }
  ],
- "readme": "<table><thead>\n  <tr>\n    <th>Linux</th>\n    <th>OS X</th>\n    <th>Windows</th>\n    <th>Coverage</th>\n    <th>Downloads</th>\n  </tr>\n</thead><tbody><tr>\n  <td colspan=\"2\" align=\"center\">\n    <a href=\"https://github.com/kaelzhang/node-ignore/actions/workflows/nodejs.yml\">\n    <img\n      src=\"https://github.com/kaelzhang/node-ignore/actions/workflows/nodejs.yml/badge.svg\"\n      alt=\"Build Status\" /></a>\n  </td>\n  <td align=\"center\">\n    <a href=\"https://ci.appveyor.com/project/kaelzhang/node-ignore\">\n    <img\n      src=\"https://ci.appveyor.com/api/projects/status/github/kaelzhang/node-ignore?branch=master&svg=true\"\n      alt=\"Windows Build Status\" /></a>\n  </td>\n  <td align=\"center\">\n    <a href=\"https://codecov.io/gh/kaelzhang/node-ignore\">\n    <img\n      src=\"https://codecov.io/gh/kaelzhang/node-ignore/branch/master/graph/badge.svg\"\n      alt=\"Coverage Status\" /></a>\n  </td>\n  <td align=\"center\">\n    <a href=\"https://www.npmjs.org/package/ignore\">\n    <img\n      src=\"http://img.shields.io/npm/dm/ignore.svg\"\n      alt=\"npm module downloads per month\" /></a>\n  </td>\n</tr></tbody></table>\n\n# ignore\n\n`ignore` is a manager, filter and parser which implemented in pure JavaScript according to the [.gitignore spec 2.22.1](http://git-scm.com/docs/gitignore).\n\n`ignore` is used by eslint, gitbook and [many others](https://www.npmjs.com/browse/depended/ignore).\n\nPay **ATTENTION** that [`minimatch`](https://www.npmjs.org/package/minimatch) (which used by `fstream-ignore`) does not follow the gitignore spec.\n\nTo filter filenames according to a .gitignore file, I recommend this npm package, `ignore`.\n\nTo parse an `.npmignore` file, you should use `minimatch`, because an `.npmignore` file is parsed by npm using `minimatch` and it does not work in the .gitignore way.\n\n### Tested on\n\n`ignore` is fully tested, and has more than **five hundreds** of unit tests.\n\n- Linux + Node: `0.8` - `7.x`\n- Windows + Node: `0.10` - `7.x`, node < `0.10` is not tested due to the lack of support of appveyor.\n\nActually, `ignore` does not rely on any versions of node specially.\n\nSince `4.0.0`, ignore will no longer support `node < 6` by default, to use in node < 6, `require('ignore/legacy')`. For details, see [CHANGELOG](https://github.com/kaelzhang/node-ignore/blob/master/CHANGELOG.md).\n\n## Table Of Main Contents\n\n- [Usage](#usage)\n- [`Pathname` Conventions](#pathname-conventions)\n- See Also:\n  - [`glob-gitignore`](https://www.npmjs.com/package/glob-gitignore) matches files using patterns and filters them according to gitignore rules.\n- [Upgrade Guide](#upgrade-guide)\n\n## Install\n\n```sh\nnpm i ignore\n```\n\n## Usage\n\n```js\nimport ignore from 'ignore'\nconst ig = ignore().add(['.abc/*', '!.abc/d/'])\n```\n\n### Filter the given paths\n\n```js\nconst paths = [\n  '.abc/a.js',    // filtered out\n  '.abc/d/e.js'   // included\n]\n\nig.filter(paths)        // ['.abc/d/e.js']\nig.ignores('.abc/a.js') // true\n```\n\n### As the filter function\n\n```js\npaths.filter(ig.createFilter()); // ['.abc/d/e.js']\n```\n\n### Win32 paths will be handled\n\n```js\nig.filter(['.abc\\\\a.js', '.abc\\\\d\\\\e.js'])\n// if the code above runs on windows, the result will be\n// ['.abc\\\\d\\\\e.js']\n```\n\n## Why another ignore?\n\n- `ignore` is a standalone module, and is much simpler so that it could easy work with other programs, unlike [isaacs](https://npmjs.org/~isaacs)'s [fstream-ignore](https://npmjs.org/package/fstream-ignore) which must work with the modules of the fstream family.\n\n- `ignore` only contains utility methods to filter paths according to the specified ignore rules, so\n  - `ignore` never try to find out ignore rules by traversing directories or fetching from git configurations.\n  - `ignore` don't cares about sub-modules of git projects.\n\n- Exactly according to [gitignore man page](http://git-scm.com/docs/gitignore), fixes some known matching issues of fstream-ignore, such as:\n  - '`/*.js`' should only match '`a.js`', but not '`abc/a.js`'.\n  - '`**/foo`' should match '`foo`' anywhere.\n  - Prevent re-including a file if a parent directory of that file is excluded.\n  - Handle trailing whitespaces:\n    - `'a '`(one space) should not match `'a  '`(two spaces).\n    - `'a \\ '` matches `'a  '`\n  - All test cases are verified with the result of `git check-ignore`.\n\n# Methods\n\n## .add(pattern: string | Ignore): this\n## .add(patterns: Array<string | Ignore>): this\n\n- **pattern** `String | Ignore` An ignore pattern string, or the `Ignore` instance\n- **patterns** `Array<String | Ignore>` Array of ignore patterns.\n\nAdds a rule or several rules to the current manager.\n\nReturns `this`\n\nNotice that a line starting with `'#'`(hash) is treated as a comment. Put a backslash (`'\\'`) in front of the first hash for patterns that begin with a hash, if you want to ignore a file with a hash at the beginning of the filename.\n\n```js\nignore().add('#abc').ignores('#abc')    // false\nignore().add('\\\\#abc').ignores('#abc')   // true\n```\n\n`pattern` could either be a line of ignore pattern or a string of multiple ignore patterns, which means we could just `ignore().add()` the content of a ignore file:\n\n```js\nignore()\n.add(fs.readFileSync(filenameOfGitignore).toString())\n.filter(filenames)\n```\n\n`pattern` could also be an `ignore` instance, so that we could easily inherit the rules of another `Ignore` instance.\n\n## <strike>.addIgnoreFile(path)</strike>\n\nREMOVED in `3.x` for now.\n\nTo upgrade `ignore@2.x` up to `3.x`, use\n\n```js\nimport fs from 'fs'\n\nif (fs.existsSync(filename)) {\n  ignore().add(fs.readFileSync(filename).toString())\n}\n```\n\ninstead.\n\n## .filter(paths: Array&lt;Pathname&gt;): Array&lt;Pathname&gt;\n\n```ts\ntype Pathname = string\n```\n\nFilters the given array of pathnames, and returns the filtered array.\n\n- **paths** `Array.<Pathname>` The array of `pathname`s to be filtered.\n\n### `Pathname` Conventions:\n\n#### 1. `Pathname` should be a `path.relative()`d pathname\n\n`Pathname` should be a string that have been `path.join()`ed, or the return value of `path.relative()` to the current directory,\n\n```js\n// WRONG, an error will be thrown\nig.ignores('./abc')\n\n// WRONG, for it will never happen, and an error will be thrown\n// If the gitignore rule locates at the root directory,\n// `'/abc'` should be changed to `'abc'`.\n// ```\n// path.relative('/', '/abc')  -> 'abc'\n// ```\nig.ignores('/abc')\n\n// WRONG, that it is an absolute path on Windows, an error will be thrown\nig.ignores('C:\\\\abc')\n\n// Right\nig.ignores('abc')\n\n// Right\nig.ignores(path.join('./abc'))  // path.join('./abc') -> 'abc'\n```\n\nIn other words, each `Pathname` here should be a relative path to the directory of the gitignore rules.\n\nSuppose the dir structure is:\n\n```\n/path/to/your/repo\n    |-- a\n    |   |-- a.js\n    |\n    |-- .b\n    |\n    |-- .c\n         |-- .DS_store\n```\n\nThen the `paths` might be like this:\n\n```js\n[\n  'a/a.js'\n  '.b',\n  '.c/.DS_store'\n]\n```\n\n#### 2. filenames and dirnames\n\n`node-ignore` does NO `fs.stat` during path matching, so for the example below:\n\n```js\n// First, we add a ignore pattern to ignore a directory\nig.add('config/')\n\n// `ig` does NOT know if 'config', in the real world,\n//   is a normal file, directory or something.\n\nig.ignores('config')\n// `ig` treats `config` as a file, so it returns `false`\n\nig.ignores('config/')\n// returns `true`\n```\n\nSpecially for people who develop some library based on `node-ignore`, it is important to understand that.\n\nUsually, you could use [`glob`](http://npmjs.org/package/glob) with `option.mark = true` to fetch the structure of the current directory:\n\n```js\nimport glob from 'glob'\n\nglob('**', {\n  // Adds a / character to directory matches.\n  mark: true\n}, (err, files) => {\n  if (err) {\n    return console.error(err)\n  }\n\n  let filtered = ignore().add(patterns).filter(files)\n  console.log(filtered)\n})\n```\n\n## .ignores(pathname: Pathname): boolean\n\n> new in 3.2.0\n\nReturns `Boolean` whether `pathname` should be ignored.\n\n```js\nig.ignores('.abc/a.js')    // true\n```\n\n## .createFilter()\n\nCreates a filter function which could filter an array of paths with `Array.prototype.filter`.\n\nReturns `function(path)` the filter function.\n\n## .test(pathname: Pathname) since 5.0.0\n\nReturns `TestResult`\n\n```ts\ninterface TestResult {\n  ignored: boolean\n  // true if the `pathname` is finally unignored by some negative pattern\n  unignored: boolean\n}\n```\n\n- `{ignored: true, unignored: false}`: the `pathname` is ignored\n- `{ignored: false, unignored: true}`: the `pathname` is unignored\n- `{ignored: false, unignored: false}`: the `pathname` is never matched by any ignore rules.\n\n## static `ignore.isPathValid(pathname): boolean` since 5.0.0\n\nCheck whether the `pathname` is an valid `path.relative()`d path according to the [convention](#1-pathname-should-be-a-pathrelatived-pathname).\n\nThis method is **NOT** used to check if an ignore pattern is valid.\n\n```js\nignore.isPathValid('./foo')  // false\n```\n\n## ignore(options)\n\n### `options.ignorecase` since 4.0.0\n\nSimilar as the `core.ignorecase` option of [git-config](https://git-scm.com/docs/git-config), `node-ignore` will be case insensitive if `options.ignorecase` is set to `true` (the default value), otherwise case sensitive.\n\n```js\nconst ig = ignore({\n  ignorecase: false\n})\n\nig.add('*.png')\n\nig.ignores('*.PNG')  // false\n```\n\n### `options.ignoreCase?: boolean` since 5.2.0\n\nWhich is alternative to `options.ignoreCase`\n\n### `options.allowRelativePaths?: boolean` since 5.2.0\n\nThis option brings backward compatibility with projects which based on `ignore@4.x`. If `options.allowRelativePaths` is `true`, `ignore` will not check whether the given path to be tested is [`path.relative()`d](#pathname-conventions).\n\nHowever, passing a relative path, such as `'./foo'` or `'../foo'`, to test if it is ignored or not is not a good practise, which might lead to unexpected behavior\n\n```js\nignore({\n  allowRelativePaths: true\n}).ignores('../foo/bar.js') // And it will not throw\n```\n\n****\n\n# Upgrade Guide\n\n## Upgrade 4.x -> 5.x\n\nSince `5.0.0`, if an invalid `Pathname` passed into `ig.ignores()`, an error will be thrown, unless `options.allowRelative = true` is passed to the `Ignore` factory.\n\nWhile `ignore < 5.0.0` did not make sure what the return value was, as well as\n\n```ts\n.ignores(pathname: Pathname): boolean\n\n.filter(pathnames: Array<Pathname>): Array<Pathname>\n\n.createFilter(): (pathname: Pathname) => boolean\n\n.test(pathname: Pathname): {ignored: boolean, unignored: boolean}\n```\n\nSee the convention [here](#1-pathname-should-be-a-pathrelatived-pathname) for details.\n\nIf there are invalid pathnames, the conversion and filtration should be done by users.\n\n```js\nimport {isPathValid} from 'ignore' // introduced in 5.0.0\n\nconst paths = [\n  // invalid\n  //////////////////\n  '',\n  false,\n  '../foo',\n  '.',\n  //////////////////\n\n  // valid\n  'foo'\n]\n.filter(isValidPath)\n\nig.filter(paths)\n```\n\n## Upgrade 3.x -> 4.x\n\nSince `4.0.0`, `ignore` will no longer support node < 6, to use `ignore` in node < 6:\n\n```js\nvar ignore = require('ignore/legacy')\n```\n\n## Upgrade 2.x -> 3.x\n\n- All `options` of 2.x are unnecessary and removed, so just remove them.\n- `ignore()` instance is no longer an [`EventEmitter`](nodejs.org/api/events.html), and all events are unnecessary and removed.\n- `.addIgnoreFile()` is removed, see the [.addIgnoreFile](#addignorefilepath) section for details.\n\n****\n\n# Collaborators\n\n- [@whitecolor](https://github.com/whitecolor) *Alex*\n- [@SamyPesse](https://github.com/SamyPesse) *Samy Pessé*\n- [@azproduction](https://github.com/azproduction) *Mikhail Davydov*\n- [@TrySound](https://github.com/TrySound) *Bogdan Chadkin*\n- [@JanMattner](https://github.com/JanMattner) *Jan Mattner*\n- [@ntwb](https://github.com/ntwb) *Stephen Edgar*\n- [@kasperisager](https://github.com/kasperisager) *Kasper Isager*\n- [@sandersn](https://github.com/sandersn) *Nathan Shively-Sanders*\n",
+ "readme": "| Linux / MacOS / Windows | Coverage | Downloads |\n| ----------------------- | -------- | --------- |\n| [![build][bb]][bl]      | [![coverage][cb]][cl] | [![downloads][db]][dl] |\n\n[bb]: https://github.com/kaelzhang/node-ignore/actions/workflows/nodejs.yml/badge.svg\n[bl]: https://github.com/kaelzhang/node-ignore/actions/workflows/nodejs.yml\n\n[cb]: https://codecov.io/gh/kaelzhang/node-ignore/branch/master/graph/badge.svg\n[cl]: https://codecov.io/gh/kaelzhang/node-ignore\n\n[db]: http://img.shields.io/npm/dm/ignore.svg\n[dl]: https://www.npmjs.org/package/ignore\n\n# ignore\n\n`ignore` is a manager, filter and parser which implemented in pure JavaScript according to the [.gitignore spec 2.22.1](http://git-scm.com/docs/gitignore).\n\n`ignore` is used by eslint, gitbook and [many others](https://www.npmjs.com/browse/depended/ignore).\n\nPay **ATTENTION** that [`minimatch`](https://www.npmjs.org/package/minimatch) (which used by `fstream-ignore`) does not follow the gitignore spec.\n\nTo filter filenames according to a .gitignore file, I recommend this npm package, `ignore`.\n\nTo parse an `.npmignore` file, you should use `minimatch`, because an `.npmignore` file is parsed by npm using `minimatch` and it does not work in the .gitignore way.\n\n### Tested on\n\n`ignore` is fully tested, and has more than **five hundreds** of unit tests.\n\n- Linux + Node: `0.8` - `7.x`\n- Windows + Node: `0.10` - `7.x`, node < `0.10` is not tested due to the lack of support of appveyor.\n\nActually, `ignore` does not rely on any versions of node specially.\n\nSince `4.0.0`, ignore will no longer support `node < 6` by default, to use in node < 6, `require('ignore/legacy')`. For details, see [CHANGELOG](https://github.com/kaelzhang/node-ignore/blob/master/CHANGELOG.md).\n\n## Table Of Main Contents\n\n- [Usage](#usage)\n- [`Pathname` Conventions](#pathname-conventions)\n- See Also:\n  - [`glob-gitignore`](https://www.npmjs.com/package/glob-gitignore) matches files using patterns and filters them according to gitignore rules.\n- [Upgrade Guide](#upgrade-guide)\n\n## Install\n\n```sh\nnpm i ignore\n```\n\n## Usage\n\n```js\nimport ignore from 'ignore'\nconst ig = ignore().add(['.abc/*', '!.abc/d/'])\n```\n\n### Filter the given paths\n\n```js\nconst paths = [\n  '.abc/a.js',    // filtered out\n  '.abc/d/e.js'   // included\n]\n\nig.filter(paths)        // ['.abc/d/e.js']\nig.ignores('.abc/a.js') // true\n```\n\n### As the filter function\n\n```js\npaths.filter(ig.createFilter()); // ['.abc/d/e.js']\n```\n\n### Win32 paths will be handled\n\n```js\nig.filter(['.abc\\\\a.js', '.abc\\\\d\\\\e.js'])\n// if the code above runs on windows, the result will be\n// ['.abc\\\\d\\\\e.js']\n```\n\n## Why another ignore?\n\n- `ignore` is a standalone module, and is much simpler so that it could easy work with other programs, unlike [isaacs](https://npmjs.org/~isaacs)'s [fstream-ignore](https://npmjs.org/package/fstream-ignore) which must work with the modules of the fstream family.\n\n- `ignore` only contains utility methods to filter paths according to the specified ignore rules, so\n  - `ignore` never try to find out ignore rules by traversing directories or fetching from git configurations.\n  - `ignore` don't cares about sub-modules of git projects.\n\n- Exactly according to [gitignore man page](http://git-scm.com/docs/gitignore), fixes some known matching issues of fstream-ignore, such as:\n  - '`/*.js`' should only match '`a.js`', but not '`abc/a.js`'.\n  - '`**/foo`' should match '`foo`' anywhere.\n  - Prevent re-including a file if a parent directory of that file is excluded.\n  - Handle trailing whitespaces:\n    - `'a '`(one space) should not match `'a  '`(two spaces).\n    - `'a \\ '` matches `'a  '`\n  - All test cases are verified with the result of `git check-ignore`.\n\n# Methods\n\n## .add(pattern: string | Ignore): this\n## .add(patterns: Array<string | Ignore>): this\n## .add({pattern: string, mark?: string}): this  since 7.0.0\n\n- **pattern** `string | Ignore` An ignore pattern string, or the `Ignore` instance\n- **patterns** `Array<string | Ignore>` Array of ignore patterns.\n- **mark?** `string` Pattern mark, which is used to associate the pattern with a certain marker, such as the line no of the `.gitignore` file. Actually it could be an arbitrary string and is optional.\n\nAdds a rule or several rules to the current manager.\n\nReturns `this`\n\nNotice that a line starting with `'#'`(hash) is treated as a comment. Put a backslash (`'\\'`) in front of the first hash for patterns that begin with a hash, if you want to ignore a file with a hash at the beginning of the filename.\n\n```js\nignore().add('#abc').ignores('#abc')    // false\nignore().add('\\\\#abc').ignores('#abc')   // true\n```\n\n`pattern` could either be a line of ignore pattern or a string of multiple ignore patterns, which means we could just `ignore().add()` the content of a ignore file:\n\n```js\nignore()\n.add(fs.readFileSync(filenameOfGitignore).toString())\n.filter(filenames)\n```\n\n`pattern` could also be an `ignore` instance, so that we could easily inherit the rules of another `Ignore` instance.\n\n## .ignores(pathname: [Pathname](#pathname-conventions)): boolean\n\n> new in 3.2.0\n\nReturns `Boolean` whether `pathname` should be ignored.\n\n```js\nig.ignores('.abc/a.js')    // true\n```\n\nPlease **PAY ATTENTION** that `.ignores()` is **NOT** equivalent to `git check-ignore` although in most cases they return equivalent results.\n\nHowever, for the purposes of imitating the behavior of `git check-ignore`, please use `.checkIgnore()` instead.\n\n### `Pathname` Conventions:\n\n#### 1. `Pathname` should be a `path.relative()`d pathname\n\n`Pathname` should be a string that have been `path.join()`ed, or the return value of `path.relative()` to the current directory,\n\n```js\n// WRONG, an error will be thrown\nig.ignores('./abc')\n\n// WRONG, for it will never happen, and an error will be thrown\n// If the gitignore rule locates at the root directory,\n// `'/abc'` should be changed to `'abc'`.\n// ```\n// path.relative('/', '/abc')  -> 'abc'\n// ```\nig.ignores('/abc')\n\n// WRONG, that it is an absolute path on Windows, an error will be thrown\nig.ignores('C:\\\\abc')\n\n// Right\nig.ignores('abc')\n\n// Right\nig.ignores(path.join('./abc'))  // path.join('./abc') -> 'abc'\n```\n\nIn other words, each `Pathname` here should be a relative path to the directory of the gitignore rules.\n\nSuppose the dir structure is:\n\n```\n/path/to/your/repo\n    |-- a\n    |   |-- a.js\n    |\n    |-- .b\n    |\n    |-- .c\n         |-- .DS_store\n```\n\nThen the `paths` might be like this:\n\n```js\n[\n  'a/a.js'\n  '.b',\n  '.c/.DS_store'\n]\n```\n\n#### 2. filenames and dirnames\n\n`node-ignore` does NO `fs.stat` during path matching, so `node-ignore` treats\n- `foo` as a file\n- **`foo/` as a directory**\n\nFor the example below:\n\n```js\n// First, we add a ignore pattern to ignore a directory\nig.add('config/')\n\n// `ig` does NOT know if 'config', in the real world,\n//   is a normal file, directory or something.\n\nig.ignores('config')\n// `ig` treats `config` as a file, so it returns `false`\n\nig.ignores('config/')\n// returns `true`\n```\n\nSpecially for people who develop some library based on `node-ignore`, it is important to understand that.\n\nUsually, you could use [`glob`](http://npmjs.org/package/glob) with `option.mark = true` to fetch the structure of the current directory:\n\n```js\nimport glob from 'glob'\n\nglob('**', {\n  // Adds a / character to directory matches.\n  mark: true\n}, (err, files) => {\n  if (err) {\n    return console.error(err)\n  }\n\n  let filtered = ignore().add(patterns).filter(files)\n  console.log(filtered)\n})\n```\n\n\n## .filter(paths: Array&lt;Pathname&gt;): Array&lt;Pathname&gt;\n\n```ts\ntype Pathname = string\n```\n\nFilters the given array of pathnames, and returns the filtered array.\n\n- **paths** `Array.<Pathname>` The array of `pathname`s to be filtered.\n\n## .createFilter()\n\nCreates a filter function which could filter an array of paths with `Array.prototype.filter`.\n\nReturns `function(path)` the filter function.\n\n## .test(pathname: Pathname): TestResult\n\n> New in 5.0.0\n\nReturns `TestResult`\n\n```ts\n// Since 5.0.0\ninterface TestResult {\n  ignored: boolean\n  // true if the `pathname` is finally unignored by some negative pattern\n  unignored: boolean\n  // The `IgnoreRule` which ignores the pathname\n  rule?: IgnoreRule\n}\n\n// Since 7.0.0\ninterface IgnoreRule {\n  // The original pattern\n  pattern: string\n  // Whether the pattern is a negative pattern\n  negative: boolean\n  // Which is used for other packages to build things upon `node-ignore`\n  mark?: string\n}\n```\n\n- `{ignored: true, unignored: false}`: the `pathname` is ignored\n- `{ignored: false, unignored: true}`: the `pathname` is unignored\n- `{ignored: false, unignored: false}`: the `pathname` is never matched by any ignore rules.\n\n## .checkIgnore(target: string): TestResult\n\n> new in 7.0.0\n\nDebugs gitignore / exclude files, which is equivalent to `git check-ignore -v`. Usually this method is used for other packages to implement the function of `git check-ignore -v` upon `node-ignore`\n\n- **target** `string` the target to test.\n\nReturns `TestResult`\n\n```js\nig.add({\n  pattern: 'foo/*',\n  mark: '60'\n})\n\nconst {\n  ignored,\n  rule\n} = checkIgnore('foo/')\n\nif (ignored) {\n  console.log(`.gitignore:${result}:${rule.mark}:${rule.pattern} foo/`)\n}\n\n// .gitignore:60:foo/* foo/\n```\n\nPlease pay attention that this method does not have a strong built-in cache mechanism.\n\nThe purpose of introducing this method is to make it possible to implement the `git check-ignore` command in JavaScript based on `node-ignore`.\n\nSo do not use this method in those situations where performance is extremely important.\n\n## static `isPathValid(pathname): boolean` since 5.0.0\n\nCheck whether the `pathname` is an valid `path.relative()`d path according to the [convention](#1-pathname-should-be-a-pathrelatived-pathname).\n\nThis method is **NOT** used to check if an ignore pattern is valid.\n\n```js\nimport {isPathValid} from 'ignore'\n\nisPathValid('./foo')  // false\n```\n\n## <strike>.addIgnoreFile(path)</strike>\n\nREMOVED in `3.x` for now.\n\nTo upgrade `ignore@2.x` up to `3.x`, use\n\n```js\nimport fs from 'fs'\n\nif (fs.existsSync(filename)) {\n  ignore().add(fs.readFileSync(filename).toString())\n}\n```\n\ninstead.\n\n## ignore(options)\n\n### `options.ignorecase` since 4.0.0\n\nSimilar as the `core.ignorecase` option of [git-config](https://git-scm.com/docs/git-config), `node-ignore` will be case insensitive if `options.ignorecase` is set to `true` (the default value), otherwise case sensitive.\n\n```js\nconst ig = ignore({\n  ignorecase: false\n})\n\nig.add('*.png')\n\nig.ignores('*.PNG')  // false\n```\n\n### `options.ignoreCase?: boolean` since 5.2.0\n\nWhich is alternative to `options.ignoreCase`\n\n### `options.allowRelativePaths?: boolean` since 5.2.0\n\nThis option brings backward compatibility with projects which based on `ignore@4.x`. If `options.allowRelativePaths` is `true`, `ignore` will not check whether the given path to be tested is [`path.relative()`d](#pathname-conventions).\n\nHowever, passing a relative path, such as `'./foo'` or `'../foo'`, to test if it is ignored or not is not a good practise, which might lead to unexpected behavior\n\n```js\nignore({\n  allowRelativePaths: true\n}).ignores('../foo/bar.js') // And it will not throw\n```\n\n****\n\n# Upgrade Guide\n\n## Upgrade 4.x -> 5.x\n\nSince `5.0.0`, if an invalid `Pathname` passed into `ig.ignores()`, an error will be thrown, unless `options.allowRelative = true` is passed to the `Ignore` factory.\n\nWhile `ignore < 5.0.0` did not make sure what the return value was, as well as\n\n```ts\n.ignores(pathname: Pathname): boolean\n\n.filter(pathnames: Array<Pathname>): Array<Pathname>\n\n.createFilter(): (pathname: Pathname) => boolean\n\n.test(pathname: Pathname): {ignored: boolean, unignored: boolean}\n```\n\nSee the convention [here](#1-pathname-should-be-a-pathrelatived-pathname) for details.\n\nIf there are invalid pathnames, the conversion and filtration should be done by users.\n\n```js\nimport {isPathValid} from 'ignore' // introduced in 5.0.0\n\nconst paths = [\n  // invalid\n  //////////////////\n  '',\n  false,\n  '../foo',\n  '.',\n  //////////////////\n\n  // valid\n  'foo'\n]\n.filter(isPathValid)\n\nig.filter(paths)\n```\n\n## Upgrade 3.x -> 4.x\n\nSince `4.0.0`, `ignore` will no longer support node < 6, to use `ignore` in node < 6:\n\n```js\nvar ignore = require('ignore/legacy')\n```\n\n## Upgrade 2.x -> 3.x\n\n- All `options` of 2.x are unnecessary and removed, so just remove them.\n- `ignore()` instance is no longer an [`EventEmitter`](nodejs.org/api/events.html), and all events are unnecessary and removed.\n- `.addIgnoreFile()` is removed, see the [.addIgnoreFile](#addignorefilepath) section for details.\n\n****\n\n# Collaborators\n\n- [@whitecolor](https://github.com/whitecolor) *Alex*\n- [@SamyPesse](https://github.com/SamyPesse) *Samy Pessé*\n- [@azproduction](https://github.com/azproduction) *Mikhail Davydov*\n- [@TrySound](https://github.com/TrySound) *Bogdan Chadkin*\n- [@JanMattner](https://github.com/JanMattner) *Jan Mattner*\n- [@ntwb](https://github.com/ntwb) *Stephen Edgar*\n- [@kasperisager](https://github.com/kasperisager) *Kasper Isager*\n- [@sandersn](https://github.com/sandersn) *Nathan Shively-Sanders*\n",
  "readmeFilename": "README.md",
  "users": {
   "kael": true,

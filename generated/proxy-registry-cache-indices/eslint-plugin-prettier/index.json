@@ -1,10 +1,10 @@
 {
  "_id": "eslint-plugin-prettier",
- "_rev": "57-f497bd5f956fd3953222ba0f530c61ee",
+ "_rev": "59-fd1e3db3e675a8660425d0d328f70c8d",
  "name": "eslint-plugin-prettier",
  "dist-tags": {
   "alpha": "5.0.0-alpha.2",
-  "latest": "5.2.1"
+  "latest": "5.2.3"
  },
  "versions": {
   "1.0.0": {
@@ -4259,6 +4259,330 @@
   "5.2.1": {
    "name": "eslint-plugin-prettier",
    "version": "5.2.1",
+   "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "prettier"
+   ],
+   "author": {
+    "name": "Teddy Katz"
+   },
+   "license": "MIT",
+   "_id": "eslint-plugin-prettier@5.2.1",
+   "maintainers": [
+    {
+     "name": "zertosh",
+     "email": "zertosh@gmail.com"
+    },
+    {
+     "name": "lydell",
+     "email": "simon.lydell@gmail.com"
+    },
+    {
+     "name": "bpscott",
+     "email": "ben@reload.me.uk"
+    },
+    {
+     "name": "not-an-aardvark",
+     "email": "teddy.katz@gmail.com"
+    },
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    },
+    {
+     "name": "sosukesuzuki",
+     "email": "aosukeke@gmail.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "https://github.com/JounQin",
+     "name": "JounQin",
+     "email": "admin@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/prettier/eslint-plugin-prettier#readme",
+   "bugs": {
+    "url": "https://github.com/prettier/eslint-plugin-prettier/issues"
+   },
+   "dist": {
+    "shasum": "d1c8f972d8f60e414c25465c163d16f209411f95",
+    "tarball": "http://localhost:3000/eslint-plugin-prettier/-/eslint-plugin-prettier-5.2.1.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-gH3iR3g4JfF+yYPaJYkN7jEl9QbweL/YfkoRlNnuIEHEz1vHVlCmWOS+eGGiRuzHQXdJFCOTxRgvju9b8VUmrw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDYAKb+udtHdc7HSc7BUeOY0YdsaupZgO/x1aVO7SjrcgIgYde32NGxjIi45y+Pu+S2HZNUIVnweWYeQruXr4rDd/o=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 34308
+   },
+   "main": "eslint-plugin-prettier.js",
+   "_from": "file:eslint-plugin-prettier-5.2.1.tgz",
+   "types": "eslint-plugin-prettier.d.ts",
+   "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+   },
+   "exports": {
+    ".": {
+     "types": "./eslint-plugin-prettier.d.ts",
+     "default": "./eslint-plugin-prettier.js"
+    },
+    "./recommended": {
+     "types": "./recommended.d.ts",
+     "default": "./recommended.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": "https://opencollective.com/eslint-plugin-prettier",
+   "scripts": {
+    "lint": "eslint . --cache -f friendly --max-warnings 10",
+    "test": "pnpm lint && mocha",
+    "check": "prettier --check . && pnpm lint",
+    "format": "prettier --write . && pnpm lint --fix",
+    "release": "pnpm check && pnpm test && changeset publish"
+   },
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "_resolved": "/tmp/857cf15cee08a8e0c99ebb21250c15a0/eslint-plugin-prettier-5.2.1.tgz",
+   "_integrity": "sha512-gH3iR3g4JfF+yYPaJYkN7jEl9QbweL/YfkoRlNnuIEHEz1vHVlCmWOS+eGGiRuzHQXdJFCOTxRgvju9b8VUmrw==",
+   "repository": {
+    "url": "git+https://github.com/prettier/eslint-plugin-prettier.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "Runs prettier as an eslint rule",
+   "directories": {},
+   "_nodeVersion": "20.15.0",
+   "dependencies": {
+    "synckit": "^0.9.1",
+    "prettier-linter-helpers": "^1.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "pnpm@7.33.5",
+   "devDependencies": {
+    "mocha": "^10.2.0",
+    "eslint": "^8.56.0",
+    "svelte": "^4.2.8",
+    "graphql": "^16.8.1",
+    "prettier": "^3.1.1",
+    "@eslint/js": "^8.56.0",
+    "commitlint": "^18.4.3",
+    "eslint-mdx": "^2.3.0",
+    "lint-staged": "^15.2.0",
+    "@types/eslint": "^8.56.0",
+    "@changesets/cli": "^2.27.1",
+    "eslint-plugin-n": "^16.5.0",
+    "simple-git-hooks": "^2.9.0",
+    "eslint-plugin-mdx": "^2.3.0",
+    "eslint-plugin-pug": "^1.2.5",
+    "vue-eslint-parser": "^9.3.2",
+    "@1stg/remark-preset": "^2.0.0",
+    "@html-eslint/parser": "^0.24.1",
+    "prettier-plugin-pkg": "^0.18.0",
+    "@prettier/plugin-pug": "^3.0.0",
+    "eslint-plugin-svelte": "^2.35.1",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "link:.",
+    "prettier-plugin-svelte": "^3.1.2",
+    "eslint-formatter-friendly": "^7.0.0",
+    "eslint-plugin-eslint-plugin": "^5.2.1",
+    "@changesets/changelog-github": "^0.5.0",
+    "@graphql-eslint/eslint-plugin": "^3.20.1",
+    "@types/prettier-linter-helpers": "^1.0.4",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.1.0"
+   },
+   "peerDependencies": {
+    "eslint": ">=8.0.0",
+    "prettier": ">=3.0.0",
+    "@types/eslint": ">=8.0.0",
+    "eslint-config-prettier": "*"
+   },
+   "peerDependenciesMeta": {
+    "@types/eslint": {
+     "optional": true
+    },
+    "eslint-config-prettier": {
+     "optional": true
+    }
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/eslint-plugin-prettier_5.2.1_1721215870553_0.4006208339515469",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "5.2.2": {
+   "name": "eslint-plugin-prettier",
+   "version": "5.2.2",
+   "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "prettier"
+   ],
+   "author": {
+    "name": "Teddy Katz"
+   },
+   "license": "MIT",
+   "_id": "eslint-plugin-prettier@5.2.2",
+   "maintainers": [
+    {
+     "name": "zertosh",
+     "email": "zertosh@gmail.com"
+    },
+    {
+     "name": "lydell",
+     "email": "simon.lydell@gmail.com"
+    },
+    {
+     "name": "bpscott",
+     "email": "ben@reload.me.uk"
+    },
+    {
+     "name": "not-an-aardvark",
+     "email": "teddy.katz@gmail.com"
+    },
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    },
+    {
+     "name": "sosukesuzuki",
+     "email": "aosukeke@gmail.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "https://github.com/JounQin",
+     "name": "JounQin",
+     "email": "admin@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/prettier/eslint-plugin-prettier#readme",
+   "bugs": {
+    "url": "https://github.com/prettier/eslint-plugin-prettier/issues"
+   },
+   "dist": {
+    "shasum": "d1f068f65dc8490f102eda21d1f4cd150c205211",
+    "tarball": "http://localhost:3000/eslint-plugin-prettier/-/eslint-plugin-prettier-5.2.2.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-1yI3/hf35wmlq66C8yOyrujQnel+v5l1Vop5Cl2I6ylyNTT1JbuUUnV3/41PzwTzcyDp/oF0jWE3HXvcH5AQOQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDyb7vuRDSK9dBkr/ylZ7yMemNhKBVCdRSUSHoYwZ8BEQIgJt0ZcXKEeLGNHqwzoTVI/xVj2EJHs/zCzeMqjgoow48=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 34474
+   },
+   "main": "eslint-plugin-prettier.js",
+   "_from": "file:eslint-plugin-prettier-5.2.2.tgz",
+   "types": "eslint-plugin-prettier.d.ts",
+   "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+   },
+   "exports": {
+    ".": {
+     "types": "./eslint-plugin-prettier.d.ts",
+     "default": "./eslint-plugin-prettier.js"
+    },
+    "./recommended": {
+     "types": "./recommended.d.ts",
+     "default": "./recommended.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": "https://opencollective.com/eslint-plugin-prettier",
+   "scripts": {
+    "lint": "eslint . --cache -f friendly --max-warnings 10",
+    "test": "pnpm lint && mocha",
+    "check": "prettier --check . && pnpm lint",
+    "format": "prettier --write . && pnpm lint --fix",
+    "release": "pnpm check && pnpm test && changeset publish"
+   },
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "_resolved": "/tmp/b7ecee35d20290b8d9d3f1e8ce397277/eslint-plugin-prettier-5.2.2.tgz",
+   "_integrity": "sha512-1yI3/hf35wmlq66C8yOyrujQnel+v5l1Vop5Cl2I6ylyNTT1JbuUUnV3/41PzwTzcyDp/oF0jWE3HXvcH5AQOQ==",
+   "repository": {
+    "url": "git+https://github.com/prettier/eslint-plugin-prettier.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Runs prettier as an eslint rule",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "synckit": "^0.9.1",
+    "prettier-linter-helpers": "^1.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "pnpm@7.33.5",
+   "devDependencies": {
+    "mocha": "^10.2.0",
+    "eslint": "^8.56.0",
+    "svelte": "^4.2.8",
+    "graphql": "^16.8.1",
+    "prettier": "^3.1.1",
+    "@eslint/js": "^8.56.0",
+    "commitlint": "^18.4.3",
+    "eslint-mdx": "^2.3.0",
+    "lint-staged": "^15.2.0",
+    "@types/eslint": "^8.56.0",
+    "@changesets/cli": "^2.27.1",
+    "eslint-plugin-n": "^16.5.0",
+    "simple-git-hooks": "^2.9.0",
+    "eslint-plugin-mdx": "^2.3.0",
+    "eslint-plugin-pug": "^1.2.5",
+    "vue-eslint-parser": "^9.3.2",
+    "@1stg/remark-preset": "^2.0.0",
+    "@html-eslint/parser": "^0.24.1",
+    "prettier-plugin-pkg": "^0.18.0",
+    "@prettier/plugin-pug": "^3.0.0",
+    "eslint-plugin-svelte": "^2.35.1",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "link:.",
+    "prettier-plugin-svelte": "^3.1.2",
+    "eslint-formatter-friendly": "^7.0.0",
+    "eslint-plugin-eslint-plugin": "^5.2.1",
+    "@changesets/changelog-github": "^0.5.0",
+    "@graphql-eslint/eslint-plugin": "^3.20.1",
+    "@types/prettier-linter-helpers": "^1.0.4",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.1.0"
+   },
+   "peerDependencies": {
+    "eslint": ">=8.0.0",
+    "prettier": ">=3.0.0",
+    "@types/eslint": ">=8.0.0",
+    "eslint-config-prettier": "*"
+   },
+   "peerDependenciesMeta": {
+    "@types/eslint": {
+     "optional": true
+    },
+    "eslint-config-prettier": {
+     "optional": true
+    }
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/eslint-plugin-prettier_5.2.2_1736918111566_0.5775307120370186",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "5.2.3": {
+   "name": "eslint-plugin-prettier",
+   "version": "5.2.3",
    "description": "Runs prettier as an eslint rule",
    "repository": {
     "type": "git",
@@ -4323,7 +4647,7 @@
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
     "@commitlint/config-conventional": "^18.4.3",
-    "@eslint-community/eslint-plugin-eslint-comments": "^4.1.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
     "@eslint/js": "^8.56.0",
     "@graphql-eslint/eslint-plugin": "^3.20.1",
     "@html-eslint/parser": "^0.24.1",
@@ -4359,25 +4683,25 @@
     "release": "pnpm check && pnpm test && changeset publish",
     "test": "pnpm lint && mocha"
    },
-   "_id": "eslint-plugin-prettier@5.2.1",
+   "_id": "eslint-plugin-prettier@5.2.3",
    "bugs": {
     "url": "https://github.com/prettier/eslint-plugin-prettier/issues"
    },
-   "_integrity": "sha512-gH3iR3g4JfF+yYPaJYkN7jEl9QbweL/YfkoRlNnuIEHEz1vHVlCmWOS+eGGiRuzHQXdJFCOTxRgvju9b8VUmrw==",
-   "_resolved": "/tmp/857cf15cee08a8e0c99ebb21250c15a0/eslint-plugin-prettier-5.2.1.tgz",
-   "_from": "file:eslint-plugin-prettier-5.2.1.tgz",
-   "_nodeVersion": "20.15.0",
-   "_npmVersion": "10.7.0",
+   "_integrity": "sha512-qJ+y0FfCp/mQYQ/vWQ3s7eUlFEL4PyKfAJxsnYTJ4YT73nsJBWqmEpFryxV9OeUiqmsTsYJ5Y+KDNaeP31wrRw==",
+   "_resolved": "/tmp/1baeaa91fa4a2692cff829ec1a576336/eslint-plugin-prettier-5.2.3.tgz",
+   "_from": "file:eslint-plugin-prettier-5.2.3.tgz",
+   "_nodeVersion": "22.12.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-gH3iR3g4JfF+yYPaJYkN7jEl9QbweL/YfkoRlNnuIEHEz1vHVlCmWOS+eGGiRuzHQXdJFCOTxRgvju9b8VUmrw==",
-    "shasum": "d1c8f972d8f60e414c25465c163d16f209411f95",
-    "tarball": "http://localhost:3000/eslint-plugin-prettier/-/eslint-plugin-prettier-5.2.1.tgz",
+    "integrity": "sha512-qJ+y0FfCp/mQYQ/vWQ3s7eUlFEL4PyKfAJxsnYTJ4YT73nsJBWqmEpFryxV9OeUiqmsTsYJ5Y+KDNaeP31wrRw==",
+    "shasum": "c4af01691a6fa9905207f0fbba0d7bea0902cce5",
+    "tarball": "http://localhost:3000/eslint-plugin-prettier/-/eslint-plugin-prettier-5.2.3.tgz",
     "fileCount": 8,
-    "unpackedSize": 34308,
+    "unpackedSize": 34521,
     "signatures": [
      {
       "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQDYAKb+udtHdc7HSc7BUeOY0YdsaupZgO/x1aVO7SjrcgIgYde32NGxjIi45y+Pu+S2HZNUIVnweWYeQruXr4rDd/o="
+      "sig": "MEQCIE+A5ac+ClIvAdOyX/mLf/bm1YMirt1brfBsi15CeYOcAiBrjED0XWbAg9loNU5VsDkP736axSsC6qL3BUszTi8jiA=="
      }
     ]
    },
@@ -4413,15 +4737,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/eslint-plugin-prettier_5.2.1_1721215870553_0.4006208339515469"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/eslint-plugin-prettier_5.2.3_1737245248577_0.7023219327346113"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-01-26T04:15:55.798Z",
-  "modified": "2024-07-17T11:31:10.916Z",
+  "modified": "2025-01-19T00:07:28.943Z",
   "1.0.0": "2017-01-26T04:15:55.798Z",
   "2.0.0": "2017-01-28T20:14:49.070Z",
   "2.0.1": "2017-02-26T05:49:09.422Z",
@@ -4462,7 +4786,9 @@
   "5.1.1": "2023-12-21T16:41:39.701Z",
   "5.1.2": "2023-12-24T05:25:47.611Z",
   "5.1.3": "2024-01-10T03:34:34.437Z",
-  "5.2.1": "2024-07-17T11:31:10.718Z"
+  "5.2.1": "2024-07-17T11:31:10.718Z",
+  "5.2.2": "2025-01-15T05:15:11.778Z",
+  "5.2.3": "2025-01-19T00:07:28.777Z"
  },
  "bugs": {
   "url": "https://github.com/prettier/eslint-plugin-prettier/issues"
@@ -4516,7 +4842,7 @@
    "email": "aosukeke@gmail.com"
   }
  ],
- "readme": "# eslint-plugin-prettier [![Build Status](https://github.com/prettier/eslint-plugin-prettier/workflows/CI/badge.svg?branch=master)](https://github.com/prettier/eslint-plugin-prettier/actions?query=workflow%3ACI+branch%3Amaster)\n\nRuns [Prettier](https://github.com/prettier/prettier) as an [ESLint](https://eslint.org) rule and reports differences as individual ESLint issues.\n\nIf your desired formatting does not match Prettier’s output, you should use a different tool such as [prettier-eslint](https://github.com/prettier/prettier-eslint) instead.\n\nPlease read [Integrating with linters](https://prettier.io/docs/en/integrating-with-linters.html) before installing.\n\n## TOC <!-- omit in toc -->\n\n- [Sample](#sample)\n- [Installation](#installation)\n- [Configuration (legacy: `.eslintrc*`)](#configuration-legacy-eslintrc)\n- [Configuration (new: `eslint.config.js`)](#configuration-new-eslintconfigjs)\n- [`Svelte` support](#svelte-support)\n- [`arrow-body-style` and `prefer-arrow-callback` issue](#arrow-body-style-and-prefer-arrow-callback-issue)\n- [Options](#options)\n- [Sponsors](#sponsors)\n- [Backers](#backers)\n- [Contributing](#contributing)\n- [Changelog](#changelog)\n- [License](#license)\n\n## Sample\n\n```js\nerror: Insert `,` (prettier/prettier) at pkg/commons-atom/ActiveEditorRegistry.js:22:25:\n  20 | import {\n  21 |   observeActiveEditorsDebounced,\n> 22 |   editorChangesDebounced\n     |                         ^\n  23 | } from './debounced';;\n  24 |\n  25 | import {observableFromSubscribeFunction} from '../commons-node/event';\n\n\nerror: Delete `;` (prettier/prettier) at pkg/commons-atom/ActiveEditorRegistry.js:23:21:\n  21 |   observeActiveEditorsDebounced,\n  22 |   editorChangesDebounced\n> 23 | } from './debounced';;\n     |                     ^\n  24 |\n  25 | import {observableFromSubscribeFunction} from '../commons-node/event';\n  26 | import {cacheWhileSubscribed} from '../commons-node/observable';\n\n\n2 errors found.\n```\n\n> `./node_modules/.bin/eslint --format codeframe pkg/commons-atom/ActiveEditorRegistry.js` (code from [nuclide](https://github.com/facebook/nuclide)).\n\n## Installation\n\n```sh\nnpm install --save-dev eslint-plugin-prettier eslint-config-prettier\nnpm install --save-dev --save-exact prettier\n```\n\n**_`eslint-plugin-prettier` does not install Prettier or ESLint for you._** _You must install these yourself._\n\nThis plugin works best if you disable all other ESLint rules relating to code formatting, and only enable rules that detect potential bugs. If another active ESLint rule disagrees with `prettier` about how code should be formatted, it will be impossible to avoid lint errors. Our recommended configuration automatically enables [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) to disable all formatting-related ESLint rules.\n\n## Configuration (legacy: `.eslintrc*`)\n\nFor [legacy configuration](https://eslint.org/docs/latest/use/configure/configuration-files), this plugin ships with a `plugin:prettier/recommended` config that sets up both `eslint-plugin-prettier` and [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) in one go.\n\nAdd `plugin:prettier/recommended` as the _last_ item in the extends array in your `.eslintrc*` config file, so that `eslint-config-prettier` has the opportunity to override other configs:\n\n```json\n{\n  \"extends\": [\"plugin:prettier/recommended\"]\n}\n```\n\nThis will:\n\n- Enable the `prettier/prettier` rule.\n- Disable the `arrow-body-style` and `prefer-arrow-callback` rules which are problematic with this plugin - see the below for why.\n- Enable the `eslint-config-prettier` config which will turn off ESLint rules that conflict with Prettier.\n\n## Configuration (new: `eslint.config.js`)\n\nFor [flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new), this plugin ships with an `eslint-plugin-prettier/recommended` config that sets up both `eslint-plugin-prettier` and [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) in one go.\n\nImport `eslint-plugin-prettier/recommended` and add it as the _last_ item in the configuration array in your `eslint.config.js` file so that `eslint-config-prettier` has the opportunity to override other configs:\n\n```js\nconst eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');\n\nmodule.exports = [\n  // Any other config imports go at the top\n  eslintPluginPrettierRecommended,\n];\n```\n\nThis will:\n\n- Enable the `prettier/prettier` rule.\n- Disable the `arrow-body-style` and `prefer-arrow-callback` rules which are problematic with this plugin - see the below for why.\n- Enable the `eslint-config-prettier` config which will turn off ESLint rules that conflict with Prettier.\n\n## `Svelte` support\n\nWe recommend to use [`eslint-plugin-svelte`](https://github.com/ota-meshi/eslint-plugin-svelte) instead of [`eslint-plugin-svelte3`](https://github.com/sveltejs/eslint-plugin-svelte3) because `eslint-plugin-svelte` has a correct [`eslint-svelte-parser`](https://github.com/ota-meshi/svelte-eslint-parser) instead of hacking.\n\nWhen use with `eslint-plugin-svelte3`, `eslint-plugin-prettier` will just ignore the text passed by `eslint-plugin-svelte3`, because the text has been modified.\n\nIf you still decide to use `eslint-plugin-svelte3`, you'll need to run `prettier --write *.svelte` manually.\n\n## `arrow-body-style` and `prefer-arrow-callback` issue\n\nIf you use [arrow-body-style](https://eslint.org/docs/rules/arrow-body-style) or [prefer-arrow-callback](https://eslint.org/docs/rules/prefer-arrow-callback) together with the `prettier/prettier` rule from this plugin, you can in some cases end up with invalid code due to a bug in ESLint’s autofix – see [issue #65](https://github.com/prettier/eslint-plugin-prettier/issues/65).\n\nFor this reason, it’s recommended to turn off these rules. The `plugin:prettier/recommended` config does that for you.\n\nYou _can_ still use these rules together with this plugin if you want, because the bug does not occur _all the time._ But if you do, you need to keep in mind that you might end up with invalid code, where you manually have to insert a missing closing parenthesis to get going again.\n\nIf you’re fixing large of amounts of previously unformatted code, consider temporarily disabling the `prettier/prettier` rule and running `eslint --fix` and `prettier --write` separately.\n\n## Options\n\n> Note: While it is possible to pass options to Prettier via your ESLint configuration file, it is not recommended because editor extensions such as `prettier-atom` and `prettier-vscode` **will** read [`.prettierrc`](https://prettier.io/docs/en/configuration.html), but **won't** read settings from ESLint, which can lead to an inconsistent experience.\n\n- The first option:\n\n  - An object representing [options](https://prettier.io/docs/en/options.html) that will be passed into prettier. Example:\n\n    ```json\n    {\n      \"prettier/prettier\": [\n        \"error\",\n        {\n          \"singleQuote\": true,\n          \"parser\": \"flow\"\n        }\n      ]\n    }\n    ```\n\n    NB: This option will merge and override any config set with `.prettierrc` files\n\n- The second option:\n\n  - An object with the following options\n\n    - `usePrettierrc`: Enables loading of the Prettier configuration file, (default: `true`). May be useful if you are using multiple tools that conflict with each other, or do not wish to mix your ESLint settings with your Prettier configuration. And also, it is possible to run prettier without loading the prettierrc config file [via the CLI's --no-config option](https://prettier.io/docs/en/cli.html#--no-config) or through the API by [calling prettier.format() without passing through the options generated by calling resolveConfig](https://prettier.io/docs/en/api.html#prettierresolveconfigfilepath--options).\n\n      ```json\n      {\n        \"prettier/prettier\": [\n          \"error\",\n          {},\n          {\n            \"usePrettierrc\": false\n          }\n        ]\n      }\n      ```\n\n    - `fileInfoOptions`: Options that are passed to [prettier.getFileInfo](https://prettier.io/docs/en/api.html#prettiergetfileinfofilepath--options) to decide whether a file needs to be formatted. Can be used for example to opt-out from ignoring files located in `node_modules` directories.\n\n      ```json\n      {\n        \"prettier/prettier\": [\n          \"error\",\n          {},\n          {\n            \"fileInfoOptions\": {\n              \"withNodeModules\": true\n            }\n          }\n        ]\n      }\n      ```\n\n- The rule is auto fixable -- if you run `eslint` with the `--fix` flag, your code will be formatted according to `prettier` style.\n\n---\n\n## Sponsors\n\n| @prettier/plugin-eslint                                                                                                                                                        | eslint-config-prettier                                                                                                                                                       | eslint-plugin-prettier                                                                                                                                     | prettier-eslint                                                                                                                                          | prettier-eslint-cli                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [![@prettier/plugin-eslint Open Collective sponsors](https://opencollective.com/prettier-plugin-eslint/tiers/sponsors.svg)](https://opencollective.com/prettier-plugin-eslint) | [![eslint-config-prettier Open Collective backers](https://opencollective.com/eslint-config-prettier/tiers/sponsors.svg)](https://opencollective.com/eslint-config-prettier) | [![eslint-plugin-prettier Open Collective backers](https://opencollective.com/eslint-plugin-prettier/tiers/sponsors.svg)](https://opencollective.com/rxts) | [![prettier-eslint Open Collective sponsors](https://opencollective.com/prettier-eslint/tiers/sponsors.svg)](https://opencollective.com/prettier-eslint) | [![prettier-eslint-cli Open Collective backers](https://opencollective.com/prettier-eslint-cli/tiers/sponsors.svg)](https://opencollective.com/prettier-eslint-cli) |\n\n## Backers\n\n| @prettier/plugin-eslint                                                                                                                                                      | eslint-config-prettier                                                                                                                                                      | eslint-plugin-prettier                                                                                                                                    | prettier-eslint                                                                                                                                        | prettier-eslint-cli                                                                                                                                                |\n| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| [![@prettier/plugin-eslint Open Collective backers](https://opencollective.com/prettier-plugin-eslint/tiers/backers.svg)](https://opencollective.com/prettier-plugin-eslint) | [![eslint-config-prettier Open Collective backers](https://opencollective.com/eslint-config-prettier/tiers/backers.svg)](https://opencollective.com/eslint-config-prettier) | [![eslint-plugin-prettier Open Collective backers](https://opencollective.com/eslint-plugin-prettier/tiers/backers.svg)](https://opencollective.com/rxts) | [![prettier-eslint Open Collective backers](https://opencollective.com/prettier-eslint/tiers/backers.svg)](https://opencollective.com/prettier-eslint) | [![prettier-eslint-cli Open Collective backers](https://opencollective.com/prettier-eslint-cli/tiers/backers.svg)](https://opencollective.com/prettier-eslint-cli) |\n\n## Contributing\n\nSee [CONTRIBUTING.md](https://github.com/prettier/eslint-plugin-prettier/blob/master/CONTRIBUTING.md)\n\n## Changelog\n\nDetailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.md).\n\n## License\n\n[MIT](http://opensource.org/licenses/MIT)\n",
+ "readme": "# eslint-plugin-prettier [![Build Status](https://github.com/prettier/eslint-plugin-prettier/workflows/CI/badge.svg?branch=master)](https://github.com/prettier/eslint-plugin-prettier/actions?query=workflow%3ACI+branch%3Amaster)\n\nRuns [Prettier](https://github.com/prettier/prettier) as an [ESLint](https://eslint.org) rule and reports differences as individual ESLint issues.\n\nIf your desired formatting does not match Prettier’s output, you should use a different tool such as [prettier-eslint](https://github.com/prettier/prettier-eslint) instead.\n\nPlease read [Integrating with linters](https://prettier.io/docs/en/integrating-with-linters.html) before installing.\n\n## TOC <!-- omit in toc -->\n\n- [Sample](#sample)\n- [Installation](#installation)\n- [Configuration (legacy: `.eslintrc*`)](#configuration-legacy-eslintrc)\n- [Configuration (new: `eslint.config.js`)](#configuration-new-eslintconfigjs)\n- [`Svelte` support](#svelte-support)\n- [`arrow-body-style` and `prefer-arrow-callback` issue](#arrow-body-style-and-prefer-arrow-callback-issue)\n- [Options](#options)\n- [Sponsors](#sponsors)\n- [Backers](#backers)\n- [Contributing](#contributing)\n- [Changelog](#changelog)\n- [License](#license)\n\n## Sample\n\n```js\nerror: Insert `,` (prettier/prettier) at pkg/commons-atom/ActiveEditorRegistry.js:22:25:\n  20 | import {\n  21 |   observeActiveEditorsDebounced,\n> 22 |   editorChangesDebounced\n     |                         ^\n  23 | } from './debounced';;\n  24 |\n  25 | import {observableFromSubscribeFunction} from '../commons-node/event';\n\n\nerror: Delete `;` (prettier/prettier) at pkg/commons-atom/ActiveEditorRegistry.js:23:21:\n  21 |   observeActiveEditorsDebounced,\n  22 |   editorChangesDebounced\n> 23 | } from './debounced';;\n     |                     ^\n  24 |\n  25 | import {observableFromSubscribeFunction} from '../commons-node/event';\n  26 | import {cacheWhileSubscribed} from '../commons-node/observable';\n\n\n2 errors found.\n```\n\n> `./node_modules/.bin/eslint --format codeframe pkg/commons-atom/ActiveEditorRegistry.js` (code from [nuclide](https://github.com/facebook/nuclide)).\n\n## Installation\n\n```sh\nnpm install --save-dev eslint-plugin-prettier eslint-config-prettier\nnpm install --save-dev --save-exact prettier\n```\n\n**_`eslint-plugin-prettier` does not install Prettier or ESLint for you._** _You must install these yourself._\n\nThis plugin works best if you disable all other ESLint rules relating to code formatting, and only enable rules that detect potential bugs. If another active ESLint rule disagrees with `prettier` about how code should be formatted, it will be impossible to avoid lint errors. Our recommended configuration automatically enables [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) to disable all formatting-related ESLint rules.\n\n## Configuration (legacy: `.eslintrc*`)\n\nFor [legacy configuration](https://eslint.org/docs/latest/use/configure/configuration-files-deprecated), this plugin ships with a `plugin:prettier/recommended` config that sets up both `eslint-plugin-prettier` and [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) in one go.\n\nAdd `plugin:prettier/recommended` as the _last_ item in the extends array in your `.eslintrc*` config file, so that `eslint-config-prettier` has the opportunity to override other configs:\n\n```json\n{\n  \"extends\": [\"plugin:prettier/recommended\"]\n}\n```\n\nThis will:\n\n- Enable the `prettier/prettier` rule.\n- Disable the `arrow-body-style` and `prefer-arrow-callback` rules which are problematic with this plugin - see the below for why.\n- Enable the `eslint-config-prettier` config which will turn off ESLint rules that conflict with Prettier.\n\n## Configuration (new: `eslint.config.js`)\n\nFor [flat configuration](https://eslint.org/docs/latest/use/configure/configuration-files-new), this plugin ships with an `eslint-plugin-prettier/recommended` config that sets up both `eslint-plugin-prettier` and [`eslint-config-prettier`](https://github.com/prettier/eslint-config-prettier) in one go.\n\nImport `eslint-plugin-prettier/recommended` and add it as the _last_ item in the configuration array in your `eslint.config.js` file so that `eslint-config-prettier` has the opportunity to override other configs:\n\n```js\nconst eslintPluginPrettierRecommended = require('eslint-plugin-prettier/recommended');\n\nmodule.exports = [\n  // Any other config imports go at the top\n  eslintPluginPrettierRecommended,\n];\n```\n\nThis will:\n\n- Enable the `prettier/prettier` rule.\n- Disable the `arrow-body-style` and `prefer-arrow-callback` rules which are problematic with this plugin - see the below for why.\n- Enable the `eslint-config-prettier` config which will turn off ESLint rules that conflict with Prettier.\n\n## `Svelte` support\n\nWe recommend to use [`eslint-plugin-svelte`](https://github.com/ota-meshi/eslint-plugin-svelte) instead of [`eslint-plugin-svelte3`](https://github.com/sveltejs/eslint-plugin-svelte3) because `eslint-plugin-svelte` has a correct [`eslint-svelte-parser`](https://github.com/ota-meshi/svelte-eslint-parser) instead of hacking.\n\nWhen use with `eslint-plugin-svelte3`, `eslint-plugin-prettier` will just ignore the text passed by `eslint-plugin-svelte3`, because the text has been modified.\n\nIf you still decide to use `eslint-plugin-svelte3`, you'll need to run `prettier --write *.svelte` manually.\n\n## `arrow-body-style` and `prefer-arrow-callback` issue\n\nIf you use [arrow-body-style](https://eslint.org/docs/rules/arrow-body-style) or [prefer-arrow-callback](https://eslint.org/docs/rules/prefer-arrow-callback) together with the `prettier/prettier` rule from this plugin, you can in some cases end up with invalid code due to a bug in ESLint’s autofix – see [issue #65](https://github.com/prettier/eslint-plugin-prettier/issues/65).\n\nFor this reason, it’s recommended to turn off these rules. The `plugin:prettier/recommended` config does that for you.\n\nYou _can_ still use these rules together with this plugin if you want, because the bug does not occur _all the time._ But if you do, you need to keep in mind that you might end up with invalid code, where you manually have to insert a missing closing parenthesis to get going again.\n\nIf you’re fixing large of amounts of previously unformatted code, consider temporarily disabling the `prettier/prettier` rule and running `eslint --fix` and `prettier --write` separately.\n\n## Options\n\n> Note: While it is possible to pass options to Prettier via your ESLint configuration file, it is not recommended because editor extensions such as `prettier-atom` and `prettier-vscode` **will** read [`.prettierrc`](https://prettier.io/docs/en/configuration.html), but **won't** read settings from ESLint, which can lead to an inconsistent experience.\n\n- The first option:\n\n  - An object representing [options](https://prettier.io/docs/en/options.html) that will be passed into prettier. Example:\n\n    ```json\n    {\n      \"prettier/prettier\": [\n        \"error\",\n        {\n          \"singleQuote\": true,\n          \"parser\": \"flow\"\n        }\n      ]\n    }\n    ```\n\n    NB: This option will merge and override any config set with `.prettierrc` files\n\n- The second option:\n\n  - An object with the following options\n\n    - `usePrettierrc`: Enables loading of the Prettier configuration file, (default: `true`). May be useful if you are using multiple tools that conflict with each other, or do not wish to mix your ESLint settings with your Prettier configuration. And also, it is possible to run prettier without loading the prettierrc config file [via the CLI's --no-config option](https://prettier.io/docs/en/cli.html#--no-config) or through the API by [calling prettier.format() without passing through the options generated by calling resolveConfig](https://prettier.io/docs/en/api.html#prettierresolveconfigfilepath--options).\n\n      ```json\n      {\n        \"prettier/prettier\": [\n          \"error\",\n          {},\n          {\n            \"usePrettierrc\": false\n          }\n        ]\n      }\n      ```\n\n    - `fileInfoOptions`: Options that are passed to [prettier.getFileInfo](https://prettier.io/docs/en/api.html#prettiergetfileinfofilepath--options) to decide whether a file needs to be formatted. Can be used for example to opt-out from ignoring files located in `node_modules` directories.\n\n      ```json\n      {\n        \"prettier/prettier\": [\n          \"error\",\n          {},\n          {\n            \"fileInfoOptions\": {\n              \"withNodeModules\": true\n            }\n          }\n        ]\n      }\n      ```\n\n- The rule is auto fixable -- if you run `eslint` with the `--fix` flag, your code will be formatted according to `prettier` style.\n\n---\n\n## Sponsors\n\n| @prettier/plugin-eslint                                                                                                                                                        | eslint-config-prettier                                                                                                                                                       | eslint-plugin-prettier                                                                                                                                     | prettier-eslint                                                                                                                                          | prettier-eslint-cli                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| [![@prettier/plugin-eslint Open Collective sponsors](https://opencollective.com/prettier-plugin-eslint/tiers/sponsors.svg)](https://opencollective.com/prettier-plugin-eslint) | [![eslint-config-prettier Open Collective backers](https://opencollective.com/eslint-config-prettier/tiers/sponsors.svg)](https://opencollective.com/eslint-config-prettier) | [![eslint-plugin-prettier Open Collective backers](https://opencollective.com/eslint-plugin-prettier/tiers/sponsors.svg)](https://opencollective.com/rxts) | [![prettier-eslint Open Collective sponsors](https://opencollective.com/prettier-eslint/tiers/sponsors.svg)](https://opencollective.com/prettier-eslint) | [![prettier-eslint-cli Open Collective backers](https://opencollective.com/prettier-eslint-cli/tiers/sponsors.svg)](https://opencollective.com/prettier-eslint-cli) |\n\n## Backers\n\n| @prettier/plugin-eslint                                                                                                                                                      | eslint-config-prettier                                                                                                                                                      | eslint-plugin-prettier                                                                                                                                    | prettier-eslint                                                                                                                                        | prettier-eslint-cli                                                                                                                                                |\n| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |\n| [![@prettier/plugin-eslint Open Collective backers](https://opencollective.com/prettier-plugin-eslint/tiers/backers.svg)](https://opencollective.com/prettier-plugin-eslint) | [![eslint-config-prettier Open Collective backers](https://opencollective.com/eslint-config-prettier/tiers/backers.svg)](https://opencollective.com/eslint-config-prettier) | [![eslint-plugin-prettier Open Collective backers](https://opencollective.com/eslint-plugin-prettier/tiers/backers.svg)](https://opencollective.com/rxts) | [![prettier-eslint Open Collective backers](https://opencollective.com/prettier-eslint/tiers/backers.svg)](https://opencollective.com/prettier-eslint) | [![prettier-eslint-cli Open Collective backers](https://opencollective.com/prettier-eslint-cli/tiers/backers.svg)](https://opencollective.com/prettier-eslint-cli) |\n\n## Contributing\n\nSee [CONTRIBUTING.md](https://github.com/prettier/eslint-plugin-prettier/blob/master/CONTRIBUTING.md)\n\n## Changelog\n\nDetailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.md).\n\n## License\n\n[MIT](http://opensource.org/licenses/MIT)\n",
  "readmeFilename": "README.md",
  "users": {
   "azz": true,
