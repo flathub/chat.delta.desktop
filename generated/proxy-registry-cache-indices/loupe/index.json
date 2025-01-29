@@ -1,9 +1,9 @@
 {
  "_id": "loupe",
- "_rev": "59-e0b0961986338cfe47d136bcb4ba2f70",
+ "_rev": "60-f276eb7f58237ad8c51faad0904ffaf6",
  "name": "loupe",
  "dist-tags": {
-  "latest": "3.1.2"
+  "latest": "3.1.3"
  },
  "versions": {
   "0.0.1": {
@@ -5058,6 +5058,174 @@
   "3.1.2": {
    "name": "loupe",
    "version": "3.1.2",
+   "author": {
+    "name": "Veselin Todorov",
+    "email": "hi@vesln.com"
+   },
+   "license": "MIT",
+   "_id": "loupe@3.1.2",
+   "maintainers": [
+    {
+     "name": "chaijs",
+     "email": "chaijs@keithcirkel.co.uk"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "https://github.com/keithamus",
+     "name": "Keith Cirkel"
+    }
+   ],
+   "homepage": "https://github.com/chaijs/loupe",
+   "bugs": {
+    "url": "https://github.com/chaijs/loupe/issues"
+   },
+   "dist": {
+    "shasum": "c86e0696804a02218f2206124c45d8b15291a240",
+    "tarball": "http://localhost:3000/loupe/-/loupe-3.1.2.tgz",
+    "fileCount": 64,
+    "integrity": "sha512-23I4pFZHmAemUnz8WZXbYRSKYj801VDaNv9ETuMh7IrMc7VuVVSo+Z9iLE3ni30+U48iDWfi30d3twAXBYmnCg==",
+    "signatures": [
+     {
+      "sig": "MEQCIFsJ7Hoi98JiIuCzn3Vh55m7TbZ8ZtOgpDOhzt6bMpNWAiB0gVJTII0HnDf0zaMz7i399ijxYE2GcTJX2jYczg2E1w==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/loupe@3.1.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 60721
+   },
+   "main": "./lib/index.js",
+   "type": "module",
+   "types": "./lib/index.d.ts",
+   "module": "./lib/index.js",
+   "browser": {
+    "util": false,
+    "./index.js": "./loupe.js"
+   },
+   "gitHead": "983691f2b9debbf3c1a468365f5091f9a6d659dc",
+   "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "npm run test:node && npm run test:browser",
+    "bench": "node bench",
+    "build": "npm run build:lib && npm run build:esm-bundle && npm run build:cjs-bundle",
+    "build:lib": "tsc",
+    "test:node": "mocha",
+    "pretest:node": "npm run build",
+    "test:browser": "wtr",
+    "pretest:browser": "npx playwright install && npm run build",
+    "upload-coverage": "codecov",
+    "build:cjs-bundle": "esbuild --bundle src/index.ts --outfile=loupe.js --format=cjs",
+    "build:esm-bundle": "esbuild --bundle src/index.ts --outfile=loupe.js --format=esm",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+   },
+   "_npmUser": {
+    "name": "chaijs",
+    "email": "chaijs@keithcirkel.co.uk"
+   },
+   "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "printWidth": 120,
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "bracketSpacing": true
+   },
+   "repository": {
+    "url": "git+https://github.com/chaijs/loupe.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "Inspect utility for Node.js and browsers",
+   "directories": {},
+   "_nodeVersion": "18.20.4",
+   "eslintConfig": {
+    "env": {
+     "es6": true
+    },
+    "root": true,
+    "rules": {
+     "semi": [
+      "error",
+      "never"
+     ],
+     "curly": "off",
+     "quotes": "off",
+     "func-style": "off",
+     "arrow-parens": "off",
+     "comma-dangle": "off",
+     "id-blacklist": "off",
+     "no-magic-numbers": "off",
+     "prettier/prettier": [
+      "error",
+      {
+       "semi": false,
+       "useTabs": false,
+       "tabWidth": 2,
+       "printWidth": 120,
+       "arrowParens": "avoid",
+       "singleQuote": true,
+       "trailingComma": "es5",
+       "bracketSpacing": true
+      }
+     ],
+     "no-mixed-operators": "off",
+     "prefer-destructuring": "off",
+     "array-bracket-spacing": "off",
+     "array-element-newline": "off",
+     "class-methods-use-this": "off",
+     "generator-star-spacing": "off",
+     "template-curly-spacing": "off",
+     "space-before-function-paren": "off"
+    },
+    "extends": [
+     "strict/es6"
+    ],
+    "plugins": [
+     "filenames",
+     "prettier"
+    ],
+    "parserOptions": {
+     "ecmaVersion": 2020
+    }
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^5.0.0-alpha.0",
+    "husky": "^4.3.8",
+    "mocha": "^10.2.0",
+    "eslint": "^7.18.0",
+    "codecov": "^3.8.1",
+    "core-js": "^3.8.3",
+    "esbuild": "^0.19.5",
+    "prettier": "^2.2.1",
+    "benchmark": "^2.1.4",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.0.0-beta",
+    "simple-assert": "^1.0.0",
+    "@web/test-runner": "^0.17.2",
+    "semantic-release": "^17.3.6",
+    "eslint-config-strict": "^14.0.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "@web/dev-server-esbuild": "^0.4.2",
+    "eslint-plugin-filenames": "^1.3.2",
+    "@web/test-runner-playwright": "^0.10.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/loupe_3.1.2_1728294596132_0.6894313854092278",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.1.3": {
+   "name": "loupe",
+   "version": "3.1.3",
    "description": "Inspect utility for Node.js and browsers",
    "homepage": "https://github.com/chaijs/loupe",
    "license": "MIT",
@@ -5084,10 +5252,10 @@
    },
    "scripts": {
     "bench": "node bench",
-    "lint": "eslint --ignore-path .gitignore .",
+    "lint": "eslint .",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "test": "npm run test:node && npm run test:browser",
-    "pretest:browser": "npx playwright install && npm run build",
+    "pretest:browser": "npx playwright install-deps && npx playwright install && npm run build",
     "test:browser": "wtr",
     "pretest:node": "npm run build",
     "test:node": "mocha",
@@ -5096,56 +5264,6 @@
     "build:esm-bundle": "esbuild --bundle src/index.ts --outfile=loupe.js --format=esm",
     "build:cjs-bundle": "esbuild --bundle src/index.ts --outfile=loupe.js --format=cjs",
     "upload-coverage": "codecov"
-   },
-   "eslintConfig": {
-    "root": true,
-    "parserOptions": {
-     "ecmaVersion": 2020
-    },
-    "env": {
-     "es6": true
-    },
-    "plugins": [
-     "filenames",
-     "prettier"
-    ],
-    "extends": [
-     "strict/es6"
-    ],
-    "rules": {
-     "comma-dangle": "off",
-     "func-style": "off",
-     "no-magic-numbers": "off",
-     "class-methods-use-this": "off",
-     "array-bracket-spacing": "off",
-     "array-element-newline": "off",
-     "space-before-function-paren": "off",
-     "arrow-parens": "off",
-     "template-curly-spacing": "off",
-     "quotes": "off",
-     "generator-star-spacing": "off",
-     "prefer-destructuring": "off",
-     "no-mixed-operators": "off",
-     "id-blacklist": "off",
-     "curly": "off",
-     "semi": [
-      "error",
-      "never"
-     ],
-     "prettier/prettier": [
-      "error",
-      {
-       "printWidth": 120,
-       "tabWidth": 2,
-       "useTabs": false,
-       "semi": false,
-       "singleQuote": true,
-       "trailingComma": "es5",
-       "arrowParens": "avoid",
-       "bracketSpacing": true
-      }
-     ]
-    }
    },
    "prettier": {
     "printWidth": 120,
@@ -5158,51 +5276,51 @@
     "bracketSpacing": true
    },
    "devDependencies": {
-    "@web/dev-server-esbuild": "^0.4.2",
-    "@web/test-runner": "^0.17.2",
-    "@web/test-runner-playwright": "^0.10.1",
+    "@web/dev-server-esbuild": "^1.0.3",
+    "@web/test-runner": "^0.19.0",
+    "@web/test-runner-playwright": "^0.11.0",
     "benchmark": "^2.1.4",
     "chai": "^5.0.0-alpha.0",
-    "codecov": "^3.8.1",
+    "codecov": "^3.8.3",
     "core-js": "^3.8.3",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.19.5",
-    "eslint": "^7.18.0",
+    "esbuild": "^0.24.2",
+    "eslint": "^9.19.0",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-config-strict": "^14.0.1",
     "eslint-plugin-filenames": "^1.3.2",
-    "eslint-plugin-prettier": "^3.3.1",
-    "husky": "^4.3.8",
-    "mocha": "^10.2.0",
-    "nyc": "^15.1.0",
-    "prettier": "^2.2.1",
-    "semantic-release": "^17.3.6",
-    "simple-assert": "^1.0.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "husky": "^9.1.7",
+    "mocha": "^11.1.0",
+    "nyc": "^17.1.0",
+    "prettier": "^3.0.0",
+    "simple-assert": "^2.0.0",
     "typescript": "^5.0.0-beta"
    },
-   "_id": "loupe@3.1.2",
-   "gitHead": "983691f2b9debbf3c1a468365f5091f9a6d659dc",
+   "_id": "loupe@3.1.3",
+   "gitHead": "6531c62f4503b01c6911f765ff4cb67efd98722f",
    "types": "./lib/index.d.ts",
    "bugs": {
     "url": "https://github.com/chaijs/loupe/issues"
    },
-   "_nodeVersion": "18.20.4",
-   "_npmVersion": "10.7.0",
+   "_nodeVersion": "22.13.1",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-23I4pFZHmAemUnz8WZXbYRSKYj801VDaNv9ETuMh7IrMc7VuVVSo+Z9iLE3ni30+U48iDWfi30d3twAXBYmnCg==",
-    "shasum": "c86e0696804a02218f2206124c45d8b15291a240",
-    "tarball": "http://localhost:3000/loupe/-/loupe-3.1.2.tgz",
+    "integrity": "sha512-kkIp7XSkP78ZxJEsSxW3712C6teJVoeHHwgo9zJ380de7IYyJ2ISlxojcH2pC5OFLewESmnRi/+XCDIEEVyoug==",
+    "shasum": "042a8f7986d77f3d0f98ef7990a2b2fef18b0fd2",
+    "tarball": "http://localhost:3000/loupe/-/loupe-3.1.3.tgz",
     "fileCount": 64,
-    "unpackedSize": 60721,
+    "unpackedSize": 59533,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/loupe@3.1.2",
+     "url": "http://localhost:3000/-/npm/v1/attestations/loupe@3.1.3",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
     },
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIFsJ7Hoi98JiIuCzn3Vh55m7TbZ8ZtOgpDOhzt6bMpNWAiB0gVJTII0HnDf0zaMz7i399ijxYE2GcTJX2jYczg2E1w=="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEQCIEmyuvUFqOCRACSZyPX/7jFccpnc3rfJE9UY1kzqXVBFAiBVkXG+uWsC1dJktrYTBk2ZrHJEVarR1vGE25FVKHHy/A=="
      }
     ]
    },
@@ -5218,15 +5336,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/loupe_3.1.2_1728294596132_0.6894313854092278"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/loupe_3.1.3_1738071861899_0.1295980700109005"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2013-12-17T12:37:05.737Z",
-  "modified": "2024-10-07T09:49:56.689Z",
+  "modified": "2025-01-28T13:44:22.556Z",
   "0.0.1": "2013-12-17T12:37:09.405Z",
   "1.0.0": "2020-04-22T10:32:43.680Z",
   "1.0.1": "2020-04-22T11:48:49.508Z",
@@ -5256,7 +5374,8 @@
   "3.0.2": "2023-12-29T20:12:49.951Z",
   "3.1.0": "2024-01-08T09:11:04.298Z",
   "3.1.1": "2024-05-11T13:28:24.758Z",
-  "3.1.2": "2024-10-07T09:49:56.282Z"
+  "3.1.2": "2024-10-07T09:49:56.282Z",
+  "3.1.3": "2025-01-28T13:44:22.111Z"
  },
  "bugs": {
   "url": "https://github.com/chaijs/loupe/issues"
