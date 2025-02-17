@@ -1,9 +1,9 @@
 {
  "_id": "globals",
- "_rev": "159-7bd33fb12ab22a12d9dd479ca105a1c2",
+ "_rev": "160-b5cc7a0b035217db932388b92614ce6a",
  "name": "globals",
  "dist-tags": {
-  "latest": "15.14.0"
+  "latest": "15.15.0"
  },
  "versions": {
   "0.1.0": {
@@ -11444,6 +11444,154 @@
   "15.14.0": {
    "name": "globals",
    "version": "15.14.0",
+   "keywords": [
+    "globals",
+    "global",
+    "identifiers",
+    "variables",
+    "vars",
+    "jshint",
+    "eslint",
+    "environments"
+   ],
+   "author": {
+    "url": "https://sindresorhus.com",
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com"
+   },
+   "license": "MIT",
+   "_id": "globals@15.14.0",
+   "maintainers": [
+    {
+     "name": "byk",
+     "email": "ben@byk.im"
+    },
+    {
+     "name": "nzakas",
+     "email": "nicholas@nczconsulting.com"
+    },
+    {
+     "name": "lo1tuma",
+     "email": "schreck.mathias@gmail.com"
+    },
+    {
+     "name": "sindresorhus",
+     "email": "sindresorhus@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/sindresorhus/globals#readme",
+   "bugs": {
+    "url": "https://github.com/sindresorhus/globals/issues"
+   },
+   "xo": {
+    "rules": {
+     "unicorn/prefer-module": "off"
+    },
+    "overrides": [
+     {
+      "files": [
+       "data/*.mjs"
+      ],
+      "rules": {
+       "camelcase": "off",
+       "unicorn/filename-case": [
+        "error",
+        {
+         "cases": {
+          "camelCase": true,
+          "kebabCase": true
+         }
+        }
+       ],
+       "import/no-anonymous-default-export": "off"
+      }
+     },
+     {
+      "files": [
+       "scripts/*.mjs"
+      ],
+      "rules": {
+       "n/no-unsupported-features/node-builtins": "off"
+      }
+     }
+    ]
+   },
+   "tsd": {
+    "compilerOptions": {
+     "resolveJsonModule": true
+    }
+   },
+   "dist": {
+    "shasum": "b8fd3a8941ff3b4d38f3319d433b61bbb482e73f",
+    "tarball": "http://localhost:3000/globals/-/globals-15.14.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-OkToC372DtlQeje9/zHIo5CT8lRP/FUgEOKBEhU4e0abL7J7CD24fD9ohiLN5hagG/kWCYj4K5oaxxtj2Z0Dig==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCALtJ07Mf6RlSXbZrfTKJHiFtB17xTCh+GuTFY05QTiAIgWSwgVNslOcecH99dLbwvnIU7ivPUdvS1kepM5twjaDE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 177168
+   },
+   "types": "./index.d.ts",
+   "engines": {
+    "node": ">=18"
+   },
+   "funding": "https://github.com/sponsors/sindresorhus",
+   "gitHead": "48c7b51a8fb284142f88fe34ada7558c0531c44f",
+   "scripts": {
+    "test": "npm run build && xo && ava && tsd",
+    "build": "run-s build:data build:types",
+    "update": "node scripts/update.mjs",
+    "prepare": "npm run build",
+    "build:data": "node scripts/generate-data.mjs",
+    "build:types": "node scripts/generate-types.mjs",
+    "update:jest": "node scripts/update.mjs --environment=jest",
+    "update:vitest": "node scripts/update.mjs --environment=vitest",
+    "update:worker": "node scripts/update.mjs --environment=worker",
+    "update:browser": "node scripts/update.mjs --environment=browser",
+    "update:builtin": "node scripts/update.mjs --environment=builtin",
+    "update:shelljs": "node scripts/update.mjs --environment=shelljs",
+    "update:nodeBuiltin": "node scripts/update.mjs --environment=nodeBuiltin"
+   },
+   "_npmUser": {
+    "name": "sindresorhus",
+    "email": "sindresorhus@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/sindresorhus/globals.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Global identifiers from different JavaScript environments",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "23.3.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.59.3",
+    "ava": "^6.1.3",
+    "tsd": "^0.31.2",
+    "execa": "^9.4.0",
+    "cheerio": "^1.0.0-rc.12",
+    "outdent": "^0.8.0",
+    "shelljs": "^0.8.5",
+    "get-port": "^7.1.0",
+    "puppeteer": "^23.4.1",
+    "type-fest": "^4.26.1",
+    "npm-run-all2": "^6.2.3",
+    "eslint-plugin-jest": "^28.8.3",
+    "@vitest/eslint-plugin": "^1.1.18"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/globals_15.14.0_1734529161640_0.8342660028218161",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "15.15.0": {
+   "name": "globals",
+   "version": "15.15.0",
    "description": "Global identifiers from different JavaScript environments",
    "license": "MIT",
    "repository": {
@@ -11486,7 +11634,7 @@
     "environments"
    ],
    "devDependencies": {
-    "@vitest/eslint-plugin": "^1.1.18",
+    "@vitest/eslint-plugin": "^1.1.30",
     "ava": "^6.1.3",
     "cheerio": "^1.0.0-rc.12",
     "eslint-plugin-jest": "^28.8.3",
@@ -11538,25 +11686,25 @@
      "resolveJsonModule": true
     }
    },
-   "_id": "globals@15.14.0",
-   "gitHead": "48c7b51a8fb284142f88fe34ada7558c0531c44f",
+   "_id": "globals@15.15.0",
+   "gitHead": "8a43ab65056483c0248c7be3a69fdb2866d859a2",
    "types": "./index.d.ts",
    "bugs": {
     "url": "https://github.com/sindresorhus/globals/issues"
    },
    "homepage": "https://github.com/sindresorhus/globals#readme",
-   "_nodeVersion": "23.3.0",
-   "_npmVersion": "10.9.0",
+   "_nodeVersion": "23.6.1",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-OkToC372DtlQeje9/zHIo5CT8lRP/FUgEOKBEhU4e0abL7J7CD24fD9ohiLN5hagG/kWCYj4K5oaxxtj2Z0Dig==",
-    "shasum": "b8fd3a8941ff3b4d38f3319d433b61bbb482e73f",
-    "tarball": "http://localhost:3000/globals/-/globals-15.14.0.tgz",
+    "integrity": "sha512-7ACyT3wmyp3I61S4fG682L0VA2RGD9otkqGJIwNUMF1SWUombIIk+af1unuDYgMm082aHYwD+mzJvv9Iu8dsgg==",
+    "shasum": "7c4761299d41c32b075715a4ce1ede7897ff72a8",
+    "tarball": "http://localhost:3000/globals/-/globals-15.15.0.tgz",
     "fileCount": 6,
-    "unpackedSize": 177168,
+    "unpackedSize": 177210,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCALtJ07Mf6RlSXbZrfTKJHiFtB17xTCh+GuTFY05QTiAIgWSwgVNslOcecH99dLbwvnIU7ivPUdvS1kepM5twjaDE="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIDyW2gFh7KsdNpYWM/ML/n9gZxFIa4obPYmDdNETQvntAiEA5PkDb9E4XHxx9TQeX89jS3ZIUJ1HwC3yo+1oK6hxung="
      }
     ]
    },
@@ -11585,14 +11733,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/globals_15.14.0_1734529161640_0.8342660028218161"
+    "tmp": "tmp/globals_15.15.0_1739381982628_0.9255572691326406"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2012-11-03T11:51:05.078Z",
-  "modified": "2024-12-18T13:39:21.967Z",
+  "modified": "2025-02-12T17:39:43.016Z",
   "0.0.1": "2012-11-03T11:51:19.754Z",
   "0.1.0": "2013-12-16T07:42:25.762Z",
   "0.1.1": "2014-04-30T22:22:18.536Z",
@@ -11715,7 +11863,8 @@
   "15.11.0": "2024-10-09T06:00:37.810Z",
   "15.12.0": "2024-11-04T11:02:51.472Z",
   "15.13.0": "2024-12-01T18:46:22.134Z",
-  "15.14.0": "2024-12-18T13:39:21.831Z"
+  "15.14.0": "2024-12-18T13:39:21.831Z",
+  "15.15.0": "2025-02-12T17:39:42.810Z"
  },
  "bugs": {
   "url": "https://github.com/sindresorhus/globals/issues"

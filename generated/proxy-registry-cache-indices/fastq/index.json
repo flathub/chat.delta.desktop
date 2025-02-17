@@ -1,9 +1,9 @@
 {
  "_id": "fastq",
- "_rev": "35-f1e931de127e4089a466e49e28309a58",
+ "_rev": "36-fc99710b134210bc6598b7a2e6702d63",
  "name": "fastq",
  "dist-tags": {
-  "latest": "1.18.0"
+  "latest": "1.19.0"
  },
  "versions": {
   "1.0.1": {
@@ -2031,6 +2031,95 @@
   "1.18.0": {
    "name": "fastq",
    "version": "1.18.0",
+   "keywords": [
+    "fast",
+    "queue",
+    "async",
+    "worker"
+   ],
+   "author": {
+    "name": "Matteo Collina",
+    "email": "hello@matteocollina.com"
+   },
+   "license": "ISC",
+   "_id": "fastq@1.18.0",
+   "maintainers": [
+    {
+     "name": "matteo.collina",
+     "email": "hello@matteocollina.com"
+    }
+   ],
+   "homepage": "https://github.com/mcollina/fastq#readme",
+   "bugs": {
+    "url": "https://github.com/mcollina/fastq/issues"
+   },
+   "dist": {
+    "shasum": "d631d7e25faffea81887fe5ea8c9010e1b36fee0",
+    "tarball": "http://localhost:3000/fastq/-/fastq-1.18.0.tgz",
+    "fileCount": 15,
+    "integrity": "sha512-QKHXPW0hD8g4UET03SdOdunzSouc9N4AuHdsX8XNcTsuz+yYFILVNIX4l9yHABMhiEI9Db0JTTIpu0wB+Y1QQw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCkvXCHwnvuNvXI+bkoEPJLV2iVsaqhCFYuJA+9cb3PdQIhALnIqgmoaD+rhw/VUe1YAjTOIV8+VMIb5hVY2XM3w/3F",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 43454
+   },
+   "main": "queue.js",
+   "gitHead": "571b25b0ed3a7a39f033f2fdb96b995a62414dc7",
+   "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "test": "npm run lint && npm run unit",
+    "unit": "nyc --lines 100 --branches 100 --functions 100 --check-coverage --reporter=text tape test/test.js test/promise.js",
+    "legacy": "tape test/test.js",
+    "coverage": "nyc --reporter=html --reporter=cobertura --reporter=text tape test/test.js test/promise.js",
+    "typescript": "tsc --project ./test/tsconfig.json",
+    "test:report": "npm run lint && npm run unit:report"
+   },
+   "_npmUser": {
+    "name": "matteo.collina",
+    "email": "hello@matteocollina.com"
+   },
+   "standard": {
+    "ignore": [
+     "example.mjs"
+    ]
+   },
+   "pre-commit": [
+    "test",
+    "typescript"
+   ],
+   "repository": {
+    "url": "git+https://github.com/mcollina/fastq.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Fast, in memory work queue",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "reusify": "^1.0.4"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.0.0",
+    "tape": "^5.0.0",
+    "async": "^3.1.0",
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.0",
+    "neo-async": "^2.6.1",
+    "pre-commit": "^1.2.2",
+    "typescript": "^5.0.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/fastq_1.18.0_1734948740983_0.9094686710169715",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.19.0": {
+   "name": "fastq",
+   "version": "1.19.0",
    "description": "Fast, in memory work queue",
    "main": "queue.js",
    "scripts": {
@@ -2083,20 +2172,20 @@
      "example.mjs"
     ]
    },
-   "_id": "fastq@1.18.0",
-   "gitHead": "571b25b0ed3a7a39f033f2fdb96b995a62414dc7",
-   "_nodeVersion": "22.12.0",
-   "_npmVersion": "10.9.0",
+   "_id": "fastq@1.19.0",
+   "gitHead": "f8dc91ac2781cca5956f591ce53ca7d09bf61fc0",
+   "_nodeVersion": "22.13.1",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-QKHXPW0hD8g4UET03SdOdunzSouc9N4AuHdsX8XNcTsuz+yYFILVNIX4l9yHABMhiEI9Db0JTTIpu0wB+Y1QQw==",
-    "shasum": "d631d7e25faffea81887fe5ea8c9010e1b36fee0",
-    "tarball": "http://localhost:3000/fastq/-/fastq-1.18.0.tgz",
+    "integrity": "sha512-7SFSRCNjBQIZH/xZR3iy5iQYR8aGBE0h3VG6/cwlbrpdciNYBMotQav8c1XI3HjHH+NikUpP53nPdlZSdWmFzA==",
+    "shasum": "a82c6b7c2bb4e44766d865f07997785fecfdcb89",
+    "tarball": "http://localhost:3000/fastq/-/fastq-1.19.0.tgz",
     "fileCount": 15,
-    "unpackedSize": 43454,
+    "unpackedSize": 43854,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQCkvXCHwnvuNvXI+bkoEPJLV2iVsaqhCFYuJA+9cb3PdQIhALnIqgmoaD+rhw/VUe1YAjTOIV8+VMIb5hVY2XM3w/3F"
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQCnHK6M0OpWqD7p2EXg3C/ACAMFmjt8xojIf9PDkX03awIhAMbJHv6/oJ1CGVbvux4CNl7DJOWLRVr0ivdsi0w+1wre"
      }
     ]
    },
@@ -2113,14 +2202,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/fastq_1.18.0_1734948740983_0.9094686710169715"
+    "tmp": "tmp/fastq_1.19.0_1738253619438_0.17916112451712163"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2015-06-14T18:25:18.741Z",
-  "modified": "2024-12-23T10:12:21.412Z",
+  "modified": "2025-01-30T16:13:39.803Z",
   "1.0.1": "2015-06-14T18:25:18.741Z",
   "1.0.2": "2015-06-16T05:32:42.248Z",
   "1.1.0": "2015-06-16T15:26:12.208Z",
@@ -2146,7 +2235,8 @@
   "1.16.0": "2023-12-18T15:52:53.129Z",
   "1.17.0": "2024-01-26T18:22:04.963Z",
   "1.17.1": "2024-02-05T14:30:13.737Z",
-  "1.18.0": "2024-12-23T10:12:21.235Z"
+  "1.18.0": "2024-12-23T10:12:21.235Z",
+  "1.19.0": "2025-01-30T16:13:39.614Z"
  },
  "bugs": {
   "url": "https://github.com/mcollina/fastq/issues"
@@ -2174,7 +2264,7 @@
    "email": "hello@matteocollina.com"
   }
  ],
- "readme": "# fastq\n\n![ci][ci-url]\n[![npm version][npm-badge]][npm-url]\n\nFast, in memory work queue.\n\nBenchmarks (1 million tasks):\n\n* setImmediate: 812ms\n* fastq: 854ms\n* async.queue: 1298ms\n* neoAsync.queue: 1249ms\n\nObtained on node 12.16.1, on a dedicated server.\n\nIf you need zero-overhead series function call, check out\n[fastseries](http://npm.im/fastseries). For zero-overhead parallel\nfunction call, check out [fastparallel](http://npm.im/fastparallel).\n\n[![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)\n\n  * <a href=\"#install\">Installation</a>\n  * <a href=\"#usage\">Usage</a>\n  * <a href=\"#api\">API</a>\n  * <a href=\"#license\">Licence &amp; copyright</a>\n\n## Install\n\n`npm i fastq --save`\n\n## Usage (callback API)\n\n```js\n'use strict'\n\nconst queue = require('fastq')(worker, 1)\n\nqueue.push(42, function (err, result) {\n  if (err) { throw err }\n  console.log('the result is', result)\n})\n\nfunction worker (arg, cb) {\n  cb(null, arg * 2)\n}\n```\n\n## Usage (promise API)\n\n```js\nconst queue = require('fastq').promise(worker, 1)\n\nasync function worker (arg) {\n  return arg * 2\n}\n\nasync function run () {\n  const result = await queue.push(42)\n  console.log('the result is', result)\n}\n\nrun()\n```\n\n### Setting \"this\"\n\n```js\n'use strict'\n\nconst that = { hello: 'world' }\nconst queue = require('fastq')(that, worker, 1)\n\nqueue.push(42, function (err, result) {\n  if (err) { throw err }\n  console.log(this)\n  console.log('the result is', result)\n})\n\nfunction worker (arg, cb) {\n  console.log(this)\n  cb(null, arg * 2)\n}\n```\n\n### Using with TypeScript (callback API)\n\n```ts\n'use strict'\n\nimport * as fastq from \"fastq\";\nimport type { queue, done } from \"fastq\";\n\ntype Task = {\n  id: number\n}\n\nconst q: queue<Task> = fastq(worker, 1)\n\nq.push({ id: 42})\n\nfunction worker (arg: Task, cb: done) {\n  console.log(arg.id)\n  cb(null)\n}\n```\n\n### Using with TypeScript (promise API)\n\n```ts\n'use strict'\n\nimport * as fastq from \"fastq\";\nimport type { queueAsPromised } from \"fastq\";\n\ntype Task = {\n  id: number\n}\n\nconst q: queueAsPromised<Task> = fastq.promise(asyncWorker, 1)\n\nq.push({ id: 42}).catch((err) => console.error(err))\n\nasync function asyncWorker (arg: Task): Promise<void> {\n  // No need for a try-catch block, fastq handles errors automatically\n  console.log(arg.id)\n}\n```\n\n## API\n\n* <a href=\"#fastqueue\"><code>fastqueue()</code></a>\n* <a href=\"#push\"><code>queue#<b>push()</b></code></a>\n* <a href=\"#unshift\"><code>queue#<b>unshift()</b></code></a>\n* <a href=\"#pause\"><code>queue#<b>pause()</b></code></a>\n* <a href=\"#resume\"><code>queue#<b>resume()</b></code></a>\n* <a href=\"#idle\"><code>queue#<b>idle()</b></code></a>\n* <a href=\"#length\"><code>queue#<b>length()</b></code></a>\n* <a href=\"#getQueue\"><code>queue#<b>getQueue()</b></code></a>\n* <a href=\"#kill\"><code>queue#<b>kill()</b></code></a>\n* <a href=\"#killAndDrain\"><code>queue#<b>killAndDrain()</b></code></a>\n* <a href=\"#error\"><code>queue#<b>error()</b></code></a>\n* <a href=\"#concurrency\"><code>queue#<b>concurrency</b></code></a>\n* <a href=\"#drain\"><code>queue#<b>drain</b></code></a>\n* <a href=\"#empty\"><code>queue#<b>empty</b></code></a>\n* <a href=\"#saturated\"><code>queue#<b>saturated</b></code></a>\n* <a href=\"#promise\"><code>fastqueue.promise()</code></a>\n\n-------------------------------------------------------\n<a name=\"fastqueue\"></a>\n### fastqueue([that], worker, concurrency)\n\nCreates a new queue.\n\nArguments:\n\n* `that`, optional context of the `worker` function.\n* `worker`, worker function, it would be called with `that` as `this`,\n  if that is specified.\n* `concurrency`, number of concurrent tasks that could be executed in\n  parallel.\n\n-------------------------------------------------------\n<a name=\"push\"></a>\n### queue.push(task, done)\n\nAdd a task at the end of the queue. `done(err, result)` will be called\nwhen the task was processed.\n\n-------------------------------------------------------\n<a name=\"unshift\"></a>\n### queue.unshift(task, done)\n\nAdd a task at the beginning of the queue. `done(err, result)` will be called\nwhen the task was processed.\n\n-------------------------------------------------------\n<a name=\"pause\"></a>\n### queue.pause()\n\nPause the processing of tasks. Currently worked tasks are not\nstopped.\n\n-------------------------------------------------------\n<a name=\"resume\"></a>\n### queue.resume()\n\nResume the processing of tasks.\n\n-------------------------------------------------------\n<a name=\"idle\"></a>\n### queue.idle()\n\nReturns `false` if there are tasks being processed or waiting to be processed.\n`true` otherwise.\n\n-------------------------------------------------------\n<a name=\"length\"></a>\n### queue.length()\n\nReturns the number of tasks waiting to be processed (in the queue).\n\n-------------------------------------------------------\n<a name=\"getQueue\"></a>\n### queue.getQueue()\n\nReturns all the tasks be processed (in the queue). Returns empty array when there are no tasks\n\n-------------------------------------------------------\n<a name=\"kill\"></a>\n### queue.kill()\n\nRemoves all tasks waiting to be processed, and reset `drain` to an empty\nfunction.\n\n-------------------------------------------------------\n<a name=\"killAndDrain\"></a>\n### queue.killAndDrain()\n\nSame than `kill` but the `drain` function will be called before reset to empty.\n\n-------------------------------------------------------\n<a name=\"error\"></a>\n### queue.error(handler)\n\nSet a global error handler. `handler(err, task)` will be called\neach time a task is completed, `err` will be not null if the task has thrown an error.\n\n-------------------------------------------------------\n<a name=\"concurrency\"></a>\n### queue.concurrency\n\nProperty that returns the number of concurrent tasks that could be executed in\nparallel. It can be altered at runtime.\n\n-------------------------------------------------------\n<a name=\"drain\"></a>\n### queue.drain\n\nFunction that will be called when the last\nitem from the queue has been processed by a worker.\nIt can be altered at runtime.\n\n-------------------------------------------------------\n<a name=\"empty\"></a>\n### queue.empty\n\nFunction that will be called when the last\nitem from the queue has been assigned to a worker.\nIt can be altered at runtime.\n\n-------------------------------------------------------\n<a name=\"saturated\"></a>\n### queue.saturated\n\nFunction that will be called when the queue hits the concurrency\nlimit.\nIt can be altered at runtime.\n\n-------------------------------------------------------\n<a name=\"promise\"></a>\n### fastqueue.promise([that], worker(arg), concurrency)\n\nCreates a new queue with `Promise` apis. It also offers all the methods\nand properties of the object returned by [`fastqueue`](#fastqueue) with the modified\n[`push`](#pushPromise) and [`unshift`](#unshiftPromise) methods.\n\nNode v10+ is required to use the promisified version.\n\nArguments:\n* `that`, optional context of the `worker` function.\n* `worker`, worker function, it would be called with `that` as `this`,\n  if that is specified. It MUST return a `Promise`.\n* `concurrency`, number of concurrent tasks that could be executed in\n  parallel.\n\n<a name=\"pushPromise\"></a>\n#### queue.push(task) => Promise\n\nAdd a task at the end of the queue. The returned `Promise`  will be fulfilled (rejected)\nwhen the task is completed successfully (unsuccessfully).\n\nThis promise could be ignored as it will not lead to a `'unhandledRejection'`.\n\n<a name=\"unshiftPromise\"></a>\n#### queue.unshift(task) => Promise\n\nAdd a task at the beginning of the queue. The returned `Promise`  will be fulfilled (rejected)\nwhen the task is completed successfully (unsuccessfully).\n\nThis promise could be ignored as it will not lead to a `'unhandledRejection'`.\n\n<a name=\"drained\"></a>\n#### queue.drained() => Promise\n\nWait for the queue to be drained. The returned `Promise` will be resolved when all tasks in the queue have been processed by a worker.\n\nThis promise could be ignored as it will not lead to a `'unhandledRejection'`.\n\n## License\n\nISC\n\n[ci-url]: https://github.com/mcollina/fastq/workflows/ci/badge.svg\n[npm-badge]: https://badge.fury.io/js/fastq.svg\n[npm-url]: https://badge.fury.io/js/fastq\n",
+ "readme": "# fastq\n\n![ci][ci-url]\n[![npm version][npm-badge]][npm-url]\n\nFast, in memory work queue.\n\nBenchmarks (1 million tasks):\n\n* setImmediate: 812ms\n* fastq: 854ms\n* async.queue: 1298ms\n* neoAsync.queue: 1249ms\n\nObtained on node 12.16.1, on a dedicated server.\n\nIf you need zero-overhead series function call, check out\n[fastseries](http://npm.im/fastseries). For zero-overhead parallel\nfunction call, check out [fastparallel](http://npm.im/fastparallel).\n\n[![js-standard-style](https://raw.githubusercontent.com/feross/standard/master/badge.png)](https://github.com/feross/standard)\n\n  * <a href=\"#install\">Installation</a>\n  * <a href=\"#usage\">Usage</a>\n  * <a href=\"#api\">API</a>\n  * <a href=\"#license\">Licence &amp; copyright</a>\n\n## Install\n\n`npm i fastq --save`\n\n## Usage (callback API)\n\n```js\n'use strict'\n\nconst queue = require('fastq')(worker, 1)\n\nqueue.push(42, function (err, result) {\n  if (err) { throw err }\n  console.log('the result is', result)\n})\n\nfunction worker (arg, cb) {\n  cb(null, arg * 2)\n}\n```\n\n## Usage (promise API)\n\n```js\nconst queue = require('fastq').promise(worker, 1)\n\nasync function worker (arg) {\n  return arg * 2\n}\n\nasync function run () {\n  const result = await queue.push(42)\n  console.log('the result is', result)\n}\n\nrun()\n```\n\n### Setting \"this\"\n\n```js\n'use strict'\n\nconst that = { hello: 'world' }\nconst queue = require('fastq')(that, worker, 1)\n\nqueue.push(42, function (err, result) {\n  if (err) { throw err }\n  console.log(this)\n  console.log('the result is', result)\n})\n\nfunction worker (arg, cb) {\n  console.log(this)\n  cb(null, arg * 2)\n}\n```\n\n### Using with TypeScript (callback API)\n\n```ts\n'use strict'\n\nimport * as fastq from \"fastq\";\nimport type { queue, done } from \"fastq\";\n\ntype Task = {\n  id: number\n}\n\nconst q: queue<Task> = fastq(worker, 1)\n\nq.push({ id: 42})\n\nfunction worker (arg: Task, cb: done) {\n  console.log(arg.id)\n  cb(null)\n}\n```\n\n### Using with TypeScript (promise API)\n\n```ts\n'use strict'\n\nimport * as fastq from \"fastq\";\nimport type { queueAsPromised } from \"fastq\";\n\ntype Task = {\n  id: number\n}\n\nconst q: queueAsPromised<Task> = fastq.promise(asyncWorker, 1)\n\nq.push({ id: 42}).catch((err) => console.error(err))\n\nasync function asyncWorker (arg: Task): Promise<void> {\n  // No need for a try-catch block, fastq handles errors automatically\n  console.log(arg.id)\n}\n```\n\n## API\n\n* <a href=\"#fastqueue\"><code>fastqueue()</code></a>\n* <a href=\"#push\"><code>queue#<b>push()</b></code></a>\n* <a href=\"#unshift\"><code>queue#<b>unshift()</b></code></a>\n* <a href=\"#pause\"><code>queue#<b>pause()</b></code></a>\n* <a href=\"#resume\"><code>queue#<b>resume()</b></code></a>\n* <a href=\"#idle\"><code>queue#<b>idle()</b></code></a>\n* <a href=\"#length\"><code>queue#<b>length()</b></code></a>\n* <a href=\"#getQueue\"><code>queue#<b>getQueue()</b></code></a>\n* <a href=\"#kill\"><code>queue#<b>kill()</b></code></a>\n* <a href=\"#killAndDrain\"><code>queue#<b>killAndDrain()</b></code></a>\n* <a href=\"#error\"><code>queue#<b>error()</b></code></a>\n* <a href=\"#concurrency\"><code>queue#<b>concurrency</b></code></a>\n* <a href=\"#drain\"><code>queue#<b>drain</b></code></a>\n* <a href=\"#empty\"><code>queue#<b>empty</b></code></a>\n* <a href=\"#saturated\"><code>queue#<b>saturated</b></code></a>\n* <a href=\"#promise\"><code>fastqueue.promise()</code></a>\n\n-------------------------------------------------------\n<a name=\"fastqueue\"></a>\n### fastqueue([that], worker, concurrency)\n\nCreates a new queue.\n\nArguments:\n\n* `that`, optional context of the `worker` function.\n* `worker`, worker function, it would be called with `that` as `this`,\n  if that is specified.\n* `concurrency`, number of concurrent tasks that could be executed in\n  parallel.\n\n-------------------------------------------------------\n<a name=\"push\"></a>\n### queue.push(task, done)\n\nAdd a task at the end of the queue. `done(err, result)` will be called\nwhen the task was processed.\n\n-------------------------------------------------------\n<a name=\"unshift\"></a>\n### queue.unshift(task, done)\n\nAdd a task at the beginning of the queue. `done(err, result)` will be called\nwhen the task was processed.\n\n-------------------------------------------------------\n<a name=\"pause\"></a>\n### queue.pause()\n\nPause the processing of tasks. Currently worked tasks are not\nstopped.\n\n-------------------------------------------------------\n<a name=\"resume\"></a>\n### queue.resume()\n\nResume the processing of tasks.\n\n-------------------------------------------------------\n<a name=\"idle\"></a>\n### queue.idle()\n\nReturns `false` if there are tasks being processed or waiting to be processed.\n`true` otherwise.\n\n-------------------------------------------------------\n<a name=\"length\"></a>\n### queue.length()\n\nReturns the number of tasks waiting to be processed (in the queue).\n\n-------------------------------------------------------\n<a name=\"getQueue\"></a>\n### queue.getQueue()\n\nReturns all the tasks be processed (in the queue). Returns empty array when there are no tasks\n\n-------------------------------------------------------\n<a name=\"kill\"></a>\n### queue.kill()\n\nRemoves all tasks waiting to be processed, and reset `drain` to an empty\nfunction.\n\n-------------------------------------------------------\n<a name=\"killAndDrain\"></a>\n### queue.killAndDrain()\n\nSame than `kill` but the `drain` function will be called before reset to empty.\n\n-------------------------------------------------------\n<a name=\"error\"></a>\n### queue.error(handler)\n\nSet a global error handler. `handler(err, task)` will be called\neach time a task is completed, `err` will be not null if the task has thrown an error.\n\n-------------------------------------------------------\n<a name=\"concurrency\"></a>\n### queue.concurrency\n\nProperty that returns the number of concurrent tasks that could be executed in\nparallel. It can be altered at runtime.\n\n-------------------------------------------------------\n<a name=\"paused\"></a>\n### queue.paused\n\nProperty (Read-Only) that returns `true` when the queue is in a paused state.\n\n-------------------------------------------------------\n<a name=\"drain\"></a>\n### queue.drain\n\nFunction that will be called when the last\nitem from the queue has been processed by a worker.\nIt can be altered at runtime.\n\n-------------------------------------------------------\n<a name=\"empty\"></a>\n### queue.empty\n\nFunction that will be called when the last\nitem from the queue has been assigned to a worker.\nIt can be altered at runtime.\n\n-------------------------------------------------------\n<a name=\"saturated\"></a>\n### queue.saturated\n\nFunction that will be called when the queue hits the concurrency\nlimit.\nIt can be altered at runtime.\n\n-------------------------------------------------------\n<a name=\"promise\"></a>\n### fastqueue.promise([that], worker(arg), concurrency)\n\nCreates a new queue with `Promise` apis. It also offers all the methods\nand properties of the object returned by [`fastqueue`](#fastqueue) with the modified\n[`push`](#pushPromise) and [`unshift`](#unshiftPromise) methods.\n\nNode v10+ is required to use the promisified version.\n\nArguments:\n* `that`, optional context of the `worker` function.\n* `worker`, worker function, it would be called with `that` as `this`,\n  if that is specified. It MUST return a `Promise`.\n* `concurrency`, number of concurrent tasks that could be executed in\n  parallel.\n\n<a name=\"pushPromise\"></a>\n#### queue.push(task) => Promise\n\nAdd a task at the end of the queue. The returned `Promise`  will be fulfilled (rejected)\nwhen the task is completed successfully (unsuccessfully).\n\nThis promise could be ignored as it will not lead to a `'unhandledRejection'`.\n\n<a name=\"unshiftPromise\"></a>\n#### queue.unshift(task) => Promise\n\nAdd a task at the beginning of the queue. The returned `Promise`  will be fulfilled (rejected)\nwhen the task is completed successfully (unsuccessfully).\n\nThis promise could be ignored as it will not lead to a `'unhandledRejection'`.\n\n<a name=\"drained\"></a>\n#### queue.drained() => Promise\n\nWait for the queue to be drained. The returned `Promise` will be resolved when all tasks in the queue have been processed by a worker.\n\nThis promise could be ignored as it will not lead to a `'unhandledRejection'`.\n\n## License\n\nISC\n\n[ci-url]: https://github.com/mcollina/fastq/workflows/ci/badge.svg\n[npm-badge]: https://badge.fury.io/js/fastq.svg\n[npm-url]: https://badge.fury.io/js/fastq\n",
  "readmeFilename": "README.md",
  "users": {
   "nicocube": true,
