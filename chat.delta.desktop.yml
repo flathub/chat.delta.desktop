@@ -19,6 +19,7 @@ finish-args:
   - --filesystem=xdg-music
   - --filesystem=xdg-pictures
   - --filesystem=xdg-videos
+  - --filesystem=host    # workaround until xdg-desktop-portal is released: https://github.com/flatpak/xdg-desktop-portal/issues/1445
   - --share=network
   - --talk-name=org.freedesktop.Notifications # needed for dbus notification, as the notification portal crashed because of a bug in electron https://github.com/electron/electron/issues/40461
   - --talk-name=com.canonical.AppMenu.Registrar # fix https://github.com/flathub/chat.delta.desktop/issues/118
