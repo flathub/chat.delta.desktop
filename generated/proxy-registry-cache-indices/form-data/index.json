@@ -1,11 +1,11 @@
 {
  "_id": "form-data",
- "_rev": "141-e4d08c397928fd6ec795128af3de1533",
+ "_rev": "144-28b7cc7d87f30f3fc744c0de0187ae8c",
  "name": "form-data",
  "dist-tags": {
-  "latest": "4.0.1",
-  "v2-backport": "2.5.2",
-  "v3-backport": "3.0.2"
+  "latest": "4.0.2",
+  "v2-backport": "2.5.3",
+  "v3-backport": "3.0.3"
  },
  "versions": {
   "0.0.0": {
@@ -3854,6 +3854,409 @@
    }
   },
   "4.0.1": {
+   "name": "form-data",
+   "version": "4.0.1",
+   "author": {
+    "url": "http://debuggable.com/",
+    "name": "Felix Geisendörfer",
+    "email": "felix@debuggable.com"
+   },
+   "license": "MIT",
+   "_id": "form-data@4.0.1",
+   "maintainers": [
+    {
+     "name": "mikeal",
+     "email": "mikeal.rogers@gmail.com"
+    },
+    {
+     "name": "niftylettuce",
+     "email": "niftylettuce@gmail.com"
+    },
+    {
+     "name": "alexindigo",
+     "email": "iam@alexindigo.com"
+    },
+    {
+     "name": "ljharb",
+     "email": "ljharb@gmail.com"
+    },
+    {
+     "name": "dylanpiercey",
+     "email": "pierceydylan@gmail.com"
+    },
+    {
+     "name": "titanism",
+     "email": "npm@titanism.com"
+    }
+   ],
+   "homepage": "https://github.com/form-data/form-data#readme",
+   "bugs": {
+    "url": "https://github.com/form-data/form-data/issues"
+   },
+   "dist": {
+    "shasum": "ba1076daaaa5bfd7e99c1a6cb02aa0a5cff90d48",
+    "tarball": "http://localhost:3000/form-data/-/form-data-4.0.1.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-tzN8e4TX8+kkxGPK8D5u0FNmjPUjw3lwC9lSLxxoB/+GtsJG91CO8bSWy73APlgAZzZbXEYZJuxjkHH2w+Ezhw==",
+    "signatures": [
+     {
+      "sig": "MEUCIGtHBWWsiRDX0+3zwj7vExb0JnWd4wVT85pGe9spI5RVAiEAi9CB2MmO6rWyrbGifa0MMebcCtIgyZA18pvJqcW73Bg=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 31430
+   },
+   "main": "./lib/form_data",
+   "browser": "./lib/browser",
+   "engines": {
+    "node": ">= 6"
+   },
+   "gitHead": "d04f7381b0111c707baa47190de2d48a02988b5b",
+   "scripts": {
+    "lint": "eslint --ext=js,mjs .",
+    "test": "npm run tests-only",
+    "check": "istanbul check-coverage coverage/coverage*.json",
+    "debug": "verbose=1 ./test/run.js",
+    "files": "pkgfiles --sort=name",
+    "report": "istanbul report lcov text",
+    "browser": "browserify -t browserify-istanbul test/run-browser.js | obake --coverage",
+    "ci-lint": "is-node-modern 8 && npm run lint || is-node-not-modern 8",
+    "ci-test": "npm run tests-only && npm run browser && npm run report",
+    "pretest": "npm run lint",
+    "posttest": "npx npm@'>=10.2' audit --production",
+    "predebug": "rimraf coverage test/tmp",
+    "prepublish": "in-publish && npm run update-readme || not-in-publish",
+    "tests-only": "istanbul cover test/run.js",
+    "get-version": "node -e \"console.log(require('./package.json').version)\"",
+    "postpublish": "npm run restore-readme",
+    "pretests-only": "rimraf coverage test/tmp",
+    "update-readme": "sed -i.bak 's/\\/master\\.svg/\\/v'$(npm --silent run get-version)'.svg/g' README.md",
+    "posttests-only": "istanbul report lcov text",
+    "restore-readme": "mv README.md.bak README.md"
+   },
+   "typings": "./index.d.ts",
+   "_npmUser": {
+    "name": "ljharb",
+    "email": "ljharb@gmail.com"
+   },
+   "pre-commit": [
+    "lint",
+    "ci-test",
+    "check"
+   ],
+   "repository": {
+    "url": "git://github.com/form-data/form-data.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "A library to create readable \"multipart/form-data\" streams. Can be used to submit forms and file uploads to other web applications.",
+   "directories": {},
+   "_nodeVersion": "22.9.0",
+   "dependencies": {
+    "asynckit": "^0.4.0",
+    "mime-types": "^2.1.12",
+    "combined-stream": "^1.0.8"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "far": "^0.0.7",
+    "fake": "^0.2.2",
+    "tape": "^4.6.2",
+    "obake": "^0.1.2",
+    "eslint": "^6.0.1",
+    "rimraf": "^2.7.1",
+    "request": "^2.88.0",
+    "istanbul": "^0.4.5",
+    "pkgfiles": "^2.3.0",
+    "coveralls": "^3.0.4",
+    "puppeteer": "^1.19.0",
+    "browserify": "^13.1.1",
+    "formidable": "^1.0.17",
+    "in-publish": "^2.0.0",
+    "pre-commit": "^1.1.3",
+    "typescript": "^3.5.2",
+    "@types/node": "^12.0.10",
+    "cross-spawn": "^6.0.5",
+    "is-node-modern": "^1.0.0",
+    "browserify-istanbul": "^2.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/form-data_4.0.1_1728532185836_0.4433628713393647",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "2.5.3": {
+   "name": "form-data",
+   "version": "2.5.3",
+   "author": {
+    "url": "http://debuggable.com/",
+    "name": "Felix Geisendörfer",
+    "email": "felix@debuggable.com"
+   },
+   "license": "MIT",
+   "_id": "form-data@2.5.3",
+   "maintainers": [
+    {
+     "name": "mikeal",
+     "email": "mikeal.rogers@gmail.com"
+    },
+    {
+     "name": "niftylettuce",
+     "email": "niftylettuce@gmail.com"
+    },
+    {
+     "name": "alexindigo",
+     "email": "iam@alexindigo.com"
+    },
+    {
+     "name": "ljharb",
+     "email": "ljharb@gmail.com"
+    },
+    {
+     "name": "dylanpiercey",
+     "email": "pierceydylan@gmail.com"
+    },
+    {
+     "name": "titanism",
+     "email": "npm@titanism.com"
+    }
+   ],
+   "homepage": "https://github.com/form-data/form-data#readme",
+   "bugs": {
+    "url": "https://github.com/form-data/form-data/issues"
+   },
+   "dist": {
+    "shasum": "f9bcf87418ce748513c0c3494bb48ec270c97acc",
+    "tarball": "http://localhost:3000/form-data/-/form-data-2.5.3.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-XHIrMD0NpDrNM/Ckf7XJiBbLl57KEhT3+i3yY+eWm+cqYZJQTZrKo8Y8AWKnuV5GT4scfuUGt9LzNoIx3dU1nQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDXVzrquqGQwUqb/HpsZAqAWoH/LcbR5CjTrp1NoodQBwIhANExbX2SC+7RslSWF4rrZ53MIFen/tAHaSBfHhcG8Pog",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 30454
+   },
+   "main": "./lib/form_data",
+   "browser": "./lib/browser",
+   "engines": {
+    "node": ">= 0.12"
+   },
+   "gitHead": "9457283e1dce6122adc908fdd7442cfc54cabe7a",
+   "scripts": {
+    "lint": "eslint --ext=js,mjs .",
+    "test": "npm run tests-only",
+    "check": "istanbul check-coverage coverage/coverage*.json",
+    "debug": "verbose=1 ./test/run.js",
+    "files": "pkgfiles --sort=name",
+    "report": "istanbul report lcov text",
+    "browser": "browserify -t browserify-istanbul test/run-browser.js | obake --coverage",
+    "ci-lint": "is-node-modern 8 && npm run lint || is-node-not-modern 8",
+    "ci-test": "npm run tests-only && npm run browser && npm run report",
+    "pretest": "npm run lint",
+    "posttest": "npx npm@'>=10.2' audit --production",
+    "predebug": "rimraf coverage test/tmp",
+    "prepublish": "in-publish && npm run update-readme || not-in-publish",
+    "tests-only": "istanbul cover test/run.js",
+    "get-version": "node -e \"console.log(require('./package.json').version)\"",
+    "postpublish": "npm run restore-readme",
+    "pretests-only": "rimraf coverage test/tmp",
+    "update-readme": "sed -i.bak 's/\\/master\\.svg/\\/v'$(npm --silent run get-version)'.svg/g' README.md",
+    "posttests-only": "istanbul report lcov text",
+    "restore-readme": "mv README.md.bak README.md"
+   },
+   "typings": "./index.d.ts",
+   "_npmUser": {
+    "name": "ljharb",
+    "email": "ljharb@gmail.com"
+   },
+   "pre-commit": [
+    "lint",
+    "ci-test",
+    "check"
+   ],
+   "repository": {
+    "url": "git://github.com/form-data/form-data.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "A library to create readable \"multipart/form-data\" streams. Can be used to submit forms and file uploads to other web applications.",
+   "directories": {},
+   "_nodeVersion": "23.8.0",
+   "dependencies": {
+    "asynckit": "^0.4.0",
+    "mime-types": "^2.1.35",
+    "safe-buffer": "^5.2.1",
+    "combined-stream": "^1.0.8",
+    "es-set-tostringtag": "^2.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "Readme.md",
+   "devDependencies": {
+    "far": "^0.0.7",
+    "fake": "^0.2.2",
+    "tape": "^5.9.0",
+    "obake": "^0.1.2",
+    "eslint": "^6.8.0",
+    "rimraf": "^2.7.1",
+    "request": "~2.87.0",
+    "istanbul": "^0.4.5",
+    "pkgfiles": "^2.3.2",
+    "coveralls": "^3.1.1",
+    "browserify": "^13.3.0",
+    "formidable": "^1.2.6",
+    "in-publish": "^2.0.1",
+    "pre-commit": "^1.2.2",
+    "typescript": "^3.9.10",
+    "@types/node": "^12.20.55",
+    "cross-spawn": "^4.0.2",
+    "is-node-modern": "^1.0.0",
+    "@types/mime-types": "^2.1.4",
+    "phantomjs-prebuilt": "^2.1.16",
+    "browserify-istanbul": "^2.0.0",
+    "@types/combined-stream": "^1.0.6"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/form-data_2.5.3_1739570176821_0.47804769752077725",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "3.0.3": {
+   "name": "form-data",
+   "version": "3.0.3",
+   "author": {
+    "url": "http://debuggable.com/",
+    "name": "Felix Geisendörfer",
+    "email": "felix@debuggable.com"
+   },
+   "license": "MIT",
+   "_id": "form-data@3.0.3",
+   "maintainers": [
+    {
+     "name": "mikeal",
+     "email": "mikeal.rogers@gmail.com"
+    },
+    {
+     "name": "niftylettuce",
+     "email": "niftylettuce@gmail.com"
+    },
+    {
+     "name": "alexindigo",
+     "email": "iam@alexindigo.com"
+    },
+    {
+     "name": "ljharb",
+     "email": "ljharb@gmail.com"
+    },
+    {
+     "name": "dylanpiercey",
+     "email": "pierceydylan@gmail.com"
+    },
+    {
+     "name": "titanism",
+     "email": "npm@titanism.com"
+    }
+   ],
+   "homepage": "https://github.com/form-data/form-data#readme",
+   "bugs": {
+    "url": "https://github.com/form-data/form-data/issues"
+   },
+   "dist": {
+    "shasum": "349c8f2c9d8f8f0c879ee0eb7cc0d300018d6b09",
+    "tarball": "http://localhost:3000/form-data/-/form-data-3.0.3.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-q5YBMeWy6E2Un0nMGWMgI65MAKtaylxfNJGJxpGh45YDciZB4epbWpaAfImil6CPAPTYB4sh0URQNDRIZG5F2w==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDQXlKzYmVUnZHg6BAjq9x1/osM0oAVS0WwZmRt/t7SKAIgQPvHk9Hk4tDcaZyH5wJwgwPmoaVp3cDeS3+6BIUVO44=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 31368
+   },
+   "main": "./lib/form_data",
+   "browser": "./lib/browser",
+   "engines": {
+    "node": ">= 6"
+   },
+   "gitHead": "e46f09bb5338bff090f5cceea5119a8b37c9b147",
+   "scripts": {
+    "lint": "eslint --ext=js,mjs .",
+    "test": "npm run tests-only",
+    "check": "istanbul check-coverage coverage/coverage*.json",
+    "debug": "verbose=1 ./test/run.js",
+    "files": "pkgfiles --sort=name",
+    "report": "istanbul report lcov text",
+    "browser": "browserify -t browserify-istanbul test/run-browser.js | obake --coverage",
+    "ci-lint": "is-node-modern 8 && npm run lint || is-node-not-modern 8",
+    "ci-test": "npm run tests-only && npm run browser && npm run report",
+    "pretest": "npm run lint",
+    "posttest": "npx npm@'>=10.2' audit --production",
+    "predebug": "rimraf coverage test/tmp",
+    "prepublish": "in-publish && npm run update-readme || not-in-publish",
+    "tests-only": "istanbul cover test/run.js",
+    "get-version": "node -e \"console.log(require('./package.json').version)\"",
+    "postpublish": "npm run restore-readme",
+    "pretests-only": "rimraf coverage test/tmp",
+    "update-readme": "sed -i.bak 's/\\/master\\.svg/\\/v'$(npm --silent run get-version)'.svg/g' README.md",
+    "posttests-only": "istanbul report lcov text",
+    "restore-readme": "mv README.md.bak README.md"
+   },
+   "typings": "./index.d.ts",
+   "_npmUser": {
+    "name": "ljharb",
+    "email": "ljharb@gmail.com"
+   },
+   "pre-commit": [
+    "lint",
+    "ci-test",
+    "check"
+   ],
+   "repository": {
+    "url": "git://github.com/form-data/form-data.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "A library to create readable \"multipart/form-data\" streams. Can be used to submit forms and file uploads to other web applications.",
+   "directories": {},
+   "_nodeVersion": "23.8.0",
+   "dependencies": {
+    "asynckit": "^0.4.0",
+    "mime-types": "^2.1.35",
+    "combined-stream": "^1.0.8",
+    "es-set-tostringtag": "^2.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "Readme.md",
+   "devDependencies": {
+    "far": "^0.0.7",
+    "fake": "^0.2.2",
+    "tape": "^5.9.0",
+    "obake": "^0.1.2",
+    "eslint": "^6.8.0",
+    "rimraf": "^2.7.1",
+    "request": "~2.87.0",
+    "istanbul": "^0.4.5",
+    "pkgfiles": "^2.3.2",
+    "coveralls": "^3.1.1",
+    "puppeteer": "^1.20.0",
+    "browserify": "^13.3.0",
+    "formidable": "^1.2.6",
+    "in-publish": "^2.0.1",
+    "pre-commit": "^1.2.2",
+    "typescript": "^3.9.10",
+    "@types/node": "^12.20.55",
+    "cross-spawn": "^6.0.6",
+    "is-node-modern": "^1.0.0",
+    "browserify-istanbul": "^2.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/form-data_3.0.3_1739574012492_0.7782722656980241",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "4.0.2": {
    "author": {
     "name": "Felix Geisendörfer",
     "email": "felix@debuggable.com",
@@ -3861,7 +4264,7 @@
    },
    "name": "form-data",
    "description": "A library to create readable \"multipart/form-data\" streams. Can be used to submit forms and file uploads to other web applications.",
-   "version": "4.0.1",
+   "version": "4.0.2",
    "repository": {
     "type": "git",
     "url": "git://github.com/form-data/form-data.git"
@@ -3902,49 +4305,52 @@
    "dependencies": {
     "asynckit": "^0.4.0",
     "combined-stream": "^1.0.8",
+    "es-set-tostringtag": "^2.1.0",
     "mime-types": "^2.1.12"
    },
    "devDependencies": {
-    "@types/node": "^12.0.10",
-    "browserify": "^13.1.1",
+    "@types/combined-stream": "^1.0.6",
+    "@types/mime-types": "^2.1.4",
+    "@types/node": "^12.20.55",
+    "browserify": "^13.3.0",
     "browserify-istanbul": "^2.0.0",
-    "coveralls": "^3.0.4",
-    "cross-spawn": "^6.0.5",
-    "eslint": "^6.0.1",
+    "coveralls": "^3.1.1",
+    "cross-spawn": "^6.0.6",
+    "eslint": "^6.8.0",
     "fake": "^0.2.2",
     "far": "^0.0.7",
-    "formidable": "^1.0.17",
-    "in-publish": "^2.0.0",
+    "formidable": "^1.2.6",
+    "in-publish": "^2.0.1",
     "is-node-modern": "^1.0.0",
     "istanbul": "^0.4.5",
     "obake": "^0.1.2",
-    "puppeteer": "^1.19.0",
-    "pkgfiles": "^2.3.0",
-    "pre-commit": "^1.1.3",
-    "request": "^2.88.0",
+    "pkgfiles": "^2.3.2",
+    "pre-commit": "^1.2.2",
+    "puppeteer": "^1.20.0",
+    "request": "~2.87.0",
     "rimraf": "^2.7.1",
-    "tape": "^4.6.2",
-    "typescript": "^3.5.2"
+    "tape": "^5.9.0",
+    "typescript": "^3.9.10"
    },
    "license": "MIT",
-   "_id": "form-data@4.0.1",
-   "gitHead": "d04f7381b0111c707baa47190de2d48a02988b5b",
+   "_id": "form-data@4.0.2",
+   "gitHead": "7465e1337244831e91f9a2413a2bf49bdc2a2e04",
    "bugs": {
     "url": "https://github.com/form-data/form-data/issues"
    },
    "homepage": "https://github.com/form-data/form-data#readme",
-   "_nodeVersion": "22.9.0",
-   "_npmVersion": "10.8.3",
+   "_nodeVersion": "23.8.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-tzN8e4TX8+kkxGPK8D5u0FNmjPUjw3lwC9lSLxxoB/+GtsJG91CO8bSWy73APlgAZzZbXEYZJuxjkHH2w+Ezhw==",
-    "shasum": "ba1076daaaa5bfd7e99c1a6cb02aa0a5cff90d48",
-    "tarball": "http://localhost:3000/form-data/-/form-data-4.0.1.tgz",
+    "integrity": "sha512-hGfm/slu0ZabnNt4oaRZ6uREyfCj6P4fT/n6A1rGV+Z0VdGXjfOhVUpkn6qVQONHGIFwmveGXyDs75+nr6FM8w==",
+    "shasum": "35cabbdd30c3ce73deb2c42d3c8d3ed9ca51794c",
+    "tarball": "http://localhost:3000/form-data/-/form-data-4.0.2.tgz",
     "fileCount": 7,
-    "unpackedSize": 31430,
+    "unpackedSize": 31836,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIGtHBWWsiRDX0+3zwj7vExb0JnWd4wVT85pGe9spI5RVAiEAi9CB2MmO6rWyrbGifa0MMebcCtIgyZA18pvJqcW73Bg="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIDsc8+kG0IfOthXSQCLdi2rgzXN0YYGzQ3D4tXCl7U1OAiEA4FxyHLX1TtCQUPk1pkXej4soPFGPkYRytEm5gBcrRoQ="
      }
     ]
    },
@@ -3980,15 +4386,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/form-data_4.0.1_1728532185836_0.4433628713393647"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/form-data_4.0.2_1739575437467_0.440653080386882"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2011-05-16T14:58:21.870Z",
-  "modified": "2024-10-10T03:49:46.169Z",
+  "modified": "2025-02-14T23:23:57.915Z",
   "0.0.0": "2011-05-16T14:58:22.532Z",
   "0.0.2": "2012-07-02T21:59:37.447Z",
   "0.0.3": "2012-08-10T03:05:05.412Z",
@@ -4029,7 +4435,10 @@
   "4.0.0": "2021-02-15T17:38:54.740Z",
   "2.5.2": "2024-10-10T03:46:33.800Z",
   "3.0.2": "2024-10-10T03:48:50.494Z",
-  "4.0.1": "2024-10-10T03:49:46.006Z"
+  "4.0.1": "2024-10-10T03:49:46.006Z",
+  "2.5.3": "2025-02-14T21:56:16.969Z",
+  "3.0.3": "2025-02-14T23:00:12.690Z",
+  "4.0.2": "2025-02-14T23:23:57.699Z"
  },
  "bugs": {
   "url": "https://github.com/form-data/form-data/issues"

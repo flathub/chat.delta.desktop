@@ -1,10 +1,10 @@
 {
  "_id": "body-parser",
- "_rev": "837-8d08698e3a1f6991bb1a7435ab2faa0d",
+ "_rev": "839-98f369290eed4c5c042c186fae49f60c",
  "name": "body-parser",
  "dist-tags": {
   "latest": "1.20.3",
-  "next": "2.0.2"
+  "next": "2.1.0"
  },
  "versions": {
   "1.0.0": {
@@ -7297,11 +7297,110 @@
     "tmp": "tmp/body-parser_2.0.2_1730387407106_0.34674206508347427",
     "host": "s3://npm-registry-packages"
    }
+  },
+  "2.1.0": {
+   "name": "body-parser",
+   "description": "Node.js body parsing middleware",
+   "version": "2.1.0",
+   "contributors": [
+    {
+     "name": "Douglas Christopher Wilson",
+     "email": "doug@somethingdoug.com"
+    },
+    {
+     "name": "Jonathan Ong",
+     "email": "me@jongleberry.com",
+     "url": "http://jongleberry.com"
+    }
+   ],
+   "license": "MIT",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expressjs/body-parser.git"
+   },
+   "dependencies": {
+    "bytes": "^3.1.2",
+    "content-type": "^1.0.5",
+    "debug": "^4.4.0",
+    "http-errors": "^2.0.0",
+    "iconv-lite": "^0.5.2",
+    "on-finished": "^2.4.1",
+    "qs": "^6.14.0",
+    "raw-body": "^3.0.0",
+    "type-is": "^2.0.0"
+   },
+   "devDependencies": {
+    "eslint": "8.34.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-markdown": "3.0.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-standard": "4.1.0",
+    "mocha": "10.2.0",
+    "nyc": "15.1.0",
+    "supertest": "6.3.3"
+   },
+   "engines": {
+    "node": ">=18"
+   },
+   "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec --check-leaks --bail test/",
+    "test-ci": "nyc --reporter=lcov --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test"
+   },
+   "_id": "body-parser@2.1.0",
+   "readmeFilename": "README.md",
+   "gitHead": "eedea54b75cbea80eee2a00fdcd6a58d61b0713e",
+   "bugs": {
+    "url": "https://github.com/expressjs/body-parser/issues"
+   },
+   "homepage": "https://github.com/expressjs/body-parser#readme",
+   "_nodeVersion": "23.5.0",
+   "_npmVersion": "10.9.2",
+   "dist": {
+    "integrity": "sha512-/hPxh61E+ll0Ujp24Ilm64cykicul1ypfwjVttduAiEdtnJFvLePSrIPk+HMImtNv5270wOGCb1Tns2rybMkoQ==",
+    "shasum": "2fd84396259e00fa75648835e2d95703bce8e890",
+    "tarball": "http://localhost:3000/body-parser/-/body-parser-2.1.0.tgz",
+    "fileCount": 11,
+    "unpackedSize": 62256,
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIQDY+pmjRJNArKCMKG9ErFaoYYjWFPnk/3beIN53ff+A+gIgSwOmQ0A6rY7Adkbi9FOYj134WYem/7H5t/+LvcCQBLg="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "wesleytodd",
+    "email": "wes@wesleytodd.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "dougwilson",
+     "email": "doug@somethingdoug.com"
+    },
+    {
+     "name": "ulisesgascon",
+     "email": "ulisesgascondev@gmail.com"
+    },
+    {
+     "name": "wesleytodd",
+     "email": "wes@wesleytodd.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/body-parser_2.1.0_1739218358851_0.8096363610937325"
+   },
+   "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2014-01-06T08:25:15.060Z",
-  "modified": "2024-12-13T19:06:06.360Z",
+  "modified": "2025-02-10T20:12:39.300Z",
   "1.0.0": "2014-01-06T08:25:15.060Z",
   "1.0.1": "2014-03-20T22:25:27.731Z",
   "1.0.2": "2014-04-14T23:26:30.844Z",
@@ -7377,7 +7476,8 @@
   "1.20.3": "2024-09-09T23:15:19.538Z",
   "2.0.0": "2024-09-10T03:31:12.521Z",
   "2.0.1": "2024-09-10T04:15:36.065Z",
-  "2.0.2": "2024-10-31T15:10:07.326Z"
+  "2.0.2": "2024-10-31T15:10:07.326Z",
+  "2.1.0": "2025-02-10T20:12:39.065Z"
  },
  "bugs": {
   "url": "https://github.com/expressjs/body-parser/issues"
@@ -7402,12 +7502,16 @@
  ],
  "maintainers": [
   {
+   "name": "dougwilson",
+   "email": "doug@somethingdoug.com"
+  },
+  {
    "name": "ulisesgascon",
    "email": "ulisesgascondev@gmail.com"
   },
   {
-   "name": "dougwilson",
-   "email": "doug@somethingdoug.com"
+   "name": "wesleytodd",
+   "email": "wes@wesleytodd.com"
   }
  ],
  "readme": "",

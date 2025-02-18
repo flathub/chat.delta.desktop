@@ -1,11 +1,10 @@
 {
  "_id": "globby",
- "_rev": "122-474580f441b28f698c3f096c59570240",
+ "_rev": "123-bb1a6ba841f49b9a834ccd9f19be4d62",
  "name": "globby",
- "description": "User-friendly glob matching",
  "dist-tags": {
   "version11": "11.1.0",
-  "latest": "14.0.2"
+  "latest": "14.1.0"
  },
  "versions": {
   "0.1.0": {
@@ -3950,7 +3949,6 @@
     "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJh2PsOCRA9TVsSAnZWagAAG6kP/0mm0XiEn37Py66MuP+z\nKK7w7Latcx1vtgmmnaybLWhae+WlYnqnMYBwpMNxUm5//m4IbwoRSHst/leZ\ntmmeWlwivXnTHZf2zduP0ZKeH/oubuQT+7gHcgoH0OL3NGjSHXAWFoLfuwsD\nEG497pqEpT3nFkpq4mFOh8WjEEZ9vZ7zXClG+MDYMXHbpe5qFdZg5B5Uaalb\ndbiCWbRiRoceZ69JE+aJz388bWpiFaDShVX9pHzbXLkrXn17Lcvql1iKlYlE\ntKVOS6Yex5SkRr1L2bhUfBZCEJz/7MHQRuZP7DydnCw6u3sx/74v+V5wF7gy\njELOdvp6DaQMdWKdJGwZJrG+gW/B/oV1itB0J46XIVPVuzKY41/vFFjryCYn\nkl7iO1Wzk0TORnFUd5oSBEbz5rSrD/JgSWdqsuE11wMNNqx49zP+TARegpn9\nqQxVFlEZrv1tnTCbMm59sk+QmY09286wofsPX1Tqy9hf7UuPEMzwjtxL9k64\nwsAazNzhCoP8rpsvDJbqL+Rq3iBOmFiGGMVooFpu1Bs0HGjqDcZ+N4V40sMj\n+FbTJPgTdvbYQFmtmhAafA360Oh+8XVmAYkID8Gp/+ud47we9UdnaKuQRD8D\nvah/0euMxdQy3aZqKZcew2+uWHO3DhEhzu+T0VCm1yPdlDCS+ku8FSIoZxGe\nHW2j\r\n=01Ko\r\n-----END PGP SIGNATURE-----\r\n"
    },
    "types": "./index.d.ts",
-   "readme": "# globby\n\n> User-friendly glob matching\n\nBased on [`fast-glob`](https://github.com/mrmlnc/fast-glob) but adds a bunch of useful features.\n\n## Features\n\n- Promise API\n- Multiple patterns\n- Negated patterns: `['foo*', '!foobar']`\n- Expands directories: `foo` → `foo/**/*`\n- Supports `.gitignore`\n\n## Install\n\n```\n$ npm install globby\n```\n\n## Usage\n\n```\n├── unicorn\n├── cake\n└── rainbow\n```\n\n```js\nconst globby = require('globby');\n\n(async () => {\n\tconst paths = await globby(['*', '!cake']);\n\n\tconsole.log(paths);\n\t//=> ['unicorn', 'rainbow']\n})();\n```\n\n## API\n\nNote that glob patterns can only contain forward-slashes, not backward-slashes, so if you want to construct a glob pattern from path components, you need to use `path.posix.join()` instead of `path.join()`.\n\n### globby(patterns, options?)\n\nReturns a `Promise<string[]>` of matching paths.\n\n#### patterns\n\nType: `string | string[]`\n\nSee supported `minimatch` [patterns](https://github.com/isaacs/minimatch#usage).\n\n#### options\n\nType: `object`\n\nSee the [`fast-glob` options](https://github.com/mrmlnc/fast-glob#options-3) in addition to the ones below.\n\n##### expandDirectories\n\nType: `boolean | string[] | object`\\\nDefault: `true`\n\nIf set to `true`, `globby` will automatically glob directories for you. If you define an `Array` it will only glob files that matches the patterns inside the `Array`. You can also define an `object` with `files` and `extensions` like below:\n\n```js\nconst globby = require('globby');\n\n(async () => {\n\tconst paths = await globby('images', {\n\t\texpandDirectories: {\n\t\t\tfiles: ['cat', 'unicorn', '*.jpg'],\n\t\t\textensions: ['png']\n\t\t}\n\t});\n\n\tconsole.log(paths);\n\t//=> ['cat.png', 'unicorn.png', 'cow.jpg', 'rainbow.jpg']\n})();\n```\n\nNote that if you set this option to `false`, you won't get back matched directories unless you set `onlyFiles: false`.\n\n##### gitignore\n\nType: `boolean`\\\nDefault: `false`\n\nRespect ignore patterns in `.gitignore` files that apply to the globbed files.\n\n### globby.sync(patterns, options?)\n\nReturns `string[]` of matching paths.\n\n### globby.stream(patterns, options?)\n\nReturns a [`stream.Readable`](https://nodejs.org/api/stream.html#stream_readable_streams) of matching paths.\n\nSince Node.js 10, [readable streams are iterable](https://nodejs.org/api/stream.html#stream_readable_symbol_asynciterator), so you can loop over glob matches in a [`for await...of` loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) like this:\n\n```js\nconst globby = require('globby');\n\n(async () => {\n\tfor await (const path of globby.stream('*.tmp')) {\n\t\tconsole.log(path);\n\t}\n})();\n```\n\n### globby.generateGlobTasks(patterns, options?)\n\nReturns an `object[]` in the format `{pattern: string, options: Object}`, which can be passed as arguments to [`fast-glob`](https://github.com/mrmlnc/fast-glob). This is useful for other globbing-related packages.\n\nNote that you should avoid running the same tasks multiple times as they contain a file system cache. Instead, run this method each time to ensure file system changes are taken into consideration.\n\n### globby.hasMagic(patterns, options?)\n\nReturns a `boolean` of whether there are any special glob characters in the `patterns`.\n\nNote that the options affect the results.\n\nThis function is backed by [`fast-glob`](https://github.com/mrmlnc/fast-glob#isdynamicpatternpattern-options).\n\n### globby.gitignore(options?)\n\nReturns a `Promise<(path: string) => boolean>` indicating whether a given path is ignored via a `.gitignore` file.\n\nTakes `cwd?: string` and `ignore?: string[]` as options. `.gitignore` files matched by the ignore config are not used for the resulting filter function.\n\n```js\nconst {gitignore} = require('globby');\n\n(async () => {\n\tconst isIgnored = await gitignore();\n\tconsole.log(isIgnored('some/file'));\n})();\n```\n\n### globby.gitignore.sync(options?)\n\nReturns a `(path: string) => boolean` indicating whether a given path is ignored via a `.gitignore` file.\n\nTakes the same options as `globby.gitignore`.\n\n## Globbing patterns\n\nJust a quick overview.\n\n- `*` matches any number of characters, but not `/`\n- `?` matches a single character, but not `/`\n- `**` matches any number of characters, including `/`, as long as it's the only thing in a path part\n- `{}` allows for a comma-separated list of \"or\" expressions\n- `!` at the beginning of a pattern will negate the match\n\n[Various patterns and expected matches.](https://github.com/sindresorhus/multimatch/blob/main/test/test.js)\n\n## globby for enterprise\n\nAvailable as part of the Tidelift Subscription.\n\nThe maintainers of globby and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-globby?utm_source=npm-globby&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)\n\n## Related\n\n- [multimatch](https://github.com/sindresorhus/multimatch) - Match against a list instead of the filesystem\n- [matcher](https://github.com/sindresorhus/matcher) - Simple wildcard matching\n- [del](https://github.com/sindresorhus/del) - Delete files and directories\n- [make-dir](https://github.com/sindresorhus/make-dir) - Make a directory and its parents if needed\n",
    "engines": {
     "node": ">=10"
    },
@@ -5660,6 +5658,129 @@
   "14.0.2": {
    "name": "globby",
    "version": "14.0.2",
+   "keywords": [
+    "all",
+    "array",
+    "directories",
+    "expand",
+    "files",
+    "filesystem",
+    "filter",
+    "find",
+    "fnmatch",
+    "folders",
+    "fs",
+    "glob",
+    "globbing",
+    "globs",
+    "gulpfriendly",
+    "match",
+    "matcher",
+    "minimatch",
+    "multi",
+    "multiple",
+    "paths",
+    "pattern",
+    "patterns",
+    "traverse",
+    "util",
+    "utility",
+    "wildcard",
+    "wildcards",
+    "promise",
+    "gitignore",
+    "git"
+   ],
+   "author": {
+    "url": "https://sindresorhus.com",
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com"
+   },
+   "license": "MIT",
+   "_id": "globby@14.0.2",
+   "homepage": "https://github.com/sindresorhus/globby#readme",
+   "bugs": {
+    "url": "https://github.com/sindresorhus/globby/issues"
+   },
+   "xo": {
+    "ignores": [
+     "fixtures"
+    ]
+   },
+   "ava": {
+    "files": [
+     "!tests/utilities.js"
+    ],
+    "workerThreads": false
+   },
+   "dist": {
+    "shasum": "06554a54ccfe9264e5a9ff8eded46aa1e306482f",
+    "tarball": "http://localhost:3000/globby/-/globby-14.0.2.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-s3Fq41ZVh7vbbe2PN3nrW7yC7U7MFVc5c98/iTl9c2GawNMKx/J648KQRW6WKkuU8GIbbh2IXfIRQjOZnXcTnw==",
+    "signatures": [
+     {
+      "sig": "MEQCIFO9RqZ6NX5ehdZWk6uM3ByC6WcDMz65bH0XduN5zSemAiB5PjdqWTkhh+BmEHsSFQqUzlT/5gux0+UboLVXj2hCQQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 25662
+   },
+   "type": "module",
+   "types": "./index.d.ts",
+   "engines": {
+    "node": ">=18"
+   },
+   "exports": {
+    "types": "./index.d.ts",
+    "default": "./index.js"
+   },
+   "funding": "https://github.com/sponsors/sindresorhus",
+   "gitHead": "c000568bd20c97d94397c71ec22df4e1c5f41d47",
+   "scripts": {
+    "test": "xo && ava && tsd",
+    "bench": "npm update @globby/main-branch glob-stream fast-glob && node bench.js"
+   },
+   "_npmUser": {
+    "name": "sindresorhus",
+    "email": "sindresorhus@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/sindresorhus/globby.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.6.0",
+   "description": "User-friendly glob matching",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "18.20.2",
+   "dependencies": {
+    "slash": "^5.1.0",
+    "ignore": "^5.2.4",
+    "fast-glob": "^3.3.2",
+    "path-type": "^5.0.0",
+    "unicorn-magic": "^0.1.0",
+    "@sindresorhus/merge-streams": "^2.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.57.0",
+    "ava": "^5.3.1",
+    "tsd": "^0.30.4",
+    "tempy": "^3.1.0",
+    "benchmark": "2.1.4",
+    "@types/node": "^20.9.0",
+    "glob-stream": "^8.0.0",
+    "@globby/main-branch": "github:sindresorhus/globby#main"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/globby_14.0.2_1719749576188_0.046644516317927875",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "14.1.0": {
+   "name": "globby",
+   "version": "14.1.0",
    "description": "User-friendly glob matching",
    "license": "MIT",
    "repository": {
@@ -5720,21 +5841,21 @@
    ],
    "dependencies": {
     "@sindresorhus/merge-streams": "^2.1.0",
-    "fast-glob": "^3.3.2",
-    "ignore": "^5.2.4",
-    "path-type": "^5.0.0",
+    "fast-glob": "^3.3.3",
+    "ignore": "^7.0.3",
+    "path-type": "^6.0.0",
     "slash": "^5.1.0",
-    "unicorn-magic": "^0.1.0"
+    "unicorn-magic": "^0.3.0"
    },
    "devDependencies": {
     "@globby/main-branch": "github:sindresorhus/globby#main",
-    "@types/node": "^20.9.0",
+    "@types/node": "^22.13.1",
     "ava": "^5.3.1",
     "benchmark": "2.1.4",
     "glob-stream": "^8.0.0",
     "tempy": "^3.1.0",
-    "tsd": "^0.30.4",
-    "xo": "^0.57.0"
+    "tsd": "^0.31.2",
+    "xo": "^0.60.0"
    },
    "xo": {
     "ignores": [
@@ -5747,25 +5868,25 @@
     ],
     "workerThreads": false
    },
-   "_id": "globby@14.0.2",
-   "gitHead": "c000568bd20c97d94397c71ec22df4e1c5f41d47",
+   "_id": "globby@14.1.0",
+   "gitHead": "60d7de54476f9ba9734c1b6923fba39d6589de5f",
    "types": "./index.d.ts",
    "bugs": {
     "url": "https://github.com/sindresorhus/globby/issues"
    },
    "homepage": "https://github.com/sindresorhus/globby#readme",
-   "_nodeVersion": "18.20.2",
-   "_npmVersion": "10.6.0",
+   "_nodeVersion": "23.6.1",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-s3Fq41ZVh7vbbe2PN3nrW7yC7U7MFVc5c98/iTl9c2GawNMKx/J648KQRW6WKkuU8GIbbh2IXfIRQjOZnXcTnw==",
-    "shasum": "06554a54ccfe9264e5a9ff8eded46aa1e306482f",
-    "tarball": "http://localhost:3000/globby/-/globby-14.0.2.tgz",
+    "integrity": "sha512-0Ia46fDOaT7k4og1PDW4YbodWWr3scS2vAr2lTbsplOt2WkKp0vQbkI9wKis/T5LV/dqPjO3bpS/z6GTJB82LA==",
+    "shasum": "138b78e77cf5a8d794e327b15dce80bf1fb0a73e",
+    "tarball": "http://localhost:3000/globby/-/globby-14.1.0.tgz",
     "fileCount": 7,
-    "unpackedSize": 25662,
+    "unpackedSize": 28993,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIFO9RqZ6NX5ehdZWk6uM3ByC6WcDMz65bH0XduN5zSemAiB5PjdqWTkhh+BmEHsSFQqUzlT/5gux0+UboLVXj2hCQQ=="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIQCAYjh56zRWP3rL5IPsAlCOIbQ7HBlVwgRO4Pmctt5O7QIgJI6aXysPS8cm73dhdVOKFCMZofu8z3lyZo6kNR+zvAs="
      }
     ]
    },
@@ -5774,16 +5895,22 @@
     "email": "sindresorhus@gmail.com"
    },
    "directories": {},
+   "maintainers": [
+    {
+     "name": "sindresorhus",
+     "email": "sindresorhus@gmail.com"
+    }
+   ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/globby_14.0.2_1719749576188_0.046644516317927875"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/globby_14.1.0_1739012378073_0.2247303971351451"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2014-06-21T13:52:26.626Z",
-  "modified": "2024-06-30T12:12:56.552Z",
+  "modified": "2025-02-08T10:59:38.467Z",
   "0.1.0": "2014-06-21T13:52:26.626Z",
   "0.1.1": "2014-06-21T14:47:47.200Z",
   "1.0.0": "2014-11-18T08:37:51.732Z",
@@ -5832,23 +5959,19 @@
   "13.2.2": "2023-07-05T22:03:55.698Z",
   "14.0.0": "2023-11-09T17:08:07.596Z",
   "14.0.1": "2024-02-11T11:00:47.063Z",
-  "14.0.2": "2024-06-30T12:12:56.375Z"
+  "14.0.2": "2024-06-30T12:12:56.375Z",
+  "14.1.0": "2025-02-08T10:59:38.295Z"
  },
- "maintainers": [
-  {
-   "name": "sindresorhus",
-   "email": "sindresorhus@gmail.com"
-  }
- ],
+ "bugs": {
+  "url": "https://github.com/sindresorhus/globby/issues"
+ },
  "author": {
   "name": "Sindre Sorhus",
   "email": "sindresorhus@gmail.com",
   "url": "https://sindresorhus.com"
  },
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/sindresorhus/globby.git"
- },
+ "license": "MIT",
+ "homepage": "https://github.com/sindresorhus/globby#readme",
  "keywords": [
   "all",
   "array",
@@ -5882,12 +6005,18 @@
   "gitignore",
   "git"
  ],
- "license": "MIT",
- "homepage": "https://github.com/sindresorhus/globby#readme",
- "bugs": {
-  "url": "https://github.com/sindresorhus/globby/issues"
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/sindresorhus/globby.git"
  },
- "readme": "# globby\n\n> User-friendly glob matching\n\nBased on [`fast-glob`](https://github.com/mrmlnc/fast-glob) but adds a bunch of useful features.\n\n## Features\n\n- Promise API\n- Multiple patterns\n- Negated patterns: `['foo*', '!foobar']`\n- Expands directories: `foo` → `foo/**/*`\n- Supports `.gitignore` and similar ignore config files\n- Supports `URL` as `cwd`\n\n## Install\n\n```sh\nnpm install globby\n```\n\n## Usage\n\n```\n├── unicorn\n├── cake\n└── rainbow\n```\n\n```js\nimport {globby} from 'globby';\n\nconst paths = await globby(['*', '!cake']);\n\nconsole.log(paths);\n//=> ['unicorn', 'rainbow']\n```\n\n## API\n\nNote that glob patterns can only contain forward-slashes, not backward-slashes, so if you want to construct a glob pattern from path components, you need to use `path.posix.join()` instead of `path.join()`.\n\n### globby(patterns, options?)\n\nReturns a `Promise<string[]>` of matching paths.\n\n#### patterns\n\nType: `string | string[]`\n\nSee supported `minimatch` [patterns](https://github.com/isaacs/minimatch#usage).\n\n#### options\n\nType: `object`\n\nSee the [`fast-glob` options](https://github.com/mrmlnc/fast-glob#options-3) in addition to the ones below.\n\n##### expandDirectories\n\nType: `boolean | string[] | object`\\\nDefault: `true`\n\nIf set to `true`, `globby` will automatically glob directories for you. If you define an `Array` it will only glob files that matches the patterns inside the `Array`. You can also define an `object` with `files` and `extensions` like below:\n\n```js\nimport {globby} from 'globby';\n\nconst paths = await globby('images', {\n\texpandDirectories: {\n\t\tfiles: ['cat', 'unicorn', '*.jpg'],\n\t\textensions: ['png']\n\t}\n});\n\nconsole.log(paths);\n//=> ['cat.png', 'unicorn.png', 'cow.jpg', 'rainbow.jpg']\n```\n\nNote that if you set this option to `false`, you won't get back matched directories unless you set `onlyFiles: false`.\n\n##### gitignore\n\nType: `boolean`\\\nDefault: `false`\n\nRespect ignore patterns in `.gitignore` files that apply to the globbed files.\n\n##### ignoreFiles\n\nType: `string | string[]`\\\nDefault: `undefined`\n\nGlob patterns to look for ignore files, which are then used to ignore globbed files.\n\nThis is a more generic form of the `gitignore` option, allowing you to find ignore files with a [compatible syntax](http://git-scm.com/docs/gitignore). For instance, this works with Babel's `.babelignore`, Prettier's `.prettierignore`, or ESLint's `.eslintignore` files.\n\n### globbySync(patterns, options?)\n\nReturns `string[]` of matching paths.\n\n### globbyStream(patterns, options?)\n\nReturns a [`stream.Readable`](https://nodejs.org/api/stream.html#stream_readable_streams) of matching paths.\n\nFor example, loop over glob matches in a [`for await...of` loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) like this:\n\n```js\nimport {globbyStream} from 'globby';\n\nfor await (const path of globbyStream('*.tmp')) {\n\tconsole.log(path);\n}\n```\n\n### convertPathToPattern(path)\n\nConvert a path to a pattern. [Learn more.](https://github.com/mrmlnc/fast-glob#convertpathtopatternpath)\n\n### generateGlobTasks(patterns, options?)\n\nReturns an `Promise<object[]>` in the format `{patterns: string[], options: Object}`, which can be passed as arguments to [`fast-glob`](https://github.com/mrmlnc/fast-glob). This is useful for other globbing-related packages.\n\nNote that you should avoid running the same tasks multiple times as they contain a file system cache. Instead, run this method each time to ensure file system changes are taken into consideration.\n\n### generateGlobTasksSync(patterns, options?)\n\nReturns an `object[]` in the format `{patterns: string[], options: Object}`, which can be passed as arguments to [`fast-glob`](https://github.com/mrmlnc/fast-glob). This is useful for other globbing-related packages.\n\nTakes the same arguments as `generateGlobTasks`.\n\n### isDynamicPattern(patterns, options?)\n\nReturns a `boolean` of whether there are any special glob characters in the `patterns`.\n\nNote that the options affect the results.\n\nThis function is backed by [`fast-glob`](https://github.com/mrmlnc/fast-glob#isdynamicpatternpattern-options).\n\n### isGitIgnored(options?)\n\nReturns a `Promise<(path: URL | string) => boolean>` indicating whether a given path is ignored via a `.gitignore` file.\n\nTakes `cwd?: URL | string` as options.\n\n```js\nimport {isGitIgnored} from 'globby';\n\nconst isIgnored = await isGitIgnored();\n\nconsole.log(isIgnored('some/file'));\n```\n\n### isGitIgnoredSync(options?)\n\nReturns a `(path: URL | string) => boolean` indicating whether a given path is ignored via a `.gitignore` file.\n\nTakes `cwd?: URL | string` as options.\n\n## Globbing patterns\n\nJust a quick overview.\n\n- `*` matches any number of characters, but not `/`\n- `?` matches a single character, but not `/`\n- `**` matches any number of characters, including `/`, as long as it's the only thing in a path part\n- `{}` allows for a comma-separated list of \"or\" expressions\n- `!` at the beginning of a pattern will negate the match\n\n[Various patterns and expected matches.](https://github.com/sindresorhus/multimatch/blob/main/test/test.js)\n\n## Related\n\n- [multimatch](https://github.com/sindresorhus/multimatch) - Match against a list instead of the filesystem\n- [matcher](https://github.com/sindresorhus/matcher) - Simple wildcard matching\n- [del](https://github.com/sindresorhus/del) - Delete files and directories\n- [make-dir](https://github.com/sindresorhus/make-dir) - Make a directory and its parents if needed\n",
+ "description": "User-friendly glob matching",
+ "maintainers": [
+  {
+   "name": "sindresorhus",
+   "email": "sindresorhus@gmail.com"
+  }
+ ],
+ "readme": "# globby\n\n> User-friendly glob matching\n\nBased on [`fast-glob`](https://github.com/mrmlnc/fast-glob) but adds a bunch of useful features.\n\n## Features\n\n- Promise API\n- Multiple patterns\n- Negated patterns: `['foo*', '!foobar']`\n- Expands directories: `foo` → `foo/**/*`\n- Supports `.gitignore` and similar ignore config files\n- Supports `URL` as `cwd`\n\n## Install\n\n```sh\nnpm install globby\n```\n\n## Usage\n\n```\n├── unicorn\n├── cake\n└── rainbow\n```\n\n```js\nimport {globby} from 'globby';\n\nconst paths = await globby(['*', '!cake']);\n\nconsole.log(paths);\n//=> ['unicorn', 'rainbow']\n```\n\n## API\n\nNote that glob patterns can only contain forward-slashes, not backward-slashes, so if you want to construct a glob pattern from path components, you need to use `path.posix.join()` instead of `path.join()`.\n\n### globby(patterns, options?)\n\nReturns a `Promise<string[]>` of matching paths.\n\n#### patterns\n\nType: `string | string[]`\n\nSee supported `minimatch` [patterns](https://github.com/isaacs/minimatch#usage).\n\n#### options\n\nType: `object`\n\nSee the [`fast-glob` options](https://github.com/mrmlnc/fast-glob#options-3) in addition to the ones below.\n\n##### expandDirectories\n\nType: `boolean | string[] | object`\\\nDefault: `true`\n\nIf set to `true`, `globby` will automatically glob directories for you. If you define an `Array` it will only glob files that matches the patterns inside the `Array`. You can also define an `object` with `files` and `extensions` like below:\n\n```js\nimport {globby} from 'globby';\n\nconst paths = await globby('images', {\n\texpandDirectories: {\n\t\tfiles: ['cat', 'unicorn', '*.jpg'],\n\t\textensions: ['png']\n\t}\n});\n\nconsole.log(paths);\n//=> ['cat.png', 'unicorn.png', 'cow.jpg', 'rainbow.jpg']\n```\n\nNote that if you set this option to `false`, you won't get back matched directories unless you set `onlyFiles: false`.\n\n##### gitignore\n\nType: `boolean`\\\nDefault: `false`\n\nRespect ignore patterns in `.gitignore` files that apply to the globbed files.\n\n##### ignoreFiles\n\nType: `string | string[]`\\\nDefault: `undefined`\n\nGlob patterns to look for ignore files, which are then used to ignore globbed files.\n\nThis is a more generic form of the `gitignore` option, allowing you to find ignore files with a [compatible syntax](http://git-scm.com/docs/gitignore). For instance, this works with Babel's `.babelignore`, Prettier's `.prettierignore`, or ESLint's `.eslintignore` files.\n\n### globbySync(patterns, options?)\n\nReturns `string[]` of matching paths.\n\n### globbyStream(patterns, options?)\n\nReturns a [`stream.Readable`](https://nodejs.org/api/stream.html#stream_readable_streams) of matching paths.\n\nFor example, loop over glob matches in a [`for await...of` loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for-await...of) like this:\n\n```js\nimport {globbyStream} from 'globby';\n\nfor await (const path of globbyStream('*.tmp')) {\n\tconsole.log(path);\n}\n```\n\n### convertPathToPattern(path)\n\nConvert a path to a pattern. [Learn more.](https://github.com/mrmlnc/fast-glob#convertpathtopatternpath)\n\n### generateGlobTasks(patterns, options?)\n\nReturns an `Promise<object[]>` in the format `{patterns: string[], options: Object}`, which can be passed as arguments to [`fast-glob`](https://github.com/mrmlnc/fast-glob). This is useful for other globbing-related packages.\n\nNote that you should avoid running the same tasks multiple times as they contain a file system cache. Instead, run this method each time to ensure file system changes are taken into consideration.\n\n### generateGlobTasksSync(patterns, options?)\n\nReturns an `object[]` in the format `{patterns: string[], options: Object}`, which can be passed as arguments to [`fast-glob`](https://github.com/mrmlnc/fast-glob). This is useful for other globbing-related packages.\n\nTakes the same arguments as `generateGlobTasks`.\n\n### isDynamicPattern(patterns, options?)\n\nReturns a `boolean` of whether there are any special glob characters in the `patterns`.\n\nNote that the options affect the results.\n\nThis function is backed by [`fast-glob`](https://github.com/mrmlnc/fast-glob#isdynamicpatternpattern-options).\n\n### isGitIgnored(options?)\n\nReturns a `Promise<(path: URL | string) => boolean>` indicating whether a given path is ignored via a `.gitignore` file.\n\nTakes `cwd?: URL | string` as options.\n\n```js\nimport {isGitIgnored} from 'globby';\n\nconst isIgnored = await isGitIgnored();\n\nconsole.log(isIgnored('some/file'));\n```\n\n### isGitIgnoredSync(options?)\n\nReturns a `(path: URL | string) => boolean` indicating whether a given path is ignored via a `.gitignore` file.\n\nTakes `cwd?: URL | string` as options.\n\n\n### isIgnoredByIgnoreFiles(patterns, options?)\n\nReturns a `Promise<(path: URL | string) => boolean>` indicating whether a given path is ignored via the ignore files.\n\nThis is a more generic form of the `isGitIgnored` function, allowing you to find ignore files with a [compatible syntax](http://git-scm.com/docs/gitignore). For instance, this works with Babel's `.babelignore`, Prettier's `.prettierignore`, or ESLint's `.eslintignore` files.\n\nTakes `cwd?: URL | string` as options.\n\n```js\nimport {isIgnoredByIgnoreFiles} from 'globby';\n\nconst isIgnored = await isIgnoredByIgnoreFiles(\"**/.gitignore\");\n\nconsole.log(isIgnored('some/file'));\n```\n\n### isIgnoredByIgnoreFilesSync(patterns, options?)\n\nReturns a `(path: URL | string) => boolean` indicating whether a given path is ignored via the ignore files.\n\nThis is a more generic form of the `isGitIgnoredSync` function, allowing you to find ignore files with a [compatible syntax](http://git-scm.com/docs/gitignore). For instance, this works with Babel's `.babelignore`, Prettier's `.prettierignore`, or ESLint's `.eslintignore` files.\n\nTakes `cwd?: URL | string` as options.\n\n```js\nimport {isIgnoredByIgnoreFilesSync} from 'globby';\n\nconst isIgnored = isIgnoredByIgnoreFilesSync(\"**/.gitignore\");\n\nconsole.log(isIgnored('some/file'));\n```\n\n## Globbing patterns\n\nJust a quick overview.\n\n- `*` matches any number of characters, but not `/`\n- `?` matches a single character, but not `/`\n- `**` matches any number of characters, including `/`, as long as it's the only thing in a path part\n- `{}` allows for a comma-separated list of \"or\" expressions\n- `!` at the beginning of a pattern will negate the match\n\n[Various patterns and expected matches.](https://github.com/sindresorhus/multimatch/blob/main/test/test.js)\n\n## Related\n\n- [multimatch](https://github.com/sindresorhus/multimatch) - Match against a list instead of the filesystem\n- [matcher](https://github.com/sindresorhus/matcher) - Simple wildcard matching\n- [del](https://github.com/sindresorhus/del) - Delete files and directories\n- [make-dir](https://github.com/sindresorhus/make-dir) - Make a directory and its parents if needed\n",
  "readmeFilename": "readme.md",
  "users": {
   "bret": true,

@@ -1,9 +1,9 @@
 {
  "_id": "postcss",
- "_rev": "473-1a8fa464a5f81a4a7c030f5eea33f616",
+ "_rev": "474-fa8ab6d5d8776e0fa4d1055f9d9cde9f",
  "name": "postcss",
  "dist-tags": {
-  "latest": "8.5.1"
+  "latest": "8.5.2"
  },
  "versions": {
   "0.1.0": {
@@ -27300,6 +27300,133 @@
   "8.5.1": {
    "name": "postcss",
    "version": "8.5.1",
+   "keywords": [
+    "css",
+    "postcss",
+    "rework",
+    "preprocessor",
+    "parser",
+    "source map",
+    "transform",
+    "manipulation",
+    "transpiler"
+   ],
+   "author": {
+    "name": "Andrey Sitnik",
+    "email": "andrey@sitnik.ru"
+   },
+   "license": "MIT",
+   "_id": "postcss@8.5.1",
+   "maintainers": [
+    {
+     "name": "ai",
+     "email": "andrey@sitnik.ru"
+    }
+   ],
+   "homepage": "https://postcss.org/",
+   "bugs": {
+    "url": "https://github.com/postcss/postcss/issues"
+   },
+   "dist": {
+    "shasum": "e2272a1f8a807fafa413218245630b5db10a3214",
+    "tarball": "http://localhost:3000/postcss/-/postcss-8.5.1.tgz",
+    "fileCount": 55,
+    "integrity": "sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIEmUUE/t6M/7x+tSEzB4iMLogZbJQmvmI8/G1gzv9LriAiEAg08lGQFTM30K3Oc+utf7anOAmgIF/WwvNWabvXXX9Wc=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 201829
+   },
+   "main": "./lib/postcss.js",
+   "types": "./lib/postcss.d.ts",
+   "browser": {
+    "fs": false,
+    "url": false,
+    "path": false,
+    "source-map-js": false,
+    "./lib/terminal-highlight": false
+   },
+   "engines": {
+    "node": "^10 || ^12 || >=14"
+   },
+   "exports": {
+    ".": {
+     "import": "./lib/postcss.mjs",
+     "require": "./lib/postcss.js"
+    },
+    "./lib/list": "./lib/list.js",
+    "./lib/node": "./lib/node.js",
+    "./lib/root": "./lib/root.js",
+    "./lib/rule": "./lib/rule.js",
+    "./lib/input": "./lib/input.js",
+    "./lib/parse": "./lib/parse.js",
+    "./lib/parser": "./lib/parser.js",
+    "./lib/result": "./lib/result.js",
+    "./lib/at-rule": "./lib/at-rule.js",
+    "./lib/comment": "./lib/comment.js",
+    "./lib/postcss": "./lib/postcss.js",
+    "./lib/symbols": "./lib/symbols.js",
+    "./lib/warning": "./lib/warning.js",
+    "./lib/fromJSON": "./lib/fromJSON.js",
+    "./lib/tokenize": "./lib/tokenize.js",
+    "./package.json": "./package.json",
+    "./lib/container": "./lib/container.js",
+    "./lib/processor": "./lib/processor.js",
+    "./lib/stringify": "./lib/stringify.js",
+    "./lib/warn-once": "./lib/warn-once.js",
+    "./lib/declaration": "./lib/declaration.js",
+    "./lib/lazy-result": "./lib/lazy-result.js",
+    "./lib/stringifier": "./lib/stringifier.js",
+    "./lib/previous-map": "./lib/previous-map.js",
+    "./lib/map-generator": "./lib/map-generator.js",
+    "./lib/no-work-result": "./lib/no-work-result.js",
+    "./lib/css-syntax-error": "./lib/css-syntax-error.js",
+    "./lib/terminal-highlight": "./lib/terminal-highlight.js"
+   },
+   "funding": [
+    {
+     "url": "https://opencollective.com/postcss/",
+     "type": "opencollective"
+    },
+    {
+     "url": "https://tidelift.com/funding/github/npm/postcss",
+     "type": "tidelift"
+    },
+    {
+     "url": "https://github.com/sponsors/ai",
+     "type": "github"
+    }
+   ],
+   "gitHead": "7b02c75e5f093b3fdf8d46eeb17c21a52434d827",
+   "_npmUser": {
+    "name": "ai",
+    "email": "andrey@sitnik.ru"
+   },
+   "repository": {
+    "url": "git+https://github.com/postcss/postcss.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Tool for transforming styles with JS plugins",
+   "directories": {},
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "nanoid": "^3.3.8",
+    "picocolors": "^1.1.1",
+    "source-map-js": "^1.2.1"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/postcss_8.5.1_1736852144753_0.7428836994935386",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "8.5.2": {
+   "name": "postcss",
+   "version": "8.5.2",
    "description": "Tool for transforming styles with JS plugins",
    "engines": {
     "node": "^10 || ^12 || >=14"
@@ -27390,20 +27517,20 @@
     "url": false,
     "fs": false
    },
-   "_id": "postcss@8.5.1",
-   "gitHead": "7b02c75e5f093b3fdf8d46eeb17c21a52434d827",
+   "_id": "postcss@8.5.2",
+   "gitHead": "692fcde123dbf51c7b1a178370d3e8c6fe7feeee",
    "_nodeVersion": "22.11.0",
    "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-6oz2beyjc5VMn/KV1pPw8fliQkhBXrVn1Z3TVyqZxU8kZpzEKhBdmCFqI6ZbmGtamQvQGuU1sgPTk8ZrXDD7jQ==",
-    "shasum": "e2272a1f8a807fafa413218245630b5db10a3214",
-    "tarball": "http://localhost:3000/postcss/-/postcss-8.5.1.tgz",
+    "integrity": "sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==",
+    "shasum": "e7b99cb9d2ec3e8dd424002e7c16517cb2b846bd",
+    "tarball": "http://localhost:3000/postcss/-/postcss-8.5.2.tgz",
     "fileCount": 55,
-    "unpackedSize": 201829,
+    "unpackedSize": 201946,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIEmUUE/t6M/7x+tSEzB4iMLogZbJQmvmI8/G1gzv9LriAiEAg08lGQFTM30K3Oc+utf7anOAmgIF/WwvNWabvXXX9Wc="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEQCIBHwDhf6nC446Xm7pzRYoEwLRCVCdxMhvGDGZCFXtq+PAiAmkMkQw+/wsJLPGUWajWyTZvwe7h2lwYHdVJZWppmIJA=="
      }
     ]
    },
@@ -27420,14 +27547,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/postcss_8.5.1_1736852144753_0.7428836994935386"
+    "tmp": "tmp/postcss_8.5.2_1739220706730_0.5421446898467321"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2013-11-04T19:57:14.218Z",
-  "modified": "2025-01-14T10:55:45.102Z",
+  "modified": "2025-02-10T20:51:47.119Z",
   "0.1.0": "2013-11-04T20:21:54.720Z",
   "0.2.0": "2013-12-17T23:47:59.233Z",
   "0.3.0": "2014-02-13T19:31:17.805Z",
@@ -27693,7 +27820,8 @@
   "8.4.48": "2024-11-10T21:19:59.793Z",
   "8.4.49": "2024-11-11T19:59:09.131Z",
   "8.5.0": "2025-01-13T19:19:19.499Z",
-  "8.5.1": "2025-01-14T10:55:44.939Z"
+  "8.5.1": "2025-01-14T10:55:44.939Z",
+  "8.5.2": "2025-02-10T20:51:46.928Z"
  },
  "bugs": {
   "url": "https://github.com/postcss/postcss/issues"

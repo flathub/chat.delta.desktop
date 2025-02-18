@@ -1,10 +1,9 @@
 {
  "_id": "react-zoom-pan-pinch",
- "_rev": "68-80b6f142f701222a7c112afd88d7c34c",
+ "_rev": "69-cfbafa44f672dde76de6bf9e82fac79a",
  "name": "react-zoom-pan-pinch",
- "description": "Zoom and pan html elements in easy way",
  "dist-tags": {
-  "latest": "3.6.1"
+  "latest": "3.7.0"
  },
  "versions": {
   "0.5.0": {
@@ -9684,6 +9683,175 @@
   "3.6.1": {
    "name": "react-zoom-pan-pinch",
    "version": "3.6.1",
+   "keywords": [
+    "react",
+    "zoom",
+    "pan",
+    "pinch",
+    "animation",
+    "velocity",
+    "css",
+    "fast",
+    "transformations",
+    "scale",
+    "drag",
+    "viewer",
+    "reacts",
+    "touch",
+    "css3",
+    "svg",
+    "bounds",
+    "context"
+   ],
+   "author": {
+    "name": "prc5"
+   },
+   "license": "MIT",
+   "_id": "react-zoom-pan-pinch@3.6.1",
+   "homepage": "https://github.com/prc5/react-zoom-pan-pinch#readme",
+   "bugs": {
+    "url": "https://github.com/prc5/react-zoom-pan-pinch/issues"
+   },
+   "dist": {
+    "shasum": "fb68b879b66f029f1f89986810fc2e0ac34fa48a",
+    "tarball": "http://localhost:3000/react-zoom-pan-pinch/-/react-zoom-pan-pinch-3.6.1.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-SdPqdk7QDSV7u/WulkFOi+cnza8rEZ0XX4ZpeH7vx3UZEg7DoyuAy3MCmm+BWv/idPQL2Oe73VoC0EhfCN+sZQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIAEBzTXy1v/+fu40F6VCfDyqcgZv4YI3TWaqAfn19gfTAiEAi+tulor024yteQQVs+KHxm0xHJti2taL3b33sdkT3s8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 639243
+   },
+   "main": "dist/index.cjs.js",
+   "types": "dist/index.d.ts",
+   "config": {
+    "commitizen": {
+     "path": "git-cz"
+    }
+   },
+   "module": "dist/index.esm.js",
+   "source": "src/index.ts",
+   "engines": {
+    "npm": ">=5",
+    "node": ">=8"
+   },
+   "gitHead": "9525dbbae52f79aec452ad71e597cc830f15426b",
+   "scripts": {
+    "lint": "eslint . --ext .js,.jsx,.tsx,.ts --fix",
+    "test": "jest",
+    "build": "rollup -c",
+    "start": "DISABLE_ESLINT_PLUGIN=true start-storybook -p 6006 --no-manager-cache",
+    "deploy": "gh-pages -d storybook-static",
+    "format": "prettier --write .",
+    "prepare": "install-peers && yarn build",
+    "release": "yarn semantic-release",
+    "predeploy": "yarn run build:docs",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "build:docs": "build-storybook"
+   },
+   "_npmUser": {
+    "name": "prc5",
+    "email": "maciekpyrc@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/prc5/react-zoom-pan-pinch.git",
+    "type": "git"
+   },
+   "_npmVersion": "8.19.4",
+   "description": "Zoom and pan html elements in easy way",
+   "directories": {},
+   "_nodeVersion": "16.20.2",
+   "eslintConfig": {
+    "extends": [
+     "react-app",
+     "react-app/jest"
+    ]
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "react": "*",
+    "eslint": "^8.17.0",
+    "rollup": "^2.46.0",
+    "postcss": "^8.2.13",
+    "ts-jest": "^29.0.3",
+    "ts-node": "~10.9.1",
+    "webpack": "5",
+    "gh-pages": "^3.1.0",
+    "cross-env": "^7.0.3",
+    "react-dom": "*",
+    "ts-loader": "^9.4.2",
+    "commitlint": "^17.0.2",
+    "typescript": "^4.2.3",
+    "@babel/core": "^7.20.12",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^15.6.1",
+    "webpack-cli": "^5.0.1",
+    "@types/react": "^17.0.3",
+    "babel-eslint": "9.0.0",
+    "babel-loader": "^8.2.2",
+    "jest-extended": "^3.2.0",
+    "react-scripts": "5.0.1",
+    "@babel/runtime": "^7.20.13",
+    "@commitlint/cli": "^17.0.0",
+    "@storybook/react": "^6.5.16",
+    "@types/react-dom": "^17.0.3",
+    "jest-css-modules": "^2.1.0",
+    "semantic-release": "^19.0.5",
+    "install-peers-cli": "^2.2.0",
+    "rollup-plugin-dts": "^3.0.2",
+    "source-map-loader": "^2.0.1",
+    "eslint-config-next": "12.1.6",
+    "eslint-plugin-react": "^7.30.0",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@testing-library/dom": "^8.20.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.26.0",
+    "prism-react-renderer": "^1.2.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^9.0.1",
+    "@storybook/addon-a11y": "^6.5.16",
+    "@storybook/addon-docs": "^6.5.16",
+    "rollup-plugin-postcss": "^4.0.0",
+    "@storybook/addon-links": "^6.5.16",
+    "@testing-library/react": "^13.4.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-config-react-app": "^7.0.1",
+    "@semantic-release/github": "^8.0.6",
+    "@storybook/addon-actions": "^6.5.16",
+    "@rollup/plugin-typescript": "^8.2.1",
+    "@typescript-eslint/parser": "^5.28.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/addon-storysource": "^6.5.16",
+    "@commitlint/config-conventional": "^17.0.2",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@storybook/preset-create-react-app": "4.1.2",
+    "@semantic-release/release-notes-generator": "^10.0.3"
+   },
+   "peerDependencies": {
+    "react": "*",
+    "react-dom": "*"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/react-zoom-pan-pinch_3.6.1_1719828115810_0.9436160139293808",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.7.0": {
+   "name": "react-zoom-pan-pinch",
+   "version": "3.7.0",
    "description": "Zoom and pan html elements in easy way",
    "author": {
     "name": "prc5"
@@ -9696,7 +9864,7 @@
    "scripts": {
     "build": "rollup -c",
     "build:docs": "build-storybook",
-    "start": "DISABLE_ESLINT_PLUGIN=true start-storybook -p 6006 --no-manager-cache",
+    "start": "cross-env DISABLE_ESLINT_PLUGIN=true start-storybook -p 6006 --no-manager-cache",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.tsx,.ts --fix",
     "format": "prettier --write .",
@@ -9765,6 +9933,7 @@
     "react": "*",
     "react-dom": "*",
     "react-scripts": "5.0.1",
+    "resize-observer-polyfill": "^1.5.1",
     "rollup": "^2.46.0",
     "rollup-plugin-delete": "^2.0.0",
     "rollup-plugin-dts": "^3.0.2",
@@ -9775,6 +9944,7 @@
     "ts-jest": "^29.0.3",
     "ts-loader": "^9.4.2",
     "ts-node": "~10.9.1",
+    "tslib": "^2.6.3",
     "typescript": "^4.2.3",
     "webpack": "5",
     "webpack-cli": "^5.0.1"
@@ -9818,24 +9988,24 @@
     "bounds",
     "context"
    ],
-   "gitHead": "9525dbbae52f79aec452ad71e597cc830f15426b",
+   "gitHead": "68616a3a02d26bcf7444eab8c1abadf64bc2c730",
    "bugs": {
     "url": "https://github.com/prc5/react-zoom-pan-pinch/issues"
    },
    "homepage": "https://github.com/prc5/react-zoom-pan-pinch#readme",
-   "_id": "react-zoom-pan-pinch@3.6.1",
+   "_id": "react-zoom-pan-pinch@3.7.0",
    "_nodeVersion": "16.20.2",
    "_npmVersion": "8.19.4",
    "dist": {
-    "integrity": "sha512-SdPqdk7QDSV7u/WulkFOi+cnza8rEZ0XX4ZpeH7vx3UZEg7DoyuAy3MCmm+BWv/idPQL2Oe73VoC0EhfCN+sZQ==",
-    "shasum": "fb68b879b66f029f1f89986810fc2e0ac34fa48a",
-    "tarball": "http://localhost:3000/react-zoom-pan-pinch/-/react-zoom-pan-pinch-3.6.1.tgz",
+    "integrity": "sha512-UmReVZ0TxlKzxSbYiAj+LeGRW8s8LraAFTXRAxzMYnNRgGPsxCudwZKVkjvGmjtx7SW/hZamt69NUmGf4xrkXA==",
+    "shasum": "7db4d2ec49c316eb20f71c56e9012eeb3ef4b504",
+    "tarball": "http://localhost:3000/react-zoom-pan-pinch/-/react-zoom-pan-pinch-3.7.0.tgz",
     "fileCount": 8,
-    "unpackedSize": 639243,
+    "unpackedSize": 441480,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIAEBzTXy1v/+fu40F6VCfDyqcgZv4YI3TWaqAfn19gfTAiEAi+tulor024yteQQVs+KHxm0xHJti2taL3b33sdkT3s8="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIGO4kVR79AyWI0dW64aKTDV1w42W+cBcGs1wlLzsvh7iAiEAqE0jLMPw+MwOHlSqX9TRrO4O6CpzCqdiosRCLyTLdDQ="
      }
     ]
    },
@@ -9844,16 +10014,22 @@
     "email": "maciekpyrc@gmail.com"
    },
    "directories": {},
+   "maintainers": [
+    {
+     "name": "prc5",
+     "email": "maciekpyrc@gmail.com"
+    }
+   ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/react-zoom-pan-pinch_3.6.1_1719828115810_0.9436160139293808"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/react-zoom-pan-pinch_3.7.0_1738322622311_0.43906360807335854"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2019-07-15T20:40:32.023Z",
-  "modified": "2024-07-01T10:01:56.115Z",
+  "modified": "2025-01-31T11:23:42.691Z",
   "0.5.0": "2019-07-15T20:40:32.218Z",
   "0.6.0": "2019-07-18T20:55:11.873Z",
   "0.9.0": "2019-08-11T16:52:25.655Z",
@@ -9921,21 +10097,17 @@
   "3.5.0": "2024-06-21T10:30:26.377Z",
   "3.5.1": "2024-06-23T19:03:20.496Z",
   "3.6.0": "2024-06-27T15:03:49.351Z",
-  "3.6.1": "2024-07-01T10:01:55.967Z"
+  "3.6.1": "2024-07-01T10:01:55.967Z",
+  "3.7.0": "2025-01-31T11:23:42.512Z"
  },
- "maintainers": [
-  {
-   "name": "prc5",
-   "email": "maciekpyrc@gmail.com"
-  }
- ],
+ "bugs": {
+  "url": "https://github.com/prc5/react-zoom-pan-pinch/issues"
+ },
  "author": {
   "name": "prc5"
  },
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/prc5/react-zoom-pan-pinch.git"
- },
+ "license": "MIT",
+ "homepage": "https://github.com/prc5/react-zoom-pan-pinch#readme",
  "keywords": [
   "react",
   "zoom",
@@ -9956,11 +10128,17 @@
   "bounds",
   "context"
  ],
- "license": "MIT",
- "homepage": "https://github.com/prc5/react-zoom-pan-pinch#readme",
- "bugs": {
-  "url": "https://github.com/prc5/react-zoom-pan-pinch/issues"
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/prc5/react-zoom-pan-pinch.git"
  },
+ "description": "Zoom and pan html elements in easy way",
+ "maintainers": [
+  {
+   "name": "prc5",
+   "email": "maciekpyrc@gmail.com"
+  }
+ ],
  "readme": "# 🖼 React Zoom Pan Pinch\n\n> Super fast and light react npm package for zooming, panning and pinching html\n> elements in easy way\n\n<p>\n  <a href=\"https://bettertyped.com/\">\n    <img src=\"https://custom-icon-badges.demolab.com/static/v1?label=&message=BetterTyped&color=333&logo=BT\" />\n  </a>\n  <a href=\"https://www.npmjs.com/package/react-zoom-pan-pinch\">\n    <img src=\"https://custom-icon-badges.demolab.com/npm/v/react-zoom-pan-pinch.svg?logo=npm&color=e22121\"/>\n  </a>\n  <a href=\"https://github.com/prc5/react-zoom-pan-pinch\">\n    <img src=\"https://custom-icon-badges.demolab.com/github/stars/prc5/react-zoom-pan-pinch?logo=star\" />\n  </a>\n  <a href=\"https://github.com/prc5/react-zoom-pan-pinch/blob/main/License.md\">\n    <img src=\"https://custom-icon-badges.demolab.com/github/license/prc5/react-zoom-pan-pinch?logo=law&color=yellow\" />\n  </a>\n  <a href=\"https://github.com/semantic-release/semantic-release\">\n    <img src=\"https://custom-icon-badges.demolab.com/badge/semver-commitzen-e10079?logo=semantic-release&color=e76f51\" />\n  </a>\n  <a href=\"https://www.npmjs.com/package/react-zoom-pan-pinch\">\n    <img src=\"https://custom-icon-badges.demolab.com/npm/dm/react-zoom-pan-pinch?logoColor=fff&logo=trending-up\" />\n  </a>\n  <a href=\"https://www.npmjs.com/package/react-zoom-pan-pinch\">\n    <img src=\"https://custom-icon-badges.demolab.com/bundlephobia/minzip/react-zoom-pan-pinch?color=E10098&logo=package\" />\n  </a>\n  <a href=\"https://github.com/prc5/react-zoom-pan-pinch\">\n    <img src=\"https://custom-icon-badges.demolab.com/badge/typescript-%23007ACC.svg?logo=typescript&logoColor=white\" />\n  </a>\n  <a href=\"https://hits.sh/github.com/prc5/react-zoom-pan-pinch/\">\n    <img src=\"https://hits.sh/github.com/prc5/react-zoom-pan-pinch.svg?color=64BC4B&logo=bookmeter\" />\n  </a>\n  <a href=\"https://twitter.com/maciej_pyrc\">\n    <img alt=\"Twitter Follow\" src=\"https://img.shields.io/twitter/follow/maciej_pyrc?label=Follow%20&style=social\"/>\n  </a>\n</p>\n\n#### Sources\n\n- [Demo](https://BetterTyped.github.io/react-zoom-pan-pinch/?path=/story/examples-big-image--big-image)\n- [Docs](https://BetterTyped.github.io/react-zoom-pan-pinch/?path=/story/docs-props--page)\n\n<p align=\"center\">\n\t<a href=\"https://github.com/sponsors/prc5?tier=platinum\">\n\t\t<picture>\n\t\t\t<img width=\"830\" src=\"https://raw.githubusercontent.com/prc5/sponsors/main/assets/Platinum.png\" alt=\"Premium sponsor banner\"/>\n\t\t</picture>\n\t</a>\n</p>\n\n<p align=\"center\">\n\t<a href=\"https://github.com/sponsors/prc5?tier=Platinum\">\n\t\t<picture>\n\t\t\t<img width=\"830\" src=\"https://raw.githubusercontent.com/prc5/sponsors/main/packages/platinum/sponsorkit/sponsors.svg\" alt=\"Premium sponsor banner\"/>\n\t\t</picture>\n\t</a>\n</p>\n\n## Key Features\n\n- 🚀 Fast and easy to use\n- 🏭 Light, without external dependencies\n- 💎 Mobile gestures, touchpad gestures and desktop mouse events support\n- 🎁 Powerful context usage, which gives you a lot of freedom\n- 🔧 Highly customizable\n- 👑 Animations and Utils to create own tools\n- 🔮 Advanced hooks and components\n\n## Try other BetterTyped projects\n\nDo you like this library? Try out other projects\n\n<a href=\"https://github.com/BetterTyped/hyper-fetch\">\n  <img width=\"200px\" src=\"https://raw.githubusercontent.com/BetterTyped/hyper-fetch/main/.github/assets/readme.png\" alt=\"Hyper Fetch\" />\n</a>\n\n**[⚡Hyper Fetch](https://github.com/BetterTyped/hyper-fetch)** - Fetching and\nrealtime data exchange framework.\n\n---\n\n## Installation\n\n```bash\nnpm install --save react-zoom-pan-pinch\nor\nyarn add react-zoom-pan-pinch\n```\n\n<p align=\"center\">\n\t<a href=\"https://github.com/sponsors/prc5?tier=Gold\">\n\t\t<picture>\n\t\t\t<img width=\"830\" src=\"https://raw.githubusercontent.com/prc5/sponsors/main/assets/Gold.png\" alt=\"Premium sponsor banner\"/>\n\t\t</picture>\n\t</a>\n</p>\n\n<p align=\"center\">\n\t<a href=\"https://github.com/sponsors/prc5?tier=gold\">\n\t\t<picture>\n\t\t\t<img width=\"830\" src=\"https://raw.githubusercontent.com/prc5/sponsors/main/packages/gold/sponsorkit/sponsors.svg\" alt=\"Premium sponsor banner\"/>\n\t\t</picture>\n\t</a>\n</p>\n\n## Examples\n\n```jsx\nimport React, { Component } from \"react\";\n\nimport { TransformWrapper, TransformComponent } from \"react-zoom-pan-pinch\";\n\nconst Example = () => {\n  return (\n    <TransformWrapper>\n      <TransformComponent>\n        <img src=\"image.jpg\" alt=\"test\" />\n      </TransformComponent>\n    </TransformWrapper>\n  );\n};\n```\n\nor\n\n```jsx\nimport React, { Component } from \"react\";\n\nimport {\n  TransformWrapper,\n  TransformComponent,\n  useControls,\n} from \"react-zoom-pan-pinch\";\n\nconst Controls = () => {\n  const { zoomIn, zoomOut, resetTransform } = useControls();\n\n  return (\n    <div className=\"tools\">\n      <button onClick={() => zoomIn()}>+</button>\n      <button onClick={() => zoomOut()}>-</button>\n      <button onClick={() => resetTransform()}>x</button>\n    </div>\n  );\n};\n\nconst Example = () => {\n  return (\n    <TransformWrapper\n      initialScale={1}\n      initialPositionX={200}\n      initialPositionY={100}\n    >\n      {({ zoomIn, zoomOut, resetTransform, ...rest }) => (\n        <>\n          <Controls />\n          <TransformComponent>\n            <img src=\"image.jpg\" alt=\"test\" />\n            <div>Example text</div>\n          </TransformComponent>\n        </>\n      )}\n    </TransformWrapper>\n  );\n};\n```\n\n<p align=\"center\">\n\t<a href=\"https://github.com/sponsors/prc5?tier=Silver\">\n\t\t<picture>\n\t\t\t<img width=\"830\" src=\"https://raw.githubusercontent.com/prc5/sponsors/main/assets/Silver.png\" alt=\"Premium sponsor banner\" />\n\t\t</picture>\n\t</a>\n</p>\n\n<p align=\"center\">\n\t<a href=\"https://github.com/sponsors/prc5?tier=Silver\">\n\t\t<picture>\n\t\t\t<img width=\"830\" src=\"https://raw.githubusercontent.com/prc5/sponsors/main/packages/silver/sponsorkit/sponsors.svg\" alt=\"Premium sponsor banner\" />\n\t\t</picture>\n\t</a>\n</p>\n\n## License\n\nMIT © [prc5](https://github.com/prc5)\n\n## Help me keep working on this project ❤️\n\n- [Become a Sponsor on GitHub](https://github.com/sponsors/prc5)\n\n## 💖 Our sponsors\n\n<p align=\"center\">\n\t<a href=\"https://github.com/sponsors/prc5\">\n\t\t<img src=\"https://raw.githubusercontent.com/prc5/sponsors/main/packages/other/sponsorkit/sponsors.svg?raw=true\" alt=\"My Sponsors\" />\n\t</a>\n</p>\n",
  "readmeFilename": "README.md"
 }

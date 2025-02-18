@@ -1,10 +1,10 @@
 {
  "_id": "jackspeak",
- "_rev": "62-2846a2b49a6219c080e258b8ebf372ff",
+ "_rev": "63-3ba9fe216f7e4a2aba8a7800127f0a90",
  "name": "jackspeak",
  "dist-tags": {
-  "latest": "4.0.2",
-  "v3-legacy": "3.4.3"
+  "v3-legacy": "3.4.3",
+  "latest": "4.0.3"
  },
  "versions": {
   "0.0.1": {
@@ -6614,6 +6614,137 @@
   "4.0.2": {
    "name": "jackspeak",
    "version": "4.0.2",
+   "keywords": [
+    "argument",
+    "parser",
+    "args",
+    "option",
+    "flag",
+    "cli",
+    "command",
+    "line",
+    "parse",
+    "parsing"
+   ],
+   "author": {
+    "name": "Isaac Z. Schlueter",
+    "email": "i@izs.me"
+   },
+   "license": "BlueOak-1.0.0",
+   "_id": "jackspeak@4.0.2",
+   "maintainers": [
+    {
+     "name": "isaacs",
+     "email": "i@izs.me"
+    }
+   ],
+   "homepage": "https://github.com/isaacs/jackspeak#readme",
+   "bugs": {
+    "url": "https://github.com/isaacs/jackspeak/issues"
+   },
+   "tap": {
+    "typecheck": true
+   },
+   "dist": {
+    "shasum": "11f9468a3730c6ff6f56823a820d7e3be9bef015",
+    "tarball": "http://localhost:3000/jackspeak/-/jackspeak-4.0.2.tgz",
+    "fileCount": 13,
+    "integrity": "sha512-bZsjR/iRjl1Nk1UkjGpAzLNfQtzuijhn2g+pbZb98HQ1Gk8vM9hfbxeMBP+M2/UUdwj0RqGG3mlvk2MsAqwvEw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCTjcQDpKmIu0DlsTsfBBVM0JD6fjPUz1qL/fbAbK7umQIgUPbIHQN3bUdbZMoHToZpQR7r3ZSNOOTa6w4Trwg6cUU=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 279655
+   },
+   "main": "./dist/commonjs/index.js",
+   "tshy": {
+    "main": true,
+    "exports": {
+     ".": "./src/index.js",
+     "./package.json": "./package.json"
+    }
+   },
+   "type": "module",
+   "types": "./dist/commonjs/index.d.ts",
+   "module": "./dist/esm/index.js",
+   "engines": {
+    "node": "20 || >=22"
+   },
+   "exports": {
+    ".": {
+     "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+     },
+     "require": {
+      "types": "./dist/commonjs/index.d.ts",
+      "default": "./dist/commonjs/index.js"
+     }
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": {
+    "url": "https://github.com/sponsors/isaacs"
+   },
+   "gitHead": "88dc9c32f1fc46da3806465362a7c3800b2b0dbc",
+   "scripts": {
+    "snap": "tap",
+    "test": "tap",
+    "format": "prettier --write . --log-level warn",
+    "prepare": "tshy",
+    "presnap": "npm run prepare",
+    "pretest": "npm run prepare",
+    "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "build-examples": "for i in examples/*.js ; do node $i -h > ${i/.js/.txt}; done",
+    "prepublishOnly": "git push origin --follow-tags"
+   },
+   "_npmUser": {
+    "name": "isaacs",
+    "email": "i@izs.me"
+   },
+   "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "endOfLine": "lf",
+    "printWidth": 75,
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "bracketSameLine": true,
+    "experimentalTernaries": true
+   },
+   "repository": {
+    "url": "git+https://github.com/isaacs/jackspeak.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "A very strict and proper argument parser.",
+   "directories": {},
+   "_nodeVersion": "20.13.1",
+   "dependencies": {
+    "@isaacs/cliui": "^8.0.2"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^21.0.1",
+    "tshy": "^3.0.2",
+    "typedoc": "^0.26.7",
+    "prettier": "^3.3.3",
+    "@types/node": "^22.6.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jackspeak_4.0.2_1727117654093_0.1343565312353887",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "4.0.3": {
+   "name": "jackspeak",
+   "version": "4.0.3",
    "description": "A very strict and proper argument parser.",
    "tshy": {
     "main": true,
@@ -6704,24 +6835,24 @@
     "typecheck": true
    },
    "module": "./dist/esm/index.js",
-   "_id": "jackspeak@4.0.2",
-   "gitHead": "88dc9c32f1fc46da3806465362a7c3800b2b0dbc",
+   "_id": "jackspeak@4.0.3",
+   "gitHead": "6d8dc74b6f29d49ee5a0c181957964ba30fe9332",
    "bugs": {
     "url": "https://github.com/isaacs/jackspeak/issues"
    },
    "homepage": "https://github.com/isaacs/jackspeak#readme",
-   "_nodeVersion": "20.13.1",
-   "_npmVersion": "10.7.0",
+   "_nodeVersion": "22.10.0",
+   "_npmVersion": "11.0.0",
    "dist": {
-    "integrity": "sha512-bZsjR/iRjl1Nk1UkjGpAzLNfQtzuijhn2g+pbZb98HQ1Gk8vM9hfbxeMBP+M2/UUdwj0RqGG3mlvk2MsAqwvEw==",
-    "shasum": "11f9468a3730c6ff6f56823a820d7e3be9bef015",
-    "tarball": "http://localhost:3000/jackspeak/-/jackspeak-4.0.2.tgz",
+    "integrity": "sha512-oSwM7q8PTHQWuZAlp995iPpPJ4Vkl7qT0ZRD+9duL9j2oBy6KcTfyxc8mEuHJYC+z/kbps80aJLkaNzTOrf/kw==",
+    "shasum": "8a21082b8c019e7a0a8187ad8b736609bc85ab18",
+    "tarball": "http://localhost:3000/jackspeak/-/jackspeak-4.0.3.tgz",
     "fileCount": 13,
-    "unpackedSize": 279655,
+    "unpackedSize": 282043,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCTjcQDpKmIu0DlsTsfBBVM0JD6fjPUz1qL/fbAbK7umQIgUPbIHQN3bUdbZMoHToZpQR7r3ZSNOOTa6w4Trwg6cUU="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIASjs7ZG+UA1bvYIyUUJKshQq/SWMhE1jTZqoQXFMY2FAiEAs+8TU12X09fIBo+XbIzkCgBkMwc2m36X3zQYfLuoZ/8="
      }
     ]
    },
@@ -6737,15 +6868,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jackspeak_4.0.2_1727117654093_0.1343565312353887"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/jackspeak_4.0.3_1739305445634_0.2700442545757846"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2019-01-18T07:36:05.803Z",
-  "modified": "2024-09-23T18:54:14.443Z",
+  "modified": "2025-02-11T20:24:06.013Z",
   "0.0.1": "2019-01-18T07:36:06.214Z",
   "0.1.0": "2019-01-18T09:40:42.014Z",
   "1.0.0": "2019-01-20T20:29:20.746Z",
@@ -6804,7 +6935,8 @@
   "4.0.0": "2024-07-08T21:48:37.154Z",
   "4.0.1": "2024-07-08T22:15:12.393Z",
   "3.4.3": "2024-07-10T15:50:20.040Z",
-  "4.0.2": "2024-09-23T18:54:14.279Z"
+  "4.0.2": "2024-09-23T18:54:14.279Z",
+  "4.0.3": "2025-02-11T20:24:05.842Z"
  },
  "bugs": {
   "url": "https://github.com/isaacs/jackspeak/issues"
