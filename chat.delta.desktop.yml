@@ -208,7 +208,7 @@ modules:
         dest-filename: run.sh
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - exec zypak-wrapper /app/delta/deltachat-desktop "$@" --disable-features=WaylandFractionalScaleV1
+          - exec zypak-wrapper /app/delta/deltachat-desktop "$@" --disable-gpu --disable-features=WaylandFractionalScaleV1
 
 
       # dependencies
