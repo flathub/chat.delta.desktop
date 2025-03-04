@@ -3,8 +3,8 @@ set -e
 
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
-CORE_CHECKOUT=v1.155.5
-DESKTOP_CHECKOUT=v1.54.1
+CORE_CHECKOUT=v1.156.2
+DESKTOP_CHECKOUT=v1.54.2
 
 # this script needs:
 # - serveral repos checked out next to this repo
@@ -87,7 +87,7 @@ cat >generated/core-git.json <<EOL
 [
     {
         "type": "git",
-        "url": "https://github.com/deltachat/deltachat-core-rust.git",
+        "url": "https://github.com/chatmail/core.git",
         "tag": "${CORE_CHECKOUT}",
         "commit": "${CORE_COMMIT_HASH}",
         "dest": "."

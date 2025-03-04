@@ -1,10 +1,9 @@
 {
  "_id": "image-size",
- "_rev": "183-21768a1cf3d07fec256815bea3bac95e",
+ "_rev": "191-8f768f82ec07a2421adce0671b34b090",
  "name": "image-size",
  "dist-tags": {
-  "beta": "2.0.0-beta.4",
-  "latest": "1.2.0"
+  "latest": "2.0.0"
  },
  "versions": {
   "0.0.2": {
@@ -5301,7 +5300,8 @@
    "_npmOperationalInternal": {
     "tmp": "tmp/image-size_2.0.0-alpha.1_1679411465709_0.5827646697833817",
     "host": "s3://npm-registry-packages"
-   }
+   },
+   "deprecated": "Use latest please"
   },
   "2.0.0-alpha.2": {
    "name": "image-size",
@@ -5396,6 +5396,7 @@
     "name": "netroy",
     "email": "npm@netroy.in"
    },
+   "deprecated": "Use latest please",
    "repository": {
     "url": "git://github.com/image-size/image-size.git",
     "type": "git"
@@ -5535,6 +5536,7 @@
     "name": "netroy",
     "email": "npm@netroy.in"
    },
+   "deprecated": "Use latest please",
    "repository": {
     "url": "git://github.com/image-size/image-size.git",
     "type": "git"
@@ -5674,6 +5676,7 @@
     "name": "netroy",
     "email": "npm@netroy.in"
    },
+   "deprecated": "Use latest please",
    "repository": {
     "url": "git://github.com/image-size/image-size.git",
     "type": "git"
@@ -6055,6 +6058,7 @@
     "name": "netroy",
     "email": "npm@netroy.in"
    },
+   "deprecated": "Use latest please",
    "repository": {
     "url": "git://github.com/image-size/image-size.git",
     "type": "git"
@@ -6220,59 +6224,6 @@
   "2.0.0-beta.4": {
    "name": "image-size",
    "version": "2.0.0-beta.4",
-   "description": "get dimensions of any image file",
-   "main": "./dist/index.cjs",
-   "module": "./dist/index.mjs",
-   "types": "./dist/index.d.ts",
-   "exports": {
-    ".": {
-     "import": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.mjs"
-     },
-     "require": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.cjs"
-     }
-    },
-    "./fromFile": {
-     "import": {
-      "types": "./dist/fromFile.d.ts",
-      "default": "./dist/fromFile.mjs"
-     },
-     "require": {
-      "types": "./dist/fromFile.d.ts",
-      "default": "./dist/fromFile.cjs"
-     }
-    },
-    "./types/*": {
-     "import": {
-      "types": "./dist/types/*.d.ts",
-      "default": "./dist/types/*.mjs"
-     },
-     "require": {
-      "types": "./dist/types/*.d.ts",
-      "default": "./dist/types/*.cjs"
-     }
-    }
-   },
-   "engines": {
-    "node": ">=16.x"
-   },
-   "packageManager": "yarn@4.0.2",
-   "bin": {
-    "image-size": "bin/image-size.js"
-   },
-   "scripts": {
-    "lint": "biome check lib specs",
-    "format": "biome format --write lib specs",
-    "test": "TS_NODE_PROJECT=tsconfig.test.json c8 --reporter=text --reporter=lcov node --require ts-node/register --test --test-reporter=dot specs/*.spec.ts",
-    "test:watch": "TS_NODE_PROJECT=tsconfig.test.json node --require ts-node/register --test --watch specs/*.spec.ts",
-    "clean": "rm -rf dist docs",
-    "generate-docs": "typedoc",
-    "build": "tsup",
-    "prepack": "yarn clean && yarn build"
-   },
    "keywords": [
     "image",
     "size",
@@ -6297,74 +6248,271 @@
     "tiff",
     "webp"
    ],
-   "repository": {
-    "type": "git",
-    "url": "git://github.com/image-size/image-size.git"
-   },
    "author": {
+    "url": "http://netroy.in/",
     "name": "netroy",
-    "email": "aditya@netroy.in",
-    "url": "http://netroy.in/"
+    "email": "aditya@netroy.in"
    },
    "license": "MIT",
-   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
-    "@types/glob": "8.1.0",
-    "@types/node": "18.19.39",
-    "c8": "10.1.3",
-    "glob": "10.4.2",
-    "ts-node": "10.9.2",
-    "tsup": "8.3.5",
-    "typedoc": "0.25.13",
-    "typescript": "5.4.5"
-   },
-   "nyc": {
-    "include": "lib",
-    "exclude": "specs/*.spec.ts"
-   },
    "_id": "image-size@2.0.0-beta.4",
-   "readmeFilename": "Readme.md",
-   "gitHead": "636ebd0a5caea593174e2ff48ba374baf3239757",
-   "bugs": {
-    "url": "https://github.com/image-size/image-size/issues"
-   },
-   "homepage": "https://github.com/image-size/image-size#readme",
-   "_nodeVersion": "20.18.1",
-   "_npmVersion": "11.0.0",
-   "dist": {
-    "integrity": "sha512-e2VQ0AUKKECajkd6U7mpA1wQaCnA1BE7DT527SUbHHDg9pzo4RjidrmC+x/Y9q7xTsdOLp+j+4ObNXLYhjiR+A==",
-    "shasum": "495b6d04435785193a4819df64bc46a6187ec2a6",
-    "tarball": "http://localhost:3000/image-size/-/image-size-2.0.0-beta.4.tgz",
-    "fileCount": 116,
-    "unpackedSize": 377939,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDL64E7O1z4CWf2Srg2KOMfRoutdfjEangEiagxVeAGqgIhAPDatjB6SWYdydpXETLMWOkjT12Hcph4CVzCbaOQeFgV"
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "netroy",
-    "email": "npm@netroy.in"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "netroy",
      "email": "npm@netroy.in"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/image-size_2.0.0-beta.4_1735156853422_0.5766850990622465"
+   "homepage": "https://github.com/image-size/image-size#readme",
+   "bugs": {
+    "url": "https://github.com/image-size/image-size/issues"
    },
-   "_hasShrinkwrap": false
+   "bin": {
+    "image-size": "bin/image-size.js"
+   },
+   "nyc": {
+    "exclude": "specs/*.spec.ts",
+    "include": "lib"
+   },
+   "dist": {
+    "shasum": "495b6d04435785193a4819df64bc46a6187ec2a6",
+    "tarball": "http://localhost:3000/image-size/-/image-size-2.0.0-beta.4.tgz",
+    "fileCount": 116,
+    "integrity": "sha512-e2VQ0AUKKECajkd6U7mpA1wQaCnA1BE7DT527SUbHHDg9pzo4RjidrmC+x/Y9q7xTsdOLp+j+4ObNXLYhjiR+A==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDL64E7O1z4CWf2Srg2KOMfRoutdfjEangEiagxVeAGqgIhAPDatjB6SWYdydpXETLMWOkjT12Hcph4CVzCbaOQeFgV",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 377939
+   },
+   "main": "./dist/index.cjs",
+   "types": "./dist/index.d.ts",
+   "module": "./dist/index.mjs",
+   "engines": {
+    "node": ">=16.x"
+   },
+   "exports": {
+    ".": {
+     "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
+     },
+     "require": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.cjs"
+     }
+    },
+    "./types/*": {
+     "import": {
+      "types": "./dist/types/*.d.ts",
+      "default": "./dist/types/*.mjs"
+     },
+     "require": {
+      "types": "./dist/types/*.d.ts",
+      "default": "./dist/types/*.cjs"
+     }
+    },
+    "./fromFile": {
+     "import": {
+      "types": "./dist/fromFile.d.ts",
+      "default": "./dist/fromFile.mjs"
+     },
+     "require": {
+      "types": "./dist/fromFile.d.ts",
+      "default": "./dist/fromFile.cjs"
+     }
+    }
+   },
+   "gitHead": "636ebd0a5caea593174e2ff48ba374baf3239757",
+   "scripts": {
+    "lint": "biome check lib specs",
+    "test": "TS_NODE_PROJECT=tsconfig.test.json c8 --reporter=text --reporter=lcov node --require ts-node/register --test --test-reporter=dot specs/*.spec.ts",
+    "build": "tsup",
+    "clean": "rm -rf dist docs",
+    "format": "biome format --write lib specs",
+    "prepack": "yarn clean && yarn build",
+    "test:watch": "TS_NODE_PROJECT=tsconfig.test.json node --require ts-node/register --test --watch specs/*.spec.ts",
+    "generate-docs": "typedoc"
+   },
+   "_npmUser": {
+    "name": "netroy",
+    "email": "npm@netroy.in"
+   },
+   "deprecated": "Use latest please",
+   "repository": {
+    "url": "git://github.com/image-size/image-size.git",
+    "type": "git"
+   },
+   "_npmVersion": "11.0.0",
+   "description": "get dimensions of any image file",
+   "directories": {},
+   "_nodeVersion": "20.18.1",
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.0.2",
+   "readmeFilename": "Readme.md",
+   "devDependencies": {
+    "c8": "10.1.3",
+    "glob": "10.4.2",
+    "tsup": "8.3.5",
+    "ts-node": "10.9.2",
+    "typedoc": "0.25.13",
+    "typescript": "5.4.5",
+    "@types/glob": "8.1.0",
+    "@types/node": "18.19.39",
+    "@biomejs/biome": "1.9.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/image-size_2.0.0-beta.4_1735156853422_0.5766850990622465",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.0.0": {
+   "name": "image-size",
+   "version": "2.0.0",
+   "keywords": [
+    "image",
+    "size",
+    "dimensions",
+    "resolution",
+    "width",
+    "height",
+    "avif",
+    "bmp",
+    "cur",
+    "gif",
+    "heic",
+    "heif",
+    "icns",
+    "ico",
+    "jpeg",
+    "jxl",
+    "png",
+    "psd",
+    "svg",
+    "tga",
+    "tiff",
+    "webp"
+   ],
+   "author": {
+    "url": "http://netroy.in/",
+    "name": "netroy",
+    "email": "aditya@netroy.in"
+   },
+   "license": "MIT",
+   "_id": "image-size@2.0.0",
+   "maintainers": [
+    {
+     "name": "netroy",
+     "email": "npm@netroy.in"
+    }
+   ],
+   "homepage": "https://github.com/image-size/image-size#readme",
+   "bugs": {
+    "url": "https://github.com/image-size/image-size/issues"
+   },
+   "bin": {
+    "image-size": "bin/image-size.js"
+   },
+   "nyc": {
+    "exclude": "specs/*.spec.ts",
+    "include": "lib"
+   },
+   "dist": {
+    "shasum": "5b03dd619e73a6e7e55c323f9934a0a5d4461e8b",
+    "tarball": "http://localhost:3000/image-size/-/image-size-2.0.0.tgz",
+    "fileCount": 116,
+    "integrity": "sha512-HP07n1SpdIXGUL4VotUIOQz66MQOq8g7VN+Yj02YTVowqZScQ5i/JYU0+lkNr2pwt5j4hOpk94/UBV1ZCbS2fA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCFeNHub90FpC1ey8FO7A0NywNdSDrqd77KiZ0NPBlBWgIhAO3RsiWQp0UVjg6SnVvAiA5Mj0BWDfE/G/66W994uQ+4",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 377932
+   },
+   "main": "./dist/index.cjs",
+   "types": "./dist/index.d.ts",
+   "module": "./dist/index.mjs",
+   "engines": {
+    "node": ">=16.x"
+   },
+   "exports": {
+    ".": {
+     "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.mjs"
+     },
+     "require": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.cjs"
+     }
+    },
+    "./types/*": {
+     "import": {
+      "types": "./dist/types/*.d.ts",
+      "default": "./dist/types/*.mjs"
+     },
+     "require": {
+      "types": "./dist/types/*.d.ts",
+      "default": "./dist/types/*.cjs"
+     }
+    },
+    "./fromFile": {
+     "import": {
+      "types": "./dist/fromFile.d.ts",
+      "default": "./dist/fromFile.mjs"
+     },
+     "require": {
+      "types": "./dist/fromFile.d.ts",
+      "default": "./dist/fromFile.cjs"
+     }
+    }
+   },
+   "gitHead": "1fb8f411593acbdb413eaf97817a8eb0b7e8af83",
+   "scripts": {
+    "lint": "biome check lib specs",
+    "test": "TS_NODE_PROJECT=tsconfig.test.json c8 --reporter=text --reporter=lcov node --require ts-node/register --test --test-reporter=dot specs/*.spec.ts",
+    "build": "tsup",
+    "clean": "rm -rf dist docs",
+    "format": "biome format --write lib specs",
+    "prepack": "yarn clean && yarn build",
+    "test:watch": "TS_NODE_PROJECT=tsconfig.test.json node --require ts-node/register --test --watch specs/*.spec.ts",
+    "generate-docs": "typedoc"
+   },
+   "_npmUser": {
+    "name": "netroy",
+    "email": "npm@netroy.in"
+   },
+   "repository": {
+    "url": "git://github.com/image-size/image-size.git",
+    "type": "git"
+   },
+   "_npmVersion": "11.1.0",
+   "description": "get dimensions of any image file",
+   "directories": {},
+   "_nodeVersion": "20.18.2",
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.0.2",
+   "devDependencies": {
+    "c8": "10.1.3",
+    "glob": "10.4.2",
+    "tsup": "8.3.5",
+    "ts-node": "10.9.2",
+    "typedoc": "0.25.13",
+    "typescript": "5.4.5",
+    "@types/glob": "8.1.0",
+    "@types/node": "18.19.39",
+    "@biomejs/biome": "1.9.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/image-size_2.0.0_1740484030826_0.18326701758094854",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
   }
  },
  "time": {
   "created": "2013-07-02T01:38:44.191Z",
-  "modified": "2024-12-25T20:00:53.803Z",
+  "modified": "2025-02-25T11:51:41.888Z",
   "0.0.2": "2013-07-02T01:38:50.596Z",
   "0.0.3": "2013-07-02T01:52:16.830Z",
   "0.0.5": "2013-07-03T21:18:12.940Z",
@@ -6431,7 +6579,8 @@
   "1.1.1": "2024-01-02T15:16:15.106Z",
   "2.0.0-beta.2": "2024-01-12T13:02:14.712Z",
   "1.2.0": "2024-12-22T04:00:49.642Z",
-  "2.0.0-beta.4": "2024-12-25T20:00:53.615Z"
+  "2.0.0-beta.4": "2024-12-25T20:00:53.615Z",
+  "2.0.0": "2025-02-25T11:47:11.040Z"
  },
  "bugs": {
   "url": "https://github.com/image-size/image-size/issues"
@@ -6478,8 +6627,8 @@
    "email": "npm@netroy.in"
   }
  ],
- "readme": "",
- "readmeFilename": "",
+ "readme": "# image-size\n\n[![Build Status](https://circleci.com/gh/image-size/image-size.svg?style=shield)](https://circleci.com/gh/image-size/image-size)\n[![Package Version](https://img.shields.io/npm/v/image-size.svg)](https://www.npmjs.com/package/image-size)\n[![Downloads](https://img.shields.io/npm/dm/image-size.svg)](http://npm-stat.com/charts.html?package=image-size&author=netroy&from=&to=)\n\nFast, lightweight NodeJS package to get dimensions of any image file or buffer.\n\n## Key Features\n- Zero dependencies\n- Supports all major image formats\n- Works with both files and buffers\n- Minimal memory footprint - reads only image headers\n- ESM and CommonJS support\n- TypeScript types included\n\n## Supported formats\n\n- BMP\n- CUR\n- DDS\n- GIF\n- HEIC (HEIF, AVCI, AVIF)\n- ICNS\n- ICO\n- J2C\n- JPEG-2000 (JP2)\n- JPEG\n- JPEG-XL\n- KTX (1 and 2)\n- PNG\n- PNM (PAM, PBM, PFM, PGM, PPM)\n- PSD\n- SVG\n- TGA\n- TIFF\n- WebP\n\n## Installation\n\n```shell\nnpm install image-size\n# or\nyarn add image-size\n# or\npnpm add image-size\n```\n\n## Usage\n\n### Passing in a Buffer/Uint8Array\nBest for streams, network requests, or when you already have the image data in memory.\n\n```javascript\nimport { imageSize } from 'image-size'\n// or\nconst { imageSize } = require('image-size')\n\nconst dimensions = imageSize(buffer)\nconsole.log(dimensions.width, dimensions.height)\n```\n\n### Reading from a file\nBest for local files. Returns a promise.\n\n```javascript\nimport { imageSizeFromFile } from 'image-size/fromFile'\n// or\nconst { imageSizeFromFile } = require('image-size/fromFile')\n\nconst dimensions = await imageSizeFromFile('photos/image.jpg')\nconsole.log(dimensions.width, dimensions.height)\n```\n\nNote: Reading from files has a default concurrency limit of **100**\nTo change this limit, you can call the `setConcurrency` function like this:\n\n```javascript\nimport { setConcurrency } from 'image-size/fromFile'\n// or\nconst { setConcurrency } = require('image-size/fromFile')\nsetConcurrency(123456)\n```\n\n### 3. Command Line\nUseful for quick checks.\n\n```shell\nnpx image-size image1.jpg image2.png\n```\n\n### Multi-size\n\nIf the target file/buffer is an HEIF, an ICO, or a CUR file, the `width` and `height` will be the ones of the largest image in the set.\n\nAn additional `images` array is available and returns the dimensions of all the available images\n\n```javascript\nimport { imageSizeFromFile } from 'image-size/fromFile'\n// or\nconst { imageSizeFromFile } = require('image-size/fromFile')\n\nconst { images } = await imageSizeFromFile('images/multi-size.ico')\nfor (const dimensions of images) {\n  console.log(dimensions.width, dimensions.height)\n}\n```\n\n### Using a URL\n\n```javascript\nimport url from 'node:url'\nimport http from 'node:http'\nimport { imageSize } from 'image-size'\n\nconst imgUrl = 'http://my-amazing-website.com/image.jpeg'\nconst options = url.parse(imgUrl)\n\nhttp.get(options, function (response) {\n  const chunks = []\n  response\n    .on('data', function (chunk) {\n      chunks.push(chunk)\n    })\n    .on('end', function () {\n      const buffer = Buffer.concat(chunks)\n      console.log(imageSize(buffer))\n    })\n})\n```\n\nYou can optionally check the buffer lengths & stop downloading the image after a few kilobytes.\n**You don't need to download the entire image**\n\n### Disabling certain image types\n\n```javascript\nimport { disableTypes } from 'image-size'\n// or\nconst { disableTypes } = require('image-size')\n\ndisableTypes(['tiff', 'ico'])\n```\n\n### JPEG image orientation\n\nIf the orientation is present in the JPEG EXIF metadata, it will be returned by the function. The orientation value is a [number between 1 and 8](https://exiftool.org/TagNames/EXIF.html#:~:text=0x0112,8%20=%20Rotate%20270%20CW) representing a type of orientation.\n\n```javascript\nimport { imageSizeFromFile } from 'image-size/fromFile'\n// or\nconst { imageSizeFromFile } = require('image-size/fromFile')\n\nconst { width, height, orientation } = await imageSizeFromFile('images/photo.jpeg')\nconsole.log(width, height, orientation)\n```\n\n# Limitations\n\n1. **Partial File Reading**\n   - Only reads image headers, not full files\n   - Some corrupted images might still report dimensions\n\n2. **SVG Limitations**\n   - Only supports pixel dimensions and viewBox\n   - Percentage values not supported\n\n3. **File Access**\n   - Reading from files has a default concurrency limit of 100\n   - Can be adjusted using `setConcurrency()`\n\n4. **Buffer Requirements**\n   - Some formats (like TIFF) require the full header in buffer\n   - Streaming partial buffers may not work for all formats\n\n## License\n\nMIT\n\n## Credits\n\nnot a direct port, but an attempt to have something like\n[dabble's imagesize](https://github.com/dabble/imagesize/blob/master/lib/image_size.rb) as a node module.\n\n## [Contributors](Contributors.md)\n",
+ "readmeFilename": "Readme.md",
  "users": {
   "qzb": true,
   "detj": true,

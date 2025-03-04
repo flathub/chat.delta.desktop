@@ -1,9 +1,9 @@
 {
  "_id": "@tauri-apps/plugin-log",
- "_rev": "24-be1edb0733481d0ae7a4fb95866d1574",
+ "_rev": "26-219555a0818bc7f138c229aaeb7157fd",
  "name": "@tauri-apps/plugin-log",
  "dist-tags": {
-  "latest": "2.2.1"
+  "latest": "2.2.3"
  },
  "versions": {
   "2.0.0-alpha.0": {
@@ -1733,6 +1733,180 @@
   "2.2.1": {
    "name": "@tauri-apps/plugin-log",
    "version": "2.2.1",
+   "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-log@2.2.1",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "e837826f15f3d5e83ee964ccb6cf72f1ae5acca0",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-log/-/plugin-log-2.2.1.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-bOz9w0hhlXLGLc1ZR37GqkXvTqkykl4A3GEKLjRIs0dq3n0BzLyoRDMPcpt7PdUHqaq6WISME+zEX2bqjSbJ2A==",
+    "signatures": [
+     {
+      "sig": "MEUCIE+FxFCk5kQ1tSYDhB6T/6XKKAVysV5O/UePqGdkKbWxAiEAxQjt5ccQUaVXfd7J2tA+EnzwisPTySCbEGZG9BeP/UE=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-log@2.2.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 22422
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "ad1726627365e44c1841129be1871fb9509f5eb3",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Configurable logging for your Tauri app.",
+   "directories": {},
+   "_nodeVersion": "22.13.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-log_2.2.1_1738002970266_0.30330935961728756",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.2": {
+   "name": "@tauri-apps/plugin-log",
+   "version": "2.2.2",
+   "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-log@2.2.2",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "222c8e0a7efb7cc664562d318b6bc8cc561b3c39",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-log/-/plugin-log-2.2.2.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-XEb7NKVOnsG+b10c8JkNNkAADe7BELEvl+NJtFRPw7OUEb4w8NWwmaj+EQXvDnMIcFUkmsbxijUeNJ0Mwog4nQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIGYj5ofiU3vuFDWv6pYRksfCZaBQx/0wjSKRaJAjOc7rAiBKSYykgWOwUlbXoTgBtsGNKphUPnuVjb3a1OfhsBBz6g==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-log@2.2.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 22422
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "fbd4d28920755818f17de659fe5701058b2960db",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Configurable logging for your Tauri app.",
+   "directories": {},
+   "_nodeVersion": "22.13.1",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-log_2.2.2_1740411143173_0.5567382145435342",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.3": {
+   "name": "@tauri-apps/plugin-log",
+   "version": "2.2.3",
    "description": "Configurable logging for your Tauri app.",
    "license": "MIT OR Apache-2.0",
    "authors": [
@@ -1757,22 +1931,22 @@
    "dependencies": {
     "@tauri-apps/api": "^2.0.0"
    },
-   "_id": "@tauri-apps/plugin-log@2.2.1",
-   "gitHead": "ad1726627365e44c1841129be1871fb9509f5eb3",
+   "_id": "@tauri-apps/plugin-log@2.2.3",
+   "gitHead": "393e956728632fb3859cd580e54ceea75446de2a",
    "bugs": {
     "url": "https://github.com/tauri-apps/plugins-workspace/issues"
    },
    "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
-   "_nodeVersion": "22.13.0",
+   "_nodeVersion": "22.14.0",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-bOz9w0hhlXLGLc1ZR37GqkXvTqkykl4A3GEKLjRIs0dq3n0BzLyoRDMPcpt7PdUHqaq6WISME+zEX2bqjSbJ2A==",
-    "shasum": "e837826f15f3d5e83ee964ccb6cf72f1ae5acca0",
-    "tarball": "http://localhost:3000/@tauri-apps/plugin-log/-/plugin-log-2.2.1.tgz",
+    "integrity": "sha512-noDkZXU0kPG1bP3qoF6om+q5TgQ65LWpsV/TnfrHyg2lEn0vE+WJWTItiIh7OUA1/xxC+hdb9ODy2bM2e+jHEw==",
+    "shasum": "03caa1b789bbc5cde158b29a3ce282dabeebb74d",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-log/-/plugin-log-2.2.3.tgz",
     "fileCount": 6,
     "unpackedSize": 22422,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-log@2.2.1",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-log@2.2.3",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -1780,7 +1954,7 @@
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIE+FxFCk5kQ1tSYDhB6T/6XKKAVysV5O/UePqGdkKbWxAiEAxQjt5ccQUaVXfd7J2tA+EnzwisPTySCbEGZG9BeP/UE="
+      "sig": "MEQCIB7KVjbSwV7sEDZI67E0HW8TZu+PL8Vtk0ef+0/g/HVrAiA1Bt+VAKJkG5bLu5EW8J8Y5rZpmB+suVoEfrxXbC/sEw=="
      }
     ]
    },
@@ -1813,14 +1987,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/plugin-log_2.2.1_1738002970266_0.30330935961728756"
+    "tmp": "tmp/plugin-log_2.2.3_1740697110591_0.6403584433006546"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2023-05-24T16:19:54.535Z",
-  "modified": "2025-01-27T18:36:11.265Z",
+  "modified": "2025-02-27T22:58:31.299Z",
   "2.0.0-alpha.0": "2023-05-24T16:19:54.801Z",
   "2.0.0-alpha.1": "2023-08-14T21:27:19.480Z",
   "2.0.0-alpha.2": "2023-10-23T15:36:32.001Z",
@@ -1843,7 +2017,9 @@
   "2.0.1": "2024-12-02T12:47:03.883Z",
   "2.0.2": "2024-12-09T10:24:24.003Z",
   "2.2.0": "2024-12-09T15:49:02.263Z",
-  "2.2.1": "2025-01-27T18:36:10.452Z"
+  "2.2.1": "2025-01-27T18:36:10.452Z",
+  "2.2.2": "2025-02-24T15:32:23.367Z",
+  "2.2.3": "2025-02-27T22:58:30.786Z"
  },
  "bugs": {
   "url": "https://github.com/tauri-apps/plugins-workspace/issues"

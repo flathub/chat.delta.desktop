@@ -1,9 +1,9 @@
 {
  "_id": "fastq",
- "_rev": "36-fc99710b134210bc6598b7a2e6702d63",
+ "_rev": "37-08b22bf77ff7f88f9f1c66dfef1cedf0",
  "name": "fastq",
  "dist-tags": {
-  "latest": "1.19.0"
+  "latest": "1.19.1"
  },
  "versions": {
   "1.0.1": {
@@ -2120,6 +2120,95 @@
   "1.19.0": {
    "name": "fastq",
    "version": "1.19.0",
+   "keywords": [
+    "fast",
+    "queue",
+    "async",
+    "worker"
+   ],
+   "author": {
+    "name": "Matteo Collina",
+    "email": "hello@matteocollina.com"
+   },
+   "license": "ISC",
+   "_id": "fastq@1.19.0",
+   "maintainers": [
+    {
+     "name": "matteo.collina",
+     "email": "hello@matteocollina.com"
+    }
+   ],
+   "homepage": "https://github.com/mcollina/fastq#readme",
+   "bugs": {
+    "url": "https://github.com/mcollina/fastq/issues"
+   },
+   "dist": {
+    "shasum": "a82c6b7c2bb4e44766d865f07997785fecfdcb89",
+    "tarball": "http://localhost:3000/fastq/-/fastq-1.19.0.tgz",
+    "fileCount": 15,
+    "integrity": "sha512-7SFSRCNjBQIZH/xZR3iy5iQYR8aGBE0h3VG6/cwlbrpdciNYBMotQav8c1XI3HjHH+NikUpP53nPdlZSdWmFzA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCnHK6M0OpWqD7p2EXg3C/ACAMFmjt8xojIf9PDkX03awIhAMbJHv6/oJ1CGVbvux4CNl7DJOWLRVr0ivdsi0w+1wre",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 43854
+   },
+   "main": "queue.js",
+   "gitHead": "f8dc91ac2781cca5956f591ce53ca7d09bf61fc0",
+   "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "test": "npm run lint && npm run unit",
+    "unit": "nyc --lines 100 --branches 100 --functions 100 --check-coverage --reporter=text tape test/test.js test/promise.js",
+    "legacy": "tape test/test.js",
+    "coverage": "nyc --reporter=html --reporter=cobertura --reporter=text tape test/test.js test/promise.js",
+    "typescript": "tsc --project ./test/tsconfig.json",
+    "test:report": "npm run lint && npm run unit:report"
+   },
+   "_npmUser": {
+    "name": "matteo.collina",
+    "email": "hello@matteocollina.com"
+   },
+   "standard": {
+    "ignore": [
+     "example.mjs"
+    ]
+   },
+   "pre-commit": [
+    "test",
+    "typescript"
+   ],
+   "repository": {
+    "url": "git+https://github.com/mcollina/fastq.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Fast, in memory work queue",
+   "directories": {},
+   "_nodeVersion": "22.13.1",
+   "dependencies": {
+    "reusify": "^1.0.4"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.0.0",
+    "tape": "^5.0.0",
+    "async": "^3.1.0",
+    "snazzy": "^9.0.0",
+    "standard": "^16.0.0",
+    "neo-async": "^2.6.1",
+    "pre-commit": "^1.2.2",
+    "typescript": "^5.0.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/fastq_1.19.0_1738253619438_0.17916112451712163",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.19.1": {
+   "name": "fastq",
+   "version": "1.19.1",
    "description": "Fast, in memory work queue",
    "main": "queue.js",
    "scripts": {
@@ -2157,7 +2246,7 @@
    "devDependencies": {
     "async": "^3.1.0",
     "neo-async": "^2.6.1",
-    "nyc": "^15.0.0",
+    "nyc": "^17.0.0",
     "pre-commit": "^1.2.2",
     "snazzy": "^9.0.0",
     "standard": "^16.0.0",
@@ -2172,20 +2261,20 @@
      "example.mjs"
     ]
    },
-   "_id": "fastq@1.19.0",
-   "gitHead": "f8dc91ac2781cca5956f591ce53ca7d09bf61fc0",
-   "_nodeVersion": "22.13.1",
+   "_id": "fastq@1.19.1",
+   "gitHead": "5a7e5668c9d20535945a5a406775609fd9f07352",
+   "_nodeVersion": "22.14.0",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-7SFSRCNjBQIZH/xZR3iy5iQYR8aGBE0h3VG6/cwlbrpdciNYBMotQav8c1XI3HjHH+NikUpP53nPdlZSdWmFzA==",
-    "shasum": "a82c6b7c2bb4e44766d865f07997785fecfdcb89",
-    "tarball": "http://localhost:3000/fastq/-/fastq-1.19.0.tgz",
+    "integrity": "sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==",
+    "shasum": "d50eaba803c8846a883c16492821ebcd2cda55f5",
+    "tarball": "http://localhost:3000/fastq/-/fastq-1.19.1.tgz",
     "fileCount": 15,
-    "unpackedSize": 43854,
+    "unpackedSize": 45922,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEYCIQCnHK6M0OpWqD7p2EXg3C/ACAMFmjt8xojIf9PDkX03awIhAMbJHv6/oJ1CGVbvux4CNl7DJOWLRVr0ivdsi0w+1wre"
+      "sig": "MEUCIA6FghASVb6zj5B2h0OQKUlx5GAzAz/ZtEYdxSoB9TJAAiEAm9x7r3ktzXhHZdLAyos1gMb4zrczP822dEY5OyHaerE="
      }
     ]
    },
@@ -2202,14 +2291,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/fastq_1.19.0_1738253619438_0.17916112451712163"
+    "tmp": "tmp/fastq_1.19.1_1740561430248_0.24172342230383248"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2015-06-14T18:25:18.741Z",
-  "modified": "2025-01-30T16:13:39.803Z",
+  "modified": "2025-02-26T09:17:10.722Z",
   "1.0.1": "2015-06-14T18:25:18.741Z",
   "1.0.2": "2015-06-16T05:32:42.248Z",
   "1.1.0": "2015-06-16T15:26:12.208Z",
@@ -2236,7 +2325,8 @@
   "1.17.0": "2024-01-26T18:22:04.963Z",
   "1.17.1": "2024-02-05T14:30:13.737Z",
   "1.18.0": "2024-12-23T10:12:21.235Z",
-  "1.19.0": "2025-01-30T16:13:39.614Z"
+  "1.19.0": "2025-01-30T16:13:39.614Z",
+  "1.19.1": "2025-02-26T09:17:10.544Z"
  },
  "bugs": {
   "url": "https://github.com/mcollina/fastq/issues"

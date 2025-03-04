@@ -1,10 +1,10 @@
 {
  "_id": "prettier",
- "_rev": "271-e40e94c5dcf2232b28c97bbca0306e61",
+ "_rev": "274-7058311759f3f4932b015928f965e1d5",
  "name": "prettier",
  "dist-tags": {
-  "next": "4.0.0-alpha.10",
-  "latest": "3.5.1"
+  "latest": "3.5.3",
+  "next": "4.0.0-alpha.11"
  },
  "versions": {
   "0.0.1": {
@@ -21221,6 +21221,707 @@
   "3.5.1": {
    "name": "prettier",
    "version": "3.5.1",
+   "author": {
+    "name": "James Long"
+   },
+   "license": "MIT",
+   "_id": "prettier@3.5.1",
+   "maintainers": [
+    {
+     "name": "jlongster",
+     "email": "longster@gmail.com"
+    },
+    {
+     "name": "lydell",
+     "email": "simon.lydell@gmail.com"
+    },
+    {
+     "name": "thorn0",
+     "email": "georgii.dolzhykov@gmail.com"
+    },
+    {
+     "name": "vjeux",
+     "email": "vjeuxx@gmail.com"
+    },
+    {
+     "name": "fisker",
+     "email": "lionkay@gmail.com"
+    },
+    {
+     "name": "suchipi",
+     "email": "me@suchipi.com"
+    },
+    {
+     "name": "duailibe",
+     "email": "lucasds@gmail.com"
+    },
+    {
+     "name": "ikatyang",
+     "email": "ikatyang@gmail.com"
+    },
+    {
+     "name": "azz",
+     "email": "lucas@azzola.dev"
+    },
+    {
+     "name": "sosukesuzuki",
+     "email": "aosukeke@gmail.com"
+    },
+    {
+     "name": "prettier-bot",
+     "email": "prettier-bot@d0d0.com"
+    }
+   ],
+   "homepage": "https://prettier.io",
+   "bugs": {
+    "url": "https://github.com/prettier/prettier/issues"
+   },
+   "bin": {
+    "prettier": "bin/prettier.cjs"
+   },
+   "dist": {
+    "shasum": "22fac9d0b18c0b92055ac8fb619ac1c7bef02fb7",
+    "tarball": "http://localhost:3000/prettier/-/prettier-3.5.1.tgz",
+    "fileCount": 54,
+    "integrity": "sha512-hPpFQvHwL3Qv5AdRvBFMhnKo4tYxp0ReXiPn2bxkiohEX6mBeBwEpBSQTkD458RaaDKQMYSp4hX4UtfUTA5wDw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDKyV5/15cHStQsVDkbTaYSXofUxqVF70weFaNMHa7evAIgDPyug9Bnt250/O/g0bkd1PiXQ3buPr0OZPp96ASV/gU=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 7878198
+   },
+   "main": "./index.cjs",
+   "type": "commonjs",
+   "types": "./index.d.ts",
+   "unpkg": "./standalone.js",
+   "browser": "./standalone.js",
+   "engines": {
+    "node": ">=14"
+   },
+   "exports": {
+    ".": {
+     "types": "./index.d.ts",
+     "browser": {
+      "import": "./standalone.mjs",
+      "default": "./standalone.js"
+     },
+     "default": "./index.mjs",
+     "require": "./index.cjs",
+     "module-sync": "./index.mjs"
+    },
+    "./*": "./*",
+    "./doc": {
+     "types": "./doc.d.ts",
+     "default": "./doc.mjs",
+     "require": "./doc.js",
+     "module-sync": "./doc.mjs"
+    },
+    "./standalone": {
+     "types": "./standalone.d.ts",
+     "default": "./standalone.mjs",
+     "require": "./standalone.js",
+     "module-sync": "./standalone.mjs"
+    },
+    "./parser-flow": "./plugins/flow.js",
+    "./parser-html": "./plugins/html.js",
+    "./parser-yaml": "./plugins/yaml.js",
+    "./parser-babel": "./plugins/babel.js",
+    "./plugins/flow": {
+     "types": "./plugins/flow.d.ts",
+     "default": "./plugins/flow.mjs",
+     "require": "./plugins/flow.js",
+     "module-sync": "./plugins/flow.mjs"
+    },
+    "./plugins/html": {
+     "types": "./plugins/html.d.ts",
+     "default": "./plugins/html.mjs",
+     "require": "./plugins/html.js",
+     "module-sync": "./plugins/html.mjs"
+    },
+    "./plugins/yaml": {
+     "types": "./plugins/yaml.d.ts",
+     "default": "./plugins/yaml.mjs",
+     "require": "./plugins/yaml.js",
+     "module-sync": "./plugins/yaml.mjs"
+    },
+    "./parser-espree": "./plugins/acorn.js",
+    "./plugins/acorn": {
+     "types": "./plugins/acorn.d.ts",
+     "default": "./plugins/acorn.mjs",
+     "require": "./plugins/acorn.js",
+     "module-sync": "./plugins/acorn.mjs"
+    },
+    "./plugins/babel": {
+     "types": "./plugins/babel.d.ts",
+     "default": "./plugins/babel.mjs",
+     "require": "./plugins/babel.js",
+     "module-sync": "./plugins/babel.mjs"
+    },
+    "./parser-angular": "./plugins/angular.js",
+    "./parser-flow.js": "./plugins/flow.js",
+    "./parser-glimmer": "./plugins/glimmer.js",
+    "./parser-graphql": "./plugins/graphql.js",
+    "./parser-html.js": "./plugins/html.js",
+    "./parser-meriyah": "./plugins/meriyah.js",
+    "./parser-postcss": "./plugins/postcss.js",
+    "./parser-yaml.js": "./plugins/yaml.js",
+    "./plugins/estree": {
+     "types": "./plugins/estree.d.ts",
+     "default": "./plugins/estree.mjs",
+     "require": "./plugins/estree.js",
+     "module-sync": "./plugins/estree.mjs"
+    },
+    "./parser-babel.js": "./plugins/babel.js",
+    "./parser-markdown": "./plugins/markdown.js",
+    "./plugins/angular": {
+     "types": "./plugins/angular.d.ts",
+     "default": "./plugins/angular.mjs",
+     "require": "./plugins/angular.js",
+     "module-sync": "./plugins/angular.mjs"
+    },
+    "./plugins/glimmer": {
+     "types": "./plugins/glimmer.d.ts",
+     "default": "./plugins/glimmer.mjs",
+     "require": "./plugins/glimmer.js",
+     "module-sync": "./plugins/glimmer.mjs"
+    },
+    "./plugins/graphql": {
+     "types": "./plugins/graphql.d.ts",
+     "default": "./plugins/graphql.mjs",
+     "require": "./plugins/graphql.js",
+     "module-sync": "./plugins/graphql.mjs"
+    },
+    "./plugins/meriyah": {
+     "types": "./plugins/meriyah.d.ts",
+     "default": "./plugins/meriyah.mjs",
+     "require": "./plugins/meriyah.js",
+     "module-sync": "./plugins/meriyah.mjs"
+    },
+    "./plugins/postcss": {
+     "types": "./plugins/postcss.d.ts",
+     "default": "./plugins/postcss.mjs",
+     "require": "./plugins/postcss.js",
+     "module-sync": "./plugins/postcss.mjs"
+    },
+    "./parser-espree.js": "./plugins/acorn.js",
+    "./plugins/markdown": {
+     "types": "./plugins/markdown.d.ts",
+     "default": "./plugins/markdown.mjs",
+     "require": "./plugins/markdown.js",
+     "module-sync": "./plugins/markdown.mjs"
+    },
+    "./parser-angular.js": "./plugins/angular.js",
+    "./parser-glimmer.js": "./plugins/glimmer.js",
+    "./parser-graphql.js": "./plugins/graphql.js",
+    "./parser-meriyah.js": "./plugins/meriyah.js",
+    "./parser-postcss.js": "./plugins/postcss.js",
+    "./parser-typescript": "./plugins/typescript.js",
+    "./esm/standalone.mjs": "./standalone.mjs",
+    "./parser-markdown.js": "./plugins/markdown.js",
+    "./plugins/typescript": {
+     "types": "./plugins/typescript.d.ts",
+     "default": "./plugins/typescript.mjs",
+     "require": "./plugins/typescript.js",
+     "module-sync": "./plugins/typescript.mjs"
+    },
+    "./esm/parser-flow.mjs": "./plugins/flow.mjs",
+    "./esm/parser-html.mjs": "./plugins/html.mjs",
+    "./esm/parser-yaml.mjs": "./plugins/yaml.mjs",
+    "./esm/parser-babel.mjs": "./plugins/babel.mjs",
+    "./parser-typescript.js": "./plugins/typescript.js",
+    "./esm/parser-espree.mjs": "./plugins/acorn.mjs",
+    "./esm/parser-angular.mjs": "./plugins/angular.mjs",
+    "./esm/parser-glimmer.mjs": "./plugins/glimmer.mjs",
+    "./esm/parser-graphql.mjs": "./plugins/graphql.mjs",
+    "./esm/parser-meriyah.mjs": "./plugins/meriyah.mjs",
+    "./esm/parser-postcss.mjs": "./plugins/postcss.mjs",
+    "./esm/parser-markdown.mjs": "./plugins/markdown.mjs",
+    "./esm/parser-typescript.mjs": "./plugins/typescript.mjs"
+   },
+   "funding": "https://github.com/prettier/prettier?sponsor=1",
+   "gitHead": "b51ba9d46765bcfab714ebca982bd04ad25ae562",
+   "_npmUser": {
+    "name": "prettier-bot",
+    "email": "prettier-bot@d0d0.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/prettier/prettier.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Prettier is an opinionated code formatter",
+   "directories": {},
+   "_nodeVersion": "20.18.2",
+   "_hasShrinkwrap": false,
+   "preferUnplugged": true,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/prettier_3.5.1_1739452405624_0.19541602452677176",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "3.5.2": {
+   "name": "prettier",
+   "version": "3.5.2",
+   "author": {
+    "name": "James Long"
+   },
+   "license": "MIT",
+   "_id": "prettier@3.5.2",
+   "maintainers": [
+    {
+     "name": "jlongster",
+     "email": "longster@gmail.com"
+    },
+    {
+     "name": "lydell",
+     "email": "simon.lydell@gmail.com"
+    },
+    {
+     "name": "thorn0",
+     "email": "georgii.dolzhykov@gmail.com"
+    },
+    {
+     "name": "vjeux",
+     "email": "vjeuxx@gmail.com"
+    },
+    {
+     "name": "fisker",
+     "email": "lionkay@gmail.com"
+    },
+    {
+     "name": "suchipi",
+     "email": "me@suchipi.com"
+    },
+    {
+     "name": "duailibe",
+     "email": "lucasds@gmail.com"
+    },
+    {
+     "name": "ikatyang",
+     "email": "ikatyang@gmail.com"
+    },
+    {
+     "name": "azz",
+     "email": "lucas@azzola.dev"
+    },
+    {
+     "name": "sosukesuzuki",
+     "email": "aosukeke@gmail.com"
+    },
+    {
+     "name": "prettier-bot",
+     "email": "prettier-bot@d0d0.com"
+    }
+   ],
+   "homepage": "https://prettier.io",
+   "bugs": {
+    "url": "https://github.com/prettier/prettier/issues"
+   },
+   "bin": {
+    "prettier": "bin/prettier.cjs"
+   },
+   "dist": {
+    "shasum": "d066c6053200da0234bf8fa1ef45168abed8b914",
+    "tarball": "http://localhost:3000/prettier/-/prettier-3.5.2.tgz",
+    "fileCount": 54,
+    "integrity": "sha512-lc6npv5PH7hVqozBR7lkBNOGXV9vMwROAPlumdBkX0wTbbzPu/U1hk5yL8p2pt4Xoc+2mkT8t/sow2YrV/M5qg==",
+    "signatures": [
+     {
+      "sig": "MEQCIEiNWO9obYLE5NKa5H1+yG1zjvBSfBTVfczUZD24DTLBAiBQWGqqGAt3MZ+0rUKk90ndR5iH0oYP7h7AxPKleIDyNA==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 7877813
+   },
+   "main": "./index.cjs",
+   "type": "commonjs",
+   "types": "./index.d.ts",
+   "unpkg": "./standalone.js",
+   "browser": "./standalone.js",
+   "engines": {
+    "node": ">=14"
+   },
+   "exports": {
+    ".": {
+     "types": "./index.d.ts",
+     "browser": {
+      "import": "./standalone.mjs",
+      "default": "./standalone.js"
+     },
+     "default": "./index.mjs",
+     "require": "./index.cjs"
+    },
+    "./*": "./*",
+    "./doc": {
+     "types": "./doc.d.ts",
+     "default": "./doc.mjs",
+     "require": "./doc.js"
+    },
+    "./standalone": {
+     "types": "./standalone.d.ts",
+     "default": "./standalone.mjs",
+     "require": "./standalone.js"
+    },
+    "./parser-flow": "./plugins/flow.js",
+    "./parser-html": "./plugins/html.js",
+    "./parser-yaml": "./plugins/yaml.js",
+    "./parser-babel": "./plugins/babel.js",
+    "./plugins/flow": {
+     "types": "./plugins/flow.d.ts",
+     "default": "./plugins/flow.mjs",
+     "require": "./plugins/flow.js"
+    },
+    "./plugins/html": {
+     "types": "./plugins/html.d.ts",
+     "default": "./plugins/html.mjs",
+     "require": "./plugins/html.js"
+    },
+    "./plugins/yaml": {
+     "types": "./plugins/yaml.d.ts",
+     "default": "./plugins/yaml.mjs",
+     "require": "./plugins/yaml.js"
+    },
+    "./parser-espree": "./plugins/acorn.js",
+    "./plugins/acorn": {
+     "types": "./plugins/acorn.d.ts",
+     "default": "./plugins/acorn.mjs",
+     "require": "./plugins/acorn.js"
+    },
+    "./plugins/babel": {
+     "types": "./plugins/babel.d.ts",
+     "default": "./plugins/babel.mjs",
+     "require": "./plugins/babel.js"
+    },
+    "./parser-angular": "./plugins/angular.js",
+    "./parser-flow.js": "./plugins/flow.js",
+    "./parser-glimmer": "./plugins/glimmer.js",
+    "./parser-graphql": "./plugins/graphql.js",
+    "./parser-html.js": "./plugins/html.js",
+    "./parser-meriyah": "./plugins/meriyah.js",
+    "./parser-postcss": "./plugins/postcss.js",
+    "./parser-yaml.js": "./plugins/yaml.js",
+    "./plugins/estree": {
+     "types": "./plugins/estree.d.ts",
+     "default": "./plugins/estree.mjs",
+     "require": "./plugins/estree.js"
+    },
+    "./parser-babel.js": "./plugins/babel.js",
+    "./parser-markdown": "./plugins/markdown.js",
+    "./plugins/angular": {
+     "types": "./plugins/angular.d.ts",
+     "default": "./plugins/angular.mjs",
+     "require": "./plugins/angular.js"
+    },
+    "./plugins/glimmer": {
+     "types": "./plugins/glimmer.d.ts",
+     "default": "./plugins/glimmer.mjs",
+     "require": "./plugins/glimmer.js"
+    },
+    "./plugins/graphql": {
+     "types": "./plugins/graphql.d.ts",
+     "default": "./plugins/graphql.mjs",
+     "require": "./plugins/graphql.js"
+    },
+    "./plugins/meriyah": {
+     "types": "./plugins/meriyah.d.ts",
+     "default": "./plugins/meriyah.mjs",
+     "require": "./plugins/meriyah.js"
+    },
+    "./plugins/postcss": {
+     "types": "./plugins/postcss.d.ts",
+     "default": "./plugins/postcss.mjs",
+     "require": "./plugins/postcss.js"
+    },
+    "./parser-espree.js": "./plugins/acorn.js",
+    "./plugins/markdown": {
+     "types": "./plugins/markdown.d.ts",
+     "default": "./plugins/markdown.mjs",
+     "require": "./plugins/markdown.js"
+    },
+    "./parser-angular.js": "./plugins/angular.js",
+    "./parser-glimmer.js": "./plugins/glimmer.js",
+    "./parser-graphql.js": "./plugins/graphql.js",
+    "./parser-meriyah.js": "./plugins/meriyah.js",
+    "./parser-postcss.js": "./plugins/postcss.js",
+    "./parser-typescript": "./plugins/typescript.js",
+    "./esm/standalone.mjs": "./standalone.mjs",
+    "./parser-markdown.js": "./plugins/markdown.js",
+    "./plugins/typescript": {
+     "types": "./plugins/typescript.d.ts",
+     "default": "./plugins/typescript.mjs",
+     "require": "./plugins/typescript.js"
+    },
+    "./esm/parser-flow.mjs": "./plugins/flow.mjs",
+    "./esm/parser-html.mjs": "./plugins/html.mjs",
+    "./esm/parser-yaml.mjs": "./plugins/yaml.mjs",
+    "./esm/parser-babel.mjs": "./plugins/babel.mjs",
+    "./parser-typescript.js": "./plugins/typescript.js",
+    "./esm/parser-espree.mjs": "./plugins/acorn.mjs",
+    "./esm/parser-angular.mjs": "./plugins/angular.mjs",
+    "./esm/parser-glimmer.mjs": "./plugins/glimmer.mjs",
+    "./esm/parser-graphql.mjs": "./plugins/graphql.mjs",
+    "./esm/parser-meriyah.mjs": "./plugins/meriyah.mjs",
+    "./esm/parser-postcss.mjs": "./plugins/postcss.mjs",
+    "./esm/parser-markdown.mjs": "./plugins/markdown.mjs",
+    "./esm/parser-typescript.mjs": "./plugins/typescript.mjs"
+   },
+   "funding": "https://github.com/prettier/prettier?sponsor=1",
+   "gitHead": "b51ba9d46765bcfab714ebca982bd04ad25ae562",
+   "_npmUser": {
+    "name": "prettier-bot",
+    "email": "prettier-bot@d0d0.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/prettier/prettier.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Prettier is an opinionated code formatter",
+   "directories": {},
+   "_nodeVersion": "20.18.2",
+   "_hasShrinkwrap": false,
+   "preferUnplugged": true,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/prettier_3.5.2_1740197603996_0.43435652328558483",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "4.0.0-alpha.11": {
+   "name": "prettier",
+   "version": "4.0.0-alpha.11",
+   "author": {
+    "name": "James Long"
+   },
+   "license": "MIT",
+   "_id": "prettier@4.0.0-alpha.11",
+   "maintainers": [
+    {
+     "name": "jlongster",
+     "email": "longster@gmail.com"
+    },
+    {
+     "name": "lydell",
+     "email": "simon.lydell@gmail.com"
+    },
+    {
+     "name": "thorn0",
+     "email": "georgii.dolzhykov@gmail.com"
+    },
+    {
+     "name": "vjeux",
+     "email": "vjeuxx@gmail.com"
+    },
+    {
+     "name": "fisker",
+     "email": "lionkay@gmail.com"
+    },
+    {
+     "name": "suchipi",
+     "email": "me@suchipi.com"
+    },
+    {
+     "name": "duailibe",
+     "email": "lucasds@gmail.com"
+    },
+    {
+     "name": "ikatyang",
+     "email": "ikatyang@gmail.com"
+    },
+    {
+     "name": "azz",
+     "email": "lucas@azzola.dev"
+    },
+    {
+     "name": "sosukesuzuki",
+     "email": "aosukeke@gmail.com"
+    },
+    {
+     "name": "prettier-bot",
+     "email": "prettier-bot@d0d0.com"
+    }
+   ],
+   "homepage": "https://prettier.io",
+   "bugs": {
+    "url": "https://github.com/prettier/prettier/issues"
+   },
+   "bin": {
+    "prettier": "bin/prettier.cjs"
+   },
+   "dist": {
+    "shasum": "19bd3130c93a4cf9caf1c2dff52dcce62d4e0201",
+    "tarball": "http://localhost:3000/prettier/-/prettier-4.0.0-alpha.11.tgz",
+    "fileCount": 54,
+    "integrity": "sha512-qsJOvuJfJQ4t25Ys3c9nHq5ZqCb5zM30btP5okZrpqBi2yGX98IihbtOSc/uX7cKJ8FcTcF5vtk1opWROdMEKQ==",
+    "signatures": [
+     {
+      "sig": "MEQCICJ0fNBnBNWfS1eGdk4iNReHcrMMqXUFDtu4FvQ20VMHAiBcYACvfv6Xo7r7cyhtnEK6xq1EDoUC5VJnKvejiuZAVA==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 7878254
+   },
+   "main": "./index.cjs",
+   "type": "commonjs",
+   "types": "./index.d.ts",
+   "unpkg": "./standalone.js",
+   "browser": "./standalone.js",
+   "engines": {
+    "node": ">=14"
+   },
+   "exports": {
+    ".": {
+     "types": "./index.d.ts",
+     "browser": {
+      "import": "./standalone.mjs",
+      "default": "./standalone.js"
+     },
+     "default": "./index.mjs",
+     "require": "./index.cjs"
+    },
+    "./*": "./*",
+    "./doc": {
+     "types": "./doc.d.ts",
+     "default": "./doc.mjs",
+     "require": "./doc.js"
+    },
+    "./standalone": {
+     "types": "./standalone.d.ts",
+     "default": "./standalone.mjs",
+     "require": "./standalone.js"
+    },
+    "./parser-flow": "./plugins/flow.js",
+    "./parser-html": "./plugins/html.js",
+    "./parser-yaml": "./plugins/yaml.js",
+    "./parser-babel": "./plugins/babel.js",
+    "./plugins/flow": {
+     "types": "./plugins/flow.d.ts",
+     "default": "./plugins/flow.mjs",
+     "require": "./plugins/flow.js"
+    },
+    "./plugins/html": {
+     "types": "./plugins/html.d.ts",
+     "default": "./plugins/html.mjs",
+     "require": "./plugins/html.js"
+    },
+    "./plugins/yaml": {
+     "types": "./plugins/yaml.d.ts",
+     "default": "./plugins/yaml.mjs",
+     "require": "./plugins/yaml.js"
+    },
+    "./parser-espree": "./plugins/acorn.js",
+    "./plugins/acorn": {
+     "types": "./plugins/acorn.d.ts",
+     "default": "./plugins/acorn.mjs",
+     "require": "./plugins/acorn.js"
+    },
+    "./plugins/babel": {
+     "types": "./plugins/babel.d.ts",
+     "default": "./plugins/babel.mjs",
+     "require": "./plugins/babel.js"
+    },
+    "./parser-angular": "./plugins/angular.js",
+    "./parser-flow.js": "./plugins/flow.js",
+    "./parser-glimmer": "./plugins/glimmer.js",
+    "./parser-graphql": "./plugins/graphql.js",
+    "./parser-html.js": "./plugins/html.js",
+    "./parser-meriyah": "./plugins/meriyah.js",
+    "./parser-postcss": "./plugins/postcss.js",
+    "./parser-yaml.js": "./plugins/yaml.js",
+    "./plugins/estree": {
+     "types": "./plugins/estree.d.ts",
+     "default": "./plugins/estree.mjs",
+     "require": "./plugins/estree.js"
+    },
+    "./parser-babel.js": "./plugins/babel.js",
+    "./parser-markdown": "./plugins/markdown.js",
+    "./plugins/angular": {
+     "types": "./plugins/angular.d.ts",
+     "default": "./plugins/angular.mjs",
+     "require": "./plugins/angular.js"
+    },
+    "./plugins/glimmer": {
+     "types": "./plugins/glimmer.d.ts",
+     "default": "./plugins/glimmer.mjs",
+     "require": "./plugins/glimmer.js"
+    },
+    "./plugins/graphql": {
+     "types": "./plugins/graphql.d.ts",
+     "default": "./plugins/graphql.mjs",
+     "require": "./plugins/graphql.js"
+    },
+    "./plugins/meriyah": {
+     "types": "./plugins/meriyah.d.ts",
+     "default": "./plugins/meriyah.mjs",
+     "require": "./plugins/meriyah.js"
+    },
+    "./plugins/postcss": {
+     "types": "./plugins/postcss.d.ts",
+     "default": "./plugins/postcss.mjs",
+     "require": "./plugins/postcss.js"
+    },
+    "./parser-espree.js": "./plugins/acorn.js",
+    "./plugins/markdown": {
+     "types": "./plugins/markdown.d.ts",
+     "default": "./plugins/markdown.mjs",
+     "require": "./plugins/markdown.js"
+    },
+    "./parser-angular.js": "./plugins/angular.js",
+    "./parser-glimmer.js": "./plugins/glimmer.js",
+    "./parser-graphql.js": "./plugins/graphql.js",
+    "./parser-meriyah.js": "./plugins/meriyah.js",
+    "./parser-postcss.js": "./plugins/postcss.js",
+    "./parser-typescript": "./plugins/typescript.js",
+    "./esm/standalone.mjs": "./standalone.mjs",
+    "./parser-markdown.js": "./plugins/markdown.js",
+    "./plugins/typescript": {
+     "types": "./plugins/typescript.d.ts",
+     "default": "./plugins/typescript.mjs",
+     "require": "./plugins/typescript.js"
+    },
+    "./esm/parser-flow.mjs": "./plugins/flow.mjs",
+    "./esm/parser-html.mjs": "./plugins/html.mjs",
+    "./esm/parser-yaml.mjs": "./plugins/yaml.mjs",
+    "./esm/parser-babel.mjs": "./plugins/babel.mjs",
+    "./parser-typescript.js": "./plugins/typescript.js",
+    "./esm/parser-espree.mjs": "./plugins/acorn.mjs",
+    "./esm/parser-angular.mjs": "./plugins/angular.mjs",
+    "./esm/parser-glimmer.mjs": "./plugins/glimmer.mjs",
+    "./esm/parser-graphql.mjs": "./plugins/graphql.mjs",
+    "./esm/parser-meriyah.mjs": "./plugins/meriyah.mjs",
+    "./esm/parser-postcss.mjs": "./plugins/postcss.mjs",
+    "./esm/parser-markdown.mjs": "./plugins/markdown.mjs",
+    "./esm/parser-typescript.mjs": "./plugins/typescript.mjs"
+   },
+   "funding": "https://github.com/prettier/prettier?sponsor=1",
+   "gitHead": "b51ba9d46765bcfab714ebca982bd04ad25ae562",
+   "_npmUser": {
+    "name": "prettier-bot",
+    "email": "prettier-bot@d0d0.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/prettier/prettier.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Prettier is an opinionated code formatter",
+   "directories": {},
+   "_nodeVersion": "20.18.2",
+   "dependencies": {
+    "@prettier/cli": "^0.7.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "preferUnplugged": true,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/prettier_4.0.0-alpha.11_1740435096780_0.495989803582388",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "3.5.3": {
+   "name": "prettier",
+   "version": "3.5.3",
    "description": "Prettier is an opinionated code formatter",
    "bin": {
     "prettier": "bin/prettier.cjs"
@@ -21241,7 +21942,6 @@
    "exports": {
     ".": {
      "types": "./index.d.ts",
-     "module-sync": "./index.mjs",
      "require": "./index.cjs",
      "browser": {
       "import": "./standalone.mjs",
@@ -21252,91 +21952,76 @@
     "./*": "./*",
     "./doc": {
      "types": "./doc.d.ts",
-     "module-sync": "./doc.mjs",
      "require": "./doc.js",
      "default": "./doc.mjs"
     },
     "./standalone": {
      "types": "./standalone.d.ts",
-     "module-sync": "./standalone.mjs",
      "require": "./standalone.js",
      "default": "./standalone.mjs"
     },
     "./plugins/estree": {
      "types": "./plugins/estree.d.ts",
-     "module-sync": "./plugins/estree.mjs",
      "require": "./plugins/estree.js",
      "default": "./plugins/estree.mjs"
     },
     "./plugins/babel": {
      "types": "./plugins/babel.d.ts",
-     "module-sync": "./plugins/babel.mjs",
      "require": "./plugins/babel.js",
      "default": "./plugins/babel.mjs"
     },
     "./plugins/flow": {
      "types": "./plugins/flow.d.ts",
-     "module-sync": "./plugins/flow.mjs",
      "require": "./plugins/flow.js",
      "default": "./plugins/flow.mjs"
     },
     "./plugins/typescript": {
      "types": "./plugins/typescript.d.ts",
-     "module-sync": "./plugins/typescript.mjs",
      "require": "./plugins/typescript.js",
      "default": "./plugins/typescript.mjs"
     },
     "./plugins/acorn": {
      "types": "./plugins/acorn.d.ts",
-     "module-sync": "./plugins/acorn.mjs",
      "require": "./plugins/acorn.js",
      "default": "./plugins/acorn.mjs"
     },
     "./plugins/meriyah": {
      "types": "./plugins/meriyah.d.ts",
-     "module-sync": "./plugins/meriyah.mjs",
      "require": "./plugins/meriyah.js",
      "default": "./plugins/meriyah.mjs"
     },
     "./plugins/angular": {
      "types": "./plugins/angular.d.ts",
-     "module-sync": "./plugins/angular.mjs",
      "require": "./plugins/angular.js",
      "default": "./plugins/angular.mjs"
     },
     "./plugins/postcss": {
      "types": "./plugins/postcss.d.ts",
-     "module-sync": "./plugins/postcss.mjs",
      "require": "./plugins/postcss.js",
      "default": "./plugins/postcss.mjs"
     },
     "./plugins/graphql": {
      "types": "./plugins/graphql.d.ts",
-     "module-sync": "./plugins/graphql.mjs",
      "require": "./plugins/graphql.js",
      "default": "./plugins/graphql.mjs"
     },
     "./plugins/markdown": {
      "types": "./plugins/markdown.d.ts",
-     "module-sync": "./plugins/markdown.mjs",
      "require": "./plugins/markdown.js",
      "default": "./plugins/markdown.mjs"
     },
     "./plugins/glimmer": {
      "types": "./plugins/glimmer.d.ts",
-     "module-sync": "./plugins/glimmer.mjs",
      "require": "./plugins/glimmer.js",
      "default": "./plugins/glimmer.mjs"
     },
     "./plugins/html": {
      "types": "./plugins/html.d.ts",
-     "module-sync": "./plugins/html.mjs",
      "require": "./plugins/html.js",
      "default": "./plugins/html.mjs"
     },
     "./plugins/yaml": {
      "types": "./plugins/yaml.d.ts",
-     "module-sync": "./plugins/yaml.mjs",
      "require": "./plugins/yaml.js",
      "default": "./plugins/yaml.mjs"
     },
@@ -21383,24 +22068,24 @@
    },
    "preferUnplugged": true,
    "type": "commonjs",
-   "_id": "prettier@3.5.1",
+   "_id": "prettier@3.5.3",
    "gitHead": "b51ba9d46765bcfab714ebca982bd04ad25ae562",
    "types": "./index.d.ts",
    "bugs": {
     "url": "https://github.com/prettier/prettier/issues"
    },
-   "_nodeVersion": "20.18.2",
+   "_nodeVersion": "20.18.3",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-hPpFQvHwL3Qv5AdRvBFMhnKo4tYxp0ReXiPn2bxkiohEX6mBeBwEpBSQTkD458RaaDKQMYSp4hX4UtfUTA5wDw==",
-    "shasum": "22fac9d0b18c0b92055ac8fb619ac1c7bef02fb7",
-    "tarball": "http://localhost:3000/prettier/-/prettier-3.5.1.tgz",
+    "integrity": "sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==",
+    "shasum": "4fc2ce0d657e7a02e602549f053b239cb7dfe1b5",
+    "tarball": "http://localhost:3000/prettier/-/prettier-3.5.3.tgz",
     "fileCount": 54,
-    "unpackedSize": 7878198,
+    "unpackedSize": 7876465,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQDKyV5/15cHStQsVDkbTaYSXofUxqVF70weFaNMHa7evAIgDPyug9Bnt250/O/g0bkd1PiXQ3buPr0OZPp96ASV/gU="
+      "sig": "MEUCIQC/m05KopPeffb+cWwBPgM2bBD/eZplgPgL22Qemyl2/AIgIDHGikNL7GIxrGl4GrpDIhmFfsHM7rJS2bjN5yc/cVw="
      }
     ]
    },
@@ -21457,14 +22142,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/prettier_3.5.1_1739452405624_0.19541602452677176"
+    "tmp": "tmp/prettier_3.5.3_1740964737290_0.3676520097921667"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-01-10T03:45:38.963Z",
-  "modified": "2025-02-13T13:13:26.089Z",
+  "modified": "2025-03-03T01:18:57.676Z",
   "0.0.1": "2017-01-10T03:45:38.963Z",
   "0.0.2": "2017-01-10T04:31:28.120Z",
   "0.0.3": "2017-01-10T17:18:52.417Z",
@@ -21634,7 +22319,10 @@
   "3.4.1": "2024-11-26T13:04:40.296Z",
   "3.4.2": "2024-12-04T07:04:07.630Z",
   "3.5.0": "2025-02-09T11:23:40.436Z",
-  "3.5.1": "2025-02-13T13:13:25.908Z"
+  "3.5.1": "2025-02-13T13:13:25.908Z",
+  "3.5.2": "2025-02-22T04:13:24.234Z",
+  "4.0.0-alpha.11": "2025-02-24T22:11:36.974Z",
+  "3.5.3": "2025-03-03T01:18:57.493Z"
  },
  "bugs": {
   "url": "https://github.com/prettier/prettier/issues"
@@ -21695,7 +22383,7 @@
    "email": "prettier-bot@d0d0.com"
   }
  ],
- "readme": "[![Prettier Banner](https://unpkg.com/prettier-logo@1.0.3/images/prettier-banner-light.svg)](https://prettier.io)\n\n<h2 align=\"center\">Opinionated Code Formatter</h2>\n\n<p align=\"center\">\n  <em>\n    JavaScript\n    · TypeScript\n    · Flow\n    · JSX\n    · JSON\n  </em>\n  <br />\n  <em>\n    CSS\n    · SCSS\n    · Less\n  </em>\n  <br />\n  <em>\n    HTML\n    · Vue\n    · Angular\n  </em>\n  <br />\n  <em>\n    GraphQL\n    · Markdown\n    · YAML\n  </em>\n  <br />\n  <em>\n    <a href=\"https://prettier.io/docs/en/plugins.html\">\n      Your favorite language?\n    </a>\n  </em>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/prettier/prettier/actions?query=workflow%3AProd+branch%3Amain\">\n    <img alt=\"Github Actions Build Status\" src=\"https://img.shields.io/github/actions/workflow/status/prettier/prettier/prod-test.yml?label=Prod&style=flat-square\"></a>\n  <a href=\"https://github.com/prettier/prettier/actions?query=workflow%3ADev+branch%3Amain\">\n    <img alt=\"Github Actions Build Status\" src=\"https://img.shields.io/github/actions/workflow/status/prettier/prettier/dev-test.yml?label=Dev&style=flat-square\"></a>\n  <a href=\"https://github.com/prettier/prettier/actions?query=workflow%3ALint+branch%3Amain\">\n    <img alt=\"Github Actions Build Status\" src=\"https://img.shields.io/github/actions/workflow/status/prettier/prettier/lint.yml?label=Lint&style=flat-square\"></a>\n  <a href=\"https://codecov.io/gh/prettier/prettier\">\n    <img alt=\"Codecov Coverage Status\" src=\"https://img.shields.io/codecov/c/github/prettier/prettier.svg?style=flat-square\"></a>\n  <a href=\"https://twitter.com/acdlite/status/974390255393505280\">\n    <img alt=\"Blazing Fast\" src=\"https://img.shields.io/badge/speed-blazing%20%F0%9F%94%A5-brightgreen.svg?style=flat-square\"></a>\n  <br/>\n  <a href=\"https://www.npmjs.com/package/prettier\">\n    <img alt=\"npm version\" src=\"https://img.shields.io/npm/v/prettier.svg?style=flat-square\"></a>\n  <a href=\"https://www.npmjs.com/package/prettier\">\n    <img alt=\"weekly downloads from npm\" src=\"https://img.shields.io/npm/dw/prettier.svg?style=flat-square\"></a>\n  <a href=\"#badge\">\n    <img alt=\"code style: prettier\" src=\"https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square\"></a>\n  <a href=\"https://twitter.com/PrettierCode\">\n    <img alt=\"Follow Prettier on Twitter\" src=\"https://img.shields.io/badge/%40PrettierCode-9f9f9f?style=flat-square&logo=x&labelColor=555\"></a>\n</p>\n\n## Intro\n\nPrettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.\n\n### Input\n\n<!-- prettier-ignore -->\n```js\nfoo(reallyLongArg(), omgSoManyParameters(), IShouldRefactorThis(), isThereSeriouslyAnotherOne());\n```\n\n### Output\n\n```js\nfoo(\n  reallyLongArg(),\n  omgSoManyParameters(),\n  IShouldRefactorThis(),\n  isThereSeriouslyAnotherOne(),\n);\n```\n\nPrettier can be run [in your editor](https://prettier.io/docs/editors) on-save, in a [pre-commit hook](https://prettier.io/docs/precommit), or in [CI environments](https://prettier.io/docs/cli#list-different) to ensure your codebase has a consistent style without devs ever having to post a nit-picky comment on a code review ever again!\n\n---\n\n**[Documentation](https://prettier.io/docs/)**\n\n[Install](https://prettier.io/docs/install) ·\n[Options](https://prettier.io/docs/options) ·\n[CLI](https://prettier.io/docs/cli) ·\n[API](https://prettier.io/docs/api)\n\n**[Playground](https://prettier.io/playground/)**\n\n---\n\n## Badge\n\nShow the world you're using _Prettier_ → [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)\n\n```md\n[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)\n```\n\n## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md).\n",
+ "readme": "[![Prettier Banner](https://unpkg.com/prettier-logo@1.0.3/images/prettier-banner-light.svg)](https://prettier.io)\n\n<h2 align=\"center\">Opinionated Code Formatter</h2>\n\n<p align=\"center\">\n  <em>\n    JavaScript\n    · TypeScript\n    · Flow\n    · JSX\n    · JSON\n  </em>\n  <br />\n  <em>\n    CSS\n    · SCSS\n    · Less\n  </em>\n  <br />\n  <em>\n    HTML\n    · Vue\n    · Angular\n  </em>\n  <br />\n  <em>\n    GraphQL\n    · Markdown\n    · YAML\n  </em>\n  <br />\n  <em>\n    <a href=\"https://prettier.io/docs/plugins\">\n      Your favorite language?\n    </a>\n  </em>\n</p>\n\n<p align=\"center\">\n  <a href=\"https://github.com/prettier/prettier/actions?query=workflow%3AProd+branch%3Amain\">\n    <img alt=\"Github Actions Build Status\" src=\"https://img.shields.io/github/actions/workflow/status/prettier/prettier/prod-test.yml?label=Prod&style=flat-square\"></a>\n  <a href=\"https://github.com/prettier/prettier/actions?query=workflow%3ADev+branch%3Amain\">\n    <img alt=\"Github Actions Build Status\" src=\"https://img.shields.io/github/actions/workflow/status/prettier/prettier/dev-test.yml?label=Dev&style=flat-square\"></a>\n  <a href=\"https://github.com/prettier/prettier/actions?query=workflow%3ALint+branch%3Amain\">\n    <img alt=\"Github Actions Build Status\" src=\"https://img.shields.io/github/actions/workflow/status/prettier/prettier/lint.yml?label=Lint&style=flat-square\"></a>\n  <a href=\"https://codecov.io/gh/prettier/prettier\">\n    <img alt=\"Codecov Coverage Status\" src=\"https://img.shields.io/codecov/c/github/prettier/prettier.svg?style=flat-square\"></a>\n  <a href=\"https://twitter.com/acdlite/status/974390255393505280\">\n    <img alt=\"Blazing Fast\" src=\"https://img.shields.io/badge/speed-blazing%20%F0%9F%94%A5-brightgreen.svg?style=flat-square\"></a>\n  <br/>\n  <a href=\"https://www.npmjs.com/package/prettier\">\n    <img alt=\"npm version\" src=\"https://img.shields.io/npm/v/prettier.svg?style=flat-square\"></a>\n  <a href=\"https://www.npmjs.com/package/prettier\">\n    <img alt=\"weekly downloads from npm\" src=\"https://img.shields.io/npm/dw/prettier.svg?style=flat-square\"></a>\n  <a href=\"#badge\">\n    <img alt=\"code style: prettier\" src=\"https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square\"></a>\n  <a href=\"https://twitter.com/PrettierCode\">\n    <img alt=\"Follow Prettier on Twitter\" src=\"https://img.shields.io/badge/%40PrettierCode-9f9f9f?style=flat-square&logo=x&labelColor=555\"></a>\n</p>\n\n## Intro\n\nPrettier is an opinionated code formatter. It enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.\n\n### Input\n\n<!-- prettier-ignore -->\n```js\nfoo(reallyLongArg(), omgSoManyParameters(), IShouldRefactorThis(), isThereSeriouslyAnotherOne());\n```\n\n### Output\n\n```js\nfoo(\n  reallyLongArg(),\n  omgSoManyParameters(),\n  IShouldRefactorThis(),\n  isThereSeriouslyAnotherOne(),\n);\n```\n\nPrettier can be run [in your editor](https://prettier.io/docs/editors) on-save, in a [pre-commit hook](https://prettier.io/docs/precommit), or in [CI environments](https://prettier.io/docs/cli#list-different) to ensure your codebase has a consistent style without devs ever having to post a nit-picky comment on a code review ever again!\n\n---\n\n**[Documentation](https://prettier.io/docs/)**\n\n[Install](https://prettier.io/docs/install) ·\n[Options](https://prettier.io/docs/options) ·\n[CLI](https://prettier.io/docs/cli) ·\n[API](https://prettier.io/docs/api)\n\n**[Playground](https://prettier.io/playground/)**\n\n---\n\n## Badge\n\nShow the world you're using _Prettier_ → [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)\n\n```md\n[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)\n```\n\n## Contributing\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md).\n",
  "readmeFilename": "README.md",
  "users": {
   "azz": true,

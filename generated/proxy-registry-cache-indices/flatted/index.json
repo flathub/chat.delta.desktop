@@ -1,9 +1,9 @@
 {
  "_id": "flatted",
- "_rev": "39-f1dcbefae8faaf86d3749a4ecc910982",
+ "_rev": "40-9d4b0a51d5a50ca23fd993981a0c8188",
  "name": "flatted",
  "dist-tags": {
-  "latest": "3.3.2"
+  "latest": "3.3.3"
  },
  "versions": {
   "0.1.0": {
@@ -3243,6 +3243,106 @@
   "3.3.2": {
    "name": "flatted",
    "version": "3.3.2",
+   "keywords": [
+    "circular",
+    "JSON",
+    "fast",
+    "parser",
+    "minimal"
+   ],
+   "author": {
+    "name": "Andrea Giammarchi"
+   },
+   "license": "ISC",
+   "_id": "flatted@3.3.2",
+   "maintainers": [
+    {
+     "name": "webreflection",
+     "email": "andrea.giammarchi@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/WebReflection/flatted#readme",
+   "bugs": {
+    "url": "https://github.com/WebReflection/flatted/issues"
+   },
+   "dist": {
+    "shasum": "adba1448a9841bec72b42c532ea23dbbedef1a27",
+    "tarball": "http://localhost:3000/flatted/-/flatted-3.3.2.tgz",
+    "fileCount": 14,
+    "integrity": "sha512-AiwGJM8YcNOaobumgtng+6NHuOqC3A7MixFeDafM3X9cIUM+xUXoS5Vfgf+OihAYe20fxqNM9yPBXJzRtZ/4eA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCIl/nmGd3HbKYLdJph0N17CglaJW/lSDXRB0L4uh9rHQIgEwLNOK6O8nKpIbwIkxblNLO+aYSf3jgWtz1HSFnGCaQ=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 33484
+   },
+   "main": "./cjs/index.js",
+   "type": "module",
+   "types": "./types/index.d.ts",
+   "unpkg": "min.js",
+   "module": "./esm/index.js",
+   "exports": {
+    ".": {
+     "types": "./types/index.d.ts",
+     "import": "./esm/index.js",
+     "default": "./cjs/index.js"
+    },
+    "./esm": "./esm.js",
+    "./package.json": "./package.json"
+   },
+   "gitHead": "e63f8c0f81bb71e8aa0a0ef7933288289889863b",
+   "scripts": {
+    "ts": "tsc -p .",
+    "cjs": "ascjs esm cjs",
+    "min": "terser index.js -c -m -o min.js",
+    "size": "cat index.js | wc -c;cat min.js | wc -c;gzip -c9 min.js | wc -c;cat min.js | brotli | wc -c; cat es.js | brotli | wc -c; cat esm.js | brotli | wc -c",
+    "test": "c8 node test/index.js",
+    "build": "npm run cjs && npm run rollup:esm && npm run rollup:es && npm run rollup:babel && npm run min && npm run test && npm run size",
+    "test:py": "python python/test.py",
+    "coverage": "mkdir -p ./coverage; c8 report --reporter=text-lcov > ./coverage/lcov.info",
+    "test:php": "php php/test.php",
+    "rollup:es": "rollup --config rollup/es.config.js && sed -i.bck 's/^var /self./' es.js && rm -rf es.js.bck",
+    "rollup:esm": "rollup --config rollup/esm.config.js",
+    "rollup:babel": "rollup --config rollup/babel.config.js && sed -i.bck 's/^var /self./' index.js && rm -rf index.js.bck"
+   },
+   "_npmUser": {
+    "name": "webreflection",
+    "email": "andrea.giammarchi@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/WebReflection/flatted.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "A super light and fast circular JSON parser.",
+   "directories": {},
+   "_nodeVersion": "23.1.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "^9.1.0",
+    "jsan": "^3.1.14",
+    "ascjs": "^6.0.3",
+    "rollup": "^4.12.0",
+    "terser": "^5.27.2",
+    "typescript": "^5.3.3",
+    "@babel/core": "^7.23.9",
+    "circular-json": "^0.5.9",
+    "@babel/preset-env": "^7.23.9",
+    "circular-json-es6": "^2.0.2",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@ungap/structured-clone": "^1.2.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/flatted_3.3.2_1731942067532_0.5888918623027448",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.3.3": {
+   "name": "flatted",
+   "version": "3.3.3",
    "description": "A super light and fast circular JSON parser.",
    "unpkg": "min.js",
    "main": "./cjs/index.js",
@@ -3280,19 +3380,19 @@
    },
    "homepage": "https://github.com/WebReflection/flatted#readme",
    "devDependencies": {
-    "@babel/core": "^7.23.9",
-    "@babel/preset-env": "^7.23.9",
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-terser": "^0.4.4",
-    "@ungap/structured-clone": "^1.2.0",
+    "@ungap/structured-clone": "^1.3.0",
     "ascjs": "^6.0.3",
-    "c8": "^9.1.0",
+    "c8": "^10.1.3",
     "circular-json": "^0.5.9",
     "circular-json-es6": "^2.0.2",
     "jsan": "^3.1.14",
-    "rollup": "^4.12.0",
-    "terser": "^5.27.2",
-    "typescript": "^5.3.3"
+    "rollup": "^4.34.8",
+    "terser": "^5.39.0",
+    "typescript": "^5.7.3"
    },
    "module": "./esm/index.js",
    "type": "module",
@@ -3306,20 +3406,20 @@
     "./package.json": "./package.json"
    },
    "types": "./types/index.d.ts",
-   "_id": "flatted@3.3.2",
-   "gitHead": "e63f8c0f81bb71e8aa0a0ef7933288289889863b",
-   "_nodeVersion": "23.1.0",
-   "_npmVersion": "10.9.0",
+   "_id": "flatted@3.3.3",
+   "gitHead": "888baa03952c37b9b517c7baf25b1e0bcad5f5ec",
+   "_nodeVersion": "23.8.0",
+   "_npmVersion": "11.1.0",
    "dist": {
-    "integrity": "sha512-AiwGJM8YcNOaobumgtng+6NHuOqC3A7MixFeDafM3X9cIUM+xUXoS5Vfgf+OihAYe20fxqNM9yPBXJzRtZ/4eA==",
-    "shasum": "adba1448a9841bec72b42c532ea23dbbedef1a27",
-    "tarball": "http://localhost:3000/flatted/-/flatted-3.3.2.tgz",
-    "fileCount": 14,
-    "unpackedSize": 33484,
+    "integrity": "sha512-GX+ysw4PBCz0PzosHDepZGANEuFCMLrnRTiEy9McGjmkCQYwRq4A/X786G/fjM/+OjsWSU1ZrY5qyARZmO/uwg==",
+    "shasum": "67c8fad95454a7c7abebf74bb78ee74a44023358",
+    "tarball": "http://localhost:3000/flatted/-/flatted-3.3.3.tgz",
+    "fileCount": 13,
+    "unpackedSize": 31530,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCIl/nmGd3HbKYLdJph0N17CglaJW/lSDXRB0L4uh9rHQIgEwLNOK6O8nKpIbwIkxblNLO+aYSf3jgWtz1HSFnGCaQ="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCICehaRawots9c+LBlS7+O+UdC7qF021vaaqHl1pLbTmqAiEA82yzjN6VnkVpf5KO/Dzix65z846re55ARVMj10hTxdk="
      }
     ]
    },
@@ -3335,15 +3435,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/flatted_3.3.2_1731942067532_0.5888918623027448"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/flatted_3.3.3_1739868906986_0.23025613844808235"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2018-04-26T09:50:37.331Z",
-  "modified": "2024-11-18T15:01:07.931Z",
+  "modified": "2025-02-18T08:55:07.324Z",
   "0.1.0": "2018-04-26T09:50:37.595Z",
   "0.2.0": "2018-04-26T11:58:50.371Z",
   "0.2.1": "2018-04-27T17:03:24.657Z",
@@ -3380,7 +3480,8 @@
   "3.2.13": "2024-02-20T11:17:55.960Z",
   "3.3.0": "2024-02-20T11:33:19.450Z",
   "3.3.1": "2024-02-21T11:23:15.725Z",
-  "3.3.2": "2024-11-18T15:01:07.763Z"
+  "3.3.2": "2024-11-18T15:01:07.763Z",
+  "3.3.3": "2025-02-18T08:55:07.168Z"
  },
  "bugs": {
   "url": "https://github.com/WebReflection/flatted/issues"

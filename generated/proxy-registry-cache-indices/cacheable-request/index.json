@@ -1,10 +1,10 @@
 {
  "_id": "cacheable-request",
- "_rev": "70-4b44011fae4b06370927481404c4b3bd",
+ "_rev": "71-2bc532363b453e200a9e8215914a2314",
  "name": "cacheable-request",
  "dist-tags": {
   "beta": "7.0.3",
-  "latest": "13.0.3"
+  "latest": "13.0.4"
  },
  "versions": {
   "0.0.0": {
@@ -7976,6 +7976,146 @@
   "13.0.3": {
    "name": "cacheable-request",
    "version": "13.0.3",
+   "keywords": [
+    "HTTP",
+    "HTTPS",
+    "cache",
+    "caching",
+    "layer",
+    "cacheable",
+    "RFC 7234",
+    "RFC",
+    "7234",
+    "compliant"
+   ],
+   "author": {
+    "url": "http://jaredwray.com",
+    "name": "Jared Wray",
+    "email": "me@jaredwray.com"
+   },
+   "license": "MIT",
+   "_id": "cacheable-request@13.0.3",
+   "maintainers": [
+    {
+     "name": "lukechilds",
+     "email": "lukechilds123@gmail.com"
+    },
+    {
+     "name": "jaredwray",
+     "email": "me@jaredwray.com"
+    },
+    {
+     "name": "szmarczak",
+     "email": "sz.marczak@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/jaredwray/cacheable#readme",
+   "bugs": {
+    "url": "https://github.com/jaredwray/cacheable/issues"
+   },
+   "xo": {
+    "rules": {
+     "new-cap": 0,
+     "n/no-deprecated-api": 0,
+     "n/prefer-global/url": 0,
+     "unicorn/prefer-event-target": 0,
+     "@typescript-eslint/ban-types": 0,
+     "promise/prefer-await-to-then": 0,
+     "@typescript-eslint/no-namespace": 0,
+     "@typescript-eslint/no-unsafe-call": 0,
+     "unicorn/no-abusive-eslint-disable": 0,
+     "@typescript-eslint/no-unsafe-return": 0,
+     "@typescript-eslint/no-unsafe-argument": 0,
+     "@typescript-eslint/no-unsafe-assignment": 0,
+     "@typescript-eslint/no-implicit-any-catch": 0,
+     "@typescript-eslint/restrict-plus-operands": 0,
+     "@typescript-eslint/triple-slash-reference": 0,
+     "@typescript-eslint/consistent-type-imports": 0,
+     "@typescript-eslint/prefer-nullish-coalescing": 0,
+     "@typescript-eslint/consistent-type-definitions": 0,
+     "@typescript-eslint/no-unnecessary-type-assertion": 0,
+     "@typescript-eslint/restrict-template-expressions": 0
+    }
+   },
+   "dist": {
+    "shasum": "15bf504dfc0d8f17d7e03804482c1ef215896990",
+    "tarball": "http://localhost:3000/cacheable-request/-/cacheable-request-13.0.3.tgz",
+    "fileCount": 11,
+    "integrity": "sha512-3gjHiEihbf6eBO0Gxb1pOGxIrtO0tQPKuZ09GF2nlTJvTqIW2jtS1plt/YugbghrmMJEXOCagCgQoE92BAOscg==",
+    "signatures": [
+     {
+      "sig": "MEUCIApxyVRXv1l5Wl/OR0El4XyCSq3xF1kqJ7VJeVDkeAHOAiEAismwDf2hRC4X/M2AyJqWNIPyyBZh0wdrSGOJnYd4DQo=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 71598
+   },
+   "type": "module",
+   "_from": "file:cacheable-request-13.0.3.tgz",
+   "types": "./dist/index.d.ts",
+   "engines": {
+    "node": ">=18"
+   },
+   "exports": "./dist/index.js",
+   "scripts": {
+    "test": "xo --fix && vitest run --coverage",
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rimraf node_modules ./coverage ./test/testdb.sqlite ./dist",
+    "test:ci": "xo && vitest run",
+    "prepublish": "pnpm run build"
+   },
+   "_npmUser": {
+    "name": "jaredwray",
+    "email": "me@jaredwray.com"
+   },
+   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/6bee315f4c19ed62d21210fd8720461b/cacheable-request-13.0.3.tgz",
+   "_integrity": "sha512-3gjHiEihbf6eBO0Gxb1pOGxIrtO0tQPKuZ09GF2nlTJvTqIW2jtS1plt/YugbghrmMJEXOCagCgQoE92BAOscg==",
+   "repository": {
+    "url": "git+https://github.com/jaredwray/cacheable.git",
+    "type": "git",
+    "directory": "packages/cacheable-request"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Wrap native HTTP requests with RFC compliant cache support",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "keyv": "^5.2.3",
+    "get-stream": "^9.0.1",
+    "responselike": "^3.0.0",
+    "normalize-url": "^8.0.1",
+    "mimic-response": "^4.0.0",
+    "http-cache-semantics": "^4.1.1",
+    "@types/http-cache-semantics": "^4.0.4"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.60.0",
+    "pify": "^6.1.0",
+    "delay": "^6.0.0",
+    "rimraf": "^6.0.1",
+    "vitest": "^2.1.8",
+    "express": "^4.21.2",
+    "sqlite3": "^5.1.7",
+    "typescript": "^5.7.2",
+    "@types/node": "^22.10.2",
+    "body-parser": "^1.20.3",
+    "@keyv/sqlite": "^4.0.1",
+    "@types/sqlite3": "^3.1.11",
+    "@types/responselike": "^1.0.3",
+    "@vitest/coverage-v8": "^2.1.8"
+   },
+   "dependenciesComments": {
+    "@types/http-cache-semantics": "It needs to be in the dependencies list and not devDependencies because otherwise projects that use this one will be getting `Could not find a declaration file for module 'http-cache-semantics'` error when running `tsc`, see https://github.com/jaredwray/cacheable-request/issues/194 for details"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/cacheable-request_13.0.3_1735258130948_0.04457698831472556",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "13.0.4": {
+   "name": "cacheable-request",
+   "version": "13.0.4",
    "description": "Wrap native HTTP requests with RFC compliant cache support",
    "license": "MIT",
    "repository": {
@@ -8013,25 +8153,26 @@
     "@types/http-cache-semantics": "^4.0.4",
     "get-stream": "^9.0.1",
     "http-cache-semantics": "^4.1.1",
-    "keyv": "^5.2.3",
+    "keyv": "^5.3.1",
     "mimic-response": "^4.0.0",
     "normalize-url": "^8.0.1",
     "responselike": "^3.0.0"
    },
    "devDependencies": {
     "@keyv/sqlite": "^4.0.1",
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.13.9",
     "@types/responselike": "^1.0.3",
-    "@types/sqlite3": "^3.1.11",
-    "@vitest/coverage-v8": "^2.1.8",
+    "@types/sqlite3": "^5.1.0",
+    "@vitest/coverage-v8": "^3.0.7",
     "body-parser": "^1.20.3",
     "delay": "^6.0.0",
     "express": "^4.21.2",
     "pify": "^6.1.0",
     "rimraf": "^6.0.1",
     "sqlite3": "^5.1.7",
-    "typescript": "^5.7.2",
-    "vitest": "^2.1.8",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7",
     "xo": "^0.60.0"
    },
    "xo": {
@@ -8062,29 +8203,29 @@
     "test": "xo --fix && vitest run --coverage",
     "test:ci": "xo && vitest run",
     "prepublish": "pnpm run build",
-    "build": "tsc --project tsconfig.build.json",
+    "build": "rimraf ./dist && tsc --project tsconfig.build.json",
     "clean": "rimraf node_modules ./coverage ./test/testdb.sqlite ./dist"
    },
-   "_id": "cacheable-request@13.0.3",
+   "_id": "cacheable-request@13.0.4",
    "bugs": {
     "url": "https://github.com/jaredwray/cacheable/issues"
    },
    "homepage": "https://github.com/jaredwray/cacheable#readme",
-   "_integrity": "sha512-3gjHiEihbf6eBO0Gxb1pOGxIrtO0tQPKuZ09GF2nlTJvTqIW2jtS1plt/YugbghrmMJEXOCagCgQoE92BAOscg==",
-   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/6bee315f4c19ed62d21210fd8720461b/cacheable-request-13.0.3.tgz",
-   "_from": "file:cacheable-request-13.0.3.tgz",
+   "_integrity": "sha512-1zlSHJp9NyWG7Sv53ItFT3mQ5n8imZ4bPm23xYHchvz9MD6vuZUBuE1XV8FdaYl1Qcj5+NJudWU6nmRGH7PE4Q==",
+   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/b9b966187d425d076160bb12ee84c55f/cacheable-request-13.0.4.tgz",
+   "_from": "file:cacheable-request-13.0.4.tgz",
    "_nodeVersion": "22.12.0",
-   "_npmVersion": "10.9.0",
+   "_npmVersion": "11.1.0",
    "dist": {
-    "integrity": "sha512-3gjHiEihbf6eBO0Gxb1pOGxIrtO0tQPKuZ09GF2nlTJvTqIW2jtS1plt/YugbghrmMJEXOCagCgQoE92BAOscg==",
-    "shasum": "15bf504dfc0d8f17d7e03804482c1ef215896990",
-    "tarball": "http://localhost:3000/cacheable-request/-/cacheable-request-13.0.3.tgz",
+    "integrity": "sha512-1zlSHJp9NyWG7Sv53ItFT3mQ5n8imZ4bPm23xYHchvz9MD6vuZUBuE1XV8FdaYl1Qcj5+NJudWU6nmRGH7PE4Q==",
+    "shasum": "586b48d648bf2a91cf473c97eae065d4f6960570",
+    "tarball": "http://localhost:3000/cacheable-request/-/cacheable-request-13.0.4.tgz",
     "fileCount": 11,
-    "unpackedSize": 71598,
+    "unpackedSize": 71976,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIApxyVRXv1l5Wl/OR0El4XyCSq3xF1kqJ7VJeVDkeAHOAiEAismwDf2hRC4X/M2AyJqWNIPyyBZh0wdrSGOJnYd4DQo="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIGCm8uinK8Ei2I4UlYR/QgjQ+3Ng8nesBgwu2LQu3Sn/AiEA2rJWtj2jMWXvTjoDuVqrU/v+VcHBOYvH6iHA4mmIXLw="
      }
     ]
    },
@@ -8109,14 +8250,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/cacheable-request_13.0.3_1735258130948_0.04457698831472556"
+    "tmp": "tmp/cacheable-request_13.0.4_1741045720384_0.8654544693964461"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-06-02T12:36:50.988Z",
-  "modified": "2024-12-27T00:08:51.297Z",
+  "modified": "2025-03-03T23:48:41.132Z",
   "0.0.0": "2017-06-02T12:36:50.988Z",
   "0.1.0": "2017-06-09T14:06:47.087Z",
   "0.2.0": "2017-06-10T03:58:44.270Z",
@@ -8181,7 +8322,8 @@
   "13.0.0": "2024-10-21T20:53:16.978Z",
   "13.0.1": "2024-10-21T20:54:17.406Z",
   "13.0.2": "2024-11-10T21:56:55.040Z",
-  "13.0.3": "2024-12-27T00:08:51.146Z"
+  "13.0.3": "2024-12-27T00:08:51.146Z",
+  "13.0.4": "2025-03-03T23:48:40.603Z"
  },
  "bugs": {
   "url": "https://github.com/jaredwray/cacheable/issues"

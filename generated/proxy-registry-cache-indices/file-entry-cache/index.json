@@ -1,9 +1,9 @@
 {
  "_id": "file-entry-cache",
- "_rev": "36-0f680793f230562524f3a1986e89edcf",
+ "_rev": "37-5463979d2775d6441c81f7cf96597340",
  "name": "file-entry-cache",
  "dist-tags": {
-  "latest": "10.0.6"
+  "latest": "10.0.7"
  },
  "versions": {
   "1.0.0": {
@@ -2661,6 +2661,98 @@
   "10.0.6": {
    "name": "file-entry-cache",
    "version": "10.0.6",
+   "keywords": [
+    "file cache",
+    "task cache files",
+    "file cache",
+    "key par",
+    "key value",
+    "cache"
+   ],
+   "author": {
+    "name": "Jared Wray",
+    "email": "me@jaredwray.com"
+   },
+   "license": "MIT",
+   "_id": "file-entry-cache@10.0.6",
+   "maintainers": [
+    {
+     "name": "jaredwray",
+     "email": "me@jaredwray.com"
+    }
+   ],
+   "homepage": "https://github.com/jaredwray/cacheable#readme",
+   "bugs": {
+    "url": "https://github.com/jaredwray/cacheable/issues"
+   },
+   "dist": {
+    "shasum": "1fc49c38231b56e792c65222c0aa519d40b5db55",
+    "tarball": "http://localhost:3000/file-entry-cache/-/file-entry-cache-10.0.6.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-0wvv16mVo9nN0Md3k7DMjgAPKG/TY4F/gYMBVb/wMThFRJvzrpaqBFqF6km9wf8QfYTN+mNg5aeaBLfy8k35uA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCF0l+5dtUYsyAlfv1NLWo/cP7pmpXSYrAxqs1pVR6CJQIgO3PlnQae4OLVdLTjAeKteaX6dSvv4L/Sc6lU3AQ/EZo=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 50038
+   },
+   "main": "./dist/index.cjs",
+   "type": "module",
+   "_from": "file:file-entry-cache-10.0.6.tgz",
+   "types": "./dist/index.d.ts",
+   "module": "./dist/index.js",
+   "exports": {
+    ".": {
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "private": false,
+   "scripts": {
+    "test": "xo --fix && vitest run --coverage",
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "clean": "rimraf ./dist ./coverage ./node_modules",
+    "test:ci": "xo && vitest run",
+    "prepublish": "pnpm build"
+   },
+   "_npmUser": {
+    "name": "jaredwray",
+    "email": "me@jaredwray.com"
+   },
+   "_resolved": "/private/var/folders/h1/n3vxgc0n1sn5_9pxftc4p6l80000gn/T/6939fe6e942853e3fe072f6ea9426776/file-entry-cache-10.0.6.tgz",
+   "_integrity": "sha512-0wvv16mVo9nN0Md3k7DMjgAPKG/TY4F/gYMBVb/wMThFRJvzrpaqBFqF6km9wf8QfYTN+mNg5aeaBLfy8k35uA==",
+   "repository": {
+    "url": "git+https://github.com/jaredwray/cacheable.git",
+    "type": "git",
+    "directory": "packages/file-entry-cache"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "A lightweight cache for file metadata, ideal for processes that work on a specific set of files and only need to reprocess files that have changed since the last run",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "flat-cache": "^6.1.6"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.60.0",
+    "tsup": "^8.3.6",
+    "rimraf": "^6.0.1",
+    "vitest": "^3.0.4",
+    "typescript": "^5.7.3",
+    "@types/node": "^22.10.10",
+    "@vitest/coverage-v8": "^3.0.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/file-entry-cache_10.0.6_1738009619825_0.10573402643542651",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "10.0.7": {
+   "name": "file-entry-cache",
+   "version": "10.0.7",
    "description": "A lightweight cache for file metadata, ideal for processes that work on a specific set of files and only need to reprocess files that have changed since the last run",
    "type": "module",
    "main": "./dist/index.cjs",
@@ -2692,16 +2784,16 @@
     "cache"
    ],
    "devDependencies": {
-    "@types/node": "^22.10.10",
-    "@vitest/coverage-v8": "^3.0.4",
+    "@types/node": "^22.13.9",
+    "@vitest/coverage-v8": "^3.0.7",
     "rimraf": "^6.0.1",
-    "tsup": "^8.3.6",
-    "typescript": "^5.7.3",
-    "vitest": "^3.0.4",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "vitest": "^3.0.7",
     "xo": "^0.60.0"
    },
    "dependencies": {
-    "flat-cache": "^6.1.6"
+    "flat-cache": "^6.1.7"
    },
    "scripts": {
     "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
@@ -2710,26 +2802,26 @@
     "test:ci": "xo && vitest run",
     "clean": "rimraf ./dist ./coverage ./node_modules"
    },
-   "_id": "file-entry-cache@10.0.6",
+   "_id": "file-entry-cache@10.0.7",
    "bugs": {
     "url": "https://github.com/jaredwray/cacheable/issues"
    },
    "homepage": "https://github.com/jaredwray/cacheable#readme",
-   "_integrity": "sha512-0wvv16mVo9nN0Md3k7DMjgAPKG/TY4F/gYMBVb/wMThFRJvzrpaqBFqF6km9wf8QfYTN+mNg5aeaBLfy8k35uA==",
-   "_resolved": "/private/var/folders/h1/n3vxgc0n1sn5_9pxftc4p6l80000gn/T/6939fe6e942853e3fe072f6ea9426776/file-entry-cache-10.0.6.tgz",
-   "_from": "file:file-entry-cache-10.0.6.tgz",
-   "_nodeVersion": "20.17.0",
-   "_npmVersion": "10.9.0",
+   "_integrity": "sha512-txsf5fu3anp2ff3+gOJJzRImtrtm/oa9tYLN0iTuINZ++EyVR/nRrg2fKYwvG/pXDofcrvvb0scEbX3NyW/COw==",
+   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/bedb64ea1180eb5f7861b7b871602de3/file-entry-cache-10.0.7.tgz",
+   "_from": "file:file-entry-cache-10.0.7.tgz",
+   "_nodeVersion": "22.12.0",
+   "_npmVersion": "11.1.0",
    "dist": {
-    "integrity": "sha512-0wvv16mVo9nN0Md3k7DMjgAPKG/TY4F/gYMBVb/wMThFRJvzrpaqBFqF6km9wf8QfYTN+mNg5aeaBLfy8k35uA==",
-    "shasum": "1fc49c38231b56e792c65222c0aa519d40b5db55",
-    "tarball": "http://localhost:3000/file-entry-cache/-/file-entry-cache-10.0.6.tgz",
+    "integrity": "sha512-txsf5fu3anp2ff3+gOJJzRImtrtm/oa9tYLN0iTuINZ++EyVR/nRrg2fKYwvG/pXDofcrvvb0scEbX3NyW/COw==",
+    "shasum": "e0ac34d4b8c44bea8a0a27ceb4dae982f2d32749",
+    "tarball": "http://localhost:3000/file-entry-cache/-/file-entry-cache-10.0.7.tgz",
     "fileCount": 7,
-    "unpackedSize": 50038,
+    "unpackedSize": 50043,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQCF0l+5dtUYsyAlfv1NLWo/cP7pmpXSYrAxqs1pVR6CJQIgO3PlnQae4OLVdLTjAeKteaX6dSvv4L/Sc6lU3AQ/EZo="
+      "sig": "MEYCIQDIyS3be1tBqt9JgEQdlF1ZbqLu5wi3H+6S3eLz//bHHAIhALJrqdyD2hDYzV2QW8iOYbfezbKjgkwRW5f45wribVGl"
      }
     ]
    },
@@ -2746,14 +2838,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/file-entry-cache_10.0.6_1738009619825_0.10573402643542651"
+    "tmp": "tmp/file-entry-cache_10.0.7_1741043250340_0.36888796750093267"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2015-03-02T09:30:04.174Z",
-  "modified": "2025-01-27T20:27:00.208Z",
+  "modified": "2025-03-03T23:07:30.736Z",
   "1.0.0": "2015-03-02T09:30:04.174Z",
   "1.0.1": "2015-03-03T07:25:43.492Z",
   "1.1.1": "2015-08-30T12:33:58.212Z",
@@ -2780,7 +2872,8 @@
   "10.0.3": "2024-11-23T23:56:05.420Z",
   "10.0.4": "2024-11-24T17:39:17.428Z",
   "10.0.5": "2024-12-27T00:24:44.839Z",
-  "10.0.6": "2025-01-27T20:27:00.026Z"
+  "10.0.6": "2025-01-27T20:27:00.026Z",
+  "10.0.7": "2025-03-03T23:07:30.575Z"
  },
  "bugs": {
   "url": "https://github.com/jaredwray/cacheable/issues"

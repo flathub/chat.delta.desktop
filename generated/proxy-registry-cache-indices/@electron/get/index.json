@@ -1,9 +1,9 @@
 {
  "_id": "@electron/get",
- "_rev": "42-0eff29a363f0d07e1cad06e578083de8",
+ "_rev": "43-be9eea3bf6196faac05f31b820608a6e",
  "name": "@electron/get",
  "dist-tags": {
-  "latest": "3.1.0"
+  "latest": "4.0.0"
  },
  "versions": {
   "1.0.0": {
@@ -4507,60 +4507,95 @@
   "3.1.0": {
    "name": "@electron/get",
    "version": "3.1.0",
-   "description": "Utility for downloading artifacts from different versions of Electron",
-   "main": "dist/cjs/index.js",
-   "module": "dist/esm/index.js",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/electron/get.git"
-   },
+   "keywords": [
+    "electron",
+    "download",
+    "prebuild",
+    "get",
+    "artifact",
+    "release"
+   ],
    "author": {
     "name": "Samuel Attard"
    },
    "license": "MIT",
-   "scripts": {
-    "build": "tsc && tsc -p tsconfig.esm.json",
-    "build:docs": "npx typedoc",
-    "eslint": "eslint --ext .ts src test",
-    "jest": "jest --coverage",
-    "lint": "npm run prettier && npm run eslint",
-    "prettier": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
-    "prepublishOnly": "npm run build",
-    "test": "npm run lint && npm run jest",
-    "test:nonetwork": "npm run lint && npm run jest -- --testPathIgnorePatterns network.spec"
+   "_id": "@electron/get@3.1.0",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/get#readme",
+   "bugs": {
+    "url": "https://github.com/electron/get/issues"
    },
+   "dist": {
+    "shasum": "22c5a0bd917ab201badeb77bc4ad18cba54cb4ec",
+    "tarball": "http://localhost:3000/@electron/get/-/get-3.1.0.tgz",
+    "fileCount": 57,
+    "integrity": "sha512-F+nKc0xW+kVbBRhFzaMgPy3KwmuNTYX1fx6+FxxoSnNgwYX6LD7AKBTWkU0MQ6IBoe7dz069CNkR673sPAgkCQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIENOe9dvYvEHMG+pWgzlGxRklRUGZusxEQfXExfus2HSAiEA4EiCX2jbr8xpMTujjk0uWoHb2OEeiRQxQmd+2NbPbao=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 125656
+   },
+   "main": "dist/cjs/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
    "engines": {
     "node": ">=14"
    },
-   "dependencies": {
-    "debug": "^4.1.1",
-    "env-paths": "^2.2.0",
-    "fs-extra": "^8.1.0",
-    "got": "^11.8.5",
-    "progress": "^2.0.3",
-    "semver": "^6.2.0",
-    "sumchecker": "^3.0.1"
+   "gitHead": "0adc5b9425aaf92a3039297b767bf6b40443a986",
+   "scripts": {
+    "jest": "jest --coverage",
+    "lint": "npm run prettier && npm run eslint",
+    "test": "npm run lint && npm run jest",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "eslint": "eslint --ext .ts src test",
+    "prettier": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
+    "build:docs": "npx typedoc",
+    "prepublishOnly": "npm run build",
+    "test:nonetwork": "npm run lint && npm run jest -- --testPathIgnorePatterns network.spec"
    },
-   "devDependencies": {
-    "@types/debug": "^4.1.4",
-    "@types/fs-extra": "^8.0.0",
-    "@types/jest": "^29.0.0",
-    "@types/node": "^12.20.55",
-    "@types/progress": "^2.0.3",
-    "@types/semver": "^6.2.0",
-    "@typescript-eslint/eslint-plugin": "^2.34.0",
-    "@typescript-eslint/parser": "^2.34.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "< 24.0.0",
-    "husky": "^2.3.0",
-    "jest": "^29.3.1",
-    "lint-staged": "^13.0.4",
-    "prettier": "^1.17.1",
-    "ts-jest": "^29.0.0",
-    "typedoc": "~0.24.8",
-    "typescript": "^4.9.3"
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/get.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "Utility for downloading artifacts from different versions of Electron",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "eslint --fix",
+     "prettier --write"
+    ]
+   },
+   "resolutions": {
+    "eslint/inquirer": "< 7.3.0",
+    "**/@typescript-eslint/typescript-estree/semver": "^6.3.0"
+   },
+   "_nodeVersion": "20.15.1",
+   "dependencies": {
+    "got": "^11.8.5",
+    "debug": "^4.1.1",
+    "semver": "^6.2.0",
+    "fs-extra": "^8.1.0",
+    "progress": "^2.0.3",
+    "env-paths": "^2.2.0",
+    "sumchecker": "^3.0.1"
    },
    "eslintConfig": {
     "parser": "@typescript-eslint/parser",
@@ -4575,6 +4610,98 @@
      "prettier",
      "prettier/@typescript-eslint"
     ]
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^29.3.1",
+    "husky": "^2.3.0",
+    "eslint": "^6.8.0",
+    "ts-jest": "^29.0.0",
+    "typedoc": "~0.24.8",
+    "prettier": "^1.17.1",
+    "typescript": "^4.9.3",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^12.20.55",
+    "lint-staged": "^13.0.4",
+    "@types/debug": "^4.1.4",
+    "@types/semver": "^6.2.0",
+    "@types/fs-extra": "^8.0.0",
+    "@types/progress": "^2.0.3",
+    "eslint-plugin-jest": "< 24.0.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-config-prettier": "^6.15.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "@typescript-eslint/eslint-plugin": "^2.34.0"
+   },
+   "optionalDependencies": {
+    "global-agent": "^3.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/get_3.1.0_1721079656870_0.7244321114190557",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "4.0.0": {
+   "name": "@electron/get",
+   "version": "4.0.0",
+   "type": "module",
+   "exports": "./dist/index.js",
+   "description": "Utility for downloading artifacts from different versions of Electron",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/electron/get.git"
+   },
+   "author": {
+    "name": "Samuel Attard"
+   },
+   "license": "MIT",
+   "publishConfig": {
+    "provenance": true
+   },
+   "scripts": {
+    "build": "tsc",
+    "build:docs": "npx typedoc",
+    "eslint": "eslint --ext .ts src test",
+    "lint": "npm run prettier && npm run eslint",
+    "prepare": "husky",
+    "prettier": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prettier:write": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "prepublishOnly": "npm run build",
+    "test": "vitest run --coverage",
+    "test:nonetwork": "npm run lint && vitest run --coverage --testPathIgnorePatterns network.spec"
+   },
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "dependencies": {
+    "debug": "^4.1.1",
+    "env-paths": "^3.0.0",
+    "got": "^14.4.5",
+    "graceful-fs": "^4.2.11",
+    "progress": "^2.0.3",
+    "semver": "^7.6.3",
+    "sumchecker": "^3.0.1"
+   },
+   "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/debug": "^4.1.4",
+    "@types/graceful-fs": "^4.1.9",
+    "@types/node": "~22.10.5",
+    "@types/progress": "^2.0.3",
+    "@types/semver": "^7.5.8",
+    "@typescript-eslint/eslint-plugin": "^8.19.1",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitest/coverage-v8": "3.0.5",
+    "esbuild-plugin-file-path-extensions": "^2.1.4",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.31.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.1",
+    "prettier": "^3.4.2",
+    "typedoc": "~0.25.13",
+    "typescript": "~5.4.5",
+    "vitest": "^3.0.5"
    },
    "husky": {
     "hooks": {
@@ -4598,29 +4725,30 @@
    "optionalDependencies": {
     "global-agent": "^3.0.0"
    },
-   "resolutions": {
-    "eslint/inquirer": "< 7.3.0",
-    "**/@typescript-eslint/typescript-estree/semver": "^6.3.0"
-   },
-   "_id": "@electron/get@3.1.0",
-   "gitHead": "0adc5b9425aaf92a3039297b767bf6b40443a986",
-   "types": "./dist/cjs/index.d.ts",
+   "_id": "@electron/get@4.0.0",
+   "gitHead": "8253a43d80a08b2531f5e5479b2c2136135c7a20",
    "bugs": {
     "url": "https://github.com/electron/get/issues"
    },
    "homepage": "https://github.com/electron/get#readme",
-   "_nodeVersion": "20.15.1",
-   "_npmVersion": "10.7.0",
+   "_nodeVersion": "22.12.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-F+nKc0xW+kVbBRhFzaMgPy3KwmuNTYX1fx6+FxxoSnNgwYX6LD7AKBTWkU0MQ6IBoe7dz069CNkR673sPAgkCQ==",
-    "shasum": "22c5a0bd917ab201badeb77bc4ad18cba54cb4ec",
-    "tarball": "http://localhost:3000/@electron/get/-/get-3.1.0.tgz",
-    "fileCount": 57,
-    "unpackedSize": 125656,
+    "integrity": "sha512-IT42k1GIg1bhJ5RHXdKR/ExquWdQN6eU7WU6tJMnAYFLbsg0Q98GJ7kEyOONyFqE8p8Pky0hhYfmuo3Go8cxIA==",
+    "shasum": "ebb11639ca921b1c1e8fffb52e5e85cde07e022b",
+    "tarball": "http://localhost:3000/@electron/get/-/get-4.0.0.tgz",
+    "fileCount": 30,
+    "unpackedSize": 64512,
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fget@4.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIENOe9dvYvEHMG+pWgzlGxRklRUGZusxEQfXExfus2HSAiEA4EiCX2jbr8xpMTujjk0uWoHb2OEeiRQxQmd+2NbPbao="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIQCXZzRzWO/jn3pwKtKl6hd4l59cSr8n2e3zKpVOUo207wIgC23W01lw2beOUGQdtjA1SzWAAQkAu6CNaWzCdx5SlV0="
      }
     ]
    },
@@ -4636,15 +4764,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/get_3.1.0_1721079656870_0.7244321114190557"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/get_4.0.0_1740005921777_0.7017062316895608"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2019-05-22T22:47:49.762Z",
-  "modified": "2024-07-15T21:40:57.265Z",
+  "modified": "2025-02-19T22:58:42.433Z",
   "1.0.0": "2019-05-22T22:47:49.981Z",
   "1.0.1": "2019-05-23T00:07:43.645Z",
   "1.0.2": "2019-05-23T00:14:41.125Z",
@@ -4682,7 +4810,8 @@
   "2.0.2": "2022-10-18T17:56:50.685Z",
   "2.0.3": "2023-09-05T07:39:40.510Z",
   "3.0.0": "2023-10-31T18:24:48.352Z",
-  "3.1.0": "2024-07-15T21:40:57.058Z"
+  "3.1.0": "2024-07-15T21:40:57.058Z",
+  "4.0.0": "2025-02-19T22:58:41.974Z"
  },
  "bugs": {
   "url": "https://github.com/electron/get/issues"
@@ -4711,6 +4840,6 @@
    "email": "info+cfa-npm@electronjs.org"
   }
  ],
- "readme": "# @electron/get\n\n> Download Electron release artifacts\n\n[![CircleCI](https://circleci.com/gh/electron/get.svg?style=shield)](https://circleci.com/gh/electron/get)\n[![NPM package](https://img.shields.io/npm/v/@electron/get)](https://npm.im/@electron/get)\n\n## Usage\n\nFor full API details, see the [API documentation](https://electron.github.io/get/).\n\n### Simple: Downloading an Electron Binary ZIP\n\n```typescript\nimport { download } from '@electron/get';\n\n// NB: Use this syntax within an async function, Node does not have support for\n//     top-level await as of Node 12.\nconst zipFilePath = await download('4.0.4');\n```\n\n### Advanced: Downloading a macOS Electron Symbol File\n\n```typescript\nimport { downloadArtifact } from '@electron/get';\n\n// NB: Use this syntax within an async function, Node does not have support for\n//     top-level await as of Node 12.\nconst zipFilePath = await downloadArtifact({\n  version: '4.0.4',\n  platform: 'darwin',\n  artifactName: 'electron',\n  artifactSuffix: 'symbols',\n  arch: 'x64',\n});\n```\n\n### Specifying a mirror\n\nTo specify another location to download Electron assets from, the following options are\navailable:\n\n* `mirrorOptions` Object\n  * `mirror` String (optional) - The base URL of the mirror to download from.\n  * `nightlyMirror` String (optional) - The Electron nightly-specific mirror URL.\n  * `customDir` String (optional) - The name of the directory to download from, often scoped by version number.\n  * `customFilename` String (optional) - The name of the asset to download.\n  * `resolveAssetURL` Function (optional) - A function allowing customization of the url used to download the asset.\n\nAnatomy of a download URL, in terms of `mirrorOptions`:\n\n```\nhttps://github.com/electron/electron/releases/download/v4.0.4/electron-v4.0.4-linux-x64.zip\n|                                                     |       |                           |\n-------------------------------------------------------       -----------------------------\n                        |                                                   |\n              mirror / nightlyMirror                  |    |         customFilename\n                                                       ------\n                                                         ||\n                                                      customDir\n```\n\nExample:\n\n```typescript\nimport { download } from '@electron/get';\n\nconst zipFilePath = await download('4.0.4', {\n  mirrorOptions: {\n    mirror: 'https://mirror.example.com/electron/',\n    customDir: 'custom',\n    customFilename: 'unofficial-electron-linux.zip'\n  }\n});\n// Will download from https://mirror.example.com/electron/custom/unofficial-electron-linux.zip\n\nconst nightlyZipFilePath = await download('8.0.0-nightly.20190901', {\n  mirrorOptions: {\n    nightlyMirror: 'https://nightly.example.com/',\n    customDir: 'nightlies',\n    customFilename: 'nightly-linux.zip'\n  }\n});\n// Will download from https://nightly.example.com/nightlies/nightly-linux.zip\n```\n\n`customDir` can have the placeholder `{{ version }}`, which will be replaced by the version\nspecified (without the leading `v`). For example:\n\n```javascript\nconst zipFilePath = await download('4.0.4', {\n  mirrorOptions: {\n    mirror: 'https://mirror.example.com/electron/',\n    customDir: 'version-{{ version }}',\n    platform: 'linux',\n    arch: 'x64'\n  }\n});\n// Will download from https://mirror.example.com/electron/version-4.0.4/electron-v4.0.4-linux-x64.zip\n```\n\n#### Using environment variables for mirror options\nMirror options can also be specified via the following environment variables:\n* `ELECTRON_CUSTOM_DIR` - Specifies the custom directory to download from.\n* `ELECTRON_CUSTOM_FILENAME` - Specifies the custom file name to download.\n* `ELECTRON_MIRROR` - Specifies the URL of the server to download from if the version is not a nightly version.\n* `ELECTRON_NIGHTLY_MIRROR` - Specifies the URL of the server to download from if the version is a nightly version.\n\n### Overriding the version downloaded\n\nThe version downloaded can be overriden by setting the `ELECTRON_CUSTOM_VERSION` environment variable.\nSetting this environment variable will override the version passed in to `download` or `downloadArtifact`.\n\n## How It Works\n\nThis module downloads Electron to a known place on your system and caches it\nso that future requests for that asset can be returned instantly.  The cache\nlocations are:\n\n* Linux: `$XDG_CACHE_HOME` or `~/.cache/electron/`\n* MacOS: `~/Library/Caches/electron/`\n* Windows: `%LOCALAPPDATA%/electron/Cache` or `~/AppData/Local/electron/Cache/`\n\nBy default, the module uses [`got`](https://github.com/sindresorhus/got) as the\ndownloader. As a result, you can use the same [options](https://github.com/sindresorhus/got#options)\nvia `downloadOptions`.\n\n### Progress Bar\n\nBy default, a progress bar is shown when downloading an artifact for more than 30 seconds. To\ndisable, set the `ELECTRON_GET_NO_PROGRESS` environment variable to any non-empty value, or set\n`quiet` to `true` in `downloadOptions`. If you need to monitor progress yourself via the API, set\n`getProgressCallback` in `downloadOptions`, which has the same function signature as `got`'s\n[`downloadProgress` event callback](https://github.com/sindresorhus/got#ondownloadprogress-progress).\n\n### Proxies\n\nDownstream packages should utilize the `initializeProxy` function to add HTTP(S) proxy support. If\nthe environment variable `ELECTRON_GET_USE_PROXY` is set, it is called automatically.\n\n### Debug\n\n[`debug`](https://www.npmjs.com/package/debug) is used to display logs and messages.\nSet the `DEBUG=@electron/get*` environment variable to log additional\ndebug information from this module.",
+ "readme": "# @electron/get\n\n> Download Electron release artifacts\n\n[![Test](https://github.com/electron/get/actions/workflows/test.yml/badge.svg)](https://github.com/electron/get/actions/workflows/test.yml)\n[![NPM package](https://img.shields.io/npm/v/@electron/get)](https://npm.im/@electron/get)\n\n## Usage\n\nFor full API details, see the [API documentation](https://electron.github.io/get/).\n\n### Simple: Downloading an Electron Binary ZIP\n\n```typescript\nimport { download } from '@electron/get';\n\n// NB: Use this syntax within an async function, Node does not have support for\n//     top-level await as of Node 12.\nconst zipFilePath = await download('4.0.4');\n```\n\n### Advanced: Downloading a macOS Electron Symbol File\n\n```typescript\nimport { downloadArtifact } from '@electron/get';\n\n// NB: Use this syntax within an async function, Node does not have support for\n//     top-level await as of Node 12.\nconst zipFilePath = await downloadArtifact({\n  version: '4.0.4',\n  platform: 'darwin',\n  artifactName: 'electron',\n  artifactSuffix: 'symbols',\n  arch: 'x64',\n});\n```\n\n### Specifying a mirror\n\nTo specify another location to download Electron assets from, the following options are\navailable:\n\n* `mirrorOptions` Object\n  * `mirror` String (optional) - The base URL of the mirror to download from.\n  * `nightlyMirror` String (optional) - The Electron nightly-specific mirror URL.\n  * `customDir` String (optional) - The name of the directory to download from, often scoped by version number.\n  * `customFilename` String (optional) - The name of the asset to download.\n  * `resolveAssetURL` Function (optional) - A function allowing customization of the url used to download the asset.\n\nAnatomy of a download URL, in terms of `mirrorOptions`:\n\n```\nhttps://github.com/electron/electron/releases/download/v4.0.4/electron-v4.0.4-linux-x64.zip\n|                                                     |       |                           |\n-------------------------------------------------------       -----------------------------\n                        |                                                   |\n              mirror / nightlyMirror                  |    |         customFilename\n                                                       ------\n                                                         ||\n                                                      customDir\n```\n\nExample:\n\n```typescript\nimport { download } from '@electron/get';\n\nconst zipFilePath = await download('4.0.4', {\n  mirrorOptions: {\n    mirror: 'https://mirror.example.com/electron/',\n    customDir: 'custom',\n    customFilename: 'unofficial-electron-linux.zip'\n  }\n});\n// Will download from https://mirror.example.com/electron/custom/unofficial-electron-linux.zip\n\nconst nightlyZipFilePath = await download('8.0.0-nightly.20190901', {\n  mirrorOptions: {\n    nightlyMirror: 'https://nightly.example.com/',\n    customDir: 'nightlies',\n    customFilename: 'nightly-linux.zip'\n  }\n});\n// Will download from https://nightly.example.com/nightlies/nightly-linux.zip\n```\n\n`customDir` can have the placeholder `{{ version }}`, which will be replaced by the version\nspecified (without the leading `v`). For example:\n\n```javascript\nconst zipFilePath = await download('4.0.4', {\n  mirrorOptions: {\n    mirror: 'https://mirror.example.com/electron/',\n    customDir: 'version-{{ version }}',\n    platform: 'linux',\n    arch: 'x64'\n  }\n});\n// Will download from https://mirror.example.com/electron/version-4.0.4/electron-v4.0.4-linux-x64.zip\n```\n\n#### Using environment variables for mirror options\nMirror options can also be specified via the following environment variables:\n* `ELECTRON_CUSTOM_DIR` - Specifies the custom directory to download from.\n* `ELECTRON_CUSTOM_FILENAME` - Specifies the custom file name to download.\n* `ELECTRON_MIRROR` - Specifies the URL of the server to download from if the version is not a nightly version.\n* `ELECTRON_NIGHTLY_MIRROR` - Specifies the URL of the server to download from if the version is a nightly version.\n\n### Overriding the version downloaded\n\nThe version downloaded can be overriden by setting the `ELECTRON_CUSTOM_VERSION` environment variable.\nSetting this environment variable will override the version passed in to `download` or `downloadArtifact`.\n\n## How It Works\n\nThis module downloads Electron to a known place on your system and caches it\nso that future requests for that asset can be returned instantly.  The cache\nlocations are:\n\n* Linux: `$XDG_CACHE_HOME` or `~/.cache/electron/`\n* MacOS: `~/Library/Caches/electron/`\n* Windows: `%LOCALAPPDATA%/electron/Cache` or `~/AppData/Local/electron/Cache/`\n\nBy default, the module uses [`got`](https://github.com/sindresorhus/got) as the\ndownloader. As a result, you can use the same [options](https://github.com/sindresorhus/got#options)\nvia `downloadOptions`.\n\n### Progress Bar\n\nBy default, a progress bar is shown when downloading an artifact for more than 30 seconds. To\ndisable, set the `ELECTRON_GET_NO_PROGRESS` environment variable to any non-empty value, or set\n`quiet` to `true` in `downloadOptions`. If you need to monitor progress yourself via the API, set\n`getProgressCallback` in `downloadOptions`, which has the same function signature as `got`'s\n[`downloadProgress` event callback](https://github.com/sindresorhus/got#ondownloadprogress-progress).\n\n### Proxies\n\nDownstream packages should utilize the `initializeProxy` function to add HTTP(S) proxy support. If\nthe environment variable `ELECTRON_GET_USE_PROXY` is set, it is called automatically.\n\n### Debug\n\n[`debug`](https://www.npmjs.com/package/debug) is used to display logs and messages.\nSet the `DEBUG=@electron/get*` environment variable to log additional\ndebug information from this module.",
  "readmeFilename": "README.md"
 }

@@ -1,10 +1,10 @@
 {
  "_id": "@tauri-apps/api",
- "_rev": "89-d82cc1e63d9b2b554b49991af9151759",
+ "_rev": "90-1ff167523c7a36bce5fb800906b34a02",
  "name": "@tauri-apps/api",
  "dist-tags": {
   "next": "2.0.1",
-  "latest": "2.2.0"
+  "latest": "2.3.0"
  },
  "versions": {
   "0.0.0": {
@@ -11870,6 +11870,126 @@
   "2.2.0": {
    "name": "@tauri-apps/api",
    "version": "2.2.0",
+   "license": "Apache-2.0 OR MIT",
+   "_id": "@tauri-apps/api@2.2.0",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "Tauri Programme within The Commons Conservancy"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/tauri#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/tauri/issues"
+   },
+   "dist": {
+    "shasum": "daaff2515b1a4ff1e763cf84a414548b02b566c5",
+    "tarball": "http://localhost:3000/@tauri-apps/api/-/api-2.2.0.tgz",
+    "fileCount": 67,
+    "integrity": "sha512-R8epOeZl1eJEl603aUMIGb4RXlhPjpgxbGVEaqY+0G5JG9vzV/clNlzTeqc+NLYXVqXcn8mb4c5b9pJIUDEyAg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDjlk7NL9xoE+LrhnwE7u1ffV2RM+JxzUqEEyNxFu76MQIhAO+AfvwFNatm4IBa8ANhbwWvm8HfoiGtyPMxvJtcMI4r",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fapi@2.2.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 628312
+   },
+   "main": "./index.cjs",
+   "type": "module",
+   "_from": "file:tauri-apps-api-2.2.0.tgz",
+   "types": "./index.d.ts",
+   "module": "./index.js",
+   "exports": {
+    ".": {
+     "types": "./index.d.ts",
+     "import": "./index.js",
+     "require": "./index.cjs"
+    },
+    "./*": {
+     "types": "./*.d.ts",
+     "import": "./*.js",
+     "require": "./*.cjs"
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": {
+    "url": "https://opencollective.com/tauri",
+    "type": "opencollective"
+   },
+   "scripts": {
+    "build": "rollup -c --configPlugin typescript",
+    "npm-pack": "pnpm build && cd ./dist && npm pack",
+    "ts:check": "tsc --noEmit",
+    "eslint:fix": "eslint src/**/*.ts --fix",
+    "npm-publish": "pnpm build && cd ./dist && pnpm publish --access public --loglevel silly --no-git-checks",
+    "eslint:check": "eslint src/**/*.ts"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "_resolved": "/tmp/4b4fe4163acf4f1120643c395416c834/tauri-apps-api-2.2.0.tgz",
+   "_integrity": "sha512-R8epOeZl1eJEl603aUMIGb4RXlhPjpgxbGVEaqY+0G5JG9vzV/clNlzTeqc+NLYXVqXcn8mb4c5b9pJIUDEyAg==",
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/tauri.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Tauri API definitions",
+   "directories": {},
+   "_nodeVersion": "20.18.1",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tslib": "^2.6.3",
+    "eslint": "^9.4.0",
+    "rollup": "4.29.1",
+    "globals": "^15.4.0",
+    "fast-glob": "3.3.2",
+    "@eslint/js": "^9.4.0",
+    "@types/node": "^22.10.1",
+    "@types/eslint": "^9.0.0",
+    "typescript-eslint": "^8.1.0",
+    "@rollup/plugin-terser": "0.4.4",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-security": "3.0.1",
+    "@rollup/plugin-typescript": "12.1.2"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/api_2.2.0_1735844293588_0.8250638352584361",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.3.0": {
+   "name": "@tauri-apps/api",
+   "version": "2.3.0",
    "description": "Tauri API definitions",
    "funding": {
     "type": "opencollective",
@@ -11913,11 +12033,11 @@
     "@types/eslint": "^9.0.0",
     "@types/node": "^22.10.1",
     "eslint": "^9.4.0",
-    "eslint-config-prettier": "9.1.0",
+    "eslint-config-prettier": "10.0.1",
     "eslint-plugin-security": "3.0.1",
-    "fast-glob": "3.3.2",
-    "globals": "^15.4.0",
-    "rollup": "4.29.1",
+    "fast-glob": "3.3.3",
+    "globals": "^16.0.0",
+    "rollup": "4.34.8",
     "tslib": "^2.6.3",
     "typescript-eslint": "^8.1.0"
    },
@@ -11929,28 +12049,28 @@
     "eslint:check": "eslint src/**/*.ts",
     "eslint:fix": "eslint src/**/*.ts --fix"
    },
-   "_id": "@tauri-apps/api@2.2.0",
-   "_integrity": "sha512-R8epOeZl1eJEl603aUMIGb4RXlhPjpgxbGVEaqY+0G5JG9vzV/clNlzTeqc+NLYXVqXcn8mb4c5b9pJIUDEyAg==",
-   "_resolved": "/tmp/4b4fe4163acf4f1120643c395416c834/tauri-apps-api-2.2.0.tgz",
-   "_from": "file:tauri-apps-api-2.2.0.tgz",
-   "_nodeVersion": "20.18.1",
+   "_id": "@tauri-apps/api@2.3.0",
+   "_integrity": "sha512-33Z+0lX2wgZbx1SPFfqvzI6su63hCBkbzv+5NexeYjIx7WA9htdOKoRR7Dh3dJyltqS5/J8vQFyybiRoaL0hlA==",
+   "_resolved": "/tmp/cde6886dbee94df8b0f32d4d1d016777/tauri-apps-api-2.3.0.tgz",
+   "_from": "file:tauri-apps-api-2.3.0.tgz",
+   "_nodeVersion": "20.18.3",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-R8epOeZl1eJEl603aUMIGb4RXlhPjpgxbGVEaqY+0G5JG9vzV/clNlzTeqc+NLYXVqXcn8mb4c5b9pJIUDEyAg==",
-    "shasum": "daaff2515b1a4ff1e763cf84a414548b02b566c5",
-    "tarball": "http://localhost:3000/@tauri-apps/api/-/api-2.2.0.tgz",
+    "integrity": "sha512-33Z+0lX2wgZbx1SPFfqvzI6su63hCBkbzv+5NexeYjIx7WA9htdOKoRR7Dh3dJyltqS5/J8vQFyybiRoaL0hlA==",
+    "shasum": "8ced2a5e5f1d30d585a22b11dff2cbdfa3f9eab2",
+    "tarball": "http://localhost:3000/@tauri-apps/api/-/api-2.3.0.tgz",
     "fileCount": 67,
-    "unpackedSize": 628312,
+    "unpackedSize": 631027,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fapi@2.2.0",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fapi@2.3.0",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
     },
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDjlk7NL9xoE+LrhnwE7u1ffV2RM+JxzUqEEyNxFu76MQIhAO+AfvwFNatm4IBa8ANhbwWvm8HfoiGtyPMxvJtcMI4r"
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIQDhmWLCssxc86UMODC3oB6Sx2DZ2oYdaXtxmXaaJWzInwIgLd1HymBiz+B6C6wvz4HByGK47H+o+dn0fC2LL6HVyl8="
      }
     ]
    },
@@ -11983,14 +12103,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/api_2.2.0_1735844293588_0.8250638352584361"
+    "tmp": "tmp/api_2.3.0_1740586197963_0.9051674085927206"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2021-04-13T22:39:47.265Z",
-  "modified": "2025-01-02T18:58:14.421Z",
+  "modified": "2025-02-26T16:09:58.608Z",
   "0.0.0": "2021-04-13T22:39:47.562Z",
   "1.0.0-beta-rc.0": "2021-04-14T14:00:45.484Z",
   "1.0.0-beta-rc.1": "2021-04-14T23:46:02.150Z",
@@ -12073,7 +12193,8 @@
   "2.0.3": "2024-10-20T13:48:21.007Z",
   "2.1.0": "2024-11-09T14:06:15.145Z",
   "2.1.1": "2024-11-11T14:49:11.284Z",
-  "2.2.0": "2025-01-02T18:58:13.915Z"
+  "2.2.0": "2025-01-02T18:58:13.915Z",
+  "2.3.0": "2025-02-26T16:09:58.219Z"
  },
  "bugs": {
   "url": "https://github.com/tauri-apps/tauri/issues"
