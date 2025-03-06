@@ -1,10 +1,10 @@
 {
  "_id": "builder-util",
- "_rev": "270-d00e62282a4734dafdccfd36ba979fed",
+ "_rev": "271-b3218b2d76fffa1e9c4c569864b06ade",
  "name": "builder-util",
  "dist-tags": {
   "latest": "25.1.7",
-  "next": "26.0.4"
+  "next": "26.0.7"
  },
  "versions": {
   "1.0.0": {
@@ -19242,6 +19242,93 @@
   "26.0.4": {
    "name": "builder-util",
    "version": "26.0.4",
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "_id": "builder-util@26.0.4",
+   "maintainers": [
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "dist": {
+    "shasum": "7be1333cdd1c5b345c9befc8d75b989628b45851",
+    "tarball": "http://localhost:3000/builder-util/-/builder-util-26.0.4.tgz",
+    "fileCount": 36,
+    "integrity": "sha512-l3q/9sbCW/2+t7fLK2qCb3x+ZPdBOFlEjv4cauOkW3AinaS2KLIEiM0K8BWluHIZuaVc+xziAfTzz0o/6BPS4g==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCl/KzDI9BL9blB60vK+WT/YgGGj8ivTYR6OFHaYvCcGQIgRAtgMllXdjTbjJe/3JF8w0pyWgZrJJtGoz7jtVMatGE=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 135823
+   },
+   "main": "out/util.js",
+   "_from": "file:builder-util-26.0.4.tgz",
+   "typings": "./out/util.d.ts",
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/tmp/9df3ff6eb754870c4516c5fa18e21d16/builder-util-26.0.4.tgz",
+   "_integrity": "sha512-l3q/9sbCW/2+t7fLK2qCb3x+ZPdBOFlEjv4cauOkW3AinaS2KLIEiM0K8BWluHIZuaVc+xziAfTzz0o/6BPS4g==",
+   "repository": {
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "type": "git",
+    "directory": "packages/builder-util"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Various utilities. Used by [electron-builder](https://github.com/electron-userland/electron-builder).",
+   "directories": {},
+   "_nodeVersion": "22.13.1",
+   "dependencies": {
+    "chalk": "^4.1.2",
+    "debug": "^4.3.4",
+    "is-ci": "^3.0.0",
+    "js-yaml": "^4.1.0",
+    "7zip-bin": "~5.2.0",
+    "fs-extra": "^10.1.0",
+    "stat-mode": "^1.0.0",
+    "temp-file": "^3.4.0",
+    "cross-spawn": "^7.0.6",
+    "@types/debug": "^4.1.6",
+    "app-builder-bin": "5.0.0-alpha.12",
+    "tiny-async-pool": "1.3.0",
+    "http-proxy-agent": "^7.0.0",
+    "https-proxy-agent": "^7.0.0",
+    "sanitize-filename": "^1.6.3",
+    "source-map-support": "^0.5.19",
+    "builder-util-runtime": "9.3.1"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "readme.md",
+   "devDependencies": {
+    "@types/is-ci": "3.0.0",
+    "@types/js-yaml": "4.0.3",
+    "@types/fs-extra": "^9.0.11",
+    "@types/cross-spawn": "6.0.6",
+    "@types/tiny-async-pool": "^1.0.5",
+    "@types/source-map-support": "0.5.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/builder-util_26.0.4_1738642800160_0.8493490238441364",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "26.0.7": {
+   "name": "builder-util",
+   "version": "26.0.7",
    "main": "out/util.js",
    "author": {
     "name": "Vladimir Krivosheev"
@@ -19284,24 +19371,24 @@
     "@types/source-map-support": "0.5.4",
     "@types/tiny-async-pool": "^1.0.5"
    },
-   "_id": "builder-util@26.0.4",
+   "_id": "builder-util@26.0.7",
    "readmeFilename": "readme.md",
    "description": "Various utilities. Used by [electron-builder](https://github.com/electron-userland/electron-builder).",
-   "_integrity": "sha512-l3q/9sbCW/2+t7fLK2qCb3x+ZPdBOFlEjv4cauOkW3AinaS2KLIEiM0K8BWluHIZuaVc+xziAfTzz0o/6BPS4g==",
-   "_resolved": "/tmp/9df3ff6eb754870c4516c5fa18e21d16/builder-util-26.0.4.tgz",
-   "_from": "file:builder-util-26.0.4.tgz",
+   "_integrity": "sha512-rZL8wTMtpAM8CZO4l6eIM36oie95LP7de4nEp7ZhQ94JsL7kKT4orPwp6weRzxldXPzNyalUPkhCxJcFDanFIg==",
+   "_resolved": "/tmp/04c063509601ac71e0334d020f2f3e13/builder-util-26.0.7.tgz",
+   "_from": "file:builder-util-26.0.7.tgz",
    "_nodeVersion": "22.13.1",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-l3q/9sbCW/2+t7fLK2qCb3x+ZPdBOFlEjv4cauOkW3AinaS2KLIEiM0K8BWluHIZuaVc+xziAfTzz0o/6BPS4g==",
-    "shasum": "7be1333cdd1c5b345c9befc8d75b989628b45851",
-    "tarball": "http://localhost:3000/builder-util/-/builder-util-26.0.4.tgz",
-    "fileCount": 36,
-    "unpackedSize": 135823,
+    "integrity": "sha512-rZL8wTMtpAM8CZO4l6eIM36oie95LP7de4nEp7ZhQ94JsL7kKT4orPwp6weRzxldXPzNyalUPkhCxJcFDanFIg==",
+    "shasum": "ca420095038d30bd60c4bb1bc3c6879334b0f6cd",
+    "tarball": "http://localhost:3000/builder-util/-/builder-util-26.0.7.tgz",
+    "fileCount": 39,
+    "unpackedSize": 138887,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQCl/KzDI9BL9blB60vK+WT/YgGGj8ivTYR6OFHaYvCcGQIgRAtgMllXdjTbjJe/3JF8w0pyWgZrJJtGoz7jtVMatGE="
+      "sig": "MEQCIDTCeWK0gkWmuqe8pKzI3vKV35548oRZEKAhcP31pgJSAiBbyFAnheNM9OrDod/G7zsCt0s2z9M7hqzSBLbwjnR88g=="
      }
     ]
    },
@@ -19322,14 +19409,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/builder-util_26.0.4_1738642800160_0.8493490238441364"
+    "tmp": "tmp/builder-util_26.0.7_1739843449035_0.23662559647391945"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-08-25T07:10:13.421Z",
-  "modified": "2025-02-04T04:20:00.569Z",
+  "modified": "2025-02-18T01:50:49.413Z",
   "1.0.0": "2017-08-25T07:10:13.421Z",
   "1.0.1": "2017-08-25T11:51:44.457Z",
   "1.0.2": "2017-09-01T15:14:22.028Z",
@@ -19593,7 +19680,8 @@
   "26.0.0-alpha.10": "2025-01-21T02:50:51.412Z",
   "26.0.0": "2025-01-26T18:00:50.553Z",
   "26.0.1": "2025-01-30T03:47:18.695Z",
-  "26.0.4": "2025-02-04T04:20:00.383Z"
+  "26.0.4": "2025-02-04T04:20:00.383Z",
+  "26.0.7": "2025-02-18T01:50:49.242Z"
  },
  "bugs": {
   "url": "https://github.com/electron-userland/electron-builder/issues"

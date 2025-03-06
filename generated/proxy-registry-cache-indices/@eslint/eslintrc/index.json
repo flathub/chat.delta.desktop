@@ -1,9 +1,9 @@
 {
  "_id": "@eslint/eslintrc",
- "_rev": "47-463212e4ca7cf1c653c7954db548f922",
+ "_rev": "48-b8558d09806ba9594e138d580a20a5a1",
  "name": "@eslint/eslintrc",
  "dist-tags": {
-  "latest": "3.2.0"
+  "latest": "3.3.0"
  },
  "versions": {
   "0.1.0": {
@@ -4786,13 +4786,138 @@
   "3.2.0": {
    "name": "@eslint/eslintrc",
    "version": "3.2.0",
-   "description": "The legacy ESLintRC config file format for ESLint",
-   "type": "module",
+   "keywords": [
+    "ESLint",
+    "ESLintRC",
+    "Configuration"
+   ],
+   "author": {
+    "name": "Nicholas C. Zakas"
+   },
+   "license": "MIT",
+   "_id": "@eslint/eslintrc@3.2.0",
+   "maintainers": [
+    {
+     "name": "openjsfoundation",
+     "email": "npm@openjsf.org"
+    },
+    {
+     "name": "eslintbot",
+     "email": "nicholas@eslint.org"
+    }
+   ],
+   "homepage": "https://github.com/eslint/eslintrc#readme",
+   "bugs": {
+    "url": "https://github.com/eslint/eslintrc/issues"
+   },
+   "dist": {
+    "shasum": "57470ac4e2e283a6bf76044d63281196e370542c",
+    "tarball": "http://localhost:3000/@eslint/eslintrc/-/eslintrc-3.2.0.tgz",
+    "fileCount": 29,
+    "integrity": "sha512-grOjVNN8P3hjJn/eIETF1wwd12DdnwFDoyceUJLYYdkpbwq3nLi+4fqrTAONx7XDALqlL220wC/RHSC/QTI/0w==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDC1uCIorp73TLMPPPznoE7H9ZJBi2/jubNNhGAGEUbVQIhAPbGbTje5y4yBH5Fm6T7Mj4LYOuSrHNhOTit6Bf7C77U",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2feslintrc@3.2.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 679783
+   },
    "main": "./dist/eslintrc.cjs",
+   "type": "module",
+   "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+   },
    "exports": {
     ".": {
      "import": "./lib/index.js",
      "require": "./dist/eslintrc.cjs"
+    },
+    "./universal": {
+     "import": "./lib/index-universal.js",
+     "require": "./dist/eslintrc-universal.cjs"
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": "https://opencollective.com/eslint",
+   "gitHead": "f05aea7eeca2b99eae6310954cb25d3a904cc605",
+   "scripts": {
+    "lint": "eslint . --report-unused-disable-directives",
+    "test": "mocha -R progress -c 'tests/lib/*.cjs' && c8 mocha -R progress -c 'tests/lib/**/*.js'",
+    "build": "rollup -c",
+    "prepare": "npm run build",
+    "lint:fix": "npm run lint -- --fix",
+    "release:publish": "eslint-publish-release",
+    "release:generate:rc": "eslint-generate-prerelease rc",
+    "release:generate:beta": "eslint-generate-prerelease beta",
+    "release:generate:alpha": "eslint-generate-prerelease alpha",
+    "release:generate:latest": "eslint-generate-release"
+   },
+   "_npmUser": {
+    "name": "eslintbot",
+    "email": "nicholas@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint/eslintrc.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "The legacy ESLintRC config file format for ESLint",
+   "directories": {},
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "ajv": "^6.12.4",
+    "debug": "^4.3.2",
+    "espree": "^10.0.1",
+    "ignore": "^5.2.0",
+    "globals": "^14.0.0",
+    "js-yaml": "^4.1.0",
+    "minimatch": "^3.1.2",
+    "import-fresh": "^3.2.1",
+    "strip-json-comments": "^3.1.1"
+   },
+   "publishConfig": {
+    "access": "public"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "^7.7.3",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3",
+    "sinon": "^11.1.2",
+    "eslint": "^7.31.0",
+    "rollup": "^2.70.1",
+    "shelljs": "^0.8.5",
+    "temp-dir": "^2.0.0",
+    "fs-teardown": "^0.1.3",
+    "eslint-release": "^3.2.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-jsdoc": "^35.4.1",
+    "eslint-config-eslint": "^7.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/eslintrc_3.2.0_1731688498352_0.20476424755903166",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.3.0": {
+   "name": "@eslint/eslintrc",
+   "version": "3.3.0",
+   "description": "The legacy ESLintRC config file format for ESLint",
+   "type": "module",
+   "main": "./dist/eslintrc.cjs",
+   "types": "./dist/eslintrc.d.ts",
+   "exports": {
+    ".": {
+     "import": "./lib/index.js",
+     "require": "./dist/eslintrc.cjs",
+     "types": "./lib/types/index.d.ts"
     },
     "./package.json": "./package.json",
     "./universal": {
@@ -4804,7 +4929,7 @@
     "access": "public"
    },
    "scripts": {
-    "build": "rollup -c",
+    "build": "rollup -c && node -e \"fs.copyFileSync('./lib/types/index.d.ts', './dist/eslintrc.d.cts')\"",
     "lint": "eslint . --report-unused-disable-directives",
     "lint:fix": "npm run lint -- --fix",
     "prepare": "npm run build",
@@ -4813,7 +4938,8 @@
     "release:generate:beta": "eslint-generate-prerelease beta",
     "release:generate:rc": "eslint-generate-prerelease rc",
     "release:publish": "eslint-publish-release",
-    "test": "mocha -R progress -c 'tests/lib/*.cjs' && c8 mocha -R progress -c 'tests/lib/**/*.js'"
+    "test": "mocha -R progress -c 'tests/lib/*.cjs' && c8 mocha -R progress -c 'tests/lib/**/*.js'",
+    "test:types": "tsc -p tests/lib/types/tsconfig.json"
    },
    "repository": {
     "type": "git",
@@ -4836,17 +4962,16 @@
    "devDependencies": {
     "c8": "^7.7.3",
     "chai": "^4.3.4",
-    "eslint": "^7.31.0",
-    "eslint-config-eslint": "^7.0.0",
-    "eslint-plugin-jsdoc": "^35.4.1",
-    "eslint-plugin-node": "^11.1.0",
+    "eslint": "^9.20.1",
+    "eslint-config-eslint": "^11.0.0",
     "eslint-release": "^3.2.0",
     "fs-teardown": "^0.1.3",
     "mocha": "^9.0.3",
     "rollup": "^2.70.1",
     "shelljs": "^0.8.5",
     "sinon": "^11.1.2",
-    "temp-dir": "^2.0.0"
+    "temp-dir": "^2.0.0",
+    "typescript": "^5.7.3"
    },
    "dependencies": {
     "ajv": "^6.12.4",
@@ -4862,26 +4987,26 @@
    "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
    },
-   "_id": "@eslint/eslintrc@3.2.0",
-   "gitHead": "f05aea7eeca2b99eae6310954cb25d3a904cc605",
-   "_nodeVersion": "22.11.0",
-   "_npmVersion": "10.9.0",
+   "_id": "@eslint/eslintrc@3.3.0",
+   "gitHead": "6a8814ccaec9ce6b59f388527ba56c25d759042d",
+   "_nodeVersion": "22.13.1",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-grOjVNN8P3hjJn/eIETF1wwd12DdnwFDoyceUJLYYdkpbwq3nLi+4fqrTAONx7XDALqlL220wC/RHSC/QTI/0w==",
-    "shasum": "57470ac4e2e283a6bf76044d63281196e370542c",
-    "tarball": "http://localhost:3000/@eslint/eslintrc/-/eslintrc-3.2.0.tgz",
-    "fileCount": 29,
-    "unpackedSize": 679783,
+    "integrity": "sha512-yaVPAiNAalnCZedKLdR21GOGILMLKPyqSLWaAjQFvYA2i/ciDi8ArYVr69Anohb6cH2Ukhqti4aFnYyPm8wdwQ==",
+    "shasum": "96a558f45842989cca7ea1ecd785ad5491193846",
+    "tarball": "http://localhost:3000/@eslint/eslintrc/-/eslintrc-3.3.0.tgz",
+    "fileCount": 31,
+    "unpackedSize": 690735,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2feslintrc@3.2.0",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2feslintrc@3.3.0",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
     },
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDC1uCIorp73TLMPPPznoE7H9ZJBi2/jubNNhGAGEUbVQIhAPbGbTje5y4yBH5Fm6T7Mj4LYOuSrHNhOTit6Bf7C77U"
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQDPiiPKpBzIumV56cakX8W0hzzsDvl/5s+C6vet19iztwIhAJ4mWS81N961XDE1OYZ6u2NBM3nl+k/kNU4MFS4YRsS6"
      }
     ]
    },
@@ -4901,15 +5026,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/eslintrc_3.2.0_1731688498352_0.20476424755903166"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/eslintrc_3.3.0_1740171838672_0.8201652884309725"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2020-08-24T19:00:15.734Z",
-  "modified": "2024-11-15T16:34:59.143Z",
+  "modified": "2025-02-21T21:03:59.306Z",
   "0.1.0": "2020-08-24T19:00:16.089Z",
   "0.0.1": "2020-09-01T18:02:39.682Z",
   "0.1.1": "2020-09-01T18:24:29.876Z",
@@ -4953,7 +5078,8 @@
   "3.0.1": "2024-02-09T23:10:32.780Z",
   "3.0.2": "2024-02-23T21:22:35.583Z",
   "3.1.0": "2024-05-17T20:08:41.976Z",
-  "3.2.0": "2024-11-15T16:34:58.562Z"
+  "3.2.0": "2024-11-15T16:34:58.562Z",
+  "3.3.0": "2025-02-21T21:03:58.860Z"
  },
  "bugs": {
   "url": "https://github.com/eslint/eslintrc/issues"

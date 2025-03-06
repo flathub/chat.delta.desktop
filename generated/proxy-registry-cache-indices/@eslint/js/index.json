@@ -1,11 +1,11 @@
 {
  "_id": "@eslint/js",
- "_rev": "60-77d99101b90479b2082a25bb09c563fd",
+ "_rev": "61-209b762f4e2a0b79b313443183912372",
  "name": "@eslint/js",
  "dist-tags": {
   "next": "9.0.0-rc.0",
   "maintenance": "8.57.1",
-  "latest": "9.20.0"
+  "latest": "9.21.0"
  },
  "versions": {
   "8.33.0": {
@@ -3738,6 +3738,74 @@
   "9.20.0": {
    "name": "@eslint/js",
    "version": "9.20.0",
+   "keywords": [
+    "javascript",
+    "eslint-plugin",
+    "eslint"
+   ],
+   "license": "MIT",
+   "_id": "@eslint/js@9.20.0",
+   "maintainers": [
+    {
+     "name": "openjsfoundation",
+     "email": "npm@openjsf.org"
+    },
+    {
+     "name": "eslintbot",
+     "email": "nicholas@eslint.org"
+    }
+   ],
+   "homepage": "https://eslint.org",
+   "bugs": {
+    "url": "https://github.com/eslint/eslint/issues/"
+   },
+   "dist": {
+    "shasum": "7421bcbe74889fcd65d1be59f00130c289856eb4",
+    "tarball": "http://localhost:3000/@eslint/js/-/js-9.20.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-iZA07H9io9Wn836aVTytRaNqh00Sad+EamwOVJT12GTLw1VGMFV/4JaME+JjLtr9fiGaoWgYnS54wrfWsSs4oQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDLeoiASmZtO2Jh7ciML8sPw2Cr1FXIn6VZUX+H02xrwwIgYTz2QWMTqALnat7wFDwhdae8jTZCd/x8lX8CGHrYEFs=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 14932
+   },
+   "main": "./src/index.js",
+   "types": "./types/index.d.ts",
+   "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+   },
+   "gitHead": "031734efcb27e0d800da7ec32f5d5dae55f80564",
+   "scripts": {
+    "test:types": "tsc -p tests/types/tsconfig.json"
+   },
+   "_npmUser": {
+    "name": "eslintbot",
+    "email": "nicholas@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint/eslint.git",
+    "type": "git",
+    "directory": "packages/js"
+   },
+   "_npmVersion": "10.1.0",
+   "description": "ESLint JavaScript language implementation",
+   "directories": {},
+   "_nodeVersion": "20.9.0",
+   "publishConfig": {
+    "access": "public"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/js_9.20.0_1738962507098_0.4078386124907667",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "9.21.0": {
+   "name": "@eslint/js",
+   "version": "9.21.0",
    "description": "ESLint JavaScript language implementation",
    "main": "./src/index.js",
    "types": "./types/index.d.ts",
@@ -3765,20 +3833,20 @@
    "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
    },
-   "_id": "@eslint/js@9.20.0",
-   "gitHead": "031734efcb27e0d800da7ec32f5d5dae55f80564",
+   "_id": "@eslint/js@9.21.0",
+   "gitHead": "265e0cf6d03df44f0e65ce5bcb0bac382189486a",
    "_nodeVersion": "20.9.0",
    "_npmVersion": "10.1.0",
    "dist": {
-    "integrity": "sha512-iZA07H9io9Wn836aVTytRaNqh00Sad+EamwOVJT12GTLw1VGMFV/4JaME+JjLtr9fiGaoWgYnS54wrfWsSs4oQ==",
-    "shasum": "7421bcbe74889fcd65d1be59f00130c289856eb4",
-    "tarball": "http://localhost:3000/@eslint/js/-/js-9.20.0.tgz",
+    "integrity": "sha512-BqStZ3HX8Yz6LvsF5ByXYrtigrV5AXADWLAGc7PH/1SxOb7/FIYYMszZZWiUou/GB9P2lXWk2SV4d+Z8h0nknw==",
+    "shasum": "4303ef4e07226d87c395b8fad5278763e9c15c08",
+    "tarball": "http://localhost:3000/@eslint/js/-/js-9.21.0.tgz",
     "fileCount": 7,
     "unpackedSize": 14932,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQDLeoiASmZtO2Jh7ciML8sPw2Cr1FXIn6VZUX+H02xrwwIgYTz2QWMTqALnat7wFDwhdae8jTZCd/x8lX8CGHrYEFs="
+      "sig": "MEUCIG3tf4/667pDWm79df3IvikwKQy9Jv1UERhlnSCqrpJmAiEA3P59yORQc1hup0UGqadlIZVY9+arAxQX2DtZBQrjOmQ="
      }
     ]
    },
@@ -3799,14 +3867,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/js_9.20.0_1738962507098_0.4078386124907667"
+    "tmp": "tmp/js_9.21.0_1740172906604_0.9975383584820132"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2023-01-31T18:07:13.747Z",
-  "modified": "2025-02-07T21:08:27.561Z",
+  "modified": "2025-02-21T21:21:46.990Z",
   "8.33.0": "2023-01-31T18:07:13.955Z",
   "8.34.0": "2023-02-26T00:49:55.619Z",
   "8.35.0": "2023-02-26T00:50:48.539Z",
@@ -3864,7 +3932,8 @@
   "9.17.0": "2024-12-13T21:06:00.344Z",
   "9.18.0": "2025-01-10T21:16:15.392Z",
   "9.19.0": "2025-01-24T18:47:18.425Z",
-  "9.20.0": "2025-02-07T21:08:27.344Z"
+  "9.20.0": "2025-02-07T21:08:27.344Z",
+  "9.21.0": "2025-02-21T21:21:46.789Z"
  },
  "bugs": {
   "url": "https://github.com/eslint/eslint/issues/"

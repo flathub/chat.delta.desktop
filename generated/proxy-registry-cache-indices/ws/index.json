@@ -1,10 +1,9 @@
 {
  "_id": "ws",
- "_rev": "637-f16f8ac23bba3e1674f3d7c6a1747928",
+ "_rev": "638-a37219bb5d2ea348f93e219f3a029793",
  "name": "ws",
- "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
  "dist-tags": {
-  "latest": "8.18.0"
+  "latest": "8.18.1"
  },
  "versions": {
   "0.2.6": {
@@ -15216,6 +15215,120 @@
   "8.18.0": {
    "name": "ws",
    "version": "8.18.0",
+   "keywords": [
+    "HyBi",
+    "Push",
+    "RFC-6455",
+    "WebSocket",
+    "WebSockets",
+    "real-time"
+   ],
+   "author": {
+    "url": "http://2x.io",
+    "name": "Einar Otto Stangvik",
+    "email": "einaros@gmail.com"
+   },
+   "license": "MIT",
+   "_id": "ws@8.18.0",
+   "maintainers": [
+    {
+     "name": "einaros",
+     "email": "einaros@gmail.com"
+    },
+    {
+     "name": "v1",
+     "email": "npm@3rd-Eden.com"
+    },
+    {
+     "name": "lpinca",
+     "email": "luigipinca@gmail.com"
+    },
+    {
+     "name": "3rdeden",
+     "email": "npmjs@3rd-Eden.com"
+    }
+   ],
+   "homepage": "https://github.com/websockets/ws",
+   "bugs": {
+    "url": "https://github.com/websockets/ws/issues"
+   },
+   "dist": {
+    "shasum": "0d7505a6eafe2b0e712d232b42279f53bc289bbc",
+    "tarball": "http://localhost:3000/ws/-/ws-8.18.0.tgz",
+    "fileCount": 19,
+    "integrity": "sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQChHsLT6n2I3h8LTFy0sAvEobM7S9JbzbmlfScXzuZP3wIhANBm9/IYxF2yXDx0RxYuWiTFYDP6HPRuJTumbd2sj3A2",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 146647
+   },
+   "main": "index.js",
+   "browser": "browser.js",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "exports": {
+    ".": {
+     "import": "./wrapper.mjs",
+     "browser": "./browser.js",
+     "require": "./index.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "gitHead": "976c53c4065c49ede73bfba824caf5a6e0f290cb",
+   "scripts": {
+    "lint": "eslint . && prettier --check --ignore-path .gitignore \"**/*.{json,md,yaml,yml}\"",
+    "test": "nyc --reporter=lcov --reporter=text mocha --throw-deprecation test/*.test.js",
+    "integration": "mocha --throw-deprecation test/*.integration.js"
+   },
+   "_npmUser": {
+    "name": "lpinca",
+    "email": "luigipinca@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/websockets/ws.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.1",
+   "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
+   "directories": {},
+   "_nodeVersion": "22.4.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.0.0",
+    "mocha": "^8.4.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.0.0",
+    "benchmark": "^2.1.4",
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^6.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0"
+   },
+   "peerDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": ">=5.0.2"
+   },
+   "peerDependenciesMeta": {
+    "bufferutil": {
+     "optional": true
+    },
+    "utf-8-validate": {
+     "optional": true
+    }
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ws_8.18.0_1720025131056_0.4984306819755626",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "8.18.1": {
+   "name": "ws",
+   "version": "8.18.1",
    "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
    "keywords": [
     "HyBi",
@@ -15273,7 +15386,7 @@
     "benchmark": "^2.1.4",
     "bufferutil": "^4.0.1",
     "eslint": "^9.0.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.0.0",
     "globals": "^15.0.0",
     "mocha": "^8.4.0",
@@ -15281,20 +15394,20 @@
     "prettier": "^3.0.0",
     "utf-8-validate": "^6.0.0"
    },
-   "_id": "ws@8.18.0",
-   "gitHead": "976c53c4065c49ede73bfba824caf5a6e0f290cb",
-   "_nodeVersion": "22.4.0",
-   "_npmVersion": "10.8.1",
+   "_id": "ws@8.18.1",
+   "gitHead": "b92745a9d6760e6b4b2394bfac78cbcd258a8c8d",
+   "_nodeVersion": "23.8.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==",
-    "shasum": "0d7505a6eafe2b0e712d232b42279f53bc289bbc",
-    "tarball": "http://localhost:3000/ws/-/ws-8.18.0.tgz",
+    "integrity": "sha512-RKW2aJZMXeMxVpnZ6bck+RswznaxmzdULiBr6KY7XkTnW8uvt0iT9H5DkHUChXrc+uurzwa0rVI16n/Xzjdz1w==",
+    "shasum": "ea131d3784e1dfdff91adb0a4a116b127515e3cb",
+    "tarball": "http://localhost:3000/ws/-/ws-8.18.1.tgz",
     "fileCount": 19,
-    "unpackedSize": 146647,
+    "unpackedSize": 146780,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQChHsLT6n2I3h8LTFy0sAvEobM7S9JbzbmlfScXzuZP3wIhANBm9/IYxF2yXDx0RxYuWiTFYDP6HPRuJTumbd2sj3A2"
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQC21L97h4sm2uQcnkG0zH0ceK/1blLCzRsH38XTuVKmrwIhAJX40hyQShZ4piLmikArG7+uJv5D+slp9EIvoyDs6O/t"
      }
     ]
    },
@@ -15322,15 +15435,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/ws_8.18.0_1720025131056_0.4984306819755626"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/ws_8.18.1_1740131026083_0.7213421268590259"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2011-12-04T10:32:12.839Z",
-  "modified": "2024-07-03T16:45:31.425Z",
+  "modified": "2025-02-21T09:43:46.462Z",
   "0.2.6": "2011-12-04T10:32:14.627Z",
   "0.2.7": "2011-12-07T12:28:11.002Z",
   "0.2.8": "2011-12-07T12:52:53.588Z",
@@ -15501,8 +15614,32 @@
   "6.2.3": "2024-06-16T14:48:10.064Z",
   "7.5.10": "2024-06-16T14:48:28.590Z",
   "8.17.1": "2024-06-16T14:49:10.217Z",
-  "8.18.0": "2024-07-03T16:45:31.280Z"
+  "8.18.0": "2024-07-03T16:45:31.280Z",
+  "8.18.1": "2025-02-21T09:43:46.292Z"
  },
+ "bugs": {
+  "url": "https://github.com/websockets/ws/issues"
+ },
+ "author": {
+  "name": "Einar Otto Stangvik",
+  "email": "einaros@gmail.com",
+  "url": "http://2x.io"
+ },
+ "license": "MIT",
+ "homepage": "https://github.com/websockets/ws",
+ "keywords": [
+  "HyBi",
+  "Push",
+  "RFC-6455",
+  "WebSocket",
+  "WebSockets",
+  "real-time"
+ ],
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/websockets/ws.git"
+ },
+ "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
  "maintainers": [
   {
    "name": "einaros",
@@ -15521,28 +15658,6 @@
    "email": "npmjs@3rd-Eden.com"
   }
  ],
- "author": {
-  "name": "Einar Otto Stangvik",
-  "email": "einaros@gmail.com",
-  "url": "http://2x.io"
- },
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/websockets/ws.git"
- },
- "keywords": [
-  "HyBi",
-  "Push",
-  "RFC-6455",
-  "WebSocket",
-  "WebSockets",
-  "real-time"
- ],
- "license": "MIT",
- "homepage": "https://github.com/websockets/ws",
- "bugs": {
-  "url": "https://github.com/websockets/ws/issues"
- },
  "readme": "# ws: a Node.js WebSocket library\n\n[![Version npm](https://img.shields.io/npm/v/ws.svg?logo=npm)](https://www.npmjs.com/package/ws)\n[![CI](https://img.shields.io/github/actions/workflow/status/websockets/ws/ci.yml?branch=master&label=CI&logo=github)](https://github.com/websockets/ws/actions?query=workflow%3ACI+branch%3Amaster)\n[![Coverage Status](https://img.shields.io/coveralls/websockets/ws/master.svg?logo=coveralls)](https://coveralls.io/github/websockets/ws)\n\nws is a simple to use, blazing fast, and thoroughly tested WebSocket client and\nserver implementation.\n\nPasses the quite extensive Autobahn test suite: [server][server-report],\n[client][client-report].\n\n**Note**: This module does not work in the browser. The client in the docs is a\nreference to a backend with the role of a client in the WebSocket communication.\nBrowser clients must use the native\n[`WebSocket`](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)\nobject. To make the same code work seamlessly on Node.js and the browser, you\ncan use one of the many wrappers available on npm, like\n[isomorphic-ws](https://github.com/heineiuo/isomorphic-ws).\n\n## Table of Contents\n\n- [Protocol support](#protocol-support)\n- [Installing](#installing)\n  - [Opt-in for performance](#opt-in-for-performance)\n    - [Legacy opt-in for performance](#legacy-opt-in-for-performance)\n- [API docs](#api-docs)\n- [WebSocket compression](#websocket-compression)\n- [Usage examples](#usage-examples)\n  - [Sending and receiving text data](#sending-and-receiving-text-data)\n  - [Sending binary data](#sending-binary-data)\n  - [Simple server](#simple-server)\n  - [External HTTP/S server](#external-https-server)\n  - [Multiple servers sharing a single HTTP/S server](#multiple-servers-sharing-a-single-https-server)\n  - [Client authentication](#client-authentication)\n  - [Server broadcast](#server-broadcast)\n  - [Round-trip time](#round-trip-time)\n  - [Use the Node.js streams API](#use-the-nodejs-streams-api)\n  - [Other examples](#other-examples)\n- [FAQ](#faq)\n  - [How to get the IP address of the client?](#how-to-get-the-ip-address-of-the-client)\n  - [How to detect and close broken connections?](#how-to-detect-and-close-broken-connections)\n  - [How to connect via a proxy?](#how-to-connect-via-a-proxy)\n- [Changelog](#changelog)\n- [License](#license)\n\n## Protocol support\n\n- **HyBi drafts 07-12** (Use the option `protocolVersion: 8`)\n- **HyBi drafts 13-17** (Current default, alternatively option\n  `protocolVersion: 13`)\n\n## Installing\n\n```\nnpm install ws\n```\n\n### Opt-in for performance\n\n[bufferutil][] is an optional module that can be installed alongside the ws\nmodule:\n\n```\nnpm install --save-optional bufferutil\n```\n\nThis is a binary addon that improves the performance of certain operations such\nas masking and unmasking the data payload of the WebSocket frames. Prebuilt\nbinaries are available for the most popular platforms, so you don't necessarily\nneed to have a C++ compiler installed on your machine.\n\nTo force ws to not use bufferutil, use the\n[`WS_NO_BUFFER_UTIL`](./doc/ws.md#ws_no_buffer_util) environment variable. This\ncan be useful to enhance security in systems where a user can put a package in\nthe package search path of an application of another user, due to how the\nNode.js resolver algorithm works.\n\n#### Legacy opt-in for performance\n\nIf you are running on an old version of Node.js (prior to v18.14.0), ws also\nsupports the [utf-8-validate][] module:\n\n```\nnpm install --save-optional utf-8-validate\n```\n\nThis contains a binary polyfill for [`buffer.isUtf8()`][].\n\nTo force ws not to use utf-8-validate, use the\n[`WS_NO_UTF_8_VALIDATE`](./doc/ws.md#ws_no_utf_8_validate) environment variable.\n\n## API docs\n\nSee [`/doc/ws.md`](./doc/ws.md) for Node.js-like documentation of ws classes and\nutility functions.\n\n## WebSocket compression\n\nws supports the [permessage-deflate extension][permessage-deflate] which enables\nthe client and server to negotiate a compression algorithm and its parameters,\nand then selectively apply it to the data payloads of each WebSocket message.\n\nThe extension is disabled by default on the server and enabled by default on the\nclient. It adds a significant overhead in terms of performance and memory\nconsumption so we suggest to enable it only if it is really needed.\n\nNote that Node.js has a variety of issues with high-performance compression,\nwhere increased concurrency, especially on Linux, can lead to [catastrophic\nmemory fragmentation][node-zlib-bug] and slow performance. If you intend to use\npermessage-deflate in production, it is worthwhile to set up a test\nrepresentative of your workload and ensure Node.js/zlib will handle it with\nacceptable performance and memory usage.\n\nTuning of permessage-deflate can be done via the options defined below. You can\nalso use `zlibDeflateOptions` and `zlibInflateOptions`, which is passed directly\ninto the creation of [raw deflate/inflate streams][node-zlib-deflaterawdocs].\n\nSee [the docs][ws-server-options] for more options.\n\n```js\nimport WebSocket, { WebSocketServer } from 'ws';\n\nconst wss = new WebSocketServer({\n  port: 8080,\n  perMessageDeflate: {\n    zlibDeflateOptions: {\n      // See zlib defaults.\n      chunkSize: 1024,\n      memLevel: 7,\n      level: 3\n    },\n    zlibInflateOptions: {\n      chunkSize: 10 * 1024\n    },\n    // Other options settable:\n    clientNoContextTakeover: true, // Defaults to negotiated value.\n    serverNoContextTakeover: true, // Defaults to negotiated value.\n    serverMaxWindowBits: 10, // Defaults to negotiated value.\n    // Below options specified as default values.\n    concurrencyLimit: 10, // Limits zlib concurrency for perf.\n    threshold: 1024 // Size (in bytes) below which messages\n    // should not be compressed if context takeover is disabled.\n  }\n});\n```\n\nThe client will only use the extension if it is supported and enabled on the\nserver. To always disable the extension on the client, set the\n`perMessageDeflate` option to `false`.\n\n```js\nimport WebSocket from 'ws';\n\nconst ws = new WebSocket('ws://www.host.com/path', {\n  perMessageDeflate: false\n});\n```\n\n## Usage examples\n\n### Sending and receiving text data\n\n```js\nimport WebSocket from 'ws';\n\nconst ws = new WebSocket('ws://www.host.com/path');\n\nws.on('error', console.error);\n\nws.on('open', function open() {\n  ws.send('something');\n});\n\nws.on('message', function message(data) {\n  console.log('received: %s', data);\n});\n```\n\n### Sending binary data\n\n```js\nimport WebSocket from 'ws';\n\nconst ws = new WebSocket('ws://www.host.com/path');\n\nws.on('error', console.error);\n\nws.on('open', function open() {\n  const array = new Float32Array(5);\n\n  for (var i = 0; i < array.length; ++i) {\n    array[i] = i / 2;\n  }\n\n  ws.send(array);\n});\n```\n\n### Simple server\n\n```js\nimport { WebSocketServer } from 'ws';\n\nconst wss = new WebSocketServer({ port: 8080 });\n\nwss.on('connection', function connection(ws) {\n  ws.on('error', console.error);\n\n  ws.on('message', function message(data) {\n    console.log('received: %s', data);\n  });\n\n  ws.send('something');\n});\n```\n\n### External HTTP/S server\n\n```js\nimport { createServer } from 'https';\nimport { readFileSync } from 'fs';\nimport { WebSocketServer } from 'ws';\n\nconst server = createServer({\n  cert: readFileSync('/path/to/cert.pem'),\n  key: readFileSync('/path/to/key.pem')\n});\nconst wss = new WebSocketServer({ server });\n\nwss.on('connection', function connection(ws) {\n  ws.on('error', console.error);\n\n  ws.on('message', function message(data) {\n    console.log('received: %s', data);\n  });\n\n  ws.send('something');\n});\n\nserver.listen(8080);\n```\n\n### Multiple servers sharing a single HTTP/S server\n\n```js\nimport { createServer } from 'http';\nimport { WebSocketServer } from 'ws';\n\nconst server = createServer();\nconst wss1 = new WebSocketServer({ noServer: true });\nconst wss2 = new WebSocketServer({ noServer: true });\n\nwss1.on('connection', function connection(ws) {\n  ws.on('error', console.error);\n\n  // ...\n});\n\nwss2.on('connection', function connection(ws) {\n  ws.on('error', console.error);\n\n  // ...\n});\n\nserver.on('upgrade', function upgrade(request, socket, head) {\n  const { pathname } = new URL(request.url, 'wss://base.url');\n\n  if (pathname === '/foo') {\n    wss1.handleUpgrade(request, socket, head, function done(ws) {\n      wss1.emit('connection', ws, request);\n    });\n  } else if (pathname === '/bar') {\n    wss2.handleUpgrade(request, socket, head, function done(ws) {\n      wss2.emit('connection', ws, request);\n    });\n  } else {\n    socket.destroy();\n  }\n});\n\nserver.listen(8080);\n```\n\n### Client authentication\n\n```js\nimport { createServer } from 'http';\nimport { WebSocketServer } from 'ws';\n\nfunction onSocketError(err) {\n  console.error(err);\n}\n\nconst server = createServer();\nconst wss = new WebSocketServer({ noServer: true });\n\nwss.on('connection', function connection(ws, request, client) {\n  ws.on('error', console.error);\n\n  ws.on('message', function message(data) {\n    console.log(`Received message ${data} from user ${client}`);\n  });\n});\n\nserver.on('upgrade', function upgrade(request, socket, head) {\n  socket.on('error', onSocketError);\n\n  // This function is not defined on purpose. Implement it with your own logic.\n  authenticate(request, function next(err, client) {\n    if (err || !client) {\n      socket.write('HTTP/1.1 401 Unauthorized\\r\\n\\r\\n');\n      socket.destroy();\n      return;\n    }\n\n    socket.removeListener('error', onSocketError);\n\n    wss.handleUpgrade(request, socket, head, function done(ws) {\n      wss.emit('connection', ws, request, client);\n    });\n  });\n});\n\nserver.listen(8080);\n```\n\nAlso see the provided [example][session-parse-example] using `express-session`.\n\n### Server broadcast\n\nA client WebSocket broadcasting to all connected WebSocket clients, including\nitself.\n\n```js\nimport WebSocket, { WebSocketServer } from 'ws';\n\nconst wss = new WebSocketServer({ port: 8080 });\n\nwss.on('connection', function connection(ws) {\n  ws.on('error', console.error);\n\n  ws.on('message', function message(data, isBinary) {\n    wss.clients.forEach(function each(client) {\n      if (client.readyState === WebSocket.OPEN) {\n        client.send(data, { binary: isBinary });\n      }\n    });\n  });\n});\n```\n\nA client WebSocket broadcasting to every other connected WebSocket clients,\nexcluding itself.\n\n```js\nimport WebSocket, { WebSocketServer } from 'ws';\n\nconst wss = new WebSocketServer({ port: 8080 });\n\nwss.on('connection', function connection(ws) {\n  ws.on('error', console.error);\n\n  ws.on('message', function message(data, isBinary) {\n    wss.clients.forEach(function each(client) {\n      if (client !== ws && client.readyState === WebSocket.OPEN) {\n        client.send(data, { binary: isBinary });\n      }\n    });\n  });\n});\n```\n\n### Round-trip time\n\n```js\nimport WebSocket from 'ws';\n\nconst ws = new WebSocket('wss://websocket-echo.com/');\n\nws.on('error', console.error);\n\nws.on('open', function open() {\n  console.log('connected');\n  ws.send(Date.now());\n});\n\nws.on('close', function close() {\n  console.log('disconnected');\n});\n\nws.on('message', function message(data) {\n  console.log(`Round-trip time: ${Date.now() - data} ms`);\n\n  setTimeout(function timeout() {\n    ws.send(Date.now());\n  }, 500);\n});\n```\n\n### Use the Node.js streams API\n\n```js\nimport WebSocket, { createWebSocketStream } from 'ws';\n\nconst ws = new WebSocket('wss://websocket-echo.com/');\n\nconst duplex = createWebSocketStream(ws, { encoding: 'utf8' });\n\nduplex.on('error', console.error);\n\nduplex.pipe(process.stdout);\nprocess.stdin.pipe(duplex);\n```\n\n### Other examples\n\nFor a full example with a browser client communicating with a ws server, see the\nexamples folder.\n\nOtherwise, see the test cases.\n\n## FAQ\n\n### How to get the IP address of the client?\n\nThe remote IP address can be obtained from the raw socket.\n\n```js\nimport { WebSocketServer } from 'ws';\n\nconst wss = new WebSocketServer({ port: 8080 });\n\nwss.on('connection', function connection(ws, req) {\n  const ip = req.socket.remoteAddress;\n\n  ws.on('error', console.error);\n});\n```\n\nWhen the server runs behind a proxy like NGINX, the de-facto standard is to use\nthe `X-Forwarded-For` header.\n\n```js\nwss.on('connection', function connection(ws, req) {\n  const ip = req.headers['x-forwarded-for'].split(',')[0].trim();\n\n  ws.on('error', console.error);\n});\n```\n\n### How to detect and close broken connections?\n\nSometimes, the link between the server and the client can be interrupted in a\nway that keeps both the server and the client unaware of the broken state of the\nconnection (e.g. when pulling the cord).\n\nIn these cases, ping messages can be used as a means to verify that the remote\nendpoint is still responsive.\n\n```js\nimport { WebSocketServer } from 'ws';\n\nfunction heartbeat() {\n  this.isAlive = true;\n}\n\nconst wss = new WebSocketServer({ port: 8080 });\n\nwss.on('connection', function connection(ws) {\n  ws.isAlive = true;\n  ws.on('error', console.error);\n  ws.on('pong', heartbeat);\n});\n\nconst interval = setInterval(function ping() {\n  wss.clients.forEach(function each(ws) {\n    if (ws.isAlive === false) return ws.terminate();\n\n    ws.isAlive = false;\n    ws.ping();\n  });\n}, 30000);\n\nwss.on('close', function close() {\n  clearInterval(interval);\n});\n```\n\nPong messages are automatically sent in response to ping messages as required by\nthe spec.\n\nJust like the server example above, your clients might as well lose connection\nwithout knowing it. You might want to add a ping listener on your clients to\nprevent that. A simple implementation would be:\n\n```js\nimport WebSocket from 'ws';\n\nfunction heartbeat() {\n  clearTimeout(this.pingTimeout);\n\n  // Use `WebSocket#terminate()`, which immediately destroys the connection,\n  // instead of `WebSocket#close()`, which waits for the close timer.\n  // Delay should be equal to the interval at which your server\n  // sends out pings plus a conservative assumption of the latency.\n  this.pingTimeout = setTimeout(() => {\n    this.terminate();\n  }, 30000 + 1000);\n}\n\nconst client = new WebSocket('wss://websocket-echo.com/');\n\nclient.on('error', console.error);\nclient.on('open', heartbeat);\nclient.on('ping', heartbeat);\nclient.on('close', function clear() {\n  clearTimeout(this.pingTimeout);\n});\n```\n\n### How to connect via a proxy?\n\nUse a custom `http.Agent` implementation like [https-proxy-agent][] or\n[socks-proxy-agent][].\n\n## Changelog\n\nWe're using the GitHub [releases][changelog] for changelog entries.\n\n## License\n\n[MIT](LICENSE)\n\n[`buffer.isutf8()`]: https://nodejs.org/api/buffer.html#bufferisutf8input\n[bufferutil]: https://github.com/websockets/bufferutil\n[changelog]: https://github.com/websockets/ws/releases\n[client-report]: http://websockets.github.io/ws/autobahn/clients/\n[https-proxy-agent]: https://github.com/TooTallNate/node-https-proxy-agent\n[node-zlib-bug]: https://github.com/nodejs/node/issues/8871\n[node-zlib-deflaterawdocs]:\n  https://nodejs.org/api/zlib.html#zlib_zlib_createdeflateraw_options\n[permessage-deflate]: https://tools.ietf.org/html/rfc7692\n[server-report]: http://websockets.github.io/ws/autobahn/servers/\n[session-parse-example]: ./examples/express-session-parse\n[socks-proxy-agent]: https://github.com/TooTallNate/node-socks-proxy-agent\n[utf-8-validate]: https://github.com/websockets/utf-8-validate\n[ws-server-options]: ./doc/ws.md#new-websocketserveroptions-callback\n",
  "readmeFilename": "README.md",
  "users": {
