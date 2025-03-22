@@ -1,9 +1,9 @@
 {
  "_id": "@tauri-apps/plugin-clipboard-manager",
- "_rev": "24-27b73b5fa0cf577284a527b483c5797c",
+ "_rev": "26-cf20294af5e360cef2257406dd91df96",
  "name": "@tauri-apps/plugin-clipboard-manager",
  "dist-tags": {
-  "latest": "2.2.1"
+  "latest": "2.2.2"
  },
  "versions": {
   "2.0.0-alpha.0": {
@@ -1734,6 +1734,93 @@
    "name": "@tauri-apps/plugin-clipboard-manager",
    "version": "2.2.1",
    "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-clipboard-manager@2.2.1",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "a5d35b197748d900a4281b38a380fb57dd076983",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-clipboard-manager/-/plugin-clipboard-manager-2.2.1.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-+7YDULB9Bk4fejxYrVNBQcxs3KsjPA3A3r53wwn7K8zOQvxjNBSYBRx/FW1OUBPGzm8BrreJFBkPVzQZSF2R4A==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDYl77j52oPTsB2MsHbVX+WzcwP21JtyrigdgzqB1fzcwIgW1ut+SabGGnyheqvllxt9YRJknB9JVGQyjcpw3O9q30=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-clipboard-manager@2.2.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 15069
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "ad1726627365e44c1841129be1871fb9509f5eb3",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "![plugin-clipboard-manager](https://github.com/tauri-apps/plugins-workspace/raw/v2/plugins/clipboard-manager/banner.png)",
+   "directories": {},
+   "_nodeVersion": "22.13.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-clipboard-manager_2.2.1_1738002942802_0.7806537558449933",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.2": {
+   "name": "@tauri-apps/plugin-clipboard-manager",
+   "version": "2.2.2",
+   "license": "MIT OR Apache-2.0",
    "authors": [
     "Tauri Programme within The Commons Conservancy"
    ],
@@ -1756,23 +1843,23 @@
    "dependencies": {
     "@tauri-apps/api": "^2.0.0"
    },
-   "_id": "@tauri-apps/plugin-clipboard-manager@2.2.1",
-   "gitHead": "ad1726627365e44c1841129be1871fb9509f5eb3",
+   "_id": "@tauri-apps/plugin-clipboard-manager@2.2.2",
+   "gitHead": "b40a02c525516d24fb8cfb80a6a3449fc00edb89",
    "description": "![plugin-clipboard-manager](https://github.com/tauri-apps/plugins-workspace/raw/v2/plugins/clipboard-manager/banner.png)",
    "bugs": {
     "url": "https://github.com/tauri-apps/plugins-workspace/issues"
    },
    "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
-   "_nodeVersion": "22.13.0",
+   "_nodeVersion": "22.14.0",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-+7YDULB9Bk4fejxYrVNBQcxs3KsjPA3A3r53wwn7K8zOQvxjNBSYBRx/FW1OUBPGzm8BrreJFBkPVzQZSF2R4A==",
-    "shasum": "a5d35b197748d900a4281b38a380fb57dd076983",
-    "tarball": "http://localhost:3000/@tauri-apps/plugin-clipboard-manager/-/plugin-clipboard-manager-2.2.1.tgz",
+    "integrity": "sha512-bZvDLMqfcNmsw7Ag8I49jlaCjdpDvvlJHnpp6P+Gg/3xtpSERdwlDxm7cKGbs2mj46dsw4AuG3RoAgcpwgioUA==",
+    "shasum": "19559f2b80dd6c692b4e7b884515b5b693ca9791",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-clipboard-manager/-/plugin-clipboard-manager-2.2.2.tgz",
     "fileCount": 6,
     "unpackedSize": 15069,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-clipboard-manager@2.2.1",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-clipboard-manager@2.2.2",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -1780,7 +1867,7 @@
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQDYl77j52oPTsB2MsHbVX+WzcwP21JtyrigdgzqB1fzcwIgW1ut+SabGGnyheqvllxt9YRJknB9JVGQyjcpw3O9q30="
+      "sig": "MEYCIQCMQ9W77DL/asS1gUYhfplHGaeIH8Y9IJBgI4fh4Y6HqQIhAPtS0tm1/KZ6Hn+3rVgAItZi4RtCTQCdS7QqzNjyDbKS"
      }
     ]
    },
@@ -1813,14 +1900,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/plugin-clipboard-manager_2.2.1_1738002942802_0.7806537558449933"
+    "tmp": "tmp/plugin-clipboard-manager_2.2.2_1741612734189_0.7009763165137493"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2023-05-24T15:13:08.092Z",
-  "modified": "2025-01-27T18:35:43.527Z",
+  "modified": "2025-03-10T13:18:54.838Z",
   "2.0.0-alpha.0": "2023-05-24T15:13:08.304Z",
   "2.0.0-alpha.1": "2023-08-14T20:50:15.825Z",
   "2.0.0-alpha.2": "2023-10-23T14:34:36.546Z",
@@ -1843,7 +1930,8 @@
   "2.0.0": "2024-10-02T15:10:17.293Z",
   "2.0.1": "2024-12-02T12:46:05.976Z",
   "2.2.0": "2024-12-09T15:47:07.312Z",
-  "2.2.1": "2025-01-27T18:35:43.007Z"
+  "2.2.1": "2025-01-27T18:35:43.007Z",
+  "2.2.2": "2025-03-10T13:18:54.383Z"
  },
  "bugs": {
   "url": "https://github.com/tauri-apps/plugins-workspace/issues"

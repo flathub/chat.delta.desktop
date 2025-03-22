@@ -1,0 +1,812 @@
+{
+ "_id": "@tauri-apps/plugin-opener",
+ "_rev": "8-b3107b04340de2c3b3cb0a473255f8bd",
+ "name": "@tauri-apps/plugin-opener",
+ "dist-tags": {
+  "latest": "2.2.6"
+ },
+ "versions": {
+  "1.0.0": {
+   "name": "@tauri-apps/plugin-opener",
+   "version": "1.0.0",
+   "author": "",
+   "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-opener@1.0.0",
+   "maintainers": [
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    },
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    }
+   ],
+   "dist": {
+    "shasum": "51b5bce6a76d8e0af1f5f42cecaaaa057d6fd93d",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-opener/-/plugin-opener-1.0.0.tgz",
+    "fileCount": 1,
+    "integrity": "sha512-u9+U4Pgrm/Kstgqmf4J2OeFqkshuI6CeEgcNodC5p6zFZbNpYii50WtS84qLNSBMbcyASrsqytwytbObbcJfNw==",
+    "signatures": [
+     {
+      "sig": "MEQCIAvEHNAp7CF6wa7bkvt+6In8HdszTg8CYzUn8h9SC9xIAiBNtshc7QOdCL7l/KSSjP5RAWLdM5B9HO3VAHqsRzdBjw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 405
+   },
+   "main": "index.js",
+   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+   },
+   "_npmUser": {
+    "name": "amrbashir",
+    "email": "amr.bashir2015@gmail.com"
+   },
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "_hasShrinkwrap": false,
+   "packageManager": "npm@10.8.2+sha512.c7f0088c520a46596b85c6f8f1da943400199748a0f7ea8cb8df75469668dc26f6fb3ba26df87e2884a5ebe91557292d0f3db7d0929cdb4f14910c3032ac81fb",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-opener_1.0.0_1731334316660_0.13210158267436212",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "2.0.0": {
+   "name": "@tauri-apps/plugin-opener",
+   "version": "2.0.0",
+   "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-opener@2.0.0",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "16de1f5dfe4ec0c150c1e14dd07d0eea7a89c80f",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-opener/-/plugin-opener-2.0.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-J7xGF34HCI/ZdAh2hH72mYg5otwxWYY/5KJ+c2wE+Dr8qzCGF+PhdttNVam94RFTs5mwJ393t/mo8OSolFyWtw==",
+    "signatures": [
+     {
+      "sig": "MEQCIChJcfP1NPpH81AnwUfO+C6+F5mUKD0YtZH8nFjjzispAiAme9QPXmQ5YFgNk3XuulvGROa7LCQEd+oLs20OHsy5Dw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-opener@2.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 11700
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "1f5ed2fbb061e355c7c1d7fa4c79d7202682f8b7",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Open files and URLs using their default application.",
+   "directories": {},
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-opener_2.0.0_1733143605454_0.9962479036610912",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "2.2.0": {
+   "name": "@tauri-apps/plugin-opener",
+   "version": "2.2.0",
+   "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-opener@2.2.0",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "a9aa3272a440f2a011228acb3c46c0619506914d",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-opener/-/plugin-opener-2.2.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-FSOjVsIKlRWPjjcnHgrjdxJlOFfPTkw5GtfutCyJSDyHJ/M3NULd8dkGewkWwozDFwiAJj1hqaj2R3K12uXWIw==",
+    "signatures": [
+     {
+      "sig": "MEUCIFYjnkLDV0nwdRKVh9D8NfPDwReCk5i+wuZTsYU8CWIxAiEAl9gfh3S/XD0QDYXVOOzyIts2KodyzmdzFFGOE8B5qAA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-opener@2.2.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 12777
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "6fcb2f5f401fcaca98d40243e7def282875827de",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Open files and URLs using their default application.",
+   "directories": {},
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-opener_2.2.0_1733759301088_0.4574337272563944",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.1": {
+   "name": "@tauri-apps/plugin-opener",
+   "version": "2.2.1",
+   "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-opener@2.2.1",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "cf0d74f683171d0cb31657baa417ad7b75cef4c0",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-opener/-/plugin-opener-2.2.1.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-zloo4xzBqeh363xNA+xYt+7+/cu/lPYuG5PRtxjWAaSyfMqFo6IINdizkDBYylUewLiplXb5+S65GLVkeXTHPg==",
+    "signatures": [
+     {
+      "sig": "MEQCIBjH1BIp5OmtXh1wvXhEIqJ2kXMlwGaAdov0SV8wVv0rAiBwqonSq11LlB9TxdwNxiVzZXfZqOgXYm9cQLhcMhwuNQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-opener@2.2.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 12777
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "c9acff99c6632884f475642bb060c4499a017c73",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Open files and URLs using their default application.",
+   "directories": {},
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-opener_2.2.1_1733851499915_0.8291130410534759",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.2": {
+   "name": "@tauri-apps/plugin-opener",
+   "version": "2.2.2",
+   "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-opener@2.2.2",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "31f5bde7fc1ba2431c83ee1378ea34eb6fc67b20",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-opener/-/plugin-opener-2.2.2.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-E/XIHKqGV+FT8PDdkfMETmgPUxcR79Rk8USuzbadD/ZdvsKCfQR5q+6rpZC9zEnG2wzi9lVQM4D3xwrtGGIB8A==",
+    "signatures": [
+     {
+      "sig": "MEUCIEyrA+Dv3ONCldUa3kvv9BBLSt8TVPXWlKIR4hKvtzOQAiEAgXxym5KRsEbPPTfjyckBbQLOximnxlHlQXCLujvDkxI=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-opener@2.2.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 13169
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "51919fb26c1d990c4d618d6a39dc5a12b4ee4aea",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Open files and URLs using their default application.",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-opener_2.2.2_1734248745767_0.46310306243768595",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.3": {
+   "name": "@tauri-apps/plugin-opener",
+   "version": "2.2.3",
+   "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-opener@2.2.3",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "6f0ddb715d9603ee51df574cea2f0cd0a07eaad3",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-opener/-/plugin-opener-2.2.3.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-QZDtGwqs2ssjc+GbHzTFlN0gtgXR7B1dcphIJ3vBrX+PXOdI58hP82TyT2rbH2myBVj2uWkyqKhM8FbbGopqng==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDoi/6tnzm1L7fXe5nGUGWVaX/mHBJZ1H4cKCkJSTvyIAIhAMy5Z6fZWpRfEqh91yHlOKK1WmdryPUgnA6O8mSxxi7q",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-opener@2.2.3",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 13169
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "3a826fb6bf84c4dbf9314d758d9847ac1acf4e6d",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Open files and URLs using their default application.",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-opener_2.2.3_1736158273700_0.5766415319161251",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.4": {
+   "name": "@tauri-apps/plugin-opener",
+   "version": "2.2.4",
+   "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-opener@2.2.4",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "1130aa1586676f8f51b703ba112ec60854476a37",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-opener/-/plugin-opener-2.2.4.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-5oXWr80ek8JHwQ/budIdZTHAWBF4XfYMiXIyH8Pr92QtwEG+6xCgCcws0k4xCemVDEetclveJPu8yB9ysuU/dQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDGafNQMuFnfOH0lv1k+PrXs42XgApTasrkuAJdrE1IZwIhAOEMt2V8HjbaZJx6ST5vpdLAHBhH/VXkL5KiAclUI3nR",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-opener@2.2.4",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 13169
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "efc7bb19a8ecfb4bd35cfa51a2d3b30ce636060c",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Open files and URLs using their default application.",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-opener_2.2.4_1736780433740_0.08297669020512877",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.5": {
+   "name": "@tauri-apps/plugin-opener",
+   "version": "2.2.5",
+   "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-opener@2.2.5",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "928b917d28d3e8b5bafb90f5f91fb0ed20c27fd4",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-opener/-/plugin-opener-2.2.5.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-hHsJ9RPWpZvZEPVFaL+d25gABMUMOf/A6ESXnvf/ii9guTukj58WXsAE/SOysXRIhej7kseRCxnOnIMpSCdUsQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIAdf+2brdTWiIUc7VTNxR+q+ilPuI5pgCvPa99ZgXG2ZAiBnC1fOwNqPtxiyHZbwcwzNfjXRDNEk1zyxxUWwPi4rSA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-opener@2.2.5",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 13169
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "28f5c33d658e94a6bc2f1116adddbb7e1c61c091",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Open files and URLs using their default application.",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-opener_2.2.5_1737311371929_0.5757469228609962",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.6": {
+   "name": "@tauri-apps/plugin-opener",
+   "version": "2.2.6",
+   "description": "Open files and URLs using their default application.",
+   "license": "MIT OR Apache-2.0",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git"
+   },
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "main": "./dist-js/index.cjs",
+   "module": "./dist-js/index.js",
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_id": "@tauri-apps/plugin-opener@2.2.6",
+   "gitHead": "393e956728632fb3859cd580e54ceea75446de2a",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "_nodeVersion": "22.14.0",
+   "_npmVersion": "10.9.2",
+   "dist": {
+    "integrity": "sha512-bSdkuP71ZQRepPOn8BOEdBKYJQvl6+jb160QtJX/i2H9BF6ZySY/kYljh76N2Ne5fJMQRge7rlKoStYQY5Jq1w==",
+    "shasum": "a4dc328541708d40e3bb969231974353a4ad6983",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-opener/-/plugin-opener-2.2.6.tgz",
+    "fileCount": 7,
+    "unpackedSize": 13169,
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-opener@2.2.6",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQCH7Q7zoyuHTVNcDXRCuNqGX837O5f1o7ZmVlwhL+MFEQIhANx1lhcEsSfGb59M4C8Rox4c2GRqp6968aKqiFvg+41C"
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/plugin-opener_2.2.6_1740697097576_0.522157012045201"
+   },
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2024-11-11T14:11:56.576Z",
+  "modified": "2025-02-27T22:58:18.266Z",
+  "1.0.0": "2024-11-11T14:11:56.828Z",
+  "2.0.0": "2024-12-02T12:46:45.609Z",
+  "2.2.0": "2024-12-09T15:48:21.239Z",
+  "2.2.1": "2024-12-10T17:25:00.109Z",
+  "2.2.2": "2024-12-15T07:45:45.939Z",
+  "2.2.3": "2025-01-06T10:11:13.888Z",
+  "2.2.4": "2025-01-13T15:00:33.928Z",
+  "2.2.5": "2025-01-19T18:29:32.106Z",
+  "2.2.6": "2025-02-27T22:58:17.740Z"
+ },
+ "bugs": {
+  "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+ },
+ "license": "MIT OR Apache-2.0",
+ "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/tauri-apps/plugins-workspace.git"
+ },
+ "description": "Open files and URLs using their default application.",
+ "maintainers": [
+  {
+   "name": "nothingismagick",
+   "email": "denjell@sfosc.org"
+  },
+  {
+   "name": "lucasfernog",
+   "email": "lucasfernandesnog@gmail.com"
+  },
+  {
+   "name": "tauri-apps-ci-user",
+   "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+  },
+  {
+   "name": "amrbashir",
+   "email": "amr.bashir2015@gmail.com"
+  },
+  {
+   "name": "beanow",
+   "email": "beanow@oscp.info"
+  }
+ ],
+ "readme": "![opener](https://github.com/tauri-apps/plugins-workspace/raw/v2/plugins/opener/banner.png)\n\n<!-- description -->\n\n| Platform | Supported |\n| -------- | --------- |\n| Linux    | ✓         |\n| Windows  | ✓         |\n| macOS    | ✓         |\n| Android  | ?         |\n| iOS      | ?         |\n\n## Install\n\n_This plugin requires a Rust version of at least **1.77.2**_\n\nThere are three general methods of installation that we can recommend.\n\n1. Use crates.io and npm (easiest, and requires you to trust that our publishing pipeline worked)\n2. Pull sources directly from Github using git tags / revision hashes (most secure)\n3. Git submodule install this repo in your tauri project and then use file protocol to ingest the source (most secure, but inconvenient to use)\n\nInstall the Core plugin by adding the following to your `Cargo.toml` file:\n\n`src-tauri/Cargo.toml`\n\n```toml\n[dependencies]\ntauri-plugin-opener = \"2.0.0\"\n# alternatively with Git:\ntauri-plugin-opener = { git = \"https://github.com/tauri-apps/plugins-workspace\", branch = \"v2\" }\n```\n\nYou can install the JavaScript Guest bindings using your preferred JavaScript package manager:\n\n> Note: Since most JavaScript package managers are unable to install packages from git monorepos we provide read-only mirrors of each plugin. This makes installation option 2 more ergonomic to use.\n\n<!-- Add the branch for installations using git! -->\n\n```sh\npnpm add @tauri-apps/plugin-opener\n# or\nnpm add @tauri-apps/plugin-opener\n# or\nyarn add @tauri-apps/plugin-opener\n\n# alternatively with Git:\npnpm add https://github.com/tauri-apps/tauri-plugin-opener#v2\n# or\nnpm add https://github.com/tauri-apps/tauri-plugin-opener#v2\n# or\nyarn add https://github.com/tauri-apps/tauri-plugin-opener#v2\n```\n\n## Usage\n\nFirst you need to register the core plugin with Tauri:\n\n`src-tauri/src/lib.rs`\n\n```rust\nfn main() {\n    tauri::Builder::default()\n        .plugin(tauri_plugin_opener::init())\n        .run(tauri::generate_context!())\n        .expect(\"error while running tauri application\");\n}\n```\n\nAfterwards all the plugin's APIs are available through the JavaScript guest bindings:\n\n```javascript\nimport { openUrl, openPath, revealItemInDir } from '@tauri-apps/plugin-opener'\n\n// Opens the URL in the default browser\nawait openUrl('https://example.com')\n// Or with a specific browser/app\nawait openUrl('https://example.com', 'firefox')\n\n// Opens the path with the system's default app\nawait openPath('/path/to/file')\n// Or with a specific app\nawait openPath('/path/to/file', 'firefox')\n\n// Reveal a path with the system's default explorer\nawait revealItemInDir('/path/to/file')\n```\n\n### Usage from Rust\n\nYou can also use those APIs from Rust:\n\n```rust\nuse tauri_plugin_opener::OpenerExt;\n\nfn main() {\n    tauri::Builder::default()\n        .plugin(tauri_plugin_opener::init())\n        .setup(|app| {\n            let opener = app.opener();\n\n            // Opens the URL in the default browser\n            opener.open_url(\"https://example.com\", None::<&str>)?;\n            // Or with a specific browser/app\n            opener.open_url(\"https://example.com\", Some(\"firefox\"))?;\n\n            // Opens the path with the system's default app\n            opener.open_path(\"/path/to/file\", None::<&str>)?;\n            // Or with a specific app\n            opener.open_path(\"/path/to/file\", Some(\"firefox\"))?;\n\n            // Reveal a path with the system's default explorer\n            opener.reveal_item_in_dir(\"/path/to/file\")?;\n            Ok(())\n        })\n        .run(tauri::generate_context!())\n        .expect(\"error while running tauri application\");\n}\n```\n\n## Contributing\n\nPRs accepted. Please make sure to read the Contributing Guide before making a pull request.\n\n## Partners\n\n<table>\n  <tbody>\n    <tr>\n      <td align=\"center\" valign=\"middle\">\n        <a href=\"https://crabnebula.dev\" target=\"_blank\">\n          <img src=\"https://github.com/tauri-apps/plugins-workspace/raw/v2/.github/sponsors/crabnebula.svg\" alt=\"CrabNebula\" width=\"283\">\n        </a>\n      </td>\n    </tr>\n  </tbody>\n</table>\n\nFor the complete list of sponsors please visit our [website](https://tauri.app#sponsors) and [Open Collective](https://opencollective.com/tauri).\n\n## License\n\nCode: (c) 2015 - Present - The Tauri Programme within The Commons Conservancy.\n\nMIT or MIT/Apache 2.0 where applicable.\n",
+ "readmeFilename": "README.md"
+}

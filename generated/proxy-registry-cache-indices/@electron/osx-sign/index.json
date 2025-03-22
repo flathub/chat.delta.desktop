@@ -1,9 +1,9 @@
 {
  "_id": "@electron/osx-sign",
- "_rev": "13-d965aec6fd0093185645320a6b503c9c",
+ "_rev": "14-5e87756452b8944a31c0e6daa7be67a2",
  "name": "@electron/osx-sign",
  "dist-tags": {
-  "latest": "1.3.2"
+  "latest": "1.3.3"
  },
  "versions": {
   "1.0.0": {
@@ -952,6 +952,121 @@
   "1.3.2": {
    "name": "@electron/osx-sign",
    "version": "1.3.2",
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "@electron/osx-sign@1.3.2",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/osx-sign",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.js",
+    "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "dist": {
+    "shasum": "4cfa491f524bbd59dae2339db60fe478684cee32",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.3.2.tgz",
+    "fileCount": 61,
+    "integrity": "sha512-KqVlm9WMWq19lBpCXQoThC/Koaiji2zotUDYwZDaZlZZym+FXY9mQW8wN6sUQ93nkVc42f3TQ1S/XN9S1kjM5Q==",
+    "signatures": [
+     {
+      "sig": "MEQCIFI2UMXr6nuwA4p7WMcSO/HkzPaGnM4LbVln4aqTyaaLAiB53oYU666X9u5PysknJq4WQUkLROhv1Nl4i8MKlQ1tRA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fosx-sign@1.3.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 196110
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "gitHead": "a5bf4d4ba281b9f219484b064e230dd9fdcaac1c",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "yarn lint && tape test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "pretest": "rimraf test/work",
+    "docs:build": "npx typedoc",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/osx-sign.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Codesign Electron macOS apps",
+   "directories": {},
+   "_nodeVersion": "20.18.1",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "plist": "^3.0.5",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.6",
+    "isbinaryfile": "^4.0.8",
+    "compare-version": "^0.1.2"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^4.7.1",
+    "eslint": "^8.29.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "typedoc": "~0.25.13",
+    "standard": "^17.0.0",
+    "run-series": "^1.1.9",
+    "typescript": "^4.9.3",
+    "@types/node": "^16.11.6",
+    "extract-zip": "^2.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/plist": "^3.0.2",
+    "@electron/get": "^2.0.2",
+    "run-waterfall": "^1.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "@types/compare-version": "^0.1.31",
+    "eslint-config-standard": "^17.0.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/osx-sign_1.3.2_1735604364637_0.9645450189841898",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.3.3": {
+   "name": "@electron/osx-sign",
+   "version": "1.3.3",
    "description": "Codesign Electron macOS apps",
    "main": "dist/cjs/index.js",
    "module": "dist/esm/index.js",
@@ -1023,27 +1138,27 @@
    "engines": {
     "node": ">=12.0.0"
    },
-   "_id": "@electron/osx-sign@1.3.2",
-   "gitHead": "a5bf4d4ba281b9f219484b064e230dd9fdcaac1c",
+   "_id": "@electron/osx-sign@1.3.3",
+   "gitHead": "087ddb68ac73c223837bfe456c38078b395769a6",
    "types": "./dist/cjs/index.d.ts",
-   "_nodeVersion": "20.18.1",
+   "_nodeVersion": "20.18.3",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-KqVlm9WMWq19lBpCXQoThC/Koaiji2zotUDYwZDaZlZZym+FXY9mQW8wN6sUQ93nkVc42f3TQ1S/XN9S1kjM5Q==",
-    "shasum": "4cfa491f524bbd59dae2339db60fe478684cee32",
-    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.3.2.tgz",
+    "integrity": "sha512-KZ8mhXvWv2rIEgMbWZ4y33bDHyUKMXnx4M0sTyPNK/vcB81ImdeY9Ggdqy0SWbMDgmbqyQ+phgejh6V3R2QuSg==",
+    "shasum": "af751510488318d9f7663694af85819690d75583",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.3.3.tgz",
     "fileCount": 61,
-    "unpackedSize": 196110,
+    "unpackedSize": 196472,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fosx-sign@1.3.2",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fosx-sign@1.3.3",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
     },
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIFI2UMXr6nuwA4p7WMcSO/HkzPaGnM4LbVln4aqTyaaLAiB53oYU666X9u5PysknJq4WQUkLROhv1Nl4i8MKlQ1tRA=="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIQD6833B+0eBGlP6FM0myVv9s4CHk9LEl6jgJnggUHAMjwIgeputT6C+OPbevZqXaB5yVyevrYz/MV6KUt5QOTqtV8Q="
      }
     ]
    },
@@ -1060,14 +1175,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/osx-sign_1.3.2_1735604364637_0.9645450189841898"
+    "tmp": "tmp/osx-sign_1.3.3_1741138562610_0.028639111139024065"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2022-03-24T07:39:04.390Z",
-  "modified": "2024-12-31T00:19:25.234Z",
+  "modified": "2025-03-05T01:36:03.239Z",
   "1.0.0": "2022-03-24T07:39:04.591Z",
   "1.0.1": "2022-03-24T07:40:30.337Z",
   "1.0.2": "2022-12-04T11:53:14.864Z",
@@ -1077,7 +1192,8 @@
   "1.2.0": "2024-04-22T04:26:50.708Z",
   "1.3.0": "2024-05-15T02:09:46.307Z",
   "1.3.1": "2024-07-04T17:56:24.046Z",
-  "1.3.2": "2024-12-31T00:19:24.824Z"
+  "1.3.2": "2024-12-31T00:19:24.824Z",
+  "1.3.3": "2025-03-05T01:36:02.768Z"
  },
  "bugs": {
   "url": "https://github.com/electron/osx-sign/issues"

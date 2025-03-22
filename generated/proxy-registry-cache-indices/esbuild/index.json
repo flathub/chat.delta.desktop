@@ -1,9 +1,9 @@
 {
  "_id": "esbuild",
- "_rev": "466-b2cc822fb3e888b0eb28799c181eb867",
+ "_rev": "468-986f4ecf2543d65dd52dff3ea956352b",
  "name": "esbuild",
  "dist-tags": {
-  "latest": "0.25.0"
+  "latest": "0.25.1"
  },
  "versions": {
   "0.0.0": {
@@ -33674,6 +33674,95 @@
   "0.25.0": {
    "name": "esbuild",
    "version": "0.25.0",
+   "license": "MIT",
+   "_id": "esbuild@0.25.0",
+   "maintainers": [
+    {
+     "name": "evanw",
+     "email": "evan.exe@gmail.com"
+    },
+    {
+     "name": "esbuild",
+     "email": "evan.exe+esbuild@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/evanw/esbuild#readme",
+   "bugs": {
+    "url": "https://github.com/evanw/esbuild/issues"
+   },
+   "bin": {
+    "esbuild": "bin/esbuild"
+   },
+   "dist": {
+    "shasum": "0de1787a77206c5a79eeb634a623d39b5006ce92",
+    "tarball": "http://localhost:3000/esbuild/-/esbuild-0.25.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-BXq5mqc8ltbaN34cDqWuYKyNhX8D/Z0J1xdtdQ8UcIIIyJyz+ZMKUt58tF3SrZ85jcfN/PZYhjR5uDQAYNVbuw==",
+    "signatures": [
+     {
+      "sig": "MEQCIFm+Yv2/9szmF8MKD/Y2EgvxnUl0LflBosiNtuGcDPQwAiAkaU5G0oX8mKTiZFP9S0aYJXWLamCgE9OmCxBnLWjnFQ==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 133970
+   },
+   "main": "lib/main.js",
+   "types": "lib/main.d.ts",
+   "engines": {
+    "node": ">=18"
+   },
+   "gitHead": "e9174d671b1882758cd32ac5e146200f5bee3e45",
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "evanw",
+    "email": "evan.exe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/evanw/esbuild.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.5.1",
+   "description": "An extremely fast JavaScript and CSS bundler and minifier.",
+   "directories": {},
+   "_nodeVersion": "22.0.0",
+   "_hasShrinkwrap": false,
+   "optionalDependencies": {
+    "@esbuild/aix-ppc64": "0.25.0",
+    "@esbuild/linux-arm": "0.25.0",
+    "@esbuild/linux-x64": "0.25.0",
+    "@esbuild/sunos-x64": "0.25.0",
+    "@esbuild/win32-x64": "0.25.0",
+    "@esbuild/darwin-x64": "0.25.0",
+    "@esbuild/linux-ia32": "0.25.0",
+    "@esbuild/netbsd-x64": "0.25.0",
+    "@esbuild/win32-ia32": "0.25.0",
+    "@esbuild/android-arm": "0.25.0",
+    "@esbuild/android-x64": "0.25.0",
+    "@esbuild/freebsd-x64": "0.25.0",
+    "@esbuild/linux-arm64": "0.25.0",
+    "@esbuild/linux-ppc64": "0.25.0",
+    "@esbuild/linux-s390x": "0.25.0",
+    "@esbuild/openbsd-x64": "0.25.0",
+    "@esbuild/win32-arm64": "0.25.0",
+    "@esbuild/darwin-arm64": "0.25.0",
+    "@esbuild/netbsd-arm64": "0.25.0",
+    "@esbuild/android-arm64": "0.25.0",
+    "@esbuild/freebsd-arm64": "0.25.0",
+    "@esbuild/linux-loong64": "0.25.0",
+    "@esbuild/linux-riscv64": "0.25.0",
+    "@esbuild/openbsd-arm64": "0.25.0",
+    "@esbuild/linux-mips64el": "0.25.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/esbuild_0.25.0_1738983788067_0.743121953471561",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.25.1": {
+   "name": "esbuild",
+   "version": "0.25.1",
    "description": "An extremely fast JavaScript and CSS bundler and minifier.",
    "repository": {
     "type": "git",
@@ -33691,51 +33780,51 @@
     "esbuild": "bin/esbuild"
    },
    "optionalDependencies": {
-    "@esbuild/aix-ppc64": "0.25.0",
-    "@esbuild/android-arm": "0.25.0",
-    "@esbuild/android-arm64": "0.25.0",
-    "@esbuild/android-x64": "0.25.0",
-    "@esbuild/darwin-arm64": "0.25.0",
-    "@esbuild/darwin-x64": "0.25.0",
-    "@esbuild/freebsd-arm64": "0.25.0",
-    "@esbuild/freebsd-x64": "0.25.0",
-    "@esbuild/linux-arm": "0.25.0",
-    "@esbuild/linux-arm64": "0.25.0",
-    "@esbuild/linux-ia32": "0.25.0",
-    "@esbuild/linux-loong64": "0.25.0",
-    "@esbuild/linux-mips64el": "0.25.0",
-    "@esbuild/linux-ppc64": "0.25.0",
-    "@esbuild/linux-riscv64": "0.25.0",
-    "@esbuild/linux-s390x": "0.25.0",
-    "@esbuild/linux-x64": "0.25.0",
-    "@esbuild/netbsd-arm64": "0.25.0",
-    "@esbuild/netbsd-x64": "0.25.0",
-    "@esbuild/openbsd-arm64": "0.25.0",
-    "@esbuild/openbsd-x64": "0.25.0",
-    "@esbuild/sunos-x64": "0.25.0",
-    "@esbuild/win32-arm64": "0.25.0",
-    "@esbuild/win32-ia32": "0.25.0",
-    "@esbuild/win32-x64": "0.25.0"
+    "@esbuild/aix-ppc64": "0.25.1",
+    "@esbuild/android-arm": "0.25.1",
+    "@esbuild/android-arm64": "0.25.1",
+    "@esbuild/android-x64": "0.25.1",
+    "@esbuild/darwin-arm64": "0.25.1",
+    "@esbuild/darwin-x64": "0.25.1",
+    "@esbuild/freebsd-arm64": "0.25.1",
+    "@esbuild/freebsd-x64": "0.25.1",
+    "@esbuild/linux-arm": "0.25.1",
+    "@esbuild/linux-arm64": "0.25.1",
+    "@esbuild/linux-ia32": "0.25.1",
+    "@esbuild/linux-loong64": "0.25.1",
+    "@esbuild/linux-mips64el": "0.25.1",
+    "@esbuild/linux-ppc64": "0.25.1",
+    "@esbuild/linux-riscv64": "0.25.1",
+    "@esbuild/linux-s390x": "0.25.1",
+    "@esbuild/linux-x64": "0.25.1",
+    "@esbuild/netbsd-arm64": "0.25.1",
+    "@esbuild/netbsd-x64": "0.25.1",
+    "@esbuild/openbsd-arm64": "0.25.1",
+    "@esbuild/openbsd-x64": "0.25.1",
+    "@esbuild/sunos-x64": "0.25.1",
+    "@esbuild/win32-arm64": "0.25.1",
+    "@esbuild/win32-ia32": "0.25.1",
+    "@esbuild/win32-x64": "0.25.1"
    },
    "license": "MIT",
-   "_id": "esbuild@0.25.0",
-   "gitHead": "e9174d671b1882758cd32ac5e146200f5bee3e45",
+   "_id": "esbuild@0.25.1",
+   "gitHead": "6bfc1c13b4d986b86e8bc2035f00c337b0c1d007",
    "bugs": {
     "url": "https://github.com/evanw/esbuild/issues"
    },
    "homepage": "https://github.com/evanw/esbuild#readme",
-   "_nodeVersion": "22.0.0",
-   "_npmVersion": "10.5.1",
+   "_nodeVersion": "22.14.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-BXq5mqc8ltbaN34cDqWuYKyNhX8D/Z0J1xdtdQ8UcIIIyJyz+ZMKUt58tF3SrZ85jcfN/PZYhjR5uDQAYNVbuw==",
-    "shasum": "0de1787a77206c5a79eeb634a623d39b5006ce92",
-    "tarball": "http://localhost:3000/esbuild/-/esbuild-0.25.0.tgz",
+    "integrity": "sha512-BGO5LtrGC7vxnqucAe/rmvKdJllfGaYWdyABvyMoXQlfYMb2bbRuReWR5tEGE//4LcNJj9XrkovTqNYRFZHAMQ==",
+    "shasum": "a16b8d070b6ad4871935277bda6ccfe852e3fa2f",
+    "tarball": "http://localhost:3000/esbuild/-/esbuild-0.25.1.tgz",
     "fileCount": 7,
     "unpackedSize": 133970,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEQCIFm+Yv2/9szmF8MKD/Y2EgvxnUl0LflBosiNtuGcDPQwAiAkaU5G0oX8mKTiZFP9S0aYJXWLamCgE9OmCxBnLWjnFQ=="
+      "sig": "MEQCIHr+ZjGF4q80VHirpRJ5esfA3YDTieKbfhOlVnAyWH7HAiAminJZXklVhy6nPjTkaUVXx2SzQXmM6sXnCAJsxl2Yjg=="
      }
     ]
    },
@@ -33756,14 +33845,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/esbuild_0.25.0_1738983788067_0.743121953471561"
+    "tmp": "tmp/esbuild_0.25.1_1741578384711_0.2855189029205627"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-11-26T05:52:58.272Z",
-  "modified": "2025-02-08T03:03:08.436Z",
+  "modified": "2025-03-10T03:46:25.053Z",
   "0.0.0": "2017-11-26T05:52:58.272Z",
   "0.0.11": "2020-04-07T04:34:26.497Z",
   "0.0.12": "2020-04-07T04:35:54.624Z",
@@ -34222,7 +34311,8 @@
   "0.24.0": "2024-09-22T02:07:11.320Z",
   "0.24.1": "2024-12-20T05:42:35.088Z",
   "0.24.2": "2024-12-20T17:57:44.621Z",
-  "0.25.0": "2025-02-08T03:03:08.256Z"
+  "0.25.0": "2025-02-08T03:03:08.256Z",
+  "0.25.1": "2025-03-10T03:46:24.891Z"
  },
  "bugs": {
   "url": "https://github.com/evanw/esbuild/issues"

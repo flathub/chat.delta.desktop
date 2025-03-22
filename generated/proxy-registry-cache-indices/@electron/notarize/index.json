@@ -1,9 +1,9 @@
 {
  "_id": "@electron/notarize",
- "_rev": "13-2f9b04e8f3cb0ab7b7649ac8912c1b80",
+ "_rev": "16-f6fb66afc5e50628a74c06f46ce48780",
  "name": "@electron/notarize",
  "dist-tags": {
-  "latest": "2.5.0"
+  "latest": "3.0.1"
  },
  "versions": {
   "0.0.0": {
@@ -818,8 +818,178 @@
   "2.5.0": {
    "name": "@electron/notarize",
    "version": "2.5.0",
-   "description": "Notarize your Electron app",
+   "author": {
+    "name": "Samuel Attard"
+   },
+   "license": "MIT",
+   "_id": "@electron/notarize@2.5.0",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/notarize#readme",
+   "bugs": {
+    "url": "https://github.com/electron/notarize/issues"
+   },
+   "dist": {
+    "shasum": "d4d25356adfa29df4a76bd64a8bd347237cd251e",
+    "tarball": "http://localhost:3000/@electron/notarize/-/notarize-2.5.0.tgz",
+    "fileCount": 30,
+    "integrity": "sha512-jNT8nwH1f9X5GEITXaQ8IF/KdskvIkOFfB2CvwumsveVidzpSc+mvhhTMdAGSYF3O+Nq49lJ7y+ssODRXu06+A==",
+    "signatures": [
+     {
+      "sig": "MEUCIGf+dglBSW9cvTOvpGeSYwqIBf/reinZ6+HmYeaETqIDAiEA6jkVpEQi8VHrRHS2krQXObinG0f5viMdLEbxprF3Tc0=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 62033
+   },
    "main": "lib/index.js",
+   "engines": {
+    "node": ">= 10.0.0"
+   },
+   "gitHead": "268fa302d3e8f330fff069729dad8347a15490dd",
+   "scripts": {
+    "lint": "prettier --check \"src/**/*.ts\"",
+    "test": "jest",
+    "build": "tsc",
+    "prepare": "yarn build"
+   },
+   "typings": "lib/index.d.ts",
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/notarize.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Notarize your Electron app",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "debug": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "promise-retry": "^2.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0",
+    "typedoc": "~0.25.13",
+    "prettier": "^1.18.2",
+    "typescript": "4.9.3",
+    "@types/jest": "^29.0.0",
+    "@types/node": "^13.7.7",
+    "@types/debug": "^4.1.5",
+    "@types/fs-extra": "^9.0.1",
+    "@types/promise-retry": "^1.1.3",
+    "typedoc-plugin-missing-exports": "^2.2.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/notarize_2.5.0_1726594264355_0.79507759601837",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "3.0.0": {
+   "name": "@electron/notarize",
+   "version": "3.0.0",
+   "author": {
+    "name": "Samuel Attard"
+   },
+   "license": "MIT",
+   "_id": "@electron/notarize@3.0.0",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/notarize#readme",
+   "bugs": {
+    "url": "https://github.com/electron/notarize/issues"
+   },
+   "dist": {
+    "shasum": "25d43cafab1bf35dc2a183bd5fe0d1cf1c4b7a07",
+    "tarball": "http://localhost:3000/@electron/notarize/-/notarize-3.0.0.tgz",
+    "fileCount": 27,
+    "integrity": "sha512-4MRxovhZrVfm7wc6nqv5ZId1LM379b7vUJThLvwJjCmqgf+cHMoH3RrBOg8WMS8tgL6g1RwVv6cbTbpcSXJVog==",
+    "signatures": [
+     {
+      "sig": "MEQCICMTMnIyT3Idiey96Wt9FroIIs5k0i9LIej+5TdIseK1AiBDOxx2+QVaPTFXoD9A9jJ9EAh5xuphYDaRFKfQaGWHYA==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fnotarize@3.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 41765
+   },
+   "type": "module",
+   "engines": {
+    "node": ">= 22.12.0"
+   },
+   "exports": "./lib/index.js",
+   "gitHead": "d914d04c31313cf4c8db6a14dfc1fccbd5686247",
+   "scripts": {
+    "lint": "prettier --check \"src/**/*.ts\"",
+    "test": "vitest run",
+    "build": "tsc",
+    "prepare": "yarn build",
+    "build:docs": "npx typedoc",
+    "prettier:write": "prettier --write \"src/**/*.ts\""
+   },
+   "typings": "lib/index.d.ts",
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/notarize.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Notarize your Electron app",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "debug": "^4.4.0",
+    "graceful-fs": "^4.2.11",
+    "promise-retry": "^2.0.1"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "vitest": "^3.0.8",
+    "typedoc": "~0.25.13",
+    "prettier": "^3.4.2",
+    "typescript": "~5.4.5",
+    "@types/node": "~22.10.7",
+    "@types/debug": "^4.1.12",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/graceful-fs": "^4.1.9",
+    "@types/promise-retry": "^1.1.3",
+    "typedoc-plugin-missing-exports": "^2.2.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/notarize_3.0.0_1741973094924_0.36835167141069003",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "3.0.1": {
+   "name": "@electron/notarize",
+   "version": "3.0.1",
+   "description": "Notarize your Electron app",
+   "type": "module",
+   "exports": "./lib/index.js",
    "typings": "lib/index.d.ts",
    "author": {
     "name": "Samuel Attard"
@@ -835,45 +1005,53 @@
    },
    "scripts": {
     "build": "tsc",
+    "build:docs": "npx typedoc",
     "lint": "prettier --check \"src/**/*.ts\"",
+    "prettier:write": "prettier --write \"src/**/*.ts\"",
     "prepare": "yarn build",
-    "test": "jest"
+    "test": "vitest run"
    },
    "engines": {
-    "node": ">= 10.0.0"
+    "node": ">= 22.12.0"
+   },
+   "publishConfig": {
+    "provenance": true
    },
    "devDependencies": {
-    "@types/debug": "^4.1.5",
-    "@types/fs-extra": "^9.0.1",
-    "@types/jest": "^29.0.0",
-    "@types/node": "^13.7.7",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/debug": "^4.1.12",
+    "@types/node": "~22.10.7",
     "@types/promise-retry": "^1.1.3",
-    "jest": "^29.0.0",
-    "prettier": "^1.18.2",
-    "ts-jest": "^29.0.0",
+    "prettier": "^3.4.2",
     "typedoc": "~0.25.13",
     "typedoc-plugin-missing-exports": "^2.2.0",
-    "typescript": "4.9.3"
+    "typescript": "~5.4.5",
+    "vitest": "^3.0.8"
    },
    "dependencies": {
-    "debug": "^4.1.1",
-    "fs-extra": "^9.0.1",
+    "debug": "^4.4.0",
     "promise-retry": "^2.0.1"
    },
-   "_id": "@electron/notarize@2.5.0",
-   "gitHead": "268fa302d3e8f330fff069729dad8347a15490dd",
-   "_nodeVersion": "20.17.0",
-   "_npmVersion": "10.8.2",
+   "_id": "@electron/notarize@3.0.1",
+   "gitHead": "451b6e7fc7a8130b8d14ff5a04ffd1a28dbf250f",
+   "_nodeVersion": "22.12.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-jNT8nwH1f9X5GEITXaQ8IF/KdskvIkOFfB2CvwumsveVidzpSc+mvhhTMdAGSYF3O+Nq49lJ7y+ssODRXu06+A==",
-    "shasum": "d4d25356adfa29df4a76bd64a8bd347237cd251e",
-    "tarball": "http://localhost:3000/@electron/notarize/-/notarize-2.5.0.tgz",
-    "fileCount": 30,
-    "unpackedSize": 62033,
+    "integrity": "sha512-5xzcOwvMGNjkSk7s0sPx4XcKWei9FYk4f2S5NkSorWW0ce5yktTOtlPa0W5yQHcREILh+C3JdH+t+M637g9TmQ==",
+    "shasum": "ad766f1ed6c2fd4cd4520f91c116fa93949555ca",
+    "tarball": "http://localhost:3000/@electron/notarize/-/notarize-3.0.1.tgz",
+    "fileCount": 27,
+    "unpackedSize": 41518,
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fnotarize@3.0.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIGf+dglBSW9cvTOvpGeSYwqIBf/reinZ6+HmYeaETqIDAiEA6jkVpEQi8VHrRHS2krQXObinG0f5viMdLEbxprF3Tc0="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQC9OXhPg9FaZIByYeeUTwfpcI9aPSy+LuB0FI+zl7RVHQIhAL9XUWm6MNRuSNLHPWVi2cgrEgHGxynFa9bz41K694lF"
      }
     ]
    },
@@ -889,15 +1067,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/notarize_2.5.0_1726594264355_0.79507759601837"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/notarize_3.0.1_1742596654611_0.8289325882463165"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2022-10-20T23:19:43.256Z",
-  "modified": "2024-09-17T17:31:04.753Z",
+  "modified": "2025-03-21T22:37:35.332Z",
   "0.0.0": "2022-10-20T23:19:43.483Z",
   "1.2.3": "2022-10-20T23:22:39.937Z",
   "1.2.4": "2023-06-14T17:43:14.506Z",
@@ -909,7 +1087,9 @@
   "2.3.1": "2024-05-14T18:54:42.314Z",
   "2.3.2": "2024-05-14T18:59:46.685Z",
   "2.4.0": "2024-08-13T21:34:52.794Z",
-  "2.5.0": "2024-09-17T17:31:04.555Z"
+  "2.5.0": "2024-09-17T17:31:04.555Z",
+  "3.0.0": "2025-03-14T17:24:55.181Z",
+  "3.0.1": "2025-03-21T22:37:34.785Z"
  },
  "bugs": {
   "url": "https://github.com/electron/notarize/issues"
@@ -930,6 +1110,6 @@
    "email": "info+cfa-npm@electronjs.org"
   }
  ],
- "readme": "Electron Notarize\n-----------\n\n> Notarize your Electron apps seamlessly for macOS\n\n[![CircleCI status](https://circleci.com/gh/electron/notarize.svg?style=shield)](https://circleci.com/gh/electron/notarize)\n[![NPM package](https://img.shields.io/npm/v/@electron/notarize)](https://npm.im/@electron/notarize)\n\n## Installation\n\n```bash\nnpm install @electron/notarize --save-dev\n```\n\n## What is app \"notarization\"?\n\nFrom Apple's docs in XCode:\n\n> A notarized app is a macOS app that was uploaded to Apple for processing before it was distributed.\n> When you export a notarized app from Xcode, it code signs the app with a Developer ID certificate\n> and staples a ticket from Apple to the app. The ticket confirms that you previously uploaded the app to Apple.\n\n> On macOS 10.14 and later, the user can launch notarized apps when Gatekeeper is enabled.\n> When the user first launches a notarized app, Gatekeeper looks for the app’s ticket online.\n> If the user is offline, Gatekeeper looks for the ticket that was stapled to the app.\n\nAs macOS 10.15 (Catalina), Apple has made notarization a hard requirement for all applications\ndistributed outside of the Mac App Store. App Store applications do not need to be notarized.\n\n## Prerequisites\n\nFor notarization, you need the following things:\n\n1. Xcode 13 or later installed on your Mac.\n1. An [Apple Developer](https://developer.apple.com/) account.\n1. [An app-specific password for your ADC account’s Apple ID](https://support.apple.com/HT204397).\n1. Your app may need to be signed with `hardenedRuntime: true` option, with the `com.apple.security.cs.allow-jit` entitlement.\n\n> [!NOTE]\n> If you are using Electron 11 or below, you must add the `com.apple.security.cs.allow-unsigned-executable-memory` entitlement too.\n> When using version 12+, this entitlement should not be applied as it increases your app's attack surface.\n\n### Notarization on older macOS versions\n\nXcode 13 is available from macOS 11.3, but notarization can be performed on systems down to macOS 10.15\n(see [TN3147](https://developer.apple.com/documentation/technotes/tn3147-migrating-to-the-latest-notarization-tool#Enable-notarization-on-an-older-version-of-macOS) for more information).\n\nTo achieve this, you can copy notarytool binary from a newer macOS version and provide its path as `notarytoolPath` option.\n\n## API\n\n`@electron/notarize` exposes a single `notarize` function that accepts the following parameters:\n* `appPath` — the absolute path to your codesigned and packaged Electron application.\n* `notarytoolPath` - String (optional) - Path of the notarytool binary ([more details](#notarization-on-older-macos-versions)) \n* additional options required for authenticating your Apple ID (see below)\n\nThe method returns a void Promise once app notarization is complete. Please note that notarization may take\nmany minutes.\n\nIf the notarization process is unusually log for your application, see Apple Developer's docs to\n[Avoid long notarization response times and size limits](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution/customizing_the_notarization_workflow#3561440).\n\n### Usage with app-specific password\n\nYou can generate an [app-specific password](https://support.apple.com/en-us/102654) for your Apple ID\nto notarize your Electron applications.\n\nThis method also requires you to specify the [Team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id/)\nof the Developer Team you want to notarize under. An Apple ID may be part of multiple Teams.\n\n```javascript\nimport { notarize } from '@electron/notarize';\n\nawait notarize({\n  appPath,\n  appleId, // Login name of your Apple Developer account\n  appleIdPassword, // App-specific password\n  teamId, // Team ID for your developer team\n});\n```\n\n> [!IMPORTANT]\n> **Never hard code your app-specific password into your packaging scripts.** Use an environment\n> variable at a minimum.\n\n### Usage with App Store Connect API key\n\nAlternatively, you can also authenticate via JSON Web Token (JWT) with App Store Connect.\n\nYou can obtain an API key from [App Store Connect](https://appstoreconnect.apple.com/access/integrations/api).\nCreate a **Team Key** (not an _Individual Key_) with **App Manager** access.\n\nNote down the Issuer ID (UUID format) and Key ID (10-character alphanumeric string),\nand download the `.p8` API key file (`AuthKey_<appleApiKeyId>.p8`).\nFor security purposes, the private key can only be downloaded once.\n\nProvide the absolute path to your API key as the `appleApiKey` argument.\n\n```javascript\nimport { notarize } from '@electron/notarize';\n\nawait notarize({\n  appPath,\n  appleApiKey, // Absolute path to API key (e.g. `/path/to/AuthKey_X0X0X0X0X0.p8`)\n  appleApiIssuer, // Issuer ID (e.g. `d5631714-a680-4b4b-8156-b4ed624c0845`)\n});\n```\n\n### Usage with Keychain credentials\n\nAs an alternative to passing authentication options, you can also store your authentication\ncredentials (for both API key and app-specific password strategies) in the macOS Keychain\nvia the `xcrun notarytool` command-line utility.\n\nThis method has the advantage of validating your notarization credentials before submitting\nyour application for notarization.\n\nFor example:\n\n```sh\n# App-specific password strategy\nxcrun notarytool store-credentials \"my-app-password-profile\"\n  --apple-id \"<AppleID>\"\n  --team-id <DeveloperTeamID>\n  --password <app_specific_password>\n```\n\n```sh\n# App Store Connect API key strategy\nxcrun notarytool store-credentials \"my-api-key-profile\"\n  --key \"<PathToAPIKey>\"\n  --key-id <KeyID>\n  --issuer <IssuerID>\n```\n\nSuccessful storage of your credentials will look like this:\n\n```\nThis process stores your credentials securely in the Keychain. You reference these credentials later using a profile name.\n\nValidating your credentials...\nSuccess. Credentials validated.\nCredentials saved to Keychain.\nTo use them, specify `--keychain-profile \"my-api-key-profile\"`\n```\n\nAfter successfully storing your credentials, pass the keychain profile name into\nthe `keychainProfile` parameter.\n\n```javascript\nimport { notarize } from '@electron/notarize';\n\nawait notarize({\n  appPath,\n  keychainProfile,\n});\n```\n## Troubleshooting\n\n### Debug logging\n\n[`debug`](https://www.npmjs.com/package/debug) is used to display logs and messages.\nRun your notarization scripts with the `DEBUG=electron-notarize*` environment variable to log additional\ndebug information from this module.\n\n### Validating credentials\n\nWhen notarizing your application, you may run into issues with validating your notarization\ncredentials.\n\n```\nError: HTTP status code: 401. Invalid credentials. Username or password is incorrect.\nUse the app-specific password generated at appleid.apple.com. Ensure that all authentication arguments are correct.\n```\n\n[Storing your credentials in Keychain](#usage-with-keychain-credentials) will validate your credentials before\neven GitHub.\n\n### Validating app notarization\n\nTo validate that notarization worked, you can use the `stapler` command-line utility:\n\n```sh\nstapler validate path/to/notarized.app\n```\n\n### Apple documentation\n\nApple also provides additional debugging documentation on\n[Resolving common notarization issues](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution/resolving_common_notarization_issues).\n",
+ "readme": "Electron Notarize\n-----------\n\n> Notarize your Electron apps seamlessly for macOS\n\n[![Test](https://github.com/electron/notarize/actions/workflows/test.yml/badge.svg)](https://github.com/electron/notarize/actions/workflows/test.yml)\n[![NPM package](https://img.shields.io/npm/v/@electron/notarize)](https://npm.im/@electron/notarize)\n\n## Installation\n\n```bash\nnpm install @electron/notarize --save-dev\n```\n\n## What is app \"notarization\"?\n\nFrom Apple's docs in XCode:\n\n> A notarized app is a macOS app that was uploaded to Apple for processing before it was distributed.\n> When you export a notarized app from Xcode, it code signs the app with a Developer ID certificate\n> and staples a ticket from Apple to the app. The ticket confirms that you previously uploaded the app to Apple.\n\n> On macOS 10.14 and later, the user can launch notarized apps when Gatekeeper is enabled.\n> When the user first launches a notarized app, Gatekeeper looks for the app’s ticket online.\n> If the user is offline, Gatekeeper looks for the ticket that was stapled to the app.\n\nAs macOS 10.15 (Catalina), Apple has made notarization a hard requirement for all applications\ndistributed outside of the Mac App Store. App Store applications do not need to be notarized.\n\n## Prerequisites\n\nFor notarization, you need the following things:\n\n1. Xcode 13 or later installed on your Mac.\n1. An [Apple Developer](https://developer.apple.com/) account.\n1. [An app-specific password for your ADC account’s Apple ID](https://support.apple.com/HT204397).\n1. Your app may need to be signed with `hardenedRuntime: true` option, with the `com.apple.security.cs.allow-jit` entitlement.\n\n> [!NOTE]\n> If you are using Electron 11 or below, you must add the `com.apple.security.cs.allow-unsigned-executable-memory` entitlement too.\n> When using version 12+, this entitlement should not be applied as it increases your app's attack surface.\n\n\n## API\n\n`@electron/notarize` exposes a single `notarize` function that accepts the following parameters:\n* `appPath` — the absolute path to your codesigned and packaged Electron application.\n* `notarytoolPath` - String (optional) - Path to a custom notarytool binary ([more details](#custom-notarytool)) \n* additional options required for authenticating your Apple ID (see below)\n\nThe method returns a void Promise once app notarization is complete. Please note that notarization may take\nmany minutes.\n\nIf the notarization process is unusually log for your application, see Apple Developer's docs to\n[Avoid long notarization response times and size limits](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution/customizing_the_notarization_workflow#3561440).\n\n### Usage with app-specific password\n\nYou can generate an [app-specific password](https://support.apple.com/en-us/102654) for your Apple ID\nto notarize your Electron applications.\n\nThis method also requires you to specify the [Team ID](https://developer.apple.com/help/account/manage-your-team/locate-your-team-id/)\nof the Developer Team you want to notarize under. An Apple ID may be part of multiple Teams.\n\n```javascript\nimport { notarize } from '@electron/notarize';\n\nawait notarize({\n  appPath,\n  appleId, // Login name of your Apple Developer account\n  appleIdPassword, // App-specific password\n  teamId, // Team ID for your developer team\n});\n```\n\n> [!IMPORTANT]\n> **Never hard code your app-specific password into your packaging scripts.** Use an environment\n> variable at a minimum.\n\n### Usage with App Store Connect API key\n\nAlternatively, you can also authenticate via JSON Web Token (JWT) with App Store Connect.\n\nYou can obtain an API key from [App Store Connect](https://appstoreconnect.apple.com/access/integrations/api).\nCreate a **Team Key** (not an _Individual Key_) with **App Manager** access.\n\nNote down the Issuer ID (UUID format) and Key ID (10-character alphanumeric string),\nand download the `.p8` API key file (`AuthKey_<appleApiKeyId>.p8`).\nFor security purposes, the private key can only be downloaded once.\n\nProvide the absolute path to your API key as the `appleApiKey` argument.\n\n```javascript\nimport { notarize } from '@electron/notarize';\n\nawait notarize({\n  appPath,\n  appleApiKey, // Absolute path to API key (e.g. `/path/to/AuthKey_X0X0X0X0X0.p8`)\n  appleApiIssuer, // Issuer ID (e.g. `d5631714-a680-4b4b-8156-b4ed624c0845`)\n});\n```\n\n### Usage with Keychain credentials\n\nAs an alternative to passing authentication options, you can also store your authentication\ncredentials (for both API key and app-specific password strategies) in the macOS Keychain\nvia the `xcrun notarytool` command-line utility.\n\nThis method has the advantage of validating your notarization credentials before submitting\nyour application for notarization.\n\nFor example:\n\n```sh\n# App-specific password strategy\nxcrun notarytool store-credentials \"my-app-password-profile\"\n  --apple-id \"<AppleID>\"\n  --team-id <DeveloperTeamID>\n  --password <app_specific_password>\n```\n\n```sh\n# App Store Connect API key strategy\nxcrun notarytool store-credentials \"my-api-key-profile\"\n  --key \"<PathToAPIKey>\"\n  --key-id <KeyID>\n  --issuer <IssuerID>\n```\n\nSuccessful storage of your credentials will look like this:\n\n```\nThis process stores your credentials securely in the Keychain. You reference these credentials later using a profile name.\n\nValidating your credentials...\nSuccess. Credentials validated.\nCredentials saved to Keychain.\nTo use them, specify `--keychain-profile \"my-api-key-profile\"`\n```\n\nAfter successfully storing your credentials, pass the keychain profile name into\nthe `keychainProfile` parameter.\n\n```javascript\nimport { notarize } from '@electron/notarize';\n\nawait notarize({\n  appPath,\n  keychainProfile,\n});\n```\n\n### Custom notarytool\n\nYou can provide a path to a custom `notarytool`. This module allows this option to enable unique edge cases - but this use case is _explicitly unsupported_. \n\n## Troubleshooting\n\n### Debug logging\n\n[`debug`](https://www.npmjs.com/package/debug) is used to display logs and messages.\nRun your notarization scripts with the `DEBUG=electron-notarize*` environment variable to log additional\ndebug information from this module.\n\n### Validating credentials\n\nWhen notarizing your application, you may run into issues with validating your notarization\ncredentials.\n\n```\nError: HTTP status code: 401. Invalid credentials. Username or password is incorrect.\nUse the app-specific password generated at appleid.apple.com. Ensure that all authentication arguments are correct.\n```\n\n[Storing your credentials in Keychain](#usage-with-keychain-credentials) will validate your credentials before\neven GitHub.\n\n### Validating app notarization\n\nTo validate that notarization worked, you can use the `stapler` command-line utility:\n\n```sh\nstapler validate path/to/notarized.app\n```\n\n### Apple documentation\n\nApple also provides additional debugging documentation on\n[Resolving common notarization issues](https://developer.apple.com/documentation/security/notarizing_macos_software_before_distribution/resolving_common_notarization_issues).\n",
  "readmeFilename": "README.md"
 }

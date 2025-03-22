@@ -1,9 +1,9 @@
 {
  "_id": "@eslint/eslintrc",
- "_rev": "48-b8558d09806ba9594e138d580a20a5a1",
+ "_rev": "50-70fc32b72436167b072893e5229f66b7",
  "name": "@eslint/eslintrc",
  "dist-tags": {
-  "latest": "3.3.0"
+  "latest": "3.3.1"
  },
  "versions": {
   "0.1.0": {
@@ -4909,10 +4909,135 @@
   "3.3.0": {
    "name": "@eslint/eslintrc",
    "version": "3.3.0",
+   "keywords": [
+    "ESLint",
+    "ESLintRC",
+    "Configuration"
+   ],
+   "author": {
+    "name": "Nicholas C. Zakas"
+   },
+   "license": "MIT",
+   "_id": "@eslint/eslintrc@3.3.0",
+   "maintainers": [
+    {
+     "name": "openjsfoundation",
+     "email": "npm@openjsf.org"
+    },
+    {
+     "name": "eslintbot",
+     "email": "nicholas@eslint.org"
+    }
+   ],
+   "homepage": "https://github.com/eslint/eslintrc#readme",
+   "bugs": {
+    "url": "https://github.com/eslint/eslintrc/issues"
+   },
+   "dist": {
+    "shasum": "96a558f45842989cca7ea1ecd785ad5491193846",
+    "tarball": "http://localhost:3000/@eslint/eslintrc/-/eslintrc-3.3.0.tgz",
+    "fileCount": 31,
+    "integrity": "sha512-yaVPAiNAalnCZedKLdR21GOGILMLKPyqSLWaAjQFvYA2i/ciDi8ArYVr69Anohb6cH2Ukhqti4aFnYyPm8wdwQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDPiiPKpBzIumV56cakX8W0hzzsDvl/5s+C6vet19iztwIhAJ4mWS81N961XDE1OYZ6u2NBM3nl+k/kNU4MFS4YRsS6",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2feslintrc@3.3.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 690735
+   },
+   "main": "./dist/eslintrc.cjs",
+   "type": "module",
+   "types": "./dist/eslintrc.d.ts",
+   "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+   },
+   "exports": {
+    ".": {
+     "types": "./lib/types/index.d.ts",
+     "import": "./lib/index.js",
+     "require": "./dist/eslintrc.cjs"
+    },
+    "./universal": {
+     "import": "./lib/index-universal.js",
+     "require": "./dist/eslintrc-universal.cjs"
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": "https://opencollective.com/eslint",
+   "gitHead": "6a8814ccaec9ce6b59f388527ba56c25d759042d",
+   "scripts": {
+    "lint": "eslint . --report-unused-disable-directives",
+    "test": "mocha -R progress -c 'tests/lib/*.cjs' && c8 mocha -R progress -c 'tests/lib/**/*.js'",
+    "build": "rollup -c && node -e \"fs.copyFileSync('./lib/types/index.d.ts', './dist/eslintrc.d.cts')\"",
+    "prepare": "npm run build",
+    "lint:fix": "npm run lint -- --fix",
+    "test:types": "tsc -p tests/lib/types/tsconfig.json",
+    "release:publish": "eslint-publish-release",
+    "release:generate:rc": "eslint-generate-prerelease rc",
+    "release:generate:beta": "eslint-generate-prerelease beta",
+    "release:generate:alpha": "eslint-generate-prerelease alpha",
+    "release:generate:latest": "eslint-generate-release"
+   },
+   "_npmUser": {
+    "name": "eslintbot",
+    "email": "nicholas@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint/eslintrc.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "The legacy ESLintRC config file format for ESLint",
+   "directories": {},
+   "_nodeVersion": "22.13.1",
+   "dependencies": {
+    "ajv": "^6.12.4",
+    "debug": "^4.3.2",
+    "espree": "^10.0.1",
+    "ignore": "^5.2.0",
+    "globals": "^14.0.0",
+    "js-yaml": "^4.1.0",
+    "minimatch": "^3.1.2",
+    "import-fresh": "^3.2.1",
+    "strip-json-comments": "^3.1.1"
+   },
+   "publishConfig": {
+    "access": "public"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "^7.7.3",
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3",
+    "sinon": "^11.1.2",
+    "eslint": "^9.20.1",
+    "rollup": "^2.70.1",
+    "shelljs": "^0.8.5",
+    "temp-dir": "^2.0.0",
+    "typescript": "^5.7.3",
+    "fs-teardown": "^0.1.3",
+    "eslint-release": "^3.2.0",
+    "eslint-config-eslint": "^11.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/eslintrc_3.3.0_1740171838672_0.8201652884309725",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "3.3.1": {
+   "name": "@eslint/eslintrc",
+   "version": "3.3.1",
    "description": "The legacy ESLintRC config file format for ESLint",
    "type": "module",
    "main": "./dist/eslintrc.cjs",
-   "types": "./dist/eslintrc.d.ts",
+   "types": "./dist/eslintrc.d.cts",
    "exports": {
     ".": {
      "import": "./lib/index.js",
@@ -4987,18 +5112,18 @@
    "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
    },
-   "_id": "@eslint/eslintrc@3.3.0",
-   "gitHead": "6a8814ccaec9ce6b59f388527ba56c25d759042d",
-   "_nodeVersion": "22.13.1",
+   "_id": "@eslint/eslintrc@3.3.1",
+   "gitHead": "556e80029f01d07758ab1f5801bc9421bca4b072",
+   "_nodeVersion": "22.14.0",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-yaVPAiNAalnCZedKLdR21GOGILMLKPyqSLWaAjQFvYA2i/ciDi8ArYVr69Anohb6cH2Ukhqti4aFnYyPm8wdwQ==",
-    "shasum": "96a558f45842989cca7ea1ecd785ad5491193846",
-    "tarball": "http://localhost:3000/@eslint/eslintrc/-/eslintrc-3.3.0.tgz",
+    "integrity": "sha512-gtF186CXhIl1p4pJNGZw8Yc6RlshoePRvE0X91oPGb3vZ8pM3qOS9W9NGPat9LziaBV7XrJWGylNQXkGcnM3IQ==",
+    "shasum": "e55f7f1dd400600dd066dbba349c4c0bac916964",
+    "tarball": "http://localhost:3000/@eslint/eslintrc/-/eslintrc-3.3.1.tgz",
     "fileCount": 31,
-    "unpackedSize": 690735,
+    "unpackedSize": 690806,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2feslintrc@3.3.0",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2feslintrc@3.3.1",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -5006,13 +5131,13 @@
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEYCIQDPiiPKpBzIumV56cakX8W0hzzsDvl/5s+C6vet19iztwIhAJ4mWS81N961XDE1OYZ6u2NBM3nl+k/kNU4MFS4YRsS6"
+      "sig": "MEUCIQCu1TP/w3ic5X9YSQnYuSfN2gcyHe7CKm4jgPfbQAbExgIgR9FPxJm8w3zT+XqHLvWTNMmvz5Pt72L5w4jPspVXZoc="
      }
     ]
    },
    "_npmUser": {
     "name": "eslintbot",
-    "email": "nicholas@eslint.org"
+    "email": "contact@eslint.org"
    },
    "directories": {},
    "maintainers": [
@@ -5022,19 +5147,19 @@
     },
     {
      "name": "eslintbot",
-     "email": "nicholas@eslint.org"
+     "email": "contact@eslint.org"
     }
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/eslintrc_3.3.0_1740171838672_0.8201652884309725"
+    "tmp": "tmp/eslintrc_3.3.1_1742587674433_0.665031272667042"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2020-08-24T19:00:15.734Z",
-  "modified": "2025-02-21T21:03:59.306Z",
+  "modified": "2025-03-21T20:07:55.125Z",
   "0.1.0": "2020-08-24T19:00:16.089Z",
   "0.0.1": "2020-09-01T18:02:39.682Z",
   "0.1.1": "2020-09-01T18:24:29.876Z",
@@ -5079,7 +5204,8 @@
   "3.0.2": "2024-02-23T21:22:35.583Z",
   "3.1.0": "2024-05-17T20:08:41.976Z",
   "3.2.0": "2024-11-15T16:34:58.562Z",
-  "3.3.0": "2025-02-21T21:03:58.860Z"
+  "3.3.0": "2025-02-21T21:03:58.860Z",
+  "3.3.1": "2025-03-21T20:07:54.663Z"
  },
  "bugs": {
   "url": "https://github.com/eslint/eslintrc/issues"
@@ -5106,10 +5232,10 @@
   },
   {
    "name": "eslintbot",
-   "email": "nicholas@eslint.org"
+   "email": "contact@eslint.org"
   }
  ],
- "readme": "# ESLintRC Library\n\nThis repository contains the legacy ESLintRC configuration file format for ESLint. This package is not intended for use outside of the ESLint ecosystem. It is ESLint-specific and not intended for use in other programs.\n\n**Note:** This package is frozen except for critical bug fixes as ESLint moves to a new config system.\n\n## Installation\n\nYou can install the package as follows:\n\n```\nnpm install @eslint/eslintrc --save-dev\n\n# or\n\nyarn add @eslint/eslintrc -D\n```\n\n## Usage (ESM)\n\nThe primary class in this package is `FlatCompat`, which is a utility to translate ESLintRC-style configs into flat configs. Here's how you use it inside of your `eslint.config.js` file:\n\n```js\nimport { FlatCompat } from \"@eslint/eslintrc\";\nimport js from \"@eslint/js\";\nimport path from \"path\";\nimport { fileURLToPath } from \"url\";\n\n// mimic CommonJS variables -- not needed if using CommonJS\nconst __filename = fileURLToPath(import.meta.url);\nconst __dirname = path.dirname(__filename);\n\nconst compat = new FlatCompat({\n    baseDirectory: __dirname,                  // optional; default: process.cwd()\n    resolvePluginsRelativeTo: __dirname,       // optional\n    recommendedConfig: js.configs.recommended, // optional unless you're using \"eslint:recommended\"\n    allConfig: js.configs.all,                 // optional unless you're using \"eslint:all\"\n});\n\nexport default [\n\n    // mimic ESLintRC-style extends\n    ...compat.extends(\"standard\", \"example\", \"plugin:react/recommended\"),\n\n    // mimic environments\n    ...compat.env({\n        es2020: true,\n        node: true\n    }),\n\n    // mimic plugins\n    ...compat.plugins(\"jsx-a11y\", \"react\"),\n\n    // translate an entire config\n    ...compat.config({\n        plugins: [\"jsx-a11y\", \"react\"],\n        extends: \"standard\",\n        env: {\n            es2020: true,\n            node: true\n        },\n        rules: {\n            semi: \"error\"\n        }\n    })\n];\n```\n\n## Usage (CommonJS)\n\nUsing `FlatCompat` in CommonJS files is similar to ESM, but you'll use `require()` and `module.exports` instead of `import` and `export`. Here's how you use it inside of your `eslint.config.js` CommonJS file:\n\n```js\nconst { FlatCompat } = require(\"@eslint/eslintrc\");\nconst js = require(\"@eslint/js\");\n\nconst compat = new FlatCompat({\n    baseDirectory: __dirname,                  // optional; default: process.cwd()\n    resolvePluginsRelativeTo: __dirname,       // optional\n    recommendedConfig: js.configs.recommended, // optional unless using \"eslint:recommended\"\n    allConfig: js.configs.all,                 // optional unless using \"eslint:all\"\n});\n\nmodule.exports = [\n\n    // mimic ESLintRC-style extends\n    ...compat.extends(\"standard\", \"example\", \"plugin:react/recommended\"),\n\n    // mimic environments\n    ...compat.env({\n        es2020: true,\n        node: true\n    }),\n\n    // mimic plugins\n    ...compat.plugins(\"jsx-a11y\", \"react\"),\n\n    // translate an entire config\n    ...compat.config({\n        plugins: [\"jsx-a11y\", \"react\"],\n        extends: \"standard\",\n        env: {\n            es2020: true,\n            node: true\n        },\n        rules: {\n            semi: \"error\"\n        }\n    })\n];\n```\n\n## Troubleshooting\n\n**TypeError: Missing parameter 'recommendedConfig' in FlatCompat constructor**\n\nThe `recommendedConfig` option is required when any config uses `eslint:recommended`, including any config in an `extends` clause. To fix this, follow the example above using `@eslint/js` to provide the `eslint:recommended` config.\n\n**TypeError: Missing parameter 'allConfig' in FlatCompat constructor**\n\nThe `allConfig` option is required when any config uses `eslint:all`, including any config in an `extends` clause. To fix this, follow the example above using `@eslint/js` to provide the `eslint:all` config.\n\n\n## License\n\nMIT License\n",
+ "readme": "# ESLintRC Library\n\nThis repository contains the legacy ESLintRC configuration file format for ESLint. This package is not intended for use outside of the ESLint ecosystem. It is ESLint-specific and not intended for use in other programs.\n\n**Note:** This package is frozen except for critical bug fixes as ESLint moves to a new config system.\n\n## Installation\n\nYou can install the package as follows:\n\n```shell\nnpm install @eslint/eslintrc -D\n# or\nyarn add @eslint/eslintrc -D\n# or\npnpm install @eslint/eslintrc -D\n# or\nbun install @eslint/eslintrc -D\n```\n\n## Usage (ESM)\n\nThe primary class in this package is `FlatCompat`, which is a utility to translate ESLintRC-style configs into flat configs. Here's how you use it inside of your `eslint.config.js` file:\n\n```js\nimport { FlatCompat } from \"@eslint/eslintrc\";\nimport js from \"@eslint/js\";\nimport path from \"path\";\nimport { fileURLToPath } from \"url\";\n\n// mimic CommonJS variables -- not needed if using CommonJS\nconst __filename = fileURLToPath(import.meta.url);\nconst __dirname = path.dirname(__filename);\n\nconst compat = new FlatCompat({\n    baseDirectory: __dirname,                  // optional; default: process.cwd()\n    resolvePluginsRelativeTo: __dirname,       // optional\n    recommendedConfig: js.configs.recommended, // optional unless you're using \"eslint:recommended\"\n    allConfig: js.configs.all,                 // optional unless you're using \"eslint:all\"\n});\n\nexport default [\n\n    // mimic ESLintRC-style extends\n    ...compat.extends(\"standard\", \"example\", \"plugin:react/recommended\"),\n\n    // mimic environments\n    ...compat.env({\n        es2020: true,\n        node: true\n    }),\n\n    // mimic plugins\n    ...compat.plugins(\"jsx-a11y\", \"react\"),\n\n    // translate an entire config\n    ...compat.config({\n        plugins: [\"jsx-a11y\", \"react\"],\n        extends: \"standard\",\n        env: {\n            es2020: true,\n            node: true\n        },\n        rules: {\n            semi: \"error\"\n        }\n    })\n];\n```\n\n## Usage (CommonJS)\n\nUsing `FlatCompat` in CommonJS files is similar to ESM, but you'll use `require()` and `module.exports` instead of `import` and `export`. Here's how you use it inside of your `eslint.config.js` CommonJS file:\n\n```js\nconst { FlatCompat } = require(\"@eslint/eslintrc\");\nconst js = require(\"@eslint/js\");\n\nconst compat = new FlatCompat({\n    baseDirectory: __dirname,                  // optional; default: process.cwd()\n    resolvePluginsRelativeTo: __dirname,       // optional\n    recommendedConfig: js.configs.recommended, // optional unless using \"eslint:recommended\"\n    allConfig: js.configs.all,                 // optional unless using \"eslint:all\"\n});\n\nmodule.exports = [\n\n    // mimic ESLintRC-style extends\n    ...compat.extends(\"standard\", \"example\", \"plugin:react/recommended\"),\n\n    // mimic environments\n    ...compat.env({\n        es2020: true,\n        node: true\n    }),\n\n    // mimic plugins\n    ...compat.plugins(\"jsx-a11y\", \"react\"),\n\n    // translate an entire config\n    ...compat.config({\n        plugins: [\"jsx-a11y\", \"react\"],\n        extends: \"standard\",\n        env: {\n            es2020: true,\n            node: true\n        },\n        rules: {\n            semi: \"error\"\n        }\n    })\n];\n```\n\n## Troubleshooting\n\n**TypeError: Missing parameter 'recommendedConfig' in FlatCompat constructor**\n\nThe `recommendedConfig` option is required when any config uses `eslint:recommended`, including any config in an `extends` clause. To fix this, follow the example above using `@eslint/js` to provide the `eslint:recommended` config.\n\n**TypeError: Missing parameter 'allConfig' in FlatCompat constructor**\n\nThe `allConfig` option is required when any config uses `eslint:all`, including any config in an `extends` clause. To fix this, follow the example above using `@eslint/js` to provide the `eslint:all` config.\n\n\n## License\n\nMIT License\n",
  "readmeFilename": "README.md",
  "users": {
   "flumpus-dev": true

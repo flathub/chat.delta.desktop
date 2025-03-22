@@ -1,9 +1,9 @@
 {
  "_id": "acorn",
- "_rev": "218-7526da3fc5f454fb658d0d8487d03889",
+ "_rev": "220-4dcbf2af15c62db8a7d8156d9b37c5ad",
  "name": "acorn",
  "dist-tags": {
-  "latest": "8.14.0"
+  "latest": "8.14.1"
  },
  "versions": {
   "0.0.1": {
@@ -20995,6 +20995,84 @@
   },
   "8.14.0": {
    "name": "acorn",
+   "version": "8.14.0",
+   "license": "MIT",
+   "_id": "acorn@8.14.0",
+   "maintainers": [
+    {
+     "name": "marijn",
+     "email": "marijn@haverbeke.berlin"
+    },
+    {
+     "name": "adrianheine",
+     "email": "mail@adrianheine.de"
+    },
+    {
+     "name": "rreverser",
+     "email": "me@rreverser.com"
+    }
+   ],
+   "homepage": "https://github.com/acornjs/acorn",
+   "bugs": {
+    "url": "https://github.com/acornjs/acorn/issues"
+   },
+   "bin": {
+    "acorn": "bin/acorn"
+   },
+   "dist": {
+    "shasum": "063e2c70cac5fb4f6467f0b11152e04c682795b0",
+    "tarball": "http://localhost:3000/acorn/-/acorn-8.14.0.tgz",
+    "fileCount": 10,
+    "integrity": "sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==",
+    "signatures": [
+     {
+      "sig": "MEUCIC3l9a35FCnhsEvB6lmhV3X89R6p4yuyl/OlbcbqsVBNAiEAoFtAAcViAxs3xO+IBWidxlaIR9m2sCm1pimKFAKk4n8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 546788
+   },
+   "main": "dist/acorn.js",
+   "types": "dist/acorn.d.ts",
+   "module": "dist/acorn.mjs",
+   "engines": {
+    "node": ">=0.4.0"
+   },
+   "exports": {
+    ".": [
+     {
+      "import": "./dist/acorn.mjs",
+      "default": "./dist/acorn.js",
+      "require": "./dist/acorn.js"
+     },
+     "./dist/acorn.js"
+    ],
+    "./package.json": "./package.json"
+   },
+   "gitHead": "3c6a5a98e8c6dcefef391e6114cc7e64657979d3",
+   "scripts": {
+    "prepare": "cd ..; npm run build:main"
+   },
+   "_npmUser": {
+    "name": "marijn",
+    "email": "marijn@haverbeke.berlin"
+   },
+   "repository": {
+    "url": "git+https://github.com/acornjs/acorn.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.0",
+   "description": "ECMAScript parser",
+   "directories": {},
+   "_nodeVersion": "20.13.1",
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/acorn_8.14.0_1730028229729_0.7267547946361241",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "8.14.1": {
+   "name": "acorn",
    "description": "ECMAScript parser",
    "homepage": "https://github.com/acornjs/acorn",
    "main": "dist/acorn.js",
@@ -21011,7 +21089,7 @@
     ],
     "./package.json": "./package.json"
    },
-   "version": "8.14.0",
+   "version": "8.14.1",
    "engines": {
     "node": ">=0.4.0"
    },
@@ -21040,23 +21118,23 @@
    "bin": {
     "acorn": "bin/acorn"
    },
-   "_id": "acorn@8.14.0",
-   "gitHead": "3c6a5a98e8c6dcefef391e6114cc7e64657979d3",
+   "_id": "acorn@8.14.1",
+   "gitHead": "4d4ed27f90168e110b5e505c842e7f5efb774c93",
    "bugs": {
     "url": "https://github.com/acornjs/acorn/issues"
    },
-   "_nodeVersion": "20.13.1",
-   "_npmVersion": "10.8.0",
+   "_nodeVersion": "22.14.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-cl669nCJTZBsL97OF4kUQm5g5hC2uihk0NxY3WENAC0TYdILVkAyHymAntgxGkl7K+t0cXIrH5siy5S4XkFycA==",
-    "shasum": "063e2c70cac5fb4f6467f0b11152e04c682795b0",
-    "tarball": "http://localhost:3000/acorn/-/acorn-8.14.0.tgz",
+    "integrity": "sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==",
+    "shasum": "721d5dc10f7d5b5609a891773d47731796935dfb",
+    "tarball": "http://localhost:3000/acorn/-/acorn-8.14.1.tgz",
     "fileCount": 10,
-    "unpackedSize": 546788,
+    "unpackedSize": 547473,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIC3l9a35FCnhsEvB6lmhV3X89R6p4yuyl/OlbcbqsVBNAiEAoFtAAcViAxs3xO+IBWidxlaIR9m2sCm1pimKFAKk4n8="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIAED/xm8km0o8ythCQxU0WEn7mYLV+UdnLing9pLgBTUAiEAidbnWEs4LEjk1f6Zo4lkCiu9T1AacOiFwzC5YR2vEko="
      }
     ]
    },
@@ -21066,15 +21144,15 @@
    },
    "directories": {},
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/acorn_8.14.0_1730028229729_0.7267547946361241"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/acorn_8.14.1_1741179202709_0.949955834182113"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2012-09-24T10:10:49.310Z",
-  "modified": "2024-10-27T11:23:50.150Z",
+  "modified": "2025-03-05T12:53:23.174Z",
   "0.0.1": "2012-09-24T10:10:52.687Z",
   "0.1.0": "2013-02-14T08:59:47.842Z",
   "0.2.0": "2013-05-03T09:53:34.809Z",
@@ -21210,7 +21288,8 @@
   "8.12.0": "2024-06-14T07:08:36.203Z",
   "8.12.1": "2024-07-03T06:13:12.194Z",
   "8.13.0": "2024-10-16T06:10:57.587Z",
-  "8.14.0": "2024-10-27T11:23:49.958Z"
+  "8.14.0": "2024-10-27T11:23:49.958Z",
+  "8.14.1": "2025-03-05T12:53:22.957Z"
  },
  "bugs": {
   "url": "https://github.com/acornjs/acorn/issues"

@@ -1,9 +1,9 @@
 {
  "_id": "@deltachat/jsonrpc-client",
- "_rev": "123-8587c1f4d66cdca898d9cbbde28cb1c9",
+ "_rev": "127-20492c1b1ada416df93cff6a2f17693a",
  "name": "@deltachat/jsonrpc-client",
  "dist-tags": {
-  "latest": "1.156.2"
+  "latest": "1.157.3"
  },
  "versions": {
   "1.96.0": {
@@ -13645,6 +13645,375 @@
    }
   },
   "1.156.2": {
+   "name": "@deltachat/jsonrpc-client",
+   "version": "1.156.2",
+   "author": {
+    "url": "ML",
+    "name": "Delta Chat Developers",
+    "email": "delta@codespeak.net"
+   },
+   "license": "MPL-2.0",
+   "_id": "@deltachat/jsonrpc-client@1.156.2",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+   },
+   "dist": {
+    "shasum": "f574e602e413993c9f2d897217aef0540f4e5bc7",
+    "tarball": "http://localhost:3000/@deltachat/jsonrpc-client/-/jsonrpc-client-1.156.2.tgz",
+    "fileCount": 39,
+    "integrity": "sha512-dfN8VrSh4T3u4UOTUho2PcY1oAj6yxAc7Z/wd47brgRy8wMLYaBjz7m/U7x5VVYvs4yGUoI9QlW2E58rlN+3Uw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCoRSzByWrHVbUMD3CLcy1nR2gGS73s3QxNsMtWJ4IK+QIgS4OmNRXUoTLYvRTHz3IAZFKoc1YsGQH6A3yvE4DyZLI=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fjsonrpc-client@1.156.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 441324
+   },
+   "main": "dist/deltachat.js",
+   "type": "module",
+   "_from": "file:deltachat-jsonrpc-client-1.156.2.tgz",
+   "types": "dist/deltachat.d.ts",
+   "exports": {
+    ".": {
+     "types": "./dist/deltachat.d.ts",
+     "import": "./dist/deltachat.js",
+     "require": "./dist/deltachat.cjs"
+    }
+   },
+   "scripts": {
+    "docs": "typedoc --out docs deltachat.ts",
+    "test": "run-s test:prepare test:run-coverage test:report-coverage",
+    "build": "run-s generate-bindings extract-constants build:tsc build:bundle build:cjs",
+    "example": "run-s build example:build example:start",
+    "test:run": "mocha dist/test",
+    "build:cjs": "esbuild --format=cjs --bundle --packages=external dist/deltachat.js --outfile=dist/deltachat.cjs",
+    "build:tsc": "tsc",
+    "example:dev": "esbuild example/example.ts --bundle --outfile=dist/example.bundle.js --servedir=.",
+    "build:bundle": "esbuild --format=esm --bundle dist/deltachat.js --outfile=dist/deltachat.bundle.js",
+    "prettier:fix": "prettier --write .",
+    "test:prepare": "cargo build --package deltachat-rpc-server --bin deltachat-rpc-server",
+    "example:build": "esbuild --bundle dist/example/example.js --outfile=dist/example.bundle.js",
+    "example:start": "http-server .",
+    "prettier:check": "prettier --check .",
+    "extract-constants": "node ./scripts/generate-constants.js",
+    "generate-bindings": "cargo test",
+    "test:run-coverage": "COVERAGE=1 NODE_OPTIONS=--enable-source-maps c8 --include 'dist/*' -r text -r html -r json mocha dist/test",
+    "test:report-coverage": "node report_api_coverage.mjs"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-jsonrpc/typescript/deltachat-jsonrpc-client-1.156.2.tgz",
+   "_integrity": "sha512-dfN8VrSh4T3u4UOTUho2PcY1oAj6yxAc7Z/wd47brgRy8wMLYaBjz7m/U7x5VVYvs4yGUoI9QlW2E58rlN+3Uw==",
+   "repository": {
+    "url": "git+https://github.com/deltachat/deltachat-core-rust.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.18.3",
+   "dependencies": {
+    "yerpc": "^0.6.2",
+    "isomorphic-ws": "^4.0.1",
+    "@deltachat/tiny-emitter": "3.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "^7.10.0",
+    "ws": "^8.5.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "esbuild": "^0.17.9",
+    "typedoc": "^0.23.2",
+    "prettier": "^2.6.2",
+    "@types/ws": "^7.2.4",
+    "typescript": "^4.5.5",
+    "@types/chai": "^4.2.21",
+    "http-server": "^14.1.1",
+    "npm-run-all": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "chai-as-promised": "^7.1.1",
+    "@types/chai-as-promised": "^7.1.5"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsonrpc-client_1.156.2_1740949752484_0.6713363516892397",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.157.1": {
+   "name": "@deltachat/jsonrpc-client",
+   "version": "1.157.1",
+   "author": {
+    "url": "ML",
+    "name": "Delta Chat Developers",
+    "email": "delta@codespeak.net"
+   },
+   "license": "MPL-2.0",
+   "_id": "@deltachat/jsonrpc-client@1.157.1",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/chatmail/core#readme",
+   "bugs": {
+    "url": "https://github.com/chatmail/core/issues"
+   },
+   "dist": {
+    "shasum": "d419e9535faa22836ece2bb63a8c3587e80925ec",
+    "tarball": "http://localhost:3000/@deltachat/jsonrpc-client/-/jsonrpc-client-1.157.1.tgz",
+    "fileCount": 39,
+    "integrity": "sha512-RbgzB7wDqdczedMvFHO9BkJ3mzuehBb9a7pkxsePsWQVA5jFuGizMazESzuOKp1NcGnTMhSndqLTsaRRtDJUow==",
+    "signatures": [
+     {
+      "sig": "MEUCIGFdaEb/PSJTKUdt6DVulha7tLwwFYle6XJMpL28ZwQrAiEA3qHGxX2TTm82QGesaTaQR5N1S2Vb/XkKZPQJ16AdGm4=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fjsonrpc-client@1.157.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 442137
+   },
+   "main": "dist/deltachat.js",
+   "type": "module",
+   "_from": "file:deltachat-jsonrpc-client-1.157.1.tgz",
+   "types": "dist/deltachat.d.ts",
+   "exports": {
+    ".": {
+     "types": "./dist/deltachat.d.ts",
+     "import": "./dist/deltachat.js",
+     "require": "./dist/deltachat.cjs"
+    }
+   },
+   "scripts": {
+    "docs": "typedoc --out docs deltachat.ts",
+    "test": "run-s test:prepare test:run-coverage test:report-coverage",
+    "build": "run-s generate-bindings extract-constants build:tsc build:bundle build:cjs",
+    "example": "run-s build example:build example:start",
+    "test:run": "mocha dist/test",
+    "build:cjs": "esbuild --format=cjs --bundle --packages=external dist/deltachat.js --outfile=dist/deltachat.cjs",
+    "build:tsc": "tsc",
+    "example:dev": "esbuild example/example.ts --bundle --outfile=dist/example.bundle.js --servedir=.",
+    "build:bundle": "esbuild --format=esm --bundle dist/deltachat.js --outfile=dist/deltachat.bundle.js",
+    "prettier:fix": "prettier --write .",
+    "test:prepare": "cargo build --package deltachat-rpc-server --bin deltachat-rpc-server",
+    "example:build": "esbuild --bundle dist/example/example.js --outfile=dist/example.bundle.js",
+    "example:start": "http-server .",
+    "prettier:check": "prettier --check .",
+    "extract-constants": "node ./scripts/generate-constants.js",
+    "generate-bindings": "cargo test",
+    "test:run-coverage": "COVERAGE=1 NODE_OPTIONS=--enable-source-maps c8 --include 'dist/*' -r text -r html -r json mocha dist/test",
+    "test:report-coverage": "node report_api_coverage.mjs"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/core/core/deltachat-jsonrpc/typescript/deltachat-jsonrpc-client-1.157.1.tgz",
+   "_integrity": "sha512-RbgzB7wDqdczedMvFHO9BkJ3mzuehBb9a7pkxsePsWQVA5jFuGizMazESzuOKp1NcGnTMhSndqLTsaRRtDJUow==",
+   "repository": {
+    "url": "git+https://github.com/chatmail/core.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.18.3",
+   "dependencies": {
+    "yerpc": "^0.6.2",
+    "isomorphic-ws": "^4.0.1",
+    "@deltachat/tiny-emitter": "3.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "^7.10.0",
+    "ws": "^8.5.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "esbuild": "^0.17.9",
+    "typedoc": "^0.23.2",
+    "prettier": "^2.6.2",
+    "@types/ws": "^7.2.4",
+    "typescript": "^4.5.5",
+    "@types/chai": "^4.2.21",
+    "http-server": "^14.1.1",
+    "npm-run-all": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "chai-as-promised": "^7.1.1",
+    "@types/chai-as-promised": "^7.1.5"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsonrpc-client_1.157.1_1741830547675_0.11498487053421069",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.157.2": {
+   "name": "@deltachat/jsonrpc-client",
+   "version": "1.157.2",
+   "author": {
+    "url": "ML",
+    "name": "Delta Chat Developers",
+    "email": "delta@codespeak.net"
+   },
+   "license": "MPL-2.0",
+   "_id": "@deltachat/jsonrpc-client@1.157.2",
+   "maintainers": [
+    {
+     "name": "missytake",
+     "email": "missytake@systemli.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "jikstra",
+     "email": "jikstra@disroot.org"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/chatmail/core#readme",
+   "bugs": {
+    "url": "https://github.com/chatmail/core/issues"
+   },
+   "dist": {
+    "shasum": "3faab67360995f11de404e93f62ea8fbac93c0e6",
+    "tarball": "http://localhost:3000/@deltachat/jsonrpc-client/-/jsonrpc-client-1.157.2.tgz",
+    "fileCount": 39,
+    "integrity": "sha512-Igm7zvDEhr8r6ddoBhbR8g5fOF+pGoH9Q/QnlfaHExteKdTi2pfa5/fZAQtooRNypY+TLSENYUWgIViYeQRH2A==",
+    "signatures": [
+     {
+      "sig": "MEUCIQC+KIW3YgnczdTjCbfSrc2QHLPLCCtihnQ9ge3hahmo0gIgT4cc67TeuakAXOYeDTlxErbGBLPAbJlrN+XdKipAp3A=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fjsonrpc-client@1.157.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 442137
+   },
+   "main": "dist/deltachat.js",
+   "type": "module",
+   "_from": "file:deltachat-jsonrpc-client-1.157.2.tgz",
+   "types": "dist/deltachat.d.ts",
+   "exports": {
+    ".": {
+     "types": "./dist/deltachat.d.ts",
+     "import": "./dist/deltachat.js",
+     "require": "./dist/deltachat.cjs"
+    }
+   },
+   "scripts": {
+    "docs": "typedoc --out docs deltachat.ts",
+    "test": "run-s test:prepare test:run-coverage test:report-coverage",
+    "build": "run-s generate-bindings extract-constants build:tsc build:bundle build:cjs",
+    "example": "run-s build example:build example:start",
+    "test:run": "mocha dist/test",
+    "build:cjs": "esbuild --format=cjs --bundle --packages=external dist/deltachat.js --outfile=dist/deltachat.cjs",
+    "build:tsc": "tsc",
+    "example:dev": "esbuild example/example.ts --bundle --outfile=dist/example.bundle.js --servedir=.",
+    "build:bundle": "esbuild --format=esm --bundle dist/deltachat.js --outfile=dist/deltachat.bundle.js",
+    "prettier:fix": "prettier --write .",
+    "test:prepare": "cargo build --package deltachat-rpc-server --bin deltachat-rpc-server",
+    "example:build": "esbuild --bundle dist/example/example.js --outfile=dist/example.bundle.js",
+    "example:start": "http-server .",
+    "prettier:check": "prettier --check .",
+    "extract-constants": "node ./scripts/generate-constants.js",
+    "generate-bindings": "cargo test",
+    "test:run-coverage": "COVERAGE=1 NODE_OPTIONS=--enable-source-maps c8 --include 'dist/*' -r text -r html -r json mocha dist/test",
+    "test:report-coverage": "node report_api_coverage.mjs"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "_resolved": "/home/runner/work/core/core/deltachat-jsonrpc/typescript/deltachat-jsonrpc-client-1.157.2.tgz",
+   "_integrity": "sha512-Igm7zvDEhr8r6ddoBhbR8g5fOF+pGoH9Q/QnlfaHExteKdTi2pfa5/fZAQtooRNypY+TLSENYUWgIViYeQRH2A==",
+   "repository": {
+    "url": "git+https://github.com/chatmail/core.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.18.3",
+   "dependencies": {
+    "yerpc": "^0.6.2",
+    "isomorphic-ws": "^4.0.1",
+    "@deltachat/tiny-emitter": "3.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "^7.10.0",
+    "ws": "^8.5.0",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.1",
+    "esbuild": "^0.17.9",
+    "typedoc": "^0.23.2",
+    "prettier": "^2.6.2",
+    "@types/ws": "^7.2.4",
+    "typescript": "^4.5.5",
+    "@types/chai": "^4.2.21",
+    "http-server": "^14.1.1",
+    "npm-run-all": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "chai-as-promised": "^7.1.1",
+    "@types/chai-as-promised": "^7.1.5"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsonrpc-client_1.157.2_1742039557439_0.7625295393819991",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.157.3": {
    "author": {
     "name": "Delta Chat Developers",
     "email": "delta@codespeak.net",
@@ -13684,7 +14053,7 @@
    "name": "@deltachat/jsonrpc-client",
    "repository": {
     "type": "git",
-    "url": "git+https://github.com/deltachat/deltachat-core-rust.git"
+    "url": "git+https://github.com/chatmail/core.git"
    },
    "scripts": {
     "build": "run-s generate-bindings extract-constants build:tsc build:bundle build:cjs",
@@ -13692,10 +14061,6 @@
     "build:cjs": "esbuild --format=cjs --bundle --packages=external dist/deltachat.js --outfile=dist/deltachat.cjs",
     "build:tsc": "tsc",
     "docs": "typedoc --out docs deltachat.ts",
-    "example": "run-s build example:build example:start",
-    "example:build": "esbuild --bundle dist/example/example.js --outfile=dist/example.bundle.js",
-    "example:dev": "esbuild example/example.ts --bundle --outfile=dist/example.bundle.js --servedir=.",
-    "example:start": "http-server .",
     "extract-constants": "node ./scripts/generate-constants.js",
     "generate-bindings": "cargo test",
     "prettier:check": "prettier --check .",
@@ -13708,25 +14073,25 @@
    },
    "type": "module",
    "types": "dist/deltachat.d.ts",
-   "version": "1.156.2",
-   "_id": "@deltachat/jsonrpc-client@1.156.2",
+   "version": "1.157.3",
+   "_id": "@deltachat/jsonrpc-client@1.157.3",
    "bugs": {
-    "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+    "url": "https://github.com/chatmail/core/issues"
    },
-   "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
-   "_integrity": "sha512-dfN8VrSh4T3u4UOTUho2PcY1oAj6yxAc7Z/wd47brgRy8wMLYaBjz7m/U7x5VVYvs4yGUoI9QlW2E58rlN+3Uw==",
-   "_resolved": "/home/runner/work/deltachat-core-rust/deltachat-core-rust/deltachat-jsonrpc/typescript/deltachat-jsonrpc-client-1.156.2.tgz",
-   "_from": "file:deltachat-jsonrpc-client-1.156.2.tgz",
+   "homepage": "https://github.com/chatmail/core#readme",
+   "_integrity": "sha512-tJ1FRbrFeSsdUd/7V4FzRm8mLMr1PtkKv09jLjdutMqKBmQjKQxnCGndvnqx2BP7hvmSP6Unaot2yzciCaO9tQ==",
+   "_resolved": "/home/runner/work/core/core/deltachat-jsonrpc/typescript/deltachat-jsonrpc-client-1.157.3.tgz",
+   "_from": "file:deltachat-jsonrpc-client-1.157.3.tgz",
    "_nodeVersion": "20.18.3",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-dfN8VrSh4T3u4UOTUho2PcY1oAj6yxAc7Z/wd47brgRy8wMLYaBjz7m/U7x5VVYvs4yGUoI9QlW2E58rlN+3Uw==",
-    "shasum": "f574e602e413993c9f2d897217aef0540f4e5bc7",
-    "tarball": "http://localhost:3000/@deltachat/jsonrpc-client/-/jsonrpc-client-1.156.2.tgz",
-    "fileCount": 39,
-    "unpackedSize": 441324,
+    "integrity": "sha512-tJ1FRbrFeSsdUd/7V4FzRm8mLMr1PtkKv09jLjdutMqKBmQjKQxnCGndvnqx2BP7hvmSP6Unaot2yzciCaO9tQ==",
+    "shasum": "71adfd99903e7bea1b98830c6f5c86fb6aa49d1c",
+    "tarball": "http://localhost:3000/@deltachat/jsonrpc-client/-/jsonrpc-client-1.157.3.tgz",
+    "fileCount": 36,
+    "unpackedSize": 452936,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fjsonrpc-client@1.156.2",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fjsonrpc-client@1.157.3",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -13734,7 +14099,7 @@
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQCoRSzByWrHVbUMD3CLcy1nR2gGS73s3QxNsMtWJ4IK+QIgS4OmNRXUoTLYvRTHz3IAZFKoc1YsGQH6A3yvE4DyZLI="
+      "sig": "MEUCIQDCjhaR+ruZ7eGzaPhSKEh3YvjRE2suZHlA9Ai9XW+ihgIgRAZj9W6TJEOcjPhWR9tM21zdG7BB2IKxslgakua0jmk="
      }
     ]
    },
@@ -13763,14 +14128,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/jsonrpc-client_1.156.2_1740949752484_0.6713363516892397"
+    "tmp": "tmp/jsonrpc-client_1.157.3_1742376838943_0.0810938472401097"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2022-10-01T21:07:36.252Z",
-  "modified": "2025-03-02T21:09:13.152Z",
+  "modified": "2025-03-19T09:33:59.601Z",
   "1.96.0": "2022-10-01T21:07:36.460Z",
   "1.97.0": "2022-10-16T14:06:47.199Z",
   "1.98.0": "2022-10-25T16:22:36.681Z",
@@ -13891,10 +14256,13 @@
   "1.155.6": "2025-02-17T20:59:03.472Z",
   "1.156.0": "2025-02-27T01:32:58.224Z",
   "1.156.1": "2025-02-28T02:51:51.337Z",
-  "1.156.2": "2025-03-02T21:09:12.675Z"
+  "1.156.2": "2025-03-02T21:09:12.675Z",
+  "1.157.1": "2025-03-13T01:49:07.846Z",
+  "1.157.2": "2025-03-15T11:52:37.702Z",
+  "1.157.3": "2025-03-19T09:33:59.117Z"
  },
  "bugs": {
-  "url": "https://github.com/deltachat/deltachat-core-rust/issues"
+  "url": "https://github.com/chatmail/core/issues"
  },
  "author": {
   "name": "Delta Chat Developers",
@@ -13902,10 +14270,10 @@
   "url": "ML"
  },
  "license": "MPL-2.0",
- "homepage": "https://github.com/deltachat/deltachat-core-rust#readme",
+ "homepage": "https://github.com/chatmail/core#readme",
  "repository": {
   "type": "git",
-  "url": "git+https://github.com/deltachat/deltachat-core-rust.git"
+  "url": "git+https://github.com/chatmail/core.git"
  },
  "maintainers": [
   {

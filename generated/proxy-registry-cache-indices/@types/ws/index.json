@@ -1,22 +1,22 @@
 {
  "_id": "@types/ws",
- "_rev": "1094-31d03d7137899cfb3b1e24bb0d93f210",
+ "_rev": "1106-31bf1870a7b3b1984781c18ca1970482",
  "name": "@types/ws",
  "dist-tags": {
-  "ts2.5": "6.0.3",
   "ts2.0": "6.0.3",
-  "ts2.4": "6.0.3",
+  "ts2.6": "6.0.3",
   "ts2.3": "6.0.3",
   "ts2.2": "6.0.3",
   "ts2.1": "6.0.3",
   "ts2.7": "6.0.3",
-  "ts2.6": "6.0.3",
+  "ts2.5": "6.0.3",
+  "ts2.4": "6.0.3",
   "ts2.9": "7.2.4",
   "ts2.8": "7.2.4",
-  "ts3.1": "7.2.6",
   "ts3.0": "7.2.6",
-  "ts3.2": "7.4.0",
+  "ts3.1": "7.2.6",
   "ts3.4": "7.4.0",
+  "ts3.2": "7.4.0",
   "ts3.3": "7.4.0",
   "ts3.5": "7.4.4",
   "ts3.6": "7.4.7",
@@ -28,22 +28,22 @@
   "ts4.2": "8.5.4",
   "ts4.4": "8.5.5",
   "ts4.3": "8.5.5",
-  "ts4.6": "8.5.10",
   "ts4.5": "8.5.10",
   "ts4.7": "8.5.10",
+  "ts4.6": "8.5.10",
   "ts4.9": "8.5.13",
   "ts4.8": "8.5.13",
-  "ts5.1": "8.5.14",
-  "ts5.8": "8.5.14",
-  "ts5.2": "8.5.14",
-  "ts5.0": "8.5.14",
-  "ts5.4": "8.5.14",
-  "ts5.7": "8.5.14",
-  "latest": "8.5.14",
-  "ts5.5": "8.5.14",
-  "ts5.3": "8.5.14",
-  "ts5.6": "8.5.14",
-  "ts5.9": "8.5.14"
+  "ts5.9": "8.18.0",
+  "ts5.1": "8.18.0",
+  "ts5.8": "8.18.0",
+  "ts5.2": "8.18.0",
+  "ts5.0": "8.18.0",
+  "ts5.7": "8.18.0",
+  "latest": "8.18.0",
+  "ts5.5": "8.18.0",
+  "ts5.6": "8.18.0",
+  "ts5.4": "8.18.0",
+  "ts5.3": "8.18.0"
  },
  "versions": {
   "0.0.14-alpha": {
@@ -5894,11 +5894,113 @@
     "host": "s3://npm-registry-packages-npm-production"
    },
    "typesPublisherContentHash": "4f28320da3aae9bcd0905e47ff3eb3a16b1882e182a1b60100f36e518359b5a7"
+  },
+  "8.18.0": {
+   "name": "@types/ws",
+   "version": "8.18.0",
+   "license": "MIT",
+   "_id": "@types/ws@8.18.0",
+   "maintainers": [
+    {
+     "name": "types",
+     "email": "ts-npm-types@microsoft.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "https://github.com/loyd",
+     "name": "Paul Loyd",
+     "githubUsername": "loyd"
+    },
+    {
+     "url": "https://github.com/mlamp",
+     "name": "Margus Lamp",
+     "githubUsername": "mlamp"
+    },
+    {
+     "url": "https://github.com/TitaneBoy",
+     "name": "Philippe D'Alva",
+     "githubUsername": "TitaneBoy"
+    },
+    {
+     "url": "https://github.com/reduckted",
+     "name": "reduckted",
+     "githubUsername": "reduckted"
+    },
+    {
+     "url": "https://github.com/teidesu",
+     "name": "teidesu",
+     "githubUsername": "teidesu"
+    },
+    {
+     "url": "https://github.com/wojtkowiak",
+     "name": "Bartosz Wojtkowiak",
+     "githubUsername": "wojtkowiak"
+    },
+    {
+     "url": "https://github.com/k-yle",
+     "name": "Kyle Hensel",
+     "githubUsername": "k-yle"
+    },
+    {
+     "url": "https://github.com/cwadrupldijjit",
+     "name": "Samuel Skeen",
+     "githubUsername": "cwadrupldijjit"
+    }
+   ],
+   "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/ws",
+   "dist": {
+    "shasum": "8a2ec491d6f0685ceaab9a9b7ff44146236993b5",
+    "tarball": "http://localhost:3000/@types/ws/-/ws-8.18.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-8svvI3hMyvN0kKCJMvTJP/x6Y/EoQbepff882wL+Sn5QsXb3etnamgrJq4isrBxSJj5L2AuXcI0+bgkoAXGUJw==",
+    "signatures": [
+     {
+      "sig": "MEQCIBp8GfYJwjFnsdjn30nfyGtNvw4c2+7gDNweivASh4S9AiAqqIL5bG2Fvk3FuMV/LIYeSGX10oRwH8OLQ6i5oBuhcg==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 42351
+   },
+   "main": "",
+   "types": "index.d.ts",
+   "exports": {
+    ".": {
+     "types": {
+      "import": "./index.d.mts",
+      "default": "./index.d.ts"
+     }
+    },
+    "./package.json": "./package.json"
+   },
+   "scripts": {},
+   "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+   },
+   "repository": {
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "type": "git",
+    "directory": "types/ws"
+   },
+   "description": "TypeScript definitions for ws",
+   "directories": {},
+   "dependencies": {
+    "@types/node": "*"
+   },
+   "_hasShrinkwrap": false,
+   "peerDependencies": {},
+   "typeScriptVersion": "5.0",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ws_8.18.0_1741114932105_0.44310781378566455",
+    "host": "s3://npm-registry-packages-npm-production"
+   },
+   "typesPublisherContentHash": "ebbd09d0d46be05a9803566b665294d42c112101dfce09d32b45de9885c66bc1"
   }
  },
  "time": {
   "created": "2016-05-17T19:17:25.362Z",
-  "modified": "2025-02-23T08:04:49.163Z",
+  "modified": "2025-03-04T19:02:24.252Z",
   "0.0.14-alpha": "2016-05-17T19:17:25.362Z",
   "0.0.15-alpha": "2016-05-19T22:45:32.195Z",
   "0.0.20-alpha": "2016-05-20T20:56:52.134Z",
@@ -5976,7 +6078,8 @@
   "8.5.11": "2024-07-13T02:42:04.825Z",
   "8.5.12": "2024-07-29T08:38:04.391Z",
   "8.5.13": "2024-11-02T09:02:37.820Z",
-  "8.5.14": "2025-01-23T16:36:36.895Z"
+  "8.5.14": "2025-01-23T16:36:36.895Z",
+  "8.18.0": "2025-03-04T19:02:12.344Z"
  },
  "license": "MIT",
  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/ws",
