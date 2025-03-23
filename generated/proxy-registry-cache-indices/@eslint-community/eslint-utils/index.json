@@ -1,11 +1,11 @@
 {
  "_id": "@eslint-community/eslint-utils",
- "_rev": "15-94800b1757a300fec917e7897283ef34",
+ "_rev": "18-dc35f284685087e81b5de3c42ab7f95f",
  "name": "@eslint-community/eslint-utils",
  "dist-tags": {
-  "alpha": "5.0.0-alpha.1",
   "beta": "4.0.0-beta.1",
-  "latest": "4.4.1"
+  "alpha": "5.0.0-alpha.1",
+  "latest": "4.5.1"
  },
  "versions": {
   "3.0.0": {
@@ -1595,6 +1595,251 @@
   "5.0.0-alpha.1": {
    "name": "@eslint-community/eslint-utils",
    "version": "5.0.0-alpha.1",
+   "keywords": [
+    "eslint"
+   ],
+   "author": {
+    "name": "Toru Nagashima"
+   },
+   "license": "MIT",
+   "_id": "@eslint-community/eslint-utils@5.0.0-alpha.1",
+   "maintainers": [
+    {
+     "name": "eslint-community-bot",
+     "email": "contact+eslintcbot@eslint.org"
+    },
+    {
+     "name": "michaeldeboey",
+     "email": "info@michaeldeboey.be"
+    }
+   ],
+   "homepage": "https://github.com/eslint-community/eslint-utils#readme",
+   "bugs": {
+    "url": "https://github.com/eslint-community/eslint-utils/issues"
+   },
+   "dist": {
+    "shasum": "6689e7079273ae601c0bb3a29a51dc4a9cc818e4",
+    "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-5.0.0-alpha.1.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-cWR+ATZklWamMX7fjCzE0X2OUK6eUB2SOiirUOn/lTwVDMc+5LNqb8y0cRWv0fA9xslOMgh7DTaAIvZevpzFHQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDLPLWsBuuWSYamXPRIbIicaoJfwysblK4CMSfflQfctQIgHT1EsnKcINILD/e35PXC9UgotG8L+2uxVBPujEqJxQU=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@eslint-community%2feslint-utils@5.0.0-alpha.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 378159
+   },
+   "main": "index",
+   "module": "index.mjs",
+   "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+   },
+   "exports": {
+    ".": {
+     "import": "./index.mjs",
+     "require": "./index.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": "https://opencollective.com/eslint",
+   "gitHead": "71785565b1e4669699d64c4f9bad4113a412af81",
+   "scripts": {
+    "lint": "run-p lint:*",
+    "test": "c8 mocha --reporter dot \"test/*.mjs\"",
+    "build": "rollup -c",
+    "clean": "rimraf .nyc_output coverage index.*",
+    "watch": "warun \"{src,test}/**/*.mjs\" -- npm run -s test:mocha",
+    "format": "npm run -s format:prettier -- --write",
+    "coverage": "opener ./coverage/lcov-report/index.html",
+    "prebuild": "npm run -s clean",
+    "prewatch": "npm run -s clean",
+    "lint:knip": "knip",
+    "docs:build": "vitepress build docs",
+    "docs:watch": "vitepress dev docs",
+    "preversion": "npm test && npm run -s build",
+    "lint:eslint": "eslint .",
+    "lint:format": "npm run -s format:check",
+    "postversion": "git push && git push --tags",
+    "format:check": "npm run -s format:prettier -- --check",
+    "format:prettier": "prettier .",
+    "lint:installed-check": "installed-check -v -i installed-check -i npm-run-all2 -i knip"
+   },
+   "_npmUser": {
+    "name": "eslint-community-bot",
+    "email": "contact+eslintcbot@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint-community/eslint-utils.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.5.2",
+   "description": "Utilities for ESLint plugins.",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "20.13.1",
+   "dependencies": {
+    "eslint-visitor-keys": "^3.4.3"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "devDependencies": {
+    "c8": "^8.0.1",
+    "knip": "^5.33.3",
+    "mocha": "^9.2.2",
+    "warun": "^1.0.0",
+    "eslint": "^8.57.1",
+    "opener": "^1.5.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.2",
+    "semver": "^7.6.3",
+    "dot-prop": "^7.2.0",
+    "prettier": "2.8.8",
+    "vitepress": "^1.4.1",
+    "npm-run-all2": "^6.2.3",
+    "installed-check": "^8.0.1",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "@eslint-community/eslint-plugin-mysticatea": "^15.6.1"
+   },
+   "peerDependencies": {
+    "eslint": "^8.57.0 || ^9.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/eslint-utils_5.0.0-alpha.1_1729912075804_0.7503444907445802",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "4.5.0": {
+   "name": "@eslint-community/eslint-utils",
+   "version": "4.5.0",
+   "keywords": [
+    "eslint"
+   ],
+   "author": {
+    "name": "Toru Nagashima"
+   },
+   "license": "MIT",
+   "_id": "@eslint-community/eslint-utils@4.5.0",
+   "maintainers": [
+    {
+     "name": "eslint-community-bot",
+     "email": "contact+eslintcbot@eslint.org"
+    },
+    {
+     "name": "michaeldeboey",
+     "email": "info@michaeldeboey.be"
+    }
+   ],
+   "homepage": "https://github.com/eslint-community/eslint-utils#readme",
+   "bugs": {
+    "url": "https://github.com/eslint-community/eslint-utils/issues"
+   },
+   "dist": {
+    "shasum": "716637f508a8add5814cc64c56e58cce57bdbe93",
+    "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-4.5.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-RoV8Xs9eNwiDvhv7M+xcL4PWyRyIXRY/FLp3buU4h1EYfdF7unWUy3dOjPqb3C7rMUewIcqwW850PgS8h1o1yg==",
+    "signatures": [
+     {
+      "sig": "MEUCIHNEoYYcHKYNPd7hOVVY1jhRZIgdqulh8Zy1cl8sobJOAiEA92k+BTUW932Ffw78U9/6indx0uy/BO5pnbO+VbS0SDg=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@eslint-community%2feslint-utils@4.5.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 380386
+   },
+   "main": "index",
+   "module": "index.mjs",
+   "engines": {
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+   },
+   "exports": {
+    ".": {
+     "import": "./index.mjs",
+     "require": "./index.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": "https://opencollective.com/eslint",
+   "gitHead": "324b445755f212b74dcce02fd91dea484a6e1664",
+   "scripts": {
+    "lint": "run-p lint:*",
+    "test": "c8 mocha --reporter dot \"test/*.mjs\"",
+    "build": "rollup -c",
+    "clean": "rimraf .nyc_output coverage index.*",
+    "watch": "warun \"{src,test}/**/*.mjs\" -- npm run -s test:mocha",
+    "format": "npm run -s format:prettier -- --write",
+    "coverage": "opener ./coverage/lcov-report/index.html",
+    "prebuild": "npm run -s clean",
+    "prewatch": "npm run -s clean",
+    "lint:knip": "knip",
+    "docs:build": "vitepress build docs",
+    "docs:watch": "vitepress dev docs",
+    "preversion": "npm test && npm run -s build",
+    "lint:eslint": "eslint .",
+    "lint:format": "npm run -s format:check",
+    "postversion": "git push && git push --tags",
+    "format:check": "npm run -s format:prettier -- --check",
+    "format:prettier": "prettier .",
+    "lint:installed-check": "installed-check -v -i installed-check -i npm-run-all2 -i knip"
+   },
+   "_npmUser": {
+    "name": "eslint-community-bot",
+    "email": "contact+eslintcbot@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint-community/eslint-utils.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Utilities for ESLint plugins.",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "20.18.0",
+   "dependencies": {
+    "eslint-visitor-keys": "^3.4.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "c8": "^8.0.1",
+    "knip": "^5.33.3",
+    "mocha": "^9.2.2",
+    "warun": "^1.0.0",
+    "eslint": "^8.57.1",
+    "opener": "^1.5.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.2",
+    "semver": "^7.6.3",
+    "dot-prop": "^7.2.0",
+    "prettier": "2.8.8",
+    "vitepress": "^1.4.1",
+    "npm-run-all2": "^6.2.3",
+    "installed-check": "^8.0.1",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "@eslint-community/eslint-plugin-mysticatea": "^15.6.1"
+   },
+   "peerDependencies": {
+    "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/eslint-utils_4.5.0_1741659761034_0.11372054476154414",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "4.5.1": {
+   "name": "@eslint-community/eslint-utils",
+   "version": "4.5.1",
    "description": "Utilities for ESLint plugins.",
    "keywords": [
     "eslint"
@@ -1664,33 +1909,32 @@
     "warun": "^1.0.0"
    },
    "peerDependencies": {
-    "eslint": "^8.57.0 || ^9.0.0"
+    "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0"
    },
    "engines": {
-    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
    },
    "funding": "https://opencollective.com/eslint",
-   "_id": "@eslint-community/eslint-utils@5.0.0-alpha.1",
-   "readmeFilename": "README.md",
-   "gitHead": "71785565b1e4669699d64c4f9bad4113a412af81",
-   "_nodeVersion": "20.13.1",
-   "_npmVersion": "10.5.2",
+   "_id": "@eslint-community/eslint-utils@4.5.1",
+   "gitHead": "f3bc7a43a91e4016e4751b0a2ca9801b0588f1aa",
+   "_nodeVersion": "20.18.0",
+   "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-cWR+ATZklWamMX7fjCzE0X2OUK6eUB2SOiirUOn/lTwVDMc+5LNqb8y0cRWv0fA9xslOMgh7DTaAIvZevpzFHQ==",
-    "shasum": "6689e7079273ae601c0bb3a29a51dc4a9cc818e4",
-    "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-5.0.0-alpha.1.tgz",
+    "integrity": "sha512-soEIOALTfTK6EjmKMMoLugwaP0rzkad90iIWd1hMO9ARkSAyjfMfkRRhLvD5qH7vvM0Cg72pieUfR6yh6XxC4w==",
+    "shasum": "b0fc7e06d0c94f801537fd4237edc2706d3b8e4c",
+    "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-4.5.1.tgz",
     "fileCount": 7,
-    "unpackedSize": 378159,
+    "unpackedSize": 381246,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@eslint-community%2feslint-utils@5.0.0-alpha.1",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@eslint-community%2feslint-utils@4.5.1",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
     },
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQDLPLWsBuuWSYamXPRIbIicaoJfwysblK4CMSfflQfctQIgHT1EsnKcINILD/e35PXC9UgotG8L+2uxVBPujEqJxQU="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIQC0g+bFyUTCUwbW4lgKBOF4oaRnxTHD4In8Tmxxiau5AwIgboE249JQLaLNEI5Vna4oRK0tySpDd6UM4J9D1N9vhmE="
      }
     ]
    },
@@ -1710,15 +1954,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/eslint-utils_5.0.0-alpha.1_1729912075804_0.7503444907445802"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/eslint-utils_4.5.1_1741867820353_0.14644444740005946"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2022-11-20T18:57:08.771Z",
-  "modified": "2024-10-26T03:07:56.513Z",
+  "modified": "2025-03-13T12:10:20.970Z",
   "3.0.0": "2022-11-20T18:57:08.989Z",
   "3.0.1": "2022-11-21T20:41:33.971Z",
   "4.0.0-alpha.1": "2022-11-22T02:12:21.659Z",
@@ -1733,7 +1977,9 @@
   "4.3.0": "2023-03-17T02:33:12.192Z",
   "4.4.0": "2023-03-24T03:44:48.001Z",
   "4.4.1": "2024-10-25T23:35:28.612Z",
-  "5.0.0-alpha.1": "2024-10-26T03:07:56.003Z"
+  "5.0.0-alpha.1": "2024-10-26T03:07:56.003Z",
+  "4.5.0": "2025-03-11T02:22:41.221Z",
+  "4.5.1": "2025-03-13T12:10:20.556Z"
  },
  "bugs": {
   "url": "https://github.com/eslint-community/eslint-utils/issues"
@@ -1747,8 +1993,8 @@
   "eslint"
  ],
  "repository": {
-  "url": "git+https://github.com/eslint-community/eslint-utils.git",
-  "type": "git"
+  "type": "git",
+  "url": "git+https://github.com/eslint-community/eslint-utils.git"
  },
  "description": "Utilities for ESLint plugins.",
  "maintainers": [
@@ -1761,8 +2007,8 @@
    "email": "info@michaeldeboey.be"
   }
  ],
- "readme": "",
- "readmeFilename": "",
+ "readme": "# @eslint-community/eslint-utils\n\n[![npm version](https://img.shields.io/npm/v/@eslint-community/eslint-utils.svg)](https://www.npmjs.com/package/@eslint-community/eslint-utils)\n[![Downloads/month](https://img.shields.io/npm/dm/@eslint-community/eslint-utils.svg)](http://www.npmtrends.com/@eslint-community/eslint-utils)\n[![Build Status](https://github.com/eslint-community/eslint-utils/workflows/CI/badge.svg)](https://github.com/eslint-community/eslint-utils/actions)\n[![Coverage Status](https://codecov.io/gh/eslint-community/eslint-utils/branch/main/graph/badge.svg)](https://codecov.io/gh/eslint-community/eslint-utils)\n\n## 🏁 Goal\n\nThis package provides utility functions and classes for make ESLint custom rules.\n\nFor examples:\n\n-   [`getStaticValue`](https://eslint-community.github.io/eslint-utils/api/ast-utils.html#getstaticvalue) evaluates static value on AST.\n-   [`ReferenceTracker`](https://eslint-community.github.io/eslint-utils/api/scope-utils.html#referencetracker-class) checks the members of modules/globals as handling assignments and destructuring.\n\n## 📖 Usage\n\nSee [documentation](https://eslint-community.github.io/eslint-utils).\n\n## 📰 Changelog\n\nSee [releases](https://github.com/eslint-community/eslint-utils/releases).\n\n## ❤️ Contributing\n\nWelcome contributing!\n\nPlease use GitHub's Issues/PRs.\n\n### Development Tools\n\n-   `npm test` runs tests and measures coverage.\n-   `npm run clean` removes the coverage result of `npm test` command.\n-   `npm run coverage` shows the coverage result of the last `npm test` command.\n-   `npm run lint` runs ESLint.\n-   `npm run watch` runs tests on each file change.\n",
+ "readmeFilename": "README.md",
  "users": {
   "flumpus-dev": true
  }

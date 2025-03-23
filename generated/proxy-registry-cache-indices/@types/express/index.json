@@ -1,49 +1,49 @@
 {
  "_id": "@types/express",
- "_rev": "835-b5352c7a088236ecb58fee37ec7bc0f5",
+ "_rev": "847-a45e7b73ffc010bd72297e2e140f5cc7",
  "name": "@types/express",
  "dist-tags": {
   "ts2.1": "4.0.35",
   "ts2.0": "4.0.35",
   "ts2.2": "4.17.0",
-  "ts2.7": "4.17.2",
+  "ts2.5": "4.17.2",
   "ts2.3": "4.17.2",
   "ts2.4": "4.17.2",
-  "ts2.5": "4.17.2",
   "ts2.6": "4.17.2",
-  "ts2.9": "4.17.6",
+  "ts2.7": "4.17.2",
   "ts2.8": "4.17.6",
+  "ts2.9": "4.17.6",
   "ts3.0": "4.17.7",
   "ts3.1": "4.17.8",
   "ts3.2": "4.17.9",
   "ts3.3": "4.17.10",
   "ts3.4": "4.17.11",
   "ts3.5": "4.17.12",
-  "ts3.9": "4.17.13",
-  "ts3.7": "4.17.13",
   "ts3.6": "4.17.13",
-  "ts4.0": "4.17.13",
+  "ts3.7": "4.17.13",
   "ts3.8": "4.17.13",
+  "ts3.9": "4.17.13",
+  "ts4.0": "4.17.13",
   "ts4.1": "4.17.14",
   "ts4.2": "4.17.17",
-  "ts4.3": "4.17.17",
   "ts4.4": "4.17.17",
-  "ts4.5": "4.17.21",
+  "ts4.3": "4.17.17",
   "ts4.6": "4.17.21",
+  "ts4.5": "4.17.21",
   "ts4.7": "4.17.21",
-  "ts4.9": "5.0.0",
-  "ts5.0": "5.0.0",
-  "ts5.8": "5.0.0",
-  "ts5.6": "5.0.0",
-  "ts5.5": "5.0.0",
-  "ts5.4": "5.0.0",
-  "ts5.3": "5.0.0",
-  "ts5.2": "5.0.0",
   "ts4.8": "5.0.0",
-  "latest": "5.0.0",
-  "ts5.7": "5.0.0",
-  "ts5.1": "5.0.0",
-  "ts5.9": "5.0.0"
+  "ts4.9": "5.0.0",
+  "ts5.9": "5.0.1",
+  "ts5.8": "5.0.1",
+  "ts5.6": "5.0.1",
+  "ts5.1": "5.0.1",
+  "ts5.3": "5.0.1",
+  "ts5.4": "5.0.1",
+  "ts5.5": "5.0.1",
+  "latest": "5.0.1",
+  "ts5.7": "5.0.1",
+  "ts5.2": "5.0.1",
+  "ts5.0": "5.0.1"
  },
  "versions": {
   "4.0.16-alpha": {
@@ -2954,11 +2954,86 @@
     "host": "s3://npm-registry-packages"
    },
    "typesPublisherContentHash": "906f793a5f72703639a36afa9b7c5b41256100f5efc93138ed2551c101aea99f"
+  },
+  "5.0.1": {
+   "name": "@types/express",
+   "version": "5.0.1",
+   "license": "MIT",
+   "_id": "@types/express@5.0.1",
+   "maintainers": [
+    {
+     "name": "types",
+     "email": "ts-npm-types@microsoft.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "https://github.com/borisyankov",
+     "name": "Boris Yankov",
+     "githubUsername": "borisyankov"
+    },
+    {
+     "url": "https://github.com/CMUH",
+     "name": "China Medical University Hospital",
+     "githubUsername": "CMUH"
+    },
+    {
+     "url": "https://github.com/puneetar",
+     "name": "Puneet Arora",
+     "githubUsername": "puneetar"
+    },
+    {
+     "url": "https://github.com/dfrankland",
+     "name": "Dylan Frankland",
+     "githubUsername": "dfrankland"
+    }
+   ],
+   "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/express",
+   "dist": {
+    "shasum": "138d741c6e5db8cc273bec5285cd6e9d0779fc9f",
+    "tarball": "http://localhost:3000/@types/express/-/express-5.0.1.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-UZUw8vjpWFXuDnjFTh7/5c2TWDlQqeXHi6hcN7F2XSVT5P+WmUnnbFS3KA6Jnc6IsEqI2qCVu2bK0R0J4A8ZQQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIAeCZwXaM9TRnAyle59x1VS7XsmWJ6a9OrfBQvNMagWvAiEAt/H3g/j7Od6DLsmk9Lfyiw3tfflV+jqzjAIsSswEq+o=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 7584
+   },
+   "main": "",
+   "types": "index.d.ts",
+   "scripts": {},
+   "_npmUser": {
+    "name": "types",
+    "email": "ts-npm-types@microsoft.com"
+   },
+   "repository": {
+    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+    "type": "git",
+    "directory": "types/express"
+   },
+   "description": "TypeScript definitions for express",
+   "directories": {},
+   "dependencies": {
+    "@types/body-parser": "*",
+    "@types/serve-static": "*",
+    "@types/express-serve-static-core": "^5.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "peerDependencies": {},
+   "typeScriptVersion": "5.0",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/express_5.0.1_1742412732850_0.6368596021591244",
+    "host": "s3://npm-registry-packages-npm-production"
+   },
+   "typesPublisherContentHash": "fc4e2b97399a28edf0ea8af60a18a56b71622eab908009e7e3a18677f98a80d8"
   }
  },
  "time": {
   "created": "2016-05-17T04:52:53.278Z",
-  "modified": "2025-02-23T08:08:00.192Z",
+  "modified": "2025-03-19T19:32:22.000Z",
   "4.0.16-alpha": "2016-05-17T04:52:53.278Z",
   "4.0.17-alpha": "2016-05-19T20:48:45.330Z",
   "4.0.22-alpha": "2016-05-20T19:33:03.103Z",
@@ -3005,7 +3080,8 @@
   "4.17.19": "2023-10-10T18:13:20.034Z",
   "4.17.20": "2023-10-18T02:07:39.878Z",
   "4.17.21": "2023-11-07T03:10:10.569Z",
-  "5.0.0": "2024-09-25T19:20:29.866Z"
+  "5.0.0": "2024-09-25T19:20:29.866Z",
+  "5.0.1": "2025-03-19T19:32:13.062Z"
  },
  "license": "MIT",
  "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/express",

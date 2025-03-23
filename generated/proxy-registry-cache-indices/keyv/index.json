@@ -1,10 +1,10 @@
 {
  "_id": "keyv",
- "_rev": "73-4a798cfccade7890b725b02b3a68b9b4",
+ "_rev": "75-1417d07d2f8198b2c6d1943a7f73e548",
  "name": "keyv",
  "dist-tags": {
   "next": "5.0.0-rc.1",
-  "latest": "5.3.1"
+  "latest": "5.3.2"
  },
  "versions": {
   "0.0.0": {
@@ -6382,6 +6382,133 @@
   "5.3.1": {
    "name": "keyv",
    "version": "5.3.1",
+   "keywords": [
+    "key",
+    "value",
+    "store",
+    "cache",
+    "ttl",
+    "key-value",
+    "storage",
+    "backend",
+    "adapter",
+    "redis",
+    "mongodb",
+    "sqlite",
+    "mysql",
+    "postgresql",
+    "memory",
+    "node-cache",
+    "lru-cache",
+    "lru",
+    "cache-manager"
+   ],
+   "author": {
+    "url": "http://jaredwray.com",
+    "name": "Jared Wray",
+    "email": "me@jaredwray.com"
+   },
+   "license": "MIT",
+   "_id": "keyv@5.3.1",
+   "maintainers": [
+    {
+     "name": "jaredwray",
+     "email": "me@jaredwray.com"
+    },
+    {
+     "name": "lukechilds",
+     "email": "lukechilds123@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/jaredwray/keyv",
+   "bugs": {
+    "url": "https://github.com/jaredwray/keyv/issues"
+   },
+   "xo": {
+    "rules": {
+     "@typescript-eslint/ban-ts-comment": "off",
+     "@typescript-eslint/no-unsafe-call": "off",
+     "@typescript-eslint/no-unsafe-return": "off",
+     "@typescript-eslint/no-unsafe-argument": "off",
+     "@typescript-eslint/no-unsafe-assignment": "off",
+     "@typescript-eslint/no-confusing-void-expression": "off"
+    }
+   },
+   "tsd": {
+    "directory": "test"
+   },
+   "dist": {
+    "shasum": "d3acebeecedafd4bf2b929e8866bcd79db071f1e",
+    "tarball": "http://localhost:3000/keyv/-/keyv-5.3.1.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-13hQT2q2VIwOoaJdJa7nY3J8UVbYtMTJFHnwm9LI+SaQRfUiM6Em9KZeOVTCKbMnGcRIL3NSUFpAdjZCq24nLQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDLXn0zmz/GTV4H6ZQBPbiDip8WXfQuMrNfpksREBXYTgIgE6obXM9DkkTPa7l8QmFpzgXtle7khCZOdFUIjibQtbg=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 91367
+   },
+   "main": "dist/index.cjs",
+   "type": "module",
+   "_from": "file:keyv-5.3.1.tgz",
+   "types": "dist/index.d.ts",
+   "module": "dist/index.js",
+   "exports": {
+    ".": {
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "scripts": {
+    "test": "xo --fix && vitest run --coverage",
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "clean": "rimraf ./node_modules ./coverage ./test/testdb.sqlite ./dist",
+    "test:ci": "xo && vitest --run --sequence.setupFiles=list"
+   },
+   "_npmUser": {
+    "name": "jaredwray",
+    "email": "me@jaredwray.com"
+   },
+   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/58a4609de8fe056627b6790c9c06e987/keyv-5.3.1.tgz",
+   "_integrity": "sha512-13hQT2q2VIwOoaJdJa7nY3J8UVbYtMTJFHnwm9LI+SaQRfUiM6Em9KZeOVTCKbMnGcRIL3NSUFpAdjZCq24nLQ==",
+   "repository": {
+    "url": "git+https://github.com/jaredwray/keyv.git",
+    "type": "git"
+   },
+   "_npmVersion": "11.1.0",
+   "description": "Simple key-value storage with support for multiple backends",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "@keyv/serialize": "^1.0.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.60.0",
+    "tsd": "^0.31.2",
+    "rimraf": "^6.0.1",
+    "vitest": "^3.0.7",
+    "timekeeper": "^2.3.1",
+    "@keyv/mongo": "^3.0.1",
+    "@keyv/sqlite": "^4.0.1",
+    "@keyv/memcache": "^2.0.1",
+    "@faker-js/faker": "^9.5.1",
+    "@keyv/test-suite": "^2.0.5",
+    "@keyv/compress-lz4": "^1.0.0",
+    "@keyv/compress-gzip": "^2.0.2",
+    "@vitest/coverage-v8": "^3.0.7",
+    "@keyv/compress-brotli": "^2.0.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/keyv_5.3.1_1740962606224_0.06154885508593866",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "5.3.2": {
+   "name": "keyv",
+   "version": "5.3.2",
    "description": "Simple key-value storage with support for multiple backends",
    "type": "module",
    "main": "dist/index.cjs",
@@ -6449,13 +6576,13 @@
     "tsd": "^0.31.2",
     "vitest": "^3.0.7",
     "xo": "^0.60.0",
-    "@keyv/compress-gzip": "^2.0.2",
     "@keyv/compress-brotli": "^2.0.3",
-    "@keyv/mongo": "^3.0.1",
-    "@keyv/compress-lz4": "^1.0.0",
+    "@keyv/compress-gzip": "^2.0.2",
     "@keyv/test-suite": "^2.0.5",
     "@keyv/memcache": "^2.0.1",
-    "@keyv/sqlite": "^4.0.1"
+    "@keyv/sqlite": "^4.0.1",
+    "@keyv/compress-lz4": "^1.0.0",
+    "@keyv/mongo": "^3.0.1"
    },
    "tsd": {
     "directory": "test"
@@ -6466,22 +6593,22 @@
     "test:ci": "xo && vitest --run --sequence.setupFiles=list",
     "clean": "rimraf ./node_modules ./coverage ./test/testdb.sqlite ./dist"
    },
-   "_id": "keyv@5.3.1",
-   "_integrity": "sha512-13hQT2q2VIwOoaJdJa7nY3J8UVbYtMTJFHnwm9LI+SaQRfUiM6Em9KZeOVTCKbMnGcRIL3NSUFpAdjZCq24nLQ==",
-   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/58a4609de8fe056627b6790c9c06e987/keyv-5.3.1.tgz",
-   "_from": "file:keyv-5.3.1.tgz",
+   "_id": "keyv@5.3.2",
+   "_integrity": "sha512-Lji2XRxqqa5Wg+CHLVfFKBImfJZ4pCSccu9eVWK6w4c2SDFLd8JAn1zqTuSFnsxb7ope6rMsnIHfp+eBbRBRZQ==",
+   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/0b888c5cb7dd2dff28bb5436aa716437/keyv-5.3.2.tgz",
+   "_from": "file:keyv-5.3.2.tgz",
    "_nodeVersion": "22.12.0",
    "_npmVersion": "11.1.0",
    "dist": {
-    "integrity": "sha512-13hQT2q2VIwOoaJdJa7nY3J8UVbYtMTJFHnwm9LI+SaQRfUiM6Em9KZeOVTCKbMnGcRIL3NSUFpAdjZCq24nLQ==",
-    "shasum": "d3acebeecedafd4bf2b929e8866bcd79db071f1e",
-    "tarball": "http://localhost:3000/keyv/-/keyv-5.3.1.tgz",
+    "integrity": "sha512-Lji2XRxqqa5Wg+CHLVfFKBImfJZ4pCSccu9eVWK6w4c2SDFLd8JAn1zqTuSFnsxb7ope6rMsnIHfp+eBbRBRZQ==",
+    "shasum": "32edd461b51d44d42926eb72946236d79c71ae78",
+    "tarball": "http://localhost:3000/keyv/-/keyv-5.3.2.tgz",
     "fileCount": 7,
-    "unpackedSize": 91367,
+    "unpackedSize": 91425,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQDLXn0zmz/GTV4H6ZQBPbiDip8WXfQuMrNfpksREBXYTgIgE6obXM9DkkTPa7l8QmFpzgXtle7khCZOdFUIjibQtbg="
+      "sig": "MEQCIDo5v9Q5JTFVxsOxbJbV5TWzyV1P1Jks2ltGIvf9MOsoAiBLPEAtevOhXjlZwLdILluULpzdlKg5QfRJ75QDKHBk9Q=="
      }
     ]
    },
@@ -6502,14 +6629,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/keyv_5.3.1_1740962606224_0.06154885508593866"
+    "tmp": "tmp/keyv_5.3.2_1742074039774_0.8598629444550923"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-07-07T13:43:26.836Z",
-  "modified": "2025-03-03T00:43:26.587Z",
+  "modified": "2025-03-15T21:27:20.178Z",
   "0.0.0": "2017-07-07T13:43:26.836Z",
   "0.1.0": "2017-07-11T13:02:11.437Z",
   "0.1.1": "2017-07-11T13:54:40.726Z",
@@ -6576,7 +6703,8 @@
   "5.2.2": "2024-12-12T01:36:53.484Z",
   "5.2.3": "2024-12-21T18:44:50.185Z",
   "5.3.0": "2025-03-01T22:00:45.013Z",
-  "5.3.1": "2025-03-03T00:43:26.406Z"
+  "5.3.1": "2025-03-03T00:43:26.406Z",
+  "5.3.2": "2025-03-15T21:27:19.974Z"
  },
  "bugs": {
   "url": "https://github.com/jaredwray/keyv/issues"

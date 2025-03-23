@@ -1,10 +1,11 @@
 {
  "_id": "http-cache-semantics",
- "_rev": "32-8c1f544876c5728e78f7cae7538ae89d",
+ "_rev": "34-d06be8c7af48654249a2805505c3d582",
  "name": "http-cache-semantics",
  "dist-tags": {
   "latest": "4.1.1",
-  "beta": "4.2.0-beta.1"
+  "beta": "4.2.0-beta.1",
+  "next": "4.2.0-beta.2"
  },
  "versions": {
   "1.0.0": {
@@ -1598,12 +1599,73 @@
   "4.2.0-beta.1": {
    "name": "http-cache-semantics",
    "version": "4.2.0-beta.1",
+   "author": {
+    "url": "https://kornel.ski/",
+    "name": "Kornel Lesiński",
+    "email": "kornel@geekhood.net"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "http-cache-semantics@4.2.0-beta.1",
+   "maintainers": [
+    {
+     "name": "kornel",
+     "email": "npmspam@geekhood.net"
+    }
+   ],
+   "homepage": "https://github.com/kornelski/http-cache-semantics#readme",
+   "bugs": {
+    "url": "https://github.com/kornelski/http-cache-semantics/issues"
+   },
+   "dist": {
+    "shasum": "0c9284ac4118646cff303c69f04f95c1ef05dc65",
+    "tarball": "http://localhost:3000/http-cache-semantics/-/http-cache-semantics-4.2.0-beta.1.tgz",
+    "fileCount": 4,
+    "integrity": "sha512-B1i8U97RQid/XhsLa94xPxwDqNgroICdxLaENBcNJ0+o20SLzQ7ODTcO1Hny8S55hCqlD1VnLrc8hdBTgjKbQA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDMS9SGw+HWD2mcku63z4aFN8WRttxH8rsupvqfgfjOaQIhAMfyaHDZgQSfSbqz2dLFJQ0jFx9SRNz0w/31A3vZ695w",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 41627
+   },
+   "main": "index.js",
+   "gitHead": "31eee62e858a41a96d0fe5619aac4318bb12a342",
+   "scripts": {
+    "test": "mocha"
+   },
+   "_npmUser": {
+    "name": "kornel",
+    "email": "npmspam@geekhood.net"
+   },
+   "repository": {
+    "url": "git+https://github.com/kornelski/http-cache-semantics.git",
+    "type": "git"
+   },
+   "_npmVersion": "11.1.0",
+   "description": "Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies",
+   "directories": {},
+   "_nodeVersion": "23.3.0",
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "devDependencies": {
+    "mocha": "^11.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/http-cache-semantics_4.2.0-beta.1_1738543529790_0.992887112479663",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "4.2.0-beta.2": {
+   "name": "http-cache-semantics",
+   "version": "4.2.0-beta.2",
    "description": "Parses Cache-Control and other headers. Helps building correct HTTP caches and proxies",
    "repository": {
     "type": "git",
     "url": "git+https://github.com/kornelski/http-cache-semantics.git"
    },
    "main": "index.js",
+   "types": "index.js",
    "scripts": {
     "test": "mocha"
    },
@@ -1616,25 +1678,25 @@
    "devDependencies": {
     "mocha": "^11.0"
    },
-   "_id": "http-cache-semantics@4.2.0-beta.1",
+   "_id": "http-cache-semantics@4.2.0-beta.2",
    "readmeFilename": "README.md",
-   "gitHead": "31eee62e858a41a96d0fe5619aac4318bb12a342",
+   "gitHead": "f01112e954b83cfa8765b633ba880e5e980aa54c",
    "bugs": {
     "url": "https://github.com/kornelski/http-cache-semantics/issues"
    },
    "homepage": "https://github.com/kornelski/http-cache-semantics#readme",
-   "_nodeVersion": "23.3.0",
-   "_npmVersion": "11.1.0",
+   "_nodeVersion": "23.10.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-B1i8U97RQid/XhsLa94xPxwDqNgroICdxLaENBcNJ0+o20SLzQ7ODTcO1Hny8S55hCqlD1VnLrc8hdBTgjKbQA==",
-    "shasum": "0c9284ac4118646cff303c69f04f95c1ef05dc65",
-    "tarball": "http://localhost:3000/http-cache-semantics/-/http-cache-semantics-4.2.0-beta.1.tgz",
+    "integrity": "sha512-aG2vtbcjyrIlepLt5Jhnu9eL41caPUBxAa/8cyYZ/ZhTjHI1u3Gjri/XJbGV5edew1R3Uo2+39b7TaF3ML57JA==",
+    "shasum": "64d68ec08d4ea65f771a172e117f4891d00901e2",
+    "tarball": "http://localhost:3000/http-cache-semantics/-/http-cache-semantics-4.2.0-beta.2.tgz",
     "fileCount": 4,
-    "unpackedSize": 41627,
+    "unpackedSize": 49931,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEYCIQDMS9SGw+HWD2mcku63z4aFN8WRttxH8rsupvqfgfjOaQIhAMfyaHDZgQSfSbqz2dLFJQ0jFx9SRNz0w/31A3vZ695w"
+      "sig": "MEUCIBX7RPD/pk/oFUSUeNzFE2vUl9HOsFOiSISQm47NhhRdAiEA4yv2/yT7bgIz8h9jhjmutGM+GYKCkEETHZYjUXeYVyM="
      }
     ]
    },
@@ -1651,14 +1713,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/http-cache-semantics_4.2.0-beta.1_1738543529790_0.992887112479663"
+    "tmp": "tmp/http-cache-semantics_4.2.0-beta.2_1742383023026_0.30032522873676926"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2016-05-31T09:18:22.371Z",
-  "modified": "2025-02-03T00:45:30.115Z",
+  "modified": "2025-03-19T11:17:03.368Z",
   "1.0.0": "2016-05-31T09:18:22.371Z",
   "2.0.0": "2016-05-31T11:43:36.739Z",
   "3.0.0": "2016-05-31T16:12:09.950Z",
@@ -1685,7 +1747,8 @@
   "4.0.4": "2020-02-10T22:16:08.024Z",
   "4.1.0": "2020-03-01T23:54:55.142Z",
   "4.1.1": "2023-01-27T01:29:11.933Z",
-  "4.2.0-beta.1": "2025-02-03T00:45:29.967Z"
+  "4.2.0-beta.1": "2025-02-03T00:45:29.967Z",
+  "4.2.0-beta.2": "2025-03-19T11:17:03.197Z"
  },
  "bugs": {
   "url": "https://github.com/kornelski/http-cache-semantics/issues"

@@ -1,9 +1,9 @@
 {
  "_id": "mime-db",
- "_rev": "105-b47b7393ebd63befd8166929284671ca",
+ "_rev": "107-55d49297655da8470a0db19b95b155bb",
  "name": "mime-db",
  "dist-tags": {
-  "latest": "1.53.0"
+  "latest": "1.54.0"
  },
  "versions": {
   "0.0.0": {
@@ -6293,11 +6293,119 @@
     "tmp": "tmp/mime-db_1.53.0_1720816500491_0.9021472348936239",
     "host": "s3://npm-registry-packages"
    }
+  },
+  "1.54.0": {
+   "name": "mime-db",
+   "description": "Media Type Database",
+   "version": "1.54.0",
+   "contributors": [
+    {
+     "name": "Douglas Christopher Wilson",
+     "email": "doug@somethingdoug.com"
+    },
+    {
+     "name": "Jonathan Ong",
+     "email": "me@jongleberry.com",
+     "url": "http://jongleberry.com"
+    },
+    {
+     "name": "Robert Kieffer",
+     "email": "robert@broofa.com",
+     "url": "http://github.com/broofa"
+    }
+   ],
+   "license": "MIT",
+   "keywords": [
+    "mime",
+    "db",
+    "type",
+    "types",
+    "database",
+    "charset",
+    "charsets"
+   ],
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jshttp/mime-db.git"
+   },
+   "devDependencies": {
+    "csv-parse": "4.16.3",
+    "eslint": "8.32.0",
+    "eslint-config-standard": "15.0.1",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-markdown": "3.0.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "6.1.1",
+    "eslint-plugin-standard": "4.1.0",
+    "media-typer": "1.1.0",
+    "mocha": "10.2.0",
+    "nyc": "15.1.0",
+    "stream-to-array": "2.3.0",
+    "undici": "7.1.0"
+   },
+   "engines": {
+    "node": ">= 0.6"
+   },
+   "scripts": {
+    "build": "node scripts/build",
+    "fetch": "node scripts/fetch-apache && node scripts/fetch-iana && node scripts/fetch-nginx",
+    "lint": "eslint .",
+    "test": "mocha --reporter spec --check-leaks test/",
+    "test-ci": "nyc --reporter=lcovonly --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test",
+    "update": "npm run fetch && npm run build",
+    "version": "node scripts/version-history.js && git add HISTORY.md"
+   },
+   "_id": "mime-db@1.54.0",
+   "gitHead": "5207a32f76e77ed2f63421641449f8addeacb0a5",
+   "bugs": {
+    "url": "https://github.com/jshttp/mime-db/issues"
+   },
+   "homepage": "https://github.com/jshttp/mime-db#readme",
+   "_nodeVersion": "23.5.0",
+   "_npmVersion": "10.9.2",
+   "dist": {
+    "integrity": "sha512-aU5EJuIN2WDemCcAp2vFBfp/m4EAhWJnUNSSw0ixs7/kXbd6Pg64EmwJkNdFhB8aWt1sH2CTXrLxo/iAGV3oPQ==",
+    "shasum": "cddb3ee4f9c64530dff640236661d42cb6a314f5",
+    "tarball": "http://localhost:3000/mime-db/-/mime-db-1.54.0.tgz",
+    "fileCount": 6,
+    "unpackedSize": 225566,
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQCQNJ57UlaKKgaBxzUo5WoRsITrTNeknrN05f96Z6VrCwIhANtVnf0QvkzIzRBhGoaP7MY007vjoouE5wcTJmBxirCB"
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "wesleytodd",
+    "email": "wes@wesleytodd.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    },
+    {
+     "name": "wesleytodd",
+     "email": "wes@wesleytodd.com"
+    },
+    {
+     "name": "dougwilson",
+     "email": "doug@somethingdoug.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/mime-db_1.54.0_1742310404154_0.19473775997612774"
+   },
+   "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2014-08-14T22:17:35.560Z",
-  "modified": "2024-10-10T20:55:53.125Z",
+  "modified": "2025-03-18T15:06:44.520Z",
   "0.0.0": "2014-08-14T22:17:35.560Z",
   "1.0.0": "2014-08-30T11:33:45.622Z",
   "1.0.1": "2014-08-30T11:57:45.485Z",
@@ -6360,7 +6468,8 @@
   "1.50.0": "2021-09-16T01:37:03.130Z",
   "1.51.0": "2021-11-09T02:44:55.389Z",
   "1.52.0": "2022-02-21T19:41:51.123Z",
-  "1.53.0": "2024-07-12T20:35:00.644Z"
+  "1.53.0": "2024-07-12T20:35:00.644Z",
+  "1.54.0": "2025-03-18T15:06:44.354Z"
  },
  "bugs": {
   "url": "https://github.com/jshttp/mime-db/issues"
@@ -6377,8 +6486,8 @@
   "charsets"
  ],
  "repository": {
-  "url": "git+https://github.com/jshttp/mime-db.git",
-  "type": "git"
+  "type": "git",
+  "url": "git+https://github.com/jshttp/mime-db.git"
  },
  "description": "Media Type Database",
  "contributors": [
@@ -6387,31 +6496,31 @@
    "email": "doug@somethingdoug.com"
   },
   {
-   "url": "http://jongleberry.com",
    "name": "Jonathan Ong",
-   "email": "me@jongleberry.com"
+   "email": "me@jongleberry.com",
+   "url": "http://jongleberry.com"
   },
   {
-   "url": "http://github.com/broofa",
    "name": "Robert Kieffer",
-   "email": "robert@broofa.com"
+   "email": "robert@broofa.com",
+   "url": "http://github.com/broofa"
   }
  ],
  "maintainers": [
   {
-   "email": "hello@blakeembrey.com",
-   "name": "blakeembrey"
+   "name": "blakeembrey",
+   "email": "hello@blakeembrey.com"
   },
   {
-   "email": "wes@wesleytodd.com",
-   "name": "wesleytodd"
+   "name": "wesleytodd",
+   "email": "wes@wesleytodd.com"
   },
   {
-   "email": "doug@somethingdoug.com",
-   "name": "dougwilson"
+   "name": "dougwilson",
+   "email": "doug@somethingdoug.com"
   }
  ],
- "readme": "# mime-db\n\n[![NPM Version][npm-version-image]][npm-url]\n[![NPM Downloads][npm-downloads-image]][npm-url]\n[![Node.js Version][node-image]][node-url]\n[![Build Status][ci-image]][ci-url]\n[![Coverage Status][coveralls-image]][coveralls-url]\n\nThis is a large database of mime types and information about them.\nIt consists of a single, public JSON file and does not include any logic,\nallowing it to remain as un-opinionated as possible with an API.\nIt aggregates data from the following sources:\n\n- https://www.iana.org/assignments/media-types/media-types.xhtml\n- https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types\n- https://hg.nginx.org/nginx/raw-file/default/conf/mime.types\n\n## Installation\n\n```bash\nnpm install mime-db\n```\n\n### Database Download\n\nIf you intend to use this in a web browser, you can conveniently access the JSON file via [jsDelivr](https://www.jsdelivr.com/), a popular CDN (Content Delivery Network). To ensure stability and compatibility, it is advisable to specify [a release tag](https://github.com/jshttp/mime-db/tags) instead of using the 'master' branch. This is because the JSON file's format might change in future updates, and relying on a specific release tag will prevent potential issues arising from these changes.\n\n```\nhttps://cdn.jsdelivr.net/gh/jshttp/mime-db@master/db.json\n```\n\n## Usage\n\n```js\nvar db = require('mime-db')\n\n// grab data on .js files\nvar data = db['application/javascript']\n```\n\n## Data Structure\n\nThe JSON file is a map lookup for lowercased mime types.\nEach mime type has the following properties:\n\n- `.source` - where the mime type is defined.\n    If not set, it's probably a custom media type.\n    - `apache` - [Apache common media types](https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types)\n    - `iana` - [IANA-defined media types](https://www.iana.org/assignments/media-types/media-types.xhtml)\n    - `nginx` - [nginx media types](https://hg.nginx.org/nginx/raw-file/default/conf/mime.types)\n- `.extensions[]` - known extensions associated with this mime type.\n- `.compressible` - whether a file of this type can be gzipped.\n- `.charset` - the default charset associated with this type, if any.\n\nIf unknown, every property could be `undefined`.\n\n## Contributing\n\nThe primary way to contribute to this database is by updating the data in\none of the upstream sources. The database is updated from the upstreams\nperiodically and will pull in any changes.\n\n### Registering Media Types\n\nThe best way to get new media types included in this library is to register\nthem with the IANA. The community registration procedure is outlined in\n[RFC 6838 section 5](https://tools.ietf.org/html/rfc6838#section-5). Types\nregistered with the IANA are automatically pulled into this library.\n\n### Direct Inclusion\n\nIf that is not possible / feasible, they can be added directly here as a\n\"custom\" type. To do this, it is required to have a primary source that\ndefinitively lists the media type. If an extension is going to be listed as\nassociateed with this media type, the source must definitively link the\nmedia type and extension as well.\n\nTo edit the database, only make PRs against `src/custom-types.json` or\n`src/custom-suffix.json`.\n\nThe `src/custom-types.json` file is a JSON object with the MIME type as the\nkeys and the values being an object with the following keys:\n\n- `compressible` - leave out if you don't know, otherwise `true`/`false` to\n  indicate whether the data represented by the type is typically compressible.\n- `extensions` - include an array of file extensions that are associated with\n  the type.\n- `notes` - human-readable notes about the type, typically what the type is.\n- `sources` - include an array of URLs of where the MIME type and the associated\n  extensions are sourced from. This needs to be a [primary source](https://en.wikipedia.org/wiki/Primary_source);\n  links to type aggregating sites and Wikipedia are _not acceptable_.\n\nTo update the build, run `npm run build`.\n\n[ci-image]: https://badgen.net/github/checks/jshttp/mime-db/master?label=ci\n[ci-url]: https://github.com/jshttp/mime-db/actions/workflows/ci.yml\n[coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/mime-db/master\n[coveralls-url]: https://coveralls.io/r/jshttp/mime-db?branch=master\n[node-image]: https://badgen.net/npm/node/mime-db\n[node-url]: https://nodejs.org/en/download\n[npm-downloads-image]: https://badgen.net/npm/dm/mime-db\n[npm-url]: https://npmjs.org/package/mime-db\n[npm-version-image]: https://badgen.net/npm/v/mime-db\n",
+ "readme": "# mime-db\n\n[![NPM Version][npm-version-image]][npm-url]\n[![NPM Downloads][npm-downloads-image]][npm-url]\n[![Node.js Version][node-image]][node-url]\n[![Build Status][ci-image]][ci-url]\n[![Coverage Status][coveralls-image]][coveralls-url]\n\nThis is a large database of mime types and information about them.\nIt consists of a single, public JSON file and does not include any logic,\nallowing it to remain as un-opinionated as possible with an API.\nIt aggregates data from the following sources:\n\n- https://www.iana.org/assignments/media-types/media-types.xhtml\n- https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types\n- https://hg.nginx.org/nginx/raw-file/default/conf/mime.types\n\n## Installation\n\n```bash\nnpm install mime-db\n```\n\n### Database Download\n\nIf you intend to use this in a web browser, you can conveniently access the JSON file via [jsDelivr](https://www.jsdelivr.com/), a popular CDN (Content Delivery Network). To ensure stability and compatibility, it is advisable to specify [a release tag](https://github.com/jshttp/mime-db/tags) instead of using the 'master' branch. This is because the JSON file's format might change in future updates, and relying on a specific release tag will prevent potential issues arising from these changes.\n\n```\nhttps://cdn.jsdelivr.net/gh/jshttp/mime-db@master/db.json\n```\n\n## Usage\n\n```js\nvar db = require('mime-db')\n\n// grab data on .js files\nvar data = db['application/javascript']\n```\n\n## Data Structure\n\nThe JSON file is a map lookup for lowercased mime types.\nEach mime type has the following properties:\n\n- `.source` - where the mime type is defined.\n    If not set, it's probably a custom media type.\n    - `apache` - [Apache common media types](https://svn.apache.org/repos/asf/httpd/httpd/trunk/docs/conf/mime.types)\n    - `iana` - [IANA-defined media types](https://www.iana.org/assignments/media-types/media-types.xhtml)\n    - `nginx` - [nginx media types](https://hg.nginx.org/nginx/raw-file/default/conf/mime.types)\n- `.extensions[]` - known extensions associated with this mime type.\n- `.compressible` - whether a file of this type can be gzipped.\n- `.charset` - the default charset associated with this type, if any.\n\nIf unknown, every property could be `undefined`.\n\n## Note on MIME Type Data and Semver\n\nThis package considers the programmatic api as the semver compatibility. This means the MIME type resolution is *not* considered\nin the semver bumps. This means that if you want to pin your `mime-db` data you will need to do it in your application. While\nthis expectation was not set in docs until now, it is how the pacakge operated, so we do not feel this is a breaking change.\n\n## Contributing\n\nThe primary way to contribute to this database is by updating the data in\none of the upstream sources. The database is updated from the upstreams\nperiodically and will pull in any changes.\n\n### Registering Media Types\n\nThe best way to get new media types included in this library is to register\nthem with the IANA. The community registration procedure is outlined in\n[RFC 6838 section 5](https://tools.ietf.org/html/rfc6838#section-5). Types\nregistered with the IANA are automatically pulled into this library.\n\n### Direct Inclusion\n\nIf that is not possible / feasible, they can be added directly here as a\n\"custom\" type. To do this, it is required to have a primary source that\ndefinitively lists the media type. If an extension is going to be listed as\nassociated with this media type, the source must definitively link the\nmedia type and extension as well.\n\nTo edit the database, only make PRs against `src/custom-types.json` or\n`src/custom-suffix.json`.\n\nThe `src/custom-types.json` file is a JSON object with the MIME type as the\nkeys and the values being an object with the following keys:\n\n- `compressible` - leave out if you don't know, otherwise `true`/`false` to\n  indicate whether the data represented by the type is typically compressible.\n- `extensions` - include an array of file extensions that are associated with\n  the type.\n- `notes` - human-readable notes about the type, typically what the type is.\n- `sources` - include an array of URLs of where the MIME type and the associated\n  extensions are sourced from. This needs to be a [primary source](https://en.wikipedia.org/wiki/Primary_source);\n  links to type aggregating sites and Wikipedia are _not acceptable_.\n\nTo update the build, run `npm run build`.\n\n[ci-image]: https://badgen.net/github/checks/jshttp/mime-db/master?label=ci\n[ci-url]: https://github.com/jshttp/mime-db/actions/workflows/ci.yml\n[coveralls-image]: https://badgen.net/coveralls/c/github/jshttp/mime-db/master\n[coveralls-url]: https://coveralls.io/r/jshttp/mime-db?branch=master\n[node-image]: https://badgen.net/npm/node/mime-db\n[node-url]: https://nodejs.org/en/download\n[npm-downloads-image]: https://badgen.net/npm/dm/mime-db\n[npm-url]: https://npmjs.org/package/mime-db\n[npm-version-image]: https://badgen.net/npm/v/mime-db\n",
  "readmeFilename": "README.md",
  "users": {
   "laomu": true,

@@ -3,8 +3,8 @@ set -e
 
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
-CORE_CHECKOUT=v1.156.2
-DESKTOP_CHECKOUT=v1.54.2
+CORE_CHECKOUT=v1.157.3
+DESKTOP_CHECKOUT=v1.56.0
 
 # this script needs:
 # - serveral repos checked out next to this repo

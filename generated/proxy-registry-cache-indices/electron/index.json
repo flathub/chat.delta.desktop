@@ -1,6 +1,6 @@
 {
  "_id": "electron",
- "_rev": "2512-cdf472b7c9e34a676d8ac78eaeb86950",
+ "_rev": "2535-846e82105a59b89b519246da389c7902",
  "name": "electron",
  "dist-tags": {
   "unsupported": "2.1.0-unsupported.20180809",
@@ -97,14 +97,15 @@
   "beta-34-x-y": "34.0.0-beta.16",
   "31-x-y": "31.7.7",
   "alpha-35-x-y": "35.0.0-alpha.5",
-  "alpha": "35.0.0-alpha.5",
-  "34-x-y": "34.3.0",
-  "latest": "35.0.0",
-  "33-x-y": "33.4.2",
   "beta-35-x-y": "35.0.0-beta.13",
   "beta": "35.0.0-beta.13",
   "32-x-y": "32.3.3",
-  "35-x-y": "35.0.0"
+  "alpha": "36.0.0-alpha.4",
+  "34-x-y": "34.3.4",
+  "latest": "35.0.3",
+  "35-x-y": "35.0.3",
+  "33-x-y": "33.4.6",
+  "alpha-36-x-y": "36.0.0-alpha.4"
  },
  "versions": {
   "0.1.0": {
@@ -109364,11 +109365,1151 @@
     "tmp": "tmp/electron_35.0.0_1741067211645_0.8476377199607947",
     "host": "s3://npm-registry-packages-npm-production"
    }
+  },
+  "34.3.1": {
+   "name": "electron",
+   "version": "34.3.1",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@34.3.1",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "2c337a496d923463a2c7be7eaab191ad8220459b",
+    "tarball": "http://localhost:3000/electron/-/electron-34.3.1.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-Vsgxc4FDGg7hjduKyvTP5qfNDxZHTliZIiWD1HlR5hHXx3BFjyVv3db/uEH1GaCU0KKyeNsBXRwS4WAOMaSH5g==",
+    "signatures": [
+     {
+      "sig": "MEUCIEy1jfP2xrcEH5kjxuNO8aDmFAQiSp7wZpULNui0dwhKAiEAqC4wex971/MwZSWLkvBQb8REmRFzyco0xtSpkI2wlA4=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1029522
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm202526-907-b4q0p3.3qjwo/electron-34.3.1.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm202526-907-b4q0p3.3qjwo/electron-34.3.1.tgz",
+   "_integrity": "sha512-Vsgxc4FDGg7hjduKyvTP5qfNDxZHTliZIiWD1HlR5hHXx3BFjyVv3db/uEH1GaCU0KKyeNsBXRwS4WAOMaSH5g==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.13.1",
+   "dependencies": {
+    "@types/node": "^20.9.0",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_34.3.1_1741289636831_0.8592686540699916",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "33.4.3": {
+   "name": "electron",
+   "version": "33.4.3",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@33.4.3",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "b5c02adde5252ef1bb38c6ea5e31b3bcf4006cd6",
+    "tarball": "http://localhost:3000/electron/-/electron-33.4.3.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-+cApL2a43zQJfnmCEOj3YuvM2iVsQzwr8ROysM5EFbY5F77bSVoIWk8r84aQLlBIajq4BppWymsikdXvDDxD5g==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDQBlNigGqAU1RvdV7mEZ+FLJToDGTLYyA7dxKY8v+YrgIgORTaXPcAfj84kF8dz9KvIrn+HQSexWJGYI1cicr6138=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1026347
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm202526-1075-1w58dnp.sogo/electron-33.4.3.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm202526-1075-1w58dnp.sogo/electron-33.4.3.tgz",
+   "_integrity": "sha512-+cApL2a43zQJfnmCEOj3YuvM2iVsQzwr8ROysM5EFbY5F77bSVoIWk8r84aQLlBIajq4BppWymsikdXvDDxD5g==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.13.1",
+   "dependencies": {
+    "@types/node": "^20.9.0",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_33.4.3_1741295389307_0.9442940431776345",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "34.3.2": {
+   "name": "electron",
+   "version": "34.3.2",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@34.3.2",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "bc6bef988e12f2b766640f45983bdb90a4ab587f",
+    "tarball": "http://localhost:3000/electron/-/electron-34.3.2.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-n9tzmFexVLxipZXwMTY30H10f0X9k2OP0SkpSwL5VvnDZi0l/Hc+8CEArKkQPbbSf/IS7nxgc96gtTaR+XoSBg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDGs1v6LoSIRxiKOA35khJsfpDR/3ErvbjUi+vomuOLxQIgMRUuQ+IN8TygS8FVhKOZT6jj91UL+Psp5WOQbcV38bg=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1029522
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm202529-996-1gpezjt.q3w7h/electron-34.3.2.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm202529-996-1gpezjt.q3w7h/electron-34.3.2.tgz",
+   "_integrity": "sha512-n9tzmFexVLxipZXwMTY30H10f0X9k2OP0SkpSwL5VvnDZi0l/Hc+8CEArKkQPbbSf/IS7nxgc96gtTaR+XoSBg==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^20.9.0",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_34.3.2_1741577814960_0.14044721886529477",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "33.4.4": {
+   "name": "electron",
+   "version": "33.4.4",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@33.4.4",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "df7fdc4db158ea9820f3fca833155c95f5f4fcf2",
+    "tarball": "http://localhost:3000/electron/-/electron-33.4.4.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-IGfb8EZriE++6+GQn8dUEaUxreUA1WOZt3N76GGQu23TIFuz81DxKZ69xmoGMmgYm51p5S342U1mfQnrjwqTew==",
+    "signatures": [
+     {
+      "sig": "MEQCIHOyKZ8PIFK50LAuGPi/eINMRGJXCbAURTu4C82jxRZ7AiAghwSzmmvGTyvn+2ffM4BhI/h/BQYDQjAfVxklF8ediw==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1026347
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm202529-1411-8s5x4w.t9trm/electron-33.4.4.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm202529-1411-8s5x4w.t9trm/electron-33.4.4.tgz",
+   "_integrity": "sha512-IGfb8EZriE++6+GQn8dUEaUxreUA1WOZt3N76GGQu23TIFuz81DxKZ69xmoGMmgYm51p5S342U1mfQnrjwqTew==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^20.9.0",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_33.4.4_1741578115883_0.30048791556913645",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "36.0.0-alpha.1": {
+   "name": "electron",
+   "version": "36.0.0-alpha.1",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@36.0.0-alpha.1",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "83e28c680d5260e95acc8de4e3d63e6915079aea",
+    "tarball": "http://localhost:3000/electron/-/electron-36.0.0-alpha.1.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-Cw2ieRMq0VEiXtwUi0KFpnBBFjY4lJY7lIOfeZjjb4l2rd/szN3Ud+XOg1odH1tgzhDQT8gqV4xc0NsdPv/RiQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCD5olsNWR0zeiYGYFi+pT7VvWfN0pZ2SzQOoc2SRCXvQIgV2qNUCbxnkB1Z9V3y9Q0zvC7NYkB15ue+4ottBJ3m8E=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1059238
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm202529-1460-zb0jfc.4jc5/electron-36.0.0-alpha.1.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm202529-1460-zb0jfc.4jc5/electron-36.0.0-alpha.1.tgz",
+   "_integrity": "sha512-Cw2ieRMq0VEiXtwUi0KFpnBBFjY4lJY7lIOfeZjjb4l2rd/szN3Ud+XOg1odH1tgzhDQT8gqV4xc0NsdPv/RiQ==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^22.7.7",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_36.0.0-alpha.1_1741578124952_0.15620357743498436",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "35.0.1": {
+   "name": "electron",
+   "version": "35.0.1",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@35.0.1",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "8596e3936c4b5787e0cf52739bf6842925cfcdc1",
+    "tarball": "http://localhost:3000/electron/-/electron-35.0.1.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-iQonj6lnPhqfqha2KXx6LzV1dnu6UPTCWK+b7f9Zvg828umGemi22DKbcJ3/q+Opn7iUVTWyqp9z1JQqkIi6OA==",
+    "signatures": [
+     {
+      "sig": "MEQCIAsnH2KxLCy2LJkqc0j/S8U1mOLvHHJKjdh7Vd57sOxDAiBmx3774bkBv++0Yd3Gl8XbVPPYKLofzp+dPJBYtxdA7w==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1053421
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm202529-1669-n6orni.nvt6f/electron-35.0.1.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm202529-1669-n6orni.nvt6f/electron-35.0.1.tgz",
+   "_integrity": "sha512-iQonj6lnPhqfqha2KXx6LzV1dnu6UPTCWK+b7f9Zvg828umGemi22DKbcJ3/q+Opn7iUVTWyqp9z1JQqkIi6OA==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^22.7.7",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_35.0.1_1741578388937_0.3575180249694576",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "34.3.3": {
+   "name": "electron",
+   "version": "34.3.3",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@34.3.3",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "2979329d182a195756bfbf6e5687a835cd65a2ec",
+    "tarball": "http://localhost:3000/electron/-/electron-34.3.3.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-7m1FiO1mwc1K/UqqnnkG7Ik/kAngDzmLfHwcl+xaWgCQ+Sts9rlEqzOh6g1GHhDqebrbs4bO/aU+NDi32fCciQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIEK9AweiIxso4cwfVVdf5ZcwtcjKMTCRk1c6NqUZ8nPNAiBl0LqwN+QRrk7XZQa0XW5vhD6yLw3/whQCdONpONOrcA==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1029522
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm2025212-1385-1k4ubtc.83a6l/electron-34.3.3.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm2025212-1385-1k4ubtc.83a6l/electron-34.3.3.tgz",
+   "_integrity": "sha512-7m1FiO1mwc1K/UqqnnkG7Ik/kAngDzmLfHwcl+xaWgCQ+Sts9rlEqzOh6g1GHhDqebrbs4bO/aU+NDi32fCciQ==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^20.9.0",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_34.3.3_1741804204460_0.23136658605169647",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "36.0.0-alpha.2": {
+   "name": "electron",
+   "version": "36.0.0-alpha.2",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@36.0.0-alpha.2",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "fc1e70cd3640da4da0cbb5bb22dc4e2dc5696afd",
+    "tarball": "http://localhost:3000/electron/-/electron-36.0.0-alpha.2.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-pCqkZ0s/pb91HpI2HtfHXIusL8bYgT+nhS3I/VjgD/WWgIkBHnOF1OX+psDoQ7NOI/WibH05dUR8V7aV/86shw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQC7iQ1S1F9S/pJnVR4daGK8nO1BCYOJuyl9Keg42RJP2gIhAKDEZieBp89ib4pByV5GKyWKm9MPTjdeuN1ekzE+8JTw",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1059213
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm2025213-869-c3rrql.8sjvi/electron-36.0.0-alpha.2.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm2025213-869-c3rrql.8sjvi/electron-36.0.0-alpha.2.tgz",
+   "_integrity": "sha512-pCqkZ0s/pb91HpI2HtfHXIusL8bYgT+nhS3I/VjgD/WWgIkBHnOF1OX+psDoQ7NOI/WibH05dUR8V7aV/86shw==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^22.7.7",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_36.0.0-alpha.2_1741881029591_0.5186986942109788",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "33.4.5": {
+   "name": "electron",
+   "version": "33.4.5",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@33.4.5",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "be0b2791af8c250da8b09612f6041d7a47499df2",
+    "tarball": "http://localhost:3000/electron/-/electron-33.4.5.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-rbDc4QOqfMT1uopUG+KcaMKzKgFAXAzN3wNIdgErnB1tUnpgTxwFv1BDN/exCl1vaVWBeM9YtbO5PgbGZeq7xw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCHG9BkKKTLPOITW27gYgAobzh9dJT+cHBhFo/VVdEZ4wIgCMmQfYjqj+egWNU10FPyITsTMGiqzvNmLp8kXcV7nHA=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1026347
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm2025213-1480-92sjad.7ofcv/electron-33.4.5.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm2025213-1480-92sjad.7ofcv/electron-33.4.5.tgz",
+   "_integrity": "sha512-rbDc4QOqfMT1uopUG+KcaMKzKgFAXAzN3wNIdgErnB1tUnpgTxwFv1BDN/exCl1vaVWBeM9YtbO5PgbGZeq7xw==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^20.9.0",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_33.4.5_1741893589659_0.6088483868980141",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "35.0.2": {
+   "name": "electron",
+   "version": "35.0.2",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@35.0.2",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "06e54526056a4d9eaa0132a6940d5cfa10d27c16",
+    "tarball": "http://localhost:3000/electron/-/electron-35.0.2.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-jo8S4GfBpVIBDGitUrv+Vo/I/ZEEs6IvWprG2KJlxayYIKpufulbQaxDt78cC/79FwFo8MA0JOIwx/b9r5NRag==",
+    "signatures": [
+     {
+      "sig": "MEQCIHv8Ll0zMmqz9orEVz0eoZy1U7TvAMrx6OsMudJsTIWyAiBjX7KpqUncqKSqEVNUfmf13qjLs2uG8Kf2z0w+CtFsFQ==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1053421
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm2025216-236-cl3dqi.e00v5/electron-35.0.2.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm2025216-236-cl3dqi.e00v5/electron-35.0.2.tgz",
+   "_integrity": "sha512-jo8S4GfBpVIBDGitUrv+Vo/I/ZEEs6IvWprG2KJlxayYIKpufulbQaxDt78cC/79FwFo8MA0JOIwx/b9r5NRag==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^22.7.7",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_35.0.2_1742108657285_0.4880467044610033",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "36.0.0-alpha.3": {
+   "name": "electron",
+   "version": "36.0.0-alpha.3",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@36.0.0-alpha.3",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "9b0aab6f63dae05cf6af9f841d21225a24cc8757",
+    "tarball": "http://localhost:3000/electron/-/electron-36.0.0-alpha.3.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-9sUghPPpbx5spNKfoi7Wfa7XC1Q6P4aoilbjjuI2Ky0qqlWPcH5lbT/IbLwSIaZgRsWr0tZu0bLZwuIek7oCKg==",
+    "signatures": [
+     {
+      "sig": "MEQCIC+ff3nW/zNOtM3Fu2RQYSwl7jcjfK0oia8XvjhYr89FAiAl0Uqnf/cmVWTbcuRsEYUAlUmnm+dYBDKSUhiqnFINUg==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1059213
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm2025217-770-mx5sxw.eqctn/electron-36.0.0-alpha.3.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm2025217-770-mx5sxw.eqctn/electron-36.0.0-alpha.3.tgz",
+   "_integrity": "sha512-9sUghPPpbx5spNKfoi7Wfa7XC1Q6P4aoilbjjuI2Ky0qqlWPcH5lbT/IbLwSIaZgRsWr0tZu0bLZwuIek7oCKg==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^22.7.7",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_36.0.0-alpha.3_1742227089610_0.5294572349175533",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "34.3.4": {
+   "name": "electron",
+   "version": "34.3.4",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@34.3.4",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "3acbcb5fe1aabfa926dddce23de28da9e6023cc5",
+    "tarball": "http://localhost:3000/electron/-/electron-34.3.4.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-bIsjBh5EN229K4orJpVfjLb7JEoCYkUVg3tS981E1elEjvhBITqwm+K1j9goEqMIlxqYWgogREYpSZRQ+aLWgQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIAiPtbca9gACUPAUDFOStsozSSV1Vmcm+8ZZqX0/OmXNAiEAi+aFUupACqFKoX43r9Ij0m+OZDufUTvKGfWs9A7bLqw=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1029522
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm2025219-1928-yg2vm0.ho2ze/electron-34.3.4.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm2025219-1928-yg2vm0.ho2ze/electron-34.3.4.tgz",
+   "_integrity": "sha512-bIsjBh5EN229K4orJpVfjLb7JEoCYkUVg3tS981E1elEjvhBITqwm+K1j9goEqMIlxqYWgogREYpSZRQ+aLWgQ==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^20.9.0",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_34.3.4_1742443792557_0.09902647430422684",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "35.0.3": {
+   "name": "electron",
+   "version": "35.0.3",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@35.0.3",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "0b8aaef52433fbadc94ff7775e2beaa8746abc10",
+    "tarball": "http://localhost:3000/electron/-/electron-35.0.3.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-kjQAYEWXSr2TyK19IZoF85dzFIBaYuX7Yp/C+34b5Y/jmI2z270CGie+RjmEGMMitsy0G8YJKftukhYMuWlK6g==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCIppl8OiX7PMYPWTqle+BbNeVB5tHzbkuBbI0jtqURkAIhAO7fiVCGEqbMEE6NiYtWeJ+cFb6eDsw6cSqo7xesNmEf",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1053489
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm2025219-2025-zyosft.sievj/electron-35.0.3.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm2025219-2025-zyosft.sievj/electron-35.0.3.tgz",
+   "_integrity": "sha512-kjQAYEWXSr2TyK19IZoF85dzFIBaYuX7Yp/C+34b5Y/jmI2z270CGie+RjmEGMMitsy0G8YJKftukhYMuWlK6g==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^22.7.7",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_35.0.3_1742443819225_0.842802794659592",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "33.4.6": {
+   "name": "electron",
+   "version": "33.4.6",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@33.4.6",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "45eb4b0964f3c3ac3cf1184cf1030980c3565095",
+    "tarball": "http://localhost:3000/electron/-/electron-33.4.6.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-INNAYGkMWOb10FNMHaSdow0ekFiftFznpn6Cqo/vEgEapBMyNzGJa+0IVCezmgyRUW08FCHd+ngjvynALSndxQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQC8iNmUIjBdtmTfmajBxIZKYfE3oW3qu+IgDTys9MY/oAIhANZfqIZIzNUtWsSR2lb2lp5zOIIzhfyRS3nR4b/f+eZq",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1026347
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm2025219-2224-v24e1e.54qb/electron-33.4.6.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm2025219-2224-v24e1e.54qb/electron-33.4.6.tgz",
+   "_integrity": "sha512-INNAYGkMWOb10FNMHaSdow0ekFiftFznpn6Cqo/vEgEapBMyNzGJa+0IVCezmgyRUW08FCHd+ngjvynALSndxQ==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^20.9.0",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_33.4.6_1742451853947_0.8025006365273764",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "36.0.0-alpha.4": {
+   "name": "electron",
+   "version": "36.0.0-alpha.4",
+   "keywords": [
+    "electron"
+   ],
+   "author": {
+    "name": "Electron Community"
+   },
+   "license": "MIT",
+   "_id": "electron@36.0.0-alpha.4",
+   "maintainers": [
+    {
+     "name": "electronhq",
+     "email": "marshallofsound+electronhqnpm@electronjs.org"
+    },
+    {
+     "name": "electron-nightly",
+     "email": "info+nightly-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/electron#readme",
+   "bugs": {
+    "url": "https://github.com/electron/electron/issues"
+   },
+   "bin": {
+    "electron": "cli.js"
+   },
+   "dist": {
+    "shasum": "95c673f563ee7f09e5cad2b2dfdb3b2a7aad060d",
+    "tarball": "http://localhost:3000/electron/-/electron-36.0.0-alpha.4.tgz",
+    "fileCount": 8,
+    "integrity": "sha512-rS31fv3supQjvbbcoP8gOIRVKh2/Bn2uMpx82mu4JgYxNxUK7h8MXx/EalKr76ME+wwgTGlXyogLmB31Br6+/A==",
+    "signatures": [
+     {
+      "sig": "MEQCIGrT+6Q+Rpwpn/b1u2osYCDVbMag5u8ux52esQV890ZxAiA8+nf0VSeNgFvJLqLOrRl22w6Bm5n1ez95g3gkRZpGNw==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 1059281
+   },
+   "main": "index.js",
+   "_from": "file:/tmp/electron-npm2025220-848-25da4g.uoecq/electron-36.0.0-alpha.4.tgz",
+   "types": "electron.d.ts",
+   "engines": {
+    "node": ">= 12.20.55"
+   },
+   "scripts": {
+    "postinstall": "node install.js"
+   },
+   "_npmUser": {
+    "name": "electron-nightly",
+    "email": "info+nightly-npm@electronjs.org"
+   },
+   "_resolved": "/tmp/electron-npm2025220-848-25da4g.uoecq/electron-36.0.0-alpha.4.tgz",
+   "_integrity": "sha512-rS31fv3supQjvbbcoP8gOIRVKh2/Bn2uMpx82mu4JgYxNxUK7h8MXx/EalKr76ME+wwgTGlXyogLmB31Br6+/A==",
+   "repository": {
+    "url": "git+https://github.com/electron/electron.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Build cross platform desktop apps with JavaScript, HTML, and CSS",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "@types/node": "^22.7.7",
+    "extract-zip": "^2.0.1",
+    "@electron/get": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron_36.0.0-alpha.4_1742486469273_0.44719099595592304",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
   }
  },
  "time": {
   "created": "2012-05-18T23:11:55.741Z",
-  "modified": "2025-03-04T05:46:54.072Z",
+  "modified": "2025-03-20T16:01:13.133Z",
   "0.1.0": "2012-05-18T23:11:56.439Z",
   "0.1.1": "2012-05-22T14:37:24.301Z",
   "0.1.2": "2012-05-23T22:07:09.937Z",
@@ -110773,7 +111914,22 @@
   "35.0.0-beta.12": "2025-02-28T01:25:23.012Z",
   "35.0.0-beta.13": "2025-03-03T16:31:37.469Z",
   "32.3.3": "2025-03-03T23:14:46.588Z",
-  "35.0.0": "2025-03-04T05:46:51.823Z"
+  "35.0.0": "2025-03-04T05:46:51.823Z",
+  "34.3.1": "2025-03-06T19:33:57.083Z",
+  "33.4.3": "2025-03-06T21:09:49.547Z",
+  "34.3.2": "2025-03-10T03:36:55.185Z",
+  "33.4.4": "2025-03-10T03:41:56.150Z",
+  "36.0.0-alpha.1": "2025-03-10T03:42:05.192Z",
+  "35.0.1": "2025-03-10T03:46:29.136Z",
+  "34.3.3": "2025-03-12T18:30:04.682Z",
+  "36.0.0-alpha.2": "2025-03-13T15:50:29.858Z",
+  "33.4.5": "2025-03-13T19:19:49.898Z",
+  "35.0.2": "2025-03-16T07:04:17.551Z",
+  "36.0.0-alpha.3": "2025-03-17T15:58:09.933Z",
+  "34.3.4": "2025-03-20T04:09:52.778Z",
+  "35.0.3": "2025-03-20T04:10:19.433Z",
+  "33.4.6": "2025-03-20T06:24:14.161Z",
+  "36.0.0-alpha.4": "2025-03-20T16:01:09.575Z"
  },
  "bugs": {
   "url": "https://github.com/electron/electron/issues"

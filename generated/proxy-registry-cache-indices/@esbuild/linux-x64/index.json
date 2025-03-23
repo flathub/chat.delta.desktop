@@ -1,9 +1,9 @@
 {
  "_id": "@esbuild/linux-x64",
- "_rev": "89-0b89fe599aab24dee478ed8e13026106",
+ "_rev": "91-a65783165444ec0fa317de279677e863",
  "name": "@esbuild/linux-x64",
  "dist-tags": {
-  "latest": "0.25.0"
+  "latest": "0.25.1"
  },
  "versions": {
   "0.15.18": {
@@ -5391,6 +5391,67 @@
   "0.25.0": {
    "name": "@esbuild/linux-x64",
    "version": "0.25.0",
+   "license": "MIT",
+   "_id": "@esbuild/linux-x64@0.25.0",
+   "maintainers": [
+    {
+     "name": "evanw",
+     "email": "evan.exe@gmail.com"
+    },
+    {
+     "name": "esbuild",
+     "email": "evan.exe+esbuild@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/evanw/esbuild#readme",
+   "bugs": {
+    "url": "https://github.com/evanw/esbuild/issues"
+   },
+   "os": [
+    "linux"
+   ],
+   "cpu": [
+    "x64"
+   ],
+   "dist": {
+    "shasum": "08fcf60cb400ed2382e9f8e0f5590bac8810469a",
+    "tarball": "http://localhost:3000/@esbuild/linux-x64/-/linux-x64-0.25.0.tgz",
+    "fileCount": 3,
+    "integrity": "sha512-9yl91rHw/cpwMCNytUDxwj2XjFpxML0y9HAOH9pNVQDpQrBxHy01Dx+vaMu0N1CKa/RzBD2hB4u//nfc+Sd3Cw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDrd5m9Xc0JWOq9V/zCslEbWr3zgCz/vRzwwv+nuSQWYwIhANGpjocyCAFwBJzs4EmSBUCLH6rMP/rI0WWUZmTWFjlG",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 10244761
+   },
+   "engines": {
+    "node": ">=18"
+   },
+   "gitHead": "e9174d671b1882758cd32ac5e146200f5bee3e45",
+   "_npmUser": {
+    "name": "evanw",
+    "email": "evan.exe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/evanw/esbuild.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.5.1",
+   "description": "The Linux 64-bit binary for esbuild, a JavaScript bundler.",
+   "directories": {},
+   "_nodeVersion": "22.0.0",
+   "_hasShrinkwrap": false,
+   "preferUnplugged": true,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/linux-x64_0.25.0_1738983759978_0.7652899317690041",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.25.1": {
+   "name": "@esbuild/linux-x64",
+   "version": "0.25.1",
    "description": "The Linux 64-bit binary for esbuild, a JavaScript bundler.",
    "repository": {
     "type": "git",
@@ -5407,24 +5468,24 @@
    "cpu": [
     "x64"
    ],
-   "_id": "@esbuild/linux-x64@0.25.0",
-   "gitHead": "e9174d671b1882758cd32ac5e146200f5bee3e45",
+   "_id": "@esbuild/linux-x64@0.25.1",
+   "gitHead": "6bfc1c13b4d986b86e8bc2035f00c337b0c1d007",
    "bugs": {
     "url": "https://github.com/evanw/esbuild/issues"
    },
    "homepage": "https://github.com/evanw/esbuild#readme",
-   "_nodeVersion": "22.0.0",
-   "_npmVersion": "10.5.1",
+   "_nodeVersion": "22.14.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-9yl91rHw/cpwMCNytUDxwj2XjFpxML0y9HAOH9pNVQDpQrBxHy01Dx+vaMu0N1CKa/RzBD2hB4u//nfc+Sd3Cw==",
-    "shasum": "08fcf60cb400ed2382e9f8e0f5590bac8810469a",
-    "tarball": "http://localhost:3000/@esbuild/linux-x64/-/linux-x64-0.25.0.tgz",
+    "integrity": "sha512-xbfUhu/gnvSEg+EGovRc+kjBAkrvtk38RlerAzQxvMzlB4fXpCFCeUAYzJvrnhFtdeyVCDANSjJvOvGYoeKzFA==",
+    "shasum": "f1c796b78fff5ce393658313e8c58613198d9954",
+    "tarball": "http://localhost:3000/@esbuild/linux-x64/-/linux-x64-0.25.1.tgz",
     "fileCount": 3,
     "unpackedSize": 10244761,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEYCIQDrd5m9Xc0JWOq9V/zCslEbWr3zgCz/vRzwwv+nuSQWYwIhANGpjocyCAFwBJzs4EmSBUCLH6rMP/rI0WWUZmTWFjlG"
+      "sig": "MEUCIQDTl3w8pdDHVdCMbzReSMJWFUabuTNb8sNgyuGSEI2FtwIgcpNjLop9TRJQORQGwiBWEyNvy7VgvivdKV/JxQYohTo="
      }
     ]
    },
@@ -5445,14 +5506,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/linux-x64_0.25.0_1738983759978_0.7652899317690041"
+    "tmp": "tmp/linux-x64_0.25.1_1741578350782_0.5515892662620081"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2022-12-05T23:54:53.773Z",
-  "modified": "2025-02-08T03:02:40.399Z",
+  "modified": "2025-03-10T03:45:51.215Z",
   "0.15.18": "2022-12-05T23:54:54.121Z",
   "0.16.0": "2022-12-07T03:55:19.672Z",
   "0.16.1": "2022-12-07T04:48:48.034Z",
@@ -5541,7 +5602,8 @@
   "0.24.0": "2024-09-22T02:06:40.740Z",
   "0.24.1": "2024-12-20T05:41:35.436Z",
   "0.24.2": "2024-12-20T17:56:52.550Z",
-  "0.25.0": "2025-02-08T03:02:40.208Z"
+  "0.25.0": "2025-02-08T03:02:40.208Z",
+  "0.25.1": "2025-03-10T03:45:51.022Z"
  },
  "bugs": {
   "url": "https://github.com/evanw/esbuild/issues"

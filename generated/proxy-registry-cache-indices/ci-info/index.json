@@ -1,9 +1,9 @@
 {
  "_id": "ci-info",
- "_rev": "39-b3cb20c86a5b699ce5a5c01d44784823",
+ "_rev": "41-df6b1370be3ffe5c163a12a29556b871",
  "name": "ci-info",
  "dist-tags": {
-  "latest": "4.1.0"
+  "latest": "4.2.0"
  },
  "versions": {
   "1.0.0": {
@@ -2362,9 +2362,101 @@
   "4.1.0": {
    "name": "ci-info",
    "version": "4.1.0",
+   "keywords": [
+    "ci",
+    "continuous",
+    "integration",
+    "test",
+    "detect"
+   ],
+   "author": {
+    "url": "https://twitter.com/wa7son",
+    "name": "Thomas Watson Steen",
+    "email": "w@tson.dk"
+   },
+   "license": "MIT",
+   "_id": "ci-info@4.1.0",
+   "maintainers": [
+    {
+     "name": "watson",
+     "email": "w@tson.dk"
+    },
+    {
+     "name": "sibiraj-s",
+     "email": "kap9xb3d5@mozmail.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "https://github.com/sibiraj-s",
+     "name": "Sibiraj"
+    }
+   ],
+   "homepage": "https://github.com/watson/ci-info",
+   "bugs": {
+    "url": "https://github.com/watson/ci-info/issues"
+   },
+   "dist": {
+    "shasum": "92319d2fa29d2620180ea5afed31f589bc98cf83",
+    "tarball": "http://localhost:3000/ci-info/-/ci-info-4.1.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-HutrvTNsF48wnxkzERIXOe5/mlcfFcbfCmwcg6CJnizbSue78AbDt+1cgl26zwn61WFxhcPykPfZrbqjGmBb4A==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDMuUgPfl/BKzAq3owHupUw/wS/5CeDh+s2jnLbVTb2RAIgWyYDuFnElMT5Ltmo0AEQ1YmgrADuvE12rm0uG6nIl0Y=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 28509
+   },
+   "main": "index.js",
+   "engines": {
+    "node": ">=8"
+   },
+   "funding": [
+    {
+     "url": "https://github.com/sponsors/sibiraj-s",
+     "type": "github"
+    }
+   ],
+   "gitHead": "dd5cd6f593307b7e8d3787366cbffcb04b7accf9",
+   "scripts": {
+    "test": "standard && node test.js",
+    "prepare": "husky install || true",
+    "lint:fix": "standard --fix"
+   },
+   "typings": "index.d.ts",
+   "_npmUser": {
+    "name": "sibiraj-s",
+    "email": "kap9xb3d5@mozmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/watson/ci-info.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Get details about the current Continuous Integration environment",
+   "directories": {},
+   "_nodeVersion": "22.11.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^5.9.0",
+    "husky": "^9.1.6",
+    "standard": "^17.1.2",
+    "clear-module": "^4.1.2"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ci-info_4.1.0_1731409912870_0.8262153348150001",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "4.2.0": {
+   "name": "ci-info",
+   "version": "4.2.0",
    "description": "Get details about the current Continuous Integration environment",
    "main": "index.js",
    "typings": "index.d.ts",
+   "type": "commonjs",
    "author": {
     "name": "Thomas Watson Steen",
     "email": "w@tson.dk",
@@ -2405,27 +2497,28 @@
    },
    "devDependencies": {
     "clear-module": "^4.1.2",
-    "husky": "^9.1.6",
+    "husky": "^9.1.7",
+    "publint": "^0.3.8",
     "standard": "^17.1.2",
     "tape": "^5.9.0"
    },
    "engines": {
     "node": ">=8"
    },
-   "_id": "ci-info@4.1.0",
-   "gitHead": "dd5cd6f593307b7e8d3787366cbffcb04b7accf9",
-   "_nodeVersion": "22.11.0",
-   "_npmVersion": "10.9.0",
+   "_id": "ci-info@4.2.0",
+   "gitHead": "ec8a1554cfd7989b7f6a7edc2846827f9fcf3bc3",
+   "_nodeVersion": "22.14.0",
+   "_npmVersion": "11.2.0",
    "dist": {
-    "integrity": "sha512-HutrvTNsF48wnxkzERIXOe5/mlcfFcbfCmwcg6CJnizbSue78AbDt+1cgl26zwn61WFxhcPykPfZrbqjGmBb4A==",
-    "shasum": "92319d2fa29d2620180ea5afed31f589bc98cf83",
-    "tarball": "http://localhost:3000/ci-info/-/ci-info-4.1.0.tgz",
+    "integrity": "sha512-cYY9mypksY8NRqgDB1XD1RiJL338v/551niynFTGkZOO2LHuB2OmOYxDIe/ttN9AHwrqdum1360G3ald0W9kCg==",
+    "shasum": "cbd21386152ebfe1d56f280a3b5feccbd96764c7",
+    "tarball": "http://localhost:3000/ci-info/-/ci-info-4.2.0.tgz",
     "fileCount": 7,
-    "unpackedSize": 28509,
+    "unpackedSize": 28914,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQDMuUgPfl/BKzAq3owHupUw/wS/5CeDh+s2jnLbVTb2RAIgWyYDuFnElMT5Ltmo0AEQ1YmgrADuvE12rm0uG6nIl0Y="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQCt4exekrZOjcNCKhihETXCX3GTGWgJpJm5R25N/A66UwIhAMc0hduvNtZusAQkjMU8TacuhFrchwh6P0PTaIOPr9uG"
      }
     ]
    },
@@ -2445,15 +2538,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/ci-info_4.1.0_1731409912870_0.8262153348150001"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/ci-info_4.2.0_1741513936969_0.6705580276305272"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2016-10-20T16:01:20.750Z",
-  "modified": "2024-11-12T11:11:53.211Z",
+  "modified": "2025-03-09T09:52:17.320Z",
   "1.0.0": "2016-10-20T16:01:20.750Z",
   "1.0.1": "2017-09-04T15:30:55.785Z",
   "1.1.0": "2017-09-05T11:33:34.768Z",
@@ -2485,7 +2578,8 @@
   "3.8.0": "2023-02-11T14:11:34.779Z",
   "3.9.0": "2023-10-04T04:56:10.209Z",
   "4.0.0": "2023-10-29T06:41:23.336Z",
-  "4.1.0": "2024-11-12T11:11:53.051Z"
+  "4.1.0": "2024-11-12T11:11:53.051Z",
+  "4.2.0": "2025-03-09T09:52:17.153Z"
  },
  "bugs": {
   "url": "https://github.com/watson/ci-info/issues"
@@ -2509,6 +2603,12 @@
   "url": "git+https://github.com/watson/ci-info.git"
  },
  "description": "Get details about the current Continuous Integration environment",
+ "contributors": [
+  {
+   "name": "Sibiraj",
+   "url": "https://github.com/sibiraj-s"
+  }
+ ],
  "maintainers": [
   {
    "name": "watson",
@@ -2519,17 +2619,11 @@
    "email": "kap9xb3d5@mozmail.com"
   }
  ],
- "readme": "# ci-info\n\nGet details about the current Continuous Integration environment.\n\nPlease [open an\nissue](https://github.com/watson/ci-info/issues/new?template=ci-server-not-detected.md)\nif your CI server isn't properly detected :)\n\n[![npm](https://img.shields.io/npm/v/ci-info.svg)](https://www.npmjs.com/package/ci-info)\n[![Tests](https://github.com/watson/ci-info/workflows/Tests/badge.svg)](https://github.com/watson/ci-info/actions)\n[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)\n\n## Installation\n\n```bash\nnpm install ci-info --save\n```\n\n## Usage\n\n```js\nvar ci = require('ci-info')\n\nif (ci.isCI) {\n  console.log('The name of the CI server is:', ci.name)\n} else {\n  console.log('This program is not running on a CI server')\n}\n```\n\n## Supported CI tools\n\nOfficially supported CI servers:\n\n| Name                                                                            | Constant                | isPR |\n| ------------------------------------------------------------------------------- | ----------------------- | ---- |\n| [Agola CI](https://agola.io/)                                                   | `ci.AGOLA`              | ✅   |\n| [Appcircle](https://appcircle.io/)                                              | `ci.APPCIRCLE`          | ✅   |\n| [AppVeyor](http://www.appveyor.com)                                             | `ci.APPVEYOR`           | ✅   |\n| [AWS CodeBuild](https://aws.amazon.com/codebuild/)                              | `ci.CODEBUILD`          | ✅   |\n| [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/) | `ci.AZURE_PIPELINES`    | ✅   |\n| [Bamboo](https://www.atlassian.com/software/bamboo) by Atlassian                | `ci.BAMBOO`             | 🚫   |\n| [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines)         | `ci.BITBUCKET`          | ✅   |\n| [Bitrise](https://www.bitrise.io/)                                              | `ci.BITRISE`            | ✅   |\n| [Buddy](https://buddy.works/)                                                   | `ci.BUDDY`              | ✅   |\n| [Buildkite](https://buildkite.com)                                              | `ci.BUILDKITE`          | ✅   |\n| [CircleCI](http://circleci.com)                                                 | `ci.CIRCLE`             | ✅   |\n| [Cirrus CI](https://cirrus-ci.org)                                              | `ci.CIRRUS`             | ✅   |\n| [Codefresh](https://codefresh.io/)                                              | `ci.CODEFRESH`          | ✅   |\n| [Codeship](https://codeship.com)                                                | `ci.CODESHIP`           | 🚫   |\n| [Drone](https://drone.io)                                                       | `ci.DRONE`              | ✅   |\n| [dsari](https://github.com/rfinnie/dsari)                                       | `ci.DSARI`              | 🚫   |\n| [Earthly CI](https://earthly.dev/)                                              | `ci.EARTHLY`            | 🚫   |\n| [Expo Application Services](https://expo.dev/eas)                               | `ci.EAS`                | 🚫   |\n| [Gerrit CI](https://www.gerritcodereview.com)                                   | `ci.GERRIT`             | 🚫   |\n| [GitHub Actions](https://github.com/features/actions/)                          | `ci.GITHUB_ACTIONS`     | ✅   |\n| [GitLab CI](https://about.gitlab.com/gitlab-ci/)                                | `ci.GITLAB`             | ✅   |\n| [Gitea Actions](https://about.gitea.com/)                                       | `ci.GITEA_ACTIONS`      | 🚫  |\n| [GoCD](https://www.go.cd/)                                                      | `ci.GOCD`               | 🚫   |\n| [Google Cloud Build](https://cloud.google.com/build)                            | `ci.GOOGLE_CLOUD_BUILD` | 🚫   |\n| [Harness CI](https://www.harness.io/products/continuous-integration)            | `ci.HARNESS`            | 🚫   |\n| [Heroku](https://www.heroku.com)                                                | `ci.HEROKU`             | 🚫   |\n| [Hudson](http://hudson-ci.org)                                                  | `ci.HUDSON`             | 🚫   |\n| [Jenkins CI](https://jenkins-ci.org)                                            | `ci.JENKINS`            | ✅   |\n| [LayerCI](https://layerci.com/)                                                 | `ci.LAYERCI`            | ✅   |\n| [Magnum CI](https://magnum-ci.com)                                              | `ci.MAGNUM`             | 🚫   |\n| [Netlify CI](https://www.netlify.com/)                                          | `ci.NETLIFY`            | ✅   |\n| [Nevercode](http://nevercode.io/)                                               | `ci.NEVERCODE`          | ✅   |\n| [Prow](https://docs.prow.k8s.io/)                                               | `ci.PROW`               | 🚫   |\n| [ReleaseHub](https://releasehub.com/)                                           | `ci.RELEASEHUB`         | 🚫   |\n| [Render](https://render.com/)                                                   | `ci.RENDER`             | ✅   |\n| [Sail CI](https://sail.ci/)                                                     | `ci.SAIL`               | ✅   |\n| [Screwdriver](https://screwdriver.cd/)                                          | `ci.SCREWDRIVER`        | ✅   |\n| [Semaphore](https://semaphoreci.com)                                            | `ci.SEMAPHORE`          | ✅   |\n| [Sourcehut](https://sourcehut.org/)                                             | `ci.SOURCEHUT`          | 🚫   |\n| [Strider CD](https://strider-cd.github.io/)                                     | `ci.STRIDER`            | 🚫   |\n| [TaskCluster](http://docs.taskcluster.net)                                      | `ci.TASKCLUSTER`        | 🚫   |\n| [TeamCity](https://www.jetbrains.com/teamcity/) by JetBrains                    | `ci.TEAMCITY`           | 🚫   |\n| [Travis CI](http://travis-ci.org)                                               | `ci.TRAVIS`             | ✅   |\n| [Vela](https://go-vela.github.io/docs/)                                         | `ci.VELA`               | ✅   |\n| [Vercel](https://vercel.com/)                                                   | `ci.VERCEL`             | ✅   |\n| [Visual Studio App Center](https://appcenter.ms/)                               | `ci.APPCENTER`          | 🚫   |\n| [Woodpecker](https://woodpecker-ci.org/)                                        | `ci.WOODPECKER`         | ✅   |\n\n## API\n\n### `ci.name`\n\nReturns a string containing name of the CI server the code is running on.\nIf CI server is not detected, it returns `null`.\n\nDon't depend on the value of this string not to change for a specific\nvendor. If you find your self writing `ci.name === 'Travis CI'`, you\nmost likely want to use `ci.TRAVIS` instead.\n\n### `ci.isCI`\n\nReturns a boolean. Will be `true` if the code is running on a CI server,\notherwise `false`.\n\nSome CI servers not listed here might still trigger the `ci.isCI`\nboolean to be set to `true` if they use certain vendor neutral\nenvironment variables. In those cases `ci.name` will be `null` and no\nvendor specific boolean will be set to `true`.\n\n### `ci.isPR`\n\nReturns a boolean if PR detection is supported for the current CI server. Will\nbe `true` if a PR is being tested, otherwise `false`. If PR detection is\nnot supported for the current CI server, the value will be `null`.\n\n### `ci.<VENDOR-CONSTANT>`\n\nA vendor specific boolean constant is exposed for each support CI\nvendor. A constant will be `true` if the code is determined to run on\nthe given CI server, otherwise `false`.\n\nExamples of vendor constants are `ci.TRAVIS` or `ci.APPVEYOR`. For a\ncomplete list, see the support table above.\n\n## Ports\n\nci-info has been ported to the following languages\n\n| Language | Repository |\n|----------|------------|\n| Go       | https://github.com/hofstadter-io/cinful |\n| Rust     | https://github.com/sagiegurari/ci_info |\n| Kotlin   | https://github.com/cloudflightio/ci-info |\n\n## License\n\n[MIT](LICENSE)\n",
+ "readme": "# ci-info\n\nGet details about the current Continuous Integration environment.\n\nPlease [open an\nissue](https://github.com/watson/ci-info/issues/new?template=ci-server-not-detected.md)\nif your CI server isn't properly detected :)\n\n[![npm](https://img.shields.io/npm/v/ci-info.svg)](https://www.npmjs.com/package/ci-info)\n[![Tests](https://github.com/watson/ci-info/workflows/Tests/badge.svg)](https://github.com/watson/ci-info/actions)\n[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)\n\n## Installation\n\n```bash\nnpm install ci-info --save\n```\n\n## Usage\n\n```js\nvar ci = require('ci-info')\n\nif (ci.isCI) {\n  console.log('The name of the CI server is:', ci.name)\n} else {\n  console.log('This program is not running on a CI server')\n}\n```\n\n## Supported CI tools\n\nOfficially supported CI servers:\n\n| Name                                                                            | Constant                | isPR |\n| ------------------------------------------------------------------------------- | ----------------------- | ---- |\n| [Agola CI](https://agola.io/)                                                   | `ci.AGOLA`              | ✅   |\n| [Appcircle](https://appcircle.io/)                                              | `ci.APPCIRCLE`          | ✅   |\n| [AppVeyor](http://www.appveyor.com)                                             | `ci.APPVEYOR`           | ✅   |\n| [AWS CodeBuild](https://aws.amazon.com/codebuild/)                              | `ci.CODEBUILD`          | ✅   |\n| [Azure Pipelines](https://azure.microsoft.com/en-us/services/devops/pipelines/) | `ci.AZURE_PIPELINES`    | ✅   |\n| [Bamboo](https://www.atlassian.com/software/bamboo) by Atlassian                | `ci.BAMBOO`             | 🚫   |\n| [Bitbucket Pipelines](https://bitbucket.org/product/features/pipelines)         | `ci.BITBUCKET`          | ✅   |\n| [Bitrise](https://www.bitrise.io/)                                              | `ci.BITRISE`            | ✅   |\n| [Buddy](https://buddy.works/)                                                   | `ci.BUDDY`              | ✅   |\n| [Buildkite](https://buildkite.com)                                              | `ci.BUILDKITE`          | ✅   |\n| [CircleCI](http://circleci.com)                                                 | `ci.CIRCLE`             | ✅   |\n| [Cirrus CI](https://cirrus-ci.org)                                              | `ci.CIRRUS`             | ✅   |\n| [Cloudflare Pages](https://pages.cloudflare.com/)                               | `ci.CLOUDFLARE_PAGES`   | 🚫   |\n| [Codefresh](https://codefresh.io/)                                              | `ci.CODEFRESH`          | ✅   |\n| [Codeship](https://codeship.com)                                                | `ci.CODESHIP`           | 🚫   |\n| [Drone](https://drone.io)                                                       | `ci.DRONE`              | ✅   |\n| [dsari](https://github.com/rfinnie/dsari)                                       | `ci.DSARI`              | 🚫   |\n| [Earthly CI](https://earthly.dev/)                                              | `ci.EARTHLY`            | 🚫   |\n| [Expo Application Services](https://expo.dev/eas)                               | `ci.EAS`                | 🚫   |\n| [Gerrit CI](https://www.gerritcodereview.com)                                   | `ci.GERRIT`             | 🚫   |\n| [GitHub Actions](https://github.com/features/actions/)                          | `ci.GITHUB_ACTIONS`     | ✅   |\n| [GitLab CI](https://about.gitlab.com/gitlab-ci/)                                | `ci.GITLAB`             | ✅   |\n| [Gitea Actions](https://about.gitea.com/)                                       | `ci.GITEA_ACTIONS`      | 🚫  |\n| [GoCD](https://www.go.cd/)                                                      | `ci.GOCD`               | 🚫   |\n| [Google Cloud Build](https://cloud.google.com/build)                            | `ci.GOOGLE_CLOUD_BUILD` | 🚫   |\n| [Harness CI](https://www.harness.io/products/continuous-integration)            | `ci.HARNESS`            | 🚫   |\n| [Heroku](https://www.heroku.com)                                                | `ci.HEROKU`             | 🚫   |\n| [Hudson](http://hudson-ci.org)                                                  | `ci.HUDSON`             | 🚫   |\n| [Jenkins CI](https://jenkins-ci.org)                                            | `ci.JENKINS`            | ✅   |\n| [LayerCI](https://layerci.com/)                                                 | `ci.LAYERCI`            | ✅   |\n| [Magnum CI](https://magnum-ci.com)                                              | `ci.MAGNUM`             | 🚫   |\n| [Netlify CI](https://www.netlify.com/)                                          | `ci.NETLIFY`            | ✅   |\n| [Nevercode](http://nevercode.io/)                                               | `ci.NEVERCODE`          | ✅   |\n| [Prow](https://docs.prow.k8s.io/)                                               | `ci.PROW`               | 🚫   |\n| [ReleaseHub](https://releasehub.com/)                                           | `ci.RELEASEHUB`         | 🚫   |\n| [Render](https://render.com/)                                                   | `ci.RENDER`             | ✅   |\n| [Sail CI](https://sail.ci/)                                                     | `ci.SAIL`               | ✅   |\n| [Screwdriver](https://screwdriver.cd/)                                          | `ci.SCREWDRIVER`        | ✅   |\n| [Semaphore](https://semaphoreci.com)                                            | `ci.SEMAPHORE`          | ✅   |\n| [Sourcehut](https://sourcehut.org/)                                             | `ci.SOURCEHUT`          | 🚫   |\n| [Strider CD](https://strider-cd.github.io/)                                     | `ci.STRIDER`            | 🚫   |\n| [TaskCluster](http://docs.taskcluster.net)                                      | `ci.TASKCLUSTER`        | 🚫   |\n| [TeamCity](https://www.jetbrains.com/teamcity/) by JetBrains                    | `ci.TEAMCITY`           | 🚫   |\n| [Travis CI](http://travis-ci.org)                                               | `ci.TRAVIS`             | ✅   |\n| [Vela](https://go-vela.github.io/docs/)                                         | `ci.VELA`               | ✅   |\n| [Vercel](https://vercel.com/)                                                   | `ci.VERCEL`             | ✅   |\n| [Visual Studio App Center](https://appcenter.ms/)                               | `ci.APPCENTER`          | 🚫   |\n| [Woodpecker](https://woodpecker-ci.org/)                                        | `ci.WOODPECKER`         | ✅   |\n\n## API\n\n### `ci.name`\n\nReturns a string containing name of the CI server the code is running on.\nIf CI server is not detected, it returns `null`.\n\nDon't depend on the value of this string not to change for a specific\nvendor. If you find your self writing `ci.name === 'Travis CI'`, you\nmost likely want to use `ci.TRAVIS` instead.\n\n### `ci.isCI`\n\nReturns a boolean. Will be `true` if the code is running on a CI server,\notherwise `false`.\n\nSome CI servers not listed here might still trigger the `ci.isCI`\nboolean to be set to `true` if they use certain vendor neutral\nenvironment variables. In those cases `ci.name` will be `null` and no\nvendor specific boolean will be set to `true`.\n\n### `ci.isPR`\n\nReturns a boolean if PR detection is supported for the current CI server. Will\nbe `true` if a PR is being tested, otherwise `false`. If PR detection is\nnot supported for the current CI server, the value will be `null`.\n\n### `ci.<VENDOR-CONSTANT>`\n\nA vendor specific boolean constant is exposed for each support CI\nvendor. A constant will be `true` if the code is determined to run on\nthe given CI server, otherwise `false`.\n\nExamples of vendor constants are `ci.TRAVIS` or `ci.APPVEYOR`. For a\ncomplete list, see the support table above.\n\n## Ports\n\nci-info has been ported to the following languages\n\n| Language | Repository |\n|----------|------------|\n| Go       | https://github.com/hofstadter-io/cinful |\n| Rust     | https://github.com/sagiegurari/ci_info |\n| Kotlin   | https://github.com/cloudflightio/ci-info |\n\n## License\n\n[MIT](LICENSE)\n",
  "readmeFilename": "README.md",
  "users": {
   "hualei": true,
   "vdsabev": true,
   "flumpus-dev": true
- },
- "contributors": [
-  {
-   "name": "Sibiraj",
-   "url": "https://github.com/sibiraj-s"
-  }
- ]
+ }
 }

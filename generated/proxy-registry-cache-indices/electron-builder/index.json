@@ -1,10 +1,10 @@
 {
  "_id": "electron-builder",
- "_rev": "1475-bea0be76f5191a909097fa94fd562eaf",
+ "_rev": "1478-fbaa05dba6c2f011e6a4fbcc15a1f1d5",
  "name": "electron-builder",
  "dist-tags": {
   "latest": "25.1.8",
-  "next": "26.0.10"
+  "next": "26.0.12"
  },
  "versions": {
   "1.0.0": {
@@ -130628,8 +130628,252 @@
   },
   "26.0.10": {
    "name": "electron-builder",
-   "description": "A complete solution to package and build a ready for distribution Electron app for MacOS, Windows and Linux with “auto update” support out of the box",
    "version": "26.0.10",
+   "keywords": [
+    "electron",
+    "builder",
+    "build",
+    "installer",
+    "install",
+    "packager",
+    "pack",
+    "nsis",
+    "app",
+    "dmg",
+    "pkg",
+    "msi",
+    "exe",
+    "setup",
+    "Windows",
+    "OS X",
+    "MacOS",
+    "Mac",
+    "appx",
+    "snap",
+    "flatpak",
+    "portable"
+   ],
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "_id": "electron-builder@26.0.10",
+   "maintainers": [
+    {
+     "name": "stefanjudis",
+     "email": "stefanjudis@gmail.com"
+    },
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "Stefan Judis"
+    },
+    {
+     "name": "Mike Maietta"
+    }
+   ],
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "bin": {
+    "electron-builder": "cli.js",
+    "install-app-deps": "install-app-deps.js"
+   },
+   "dist": {
+    "shasum": "b2191a7097fd5fc029858b74bd2d0aa9e10d38dd",
+    "tarball": "http://localhost:3000/electron-builder/-/electron-builder-26.0.10.tgz",
+    "fileCount": 25,
+    "integrity": "sha512-skrpii/V3WLwEWrm8aiEQ4r0eFvKN/oVHdQonVg7xsP0dyqnpCLu9YEZ7nCjGtEJZYTKmfcU/6FIugsrQsbsAA==",
+    "signatures": [
+     {
+      "sig": "MEUCIFqU/+jOl6Z/r7IH5Qy6sbtaHG7DFy02tgm3eXpArCXlAiEAu17jx6bZtF1QmrqQDn4l3ET5YwmpRqlMuBvqkLY/23s=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 75995
+   },
+   "main": "out/index.js",
+   "_from": "file:electron-builder-26.0.10.tgz",
+   "engines": {
+    "node": ">=14.0.0"
+   },
+   "typings": "./out/index.d.ts",
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/tmp/50727a87b9a92357d1db708eedb8f05f/electron-builder-26.0.10.tgz",
+   "_integrity": "sha512-skrpii/V3WLwEWrm8aiEQ4r0eFvKN/oVHdQonVg7xsP0dyqnpCLu9YEZ7nCjGtEJZYTKmfcU/6FIugsrQsbsAA==",
+   "repository": {
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "type": "git",
+    "directory": "packages/electron-builder"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "A complete solution to package and build a ready for distribution Electron app for MacOS, Windows and Linux with “auto update” support out of the box",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "chalk": "^4.1.2",
+    "is-ci": "^3.0.0",
+    "yargs": "^17.6.2",
+    "fs-extra": "^10.1.0",
+    "lazy-val": "^1.0.5",
+    "dmg-builder": "26.0.10",
+    "builder-util": "26.0.7",
+    "app-builder-lib": "26.0.10",
+    "builder-util-runtime": "9.3.1",
+    "simple-update-notifier": "2.0.0"
+   },
+   "publishConfig": {
+    "tag": "next"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "@types/is-ci": "3.0.0",
+    "@types/yargs": "^17.0.16",
+    "@types/fs-extra": "9.0.13"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron-builder_26.0.10_1741013530135_0.823246697365668",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "26.0.11": {
+   "name": "electron-builder",
+   "version": "26.0.11",
+   "keywords": [
+    "electron",
+    "builder",
+    "build",
+    "installer",
+    "install",
+    "packager",
+    "pack",
+    "nsis",
+    "app",
+    "dmg",
+    "pkg",
+    "msi",
+    "exe",
+    "setup",
+    "Windows",
+    "OS X",
+    "MacOS",
+    "Mac",
+    "appx",
+    "snap",
+    "flatpak",
+    "portable"
+   ],
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "_id": "electron-builder@26.0.11",
+   "maintainers": [
+    {
+     "name": "stefanjudis",
+     "email": "stefanjudis@gmail.com"
+    },
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "Stefan Judis"
+    },
+    {
+     "name": "Mike Maietta"
+    }
+   ],
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "bin": {
+    "electron-builder": "cli.js",
+    "install-app-deps": "install-app-deps.js"
+   },
+   "dist": {
+    "shasum": "874741aa3943953bdce6677428ee7587254cbfe5",
+    "tarball": "http://localhost:3000/electron-builder/-/electron-builder-26.0.11.tgz",
+    "fileCount": 25,
+    "integrity": "sha512-u7Qgge5ue5oOPDbZEseor7RjxKSYAekVflHkbNIY6te1kbtShQFqESq3FZakMBsQf/3SkEycvWhHHRb8zjqBqg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCV/J8BIM0H4LtlKAeUh8CKJF7cbfpV3qMWsq8iDHYGQQIhAKAa3lej//E+uH0HpecnePyTF6M5Zz/MxMAVYQjuwPV9",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 75996
+   },
+   "main": "out/index.js",
+   "_from": "file:electron-builder-26.0.11.tgz",
+   "engines": {
+    "node": ">=14.0.0"
+   },
+   "typings": "./out/index.d.ts",
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/tmp/26a53da50191b69ece1fa5b5fe5beee8/electron-builder-26.0.11.tgz",
+   "_integrity": "sha512-u7Qgge5ue5oOPDbZEseor7RjxKSYAekVflHkbNIY6te1kbtShQFqESq3FZakMBsQf/3SkEycvWhHHRb8zjqBqg==",
+   "repository": {
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "type": "git",
+    "directory": "packages/electron-builder"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "A complete solution to package and build a ready for distribution Electron app for MacOS, Windows and Linux with “auto update” support out of the box",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "chalk": "^4.1.2",
+    "is-ci": "^3.0.0",
+    "yargs": "^17.6.2",
+    "fs-extra": "^10.1.0",
+    "lazy-val": "^1.0.5",
+    "dmg-builder": "26.0.11",
+    "builder-util": "26.0.11",
+    "app-builder-lib": "26.0.11",
+    "builder-util-runtime": "9.3.1",
+    "simple-update-notifier": "2.0.0"
+   },
+   "publishConfig": {
+    "tag": "next"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "@types/is-ci": "3.0.0",
+    "@types/yargs": "^17.0.16",
+    "@types/fs-extra": "9.0.13"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/electron-builder_26.0.11_1741582865989_0.4206081524141301",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "26.0.12": {
+   "name": "electron-builder",
+   "description": "A complete solution to package and build a ready for distribution Electron app for MacOS, Windows and Linux with “auto update” support out of the box",
+   "version": "26.0.12",
    "main": "out/index.js",
    "bin": {
     "electron-builder": "cli.js",
@@ -130690,10 +130934,10 @@
     "lazy-val": "^1.0.5",
     "simple-update-notifier": "2.0.0",
     "yargs": "^17.6.2",
-    "app-builder-lib": "26.0.10",
-    "builder-util": "26.0.7",
-    "dmg-builder": "26.0.10",
-    "builder-util-runtime": "9.3.1"
+    "app-builder-lib": "26.0.12",
+    "builder-util-runtime": "9.3.1",
+    "dmg-builder": "26.0.12",
+    "builder-util": "26.0.11"
    },
    "devDependencies": {
     "@types/fs-extra": "9.0.13",
@@ -130704,22 +130948,22 @@
    "publishConfig": {
     "tag": "next"
    },
-   "_id": "electron-builder@26.0.10",
-   "_integrity": "sha512-skrpii/V3WLwEWrm8aiEQ4r0eFvKN/oVHdQonVg7xsP0dyqnpCLu9YEZ7nCjGtEJZYTKmfcU/6FIugsrQsbsAA==",
-   "_resolved": "/tmp/50727a87b9a92357d1db708eedb8f05f/electron-builder-26.0.10.tgz",
-   "_from": "file:electron-builder-26.0.10.tgz",
+   "_id": "electron-builder@26.0.12",
+   "_integrity": "sha512-cD1kz5g2sgPTMFHjLxfMjUK5JABq3//J4jPswi93tOPFz6btzXYtK5NrDt717NRbukCUDOrrvmYVOWERlqoiXA==",
+   "_resolved": "/tmp/f12f5a06b14c56d649893465c1279441/electron-builder-26.0.12.tgz",
+   "_from": "file:electron-builder-26.0.12.tgz",
    "_nodeVersion": "22.14.0",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-skrpii/V3WLwEWrm8aiEQ4r0eFvKN/oVHdQonVg7xsP0dyqnpCLu9YEZ7nCjGtEJZYTKmfcU/6FIugsrQsbsAA==",
-    "shasum": "b2191a7097fd5fc029858b74bd2d0aa9e10d38dd",
-    "tarball": "http://localhost:3000/electron-builder/-/electron-builder-26.0.10.tgz",
+    "integrity": "sha512-cD1kz5g2sgPTMFHjLxfMjUK5JABq3//J4jPswi93tOPFz6btzXYtK5NrDt717NRbukCUDOrrvmYVOWERlqoiXA==",
+    "shasum": "797af2e70efdd96c9ea5d8a8164b8728c90d65ff",
+    "tarball": "http://localhost:3000/electron-builder/-/electron-builder-26.0.12.tgz",
     "fileCount": 25,
-    "unpackedSize": 75995,
+    "unpackedSize": 75996,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIFqU/+jOl6Z/r7IH5Qy6sbtaHG7DFy02tgm3eXpArCXlAiEAu17jx6bZtF1QmrqQDn4l3ET5YwmpRqlMuBvqkLY/23s="
+      "sig": "MEYCIQC7g1JLgtJcmRlMxxoXPmrI3P9deomTT+OCETtE5MgRMQIhAOyT67ybCX6qSTOLiFKfG3obPnnbRFbEKMYD+RF8fcSb"
      }
     ]
    },
@@ -130744,14 +130988,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/electron-builder_26.0.10_1741013530135_0.823246697365668"
+    "tmp": "tmp/electron-builder_26.0.12_1742624040509_0.01430231975166496"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2015-05-26T13:08:36.993Z",
-  "modified": "2025-03-03T14:52:10.467Z",
+  "modified": "2025-03-22T06:14:00.844Z",
   "1.0.0": "2015-05-26T13:08:36.993Z",
   "1.0.1": "2015-05-28T21:36:55.305Z",
   "1.1.0": "2015-06-04T20:53:18.447Z",
@@ -131695,7 +131939,9 @@
   "26.0.7": "2025-02-18T01:51:02.030Z",
   "26.0.8": "2025-02-21T14:12:28.998Z",
   "26.0.9": "2025-02-26T07:14:46.206Z",
-  "26.0.10": "2025-03-03T14:52:10.302Z"
+  "26.0.10": "2025-03-03T14:52:10.302Z",
+  "26.0.11": "2025-03-10T05:01:06.195Z",
+  "26.0.12": "2025-03-22T06:14:00.695Z"
  },
  "bugs": {
   "url": "https://github.com/electron-userland/electron-builder/issues"

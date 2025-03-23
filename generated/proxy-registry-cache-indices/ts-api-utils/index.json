@@ -1,10 +1,10 @@
 {
  "_id": "ts-api-utils",
- "_rev": "44-b91194ebc0f08aa827349b3b19956020",
+ "_rev": "46-0d7a9c4a1fd5812f9a9799a0ebef8b2f",
  "name": "ts-api-utils",
  "dist-tags": {
   "beta": "1.0.0-beta",
-  "latest": "2.0.1"
+  "latest": "2.1.0"
  },
  "versions": {
   "0.0.18": {
@@ -5923,6 +5923,149 @@
   "2.0.1": {
    "name": "ts-api-utils",
    "version": "2.0.1",
+   "author": {
+    "name": "JoshuaKGoldberg",
+    "email": "npm@joshuakgoldberg.com"
+   },
+   "license": "MIT",
+   "_id": "ts-api-utils@2.0.1",
+   "maintainers": [
+    {
+     "name": "joshuakgoldberg",
+     "email": "npm@joshuakgoldberg.com"
+    }
+   ],
+   "homepage": "https://github.com/JoshuaKGoldberg/ts-api-utils#readme",
+   "bugs": {
+    "url": "https://github.com/JoshuaKGoldberg/ts-api-utils/issues"
+   },
+   "dist": {
+    "shasum": "660729385b625b939aaa58054f45c058f33f10cd",
+    "tarball": "http://localhost:3000/ts-api-utils/-/ts-api-utils-2.0.1.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-dnlgjFSVetynI8nzgJ+qF62efpglpWRk8isUEWZGWlJYySCTD6aKvbUDu+zbPeDakk3bg5H4XpitHukgfL1m9w==",
+    "signatures": [
+     {
+      "sig": "MEUCIQC2psnoZxWnfyYjfVn26DDYIZZ1fCraiKknnI8W72MkYAIgF5q01EyVfTMP2rE7NLS7y1IjBOcuTv8IQllGrXO/Oe0=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/ts-api-utils@2.0.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 353810
+   },
+   "main": "./lib/index.js",
+   "type": "module",
+   "types": "./lib/index.d.ts",
+   "engines": {
+    "node": ">=18.12"
+   },
+   "exports": {
+    ".": {
+     "types": {
+      "import": "./lib/index.d.ts",
+      "require": "./lib/index.d.cts"
+     },
+     "import": "./lib/index.js",
+     "require": "./lib/index.cjs"
+    }
+   },
+   "gitHead": "a5e8b1ac0790f201728f0e33625a918fef53bf50",
+   "scripts": {
+    "tsc": "tsc",
+    "docs": "typedoc",
+    "lint": "eslint . --max-warnings 0",
+    "test": "vitest",
+    "build": "tsup src/index.ts && cp lib/index.d.ts lib/index.d.cts",
+    "format": "prettier \"**/*\" --ignore-unknown",
+    "lint:md": "markdownlint \"**/*.md\" \".github/**/*.md\" --rules sentences-per-line",
+    "prepare": "husky",
+    "lint:docs": "typedoc --validation --treatValidationWarningsAsErrors",
+    "lint:knip": "knip",
+    "docs:serve": "npx --yes http-server docs/generated",
+    "lint:packages": "pnpm dedupe --check",
+    "lint:spelling": "cspell \"**\" \".github/**/*\"",
+    "lint:knip:production": "knip --production",
+    "should-semantic-release": "should-semantic-release --verbose"
+   },
+   "_npmUser": {
+    "name": "joshuakgoldberg",
+    "email": "npm@joshuakgoldberg.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/JoshuaKGoldberg/ts-api-utils.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Utility functions for working with TypeScript's API. Successor to the wonderful tsutils. 🛠️️",
+   "directories": {},
+   "lint-staged": {
+    "*": "prettier --ignore-unknown --write"
+   },
+   "_nodeVersion": "23.7.0",
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "pnpm@9.15.3",
+   "devDependencies": {
+    "knip": "^5.43.6",
+    "tsup": "^8.3.6",
+    "husky": "^9.1.7",
+    "cspell": "^8.17.3",
+    "eslint": "^9.19.0",
+    "vitest": "^2.1.8",
+    "typedoc": "^0.27.6",
+    "prettier": "^3.4.2",
+    "@eslint/js": "^9.19.0",
+    "release-it": "^18.1.2",
+    "typescript": "^5.7.3",
+    "@types/node": "^18.19.74",
+    "lint-staged": "^15.4.3",
+    "markdownlint": "^0.37.4",
+    "@typescript/vfs": "^1.6.0",
+    "eslint-plugin-n": "^17.15.1",
+    "markdownlint-cli": "^0.43.0",
+    "console-fail-test": "^0.5.0",
+    "eslint-plugin-yml": "^1.16.0",
+    "typescript-eslint": "^8.22.0",
+    "sentences-per-line": "^0.3.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-jsonc": "^2.19.1",
+    "jsonc-eslint-parser": "^2.4.0",
+    "eslint-plugin-regexp": "^2.7.0",
+    "@vitest/eslint-plugin": "^1.1.25",
+    "prettier-plugin-curly": "^0.3.1",
+    "eslint-plugin-markdown": "^5.1.0",
+    "should-semantic-release": "^0.3.0",
+    "typedoc-plugin-coverage": "^3.4.1",
+    "typedoc-plugin-mdn-links": "^4.0.10",
+    "@phenomnomnominal/tsquery": "^6.1.3",
+    "eslint-plugin-package-json": "^0.19.0",
+    "eslint-plugin-perfectionist": "^4.7.0",
+    "prettier-plugin-packagejson": "^2.5.8",
+    "@types/eslint-plugin-markdown": "^2.0.2",
+    "typedoc-plugin-custom-validation": "^2.0.2",
+    "typedoc-plugin-konamimojisplosion": "^0.0.2",
+    "@release-it/conventional-changelog": "^10.0.0",
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1"
+   },
+   "peerDependencies": {
+    "typescript": ">=4.8.4"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ts-api-utils_2.0.1_1738417760614_0.3438391920544337",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.1.0": {
+   "name": "ts-api-utils",
+   "version": "2.1.0",
    "description": "Utility functions for working with TypeScript's API. Successor to the wonderful tsutils. 🛠️️",
    "repository": {
     "type": "git",
@@ -5953,7 +6096,6 @@
     "lint": "eslint . --max-warnings 0",
     "lint:docs": "typedoc --validation --treatValidationWarningsAsErrors",
     "lint:knip": "knip",
-    "lint:knip:production": "knip --production",
     "lint:md": "markdownlint \"**/*.md\" \".github/**/*.md\" --rules sentences-per-line",
     "lint:packages": "pnpm dedupe --check",
     "lint:spelling": "cspell \"**\" \".github/**/*\"",
@@ -5988,10 +6130,10 @@
     "eslint-plugin-yml": "^1.16.0",
     "husky": "^9.1.7",
     "jsonc-eslint-parser": "^2.4.0",
-    "knip": "^5.43.6",
+    "knip": "^5.46.0",
     "lint-staged": "^15.4.3",
     "markdownlint": "^0.37.4",
-    "markdownlint-cli": "^0.43.0",
+    "markdownlint-cli": "^0.44.0",
     "prettier": "^3.4.2",
     "prettier-plugin-curly": "^0.3.1",
     "prettier-plugin-packagejson": "^2.5.8",
@@ -6006,35 +6148,35 @@
     "typedoc-plugin-mdn-links": "^4.0.10",
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.22.0",
-    "vitest": "^2.1.8"
+    "vitest": "^3.0.0"
    },
    "peerDependencies": {
     "typescript": ">=4.8.4"
    },
-   "packageManager": "pnpm@9.15.3",
+   "packageManager": "pnpm@9.15.9",
    "engines": {
     "node": ">=18.12"
    },
    "publishConfig": {
     "provenance": true
    },
-   "_id": "ts-api-utils@2.0.1",
-   "gitHead": "a5e8b1ac0790f201728f0e33625a918fef53bf50",
+   "_id": "ts-api-utils@2.1.0",
+   "gitHead": "c3e980e9ef52e6bb5d2ea242911020fda1eae861",
    "types": "./lib/index.d.ts",
    "bugs": {
     "url": "https://github.com/JoshuaKGoldberg/ts-api-utils/issues"
    },
    "homepage": "https://github.com/JoshuaKGoldberg/ts-api-utils#readme",
-   "_nodeVersion": "23.7.0",
+   "_nodeVersion": "23.10.0",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-dnlgjFSVetynI8nzgJ+qF62efpglpWRk8isUEWZGWlJYySCTD6aKvbUDu+zbPeDakk3bg5H4XpitHukgfL1m9w==",
-    "shasum": "660729385b625b939aaa58054f45c058f33f10cd",
-    "tarball": "http://localhost:3000/ts-api-utils/-/ts-api-utils-2.0.1.tgz",
+    "integrity": "sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ==",
+    "shasum": "595f7094e46eed364c13fd23e75f9513d29baf91",
+    "tarball": "http://localhost:3000/ts-api-utils/-/ts-api-utils-2.1.0.tgz",
     "fileCount": 7,
-    "unpackedSize": 353810,
+    "unpackedSize": 356154,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/ts-api-utils@2.0.1",
+     "url": "http://localhost:3000/-/npm/v1/attestations/ts-api-utils@2.1.0",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -6042,7 +6184,7 @@
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQC2psnoZxWnfyYjfVn26DDYIZZ1fCraiKknnI8W72MkYAIgF5q01EyVfTMP2rE7NLS7y1IjBOcuTv8IQllGrXO/Oe0="
+      "sig": "MEUCIQDvPJ9cAR4aChEo7xeEwFoV1bs0+QNyhZTellqrE5pRLAIgRBEvLU3aaX6st6/B34mwTAK2tvwsJgmnx0odABVJ6Fw="
      }
     ]
    },
@@ -6059,14 +6201,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/ts-api-utils_2.0.1_1738417760614_0.3438391920544337"
+    "tmp": "tmp/ts-api-utils_2.1.0_1742473490160_0.027497783069299286"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2023-02-07T15:19:43.786Z",
-  "modified": "2025-02-01T13:49:21.265Z",
+  "modified": "2025-03-20T12:24:50.789Z",
   "0.0.18": "2023-02-07T15:19:43.954Z",
   "0.0.20": "2023-02-07T16:35:41.839Z",
   "0.0.21": "2023-02-07T16:36:26.252Z",
@@ -6111,7 +6253,8 @@
   "1.4.2": "2024-11-26T05:05:09.734Z",
   "1.4.3": "2024-11-29T01:46:45.735Z",
   "2.0.0": "2024-12-01T02:09:48.821Z",
-  "2.0.1": "2025-02-01T13:49:20.828Z"
+  "2.0.1": "2025-02-01T13:49:20.828Z",
+  "2.1.0": "2025-03-20T12:24:50.449Z"
  },
  "bugs": {
   "url": "https://github.com/JoshuaKGoldberg/ts-api-utils/issues"
@@ -6133,6 +6276,6 @@
    "email": "npm@joshuakgoldberg.com"
   }
  ],
- "readme": "<h1 align=\"center\">TypeScript API Utils</h1>\n\n<p align=\"center\">\n  Utility functions for working with TypeScript's API.\n  Successor to the wonderful tsutils.\n  🛠️️\n</p>\n\n<p align=\"center\">\n\t<!-- prettier-ignore-start -->\n\t<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->\n<img alt=\"All Contributors: 8 👪\" src=\"https://img.shields.io/badge/all_contributors-8_👪-21bb42.svg\" />\n<!-- ALL-CONTRIBUTORS-BADGE:END -->\n\t<!-- prettier-ignore-end -->\n\t<a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/blob/main/.github/CODE_OF_CONDUCT.md\" target=\"_blank\"><img alt=\"🤝 Code of Conduct: Kept\" src=\"https://img.shields.io/badge/%F0%9F%A4%9D_code_of_conduct-kept-21bb42\" /></a>\n\t<a href=\"https://codecov.io/gh/JoshuaKGoldberg/ts-api-utils\" target=\"_blank\"><img alt=\"🧪 Coverage\" src=\"https://img.shields.io/codecov/c/github/JoshuaKGoldberg/ts-api-utils?label=%F0%9F%A7%AA%20coverage\" /></a>\n  <a href=\"#\" target=\"_blank\"><img alt=\"📚 Documentation Coverage\" src=\"https://raw.githubusercontent.com/JoshuaKGoldberg/ts-api-utils/refs/heads/main/docs/coverage.svg\" /></a>\n\t<a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/blob/main/LICENSE.md\" target=\"_blank\"><img alt=\"📝 License: MIT\" src=\"https://img.shields.io/badge/%F0%9F%93%9D_license-MIT-21bb42.svg\"></a>\n\t<a href=\"http://npmjs.com/package/ts-api-utils\"><img alt=\"📦 npm version\" src=\"https://img.shields.io/npm/v/ts-api-utils?color=21bb42&label=%F0%9F%93%A6%20npm\" /></a>\n\t<img alt=\"💪 TypeScript: Strict\" src=\"https://img.shields.io/badge/%F0%9F%92%AA_typescript-strict-21bb42.svg\" />\n</p>\n\n## Usage\n\n```shell\nnpm i ts-api-utils\n```\n\n```ts\nimport * as tsutils from \"ts-api-utils\";\n\ntsutils.forEachToken(/* ... */);\n```\n\n### API\n\n`ts-api-utils` provides many utility functions.\nCheck out our API docs for details:\n\n📝 [ts-api-utils API docs](https://joshuakgoldberg.github.io/ts-api-utils).\n\n## Development\n\nSee [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md).\nThanks! 💖\n\n## Contributors\n\nMany thanks to [@ajafff](https://github.com/ajafff) for creating the original [`tsutils`](https://github.com/ajafff/tsutils) ([original license: MIT](https://github.com/ajafff/tsutils/blob/26b195358ec36d59f00333115aa3ffd9611ca78b/LICENSE)) that this project was originally based on! 🙏\n\n<!-- prettier-ignore-start -->\n<!-- markdownlint-disable -->\n<!-- spellchecker: disable -->\n<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->\n<!-- prettier-ignore-start -->\n<!-- markdownlint-disable -->\n<table>\n  <tbody>\n    <tr>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://effectivetypescript.com\"><img src=\"https://avatars.githubusercontent.com/u/98301?v=4?s=100\" width=\"100px;\" alt=\"Dan Vanderkam\"/><br /><sub><b>Dan Vanderkam</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/issues?q=author%3Adanvk\" title=\"Bug reports\">🐛</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://blog.jmchor.dev\"><img src=\"https://avatars.githubusercontent.com/u/110151013?v=4?s=100\" width=\"100px;\" alt=\"Johannes Chorzempa\"/><br /><sub><b>Johannes Chorzempa</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=jmchor\" title=\"Documentation\">📖</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=jmchor\" title=\"Code\">💻</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"http://www.joshuakgoldberg.com\"><img src=\"https://avatars.githubusercontent.com/u/3335181?v=4?s=100\" width=\"100px;\" alt=\"Josh Goldberg\"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/issues?q=author%3AJoshuaKGoldberg\" title=\"Bug reports\">🐛</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=JoshuaKGoldberg\" title=\"Code\">💻</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=JoshuaKGoldberg\" title=\"Documentation\">📖</a> <a href=\"#projectManagement-JoshuaKGoldberg\" title=\"Project Management\">📆</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=JoshuaKGoldberg\" title=\"Tests\">⚠️</a> <a href=\"#tool-JoshuaKGoldberg\" title=\"Tools\">🔧</a> <a href=\"#maintenance-JoshuaKGoldberg\" title=\"Maintenance\">🚧</a> <a href=\"#infra-JoshuaKGoldberg\" title=\"Infrastructure (Hosting, Build-Tools, etc)\">🚇</a> <a href=\"#ideas-JoshuaKGoldberg\" title=\"Ideas, Planning, & Feedback\">🤔</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://twitter.com/kirjs\"><img src=\"https://avatars.githubusercontent.com/u/2545357?v=4?s=100\" width=\"100px;\" alt=\"Kirill Cherkashin\"/><br /><sub><b>Kirill Cherkashin</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=kirjs\" title=\"Code\">💻</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://github.com/kirkwaiblinger\"><img src=\"https://avatars.githubusercontent.com/u/53019676?v=4?s=100\" width=\"100px;\" alt=\"Kirk Waiblinger\"/><br /><sub><b>Kirk Waiblinger</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/issues?q=author%3Akirkwaiblinger\" title=\"Bug reports\">🐛</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=kirkwaiblinger\" title=\"Code\">💻</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://github.com/ajafff\"><img src=\"https://avatars.githubusercontent.com/u/11968040?v=4?s=100\" width=\"100px;\" alt=\"Klaus Meinhardt\"/><br /><sub><b>Klaus Meinhardt</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=ajafff\" title=\"Code\">💻</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=ajafff\" title=\"Tests\">⚠️</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://webpro.nl\"><img src=\"https://avatars.githubusercontent.com/u/456426?v=4?s=100\" width=\"100px;\" alt=\"Lars Kappert\"/><br /><sub><b>Lars Kappert</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=webpro\" title=\"Code\">💻</a></td>\n    </tr>\n    <tr>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://github.com/RebeccaStevens\"><img src=\"https://avatars.githubusercontent.com/u/7224206?v=4?s=100\" width=\"100px;\" alt=\"Rebecca Stevens\"/><br /><sub><b>Rebecca Stevens</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/issues?q=author%3ARebeccaStevens\" title=\"Bug reports\">🐛</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=RebeccaStevens\" title=\"Code\">💻</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=RebeccaStevens\" title=\"Documentation\">📖</a> <a href=\"#projectManagement-RebeccaStevens\" title=\"Project Management\">📆</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=RebeccaStevens\" title=\"Tests\">⚠️</a> <a href=\"#tool-RebeccaStevens\" title=\"Tools\">🔧</a> <a href=\"#infra-RebeccaStevens\" title=\"Infrastructure (Hosting, Build-Tools, etc)\">🚇</a> <a href=\"#maintenance-RebeccaStevens\" title=\"Maintenance\">🚧</a> <a href=\"#ideas-RebeccaStevens\" title=\"Ideas, Planning, & Feedback\">🤔</a></td>\n    </tr>\n  </tbody>\n</table>\n\n<!-- markdownlint-restore -->\n<!-- prettier-ignore-end -->\n\n<!-- ALL-CONTRIBUTORS-LIST:END -->\n<!-- spellchecker: enable -->\n<!-- markdownlint-restore -->\n<!-- prettier-ignore-end -->\n\n> 💙 This package was templated with [create-typescript-app](https://github.com/JoshuaKGoldberg/create-typescript-app).\n\n> _\"My tools! I have to have my tools!\" - Dennis Reynolds_\n",
+ "readme": "<h1 align=\"center\">TypeScript API Utils</h1>\n\n<p align=\"center\">\n  Utility functions for working with TypeScript's API.\n  Successor to the wonderful tsutils.\n  🛠️️\n</p>\n\n<p align=\"center\">\n\t<!-- prettier-ignore-start -->\n\t<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->\n<img alt=\"All Contributors: 10 👪\" src=\"https://img.shields.io/badge/all_contributors-10_👪-21bb42.svg\" />\n<!-- ALL-CONTRIBUTORS-BADGE:END -->\n\t<!-- prettier-ignore-end -->\n\t<a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/blob/main/.github/CODE_OF_CONDUCT.md\" target=\"_blank\"><img alt=\"🤝 Code of Conduct: Kept\" src=\"https://img.shields.io/badge/%F0%9F%A4%9D_code_of_conduct-kept-21bb42\" /></a>\n\t<a href=\"https://codecov.io/gh/JoshuaKGoldberg/ts-api-utils\" target=\"_blank\"><img alt=\"🧪 Coverage\" src=\"https://img.shields.io/codecov/c/github/JoshuaKGoldberg/ts-api-utils?label=%F0%9F%A7%AA%20coverage\" /></a>\n  <a href=\"#\" target=\"_blank\"><img alt=\"📚 Documentation Coverage\" src=\"https://raw.githubusercontent.com/JoshuaKGoldberg/ts-api-utils/refs/heads/main/docs/coverage.svg\" /></a>\n\t<a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/blob/main/LICENSE.md\" target=\"_blank\"><img alt=\"📝 License: MIT\" src=\"https://img.shields.io/badge/%F0%9F%93%9D_license-MIT-21bb42.svg\"></a>\n\t<a href=\"http://npmjs.com/package/ts-api-utils\"><img alt=\"📦 npm version\" src=\"https://img.shields.io/npm/v/ts-api-utils?color=21bb42&label=%F0%9F%93%A6%20npm\" /></a>\n\t<img alt=\"💪 TypeScript: Strict\" src=\"https://img.shields.io/badge/%F0%9F%92%AA_typescript-strict-21bb42.svg\" />\n</p>\n\n## Usage\n\n```shell\nnpm i ts-api-utils\n```\n\n```ts\nimport * as tsutils from \"ts-api-utils\";\n\ntsutils.forEachToken(/* ... */);\n```\n\n### API\n\n`ts-api-utils` provides many utility functions.\nCheck out our API docs for details:\n\n📝 [ts-api-utils API docs](https://joshuakgoldberg.github.io/ts-api-utils).\n\n## Development\n\nSee [`.github/CONTRIBUTING.md`](./.github/CONTRIBUTING.md).\nThanks! 💖\n\n## Contributors\n\nMany thanks to [@ajafff](https://github.com/ajafff) for creating the original [`tsutils`](https://github.com/ajafff/tsutils) ([original license: MIT](https://github.com/ajafff/tsutils/blob/26b195358ec36d59f00333115aa3ffd9611ca78b/LICENSE)) that this project was originally based on! 🙏\n\n<!-- prettier-ignore-start -->\n<!-- markdownlint-disable -->\n<!-- spellchecker: disable -->\n<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->\n<!-- prettier-ignore-start -->\n<!-- markdownlint-disable -->\n<table>\n  <tbody>\n    <tr>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://effectivetypescript.com\"><img src=\"https://avatars.githubusercontent.com/u/98301?v=4?s=100\" width=\"100px;\" alt=\"Dan Vanderkam\"/><br /><sub><b>Dan Vanderkam</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/issues?q=author%3Adanvk\" title=\"Bug reports\">🐛</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://blog.jmchor.dev\"><img src=\"https://avatars.githubusercontent.com/u/110151013?v=4?s=100\" width=\"100px;\" alt=\"Johannes Chorzempa\"/><br /><sub><b>Johannes Chorzempa</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=jmchor\" title=\"Documentation\">📖</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=jmchor\" title=\"Code\">💻</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"http://www.joshuakgoldberg.com\"><img src=\"https://avatars.githubusercontent.com/u/3335181?v=4?s=100\" width=\"100px;\" alt=\"Josh Goldberg\"/><br /><sub><b>Josh Goldberg</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/issues?q=author%3AJoshuaKGoldberg\" title=\"Bug reports\">🐛</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=JoshuaKGoldberg\" title=\"Code\">💻</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=JoshuaKGoldberg\" title=\"Documentation\">📖</a> <a href=\"#projectManagement-JoshuaKGoldberg\" title=\"Project Management\">📆</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=JoshuaKGoldberg\" title=\"Tests\">⚠️</a> <a href=\"#tool-JoshuaKGoldberg\" title=\"Tools\">🔧</a> <a href=\"#maintenance-JoshuaKGoldberg\" title=\"Maintenance\">🚧</a> <a href=\"#infra-JoshuaKGoldberg\" title=\"Infrastructure (Hosting, Build-Tools, etc)\">🚇</a> <a href=\"#ideas-JoshuaKGoldberg\" title=\"Ideas, Planning, & Feedback\">🤔</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://twitter.com/kirjs\"><img src=\"https://avatars.githubusercontent.com/u/2545357?v=4?s=100\" width=\"100px;\" alt=\"Kirill Cherkashin\"/><br /><sub><b>Kirill Cherkashin</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=kirjs\" title=\"Code\">💻</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://github.com/kirkwaiblinger\"><img src=\"https://avatars.githubusercontent.com/u/53019676?v=4?s=100\" width=\"100px;\" alt=\"Kirk Waiblinger\"/><br /><sub><b>Kirk Waiblinger</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/issues?q=author%3Akirkwaiblinger\" title=\"Bug reports\">🐛</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=kirkwaiblinger\" title=\"Code\">💻</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://github.com/ajafff\"><img src=\"https://avatars.githubusercontent.com/u/11968040?v=4?s=100\" width=\"100px;\" alt=\"Klaus Meinhardt\"/><br /><sub><b>Klaus Meinhardt</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=ajafff\" title=\"Code\">💻</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=ajafff\" title=\"Tests\">⚠️</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://webpro.nl\"><img src=\"https://avatars.githubusercontent.com/u/456426?v=4?s=100\" width=\"100px;\" alt=\"Lars Kappert\"/><br /><sub><b>Lars Kappert</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=webpro\" title=\"Code\">💻</a></td>\n    </tr>\n    <tr>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://github.com/RebeccaStevens\"><img src=\"https://avatars.githubusercontent.com/u/7224206?v=4?s=100\" width=\"100px;\" alt=\"Rebecca Stevens\"/><br /><sub><b>Rebecca Stevens</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/issues?q=author%3ARebeccaStevens\" title=\"Bug reports\">🐛</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=RebeccaStevens\" title=\"Code\">💻</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=RebeccaStevens\" title=\"Documentation\">📖</a> <a href=\"#projectManagement-RebeccaStevens\" title=\"Project Management\">📆</a> <a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=RebeccaStevens\" title=\"Tests\">⚠️</a> <a href=\"#tool-RebeccaStevens\" title=\"Tools\">🔧</a> <a href=\"#infra-RebeccaStevens\" title=\"Infrastructure (Hosting, Build-Tools, etc)\">🚇</a> <a href=\"#maintenance-RebeccaStevens\" title=\"Maintenance\">🚧</a> <a href=\"#ideas-RebeccaStevens\" title=\"Ideas, Planning, & Feedback\">🤔</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://twitter.com/ronenamiel\"><img src=\"https://avatars.githubusercontent.com/u/5484230?v=4?s=100\" width=\"100px;\" alt=\"Ronen Amiel\"/><br /><sub><b>Ronen Amiel</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=ronami\" title=\"Tests\">⚠️</a></td>\n      <td align=\"center\" valign=\"top\" width=\"14.28%\"><a href=\"https://www.fiskercheung.com/\"><img src=\"https://avatars.githubusercontent.com/u/172584?v=4?s=100\" width=\"100px;\" alt=\"fisker Cheung\"/><br /><sub><b>fisker Cheung</b></sub></a><br /><a href=\"https://github.com/JoshuaKGoldberg/ts-api-utils/commits?author=fisker\" title=\"Code\">💻</a></td>\n    </tr>\n  </tbody>\n</table>\n\n<!-- markdownlint-restore -->\n<!-- prettier-ignore-end -->\n\n<!-- ALL-CONTRIBUTORS-LIST:END -->\n<!-- spellchecker: enable -->\n<!-- markdownlint-restore -->\n<!-- prettier-ignore-end -->\n\n> 💙 This package was templated with [create-typescript-app](https://github.com/JoshuaKGoldberg/create-typescript-app).\n\n> _\"My tools! I have to have my tools!\" - Dennis Reynolds_\n",
  "readmeFilename": "README.md"
 }
