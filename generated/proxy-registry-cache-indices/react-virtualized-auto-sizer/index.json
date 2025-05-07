@@ -1,9 +1,9 @@
 {
  "_id": "react-virtualized-auto-sizer",
- "_rev": "29-d05fee80b740eb51b86c025a34b10e9c",
+ "_rev": "31-408056685f16f0404d703c32fa574337",
  "name": "react-virtualized-auto-sizer",
  "dist-tags": {
-  "latest": "1.0.25"
+  "latest": "1.0.26"
  },
  "versions": {
   "1.0.2": {
@@ -3084,6 +3084,147 @@
   "1.0.25": {
    "name": "react-virtualized-auto-sizer",
    "version": "1.0.25",
+   "keywords": [
+    "react",
+    "reactjs",
+    "virtual",
+    "window",
+    "windowed",
+    "list",
+    "scrolling",
+    "infinite",
+    "virtualized",
+    "table",
+    "grid",
+    "spreadsheet"
+   ],
+   "author": {
+    "url": "https://github.com/bvaughn/",
+    "name": "Brian Vaughn",
+    "email": "brian.david.vaughn@gmail.com"
+   },
+   "license": "MIT",
+   "_id": "react-virtualized-auto-sizer@1.0.25",
+   "maintainers": [
+    {
+     "name": "brianvaughn",
+     "email": "briandavidvaughn@gmail.com"
+    },
+    {
+     "name": "shhnjk",
+     "email": "shhnjk@gmail.com"
+    }
+   ],
+   "contributors": [
+    {
+     "url": "https://github.com/bvaughn/",
+     "name": "Brian Vaughn",
+     "email": "brian.david.vaughn@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/bvaughn/react-virtualized-auto-sizer#readme",
+   "bugs": {
+    "url": "https://github.com/bvaughn/react-virtualized-auto-sizer/issues"
+   },
+   "dist": {
+    "shasum": "b13cbc528ac200be2bd1ffa40c8bb19bcc60ac3f",
+    "tarball": "http://localhost:3000/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.25.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-YHsksEGDfsHbHuaBVDYwJmcktblcHGafz4ZVuYPQYuSHMUGjpwmUCrAOcvMSGMwwk1eFWj1M/1GwYpNPuyhaBg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDFtM7xSBvAfKcTg9CNEB7NDYvRdQWIe1eTlpEhDRm67QIgU6gzkiSuy6erNXkNWF/4WXGlApJ3aD/p5k19A+qQMo4=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 45105
+   },
+   "main": "dist/react-virtualized-auto-sizer.cjs.js",
+   "types": "dist/react-virtualized-auto-sizer.cjs.d.ts",
+   "module": "dist/react-virtualized-auto-sizer.esm.js",
+   "exports": {
+    ".": {
+     "types": {
+      "import": "./dist/react-virtualized-auto-sizer.cjs.mjs",
+      "default": "./dist/react-virtualized-auto-sizer.cjs.js"
+     },
+     "import": "./dist/react-virtualized-auto-sizer.cjs.mjs",
+     "module": "./dist/react-virtualized-auto-sizer.esm.js",
+     "default": "./dist/react-virtualized-auto-sizer.cjs.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "gitHead": "2dc8808e2654e4b2753a6f330dc87bb72c2958ee",
+   "scripts": {
+    "test": "jest",
+    "clear": "npm run clear:builds & npm run clear:node_modules",
+    "prettier": "prettier --write \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
+    "prerelease": "preconstruct build",
+    "test:watch": "jest --watch",
+    "typescript": "tsc --noEmit",
+    "prettier:ci": "prettier --check \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
+    "clear:builds": "rm -rf ./dist",
+    "typescript:watch": "tsc --noEmit --watch",
+    "clear:node_modules": "rm -rf ./node_modules"
+   },
+   "_npmUser": {
+    "name": "brianvaughn",
+    "email": "briandavidvaughn@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/bvaughn/react-virtualized-auto-sizer.git",
+    "type": "git"
+   },
+   "_npmVersion": "9.6.6",
+   "description": "Standalone version of the AutoSizer component from react-virtualized",
+   "directories": {},
+   "lint-staged": {
+    "**/*.js": "eslint --max-warnings 0",
+    "{example,src}/**/*.{js,json,css}": [
+     "prettier --write",
+     "git add"
+    ]
+   },
+   "_nodeVersion": "20.2.0",
+   "preconstruct": {
+    "exports": {
+     "importConditionDefaultExport": "default"
+    },
+    "___experimentalFlags_WILL_CHANGE_IN_PATCH": {
+     "importsConditions": true
+    }
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^29.5.0",
+    "react": "^18",
+    "ts-jest": "^29.1.0",
+    "prettier": "^2.8.6",
+    "react-dom": "^18",
+    "typescript": "^4.1.2",
+    "@babel/core": "^7.21.4",
+    "@types/jest": "^26.0.15",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@preconstruct/cli": "^2.8.1",
+    "jest-environment-jsdom": "^29.5.0",
+    "@babel/preset-typescript": "^7.21.5",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/helper-create-class-features-plugin": "^7.21.4",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6"
+   },
+   "peerDependencies": {
+    "react": "^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0 || ^19.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/react-virtualized-auto-sizer_1.0.25_1734399596613_0.5574324569567313",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "1.0.26": {
+   "name": "react-virtualized-auto-sizer",
+   "version": "1.0.26",
    "description": "Standalone version of the AutoSizer component from react-virtualized",
    "author": {
     "name": "Brian Vaughn",
@@ -3131,18 +3272,6 @@
     "./package.json": "./package.json"
    },
    "types": "dist/react-virtualized-auto-sizer.cjs.d.ts",
-   "scripts": {
-    "clear": "npm run clear:builds & npm run clear:node_modules",
-    "clear:builds": "rm -rf ./dist",
-    "clear:node_modules": "rm -rf ./node_modules",
-    "prerelease": "preconstruct build",
-    "prettier": "prettier --write \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
-    "prettier:ci": "prettier --check \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "typescript": "tsc --noEmit",
-    "typescript:watch": "tsc --noEmit --watch"
-   },
    "lint-staged": {
     "{example,src}/**/*.{js,json,css}": [
      "prettier --write",
@@ -3180,24 +3309,38 @@
      "importsConditions": true
     }
    },
-   "gitHead": "2dc8808e2654e4b2753a6f330dc87bb72c2958ee",
+   "scripts": {
+    "clear": "npm run clear:builds & npm run clear:node_modules",
+    "clear:builds": "rm -rf ./dist",
+    "clear:node_modules": "rm -rf ./node_modules",
+    "prerelease": "preconstruct build",
+    "prettier": "prettier --write \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
+    "prettier:ci": "prettier --check \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "typescript": "tsc --noEmit",
+    "typescript:watch": "tsc --noEmit --watch"
+   },
    "bugs": {
     "url": "https://github.com/bvaughn/react-virtualized-auto-sizer/issues"
    },
    "homepage": "https://github.com/bvaughn/react-virtualized-auto-sizer#readme",
-   "_id": "react-virtualized-auto-sizer@1.0.25",
+   "_id": "react-virtualized-auto-sizer@1.0.26",
+   "_integrity": "sha512-CblNyiNVw2o+hsa5/49NH2ogGxZ+t+3aweRvNSq7TVjDIlwk7ir4lencEg5HxHeSzwNarSkNkiu0qJSOXtxm5A==",
+   "_resolved": "/Users/bvaughn/Documents/git/oss/react-virtualized-auto-sizer/react-virtualized-auto-sizer-1.0.26.tgz",
+   "_from": "file:react-virtualized-auto-sizer-1.0.26.tgz",
    "_nodeVersion": "20.2.0",
    "_npmVersion": "9.6.6",
    "dist": {
-    "integrity": "sha512-YHsksEGDfsHbHuaBVDYwJmcktblcHGafz4ZVuYPQYuSHMUGjpwmUCrAOcvMSGMwwk1eFWj1M/1GwYpNPuyhaBg==",
-    "shasum": "b13cbc528ac200be2bd1ffa40c8bb19bcc60ac3f",
-    "tarball": "http://localhost:3000/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.25.tgz",
+    "integrity": "sha512-CblNyiNVw2o+hsa5/49NH2ogGxZ+t+3aweRvNSq7TVjDIlwk7ir4lencEg5HxHeSzwNarSkNkiu0qJSOXtxm5A==",
+    "shasum": "e9470ef6a778dc4f1d5fd76305fa2d8b610c357a",
+    "tarball": "http://localhost:3000/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.26.tgz",
     "fileCount": 16,
-    "unpackedSize": 45105,
+    "unpackedSize": 51603,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQDFtM7xSBvAfKcTg9CNEB7NDYvRdQWIe1eTlpEhDRm67QIgU6gzkiSuy6erNXkNWF/4WXGlApJ3aD/p5k19A+qQMo4="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQDNJ68KGHnjUYmHZG9l2ueYcNuPiuufGQeDetQf9wG8KgIhAPGuf+VZkcFdTA1U9+toyYpMABCxDIu9jhD2yfg4HgYg"
      }
     ]
    },
@@ -3218,14 +3361,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/react-virtualized-auto-sizer_1.0.25_1734399596613_0.5574324569567313"
+    "tmp": "tmp/react-virtualized-auto-sizer_1.0.26_1743351155481_0.18584508814298895"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2018-06-18T16:00:01.389Z",
-  "modified": "2024-12-17T01:39:56.996Z",
+  "modified": "2025-03-30T16:12:35.836Z",
   "1.0.0": "2018-06-18T16:00:01.481Z",
   "1.0.1": "2018-06-18T16:01:53.450Z",
   "1.0.2": "2018-06-18T16:11:49.818Z",
@@ -3251,7 +3394,8 @@
   "1.0.22": "2024-02-02T21:56:38.452Z",
   "1.0.23": "2024-02-21T15:12:02.087Z",
   "1.0.24": "2024-03-06T22:48:17.716Z",
-  "1.0.25": "2024-12-17T01:39:56.821Z"
+  "1.0.25": "2024-12-17T01:39:56.821Z",
+  "1.0.26": "2025-03-30T16:12:35.674Z"
  },
  "bugs": {
   "url": "https://github.com/bvaughn/react-virtualized-auto-sizer/issues"
@@ -3300,5 +3444,5 @@
   }
  ],
  "readme": "# react-virtualized-auto-sizer\n\nStandalone version of the `AutoSizer` component from [`react-virtualized`](https://github.com/bvaughn/react-virtualized).\n\n### If you like this project, 🎉 [become a sponsor](https://github.com/sponsors/bvaughn/) or ☕ [buy me a coffee](http://givebrian.coffee/)\n\n## Install\n\n```bash\nnpm install --save react-virtualized-auto-sizer\n```\n\n## Documentation\n\n\n| Property      | Type     | Required? | Description                                                                                                                                                     |\n| :------------ | :------- | :-------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| children      | Function |     ✓     | Function responsible for rendering children. This function should implement the following signature: `({ height?: number \\| undefined, width?: number \\| undefined }) => PropTypes.element` |\n| className     | String   |           | Optional custom CSS class name to attach to root `AutoSizer` element. This is an advanced property and is not typically necessary.                              |\n| defaultHeight | Number   |           | Height passed to child for initial render; useful for server-side rendering. This value will be overridden with an accurate height after mounting.              |\n| defaultWidth  | Number   |           | Width passed to child for initial render; useful for server-side rendering. This value will be overridden with an accurate width after mounting.                |\n| disableHeight | Boolean  |           | Fixed `height`; if specified, the child's `height` property will not be managed                                                                                 |\n| disableWidth  | Boolean  |           | Fixed `width`; if specified, the child's `width` property will not be managed                                                                                   |\n| doNotBailOutOnEmptyChildren | boolean | | Optional propr that can override default behavior of not rendering children when either `width` or `height` are 0 |\n| nonce         | String   |           | Nonce of the inlined stylesheets for [Content Security Policy](https://www.w3.org/TR/2016/REC-CSP2-20161215/#script-src-the-nonce-attribute)                    |\n| onResize      | Function |           | Callback to be invoked on-resize; it is passed the following named parameters: `({ height: number, width: number })`.                                           |\n| style         | Object   |           | Optional custom inline style to attach to root `AutoSizer` element. This is an advanced property and is not typically necessary.                                |\n| tagName       | string   |           | Optional HTML tag name for root element; defaults to `\"div\"` |\n\n## Examples\n\nSome components (like those found in [`react-window`](https://github.com/bvaughn/react-window) or [`react-virtualized`](https://github.com/bvaughn/react-virtualized)) require numeric width and height parameters. The `AutoSizer` component can be useful if you want to pass percentage based dimensions.\n\n```jsx\nimport AutoSizer from \"react-virtualized-auto-sizer\";\n\n// UI\n<AutoSizer>\n  {({ height, width }) => {\n    // Use these actual sizes to calculate your percentage based sizes\n  }}\n</AutoSizer>;\n```\n\n## FAQs\n\n### Can I use this component with flexbox?\n\nFlex containers don't prevent their children from growing and `AutoSizer` greedily grows to fill as much space as possible. Combining the two can be problematic. The simple way to fix this is to nest `AutoSizer` inside of a `block` element (like a `<div>`) rather than putting it as a direct child of the flex container, like so:\n\n```jsx\n<div style={{ display: 'flex' }}>\n  <!-- Other children... -->\n  <div style={{ flex: '1 1 auto' }}>\n    <AutoSizer>\n      {({ height, width }) => (\n        <Component\n          width={width}\n          height={height}\n          {...props}\n        />\n      )}\n    </AutoSizer>\n  </div>\n</div>\n```\n\n### Why is `AutoSizer` passing a height of 0?\n\n`AutoSizer` expands to _fill_ its parent but it will not _stretch_ the parent. This is done to prevent problems with flexbox layouts. If `AutoSizer` is reporting a height (or width) of 0- then it's likely that the parent element (or one of its parents) has a height of 0.\n\nThe solution to this problem is often to add `height: 100%` or `flex: 1` to the parent. One easy way to test this is to add a style property (eg `background-color: red;`) to the parent to visually confirm that it is the expected size.\n\n### Can I use `AutoSizer` to manage only width or height (not both)?\n\nYou can use `AutoSizer` to control only one dimension of its child component using the `disableHeight` or `disableWidth` attributes. For example, a fixed-height component that should grow to fill the available width can be created like so:\n\n```jsx\n<AutoSizer disableHeight>\n  {({width}) => <Component height={200} width={width} {...props} />}\n</AutoSizer>\n```\n\n\n### Module parsing fails because of an unexpected token?\n\nThis package targets [ECMAScript 2015](https://262.ecma-international.org/6.0/) (ES6) and requires a build tool such as [babel-loader](https://www.npmjs.com/package/babel-loader) that is capable of parsing the ES6 `class` syntax.\n\n### Can this component work with a Content Security Policy?\n\n[The specification of Content Security Policy](https://www.w3.org/TR/2016/REC-CSP2-20161215/#intro)\ndescribes as the following:\n\n> This document defines Content Security Policy, a mechanism web applications\n> can use to mitigate a broad class of content injection vulnerabilities, such\n> as cross-site scripting (XSS).\n\nTo apply Content Security Policy, pass a `nonce` to `AutoSizer` and add a matching `nonce-source` to the `Content-Security-Policy` field in HTTP header.\n",
- "readmeFilename": "README.md"
+ "readmeFilename": ""
 }

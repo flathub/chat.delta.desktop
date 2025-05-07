@@ -1,10 +1,10 @@
 {
  "_id": "serve-static",
- "_rev": "269-04698d517082ed48982f3afa3592d72b",
+ "_rev": "271-df047d70d2d19ddbcb946db585e178f0",
  "name": "serve-static",
  "dist-tags": {
   "next": "2.1.0",
-  "latest": "1.16.2"
+  "latest": "2.2.0"
  },
  "versions": {
   "1.0.0": {
@@ -5413,72 +5413,13 @@
   },
   "1.16.2": {
    "name": "serve-static",
-   "description": "Serve static files",
    "version": "1.16.2",
    "author": {
     "name": "Douglas Christopher Wilson",
     "email": "doug@somethingdoug.com"
    },
    "license": "MIT",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/expressjs/serve-static.git"
-   },
-   "dependencies": {
-    "encodeurl": "~2.0.0",
-    "escape-html": "~1.0.3",
-    "parseurl": "~1.3.3",
-    "send": "0.19.0"
-   },
-   "devDependencies": {
-    "eslint": "7.32.0",
-    "eslint-config-standard": "14.1.1",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-markdown": "2.2.1",
-    "eslint-plugin-node": "11.1.0",
-    "eslint-plugin-promise": "5.2.0",
-    "eslint-plugin-standard": "4.1.0",
-    "mocha": "9.2.2",
-    "nyc": "15.1.0",
-    "safe-buffer": "5.2.1",
-    "supertest": "6.2.2"
-   },
-   "engines": {
-    "node": ">= 0.8.0"
-   },
-   "scripts": {
-    "lint": "eslint .",
-    "test": "mocha --reporter spec --bail --check-leaks test/",
-    "test-ci": "nyc --reporter=lcov --reporter=text npm test",
-    "test-cov": "nyc --reporter=html --reporter=text npm test",
-    "version": "node scripts/version-history.js && git add HISTORY.md"
-   },
    "_id": "serve-static@1.16.2",
-   "gitHead": "ec9c5ecfb09368519e4698ffbbe1882de00d0ef2",
-   "bugs": {
-    "url": "https://github.com/expressjs/serve-static/issues"
-   },
-   "homepage": "https://github.com/expressjs/serve-static#readme",
-   "_nodeVersion": "22.2.0",
-   "_npmVersion": "10.7.0",
-   "dist": {
-    "integrity": "sha512-VqpjJZKadQB/PEbEwvFdO43Ax5dFBZ2UECszz8bQ7pi7wt//PWe1P6MN7eCnjsatYtBT6EuiClbjSWP2WrIoTw==",
-    "shasum": "b6a5343da47f6bdd2673848bf45754941e803296",
-    "tarball": "http://localhost:3000/serve-static/-/serve-static-1.16.2.tgz",
-    "fileCount": 5,
-    "unpackedSize": 25426,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCsndmgSGAp9vXsjAYSPMOa5Dq2KV76nUiqOP2ECVTN1QIgbcHHRmG5XV21lvK1SHe194hnKkoVWfS8wj+B7U7rcuQ="
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "wesleytodd",
-    "email": "wes@wesleytodd.com"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "ulisesgascon",
@@ -5493,16 +5434,162 @@
      "email": "doug@somethingdoug.com"
     }
    ],
+   "homepage": "https://github.com/expressjs/serve-static#readme",
+   "bugs": {
+    "url": "https://github.com/expressjs/serve-static/issues"
+   },
+   "dist": {
+    "shasum": "b6a5343da47f6bdd2673848bf45754941e803296",
+    "tarball": "http://localhost:3000/serve-static/-/serve-static-1.16.2.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-VqpjJZKadQB/PEbEwvFdO43Ax5dFBZ2UECszz8bQ7pi7wt//PWe1P6MN7eCnjsatYtBT6EuiClbjSWP2WrIoTw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCsndmgSGAp9vXsjAYSPMOa5Dq2KV76nUiqOP2ECVTN1QIgbcHHRmG5XV21lvK1SHe194hnKkoVWfS8wj+B7U7rcuQ=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 25426
+   },
+   "engines": {
+    "node": ">= 0.8.0"
+   },
+   "gitHead": "ec9c5ecfb09368519e4698ffbbe1882de00d0ef2",
+   "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-ci": "nyc --reporter=lcov --reporter=text npm test",
+    "version": "node scripts/version-history.js && git add HISTORY.md",
+    "test-cov": "nyc --reporter=html --reporter=text npm test"
+   },
+   "_npmUser": {
+    "name": "wesleytodd",
+    "email": "wes@wesleytodd.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/expressjs/serve-static.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.7.0",
+   "description": "Serve static files",
+   "directories": {},
+   "_nodeVersion": "22.2.0",
+   "dependencies": {
+    "send": "0.19.0",
+    "parseurl": "~1.3.3",
+    "encodeurl": "~2.0.0",
+    "escape-html": "~1.0.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "15.1.0",
+    "mocha": "9.2.2",
+    "eslint": "7.32.0",
+    "supertest": "6.2.2",
+    "safe-buffer": "5.2.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-promise": "5.2.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-markdown": "2.2.1",
+    "eslint-plugin-standard": "4.1.0"
+   },
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/serve-static_1.16.2_1726079074665_0.9435300624442295"
+    "tmp": "tmp/serve-static_1.16.2_1726079074665_0.9435300624442295",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "2.2.0": {
+   "name": "serve-static",
+   "description": "Serve static files",
+   "version": "2.2.0",
+   "author": {
+    "name": "Douglas Christopher Wilson",
+    "email": "doug@somethingdoug.com"
+   },
+   "license": "MIT",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/expressjs/serve-static.git"
+   },
+   "dependencies": {
+    "encodeurl": "^2.0.0",
+    "escape-html": "^1.0.3",
+    "parseurl": "^1.3.3",
+    "send": "^1.2.0"
+   },
+   "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-markdown": "2.2.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.2.0",
+    "eslint-plugin-standard": "4.1.0",
+    "mocha": "^10.7.0",
+    "nyc": "^17.0.0",
+    "supertest": "^6.3.4"
+   },
+   "engines": {
+    "node": ">= 18"
+   },
+   "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-ci": "nyc --reporter=lcov --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test",
+    "version": "node scripts/version-history.js && git add HISTORY.md"
+   },
+   "_id": "serve-static@2.2.0",
+   "gitHead": "4eb26be6ced8705e491aedcb387fa2e9e45baf12",
+   "bugs": {
+    "url": "https://github.com/expressjs/serve-static/issues"
+   },
+   "homepage": "https://github.com/expressjs/serve-static#readme",
+   "_nodeVersion": "23.5.0",
+   "_npmVersion": "10.9.2",
+   "dist": {
+    "integrity": "sha512-61g9pCh0Vnh7IutZjtLGGpTA355+OPn2TyDv/6ivP2h/AdAVX9azsoxmg2/M6nZeQZNYBEwIcsne1mJd9oQItQ==",
+    "shasum": "9c02564ee259bdd2251b82d659a2e7e1938d66f9",
+    "tarball": "http://localhost:3000/serve-static/-/serve-static-2.2.0.tgz",
+    "fileCount": 5,
+    "unpackedSize": 25672,
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQCEbgwSj5X8NfSS9x9DXRK/J/SadyzJwGkvWp76oiGUNwIhAJVpObU+UH53Rpfo0FgMLL83Pmxwk1togbV9jWxgmSRp"
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "wesleytodd",
+    "email": "wes@wesleytodd.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "dougwilson",
+     "email": "doug@somethingdoug.com"
+    },
+    {
+     "name": "wesleytodd",
+     "email": "wes@wesleytodd.com"
+    },
+    {
+     "name": "ulisesgascon",
+     "email": "ulisesgascondev@gmail.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/serve-static_2.2.0_1743122339567_0.00003929683040637677"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2014-03-06T03:09:28.171Z",
-  "modified": "2024-09-11T18:24:35.096Z",
+  "modified": "2025-03-28T00:38:59.979Z",
   "1.0.0": "2014-03-06T03:09:32.347Z",
   "1.0.1": "2014-03-06T03:26:54.332Z",
   "1.0.2": "2014-03-06T15:03:41.948Z",
@@ -5568,7 +5655,8 @@
   "1.16.0": "2024-09-10T01:14:27.313Z",
   "2.1.0": "2024-09-10T01:17:27.648Z",
   "1.16.1": "2024-09-11T17:14:21.805Z",
-  "1.16.2": "2024-09-11T18:24:34.879Z"
+  "1.16.2": "2024-09-11T18:24:34.879Z",
+  "2.2.0": "2025-03-28T00:38:59.780Z"
  },
  "bugs": {
   "url": "https://github.com/expressjs/serve-static/issues"
@@ -5586,19 +5674,19 @@
  "description": "Serve static files",
  "maintainers": [
   {
-   "name": "ulisesgascon",
-   "email": "ulisesgascondev@gmail.com"
+   "name": "dougwilson",
+   "email": "doug@somethingdoug.com"
   },
   {
    "name": "wesleytodd",
    "email": "wes@wesleytodd.com"
   },
   {
-   "name": "dougwilson",
-   "email": "doug@somethingdoug.com"
+   "name": "ulisesgascon",
+   "email": "ulisesgascondev@gmail.com"
   }
  ],
- "readme": "# serve-static\n\n[![NPM Version][npm-version-image]][npm-url]\n[![NPM Downloads][npm-downloads-image]][npm-url]\n[![Linux Build][github-actions-ci-image]][github-actions-ci-url]\n[![Windows Build][appveyor-image]][appveyor-url]\n[![Test Coverage][coveralls-image]][coveralls-url]\n\n## Install\n\nThis is a [Node.js](https://nodejs.org/en/) module available through the\n[npm registry](https://www.npmjs.com/). Installation is done using the\n[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):\n\n```sh\n$ npm install serve-static\n```\n\n## API\n\n```js\nvar serveStatic = require('serve-static')\n```\n\n### serveStatic(root, options)\n\nCreate a new middleware function to serve files from within a given root\ndirectory. The file to serve will be determined by combining `req.url`\nwith the provided root directory. When a file is not found, instead of\nsending a 404 response, this module will instead call `next()` to move on\nto the next middleware, allowing for stacking and fall-backs.\n\n#### Options\n\n##### acceptRanges\n\nEnable or disable accepting ranged requests, defaults to true.\nDisabling this will not send `Accept-Ranges` and ignore the contents\nof the `Range` request header.\n\n##### cacheControl\n\nEnable or disable setting `Cache-Control` response header, defaults to\ntrue. Disabling this will ignore the `immutable` and `maxAge` options.\n\n##### dotfiles\n\n Set how \"dotfiles\" are treated when encountered. A dotfile is a file\nor directory that begins with a dot (\".\"). Note this check is done on\nthe path itself without checking if the path actually exists on the\ndisk. If `root` is specified, only the dotfiles above the root are\nchecked (i.e. the root itself can be within a dotfile when set\nto \"deny\").\n\n  - `'allow'` No special treatment for dotfiles.\n  - `'deny'` Deny a request for a dotfile and 403/`next()`.\n  - `'ignore'` Pretend like the dotfile does not exist and 404/`next()`.\n\nThe default value is similar to `'ignore'`, with the exception that this\ndefault will not ignore the files within a directory that begins with a dot.\n\n##### etag\n\nEnable or disable etag generation, defaults to true.\n\n##### extensions\n\nSet file extension fallbacks. When set, if a file is not found, the given\nextensions will be added to the file name and search for. The first that\nexists will be served. Example: `['html', 'htm']`.\n\nThe default value is `false`.\n\n##### fallthrough\n\nSet the middleware to have client errors fall-through as just unhandled\nrequests, otherwise forward a client error. The difference is that client\nerrors like a bad request or a request to a non-existent file will cause\nthis middleware to simply `next()` to your next middleware when this value\nis `true`. When this value is `false`, these errors (even 404s), will invoke\n`next(err)`.\n\nTypically `true` is desired such that multiple physical directories can be\nmapped to the same web address or for routes to fill in non-existent files.\n\nThe value `false` can be used if this middleware is mounted at a path that\nis designed to be strictly a single file system directory, which allows for\nshort-circuiting 404s for less overhead. This middleware will also reply to\nall methods.\n\nThe default value is `true`.\n\n##### immutable\n\nEnable or disable the `immutable` directive in the `Cache-Control` response\nheader, defaults to `false`. If set to `true`, the `maxAge` option should\nalso be specified to enable caching. The `immutable` directive will prevent\nsupported clients from making conditional requests during the life of the\n`maxAge` option to check if the file has changed.\n\n##### index\n\nBy default this module will send \"index.html\" files in response to a request\non a directory. To disable this set `false` or to supply a new index pass a\nstring or an array in preferred order.\n\n##### lastModified\n\nEnable or disable `Last-Modified` header, defaults to true. Uses the file\nsystem's last modified value.\n\n##### maxAge\n\nProvide a max-age in milliseconds for http caching, defaults to 0. This\ncan also be a string accepted by the [ms](https://www.npmjs.org/package/ms#readme)\nmodule.\n\n##### redirect\n\nRedirect to trailing \"/\" when the pathname is a dir. Defaults to `true`.\n\n##### setHeaders\n\nFunction to set custom headers on response. Alterations to the headers need to\noccur synchronously. The function is called as `fn(res, path, stat)`, where\nthe arguments are:\n\n  - `res` the response object\n  - `path` the file path that is being sent\n  - `stat` the stat object of the file that is being sent\n\n## Examples\n\n### Serve files with vanilla node.js http server\n\n```js\nvar finalhandler = require('finalhandler')\nvar http = require('http')\nvar serveStatic = require('serve-static')\n\n// Serve up public/ftp folder\nvar serve = serveStatic('public/ftp', { index: ['index.html', 'index.htm'] })\n\n// Create server\nvar server = http.createServer(function onRequest (req, res) {\n  serve(req, res, finalhandler(req, res))\n})\n\n// Listen\nserver.listen(3000)\n```\n\n### Serve all files as downloads\n\n```js\nvar contentDisposition = require('content-disposition')\nvar finalhandler = require('finalhandler')\nvar http = require('http')\nvar serveStatic = require('serve-static')\n\n// Serve up public/ftp folder\nvar serve = serveStatic('public/ftp', {\n  index: false,\n  setHeaders: setHeaders\n})\n\n// Set header to force download\nfunction setHeaders (res, path) {\n  res.setHeader('Content-Disposition', contentDisposition(path))\n}\n\n// Create server\nvar server = http.createServer(function onRequest (req, res) {\n  serve(req, res, finalhandler(req, res))\n})\n\n// Listen\nserver.listen(3000)\n```\n\n### Serving using express\n\n#### Simple\n\nThis is a simple example of using Express.\n\n```js\nvar express = require('express')\nvar serveStatic = require('serve-static')\n\nvar app = express()\n\napp.use(serveStatic('public/ftp', { index: ['default.html', 'default.htm'] }))\napp.listen(3000)\n```\n\n#### Multiple roots\n\nThis example shows a simple way to search through multiple directories.\nFiles are searched for in `public-optimized/` first, then `public/` second\nas a fallback.\n\n```js\nvar express = require('express')\nvar path = require('path')\nvar serveStatic = require('serve-static')\n\nvar app = express()\n\napp.use(serveStatic(path.join(__dirname, 'public-optimized')))\napp.use(serveStatic(path.join(__dirname, 'public')))\napp.listen(3000)\n```\n\n#### Different settings for paths\n\nThis example shows how to set a different max age depending on the served\nfile type. In this example, HTML files are not cached, while everything else\nis for 1 day.\n\n```js\nvar express = require('express')\nvar path = require('path')\nvar serveStatic = require('serve-static')\n\nvar app = express()\n\napp.use(serveStatic(path.join(__dirname, 'public'), {\n  maxAge: '1d',\n  setHeaders: setCustomCacheControl\n}))\n\napp.listen(3000)\n\nfunction setCustomCacheControl (res, path) {\n  if (serveStatic.mime.lookup(path) === 'text/html') {\n    // Custom Cache-Control for HTML files\n    res.setHeader('Cache-Control', 'public, max-age=0')\n  }\n}\n```\n\n## License\n\n[MIT](LICENSE)\n\n[appveyor-image]: https://badgen.net/appveyor/ci/dougwilson/serve-static/master?label=windows\n[appveyor-url]: https://ci.appveyor.com/project/dougwilson/serve-static\n[coveralls-image]: https://badgen.net/coveralls/c/github/expressjs/serve-static/master\n[coveralls-url]: https://coveralls.io/r/expressjs/serve-static?branch=master\n[github-actions-ci-image]: https://badgen.net/github/checks/expressjs/serve-static/master?label=linux\n[github-actions-ci-url]: https://github.com/expressjs/serve-static/actions/workflows/ci.yml\n[node-image]: https://badgen.net/npm/node/serve-static\n[node-url]: https://nodejs.org/en/download/\n[npm-downloads-image]: https://badgen.net/npm/dm/serve-static\n[npm-url]: https://npmjs.org/package/serve-static\n[npm-version-image]: https://badgen.net/npm/v/serve-static\n",
+ "readme": "# serve-static\n\n[![NPM Version][npm-version-image]][npm-url]\n[![NPM Downloads][npm-downloads-image]][npm-url]\n[![CI][github-actions-ci-image]][github-actions-ci-url]\n[![Test Coverage][coveralls-image]][coveralls-url]\n\n## Install\n\nThis is a [Node.js](https://nodejs.org/en/) module available through the\n[npm registry](https://www.npmjs.com/). Installation is done using the\n[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):\n\n```sh\n$ npm install serve-static\n```\n\n## API\n\n```js\nvar serveStatic = require('serve-static')\n```\n\n### serveStatic(root, options)\n\nCreate a new middleware function to serve files from within a given root\ndirectory. The file to serve will be determined by combining `req.url`\nwith the provided root directory. When a file is not found, instead of\nsending a 404 response, this module will instead call `next()` to move on\nto the next middleware, allowing for stacking and fall-backs.\n\n#### Options\n\n##### acceptRanges\n\nEnable or disable accepting ranged requests, defaults to true.\nDisabling this will not send `Accept-Ranges` and ignore the contents\nof the `Range` request header.\n\n##### cacheControl\n\nEnable or disable setting `Cache-Control` response header, defaults to\ntrue. Disabling this will ignore the `immutable` and `maxAge` options.\n\n##### dotfiles\n\nSet how \"dotfiles\" are treated when encountered. A dotfile is a file\nor directory that begins with a dot (\".\"). Note this check is done on\nthe path itself without checking if the path actually exists on the\ndisk. If `root` is specified, only the dotfiles above the root are\nchecked (i.e. the root itself can be within a dotfile when set\nto \"deny\").\n\n  - `'allow'` No special treatment for dotfiles.\n  - `'deny'` Deny a request for a dotfile and 403/`next()`.\n  - `'ignore'` Pretend like the dotfile does not exist and 404/`next()`.\n\nThe default value is `'ignore'`.\n\n##### etag\n\nEnable or disable etag generation, defaults to true.\n\n##### extensions\n\nSet file extension fallbacks. When set, if a file is not found, the given\nextensions will be added to the file name and search for. The first that\nexists will be served. Example: `['html', 'htm']`.\n\nThe default value is `false`.\n\n##### fallthrough\n\nSet the middleware to have client errors fall-through as just unhandled\nrequests, otherwise forward a client error. The difference is that client\nerrors like a bad request or a request to a non-existent file will cause\nthis middleware to simply `next()` to your next middleware when this value\nis `true`. When this value is `false`, these errors (even 404s), will invoke\n`next(err)`.\n\nTypically `true` is desired such that multiple physical directories can be\nmapped to the same web address or for routes to fill in non-existent files.\n\nThe value `false` can be used if this middleware is mounted at a path that\nis designed to be strictly a single file system directory, which allows for\nshort-circuiting 404s for less overhead. This middleware will also reply to\nall methods.\n\nThe default value is `true`.\n\n##### immutable\n\nEnable or disable the `immutable` directive in the `Cache-Control` response\nheader, defaults to `false`. If set to `true`, the `maxAge` option should\nalso be specified to enable caching. The `immutable` directive will prevent\nsupported clients from making conditional requests during the life of the\n`maxAge` option to check if the file has changed.\n\n##### index\n\nBy default this module will send \"index.html\" files in response to a request\non a directory. To disable this set `false` or to supply a new index pass a\nstring or an array in preferred order.\n\n##### lastModified\n\nEnable or disable `Last-Modified` header, defaults to true. Uses the file\nsystem's last modified value.\n\n##### maxAge\n\nProvide a max-age in milliseconds for http caching, defaults to 0. This\ncan also be a string accepted by the [ms](https://www.npmjs.org/package/ms#readme)\nmodule.\n\n##### redirect\n\nRedirect to trailing \"/\" when the pathname is a dir. Defaults to `true`.\n\n##### setHeaders\n\nFunction to set custom headers on response. Alterations to the headers need to\noccur synchronously. The function is called as `fn(res, path, stat)`, where\nthe arguments are:\n\n  - `res` the response object\n  - `path` the file path that is being sent\n  - `stat` the stat object of the file that is being sent\n\n## Examples\n\n### Serve files with vanilla node.js http server\n\n```js\nvar finalhandler = require('finalhandler')\nvar http = require('http')\nvar serveStatic = require('serve-static')\n\n// Serve up public/ftp folder\nvar serve = serveStatic('public/ftp', { index: ['index.html', 'index.htm'] })\n\n// Create server\nvar server = http.createServer(function onRequest (req, res) {\n  serve(req, res, finalhandler(req, res))\n})\n\n// Listen\nserver.listen(3000)\n```\n\n### Serve all files as downloads\n\n```js\nvar contentDisposition = require('content-disposition')\nvar finalhandler = require('finalhandler')\nvar http = require('http')\nvar serveStatic = require('serve-static')\n\n// Serve up public/ftp folder\nvar serve = serveStatic('public/ftp', {\n  index: false,\n  setHeaders: setHeaders\n})\n\n// Set header to force download\nfunction setHeaders (res, path) {\n  res.setHeader('Content-Disposition', contentDisposition(path))\n}\n\n// Create server\nvar server = http.createServer(function onRequest (req, res) {\n  serve(req, res, finalhandler(req, res))\n})\n\n// Listen\nserver.listen(3000)\n```\n\n### Serving using express\n\n#### Simple\n\nThis is a simple example of using Express.\n\n```js\nvar express = require('express')\nvar serveStatic = require('serve-static')\n\nvar app = express()\n\napp.use(serveStatic('public/ftp', { index: ['default.html', 'default.htm'] }))\napp.listen(3000)\n```\n\n#### Multiple roots\n\nThis example shows a simple way to search through multiple directories.\nFiles are searched for in `public-optimized/` first, then `public/` second\nas a fallback.\n\n```js\nvar express = require('express')\nvar path = require('path')\nvar serveStatic = require('serve-static')\n\nvar app = express()\n\napp.use(serveStatic(path.join(__dirname, 'public-optimized')))\napp.use(serveStatic(path.join(__dirname, 'public')))\napp.listen(3000)\n```\n\n#### Different settings for paths\n\nThis example shows how to set a different max age depending on the served\nfile. In this example, HTML files are not cached, while everything else\nis for 1 day.\n\n```js\nvar express = require('express')\nvar path = require('path')\nvar serveStatic = require('serve-static')\n\nvar app = express()\n\napp.use(serveStatic(path.join(__dirname, 'public'), {\n  maxAge: '1d',\n  setHeaders: setCustomCacheControl\n}))\n\napp.listen(3000)\n\nfunction setCustomCacheControl (res, file) {\n  if (path.extname(file) === '.html') {\n    // Custom Cache-Control for HTML files\n    res.setHeader('Cache-Control', 'public, max-age=0')\n  }\n}\n```\n\n## License\n\n[MIT](LICENSE)\n\n[coveralls-image]: https://badgen.net/coveralls/c/github/expressjs/serve-static/master\n[coveralls-url]: https://coveralls.io/r/expressjs/serve-static?branch=master\n[github-actions-ci-image]: https://badgen.net/github/checks/expressjs/serve-static/master?label=linux\n[github-actions-ci-url]: https://github.com/expressjs/serve-static/actions/workflows/ci.yml\n[node-image]: https://badgen.net/npm/node/serve-static\n[node-url]: https://nodejs.org/en/download/\n[npm-downloads-image]: https://badgen.net/npm/dm/serve-static\n[npm-url]: https://npmjs.org/package/serve-static\n[npm-version-image]: https://badgen.net/npm/v/serve-static\n",
  "readmeFilename": "README.md",
  "users": {
   "atd": true,

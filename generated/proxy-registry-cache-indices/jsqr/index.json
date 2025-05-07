@@ -1,8 +1,7 @@
 {
  "_id": "jsqr",
- "_rev": "28-59d72e3ae4b692d5e843b3b3b6eab9fd",
+ "_rev": "30-bb089fb560b6c44b13f0d9447f4a9727",
  "name": "jsqr",
- "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
  "dist-tags": {
   "latest": "1.4.0"
  },
@@ -10,12 +9,14 @@
   "0.1.0": {
    "name": "jsqr",
    "version": "0.1.0",
-   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/js-qr.git"
-   },
-   "main": "./dist/js-qr.js",
+   "license": "Apache-2.0",
+   "_id": "jsqr@0.1.0",
+   "maintainers": [
+    {
+     "name": "templaedhel",
+     "email": "cosmo.wolfe@gmail.com"
+    }
+   ],
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -26,32 +27,9 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "mocha": "^2.3.4",
-    "ts-loader": "^0.7.2",
-    "ts-node": "^0.5.4",
-    "typescript": "^1.7.3",
-    "webpack": "^1.12.9"
-   },
-   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js",
-    "watch": "./node_modules/webpack/bin/webpack.js --watch",
-    "test": "./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts"
-   },
-   "gitHead": "e7066866141bf2050238b507a72c35b667684f11",
+   "homepage": "https://github.com/cozmo/js-qr#readme",
    "bugs": {
     "url": "https://github.com/cozmo/js-qr/issues"
-   },
-   "homepage": "https://github.com/cozmo/js-qr#readme",
-   "_id": "jsqr@0.1.0",
-   "_shasum": "76d25bea0e31349fe383d43131ac11d2cf2dcdaa",
-   "_from": ".",
-   "_npmVersion": "2.14.8",
-   "_nodeVersion": "0.10.21",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "76d25bea0e31349fe383d43131ac11d2cf2dcdaa",
@@ -59,28 +37,51 @@
     "integrity": "sha512-5A8Fj5OkE01iEyjeTQokADHd8WrTO7EqTqJoAu4gC81UCwcJCMnTVUH89+u7fRnwLH9fhBAWDiN5GGsDIVxpew==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIGguIAC38XzTWrRvACQMnV4CoIGheO3gku+18WN/+c5wAiAb/2YtH3KR1nISmO0D0Xvel5tINFVtHH+Q2owKqgVEqQ=="
+      "sig": "MEQCIGguIAC38XzTWrRvACQMnV4CoIGheO3gku+18WN/+c5wAiAb/2YtH3KR1nISmO0D0Xvel5tINFVtHH+Q2owKqgVEqQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
    },
+   "main": "./dist/js-qr.js",
+   "_from": ".",
+   "_shasum": "76d25bea0e31349fe383d43131ac11d2cf2dcdaa",
+   "gitHead": "e7066866141bf2050238b507a72c35b667684f11",
+   "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts",
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "watch": "./node_modules/webpack/bin/webpack.js --watch"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/js-qr.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.14.8",
+   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
+   "directories": {},
+   "_nodeVersion": "0.10.21",
+   "devDependencies": {
+    "mocha": "^2.3.4",
+    "ts-node": "^0.5.4",
+    "webpack": "^1.12.9",
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.7.3"
+   }
+  },
+  "0.1.1": {
+   "name": "jsqr",
+   "version": "0.1.1",
+   "license": "Apache-2.0",
+   "_id": "jsqr@0.1.1",
    "maintainers": [
     {
      "name": "templaedhel",
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "directories": {}
-  },
-  "0.1.1": {
-   "name": "jsqr",
-   "version": "0.1.1",
-   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -91,32 +92,9 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "mocha": "^2.3.4",
-    "ts-loader": "^0.7.2",
-    "ts-node": "^0.5.4",
-    "typescript": "^1.7.3",
-    "webpack": "^1.12.9"
-   },
-   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js",
-    "watch": "./node_modules/webpack/bin/webpack.js --watch",
-    "test": "./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts"
-   },
-   "gitHead": "3a3770cec4d2c283590f1630c02f87999fd127b7",
+   "homepage": "https://github.com/cozmo/jsQR#readme",
    "bugs": {
     "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@0.1.1",
-   "_shasum": "477d83cbb9236264174d4a72104fe471fb1015f5",
-   "_from": ".",
-   "_npmVersion": "2.14.8",
-   "_nodeVersion": "0.10.21",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "477d83cbb9236264174d4a72104fe471fb1015f5",
@@ -124,28 +102,51 @@
     "integrity": "sha512-3oCdw8nW7A8G2KoMo2XDY3+MXYgV4v05mzh0wtelNGqLoNxPd5kNTi1sEDYvpcw8A/0SEfiNoJY/JByA2PP+QQ==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQC1CDvUNu+tXmrHOw/OaZ57VlepsMsUXdEqeQr12xqqYgIgHv7D7Jb5HXDEk7xsjM/9wUB1m/Z6neMljX2lHKDo5Dc="
+      "sig": "MEUCIQC1CDvUNu+tXmrHOw/OaZ57VlepsMsUXdEqeQr12xqqYgIgHv7D7Jb5HXDEk7xsjM/9wUB1m/Z6neMljX2lHKDo5Dc=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
    },
+   "main": "./dist/jsQR.js",
+   "_from": ".",
+   "_shasum": "477d83cbb9236264174d4a72104fe471fb1015f5",
+   "gitHead": "3a3770cec4d2c283590f1630c02f87999fd127b7",
+   "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts",
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "watch": "./node_modules/webpack/bin/webpack.js --watch"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.14.8",
+   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
+   "directories": {},
+   "_nodeVersion": "0.10.21",
+   "devDependencies": {
+    "mocha": "^2.3.4",
+    "ts-node": "^0.5.4",
+    "webpack": "^1.12.9",
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.7.3"
+   }
+  },
+  "0.1.2": {
+   "name": "jsqr",
+   "version": "0.1.2",
+   "license": "Apache-2.0",
+   "_id": "jsqr@0.1.2",
    "maintainers": [
     {
      "name": "templaedhel",
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "directories": {}
-  },
-  "0.1.2": {
-   "name": "jsqr",
-   "version": "0.1.2",
-   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -156,32 +157,9 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "mocha": "^2.3.4",
-    "ts-loader": "^0.7.2",
-    "ts-node": "^0.5.4",
-    "typescript": "^1.7.3",
-    "webpack": "^1.12.9"
-   },
-   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js",
-    "watch": "./node_modules/webpack/bin/webpack.js --watch",
-    "test": "./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts"
-   },
-   "gitHead": "041f6cfe06f8495680ae3ffbd787cd3a2582aea4",
+   "homepage": "https://github.com/cozmo/jsQR#readme",
    "bugs": {
     "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@0.1.2",
-   "_shasum": "61f2060dc7e98fe7839abf14403e3423dae7eb1e",
-   "_from": ".",
-   "_npmVersion": "2.14.8",
-   "_nodeVersion": "0.10.21",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "61f2060dc7e98fe7839abf14403e3423dae7eb1e",
@@ -189,32 +167,59 @@
     "integrity": "sha512-nJJVJiLx8fTZdcRErQxGLxOOrZ0k0PyBpGo+00TDVl/4PjacOWKW8bBIBO89qXP9Mgn9NNR62q4p/DuIAhWCXg==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIHw45CqRofkUCV+ekohgEGrhuaXTT5JwkJI957ARMUEDAiEA/L5B+WzeMKGVQd7T15iZKfXn3ceN1khPiL29avYErj0="
+      "sig": "MEUCIHw45CqRofkUCV+ekohgEGrhuaXTT5JwkJI957ARMUEDAiEA/L5B+WzeMKGVQd7T15iZKfXn3ceN1khPiL29avYErj0=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
    },
+   "main": "./dist/jsQR.js",
+   "_from": ".",
+   "_shasum": "61f2060dc7e98fe7839abf14403e3423dae7eb1e",
+   "gitHead": "041f6cfe06f8495680ae3ffbd787cd3a2582aea4",
+   "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts",
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "watch": "./node_modules/webpack/bin/webpack.js --watch"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.14.8",
+   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
+   "directories": {},
+   "_nodeVersion": "0.10.21",
+   "devDependencies": {
+    "mocha": "^2.3.4",
+    "ts-node": "^0.5.4",
+    "webpack": "^1.12.9",
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.7.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr-0.1.2.tgz_1456392162919_0.47670272970572114",
+    "host": "packages-6-west.internal.npmjs.com"
+   }
+  },
+  "0.2.0": {
+   "name": "jsqr",
+   "version": "0.2.0",
+   "license": "Apache-2.0",
+   "_id": "jsqr@0.2.0",
    "maintainers": [
+    {
+     "name": "jefff",
+     "email": "gmjefff@gmail.com"
+    },
     {
      "name": "templaedhel",
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "packages-6-west.internal.npmjs.com",
-    "tmp": "tmp/jsqr-0.1.2.tgz_1456392162919_0.47670272970572114"
-   },
-   "directories": {}
-  },
-  "0.2.0": {
-   "name": "jsqr",
-   "version": "0.2.0",
-   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -225,32 +230,9 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "mocha": "^2.3.4",
-    "ts-loader": "^0.7.2",
-    "ts-node": "^0.5.4",
-    "typescript": "^1.7.3",
-    "webpack": "^1.12.9"
-   },
-   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js",
-    "watch": "./node_modules/webpack/bin/webpack.js --watch",
-    "test": "./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts"
-   },
-   "gitHead": "62d581d4d694d0adb9850fe9c7039701344d0562",
+   "homepage": "https://github.com/cozmo/jsQR#readme",
    "bugs": {
     "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@0.2.0",
-   "_shasum": "7e4b97fe5b26e1b88139bbcf8bd13f775f5feb12",
-   "_from": ".",
-   "_npmVersion": "2.15.1",
-   "_nodeVersion": "0.10.45",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "7e4b97fe5b26e1b88139bbcf8bd13f775f5feb12",
@@ -258,11 +240,49 @@
     "integrity": "sha512-NXIvdl/gqZ/ytYeuo5ArJp+m038WPqBdQDMv6+RizgjeHAQJKWDR+gPtWTYPFnzGulruS28E9gj8l2SXzz0SFA==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIBHN4QvQUHK7DzyAm4PoDsUiAG9lLjgKwgTkTvqDoNbFAiEA8Lhe1R1bjDCpY3ajgYEVUEQ+MDMW64iTB0ilqJDae0c="
+      "sig": "MEUCIBHN4QvQUHK7DzyAm4PoDsUiAG9lLjgKwgTkTvqDoNbFAiEA8Lhe1R1bjDCpY3ajgYEVUEQ+MDMW64iTB0ilqJDae0c=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
    },
+   "main": "./dist/jsQR.js",
+   "_from": ".",
+   "_shasum": "7e4b97fe5b26e1b88139bbcf8bd13f775f5feb12",
+   "gitHead": "62d581d4d694d0adb9850fe9c7039701344d0562",
+   "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts",
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "watch": "./node_modules/webpack/bin/webpack.js --watch"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.15.1",
+   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
+   "directories": {},
+   "_nodeVersion": "0.10.45",
+   "devDependencies": {
+    "mocha": "^2.3.4",
+    "ts-node": "^0.5.4",
+    "webpack": "^1.12.9",
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.7.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr-0.2.0.tgz_1466584154874_0.6514270899351686",
+    "host": "packages-12-west.internal.npmjs.com"
+   }
+  },
+  "0.2.1": {
+   "name": "jsqr",
+   "version": "0.2.1",
+   "license": "Apache-2.0",
+   "_id": "jsqr@0.2.1",
    "maintainers": [
     {
      "name": "jefff",
@@ -273,21 +293,6 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/jsqr-0.2.0.tgz_1466584154874_0.6514270899351686"
-   },
-   "directories": {}
-  },
-  "0.2.1": {
-   "name": "jsqr",
-   "version": "0.2.1",
-   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -298,32 +303,9 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "mocha": "^2.3.4",
-    "ts-loader": "^0.7.2",
-    "ts-node": "^0.5.4",
-    "typescript": "^1.7.3",
-    "webpack": "^1.12.9"
-   },
-   "scripts": {
-    "build": "./node_modules/webpack/bin/webpack.js",
-    "watch": "./node_modules/webpack/bin/webpack.js --watch",
-    "test": "./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts"
-   },
-   "gitHead": "55aa9205c0bb31142aefbb584ddd5d088c93a9b4",
+   "homepage": "https://github.com/cozmo/jsQR#readme",
    "bugs": {
     "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@0.2.1",
-   "_shasum": "e030112de667e6327f3acfe3216d7ea5f980854d",
-   "_from": ".",
-   "_npmVersion": "2.15.1",
-   "_nodeVersion": "0.10.45",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "e030112de667e6327f3acfe3216d7ea5f980854d",
@@ -331,11 +313,49 @@
     "integrity": "sha512-1glXARASk+P813ly5lNH/l5GUtUMMZGeTeGiL2nC99vGL8x/hy13iyYYLNGlGOraNU+JWklUMFIjZ7BQ9VEMTg==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQDoaxAT4w9QXwGs0VJKu8OMN0rH3Sx/CZ3zo6atU3boGQIgLTqVDHQrNPbEdIsuN7UPggBkTRXi398bvRaVQdK2LPE="
+      "sig": "MEUCIQDoaxAT4w9QXwGs0VJKu8OMN0rH3Sx/CZ3zo6atU3boGQIgLTqVDHQrNPbEdIsuN7UPggBkTRXi398bvRaVQdK2LPE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
    },
+   "main": "./dist/jsQR.js",
+   "_from": ".",
+   "_shasum": "e030112de667e6327f3acfe3216d7ea5f980854d",
+   "gitHead": "55aa9205c0bb31142aefbb584ddd5d088c93a9b4",
+   "scripts": {
+    "test": "./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts",
+    "build": "./node_modules/webpack/bin/webpack.js",
+    "watch": "./node_modules/webpack/bin/webpack.js --watch"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.15.1",
+   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
+   "directories": {},
+   "_nodeVersion": "0.10.45",
+   "devDependencies": {
+    "mocha": "^2.3.4",
+    "ts-node": "^0.5.4",
+    "webpack": "^1.12.9",
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.7.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr-0.2.1.tgz_1466584313607_0.4544323969166726",
+    "host": "packages-16-east.internal.npmjs.com"
+   }
+  },
+  "0.2.2": {
+   "name": "jsqr",
+   "version": "0.2.2",
+   "license": "Apache-2.0",
+   "_id": "jsqr@0.2.2",
    "maintainers": [
     {
      "name": "jefff",
@@ -346,21 +366,6 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/jsqr-0.2.1.tgz_1466584313607_0.4544323969166726"
-   },
-   "directories": {}
-  },
-  "0.2.2": {
-   "name": "jsqr",
-   "version": "0.2.2",
-   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -371,32 +376,9 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "mocha": "^2.3.4",
-    "ts-loader": "^0.7.2",
-    "ts-node": "^0.5.4",
-    "typescript": "^1.7.3",
-    "webpack": "^1.12.9"
-   },
-   "scripts": {
-    "build": "node ./node_modules/webpack/bin/webpack.js",
-    "watch": "node ./node_modules/webpack/bin/webpack.js --watch",
-    "test": "node ./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts"
-   },
-   "gitHead": "92a478a6e1a8184996a8812d8fa640733c8823ed",
+   "homepage": "https://github.com/cozmo/jsQR#readme",
    "bugs": {
     "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@0.2.2",
-   "_shasum": "8c1f0279fb7c94542aaa9e8aeb7c722d523ea092",
-   "_from": ".",
-   "_npmVersion": "2.15.1",
-   "_nodeVersion": "0.10.48",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "8c1f0279fb7c94542aaa9e8aeb7c722d523ea092",
@@ -404,11 +386,49 @@
     "integrity": "sha512-dptW6r8NkPynywLcgAGBAaRxy80GmSzf07qL1yHr+t19c2Nj0rAvvWJDFFavX2MRCPg/6FEPG90sdN8jt4KNRg==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIFuXBxdUqL6+PxG7bn2f1do4J+XHZWdd8PnierkdFecvAiA1NVQ+GmzHUhYyspvUe5A18D1z8HcMSGOKqoqVXLwjMg=="
+      "sig": "MEQCIFuXBxdUqL6+PxG7bn2f1do4J+XHZWdd8PnierkdFecvAiA1NVQ+GmzHUhYyspvUe5A18D1z8HcMSGOKqoqVXLwjMg==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
    },
+   "main": "./dist/jsQR.js",
+   "_from": ".",
+   "_shasum": "8c1f0279fb7c94542aaa9e8aeb7c722d523ea092",
+   "gitHead": "92a478a6e1a8184996a8812d8fa640733c8823ed",
+   "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha --require ts-node/register ./test/test-*.ts",
+    "build": "node ./node_modules/webpack/bin/webpack.js",
+    "watch": "node ./node_modules/webpack/bin/webpack.js --watch"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.15.1",
+   "description": "QR code detection, extraction, decoding and parsing written as pure JS port of the ZXing library.",
+   "directories": {},
+   "_nodeVersion": "0.10.48",
+   "devDependencies": {
+    "mocha": "^2.3.4",
+    "ts-node": "^0.5.4",
+    "webpack": "^1.12.9",
+    "ts-loader": "^0.7.2",
+    "typescript": "^1.7.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr-0.2.2.tgz_1489129415516_0.5405166894197464",
+    "host": "packages-18-east.internal.npmjs.com"
+   }
+  },
+  "1.0.0": {
+   "name": "jsqr",
+   "version": "1.0.0",
+   "license": "Apache-2.0",
+   "_id": "jsqr@1.0.0",
    "maintainers": [
     {
      "name": "jefff",
@@ -419,22 +439,6 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/jsqr-0.2.2.tgz_1489129415516_0.5405166894197464"
-   },
-   "directories": {}
-  },
-  "1.0.0": {
-   "name": "jsqr",
-   "version": "1.0.0",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -445,51 +449,9 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^20.0.4",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "5d6e0f3d7e9417957435afff4e4d5a3c49f43aa3",
+   "homepage": "https://github.com/cozmo/jsQR#readme",
    "bugs": {
     "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@1.0.0",
-   "_shasum": "a5d19acdca02fa626f0b781964435cd80da1a487",
-   "_from": ".",
-   "_npmVersion": "2.15.11",
-   "_nodeVersion": "4.8.7",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "a5d19acdca02fa626f0b781964435cd80da1a487",
@@ -497,11 +459,69 @@
     "integrity": "sha512-dUO7oS33qWWAJUJ9qj4bkCKs2sB551cqWosjSVXQfBZO2zxAG6ubumEJOaPsJ/Td3RRDDcamDvTnJ6SxvlGdoQ==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCICmuPHr0flZgOVLQL5uXh8pNEoUz8G0SpVvGeHdNrUOxAiBPjhj5mryP5niT6hKspbuErAw7IZ0wXIc+K9vyfqIzng=="
+      "sig": "MEQCICmuPHr0flZgOVLQL5uXh8pNEoUz8G0SpVvGeHdNrUOxAiBPjhj5mryP5niT6hKspbuErAw7IZ0wXIc+K9vyfqIzng==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
    },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
+    ]
+   },
+   "main": "./dist/jsQR.js",
+   "_from": ".",
+   "types": "./dist/index.d.ts",
+   "_shasum": "a5d19acdca02fa626f0b781964435cd80da1a487",
+   "gitHead": "5d6e0f3d7e9417957435afff4e4d5a3c49f43aa3",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.15.11",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "4.8.7",
+   "devDependencies": {
+    "jest": "^20.0.4",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr-1.0.0.tgz_1515985278522_0.7485416389536113",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.0.1": {
+   "name": "jsqr",
+   "version": "1.0.1",
+   "license": "Apache-2.0",
+   "_id": "jsqr@1.0.1",
    "maintainers": [
     {
      "name": "jefff",
@@ -512,22 +532,6 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr-1.0.0.tgz_1515985278522_0.7485416389536113"
-   },
-   "directories": {}
-  },
-  "1.0.1": {
-   "name": "jsqr",
-   "version": "1.0.1",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -538,51 +542,9 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^20.0.4",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "1fb946a235abdc7709f04cd0e4aa316a3b6eae70",
+   "homepage": "https://github.com/cozmo/jsQR#readme",
    "bugs": {
     "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@1.0.1",
-   "_shasum": "254994e6513bf23ba9ce10578fe6f6781f7f01de",
-   "_from": ".",
-   "_npmVersion": "2.15.11",
-   "_nodeVersion": "4.8.7",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "254994e6513bf23ba9ce10578fe6f6781f7f01de",
@@ -590,11 +552,69 @@
     "integrity": "sha512-D38cVqYEl3xZGTkWy5crnL5mIvB2dwM75LZeWklrqhLD0P/JDey9X2+luSjK4hmOdHodbIne4J/OvbghZZfh8A==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIFp0TcCY+zSMlKFPFIze8sRfTRoUMjVAA60LKB91F1dWAiEAjpCO4c/bpG3C737yrykFme6c9UAN+SPhXLpcXxcQkBo="
+      "sig": "MEUCIFp0TcCY+zSMlKFPFIze8sRfTRoUMjVAA60LKB91F1dWAiEAjpCO4c/bpG3C737yrykFme6c9UAN+SPhXLpcXxcQkBo=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
     ]
    },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
+    ]
+   },
+   "main": "./dist/jsQR.js",
+   "_from": ".",
+   "types": "./dist/index.d.ts",
+   "_shasum": "254994e6513bf23ba9ce10578fe6f6781f7f01de",
+   "gitHead": "1fb946a235abdc7709f04cd0e4aa316a3b6eae70",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.15.11",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "4.8.7",
+   "devDependencies": {
+    "jest": "^20.0.4",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr-1.0.1.tgz_1516519687601_0.2623134348541498",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.0.2": {
+   "name": "jsqr",
+   "version": "1.0.2",
+   "license": "Apache-2.0",
+   "_id": "jsqr@1.0.2",
    "maintainers": [
     {
      "name": "jefff",
@@ -605,22 +625,6 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr-1.0.1.tgz_1516519687601_0.2623134348541498"
-   },
-   "directories": {}
-  },
-  "1.0.2": {
-   "name": "jsqr",
-   "version": "1.0.2",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -631,65 +635,82 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^20.0.4",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "9b1c8313a8b4fcdb10d557cbe8ffeed5d24f43ef",
+   "homepage": "https://github.com/cozmo/jsQR#readme",
    "bugs": {
     "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@1.0.2",
-   "_shasum": "39081e5e7469318284bfe1b00d72db61c87c151b",
-   "_from": ".",
-   "_npmVersion": "2.15.11",
-   "_nodeVersion": "4.8.7",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "39081e5e7469318284bfe1b00d72db61c87c151b",
     "tarball": "http://localhost:3000/jsqr/-/jsqr-1.0.2.tgz",
     "fileCount": 19,
-    "unpackedSize": 271608,
     "integrity": "sha512-RxQpHoarYQyqHoZsZHXbsimPtEB3NNfWwwBsQs1cRH2drZ5jekHC5Hy3CHKR6xqnfnhSDJIMAKK9ITmrQZsymA==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIB33QUQhYqCwJsx6Xwb7bqIHtbOoz/h9uZaVWcPqQZqNAiEAq4sO9//pO7ouUGZY1SSg/DYAD85X0c5dqTl1l3ho5Hw="
+      "sig": "MEUCIB33QUQhYqCwJsx6Xwb7bqIHtbOoz/h9uZaVWcPqQZqNAiEAq4sO9//pO7ouUGZY1SSg/DYAD85X0c5dqTl1l3ho5Hw=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
+    ],
+    "unpackedSize": 271608
+   },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
     ]
    },
+   "main": "./dist/jsQR.js",
+   "_from": ".",
+   "types": "./dist/index.d.ts",
+   "_shasum": "39081e5e7469318284bfe1b00d72db61c87c151b",
+   "gitHead": "9b1c8313a8b4fcdb10d557cbe8ffeed5d24f43ef",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.15.11",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "4.8.7",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^20.0.4",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.0.2_1519274918429_0.4197797795308622",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.0.3": {
+   "name": "jsqr",
+   "version": "1.0.3",
+   "license": "Apache-2.0",
+   "_id": "jsqr@1.0.3",
    "maintainers": [
     {
      "name": "jefff",
@@ -700,23 +721,6 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.0.2_1519274918429_0.4197797795308622"
-   },
-   "_hasShrinkwrap": false
-  },
-  "1.0.3": {
-   "name": "jsqr",
-   "version": "1.0.3",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -727,67 +731,84 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^20.0.4",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "03595aa23d5a28f4927a810b19f7b0a6cc86f439",
+   "homepage": "https://github.com/cozmo/jsQR#readme",
    "bugs": {
     "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@1.0.3",
-   "_shasum": "1e4e2f1de50413853855b3389e69a983ff7d067d",
-   "_from": ".",
-   "_npmVersion": "2.15.11",
-   "_nodeVersion": "4.8.7",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "1e4e2f1de50413853855b3389e69a983ff7d067d",
     "tarball": "http://localhost:3000/jsqr/-/jsqr-1.0.3.tgz",
     "fileCount": 17,
-    "unpackedSize": 272524,
     "integrity": "sha512-JDahDybgPr0JsC70Xaqr8UWSspETtNskg/1RyUMQ2fkh/Jx4MxsOhcR9Tv622MHg4pJnyr4HIxVQBwlkDTzBpQ==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIFIIqdGMnlEei9oldOo+2EspSR6hmZRYTb0WuhI2U5UCAiEArSdwok5sPiXe6DxqLp5qkB5D9ZscaQAkG5vsAzEKRIk="
+      "sig": "MEUCIFIIqdGMnlEei9oldOo+2EspSR6hmZRYTb0WuhI2U5UCAiEArSdwok5sPiXe6DxqLp5qkB5D9ZscaQAkG5vsAzEKRIk=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
+    ],
+    "unpackedSize": 272524
+   },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
     ]
    },
+   "main": "./dist/jsQR.js",
+   "_from": ".",
+   "types": "./dist/index.d.ts",
+   "_shasum": "1e4e2f1de50413853855b3389e69a983ff7d067d",
+   "gitHead": "03595aa23d5a28f4927a810b19f7b0a6cc86f439",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prebuild": "rimraf dist",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.15.11",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "4.8.7",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^20.0.4",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.0.3_1519862190370_0.18762428044740753",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.0.4": {
+   "name": "jsqr",
+   "version": "1.0.4",
+   "license": "Apache-2.0",
+   "_id": "jsqr@1.0.4",
    "maintainers": [
     {
      "name": "jefff",
@@ -798,23 +819,6 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.0.3_1519862190370_0.18762428044740753"
-   },
-   "_hasShrinkwrap": false
-  },
-  "1.0.4": {
-   "name": "jsqr",
-   "version": "1.0.4",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -825,164 +829,84 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^20.0.4",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "d37c764bf43a41ed7c6aa1c17cbdf21b7f9cb69e",
+   "homepage": "https://github.com/cozmo/jsQR#readme",
    "bugs": {
     "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@1.0.4",
-   "_shasum": "e2ea353fa81007708efab7d95b2652a7254c10dd",
-   "_from": ".",
-   "_npmVersion": "2.15.11",
-   "_nodeVersion": "4.8.7",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
    },
    "dist": {
     "shasum": "e2ea353fa81007708efab7d95b2652a7254c10dd",
     "tarball": "http://localhost:3000/jsqr/-/jsqr-1.0.4.tgz",
     "fileCount": 17,
-    "unpackedSize": 272568,
     "integrity": "sha512-dB8bw3TrjCtx172phx1LkQ66RxyxC28083VhEduogjEndUmUTfQ0QKGAQ09ikAleAKFtXmz5m/cFw4KXY7BCKQ==",
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDpdeFAY/UD/aVzdSoightJU9MrZq8VyRfGLEthv9jB+wIhAJWQ9HQ9ZTbg+ooXotWiewWz/JA4CtEFEu6/Zro8NhKC"
+      "sig": "MEYCIQDpdeFAY/UD/aVzdSoightJU9MrZq8VyRfGLEthv9jB+wIhAJWQ9HQ9ZTbg+ooXotWiewWz/JA4CtEFEu6/Zro8NhKC",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
      }
+    ],
+    "unpackedSize": 272568
+   },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
     ]
    },
-   "maintainers": [
-    {
-     "name": "jefff",
-     "email": "gmjefff@gmail.com"
-    },
-    {
-     "name": "templaedhel",
-     "email": "cosmo.wolfe@gmail.com"
-    }
-   ],
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.0.4_1520023255786_0.7670076773750627"
+   "main": "./dist/jsQR.js",
+   "_from": ".",
+   "types": "./dist/index.d.ts",
+   "_shasum": "e2ea353fa81007708efab7d95b2652a7254c10dd",
+   "gitHead": "d37c764bf43a41ed7c6aa1c17cbdf21b7f9cb69e",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prebuild": "rimraf dist",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
    },
-   "_hasShrinkwrap": false
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "2.15.11",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "4.8.7",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^20.0.4",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.0.4_1520023255786_0.7670076773750627",
+    "host": "s3://npm-registry-packages"
+   }
   },
   "1.0.5": {
    "name": "jsqr",
    "version": "1.0.5",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
-   "contributors": [
-    {
-     "name": "Cosmo Wolfe",
-     "email": "cosmo.wolfe@gmail.com"
-    },
-    {
-     "name": "Jefff Nelson",
-     "email": "gmjefff@gmail.com"
-    }
-   ],
    "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^23.1.0",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "3b0e4ceabc2a1f7be3628b0eb02717aa4fa605a6",
-   "bugs": {
-    "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
    "_id": "jsqr@1.0.5",
-   "_npmVersion": "6.1.0",
-   "_nodeVersion": "10.5.0",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
-   },
-   "dist": {
-    "integrity": "sha512-2CsMJb8Rqgd9op7ac+pUOhvLYlVSvUmjYztz5lWWa0xqW2c1ycXbFFThrq43Zu5sMk3hfuZ5XEF3SeRqHM8GRQ==",
-    "shasum": "671fb9f245877eeb73c410e4d4b905b47c035fa2",
-    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.0.5.tgz",
-    "fileCount": 17,
-    "unpackedSize": 273059,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbNH0dCRA9TVsSAnZWagAABkAP+gKA5hJ+48ddimdYNB6j\nS65PVEYQYzJcR0j4v/fDKlKJbXXZdpY2ZFs/m7GJKRb7xrYD0ZvfJVPX2k38\n1O2K07+VzOcvPLLq91j8Gffu2No1mgh9b3/HPC3sErguwhoEFdnAosr6k4aa\nGLd+FzqPg2Asw6ouhbMT/c2XZDzZ20DOgEOOSTFWg2C5r6PpDt/u44I2GLwD\nPHOixjQEyLjN3G+2WHISnlX3gkyDAKprUYR5vDEuCXEyIWXJKXUfjVTPrTqj\nlXk6SqxTjoFhcU0cLKmHdyAjWxIqvhwUiT/wWEq5B+l4jgYdev5YMokcrO5f\nuZGJZsfNbTElAy0aiorI+uSQewz7FQ82HPNlG5AvaudVMOUpxleBcqj6PaGG\n4g+/GknzZ2UJMGkNXuUkw1VZjgDD2tIz7B40590k4x6/NPPVNmUtuIfWHOOm\nS37rp1jzb5o02Evm6NbcSKsI3yCzeG6bHrLT6VJ2CLt9Mt7HGXhGutOZG+Q7\nUFl+3BacQta42rm9NJxH+BRPsk1h/qc9rhO85toPRAIYK0LdrQR33KliJyXD\nHT1hN559nOreyFeMW2583tmO/fwn8Jz4BggqXkT+TfhqC8pgy5NgiJuDiWRz\nqGCUn03fp0tmvS4bmXhbR63L4bAmHrlkv0r/A0xtIrp25t9ytX67qkhtaKIN\nq0BR\r\n=VA2B\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQDgoUaA/NmIGCT7JlBe6u2QMoPDqKPFXp+9Iu5PAFDi5wIgC8NGiqKqJU3y/jBnBiVP+6wxLnlhbOVOPs9MGHCBom4="
-     }
-    ]
-   },
    "maintainers": [
     {
      "name": "jefff",
@@ -993,93 +917,93 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.0.5_1530166557215_0.37034642268490603"
+   "contributors": [
+    {
+     "name": "Cosmo Wolfe",
+     "email": "cosmo.wolfe@gmail.com"
+    },
+    {
+     "name": "Jefff Nelson",
+     "email": "gmjefff@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/cozmo/jsQR#readme",
+   "bugs": {
+    "url": "https://github.com/cozmo/jsQR/issues"
    },
-   "_hasShrinkwrap": false
+   "dist": {
+    "shasum": "671fb9f245877eeb73c410e4d4b905b47c035fa2",
+    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.0.5.tgz",
+    "fileCount": 17,
+    "integrity": "sha512-2CsMJb8Rqgd9op7ac+pUOhvLYlVSvUmjYztz5lWWa0xqW2c1ycXbFFThrq43Zu5sMk3hfuZ5XEF3SeRqHM8GRQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDgoUaA/NmIGCT7JlBe6u2QMoPDqKPFXp+9Iu5PAFDi5wIgC8NGiqKqJU3y/jBnBiVP+6wxLnlhbOVOPs9MGHCBom4=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 273059,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbNH0dCRA9TVsSAnZWagAABkAP+gKA5hJ+48ddimdYNB6j\nS65PVEYQYzJcR0j4v/fDKlKJbXXZdpY2ZFs/m7GJKRb7xrYD0ZvfJVPX2k38\n1O2K07+VzOcvPLLq91j8Gffu2No1mgh9b3/HPC3sErguwhoEFdnAosr6k4aa\nGLd+FzqPg2Asw6ouhbMT/c2XZDzZ20DOgEOOSTFWg2C5r6PpDt/u44I2GLwD\nPHOixjQEyLjN3G+2WHISnlX3gkyDAKprUYR5vDEuCXEyIWXJKXUfjVTPrTqj\nlXk6SqxTjoFhcU0cLKmHdyAjWxIqvhwUiT/wWEq5B+l4jgYdev5YMokcrO5f\nuZGJZsfNbTElAy0aiorI+uSQewz7FQ82HPNlG5AvaudVMOUpxleBcqj6PaGG\n4g+/GknzZ2UJMGkNXuUkw1VZjgDD2tIz7B40590k4x6/NPPVNmUtuIfWHOOm\nS37rp1jzb5o02Evm6NbcSKsI3yCzeG6bHrLT6VJ2CLt9Mt7HGXhGutOZG+Q7\nUFl+3BacQta42rm9NJxH+BRPsk1h/qc9rhO85toPRAIYK0LdrQR33KliJyXD\nHT1hN559nOreyFeMW2583tmO/fwn8Jz4BggqXkT+TfhqC8pgy5NgiJuDiWRz\nqGCUn03fp0tmvS4bmXhbR63L4bAmHrlkv0r/A0xtIrp25t9ytX67qkhtaKIN\nq0BR\r\n=VA2B\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
+    ]
+   },
+   "main": "./dist/jsQR.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "3b0e4ceabc2a1f7be3628b0eb02717aa4fa605a6",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prebuild": "rimraf dist",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "6.1.0",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "10.5.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^23.1.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.0.5_1530166557215_0.37034642268490603",
+    "host": "s3://npm-registry-packages"
+   }
   },
   "1.0.6": {
    "name": "jsqr",
    "version": "1.0.6",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
-   "contributors": [
-    {
-     "name": "Cosmo Wolfe",
-     "email": "cosmo.wolfe@gmail.com"
-    },
-    {
-     "name": "Jefff Nelson",
-     "email": "gmjefff@gmail.com"
-    }
-   ],
    "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^23.1.0",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "0794a907610259786de7c7b39f454cc687c47163",
-   "bugs": {
-    "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
    "_id": "jsqr@1.0.6",
-   "_npmVersion": "6.1.0",
-   "_nodeVersion": "10.5.0",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
-   },
-   "dist": {
-    "integrity": "sha512-ac6P1fdAtoH16CYvotty04T5tzR2MPSYx77H+9bQUzSJ20kpJWXormi7gTcCAP9zFzCQNZYQWdZI81Kg+1PM6A==",
-    "shasum": "ab24335997c7b83adc6dd9550d1c6a1393e510bc",
-    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.0.6.tgz",
-    "fileCount": 17,
-    "unpackedSize": 273455,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbNV4ZCRA9TVsSAnZWagAAtdUP/i1lLtNupvLjT7it3kbx\nFXZYbcqB6GCXiLcHGAGlcMjVQuXSOZK4DHIvRK7ty+bKHA8Meea25gGTgOAG\nJywiD9/dEo0cyOUnRf+3KMdrH93wu88CCgsUT3iZq0COmwod6yVuKN1thHU+\nNoTKMbJvQkrCDH72eNkbjKsZrrtKCXCnvweb65MrMhWsqMzMMV0I+eGWEHAi\nWvbIQqMIX7+Oh+NtQ7d4grnnDUfr/4mvXGAOB5Xv/3omYXtaRlrHIEOaUQMw\niimFfZ6sC+9FcrVW9jajo2Fp4k/smmVIlsl5uRMFHE8fYAAT2cYqwj0Qyb1Z\nqO6i9cvnz2A5aajBOEenTJ4uYhQcwB+mrixrajcMt06KDqYa+/kMMiFsieMO\nnSwO1gwNKqDd3do9JwBWqVX91tGCtOZFkfGdZ/bpaJh3rssEyA+U5YnaUJRi\nsgUIVNfwsKxUG/kbucH3s6X6nZx+TrDsRdW280yYQF/aIfUE/mX0Uprdcxg5\n5+4vvDWRKdd9LPf6PNyUSUHsHhVpK8pxtRQD/EmWfdpEKD06GC6TqGiS8bX9\ndn08Clx9a7nqu977IaqeIQEd3cSLGHhqHO350vSK0JW7vyUS/e/XQ3pq9ljl\npBs27/tRjH8AUzx8ixG5eOsdIwMLWsRebeWMujlSn9qPUGswtU08T2u1rW41\nVUNl\r\n=qu+k\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIBclsiD+f2CGJTlrQB4Kf1nPCS2hJQwssAJKTfoVRnDpAiEA78VKo+U67vglWV+83hb60IongUxNpiEvSFE40H+8wHM="
-     }
-    ]
-   },
    "maintainers": [
     {
      "name": "jefff",
@@ -1090,93 +1014,93 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.0.6_1530224153728_0.8850954596560139"
+   "contributors": [
+    {
+     "name": "Cosmo Wolfe",
+     "email": "cosmo.wolfe@gmail.com"
+    },
+    {
+     "name": "Jefff Nelson",
+     "email": "gmjefff@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/cozmo/jsQR#readme",
+   "bugs": {
+    "url": "https://github.com/cozmo/jsQR/issues"
    },
-   "_hasShrinkwrap": false
+   "dist": {
+    "shasum": "ab24335997c7b83adc6dd9550d1c6a1393e510bc",
+    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.0.6.tgz",
+    "fileCount": 17,
+    "integrity": "sha512-ac6P1fdAtoH16CYvotty04T5tzR2MPSYx77H+9bQUzSJ20kpJWXormi7gTcCAP9zFzCQNZYQWdZI81Kg+1PM6A==",
+    "signatures": [
+     {
+      "sig": "MEUCIBclsiD+f2CGJTlrQB4Kf1nPCS2hJQwssAJKTfoVRnDpAiEA78VKo+U67vglWV+83hb60IongUxNpiEvSFE40H+8wHM=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 273455,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbNV4ZCRA9TVsSAnZWagAAtdUP/i1lLtNupvLjT7it3kbx\nFXZYbcqB6GCXiLcHGAGlcMjVQuXSOZK4DHIvRK7ty+bKHA8Meea25gGTgOAG\nJywiD9/dEo0cyOUnRf+3KMdrH93wu88CCgsUT3iZq0COmwod6yVuKN1thHU+\nNoTKMbJvQkrCDH72eNkbjKsZrrtKCXCnvweb65MrMhWsqMzMMV0I+eGWEHAi\nWvbIQqMIX7+Oh+NtQ7d4grnnDUfr/4mvXGAOB5Xv/3omYXtaRlrHIEOaUQMw\niimFfZ6sC+9FcrVW9jajo2Fp4k/smmVIlsl5uRMFHE8fYAAT2cYqwj0Qyb1Z\nqO6i9cvnz2A5aajBOEenTJ4uYhQcwB+mrixrajcMt06KDqYa+/kMMiFsieMO\nnSwO1gwNKqDd3do9JwBWqVX91tGCtOZFkfGdZ/bpaJh3rssEyA+U5YnaUJRi\nsgUIVNfwsKxUG/kbucH3s6X6nZx+TrDsRdW280yYQF/aIfUE/mX0Uprdcxg5\n5+4vvDWRKdd9LPf6PNyUSUHsHhVpK8pxtRQD/EmWfdpEKD06GC6TqGiS8bX9\ndn08Clx9a7nqu977IaqeIQEd3cSLGHhqHO350vSK0JW7vyUS/e/XQ3pq9ljl\npBs27/tRjH8AUzx8ixG5eOsdIwMLWsRebeWMujlSn9qPUGswtU08T2u1rW41\nVUNl\r\n=qu+k\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
+    ]
+   },
+   "main": "./dist/jsQR.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "0794a907610259786de7c7b39f454cc687c47163",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prebuild": "rimraf dist",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "6.1.0",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "10.5.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^23.1.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.0.6_1530224153728_0.8850954596560139",
+    "host": "s3://npm-registry-packages"
+   }
   },
   "1.1.0": {
    "name": "jsqr",
    "version": "1.1.0",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
-   "contributors": [
-    {
-     "name": "Cosmo Wolfe",
-     "email": "cosmo.wolfe@gmail.com"
-    },
-    {
-     "name": "Jefff Nelson",
-     "email": "gmjefff@gmail.com"
-    }
-   ],
    "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^23.1.0",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "77191bb684c16fecd5fe3ee915c9c8fe4ab86e0f",
-   "bugs": {
-    "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
    "_id": "jsqr@1.1.0",
-   "_npmVersion": "6.1.0",
-   "_nodeVersion": "10.5.0",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
-   },
-   "dist": {
-    "integrity": "sha512-8P3fq1sO3YQmvYkjIcC9ZsCJws3TuhnCNLGt+OB4MrNYDwAiI1jQF6qVmlEGZhGyGxTYxSUoMFfZpfluxQTQ3Q==",
-    "shasum": "49cfc1b2dd3d11aca8c761d84f434d84d970ae2c",
-    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.1.0.tgz",
-    "fileCount": 17,
-    "unpackedSize": 274516,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbNW1SCRA9TVsSAnZWagAAV6cP/iQXDUFx6vdNViNXS1iE\nf8oFJVWblHzKWDFtWN7dJ85GdaP/3SUlb03dS2k0hhlMrwa0JEXRxS7GdjN6\n3PWpCKnPLf+wI5qO0MmwR8QjrbBC5wMDsjiX5GbinX9NSQOF7mlfSfStuFwE\nZHOrtziaaJzlVU/oY4Q0Qi5mhmvEr1ANC3RHFHR9kumKEjnX+VIn3USDB7lq\npkL5FZLFPVj2BMC4j4Xlc0TmMlv2/FDDzlgglGGYss6Mjp3tZ4eDa1Pzz8br\n2yT+aaLQI8nhHj0GOT5bO0fcgSyEVP4tfcuQ8reLSVLhssm/0exZ/M6WsMk6\nih8L2lneo+B2XycMs1UNou2hhXpEhDDZjH8s/O2zKFiVRmBRLxFXr6EI4w0S\nmOwlk1sfFGm6QNU1JEVi0ESal3SR3tUQTp3BI/zoYvJH28LqdILjZgjNpEN0\nbC0iM5gjwQydzjQj3cdAoee1QLh+EJV8QlL0B5b7kSKtOkJHXvGylgJRo6Tf\nP8E9M7UNwP6BuXgzXj/G4BohcVK2M1GsA8xY9el8NEeoIOeMz9fUBcViqa7g\nre5x0qNvYNfjVAtec1rjhy0x5/AqThSK34LM4d3pfOF2LyNbFNClR+ad+Bh+\ns3JmZhmxyzqgSPfKhz/DbC/Jx02ZrJZGcte7mYvD63b6cj+oRYA7jL9/Gf1P\njwOu\r\n=Y7mJ\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDtIUVYByW/InGSeggsaSKsa/WyMKjajyPc+80SeXYaIwIhAIDLc6weWjhNCM1VgHsNZvTc0nwRZLS9QHfAbxqa0npF"
-     }
-    ]
-   },
    "maintainers": [
     {
      "name": "jefff",
@@ -1187,93 +1111,93 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.1.0_1530228050829_0.24675698833503112"
+   "contributors": [
+    {
+     "name": "Cosmo Wolfe",
+     "email": "cosmo.wolfe@gmail.com"
+    },
+    {
+     "name": "Jefff Nelson",
+     "email": "gmjefff@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/cozmo/jsQR#readme",
+   "bugs": {
+    "url": "https://github.com/cozmo/jsQR/issues"
    },
-   "_hasShrinkwrap": false
+   "dist": {
+    "shasum": "49cfc1b2dd3d11aca8c761d84f434d84d970ae2c",
+    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.1.0.tgz",
+    "fileCount": 17,
+    "integrity": "sha512-8P3fq1sO3YQmvYkjIcC9ZsCJws3TuhnCNLGt+OB4MrNYDwAiI1jQF6qVmlEGZhGyGxTYxSUoMFfZpfluxQTQ3Q==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDtIUVYByW/InGSeggsaSKsa/WyMKjajyPc+80SeXYaIwIhAIDLc6weWjhNCM1VgHsNZvTc0nwRZLS9QHfAbxqa0npF",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 274516,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbNW1SCRA9TVsSAnZWagAAV6cP/iQXDUFx6vdNViNXS1iE\nf8oFJVWblHzKWDFtWN7dJ85GdaP/3SUlb03dS2k0hhlMrwa0JEXRxS7GdjN6\n3PWpCKnPLf+wI5qO0MmwR8QjrbBC5wMDsjiX5GbinX9NSQOF7mlfSfStuFwE\nZHOrtziaaJzlVU/oY4Q0Qi5mhmvEr1ANC3RHFHR9kumKEjnX+VIn3USDB7lq\npkL5FZLFPVj2BMC4j4Xlc0TmMlv2/FDDzlgglGGYss6Mjp3tZ4eDa1Pzz8br\n2yT+aaLQI8nhHj0GOT5bO0fcgSyEVP4tfcuQ8reLSVLhssm/0exZ/M6WsMk6\nih8L2lneo+B2XycMs1UNou2hhXpEhDDZjH8s/O2zKFiVRmBRLxFXr6EI4w0S\nmOwlk1sfFGm6QNU1JEVi0ESal3SR3tUQTp3BI/zoYvJH28LqdILjZgjNpEN0\nbC0iM5gjwQydzjQj3cdAoee1QLh+EJV8QlL0B5b7kSKtOkJHXvGylgJRo6Tf\nP8E9M7UNwP6BuXgzXj/G4BohcVK2M1GsA8xY9el8NEeoIOeMz9fUBcViqa7g\nre5x0qNvYNfjVAtec1rjhy0x5/AqThSK34LM4d3pfOF2LyNbFNClR+ad+Bh+\ns3JmZhmxyzqgSPfKhz/DbC/Jx02ZrJZGcte7mYvD63b6cj+oRYA7jL9/Gf1P\njwOu\r\n=Y7mJ\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
+    ]
+   },
+   "main": "./dist/jsQR.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "77191bb684c16fecd5fe3ee915c9c8fe4ab86e0f",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prebuild": "rimraf dist",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "6.1.0",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "10.5.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^23.1.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.1.0_1530228050829_0.24675698833503112",
+    "host": "s3://npm-registry-packages"
+   }
   },
   "1.1.1": {
    "name": "jsqr",
    "version": "1.1.1",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
-   "contributors": [
-    {
-     "name": "Cosmo Wolfe",
-     "email": "cosmo.wolfe@gmail.com"
-    },
-    {
-     "name": "Jefff Nelson",
-     "email": "gmjefff@gmail.com"
-    }
-   ],
    "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^23.1.0",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "c8d0ed0cb720f363aa74040aa44c73a88ed09437",
-   "bugs": {
-    "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
    "_id": "jsqr@1.1.1",
-   "_npmVersion": "6.1.0",
-   "_nodeVersion": "10.7.0",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
-   },
-   "dist": {
-    "integrity": "sha512-FVoMU2ncTyjaOqN/vwvDnZ7jaAVvFzM3LK3vG3jvQZFWJQlAwJ1XTCOgAEKo+4Rkd6ydMXTTvqGV/4w5VunmTw==",
-    "shasum": "a0d7f95e6c3b0bec913dfef2ca64a877f28ed05f",
-    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.1.1.tgz",
-    "fileCount": 17,
-    "unpackedSize": 274516,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbVq3pCRA9TVsSAnZWagAAO5gP/jLfzFfqOTYvUV/Pcgyp\nwIe7+QJZQBD3dAYe8gnf0WDeuAdPAgnPKozoHVS/ScMhGeDKy3tb22qdGlbO\n997T1AkLIDKwfHLsu+Y27oVtTSNBNnQFhmPpfgdLfWBkCXUNk2f9Rwm2q0qN\nNobYB4JUjQzPvq0ElJYEW3c5eA0KiqcIMFv4QVhCMqvoOM6dDtnA29mClIws\nhdVvV1zv2fJjVK5GEQEnpPJAW8x2FFBmhzYdxomLkl6fEKCol9fS5PfSqTk3\n/YxnLrD46vbrfnbQg2KcJsCM7DDLYPjg+M4U+y3hDAoqtzqD9jtVR/peFOk1\nwTh8W00vccCZeQeRkAfxauBgvQ/Y0XnuCy+NPSJ0nODFox2am6MsnkZjLRBB\nYkr77vX0p2ay/PtuaWT7Xds8ZXPFpSu7SRaiILTaET2ULHTg95c3cfBiAWoF\n0AWxXR3G2MbnXw1gYAX3eqbi8Gvvq4ojMOllUzVI9rBDpBmwRkMrcLunq/N4\ny8TmpYf8kWdz8Mz5gC5lFrHYwnGleKS9LjhAjUMoeW+jCa1uue1bswxUB5N9\nX9pUr7MR9cSkwKtmTPL/tYXTtdPFIVixTHm/qAab0589NNPlEcecbmBgbH2g\n85ZzjI4A4aXEITwEwQY5pS5lMdTRyrMiDRxZB5cfybeN77qjhFKBJbyam1/N\ntBNB\r\n=OJnc\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCfu0MCI+dFcn4UDuR0orcGqSnJqCkq38YWruGS8a87awIgDo2olNwcNc74v905/gWfVnqtKLHOfyhhYWAiVQQTC4g="
-     }
-    ]
-   },
    "maintainers": [
     {
      "name": "jefff",
@@ -1284,93 +1208,93 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.1.1_1532407273427_0.31862375653076547"
+   "contributors": [
+    {
+     "name": "Cosmo Wolfe",
+     "email": "cosmo.wolfe@gmail.com"
+    },
+    {
+     "name": "Jefff Nelson",
+     "email": "gmjefff@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/cozmo/jsQR#readme",
+   "bugs": {
+    "url": "https://github.com/cozmo/jsQR/issues"
    },
-   "_hasShrinkwrap": false
+   "dist": {
+    "shasum": "a0d7f95e6c3b0bec913dfef2ca64a877f28ed05f",
+    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.1.1.tgz",
+    "fileCount": 17,
+    "integrity": "sha512-FVoMU2ncTyjaOqN/vwvDnZ7jaAVvFzM3LK3vG3jvQZFWJQlAwJ1XTCOgAEKo+4Rkd6ydMXTTvqGV/4w5VunmTw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCfu0MCI+dFcn4UDuR0orcGqSnJqCkq38YWruGS8a87awIgDo2olNwcNc74v905/gWfVnqtKLHOfyhhYWAiVQQTC4g=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 274516,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbVq3pCRA9TVsSAnZWagAAO5gP/jLfzFfqOTYvUV/Pcgyp\nwIe7+QJZQBD3dAYe8gnf0WDeuAdPAgnPKozoHVS/ScMhGeDKy3tb22qdGlbO\n997T1AkLIDKwfHLsu+Y27oVtTSNBNnQFhmPpfgdLfWBkCXUNk2f9Rwm2q0qN\nNobYB4JUjQzPvq0ElJYEW3c5eA0KiqcIMFv4QVhCMqvoOM6dDtnA29mClIws\nhdVvV1zv2fJjVK5GEQEnpPJAW8x2FFBmhzYdxomLkl6fEKCol9fS5PfSqTk3\n/YxnLrD46vbrfnbQg2KcJsCM7DDLYPjg+M4U+y3hDAoqtzqD9jtVR/peFOk1\nwTh8W00vccCZeQeRkAfxauBgvQ/Y0XnuCy+NPSJ0nODFox2am6MsnkZjLRBB\nYkr77vX0p2ay/PtuaWT7Xds8ZXPFpSu7SRaiILTaET2ULHTg95c3cfBiAWoF\n0AWxXR3G2MbnXw1gYAX3eqbi8Gvvq4ojMOllUzVI9rBDpBmwRkMrcLunq/N4\ny8TmpYf8kWdz8Mz5gC5lFrHYwnGleKS9LjhAjUMoeW+jCa1uue1bswxUB5N9\nX9pUr7MR9cSkwKtmTPL/tYXTtdPFIVixTHm/qAab0589NNPlEcecbmBgbH2g\n85ZzjI4A4aXEITwEwQY5pS5lMdTRyrMiDRxZB5cfybeN77qjhFKBJbyam1/N\ntBNB\r\n=OJnc\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
+    ]
+   },
+   "main": "./dist/jsQR.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "c8d0ed0cb720f363aa74040aa44c73a88ed09437",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prebuild": "rimraf dist",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "6.1.0",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "10.7.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^23.1.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.1.1_1532407273427_0.31862375653076547",
+    "host": "s3://npm-registry-packages"
+   }
   },
   "1.2.0": {
    "name": "jsqr",
    "version": "1.2.0",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
-   "contributors": [
-    {
-     "name": "Cosmo Wolfe",
-     "email": "cosmo.wolfe@gmail.com"
-    },
-    {
-     "name": "Jefff Nelson",
-     "email": "gmjefff@gmail.com"
-    }
-   ],
    "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^23.1.0",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "01d3b0a3889b6da02486ea5c26e5bfaaa268d61a",
-   "bugs": {
-    "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
    "_id": "jsqr@1.2.0",
-   "_npmVersion": "6.5.0",
-   "_nodeVersion": "11.9.0",
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
-   },
-   "dist": {
-    "integrity": "sha512-wKcQS9QC2VHGk7aphWCp1RrFyC0CM6fMgC5prZZ2KV/Lk6OKNoCod9IR6bao+yx3KPY0gZFC5dc+h+KFzCI0Wg==",
-    "shasum": "f93fc65fa7d1ded78b1bcb020fa044352b04261a",
-    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.2.0.tgz",
-    "fileCount": 17,
-    "unpackedSize": 276305,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcWgpBCRA9TVsSAnZWagAAiygP/1o7Quen3czGIdiHf7MY\nmb1E3aJa/8dt5bf7zM5cPNgb4SquwznkSTbrvj6ntHUvNbot8dXyixvYOJS5\nt7BkZZ5HhKjQt32SpFB+ZTc8Z9PaI4C9axSGQ5Uz1CkctLOgxqSOIB35Y/3t\n6GhRQ854yGjaeXR9A/Fi7RkxP1OkOnkQIxziPoByap3ij/guieU3Xn6ZDQDE\nP9cpUmd/SVe0LvUb+GieuNEQLPHAXg3hF6HWPu+pK4zWrHnyUju8gPcX95Tf\nV4QQ3LTlLtElnyC5VeZsOb91/OVUw4gWNZMALOL9kS1mh0Vpo94vJsOl5ejT\n4gofY8a8rTvpD8uEzCB+BfZ4qKrHGhZbJANKBQ5zfnc0mAnLGUe7MOf+CNGI\nN7I4WGwE0qXPMzlancgGb5pPjpgwc0/+WcGsQQDygwMuUmVenugxCyy1UmdR\n1hM7rVVk8iUd5yDatXEIgbzLR5LFXJOWD8t0Ei+/vktPKE1ISS3Jp3ThmV2s\n9HFAuNccL8dUHIApvrJfKbIZiRWhnTj8+Ov085W/K39wAdjIv4KLlKCfY+YH\n73tbUIEArJ2XCk+PGgfQraY9Pvvjv8IAhjLXq1etTsUXjMVrVmm+IZbGjcI+\nrH1ySRzi4F59xSGTCVR7+EO6m66XcMk+ffqaDm4C8Wi0FHKiPAlq35qX8Ihc\nwVQn\r\n=BSsa\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQDIGj7yjIOx8PRO3Y7IcmN3SQQnzsK5Rvjmt4bsdulktAIgbRLkYilkn+XtikjpdFJLQT36epqIGuN4ZllMIEVkoMc="
-     }
-    ]
-   },
    "maintainers": [
     {
      "name": "jefff",
@@ -1381,89 +1305,93 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.2.0_1549404736791_0.6399995695691574"
+   "contributors": [
+    {
+     "name": "Cosmo Wolfe",
+     "email": "cosmo.wolfe@gmail.com"
+    },
+    {
+     "name": "Jefff Nelson",
+     "email": "gmjefff@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/cozmo/jsQR#readme",
+   "bugs": {
+    "url": "https://github.com/cozmo/jsQR/issues"
    },
-   "_hasShrinkwrap": false
+   "dist": {
+    "shasum": "f93fc65fa7d1ded78b1bcb020fa044352b04261a",
+    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.2.0.tgz",
+    "fileCount": 17,
+    "integrity": "sha512-wKcQS9QC2VHGk7aphWCp1RrFyC0CM6fMgC5prZZ2KV/Lk6OKNoCod9IR6bao+yx3KPY0gZFC5dc+h+KFzCI0Wg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDIGj7yjIOx8PRO3Y7IcmN3SQQnzsK5Rvjmt4bsdulktAIgbRLkYilkn+XtikjpdFJLQT36epqIGuN4ZllMIEVkoMc=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 276305,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcWgpBCRA9TVsSAnZWagAAiygP/1o7Quen3czGIdiHf7MY\nmb1E3aJa/8dt5bf7zM5cPNgb4SquwznkSTbrvj6ntHUvNbot8dXyixvYOJS5\nt7BkZZ5HhKjQt32SpFB+ZTc8Z9PaI4C9axSGQ5Uz1CkctLOgxqSOIB35Y/3t\n6GhRQ854yGjaeXR9A/Fi7RkxP1OkOnkQIxziPoByap3ij/guieU3Xn6ZDQDE\nP9cpUmd/SVe0LvUb+GieuNEQLPHAXg3hF6HWPu+pK4zWrHnyUju8gPcX95Tf\nV4QQ3LTlLtElnyC5VeZsOb91/OVUw4gWNZMALOL9kS1mh0Vpo94vJsOl5ejT\n4gofY8a8rTvpD8uEzCB+BfZ4qKrHGhZbJANKBQ5zfnc0mAnLGUe7MOf+CNGI\nN7I4WGwE0qXPMzlancgGb5pPjpgwc0/+WcGsQQDygwMuUmVenugxCyy1UmdR\n1hM7rVVk8iUd5yDatXEIgbzLR5LFXJOWD8t0Ei+/vktPKE1ISS3Jp3ThmV2s\n9HFAuNccL8dUHIApvrJfKbIZiRWhnTj8+Ov085W/K39wAdjIv4KLlKCfY+YH\n73tbUIEArJ2XCk+PGgfQraY9Pvvjv8IAhjLXq1etTsUXjMVrVmm+IZbGjcI+\nrH1ySRzi4F59xSGTCVR7+EO6m66XcMk+ffqaDm4C8Wi0FHKiPAlq35qX8Ihc\nwVQn\r\n=BSsa\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
+    ]
+   },
+   "main": "./dist/jsQR.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "01d3b0a3889b6da02486ea5c26e5bfaaa268d61a",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prebuild": "rimraf dist",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "6.5.0",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "11.9.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^23.1.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.2.0_1549404736791_0.6399995695691574",
+    "host": "s3://npm-registry-packages"
+   }
   },
   "1.3.0": {
    "name": "jsqr",
    "version": "1.3.0",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
-   "contributors": [
-    {
-     "name": "Cosmo Wolfe",
-     "email": "cosmo.wolfe@gmail.com"
-    },
-    {
-     "name": "Jefff Nelson",
-     "email": "gmjefff@gmail.com"
-    }
-   ],
    "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^23.1.0",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "25b062a2740eb20c1aa4a7a73645e601d16a85e4",
-   "bugs": {
-    "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
    "_id": "jsqr@1.3.0",
-   "_nodeVersion": "14.0.0",
-   "_npmVersion": "6.14.4",
-   "dist": {
-    "integrity": "sha512-CEBRNp5r5hzJzMiaToGmEgJ/7R56rJHLTSto/NlUM4e76BmHUL2lN7Q4GXNC/0kGA/uDQohcAParAc29upL21A==",
-    "shasum": "8ff221a4f27d3ce28b18b31f402bcd77e7aeecb1",
-    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.3.0.tgz",
-    "fileCount": 17,
-    "unpackedSize": 279470,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqO7+CRA9TVsSAnZWagAA+E4P/iqEOqN4zkPt5aue2q6N\njj39LUwjHNF6yWsd2sJ8ZZiEUdB2DzcEBzrWsJWmmuEblCMa4g4+6EdyWX9l\nuOhxvoDR0fxKNSL9oK71EDbFbFJEe7YiHhmafLcQbeMWbZtG+2Z7r8yf4LRD\nlGzMQaCcxpqDBrOi7r12DLfsDCS5bOB95jPH8OhGFr30sX/zh67RlVFlORD/\nlUIaQ5DOPbbtiOBo3LuJlZ+pVEws+MJzScG38kdtrBa8Zy46qsGlaba/uM/8\ngz7fczM+x5dP8S1luwLTHKRn3xBhYYLhq+fMvmE4fJILRAfHLUua4jrdKF99\n1RrEJAArqCvsGAxjsW6sJzTBlSAe5z2J9RGrnaTpNjUDCaVQEbou/ahsza4b\na7NW1uzZRAixa4LZbecG1wkMs4o+dhm+WUlN4uotoOIoC0Z1reGndkzp4UKA\nyhQE2f4hfI++Euw9a+ncAJaFGUXQtvKkCu4Hx1rfYRPrw4jZMjfPWw5O8Phj\nOiq+Kc8mhACjkNt2p6dFgyxZn+wYS/vodgOEVG2I3FY/9nKfzeqaBhI7o9+J\nFezD1AaFpEleHzW1HdTHmot3VQgh/5QnZbqobRJl7ISDrur9t3oRrPuwwQHY\nW+KHdQLpzEKJU2t722CO30HWSvinwa+1wG3VK6K+Devi69cxf7ViKYQMQT/7\n6RIx\r\n=fcZQ\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIASlnlpiPl31YRvh97O9wOu7bE6hhkVf0JQxQL21mKeqAiBlQ4Mq3Kze8B2kP8gmwW3ZQkt836lIko4n67Cq0c2naA=="
-     }
-    ]
-   },
    "maintainers": [
     {
      "name": "jefff",
@@ -1474,93 +1402,93 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
+   "contributors": [
+    {
+     "name": "Cosmo Wolfe",
+     "email": "cosmo.wolfe@gmail.com"
+    },
+    {
+     "name": "Jefff Nelson",
+     "email": "gmjefff@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/cozmo/jsQR#readme",
+   "bugs": {
+    "url": "https://github.com/cozmo/jsQR/issues"
+   },
+   "dist": {
+    "shasum": "8ff221a4f27d3ce28b18b31f402bcd77e7aeecb1",
+    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.3.0.tgz",
+    "fileCount": 17,
+    "integrity": "sha512-CEBRNp5r5hzJzMiaToGmEgJ/7R56rJHLTSto/NlUM4e76BmHUL2lN7Q4GXNC/0kGA/uDQohcAParAc29upL21A==",
+    "signatures": [
+     {
+      "sig": "MEQCIASlnlpiPl31YRvh97O9wOu7bE6hhkVf0JQxQL21mKeqAiBlQ4Mq3Kze8B2kP8gmwW3ZQkt836lIko4n67Cq0c2naA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 279470,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqO7+CRA9TVsSAnZWagAA+E4P/iqEOqN4zkPt5aue2q6N\njj39LUwjHNF6yWsd2sJ8ZZiEUdB2DzcEBzrWsJWmmuEblCMa4g4+6EdyWX9l\nuOhxvoDR0fxKNSL9oK71EDbFbFJEe7YiHhmafLcQbeMWbZtG+2Z7r8yf4LRD\nlGzMQaCcxpqDBrOi7r12DLfsDCS5bOB95jPH8OhGFr30sX/zh67RlVFlORD/\nlUIaQ5DOPbbtiOBo3LuJlZ+pVEws+MJzScG38kdtrBa8Zy46qsGlaba/uM/8\ngz7fczM+x5dP8S1luwLTHKRn3xBhYYLhq+fMvmE4fJILRAfHLUua4jrdKF99\n1RrEJAArqCvsGAxjsW6sJzTBlSAe5z2J9RGrnaTpNjUDCaVQEbou/ahsza4b\na7NW1uzZRAixa4LZbecG1wkMs4o+dhm+WUlN4uotoOIoC0Z1reGndkzp4UKA\nyhQE2f4hfI++Euw9a+ncAJaFGUXQtvKkCu4Hx1rfYRPrw4jZMjfPWw5O8Phj\nOiq+Kc8mhACjkNt2p6dFgyxZn+wYS/vodgOEVG2I3FY/9nKfzeqaBhI7o9+J\nFezD1AaFpEleHzW1HdTHmot3VQgh/5QnZbqobRJl7ISDrur9t3oRrPuwwQHY\nW+KHdQLpzEKJU2t722CO30HWSvinwa+1wG3VK6K+Devi69cxf7ViKYQMQT/7\n6RIx\r\n=fcZQ\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "jest": {
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
+    ]
+   },
+   "main": "./dist/jsQR.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "25b062a2740eb20c1aa4a7a73645e601d16a85e4",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prebuild": "rimraf dist",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
    "_npmUser": {
     "name": "templaedhel",
     "email": "cosmo.wolfe@gmail.com"
    },
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.3.0_1588129533920_0.11554568062550663"
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
    },
-   "_hasShrinkwrap": false
+   "_npmVersion": "6.14.4",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "14.0.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^23.1.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.3.0_1588129533920_0.11554568062550663",
+    "host": "s3://npm-registry-packages"
+   }
   },
   "1.3.1": {
    "name": "jsqr",
    "version": "1.3.1",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
-   "contributors": [
-    {
-     "name": "Cosmo Wolfe",
-     "email": "cosmo.wolfe@gmail.com"
-    },
-    {
-     "name": "Jefff Nelson",
-     "email": "gmjefff@gmail.com"
-    }
-   ],
    "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^23.1.0",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^20.0.14",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
-   },
-   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
-   },
-   "jest": {
-    "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
-    "transform": {
-     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    }
-   },
-   "gitHead": "422e84a751cb6fe5e454280ab8b6c0d372914533",
-   "bugs": {
-    "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
    "_id": "jsqr@1.3.1",
-   "_nodeVersion": "14.1.0",
-   "_npmVersion": "6.14.4",
-   "dist": {
-    "integrity": "sha512-zCTP6Qd/WwjrpuHFkJuXc5opRdKprUr7eI7+JCCtcetThJt45qptu82MWQ+eET+FtDrMo7+BYjo3iD0XIq1L9Q==",
-    "shasum": "515a766e58b00c80142f3a2dc4b8751100ceedcf",
-    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.3.1.tgz",
-    "fileCount": 17,
-    "unpackedSize": 279392,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqzmaCRA9TVsSAnZWagAAHBAQAJWoJ/cCj8bJnc3znaT7\nEIF2/z2N5x0MUDKxUKXH1aqWHud+iQRWDpEkBq4V3fncLb1NY4TMndEa0V1z\n0nIsKEOi8UeoJLFxt0ZrmzbkEYD1gz19BG/f1nROrxK3/GfKbr7z05P09KhJ\neD/Z6SapKsf63OXkVV7cgdTT2fvM89Mm80nkHGdFPEjUOgttk5qO/2dki8r4\n+5xXLZW8o/gX+pTMkovGRGsSHYR6KVmAsKinDoE0+QALjIbV7aI2qkGFOdRI\ngL+cFwW9F89ygxRE69KGWzkNqgsBQ76D1N54BUcdqdjPPsKR/u8PycddtJMa\nQ7YV1R8A99KMYFhPXKoqn6HmgPK6kJ2hoF6cOYtOwoowZehV+vxWEXa4StBR\nOMA9ZXKHBwcGUGQiWmSN/Li1Rc0LN+Yi/qvoZJAtlNIONuWeHBuADpRY4JaO\ngoOhd7OBsSBLwTj8+0lMBom7SVy21tzl1xcpO4PZ+PQu4uh8rcK8oHfOWReQ\n8HSL80yulha/aoxIQr8915I1fCtLTjXD+eUsMTcbTHqijzZIAHgZTzxtsg8n\nqWvgD8nH1At3De0GbHvF26uyTOf413iYnVnlJFstHjk/6zN4neqpPw0gdMEH\nNgWOk5wEn24mPRn/IQkCq5DOqgHaAem3HieCbsQ+a5J4J/3vLoIGWRMyi2tn\nmQM7\r\n=P9md\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDyLq1fNKUjHu6+T+TMqV+NWS0waXnzYSSnLCDBxMNy1AIhAKupoSL2PVKZV9C3k46hiwlNoQ2eN+tA/gRqltwDBRYM"
-     }
-    ]
-   },
    "maintainers": [
     {
      "name": "jefff",
@@ -1571,27 +1499,6 @@
      "email": "cosmo.wolfe@gmail.com"
     }
    ],
-   "_npmUser": {
-    "name": "templaedhel",
-    "email": "cosmo.wolfe@gmail.com"
-   },
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.3.1_1588279705536_0.7605732563776466"
-   },
-   "_hasShrinkwrap": false
-  },
-  "1.4.0": {
-   "name": "jsqr",
-   "version": "1.4.0",
-   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cozmo/jsQR.git"
-   },
-   "main": "./dist/jsQR.js",
-   "types": "./dist/index.d.ts",
    "contributors": [
     {
      "name": "Cosmo Wolfe",
@@ -1602,112 +1509,193 @@
      "email": "gmjefff@gmail.com"
     }
    ],
-   "license": "Apache-2.0",
-   "devDependencies": {
-    "@types/fs-extra": "^4.0.2",
-    "@types/jest": "^20.0.8",
-    "@types/node": "^8.0.27",
-    "awesome-typescript-loader": "^3.2.3",
-    "fs-extra": "^4.0.1",
-    "jest": "^23.1.0",
-    "rimraf": "^2.6.2",
-    "ts-jest": "^23.0.4",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.2",
-    "upng-js": "^1.0.1",
-    "webpack": "^3.10.0"
+   "homepage": "https://github.com/cozmo/jsQR#readme",
+   "bugs": {
+    "url": "https://github.com/cozmo/jsQR/issues"
    },
-   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "webpack",
-    "watch": "webpack --watch",
-    "test": "jest",
-    "lint": "tslint --project .",
-    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   "dist": {
+    "shasum": "515a766e58b00c80142f3a2dc4b8751100ceedcf",
+    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.3.1.tgz",
+    "fileCount": 17,
+    "integrity": "sha512-zCTP6Qd/WwjrpuHFkJuXc5opRdKprUr7eI7+JCCtcetThJt45qptu82MWQ+eET+FtDrMo7+BYjo3iD0XIq1L9Q==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDyLq1fNKUjHu6+T+TMqV+NWS0waXnzYSSnLCDBxMNy1AIhAKupoSL2PVKZV9C3k46hiwlNoQ2eN+tA/gRqltwDBRYM",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 279392,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeqzmaCRA9TVsSAnZWagAAHBAQAJWoJ/cCj8bJnc3znaT7\nEIF2/z2N5x0MUDKxUKXH1aqWHud+iQRWDpEkBq4V3fncLb1NY4TMndEa0V1z\n0nIsKEOi8UeoJLFxt0ZrmzbkEYD1gz19BG/f1nROrxK3/GfKbr7z05P09KhJ\neD/Z6SapKsf63OXkVV7cgdTT2fvM89Mm80nkHGdFPEjUOgttk5qO/2dki8r4\n+5xXLZW8o/gX+pTMkovGRGsSHYR6KVmAsKinDoE0+QALjIbV7aI2qkGFOdRI\ngL+cFwW9F89ygxRE69KGWzkNqgsBQ76D1N54BUcdqdjPPsKR/u8PycddtJMa\nQ7YV1R8A99KMYFhPXKoqn6HmgPK6kJ2hoF6cOYtOwoowZehV+vxWEXa4StBR\nOMA9ZXKHBwcGUGQiWmSN/Li1Rc0LN+Yi/qvoZJAtlNIONuWeHBuADpRY4JaO\ngoOhd7OBsSBLwTj8+0lMBom7SVy21tzl1xcpO4PZ+PQu4uh8rcK8oHfOWReQ\n8HSL80yulha/aoxIQr8915I1fCtLTjXD+eUsMTcbTHqijzZIAHgZTzxtsg8n\nqWvgD8nH1At3De0GbHvF26uyTOf413iYnVnlJFstHjk/6zN4neqpPw0gdMEH\nNgWOk5wEn24mPRn/IQkCq5DOqgHaAem3HieCbsQ+a5J4J/3vLoIGWRMyi2tn\nmQM7\r\n=P9md\r\n-----END PGP SIGNATURE-----\r\n"
    },
    "jest": {
     "testRegex": ".*test.ts",
-    "moduleFileExtensions": [
-     "ts",
-     "js"
-    ],
     "transform": {
      "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
+    ]
+   },
+   "main": "./dist/jsQR.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "422e84a751cb6fe5e454280ab8b6c0d372914533",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prebuild": "rimraf dist",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
+   },
+   "_npmUser": {
+    "name": "templaedhel",
+    "email": "cosmo.wolfe@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
+   },
+   "_npmVersion": "6.14.4",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "14.1.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^23.1.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "ts-jest": "^20.0.14",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.3.1_1588279705536_0.7605732563776466",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "1.4.0": {
+   "name": "jsqr",
+   "version": "1.4.0",
+   "license": "Apache-2.0",
+   "_id": "jsqr@1.4.0",
+   "maintainers": [
+    {
+     "name": "jefff",
+     "email": "gmjefff@gmail.com"
+    },
+    {
+     "name": "templaedhel",
+     "email": "cosmo.wolfe@gmail.com"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "Cosmo Wolfe",
+     "email": "cosmo.wolfe@gmail.com"
+    },
+    {
+     "name": "Jefff Nelson",
+     "email": "gmjefff@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/cozmo/jsQR#readme",
+   "bugs": {
+    "url": "https://github.com/cozmo/jsQR/issues"
+   },
+   "dist": {
+    "shasum": "8efb8d0a7cc6863cb6d95116b9069123ce9eb2d1",
+    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.4.0.tgz",
+    "fileCount": 17,
+    "integrity": "sha512-dxLob7q65Xg2DvstYkRpkYtmKm2sPJ9oFhrhmudT1dZvNFFTlroai3AWSpLey/w5vMcLBXRgOJsbXpdN9HzU/A==",
+    "signatures": [
+     {
+      "sig": "MEUCIBm4b+TnNsd7WMVnQnJQDyuNyQz5dfrc/Nt65d5Ra4LRAiEA3mBfvoouvdkZ+n3d6cE5SAfDUOnmUIA1gbruWLEA/HY=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 279741,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgg43BCRA9TVsSAnZWagAApE0P/2waxa9///3ZYkpkPGQi\nKHMaIMuzJFXrCJbOdK1U4N/PltfL5WZOF/Ri32NMBNF4DeQgylVC5hVEdHW2\nstvB3IC0re5V21s41jIixN6Hjds/qYmqOCxcPLfARmxduqF/g3xSvU3jNYop\niO5CAiaw0BLrZGAmqNUiiczoDfEds2e8nkFZzSo9pLXvHXfJa0CBzfslfGv1\nPhDbrILP4eL5CS2mE3TjyV29suHc39NOpka9nFVp0QGd06N9VRaBm39tnOeH\nCRsckL68VOcFVRpqMdyJ8cBG5hwuXLHNLUoMSIu4jlcec6pWU07keItzk498\nVjG4dFl/cGYMdvAUBTkguohQxrNiSu5DRihyMOWCfRch+It/AbeBDO11ersd\nLp9632aos/TYI+1IgXTI8ohpdiiPwmS8PvndmkxuE/cVwnpbQYxMG+A+ojKI\nWumybWZNHX5g0K3C75FXhJ/C1TcX3VBmNt63VJJIXlpQY1y6zwpr7Z0kSPew\n9N8YGn3QbZz4lEmjZX7844Wg+50sYmPHncHPrFwAXg2uY6J7Vap/2qB/mgpx\n73VdZ1s2GJm8vUFhH2EEz5bdJMIQPZIruEDyvZa9F28yPvbJlDuO5BtVoVmj\nYVcRfze494YlV6JNChmrebGvWH2hx4ag+fzvNHxbnOf+xg5A7fScYLB0hG0p\necvq\r\n=Xh2S\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "jest": {
     "globals": {
      "ts-jest": {
       "tsConfig": {
-       "noImplicitAny": false,
        "lib": [
         "es2015"
        ],
        "types": [
         "jest",
         "node"
-       ]
+       ],
+       "noImplicitAny": false
       }
      }
-    }
-   },
-   "gitHead": "49a9633931fb8030ac2fc9cecc121d6e5a19f9a3",
-   "bugs": {
-    "url": "https://github.com/cozmo/jsQR/issues"
-   },
-   "homepage": "https://github.com/cozmo/jsQR#readme",
-   "_id": "jsqr@1.4.0",
-   "_nodeVersion": "16.0.0",
-   "_npmVersion": "7.10.0",
-   "dist": {
-    "integrity": "sha512-dxLob7q65Xg2DvstYkRpkYtmKm2sPJ9oFhrhmudT1dZvNFFTlroai3AWSpLey/w5vMcLBXRgOJsbXpdN9HzU/A==",
-    "shasum": "8efb8d0a7cc6863cb6d95116b9069123ce9eb2d1",
-    "tarball": "http://localhost:3000/jsqr/-/jsqr-1.4.0.tgz",
-    "fileCount": 17,
-    "unpackedSize": 279741,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgg43BCRA9TVsSAnZWagAApE0P/2waxa9///3ZYkpkPGQi\nKHMaIMuzJFXrCJbOdK1U4N/PltfL5WZOF/Ri32NMBNF4DeQgylVC5hVEdHW2\nstvB3IC0re5V21s41jIixN6Hjds/qYmqOCxcPLfARmxduqF/g3xSvU3jNYop\niO5CAiaw0BLrZGAmqNUiiczoDfEds2e8nkFZzSo9pLXvHXfJa0CBzfslfGv1\nPhDbrILP4eL5CS2mE3TjyV29suHc39NOpka9nFVp0QGd06N9VRaBm39tnOeH\nCRsckL68VOcFVRpqMdyJ8cBG5hwuXLHNLUoMSIu4jlcec6pWU07keItzk498\nVjG4dFl/cGYMdvAUBTkguohQxrNiSu5DRihyMOWCfRch+It/AbeBDO11ersd\nLp9632aos/TYI+1IgXTI8ohpdiiPwmS8PvndmkxuE/cVwnpbQYxMG+A+ojKI\nWumybWZNHX5g0K3C75FXhJ/C1TcX3VBmNt63VJJIXlpQY1y6zwpr7Z0kSPew\n9N8YGn3QbZz4lEmjZX7844Wg+50sYmPHncHPrFwAXg2uY6J7Vap/2qB/mgpx\n73VdZ1s2GJm8vUFhH2EEz5bdJMIQPZIruEDyvZa9F28yPvbJlDuO5BtVoVmj\nYVcRfze494YlV6JNChmrebGvWH2hx4ag+fzvNHxbnOf+xg5A7fScYLB0hG0p\necvq\r\n=Xh2S\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIBm4b+TnNsd7WMVnQnJQDyuNyQz5dfrc/Nt65d5Ra4LRAiEA3mBfvoouvdkZ+n3d6cE5SAfDUOnmUIA1gbruWLEA/HY="
-     }
+    },
+    "testRegex": ".*test.ts",
+    "transform": {
+     "^.+\\.ts$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "moduleFileExtensions": [
+     "ts",
+     "js"
     ]
+   },
+   "main": "./dist/jsQR.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "49a9633931fb8030ac2fc9cecc121d6e5a19f9a3",
+   "scripts": {
+    "lint": "tslint --project .",
+    "test": "jest",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "prebuild": "rimraf dist",
+    "generate-test-data": "ts-node --project tests/ tests/generate-test-data.ts"
    },
    "_npmUser": {
     "name": "jefff",
     "email": "gmjefff@gmail.com"
    },
-   "directories": {},
-   "maintainers": [
-    {
-     "name": "jefff",
-     "email": "gmjefff@gmail.com"
-    },
-    {
-     "name": "templaedhel",
-     "email": "cosmo.wolfe@gmail.com"
-    }
-   ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/jsqr_1.4.0_1619234240477_0.5931108005731349"
+   "repository": {
+    "url": "git+https://github.com/cozmo/jsQR.git",
+    "type": "git"
    },
-   "_hasShrinkwrap": false
+   "_npmVersion": "7.10.0",
+   "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
+   "directories": {},
+   "_nodeVersion": "16.0.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^23.1.0",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.7.0",
+    "ts-jest": "^23.0.4",
+    "ts-node": "^3.3.0",
+    "upng-js": "^1.0.1",
+    "webpack": "^3.10.0",
+    "fs-extra": "^4.0.1",
+    "typescript": "^2.5.2",
+    "@types/jest": "^20.0.8",
+    "@types/node": "^8.0.27",
+    "@types/fs-extra": "^4.0.2",
+    "awesome-typescript-loader": "^3.2.3"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/jsqr_1.4.0_1619234240477_0.5931108005731349",
+    "host": "s3://npm-registry-packages"
+   }
   }
  },
- "readme": "# jsQR\n\n[![Build Status](https://travis-ci.org/cozmo/jsQR.svg?branch=master)](https://travis-ci.org/cozmo/jsQR)\n\nA pure javascript QR code reading library.\nThis library takes in raw images and will locate, extract and parse any QR code found within.\n\n[Demo](https://cozmo.github.io/jsQR)\n\n\n## Installation\n\n\n\n### NPM\nAvailable [on npm](https://www.npmjs.com/package/jsqr). Can be used in a Node.js program or with a module bundler such as Webpack or Browserify.\n\n```\nnpm install jsqr --save\n```\n\n```javascript\n// ES6 import\nimport jsQR from \"jsqr\";\n\n// CommonJS require\nconst jsQR = require(\"jsqr\");\n\njsQR(...);\n```\n\n### Browser\nAlternatively for frontend use [`jsQR.js`](./dist/jsQR.js) can be included with a script tag\n\n```html\n<script src=\"jsQR.js\"></script>\n<script>\n  jsQR(...);\n</script>\n```\n\n### A note on webcams\njsQR is designed to be a completely standalone library for scanning QR codes. By design it does not include any platform specific code. This allows it to just as easily scan a frontend webcam stream, a user uploaded image, or be used as part of a backend Node.js process.\n\nIf you want to use jsQR to scan a webcam stream you'll need to extract the [`ImageData`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData) from the video stream. This can then be passed to jsQR. The [jsQR demo](https://cozmo.github.io/jsQR) contains a barebones implementation of webcam scanning that can be used as a starting point and customized for your needs. For more advanced questions you can refer to the [`getUserMedia` docs](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) or the fairly comprehensive [webRTC sample code](https://github.com/webrtc/samples), both of which are great resources for consuming a webcam stream.\n\n## Usage\n\njsQR exports a method that takes in 3 arguments representing the image data you wish to decode. Additionally can take an options object to further configure scanning behavior.\n\n```javascript\nconst code = jsQR(imageData, width, height, options?);\n\nif (code) {\n  console.log(\"Found QR code\", code);\n}\n```\n\n### Arguments\n- `imageData` - An `Uint8ClampedArray` of RGBA pixel values in the form `[r0, g0, b0, a0, r1, g1, b1, a1, ...]`.\nAs such the length of this array should be `4 * width * height`.\nThis data is in the same form as the [`ImageData`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData) interface, and it's also [commonly](https://www.npmjs.com/package/jpeg-js#decoding-jpegs) [returned](https://github.com/lukeapage/pngjs/blob/master/README.md#property-data) by node modules for reading images.\n- `width` - The width of the image you wish to decode.\n- `height` - The height of the image you wish to decode.\n- `options` (optional) - Additional options.\n  - `inversionAttempts` - (`attemptBoth` (default), `dontInvert`, `onlyInvert`, or `invertFirst`) - Should jsQR attempt to invert the image to find QR codes with white modules on black backgrounds instead of the black modules on white background. This option defaults to `attemptBoth` for backwards compatibility but causes a ~50% performance hit, and will probably be default to `dontInvert` in future versions.\n\n### Return value\nIf a QR is able to be decoded the library will return an object with the following keys.\n\n- `binaryData` - `Uint8ClampedArray` - The raw bytes of the QR code.\n- `data` - The string version of the QR code data.\n- `chunks` - The QR chunks.\n- `version` - The QR version.\n- `location` - An object with keys describing key points of the QR code. Each key is a point of the form `{x: number, y: number}`.\nHas points for the following locations.\n  - Corners - `topRightCorner`/`topLeftCorner`/`bottomRightCorner`/`bottomLeftCorner`;\n  - Finder patterns - `topRightFinderPattern`/`topLeftFinderPattern`/`bottomLeftFinderPattern`\n  - May also have a point for the `bottomRightAlignmentPattern` assuming one exists and can be located.\n\nBecause the library is written in [typescript](http://www.typescriptlang.org/) you can also view the [type definitions](./dist/index.d.ts) to understand the API.\n\n## Contributing\n\njsQR is written using [typescript](http://www.typescriptlang.org/).\nYou can view the development source in the [`src`](./src) directory.\n\nTests can be run with\n\n```\nnpm test\n```\n\nBesides unit tests the test suite contains several hundred images that can be found in the [/tests/end-to-end/](./tests/end-to-end/) folder.\n\nNot all the images can be read. In general changes should hope to increase the number of images that read. However due to the nature of computer vision some changes may cause images that pass to start to fail and visa versa. To update the expected outcomes run `npm run-script generate-test-data`. These outcomes can be evaluated in the context of a PR to determine if a change improves or harms the overall ability of the library to read QR codes. A summary of which are passing\nand failing can be found at [/tests/end-to-end/report.json](./tests/end-to-end/report.json)\n\nAfter testing any changes, you can compile the production version by running\n```\nnpm run-script build\n```\n\n- Source hosted at [GitHub](https://github.com/cozmo/jsQR)\n- Report issues, questions, feature requests on [GitHub Issues](https://github.com/cozmo/jsQR/issues)\n\nPull requests are welcome! Please create seperate branches for seperate features/patches.\n",
- "maintainers": [
-  {
-   "name": "jefff",
-   "email": "gmjefff@gmail.com"
-  },
-  {
-   "name": "templaedhel",
-   "email": "cosmo.wolfe@gmail.com"
-  }
- ],
  "time": {
-  "modified": "2023-03-28T01:51:55.823Z",
   "created": "2015-12-11T11:33:18.003Z",
+  "modified": "2025-03-28T14:14:45.449Z",
   "0.1.0": "2015-12-11T11:33:18.003Z",
   "0.1.1": "2015-12-11T11:41:49.439Z",
   "0.1.2": "2016-02-25T09:22:43.629Z",
@@ -1728,11 +1716,16 @@
   "1.3.1": "2020-04-30T20:48:25.635Z",
   "1.4.0": "2021-04-24T03:17:20.646Z"
  },
+ "bugs": {
+  "url": "https://github.com/cozmo/jsQR/issues"
+ },
+ "license": "Apache-2.0",
  "homepage": "https://github.com/cozmo/jsQR#readme",
  "repository": {
-  "type": "git",
-  "url": "git+https://github.com/cozmo/jsQR.git"
+  "url": "git+https://github.com/cozmo/jsQR.git",
+  "type": "git"
  },
+ "description": "A pure javascript QR code reading library that takes in raw images and will locate, extract and parse any QR code found within.",
  "contributors": [
   {
    "name": "Cosmo Wolfe",
@@ -1743,14 +1736,22 @@
    "email": "gmjefff@gmail.com"
   }
  ],
- "bugs": {
-  "url": "https://github.com/cozmo/jsQR/issues"
- },
- "license": "Apache-2.0",
+ "maintainers": [
+  {
+   "name": "jefff",
+   "email": "gmjefff@gmail.com"
+  },
+  {
+   "name": "templaedhel",
+   "email": "cosmo.wolfe@gmail.com"
+  }
+ ],
+ "readme": "# jsQR\n\n[![Build Status](https://travis-ci.org/cozmo/jsQR.svg?branch=master)](https://travis-ci.org/cozmo/jsQR)\n\nA pure javascript QR code reading library.\nThis library takes in raw images and will locate, extract and parse any QR code found within.\n\n[Demo](https://cozmo.github.io/jsQR)\n\n\n## Installation\n\n\n\n### NPM\nAvailable [on npm](https://www.npmjs.com/package/jsqr). Can be used in a Node.js program or with a module bundler such as Webpack or Browserify.\n\n```\nnpm install jsqr --save\n```\n\n```javascript\n// ES6 import\nimport jsQR from \"jsqr\";\n\n// CommonJS require\nconst jsQR = require(\"jsqr\");\n\njsQR(...);\n```\n\n### Browser\nAlternatively for frontend use [`jsQR.js`](./dist/jsQR.js) can be included with a script tag\n\n```html\n<script src=\"jsQR.js\"></script>\n<script>\n  jsQR(...);\n</script>\n```\n\n### A note on webcams\njsQR is designed to be a completely standalone library for scanning QR codes. By design it does not include any platform specific code. This allows it to just as easily scan a frontend webcam stream, a user uploaded image, or be used as part of a backend Node.js process.\n\nIf you want to use jsQR to scan a webcam stream you'll need to extract the [`ImageData`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData) from the video stream. This can then be passed to jsQR. The [jsQR demo](https://cozmo.github.io/jsQR) contains a barebones implementation of webcam scanning that can be used as a starting point and customized for your needs. For more advanced questions you can refer to the [`getUserMedia` docs](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) or the fairly comprehensive [webRTC sample code](https://github.com/webrtc/samples), both of which are great resources for consuming a webcam stream.\n\n## Usage\n\njsQR exports a method that takes in 3 arguments representing the image data you wish to decode. Additionally can take an options object to further configure scanning behavior.\n\n```javascript\nconst code = jsQR(imageData, width, height, options?);\n\nif (code) {\n  console.log(\"Found QR code\", code);\n}\n```\n\n### Arguments\n- `imageData` - An `Uint8ClampedArray` of RGBA pixel values in the form `[r0, g0, b0, a0, r1, g1, b1, a1, ...]`.\nAs such the length of this array should be `4 * width * height`.\nThis data is in the same form as the [`ImageData`](https://developer.mozilla.org/en-US/docs/Web/API/ImageData) interface, and it's also [commonly](https://www.npmjs.com/package/jpeg-js#decoding-jpegs) [returned](https://github.com/lukeapage/pngjs/blob/master/README.md#property-data) by node modules for reading images.\n- `width` - The width of the image you wish to decode.\n- `height` - The height of the image you wish to decode.\n- `options` (optional) - Additional options.\n  - `inversionAttempts` - (`attemptBoth` (default), `dontInvert`, `onlyInvert`, or `invertFirst`) - Should jsQR attempt to invert the image to find QR codes with white modules on black backgrounds instead of the black modules on white background. This option defaults to `attemptBoth` for backwards compatibility but causes a ~50% performance hit, and will probably be default to `dontInvert` in future versions.\n\n### Return value\nIf a QR is able to be decoded the library will return an object with the following keys.\n\n- `binaryData` - `Uint8ClampedArray` - The raw bytes of the QR code.\n- `data` - The string version of the QR code data.\n- `chunks` - The QR chunks.\n- `version` - The QR version.\n- `location` - An object with keys describing key points of the QR code. Each key is a point of the form `{x: number, y: number}`.\nHas points for the following locations.\n  - Corners - `topRightCorner`/`topLeftCorner`/`bottomRightCorner`/`bottomLeftCorner`;\n  - Finder patterns - `topRightFinderPattern`/`topLeftFinderPattern`/`bottomLeftFinderPattern`\n  - May also have a point for the `bottomRightAlignmentPattern` assuming one exists and can be located.\n\nBecause the library is written in [typescript](http://www.typescriptlang.org/) you can also view the [type definitions](./dist/index.d.ts) to understand the API.\n\n## Contributing\n\njsQR is written using [typescript](http://www.typescriptlang.org/).\nYou can view the development source in the [`src`](./src) directory.\n\nTests can be run with\n\n```\nnpm test\n```\n\nBesides unit tests the test suite contains several hundred images that can be found in the [/tests/end-to-end/](./tests/end-to-end/) folder.\n\nNot all the images can be read. In general changes should hope to increase the number of images that read. However due to the nature of computer vision some changes may cause images that pass to start to fail and visa versa. To update the expected outcomes run `npm run-script generate-test-data`. These outcomes can be evaluated in the context of a PR to determine if a change improves or harms the overall ability of the library to read QR codes. A summary of which are passing\nand failing can be found at [/tests/end-to-end/report.json](./tests/end-to-end/report.json)\n\nAfter testing any changes, you can compile the production version by running\n```\nnpm run-script build\n```\n\n- Source hosted at [GitHub](https://github.com/cozmo/jsQR)\n- Report issues, questions, feature requests on [GitHub Issues](https://github.com/cozmo/jsQR/issues)\n\nPull requests are welcome! Please create seperate branches for seperate features/patches.\n",
  "readmeFilename": "README.md",
  "users": {
   "passcod": true,
   "tobitobitobi": true,
-  "shanewholloway": true
+  "shanewholloway": true,
+  "vcboom": true
  }
 }

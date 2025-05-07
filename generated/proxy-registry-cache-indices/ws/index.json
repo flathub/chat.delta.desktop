@@ -1,9 +1,9 @@
 {
  "_id": "ws",
- "_rev": "638-a37219bb5d2ea348f93e219f3a029793",
+ "_rev": "640-5329e94f736f6f43945b612a10ec3545",
  "name": "ws",
  "dist-tags": {
-  "latest": "8.18.1"
+  "latest": "8.18.2"
  },
  "versions": {
   "0.2.6": {
@@ -15329,6 +15329,120 @@
   "8.18.1": {
    "name": "ws",
    "version": "8.18.1",
+   "keywords": [
+    "HyBi",
+    "Push",
+    "RFC-6455",
+    "WebSocket",
+    "WebSockets",
+    "real-time"
+   ],
+   "author": {
+    "url": "http://2x.io",
+    "name": "Einar Otto Stangvik",
+    "email": "einaros@gmail.com"
+   },
+   "license": "MIT",
+   "_id": "ws@8.18.1",
+   "maintainers": [
+    {
+     "name": "einaros",
+     "email": "einaros@gmail.com"
+    },
+    {
+     "name": "v1",
+     "email": "npm@3rd-Eden.com"
+    },
+    {
+     "name": "lpinca",
+     "email": "luigipinca@gmail.com"
+    },
+    {
+     "name": "3rdeden",
+     "email": "npmjs@3rd-Eden.com"
+    }
+   ],
+   "homepage": "https://github.com/websockets/ws",
+   "bugs": {
+    "url": "https://github.com/websockets/ws/issues"
+   },
+   "dist": {
+    "shasum": "ea131d3784e1dfdff91adb0a4a116b127515e3cb",
+    "tarball": "http://localhost:3000/ws/-/ws-8.18.1.tgz",
+    "fileCount": 19,
+    "integrity": "sha512-RKW2aJZMXeMxVpnZ6bck+RswznaxmzdULiBr6KY7XkTnW8uvt0iT9H5DkHUChXrc+uurzwa0rVI16n/Xzjdz1w==",
+    "signatures": [
+     {
+      "sig": "MEYCIQC21L97h4sm2uQcnkG0zH0ceK/1blLCzRsH38XTuVKmrwIhAJX40hyQShZ4piLmikArG7+uJv5D+slp9EIvoyDs6O/t",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 146780
+   },
+   "main": "index.js",
+   "browser": "browser.js",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "exports": {
+    ".": {
+     "import": "./wrapper.mjs",
+     "browser": "./browser.js",
+     "require": "./index.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "gitHead": "b92745a9d6760e6b4b2394bfac78cbcd258a8c8d",
+   "scripts": {
+    "lint": "eslint . && prettier --check --ignore-path .gitignore \"**/*.{json,md,yaml,yml}\"",
+    "test": "nyc --reporter=lcov --reporter=text mocha --throw-deprecation test/*.test.js",
+    "integration": "mocha --throw-deprecation test/*.integration.js"
+   },
+   "_npmUser": {
+    "name": "lpinca",
+    "email": "luigipinca@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/websockets/ws.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
+   "directories": {},
+   "_nodeVersion": "23.8.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.0.0",
+    "mocha": "^8.4.0",
+    "eslint": "^9.0.0",
+    "globals": "^15.0.0",
+    "prettier": "^3.0.0",
+    "benchmark": "^2.1.4",
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": "^6.0.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.0.0"
+   },
+   "peerDependencies": {
+    "bufferutil": "^4.0.1",
+    "utf-8-validate": ">=5.0.2"
+   },
+   "peerDependenciesMeta": {
+    "bufferutil": {
+     "optional": true
+    },
+    "utf-8-validate": {
+     "optional": true
+    }
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ws_8.18.1_1740131026083_0.7213421268590259",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "8.18.2": {
+   "name": "ws",
+   "version": "8.18.2",
    "description": "Simple to use, blazing fast and thoroughly tested websocket client and server for Node.js",
    "keywords": [
     "HyBi",
@@ -15388,26 +15502,26 @@
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.0.0",
-    "globals": "^15.0.0",
+    "globals": "^16.0.0",
     "mocha": "^8.4.0",
     "nyc": "^15.0.0",
     "prettier": "^3.0.0",
     "utf-8-validate": "^6.0.0"
    },
-   "_id": "ws@8.18.1",
-   "gitHead": "b92745a9d6760e6b4b2394bfac78cbcd258a8c8d",
-   "_nodeVersion": "23.8.0",
+   "_id": "ws@8.18.2",
+   "gitHead": "0eb8535f9b0dc11ac30a9ccb8824c9fc8388f1fd",
+   "_nodeVersion": "23.11.0",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-RKW2aJZMXeMxVpnZ6bck+RswznaxmzdULiBr6KY7XkTnW8uvt0iT9H5DkHUChXrc+uurzwa0rVI16n/Xzjdz1w==",
-    "shasum": "ea131d3784e1dfdff91adb0a4a116b127515e3cb",
-    "tarball": "http://localhost:3000/ws/-/ws-8.18.1.tgz",
+    "integrity": "sha512-DMricUmwGZUVr++AEAe2uiVM7UoO9MAVZMDu05UQOaUII0lp+zOzLLU4Xqh/JvTqklB1T4uELaaPBKyjE1r4fQ==",
+    "shasum": "42738b2be57ced85f46154320aabb51ab003705a",
+    "tarball": "http://localhost:3000/ws/-/ws-8.18.2.tgz",
     "fileCount": 19,
-    "unpackedSize": 146780,
+    "unpackedSize": 147181,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEYCIQC21L97h4sm2uQcnkG0zH0ceK/1blLCzRsH38XTuVKmrwIhAJX40hyQShZ4piLmikArG7+uJv5D+slp9EIvoyDs6O/t"
+      "sig": "MEYCIQDFENJmj95hT9SYHgXsddFImbY04RgWfvrrLHiRkoeeoQIhAJrMYu3DklZI1HFT/JrNqsbVCAF2RlW6I8Ka+ueuqbVT"
      }
     ]
    },
@@ -15436,14 +15550,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/ws_8.18.1_1740131026083_0.7213421268590259"
+    "tmp": "tmp/ws_8.18.2_1746249888601_0.7003455953913489"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2011-12-04T10:32:12.839Z",
-  "modified": "2025-02-21T09:43:46.462Z",
+  "modified": "2025-05-03T05:24:48.964Z",
   "0.2.6": "2011-12-04T10:32:14.627Z",
   "0.2.7": "2011-12-07T12:28:11.002Z",
   "0.2.8": "2011-12-07T12:52:53.588Z",
@@ -15615,7 +15729,8 @@
   "7.5.10": "2024-06-16T14:48:28.590Z",
   "8.17.1": "2024-06-16T14:49:10.217Z",
   "8.18.0": "2024-07-03T16:45:31.280Z",
-  "8.18.1": "2025-02-21T09:43:46.292Z"
+  "8.18.1": "2025-02-21T09:43:46.292Z",
+  "8.18.2": "2025-05-03T05:24:48.780Z"
  },
  "bugs": {
   "url": "https://github.com/websockets/ws/issues"

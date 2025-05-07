@@ -1,9 +1,9 @@
 {
  "_id": "dotenv-expand",
- "_rev": "34-9f8b8949dfb0dea4d0f1591c32f45648",
+ "_rev": "36-1a4d8db4fc1dd640a89e94cf7148e900",
  "name": "dotenv-expand",
  "dist-tags": {
-  "latest": "12.0.1"
+  "latest": "12.0.2"
  },
  "versions": {
   "0.1.0": {
@@ -2039,6 +2039,100 @@
   "12.0.1": {
    "name": "dotenv-expand",
    "version": "12.0.1",
+   "keywords": [
+    "dotenv",
+    "expand",
+    "variables",
+    "interpolation",
+    "substitution",
+    "env",
+    ".env"
+   ],
+   "author": {
+    "name": "motdotla"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "dotenv-expand@12.0.1",
+   "maintainers": [
+    {
+     "name": "motdotla",
+     "email": "mot@mot.la"
+    }
+   ],
+   "homepage": "https://github.com/motdotla/dotenv-expand#readme",
+   "bugs": {
+    "url": "https://github.com/motdotla/dotenv-expand/issues"
+   },
+   "dist": {
+    "shasum": "44bdfa204a368100689ec35d7385755f599ceeb1",
+    "tarball": "http://localhost:3000/dotenv-expand/-/dotenv-expand-12.0.1.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-LaKRbou8gt0RNID/9RoI+J2rvXsBRPMV7p+ElHlPhcSARbCPDYcYG2s1TIzAfWv4YSgyY5taidWzzs31lNV3yQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIGM4D2M3IomKSzm9AnTTTyyY5Xp2it3FuhtaGejy7wjsAiB6pVf66FWMq0YKAYBd8/QHrhWRBtMjJISoAHQunocmyw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 19399
+   },
+   "main": "lib/main.js",
+   "types": "lib/main.d.ts",
+   "engines": {
+    "node": ">=12"
+   },
+   "exports": {
+    ".": {
+     "types": "./lib/main.d.ts",
+     "default": "./lib/main.js",
+     "require": "./lib/main.js"
+    },
+    "./config": "./config.js",
+    "./config.js": "./config.js",
+    "./package.json": "./package.json"
+   },
+   "funding": "https://dotenvx.com",
+   "gitHead": "e5ba4e861c001b7eb1cd05782e26d1c5c919f0f7",
+   "scripts": {
+    "lint": "standard",
+    "test": "tap tests/*.js --100 -Rspec",
+    "pretest": "npm run lint && npm run dts-check",
+    "release": "standard-version",
+    "dts-check": "tsc --project tests/types/tsconfig.json",
+    "prerelease": "npm test",
+    "test:coverage": "tap --coverage-report=lcov"
+   },
+   "_npmUser": {
+    "name": "motdotla",
+    "email": "mot@mot.la"
+   },
+   "repository": {
+    "url": "git+https://github.com/motdotla/dotenv-expand.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.1",
+   "description": "Expand environment variables using dotenv",
+   "directories": {},
+   "_nodeVersion": "22.4.1",
+   "dependencies": {
+    "dotenv": "^16.4.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.3.0",
+    "standard": "^16.0.4",
+    "typescript": "^4.5.4",
+    "@types/node": "^18.11.3",
+    "standard-version": "^9.5.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/dotenv-expand_12.0.1_1731952070251_0.24060505176588065",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "12.0.2": {
+   "name": "dotenv-expand",
+   "version": "12.0.2",
    "description": "Expand environment variables using dotenv",
    "main": "lib/main.js",
    "types": "lib/main.d.ts",
@@ -2092,24 +2186,24 @@
    "dependencies": {
     "dotenv": "^16.4.5"
    },
-   "_id": "dotenv-expand@12.0.1",
-   "gitHead": "e5ba4e861c001b7eb1cd05782e26d1c5c919f0f7",
+   "_id": "dotenv-expand@12.0.2",
+   "gitHead": "6477ad9ba151613571c096d98d5dd68d6a87913f",
    "bugs": {
     "url": "https://github.com/motdotla/dotenv-expand/issues"
    },
    "homepage": "https://github.com/motdotla/dotenv-expand#readme",
-   "_nodeVersion": "22.4.1",
-   "_npmVersion": "10.8.1",
+   "_nodeVersion": "23.4.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-LaKRbou8gt0RNID/9RoI+J2rvXsBRPMV7p+ElHlPhcSARbCPDYcYG2s1TIzAfWv4YSgyY5taidWzzs31lNV3yQ==",
-    "shasum": "44bdfa204a368100689ec35d7385755f599ceeb1",
-    "tarball": "http://localhost:3000/dotenv-expand/-/dotenv-expand-12.0.1.tgz",
+    "integrity": "sha512-lXpXz2ZE1cea1gL4sz2Ipj8y4PiVjytYr3Ij0SWoms1PGxIv7m2CRKuRuCRtHdVuvM/hNJPMxt5PbhboNC4dPQ==",
+    "shasum": "0c812c61a71901b8bd90387e0e0edd0678b8a181",
+    "tarball": "http://localhost:3000/dotenv-expand/-/dotenv-expand-12.0.2.tgz",
     "fileCount": 9,
-    "unpackedSize": 19399,
+    "unpackedSize": 19825,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIGM4D2M3IomKSzm9AnTTTyyY5Xp2it3FuhtaGejy7wjsAiB6pVf66FWMq0YKAYBd8/QHrhWRBtMjJISoAHQunocmyw=="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQDb3kkyTBBUEcW1PVnQO4fL9H9EqE9vHk5/u3ieZ1cSTQIhANSceWs4gbLYdN7X5CIQ9VnN6J+6FDNO3/1oIY2mDVeD"
      }
     ]
    },
@@ -2125,15 +2219,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/dotenv-expand_12.0.1_1731952070251_0.24060505176588065"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/dotenv-expand_12.0.2_1744856178216_0.5496373519443047"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2016-01-21T00:52:31.869Z",
-  "modified": "2024-11-18T17:47:50.612Z",
+  "modified": "2025-04-17T02:16:18.558Z",
   "0.1.0": "2016-01-21T00:52:31.869Z",
   "4.0.0": "2017-03-31T04:10:21.753Z",
   "4.0.1": "2017-03-31T04:28:04.895Z",
@@ -2159,7 +2253,8 @@
   "11.0.6": "2024-02-18T00:49:41.000Z",
   "11.0.7": "2024-11-13T23:46:24.544Z",
   "12.0.0": "2024-11-16T20:21:42.518Z",
-  "12.0.1": "2024-11-18T17:47:50.444Z"
+  "12.0.1": "2024-11-18T17:47:50.444Z",
+  "12.0.2": "2025-04-17T02:16:18.393Z"
  },
  "bugs": {
   "url": "https://github.com/motdotla/dotenv-expand/issues"
@@ -2189,7 +2284,7 @@
    "email": "mot@mot.la"
   }
  ],
- "readme": "<div align=\"center\">\n🎉 announcing <a href=\"https://github.com/dotenvx/dotenvx\">dotenvx</a>. <em><b>expansion AND command substitution</b>, multi-environment, encrypted envs, and more</em>.\n</div>\n\n&nbsp;\n\n<div align=\"center\">\n\n<p>\n  <sup>\n    <a href=\"https://github.com/sponsors/motdotla\">Dotenv libraries are supported by the community.</a>\n  </sup>\n</p>\n<sup>Special thanks to:</sup>\n<br>\n<br>\n<a href=\"https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=dotenv_p_20220831\">\n  <div>\n    <img src=\"https://res.cloudinary.com/dotenv-org/image/upload/v1661980709/warp_hi8oqj.png\" width=\"230\" alt=\"Warp\">\n  </div>\n  <b>Warp is a blazingly fast, Rust-based terminal reimagined to work like a modern app.</b>\n  <div>\n    <sup>Get more done in the CLI with real text editing, block-based output, and AI command search.</sup>\n  </div>\n</a>\n<br>\n<a href=\"https://workos.com/?utm_campaign=github_repo&utm_medium=referral&utm_content=dotenv&utm_source=github\">\n  <div>\n    <img src=\"https://res.cloudinary.com/dotenv-org/image/upload/c_scale,w_400/v1665605496/68747470733a2f2f73696e647265736f726875732e636f6d2f6173736574732f7468616e6b732f776f726b6f732d6c6f676f2d77686974652d62672e737667_zdmsbu.svg\" width=\"270\" alt=\"WorkOS\">\n  </div>\n  <b>Your App, Enterprise Ready.</b>\n  <div>\n    <sup>Add Single Sign-On, Multi-Factor Auth, and more, in minutes instead of months.</sup>\n  </div>\n</a>\n<hr>\n</div>\n\n# dotenv-expand [![NPM version](https://img.shields.io/npm/v/dotenv-expand.svg?style=flat-square)](https://www.npmjs.com/package/dotenv-expand)\n\n<img src=\"https://raw.githubusercontent.com/motdotla/dotenv-expand/master/dotenv-expand.png\" alt=\"dotenv-expand\" align=\"right\" width=\"200\" />\n\nDotenv-expand adds variable expansion on top of [dotenv](http://github.com/motdotla/dotenv). If you find yourself needing to expand environment variables already existing on your machine, then dotenv-expand is your tool.\n\n[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)\n[![LICENSE](https://img.shields.io/github/license/motdotla/dotenv-expand.svg)](LICENSE)\n[![codecov](https://codecov.io/gh/motdotla/dotenv-expand/graph/badge.svg?token=pawWEyaMfg)](https://codecov.io/gh/motdotla/dotenv-expand)\n\n## Install\n\n```bash\n# Install locally (recommended)\nnpm install dotenv-expand --save\n```\n\nOr installing with yarn? `yarn add dotenv-expand`\n\n## Usage\n\nCreate a `.env` file in the root of your project:\n\n```dosini\nPASSWORD=\"s1mpl3\"\nDB_PASS=$PASSWORD\n```\n\nAs early as possible in your application, import and configure dotenv and then expand dotenv:\n\n```javascript\nconst dotenv = require('dotenv')\nconst dotenvExpand = require('dotenv-expand')\n\ndotenvExpand.expand(dotenv.config())\n\nconsole.log(process.env) // remove this after you've confirmed it is expanding\n```\n\nThat's it. `process.env` now has the expanded keys and values you defined in your `.env` file.\n\n```\ndotenvExpand.expand(dotenv.config())\n\n...\n\nconnectdb(process.env.DB_PASS)\n```\n\n### Preload\n\n> Note: Consider using [`dotenvx`](https://github.com/dotenvx/dotenvx) instead of preloading. I am now doing (and recommending) so.\n> \n> It serves the same purpose (you do not need to require and load dotenv), has built-in expansion support, adds better debugging, and works with ANY language, framework, or platform. – [motdotla](https://github.com/motdotla)\n\nYou can use the `--require` (`-r`) [command line option](https://nodejs.org/api/cli.html#cli_r_require_module) to preload dotenv & dotenv-expand. By doing this, you do not need to require and load dotenv or dotenv-expand in your application code. This is the preferred approach when using `import` instead of `require`.\n\n```bash\n$ node -r dotenv-expand/config your_script.js\n```\n\nThe configuration options below are supported as command line arguments in the format `dotenv_config_<option>=value`\n\n```bash\n$ node -r dotenv-expand/config your_script.js dotenv_config_path=/custom/path/to/your/env/vars\n```\n\nAdditionally, you can use environment variables to set configuration options. Command line arguments will precede these.\n\n```bash\n$ DOTENV_CONFIG_<OPTION>=value node -r dotenv-expand/config your_script.js\n```\n\n```bash\n$ DOTENV_CONFIG_ENCODING=latin1 node -r dotenv-expand/config your_script.js dotenv_config_path=/custom/path/to/.env\n```\n\n## Examples\n\nSee [tests/.env.test](https://github.com/motdotla/dotenv-expand/blob/master/tests/.env.test) for simple and complex examples of variable expansion in your `.env`\nfile.\n\n## Documentation\n\n`dotenv-expand` exposes one function:\n\n* expand\n\n### Expand\n\n`expand` will expand your environment variables.\n\n```js\nconst env = {\n  parsed: {\n    BASIC: 'basic',\n    BASIC_EXPAND: '${BASIC}',\n    BASIC_EXPAND_SIMPLE: '$BASIC'\n  }\n}\n\nconsole.log(dotenvExpand.expand(env))\n```\n\n#### Options\n\n##### processEnv\n\nDefault: `process.env`\n\nSpecify an object to write your secrets to. Defaults to `process.env` environment variables.\n\n```js\nconst myEnv = {}\nconst env = {\n  processEnv: myEnv,\n  parsed: {\n    HELLO: 'World'\n  }\n}\ndotenvExpand.expand(env)\n\nconsole.log(myEnv.HELLO) // World\nconsole.log(process.env.HELLO) // undefined\n```\n\n## FAQ\n\n### What rules does the expansion engine follow?\n\nSee a full list of rules [here](https://dotenvx.com/docs/env-file#interpolation).\n\n### How can I avoid expanding pre-existing envs (already in my `process.env`, for example `pas$word`)?\n\nAs of `v12.0.0` dotenv-expand no longer expands `process.env`.\n\nIf you need this ability, use [dotenvx](https://github.com/dotenvx/dotenvx) by shipping an encrypted .env file with your code - allowing safe expansion at runtime.\n\n### How can I override an existing environment variable?\n\nUse [dotenvx](https://github.com/dotenvx/dotenvx) as dotenv-expand does not support this.\n\ndotenv-expand is a separate module (without knowledge of the loading of `process.env` and the `.env` file) and so cannot reliably know what to override.\n\n## Contributing Guide\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md)\n\n## CHANGELOG\n\nSee [CHANGELOG.md](CHANGELOG.md)\n\n## Who's using dotenv-expand?\n\n[These npm modules depend on it.](https://www.npmjs.com/browse/depended/dotenv-expand)\n",
+ "readme": "<div align=\"center\">\n🎉 announcing <a href=\"https://github.com/dotenvx/dotenvx\">dotenvx</a>. <em><b>expansion AND command substitution</b>, multi-environment, encrypted envs, and more</em>.\n</div>\n\n&nbsp;\n\n<div align=\"center\">\n\n**Special thanks to [our sponsors](https://github.com/sponsors/motdotla)**\n\n<br>\n<a href=\"https://www.warp.dev/?utm_source=github&utm_medium=referral&utm_campaign=dotenv_p_20220831\">\n  <div>\n    <img src=\"https://res.cloudinary.com/dotenv-org/image/upload/v1661980709/warp_hi8oqj.png\" width=\"230\" alt=\"Warp\">\n  </div>\n  <b>Warp is a blazingly fast, Rust-based terminal reimagined to work like a modern app.</b>\n  <div>\n    <sup>Get more done in the CLI with real text editing, block-based output, and AI command search.</sup>\n  </div>\n</a>\n<br>\n\n<a href=\"https://graphite.dev/?utm_source=github&utm_medium=repo&utm_campaign=dotenv\"><img src=\"https://res.cloudinary.com/dotenv-org/image/upload/v1744035073/graphite_lgsrl8.gif\" width=\"240\" alt=\"Graphite\" /></a>\n\n<a href=\"https://graphite.dev/?utm_source=github&utm_medium=repo&utm_campaign=dotenv\">\n  <b>Graphite is the AI developer productivity platform helping teams on GitHub ship higher quality software, faster.</b>\n</a>\n<hr>\n</div>\n\n# dotenv-expand [![NPM version](https://img.shields.io/npm/v/dotenv-expand.svg?style=flat-square)](https://www.npmjs.com/package/dotenv-expand)\n\n<img src=\"https://raw.githubusercontent.com/motdotla/dotenv-expand/master/dotenv-expand.png\" alt=\"dotenv-expand\" align=\"right\" width=\"200\" />\n\nDotenv-expand adds variable expansion on top of [dotenv](http://github.com/motdotla/dotenv). If you find yourself needing to expand environment variables already existing on your machine, then dotenv-expand is your tool.\n\n[![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/feross/standard)\n[![LICENSE](https://img.shields.io/github/license/motdotla/dotenv-expand.svg)](LICENSE)\n[![codecov](https://codecov.io/gh/motdotla/dotenv-expand/graph/badge.svg?token=pawWEyaMfg)](https://codecov.io/gh/motdotla/dotenv-expand)\n\n## Install\n\n```bash\n# Install locally (recommended)\nnpm install dotenv-expand --save\n```\n\nOr installing with yarn? `yarn add dotenv-expand`\n\n## Usage\n\nCreate a `.env` file in the root of your project:\n\n```dosini\nPASSWORD=\"s1mpl3\"\nDB_PASS=$PASSWORD\n```\n\nAs early as possible in your application, import and configure dotenv and then expand dotenv:\n\n```javascript\nconst dotenv = require('dotenv')\nconst dotenvExpand = require('dotenv-expand')\n\ndotenvExpand.expand(dotenv.config())\n\nconsole.log(process.env) // remove this after you've confirmed it is expanding\n```\n\nThat's it. `process.env` now has the expanded keys and values you defined in your `.env` file.\n\n```\ndotenvExpand.expand(dotenv.config())\n\n...\n\nconnectdb(process.env.DB_PASS)\n```\n\n### Preload\n\n> Note: Consider using [`dotenvx`](https://github.com/dotenvx/dotenvx) instead of preloading. I am now doing (and recommending) so.\n> \n> It serves the same purpose (you do not need to require and load dotenv), has built-in expansion support, adds better debugging, and works with ANY language, framework, or platform. – [motdotla](https://github.com/motdotla)\n\nYou can use the `--require` (`-r`) [command line option](https://nodejs.org/api/cli.html#cli_r_require_module) to preload dotenv & dotenv-expand. By doing this, you do not need to require and load dotenv or dotenv-expand in your application code. This is the preferred approach when using `import` instead of `require`.\n\n```bash\n$ node -r dotenv-expand/config your_script.js\n```\n\nThe configuration options below are supported as command line arguments in the format `dotenv_config_<option>=value`\n\n```bash\n$ node -r dotenv-expand/config your_script.js dotenv_config_path=/custom/path/to/your/env/vars\n```\n\nAdditionally, you can use environment variables to set configuration options. Command line arguments will precede these.\n\n```bash\n$ DOTENV_CONFIG_<OPTION>=value node -r dotenv-expand/config your_script.js\n```\n\n```bash\n$ DOTENV_CONFIG_ENCODING=latin1 node -r dotenv-expand/config your_script.js dotenv_config_path=/custom/path/to/.env\n```\n\n## Examples\n\nSee [tests/.env.test](https://github.com/motdotla/dotenv-expand/blob/master/tests/.env.test) for simple and complex examples of variable expansion in your `.env`\nfile.\n\n## Documentation\n\n`dotenv-expand` exposes one function:\n\n* expand\n\n### Expand\n\n`expand` will expand your environment variables.\n\n```js\nconst env = {\n  parsed: {\n    BASIC: 'basic',\n    BASIC_EXPAND: '${BASIC}',\n    BASIC_EXPAND_SIMPLE: '$BASIC'\n  }\n}\n\nconsole.log(dotenvExpand.expand(env))\n```\n\n#### Options\n\n##### processEnv\n\nDefault: `process.env`\n\nSpecify an object to write your secrets to. Defaults to `process.env` environment variables.\n\n```js\nconst myEnv = {}\nconst env = {\n  processEnv: myEnv,\n  parsed: {\n    HELLO: 'World'\n  }\n}\ndotenvExpand.expand(env)\n\nconsole.log(myEnv.HELLO) // World\nconsole.log(process.env.HELLO) // undefined\n```\n\n## FAQ\n\n### What rules does the expansion engine follow?\n\nSee a full list of rules [here](https://dotenvx.com/docs/env-file#interpolation).\n\n### How can I avoid expanding pre-existing envs (already in my `process.env`, for example `pas$word`)?\n\nAs of `v12.0.0` dotenv-expand no longer expands `process.env`.\n\nIf you need this ability, use [dotenvx](https://github.com/dotenvx/dotenvx) by shipping an encrypted .env file with your code - allowing safe expansion at runtime.\n\n### How can I override an existing environment variable?\n\nUse [dotenvx](https://github.com/dotenvx/dotenvx) as dotenv-expand does not support this.\n\ndotenv-expand is a separate module (without knowledge of the loading of `process.env` and the `.env` file) and so cannot reliably know what to override.\n\n## Contributing Guide\n\nSee [CONTRIBUTING.md](CONTRIBUTING.md)\n\n## CHANGELOG\n\nSee [CHANGELOG.md](CHANGELOG.md)\n\n## Who's using dotenv-expand?\n\n[These npm modules depend on it.](https://www.npmjs.com/browse/depended/dotenv-expand)\n",
  "readmeFilename": "README.md",
  "users": {
   "denji": true,

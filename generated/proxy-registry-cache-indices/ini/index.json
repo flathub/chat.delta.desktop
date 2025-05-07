@@ -1,6 +1,6 @@
 {
  "_id": "ini",
- "_rev": "107-60543002d7e8b27cf981a5571ba6b3a0",
+ "_rev": "109-40735e1314b0c5689391442cf1a90dbd",
  "name": "ini",
  "dist-tags": {
   "latest": "5.0.0"
@@ -1856,79 +1856,13 @@
    }
   },
   "5.0.0": {
+   "name": "ini",
+   "version": "5.0.0",
    "author": {
     "name": "GitHub Inc."
    },
-   "name": "ini",
-   "description": "An ini encoder/decoder for node",
-   "version": "5.0.0",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/npm/ini.git"
-   },
-   "main": "lib/ini.js",
-   "scripts": {
-    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
-    "lint": "npm run eslint",
-    "lintfix": "npm run eslint -- --fix",
-    "test": "tap",
-    "snap": "tap",
-    "posttest": "npm run lint",
-    "postlint": "template-oss-check",
-    "template-oss-apply": "template-oss-apply --force"
-   },
-   "devDependencies": {
-    "@npmcli/eslint-config": "^5.0.0",
-    "@npmcli/template-oss": "4.23.3",
-    "tap": "^16.0.1"
-   },
    "license": "ISC",
-   "engines": {
-    "node": "^18.17.0 || >=20.5.0"
-   },
-   "templateOSS": {
-    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.23.3",
-    "publish": "true"
-   },
-   "tap": {
-    "nyc-arg": [
-     "--exclude",
-     "tap-snapshots/**"
-    ]
-   },
    "_id": "ini@5.0.0",
-   "gitHead": "63c421ecbbcb6c78b61aeb870099928ee78f8452",
-   "bugs": {
-    "url": "https://github.com/npm/ini/issues"
-   },
-   "homepage": "https://github.com/npm/ini#readme",
-   "_nodeVersion": "22.8.0",
-   "_npmVersion": "10.8.3",
-   "dist": {
-    "integrity": "sha512-+N0ngpO3e7cRUWOJAS7qw0IZIVc6XPrW4MlFBdD066F2L4k1L6ker3hLqSq7iXxU5tgS4WGkIUElWn5vogAEnw==",
-    "shasum": "a7a4615339843d9a8ccc2d85c9d81cf93ffbc638",
-    "tarball": "http://localhost:3000/ini/-/ini-5.0.0.tgz",
-    "fileCount": 4,
-    "unpackedSize": 12130,
-    "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/ini@5.0.0",
-     "provenance": {
-      "predicateType": "https://slsa.dev/provenance/v1"
-     }
-    },
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCH5f5dHw2ZeYC4pdV9GNf/Tfmdiw0EkO/ykHQZgBaGnAIgKz5qFnQ71uO5sye4pa0dFzBZJWfjEVCv2ZsiQppSCVQ="
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "npm-cli-ops",
-    "email": "npm-cli+bot@github.com"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "hashtagchris",
@@ -1955,16 +1889,82 @@
      "email": "gar+npm@danger.computer"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/ini_5.0.0_1725486618370_0.6249060924840131"
+   "homepage": "https://github.com/npm/ini#readme",
+   "bugs": {
+    "url": "https://github.com/npm/ini/issues"
    },
-   "_hasShrinkwrap": false
+   "tap": {
+    "nyc-arg": [
+     "--exclude",
+     "tap-snapshots/**"
+    ]
+   },
+   "dist": {
+    "shasum": "a7a4615339843d9a8ccc2d85c9d81cf93ffbc638",
+    "tarball": "http://localhost:3000/ini/-/ini-5.0.0.tgz",
+    "fileCount": 4,
+    "integrity": "sha512-+N0ngpO3e7cRUWOJAS7qw0IZIVc6XPrW4MlFBdD066F2L4k1L6ker3hLqSq7iXxU5tgS4WGkIUElWn5vogAEnw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCH5f5dHw2ZeYC4pdV9GNf/Tfmdiw0EkO/ykHQZgBaGnAIgKz5qFnQ71uO5sye4pa0dFzBZJWfjEVCv2ZsiQppSCVQ=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/ini@5.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 12130
+   },
+   "main": "lib/ini.js",
+   "engines": {
+    "node": "^18.17.0 || >=20.5.0"
+   },
+   "gitHead": "63c421ecbbcb6c78b61aeb870099928ee78f8452",
+   "scripts": {
+    "lint": "npm run eslint",
+    "snap": "tap",
+    "test": "tap",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lintfix": "npm run eslint -- --fix",
+    "postlint": "template-oss-check",
+    "posttest": "npm run lint",
+    "template-oss-apply": "template-oss-apply --force"
+   },
+   "_npmUser": {
+    "name": "npm-cli-ops",
+    "email": "npm-cli+bot@github.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/npm/ini.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "An ini encoder/decoder for node",
+   "directories": {},
+   "templateOSS": {
+    "publish": "true",
+    "version": "4.23.3",
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+   },
+   "_nodeVersion": "22.8.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.0.1",
+    "@npmcli/template-oss": "4.23.3",
+    "@npmcli/eslint-config": "^5.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ini_5.0.0_1725486618370_0.6249060924840131",
+    "host": "s3://npm-registry-packages"
+   }
   }
  },
  "time": {
   "created": "2011-08-07T07:05:10.072Z",
-  "modified": "2024-09-04T21:50:18.982Z",
+  "modified": "2025-04-08T18:09:24.810Z",
   "1.0.0": "2011-08-07T07:05:12.514Z",
   "1.0.1": "2011-09-13T17:03:01.369Z",
   "1.0.2": "2012-01-07T22:46:24.188Z",
@@ -2002,34 +2002,38 @@
  "license": "ISC",
  "homepage": "https://github.com/npm/ini#readme",
  "repository": {
-  "type": "git",
-  "url": "git+https://github.com/npm/ini.git"
+  "url": "git+https://github.com/npm/ini.git",
+  "type": "git"
  },
  "description": "An ini encoder/decoder for node",
  "maintainers": [
   {
-   "name": "hashtagchris",
-   "email": "hashtagchris@github.com"
+   "email": "fritzy@github.com",
+   "name": "fritzy"
   },
   {
-   "name": "reggi",
-   "email": "reggi@github.com"
+   "email": "gar+npm@danger.computer",
+   "name": "gar"
   },
   {
-   "name": "npm-cli-ops",
-   "email": "npm-cli+bot@github.com"
+   "email": "saquibkhan@github.com",
+   "name": "saquibkhan"
   },
   {
-   "name": "saquibkhan",
-   "email": "saquibkhan@github.com"
+   "email": "npm-cli+bot@github.com",
+   "name": "npm-cli-ops"
   },
   {
-   "name": "fritzy",
-   "email": "fritzy@github.com"
+   "email": "reggi@github.com",
+   "name": "reggi"
   },
   {
-   "name": "gar",
-   "email": "gar+npm@danger.computer"
+   "email": "hashtagchris@github.com",
+   "name": "hashtagchris"
+  },
+  {
+   "email": "owlstronaut@github.com",
+   "name": "owlstronaut"
   }
  ],
  "readme": "\nAn INI format parser & serializer.\n\n## Note\n\n-   Sections are treated as nested objects.\n\n-   Section-less items are treated as globals.\n\n## Usage\n\nConsider an INI file such as the following:\n\n```ini\n; This comment is being ignored\nscope = global\n\n[database]\nuser = dbuser\npassword = dbpassword\ndatabase = use_this_database\n\n[paths.default]\ndatadir = /var/lib/data\narray[] = first value\narray[] = second value\narray[] = third value\n```\n\nYou can **read**, **modify** and **write** it like so:\n\n```js\nimport { writeFile , readFile } from 'node:fs/promises'\nimport { stringify , parse } from 'ini'\n\n//  Read INI file as text\n\nlet text = await readFile(`./Original.ini`,{\n    encoding : 'utf-8'\n})\n\n//  Parse text data to object\n\nconst config = parse(text)\n\n//  Modify data object\n\nconfig.scope = 'local'\nconfig.database.database = 'use_another_database'\nconfig.paths.default.tmpdir = '/tmp'\ndelete config.paths.default.datadir\nconfig.paths.default.array.push('fourth value')\n\n//  Stringify data object\n\ntext = stringify(config,{ \n    section : 'section' \n})\n\n//  Write INI file as text\n\nawait writeFile(`./Modified.ini`,text)\n```\n\nThe written file will contain the following:\n\n```ini\n[section]\nscope=local\n[section.database]\nuser=dbuser\npassword=dbpassword\ndatabase=use_another_database\n[section.paths.default]\ntmpdir=/tmp\narray[]=first value\narray[]=second value\narray[]=third value\narray[]=fourth value\n```\n\n## API\n\n### Parse\n\nAttempts to turn the given INI string into a nested data object.\n\n```js\n// You can also use `decode`\nconst object = parse(`<INI Text>`) \n```\n\n### Stringify\n\nEncodes the given data object as an INI formatted string.\n\n```js\n// You can also use `encode`\nstringify(object,{\n\n    /**\n     *  Whether to insert spaces before & after `=`\n     * \n     *  Disabled by default to have better \n     *  compatibility with old picky parsers.\n     */\n\n    whitespace : false ,\n\n    /**\n     *  Whether to align the `=` character for each section.\n     *  -> Also enables the `whitespace` option\n     */\n\n    align : false ,\n\n    /**\n     *  Identifier to use for global items \n     *  and to prepend to all other sections.\n     */\n\n    section ,\n\n    /**\n     *  Whether to sort all sections & their keys alphabetically.\n     */\n\n    sort : false ,\n\n    /**\n     *  Whether to insert a newline after each section header.\n     * \n     *  The TOSHIBA & FlashAir parser require this format. \n     */\n\n    newline : false ,\n\n    /**\n     *  Which platforms line-endings should be used.\n     * \n     *  win32 -> CR+LF\n     *  other -> LF\n     * \n     *  Default is the current platform\n     */\n\n    platform ,\n\n    /**\n     *  Whether to append `[]` to array keys.\n     * \n     *  Some parsers treat duplicate names by themselves as arrays\n     */\n\n    bracketedArray : true\n\n})\n```\n\n*For backwards compatibility any string passed as the*  \n*options parameter is treated as the `section` option.*\n\n```js\nstringify(object,'section')\n```\n\n### Un / Escape\n\nTurn the given string into a safe to  \nuse key or value in your INI file.\n\n```js\nsafe(`\"unsafe string\"`) // -> \\\"unsafe string\\\"\n```\n\nOr reverse the process with:\n\n```js\nunsafe(`\\\\\"safe string\\\\\"`) // -> \"safe string\"\n```\n",

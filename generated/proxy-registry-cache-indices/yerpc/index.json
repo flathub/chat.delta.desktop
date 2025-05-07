@@ -1,10 +1,9 @@
 {
  "_id": "yerpc",
- "_rev": "17-25248c939edd5cb201711b3aab370eda",
+ "_rev": "20-fe6f9a7f3ab443904e842bc8fff02fa3",
  "name": "yerpc",
- "description": "An ergonomic JSON-RPC server library in Rust with autocreated TypeScript client",
  "dist-tags": {
-  "latest": "0.6.2"
+  "latest": "0.6.4"
  },
  "versions": {
   "0.1.0": {
@@ -982,8 +981,192 @@
   },
   "0.6.2": {
    "name": "yerpc",
-   "type": "module",
    "version": "0.6.2",
+   "author": {
+    "name": "Franz Heinzmann",
+    "email": "Frando"
+   },
+   "license": "MIT OR Apache-2.0",
+   "_id": "yerpc@0.6.2",
+   "maintainers": [
+    {
+     "name": "frando",
+     "email": "dev@unbiskant.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/yerpc#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/yerpc/issues"
+   },
+   "dist": {
+    "shasum": "18c4c0a695e43a28d8bd6fdf0a0ed2d9473ac1d1",
+    "tarball": "http://localhost:3000/yerpc/-/yerpc-0.6.2.tgz",
+    "fileCount": 24,
+    "integrity": "sha512-w+lggouyGD7Tq/BVrxB2LWBNiNexpM2Nx4x8cHx31EGcHAl+sUlmFodDJaw5M/QkCbQcLPUyP46ei8tpfWnSDg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQD9AOaeTx1W9dbsKPep4SrtR9MzJSSk1J8hDlfHo1aCxAIhAOsireM6vZLjpZLapWgHEXe/RmDnISB3DuJdBc9EcYd4",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 34374
+   },
+   "main": "./dist/index.js",
+   "type": "module",
+   "types": "./dist/index.d.ts",
+   "exports": {
+    ".": {
+     "types": "./dist/index.d.ts",
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "gitHead": "ee518eb791b8efb3e66fed850819e96da492d341",
+   "scripts": {
+    "lint": "prettier --check ./**.ts",
+    "build": "run-s build:base-types build:tsc build:cjs",
+    "clean": "rm -r dist",
+    "lint:fix": "prettier --write ./**.ts",
+    "build:cjs": "esbuild dist/index.js --bundle --packages=external --format=cjs --outfile=dist/index.cjs",
+    "build:tsc": "tsc",
+    "prepublishOnly": "run-s lint clean build",
+    "build:base-types": "cargo run -p yerpc --bin generate-base-types ./jsonrpc.ts && prettier --write ./jsonrpc.ts"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/deltachat/yerpc.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.2.4",
+   "description": "An ergonomic JSON-RPC server library in Rust with autocreated TypeScript client",
+   "directories": {},
+   "_nodeVersion": "20.11.1",
+   "dependencies": {
+    "@types/ws": "^8.2.2",
+    "typescript": "^4.6.3",
+    "isomorphic-ws": "^4.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "esbuild": "^0.17.9",
+    "prettier": "^2.6.2",
+    "npm-run-all": "^4.1.5"
+   },
+   "optionalDependencies": {
+    "ws": "^8.5.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/yerpc_0.6.2_1720236609772_0.4981048471460192",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "0.6.3": {
+   "name": "yerpc",
+   "version": "0.6.3",
+   "author": {
+    "name": "Franz Heinzmann",
+    "email": "Frando"
+   },
+   "license": "MIT OR Apache-2.0",
+   "_id": "yerpc@0.6.3",
+   "maintainers": [
+    {
+     "name": "frando",
+     "email": "dev@unbiskant.org"
+    },
+    {
+     "name": "simon-laux",
+     "email": "npm-package-manager@simonlaux.de"
+    },
+    {
+     "name": "link2xt",
+     "email": "link2xt@testrun.org"
+    }
+   ],
+   "homepage": "https://github.com/deltachat/yerpc#readme",
+   "bugs": {
+    "url": "https://github.com/deltachat/yerpc/issues"
+   },
+   "dist": {
+    "shasum": "5c5c738150fd40f266f2fa148dd878c204f76e27",
+    "tarball": "http://localhost:3000/yerpc/-/yerpc-0.6.3.tgz",
+    "fileCount": 24,
+    "integrity": "sha512-ZKWv/wvShXSpw4+QXb4HSY0DclSkgKzq0xOhstpEb5HAFn/bdmAo9YctjIyWW24HGytiAb08S2FJXqOaYj/TYA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDUU5oX4hXNKB/EOGNwSBnraNGDNZyRP3VVE6AHyVV7TAIhAKidsm3tm00W/HQiYXPn/cCB+dy9X4ryeqSPMGgRBElt",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 34374
+   },
+   "main": "./dist/index.js",
+   "type": "module",
+   "types": "./dist/index.d.ts",
+   "exports": {
+    ".": {
+     "types": "./dist/index.d.ts",
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "gitHead": "348c300a1153cb53fb5bf3c0a4f2749982885e7c",
+   "scripts": {
+    "lint": "prettier --check ./**.ts",
+    "build": "run-s build:base-types build:tsc build:cjs",
+    "clean": "rm -r dist",
+    "lint:fix": "prettier --write ./**.ts",
+    "build:cjs": "esbuild dist/index.js --bundle --packages=external --format=cjs --outfile=dist/index.cjs",
+    "build:tsc": "tsc",
+    "prepublishOnly": "run-s lint clean build",
+    "build:base-types": "cargo run -p yerpc --bin generate-base-types ./jsonrpc.ts && prettier --write ./jsonrpc.ts"
+   },
+   "_npmUser": {
+    "name": "link2xt",
+    "email": "link2xt@testrun.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/deltachat/yerpc.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.2.4",
+   "description": "An ergonomic JSON-RPC server library in Rust with autocreated TypeScript client",
+   "directories": {},
+   "_nodeVersion": "20.11.1",
+   "dependencies": {
+    "@types/ws": "^8.2.2",
+    "typescript": "^4.6.3",
+    "isomorphic-ws": "^4.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "esbuild": "^0.17.9",
+    "prettier": "^2.6.2",
+    "npm-run-all": "^4.1.5"
+   },
+   "optionalDependencies": {
+    "ws": "^8.5.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/yerpc_0.6.3_1743277012824_0.3695891666665865",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.6.4": {
+   "name": "yerpc",
+   "type": "module",
+   "version": "0.6.4",
    "author": {
     "name": "Franz Heinzmann",
     "email": "Frando"
@@ -1025,8 +1208,8 @@
     "npm-run-all": "^4.1.5",
     "prettier": "^2.6.2"
    },
-   "_id": "yerpc@0.6.2",
-   "gitHead": "ee518eb791b8efb3e66fed850819e96da492d341",
+   "_id": "yerpc@0.6.4",
+   "gitHead": "ed9aeba099bb521f2c3ee0de16c5cd94b0be8dcf",
    "types": "./dist/index.d.ts",
    "bugs": {
     "url": "https://github.com/deltachat/yerpc/issues"
@@ -1035,15 +1218,15 @@
    "_nodeVersion": "20.11.1",
    "_npmVersion": "10.2.4",
    "dist": {
-    "integrity": "sha512-w+lggouyGD7Tq/BVrxB2LWBNiNexpM2Nx4x8cHx31EGcHAl+sUlmFodDJaw5M/QkCbQcLPUyP46ei8tpfWnSDg==",
-    "shasum": "18c4c0a695e43a28d8bd6fdf0a0ed2d9473ac1d1",
-    "tarball": "http://localhost:3000/yerpc/-/yerpc-0.6.2.tgz",
+    "integrity": "sha512-f/yBGREg5sR9aa6QG0thon6uL8jKJhQuRO/SwGsnOIIe45wFQrMYBV+A5cCNEgqzSHsz+Jl2F7sEO6h7CJfr5w==",
+    "shasum": "341c9b1005161ed6f18c247142f1376b93e78b5c",
+    "tarball": "http://localhost:3000/yerpc/-/yerpc-0.6.4.tgz",
     "fileCount": 24,
     "unpackedSize": 34374,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQD9AOaeTx1W9dbsKPep4SrtR9MzJSSk1J8hDlfHo1aCxAIhAOsireM6vZLjpZLapWgHEXe/RmDnISB3DuJdBc9EcYd4"
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIEylL9auUDwf1aD+NWinB25olT6LHG3EqmRal9pZTn08AiEA55nPrc4zdo//OW+dr04+Y63MzhMWJXpcNT7Q/6mAMU8="
      }
     ]
    },
@@ -1067,15 +1250,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/yerpc_0.6.2_1720236609772_0.4981048471460192"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/yerpc_0.6.4_1744843794981_0.4138097739370745"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2022-02-02T14:16:47.141Z",
-  "modified": "2024-07-06T03:30:10.044Z",
+  "modified": "2025-04-16T22:49:55.374Z",
   "0.1.0": "2022-02-02T14:16:47.260Z",
   "0.2.0": "2022-04-26T23:11:38.298Z",
   "0.2.1": "2022-04-26T23:18:12.897Z",
@@ -1090,8 +1273,24 @@
   "0.4.3": "2023-02-22T18:16:19.028Z",
   "0.5.0": "2023-05-21T17:04:49.318Z",
   "0.6.1": "2024-07-06T02:38:18.066Z",
-  "0.6.2": "2024-07-06T03:30:09.901Z"
+  "0.6.2": "2024-07-06T03:30:09.901Z",
+  "0.6.3": "2025-03-29T19:36:53.019Z",
+  "0.6.4": "2025-04-16T22:49:55.198Z"
  },
+ "bugs": {
+  "url": "https://github.com/deltachat/yerpc/issues"
+ },
+ "author": {
+  "name": "Franz Heinzmann",
+  "email": "Frando"
+ },
+ "license": "MIT OR Apache-2.0",
+ "homepage": "https://github.com/deltachat/yerpc#readme",
+ "repository": {
+  "type": "git",
+  "url": "git+https://github.com/deltachat/yerpc.git"
+ },
+ "description": "An ergonomic JSON-RPC server library in Rust with autocreated TypeScript client",
  "maintainers": [
   {
    "name": "frando",
@@ -1106,19 +1305,6 @@
    "email": "link2xt@testrun.org"
   }
  ],
- "author": {
-  "name": "Franz Heinzmann",
-  "email": "Frando"
- },
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/deltachat/yerpc.git"
- },
- "license": "MIT OR Apache-2.0",
- "homepage": "https://github.com/deltachat/yerpc#readme",
- "bugs": {
-  "url": "https://github.com/deltachat/yerpc/issues"
- },
  "readme": "# yerpc\n\nA TypeScript integration for the [yerpc](https://github.com/deltachat/yerpc) JSON-RPC Rust library.\n\nSee the [main README](https://github.com/deltachat/yerpc/blob/main/README.md) for details.\n\n*TODO: Add more docs*\n",
  "readmeFilename": "README.md"
 }

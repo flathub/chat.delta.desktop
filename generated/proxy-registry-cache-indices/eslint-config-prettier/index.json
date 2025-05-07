@@ -1,9 +1,9 @@
 {
  "_id": "eslint-config-prettier",
- "_rev": "97-a829c33341fcc1a64ccdea359fc45593",
+ "_rev": "98-ebe4ab34ddbaa35ba7dea0b3ce95934e",
  "name": "eslint-config-prettier",
  "dist-tags": {
-  "latest": "10.1.1"
+  "latest": "10.1.2"
  },
  "versions": {
   "1.0.0": {
@@ -6577,15 +6577,119 @@
   "10.1.1": {
    "name": "eslint-config-prettier",
    "version": "10.1.1",
+   "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "eslint-prettier",
+    "prettier"
+   ],
+   "author": {
+    "name": "Simon Lydell"
+   },
+   "license": "MIT",
+   "_id": "eslint-config-prettier@10.1.1",
+   "maintainers": [
+    {
+     "name": "lydell",
+     "email": "simon.lydell@gmail.com"
+    },
+    {
+     "name": "thorn0",
+     "email": "georgii.dolzhykov@gmail.com"
+    },
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/prettier/eslint-config-prettier#readme",
+   "bugs": {
+    "url": "https://github.com/prettier/eslint-config-prettier/issues"
+   },
+   "bin": {
+    "eslint-config-prettier": "bin/cli.js"
+   },
+   "dist": {
+    "shasum": "cf0ff6e5c4e7e15f129f1f1ce2a5ecba92dec132",
+    "tarball": "http://localhost:3000/eslint-config-prettier/-/eslint-config-prettier-10.1.1.tgz",
+    "fileCount": 11,
+    "integrity": "sha512-4EQQr6wXwS+ZJSzaR5ZCrYgLxqvUjdXctaEtBqHcbkW944B1NQyO4qpdHQbXBONfwxXdkAY81HH4+LUfrg+zPw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQD4SHkru/gzFqy9BvyEBNFmdqo4zlcBV/W/BK7YqI+wQAIhAMj63vlvi1NawL7i+aTU+dgEvHnR2L0uawu8rmuDYELi",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 58399
+   },
+   "main": "index.js",
+   "type": "commonjs",
+   "types": "index.d.ts",
+   "exports": {
+    ".": {
+     "types": "./index.d.ts",
+     "default": "./index.js"
+    },
+    "./flat": {
+     "types": "./flat.d.ts",
+     "default": "./flat.js"
+    },
+    "./prettier": {
+     "types": "./prettier.d.ts",
+     "default": "./prettier.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "gitHead": "f12309bbca9fb051b53fcece9a8491a1222235c8",
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "repository": {
+    "url": "git+https://github.com/prettier/eslint-config-prettier.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Turns off all rules that are unnecessary or might conflict with Prettier.",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "_hasShrinkwrap": false,
+   "peerDependencies": {
+    "eslint": ">=7.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/eslint-config-prettier_10.1.1_1741341060711_0.6113644798852882",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "10.1.2": {
+   "name": "eslint-config-prettier",
+   "version": "10.1.2",
    "type": "commonjs",
    "description": "Turns off all rules that are unnecessary or might conflict with Prettier.",
    "repository": {
     "type": "git",
     "url": "git+https://github.com/prettier/eslint-config-prettier.git"
    },
+   "homepage": "https://github.com/prettier/eslint-config-prettier#readme",
    "author": {
     "name": "Simon Lydell"
    },
+   "maintainers": [
+    {
+     "name": "lydell",
+     "email": "simon.lydell@gmail.com"
+    },
+    {
+     "name": "thorn0",
+     "email": "georgii.dolzhykov@gmail.com"
+    },
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    }
+   ],
    "license": "MIT",
    "bin": {
     "eslint-config-prettier": "bin/cli.js"
@@ -6617,24 +6721,23 @@
    "peerDependencies": {
     "eslint": ">=7.0.0"
    },
-   "_id": "eslint-config-prettier@10.1.1",
-   "gitHead": "f12309bbca9fb051b53fcece9a8491a1222235c8",
+   "_id": "eslint-config-prettier@10.1.2",
+   "gitHead": "8911369cbc66f1f859e19751eaefdea687129de5",
    "bugs": {
     "url": "https://github.com/prettier/eslint-config-prettier/issues"
    },
-   "homepage": "https://github.com/prettier/eslint-config-prettier#readme",
    "_nodeVersion": "22.14.0",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-4EQQr6wXwS+ZJSzaR5ZCrYgLxqvUjdXctaEtBqHcbkW944B1NQyO4qpdHQbXBONfwxXdkAY81HH4+LUfrg+zPw==",
-    "shasum": "cf0ff6e5c4e7e15f129f1f1ce2a5ecba92dec132",
-    "tarball": "http://localhost:3000/eslint-config-prettier/-/eslint-config-prettier-10.1.1.tgz",
+    "integrity": "sha512-Epgp/EofAUeEpIdZkW60MHKvPyru1ruQJxPL+WIycnaPApuseK0Zpkrh/FwL9oIpQvIhJwV7ptOy0DWUjTlCiA==",
+    "shasum": "31a4b393c40c4180202c27e829af43323bf85276",
+    "tarball": "http://localhost:3000/eslint-config-prettier/-/eslint-config-prettier-10.1.2.tgz",
     "fileCount": 11,
-    "unpackedSize": 58399,
+    "unpackedSize": 58550,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEYCIQD4SHkru/gzFqy9BvyEBNFmdqo4zlcBV/W/BK7YqI+wQAIhAMj63vlvi1NawL7i+aTU+dgEvHnR2L0uawu8rmuDYELi"
+      "sig": "MEUCIAS7BL/5S1DdZhy3dwsFOC8q4FtIme5LFG2RpzaoMO41AiEArzxdn4SlZnZU1zqMJqhgqH9b/XzigIIxdp1oOl2Wfu4="
      }
     ]
    },
@@ -6643,30 +6746,16 @@
     "email": "admin@1stg.me"
    },
    "directories": {},
-   "maintainers": [
-    {
-     "name": "lydell",
-     "email": "simon.lydell@gmail.com"
-    },
-    {
-     "name": "thorn0",
-     "email": "georgii.dolzhykov@gmail.com"
-    },
-    {
-     "name": "jounqin",
-     "email": "admin@1stg.me"
-    }
-   ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/eslint-config-prettier_10.1.1_1741341060711_0.6113644798852882"
+    "tmp": "tmp/eslint-config-prettier_10.1.2_1744281211983_0.6878229246714287"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-01-29T20:10:06.679Z",
-  "modified": "2025-03-07T09:51:01.086Z",
+  "modified": "2025-04-10T10:33:32.374Z",
   "1.0.0": "2017-01-29T20:10:06.679Z",
   "1.0.1": "2017-01-29T20:15:16.677Z",
   "1.0.2": "2017-01-30T06:51:30.454Z",
@@ -6744,7 +6833,8 @@
   "10.0.2": "2025-02-26T13:51:36.262Z",
   "10.0.3": "2025-03-07T06:50:49.830Z",
   "10.1.0": "2025-03-07T07:12:29.951Z",
-  "10.1.1": "2025-03-07T09:51:00.914Z"
+  "10.1.1": "2025-03-07T09:51:00.914Z",
+  "10.1.2": "2025-04-10T10:33:32.195Z"
  },
  "bugs": {
   "url": "https://github.com/prettier/eslint-config-prettier/issues"

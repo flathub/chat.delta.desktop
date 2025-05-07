@@ -1,10 +1,10 @@
 {
  "_id": "app-builder-bin",
- "_rev": "182-ff1a64906f963095c5cfacba2112257e",
+ "_rev": "184-8a960cd66c863844ff1e1be9073343c3",
  "name": "app-builder-bin",
  "dist-tags": {
   "latest": "4.2.0",
-  "next": "5.0.0-alpha.12"
+  "next": "5.0.0-alpha.13"
  },
  "versions": {
   "1.0.0": {
@@ -8966,8 +8966,97 @@
   },
   "5.0.0-alpha.12": {
    "name": "app-builder-bin",
-   "description": "app-builder precompiled binaries",
    "version": "5.0.0-alpha.12",
+   "keywords": [
+    "snap",
+    "appimage",
+    "icns"
+   ],
+   "license": "MIT",
+   "_id": "app-builder-bin@5.0.0-alpha.12",
+   "maintainers": [
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/develar/app-builder#readme",
+   "bugs": {
+    "url": "https://github.com/develar/app-builder/issues"
+   },
+   "dist": {
+    "shasum": "2daf82f8badc698e0adcc95ba36af4ff0650dc80",
+    "tarball": "http://localhost:3000/app-builder-bin/-/app-builder-bin-5.0.0-alpha.12.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-j87o0j6LqPL3QRr8yid6c+Tt5gC7xNfYo6uQIQkorAC6MpeayVMZrEDzKmJJ/Hlv7EnOQpaRm53k6ktDYZyB6w==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCr+zAqVJcgA3Wb7odt5xBSidIDGEbG+awg7dXMOOQFKAIhAKxgKNlSxsN4tCvxaq8m/3h7oQw16r8MZJqXgwz46Y3y",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 216850769
+   },
+   "_from": "file:app-builder-bin-5.0.0-alpha.12.tgz",
+   "types": "./index.d.ts",
+   "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "changeset": "changeset",
+    "ci:publish": "make build-all && pnpm publish --no-git-checks --tag next && changeset tag",
+    "ci:version": "pnpm changelog && changeset version && make assets && git add ."
+   },
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/private/var/folders/0w/4z5l9vds32nbkz7l22n8j6s80000gn/T/2c9e4d3cc1520dffa07b55b4917736ae/app-builder-bin-5.0.0-alpha.12.tgz",
+   "_integrity": "sha512-j87o0j6LqPL3QRr8yid6c+Tt5gC7xNfYo6uQIQkorAC6MpeayVMZrEDzKmJJ/Hlv7EnOQpaRm53k6ktDYZyB6w==",
+   "repository": {
+    "url": "git+https://github.com/develar/app-builder.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "app-builder precompiled binaries",
+   "directories": {},
+   "_nodeVersion": "18.20.5",
+   "publishConfig": {
+    "tag": "next",
+    "git-checks": false,
+    "executableFiles": [
+     "linux/arm/app-builder",
+     "linux/arm64/app-builder",
+     "linux/ia32/app-builder",
+     "linux/loong64/app-builder",
+     "linux/riscv64/app-builder",
+     "linux/x64/app-builder",
+     "mac/app-builder",
+     "mac/app-builder_amd64",
+     "mac/app-builder_arm64",
+     "win/arm64/app-builder.exe",
+     "win/ia32/app-builder.exe",
+     "win/x64/app-builder.exe"
+    ]
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "readme.md",
+   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "conventional-changelog-cli": "^4.1.0",
+    "@changesets/changelog-github": "^0.5.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/app-builder-bin_5.0.0-alpha.12_1734032328645_0.25248266967491784",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "5.0.0-alpha.13": {
+   "name": "app-builder-bin",
+   "description": "app-builder precompiled binaries",
+   "version": "5.0.0-alpha.13",
    "license": "MIT",
    "repository": {
     "type": "git",
@@ -9007,28 +9096,28 @@
     "ci:version": "pnpm changelog && changeset version && make assets && git add .",
     "ci:publish": "make build-all && pnpm publish --no-git-checks --tag next && changeset tag"
    },
-   "_id": "app-builder-bin@5.0.0-alpha.12",
+   "_id": "app-builder-bin@5.0.0-alpha.13",
    "readmeFilename": "readme.md",
    "types": "./index.d.ts",
    "bugs": {
     "url": "https://github.com/develar/app-builder/issues"
    },
    "homepage": "https://github.com/develar/app-builder#readme",
-   "_integrity": "sha512-j87o0j6LqPL3QRr8yid6c+Tt5gC7xNfYo6uQIQkorAC6MpeayVMZrEDzKmJJ/Hlv7EnOQpaRm53k6ktDYZyB6w==",
-   "_resolved": "/private/var/folders/0w/4z5l9vds32nbkz7l22n8j6s80000gn/T/2c9e4d3cc1520dffa07b55b4917736ae/app-builder-bin-5.0.0-alpha.12.tgz",
-   "_from": "file:app-builder-bin-5.0.0-alpha.12.tgz",
-   "_nodeVersion": "18.20.5",
+   "_integrity": "sha512-0u4U78cV/vBrznXEkoZz/ZQ8GM4AbNJy/MApLddg7urgF08esHWcK2un3AGIyjZHd1WKJ/fCD/tssrkvGArfLg==",
+   "_resolved": "/private/var/folders/7g/cnfrzbd555q9lmpsr1byngs80000gn/T/61c2d7dd82594152bf54170962a31c9a/app-builder-bin-5.0.0-alpha.13.tgz",
+   "_from": "file:app-builder-bin-5.0.0-alpha.13.tgz",
+   "_nodeVersion": "18.20.8",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-j87o0j6LqPL3QRr8yid6c+Tt5gC7xNfYo6uQIQkorAC6MpeayVMZrEDzKmJJ/Hlv7EnOQpaRm53k6ktDYZyB6w==",
-    "shasum": "2daf82f8badc698e0adcc95ba36af4ff0650dc80",
-    "tarball": "http://localhost:3000/app-builder-bin/-/app-builder-bin-5.0.0-alpha.12.tgz",
+    "integrity": "sha512-0u4U78cV/vBrznXEkoZz/ZQ8GM4AbNJy/MApLddg7urgF08esHWcK2un3AGIyjZHd1WKJ/fCD/tssrkvGArfLg==",
+    "shasum": "b7f49ea117258c2b7a94279abd58b0375008ea09",
+    "tarball": "http://localhost:3000/app-builder-bin/-/app-builder-bin-5.0.0-alpha.13.tgz",
     "fileCount": 16,
-    "unpackedSize": 216850769,
+    "unpackedSize": 216853505,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQCr+zAqVJcgA3Wb7odt5xBSidIDGEbG+awg7dXMOOQFKAIhAKxgKNlSxsN4tCvxaq8m/3h7oQw16r8MZJqXgwz46Y3y"
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEQCIBfqpfPOF+b4FUttAyx0BrMRJExES83gnCPhvc3wuZFLAiB24lnIZVTJWHcZxSAFnkZCg2Pm1ALM/w4MEoNG5dASwA=="
      }
     ]
    },
@@ -9049,14 +9138,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/app-builder-bin_5.0.0-alpha.12_1734032328645_0.25248266967491784"
+    "tmp": "tmp/app-builder-bin_5.0.0-alpha.13_1745459197406_0.6782233670631221"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2018-02-05T08:12:48.850Z",
-  "modified": "2024-12-12T19:38:49.790Z",
+  "modified": "2025-04-24T01:46:38.748Z",
   "1.0.0": "2018-02-05T08:12:48.850Z",
   "1.0.1": "2018-02-05T10:30:06.152Z",
   "1.0.2": "2018-02-05T11:43:16.462Z",
@@ -9222,7 +9311,8 @@
   "5.0.0-alpha.9": "2024-09-15T23:59:22.317Z",
   "5.0.0-alpha.10": "2024-09-24T14:05:28.204Z",
   "5.0.0-alpha.11": "2024-10-15T14:12:48.086Z",
-  "5.0.0-alpha.12": "2024-12-12T19:38:49.624Z"
+  "5.0.0-alpha.12": "2024-12-12T19:38:49.624Z",
+  "5.0.0-alpha.13": "2025-04-24T01:46:38.541Z"
  },
  "bugs": {
   "url": "https://github.com/develar/app-builder/issues"

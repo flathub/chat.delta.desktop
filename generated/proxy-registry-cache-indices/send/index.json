@@ -1,9 +1,9 @@
 {
  "_id": "send",
- "_rev": "157-aee554be61b87b4bcbdaa71e40560a1b",
+ "_rev": "159-cb28ac5c1087d638190937e496c740cb",
  "name": "send",
  "dist-tags": {
-  "latest": "1.1.0",
+  "latest": "1.2.0",
   "next": "1.1.0"
  },
  "versions": {
@@ -5938,11 +5938,129 @@
     "tmp": "tmp/send_0.19.1_1728518191265_0.45610483743811847",
     "host": "s3://npm-registry-packages"
    }
+  },
+  "1.2.0": {
+   "name": "send",
+   "description": "Better streaming static file server with Range and conditional-GET support",
+   "version": "1.2.0",
+   "author": {
+    "name": "TJ Holowaychuk",
+    "email": "tj@vision-media.ca"
+   },
+   "contributors": [
+    {
+     "name": "Douglas Christopher Wilson",
+     "email": "doug@somethingdoug.com"
+    },
+    {
+     "name": "James Wyatt Cready",
+     "email": "jcready@gmail.com"
+    },
+    {
+     "name": "Jesús Leganés Combarro",
+     "email": "piranna@gmail.com"
+    }
+   ],
+   "license": "MIT",
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pillarjs/send.git"
+   },
+   "keywords": [
+    "static",
+    "file",
+    "server"
+   ],
+   "dependencies": {
+    "debug": "^4.3.5",
+    "encodeurl": "^2.0.0",
+    "escape-html": "^1.0.3",
+    "etag": "^1.8.1",
+    "fresh": "^2.0.0",
+    "http-errors": "^2.0.0",
+    "mime-types": "^3.0.1",
+    "ms": "^2.1.3",
+    "on-finished": "^2.4.1",
+    "range-parser": "^1.2.1",
+    "statuses": "^2.0.1"
+   },
+   "devDependencies": {
+    "after": "^0.8.2",
+    "eslint": "7.32.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-markdown": "2.2.1",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "5.2.0",
+    "eslint-plugin-standard": "4.1.0",
+    "mocha": "^10.7.0",
+    "nyc": "^17.0.0",
+    "supertest": "6.2.2"
+   },
+   "engines": {
+    "node": ">= 18"
+   },
+   "scripts": {
+    "lint": "eslint .",
+    "test": "mocha --check-leaks --reporter spec",
+    "test-ci": "nyc --reporter=lcovonly --reporter=text npm test",
+    "test-cov": "nyc --reporter=html --reporter=text npm test",
+    "version": "node scripts/version-history.js && git add HISTORY.md"
+   },
+   "_id": "send@1.2.0",
+   "gitHead": "7c92a68b67600992d877cf1869d171d9fb3a033f",
+   "bugs": {
+    "url": "https://github.com/pillarjs/send/issues"
+   },
+   "homepage": "https://github.com/pillarjs/send#readme",
+   "_nodeVersion": "22.10.0",
+   "_npmVersion": "10.9.0",
+   "dist": {
+    "integrity": "sha512-uaW0WwXKpL9blXE2o0bRhoL2EGXIrZxQ2ZQ4mgcfoBxdFmQold+qWsD2jLrfZ0trjKL6vOw0j//eAwcALFjKSw==",
+    "shasum": "32a7554fb777b831dfa828370f773a3808d37212",
+    "tarball": "http://localhost:3000/send/-/send-1.2.0.tgz",
+    "fileCount": 5,
+    "unpackedSize": 46921,
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEQCIAN7LO7yUWu2/B8cjR4QH9Oyezh4ggLbrm6cm/1aJrvRAiARvWpnYLGSfRrKkfHGcaiMKHCt8dilHxuOi39OpxL0aQ=="
+     }
+    ]
+   },
+   "_npmUser": {
+    "name": "ulisesgascon",
+    "email": "ulisesgascondev@gmail.com"
+   },
+   "directories": {},
+   "maintainers": [
+    {
+     "name": "blakeembrey",
+     "email": "hello@blakeembrey.com"
+    },
+    {
+     "name": "wesleytodd",
+     "email": "wes@wesleytodd.com"
+    },
+    {
+     "name": "ulisesgascon",
+     "email": "ulisesgascondev@gmail.com"
+    },
+    {
+     "name": "dougwilson",
+     "email": "doug@somethingdoug.com"
+    }
+   ],
+   "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/send_1.2.0_1743039552941_0.5342117556633132"
+   },
+   "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2012-07-04T02:26:08.255Z",
-  "modified": "2024-10-09T23:57:47.795Z",
+  "modified": "2025-03-27T01:39:13.310Z",
   "0.0.1": "2012-07-04T02:26:10.649Z",
   "0.0.2": "2012-07-09T16:29:14.274Z",
   "0.0.3": "2012-07-16T16:22:27.594Z",
@@ -6008,7 +6126,8 @@
   "1.0.0": "2024-07-25T23:53:33.111Z",
   "0.19.0": "2024-09-10T00:34:40.905Z",
   "1.1.0": "2024-09-10T00:38:06.394Z",
-  "0.19.1": "2024-10-09T23:56:31.510Z"
+  "0.19.1": "2024-10-09T23:56:31.510Z",
+  "1.2.0": "2025-03-27T01:39:13.103Z"
  },
  "bugs": {
   "url": "https://github.com/pillarjs/send/issues"
@@ -6025,8 +6144,8 @@
   "server"
  ],
  "repository": {
-  "url": "git+https://github.com/pillarjs/send.git",
-  "type": "git"
+  "type": "git",
+  "url": "git+https://github.com/pillarjs/send.git"
  },
  "description": "Better streaming static file server with Range and conditional-GET support",
  "contributors": [
@@ -6049,19 +6168,19 @@
    "email": "hello@blakeembrey.com"
   },
   {
-   "name": "ulisesgascon",
-   "email": "ulisesgascondev@gmail.com"
-  },
-  {
    "name": "wesleytodd",
    "email": "wes@wesleytodd.com"
+  },
+  {
+   "name": "ulisesgascon",
+   "email": "ulisesgascondev@gmail.com"
   },
   {
    "name": "dougwilson",
    "email": "doug@somethingdoug.com"
   }
  ],
- "readme": "# send\n\n[![NPM Version][npm-version-image]][npm-url]\n[![NPM Downloads][npm-downloads-image]][npm-url]\n[![Linux Build][github-actions-ci-image]][github-actions-ci-url]\n[![Windows Build][appveyor-image]][appveyor-url]\n[![Test Coverage][coveralls-image]][coveralls-url]\n\nSend is a library for streaming files from the file system as a http response\nsupporting partial responses (Ranges), conditional-GET negotiation (If-Match,\nIf-Unmodified-Since, If-None-Match, If-Modified-Since), high test coverage,\nand granular events which may be leveraged to take appropriate actions in your\napplication or framework.\n\nLooking to serve up entire folders mapped to URLs? Try [serve-static](https://www.npmjs.org/package/serve-static).\n\n## Installation\n\nThis is a [Node.js](https://nodejs.org/en/) module available through the\n[npm registry](https://www.npmjs.com/). Installation is done using the\n[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):\n\n```bash\n$ npm install send\n```\n\n## API\n\n```js\nvar send = require('send')\n```\n\n### send(req, path, [options])\n\nCreate a new `SendStream` for the given path to send to a `res`. The `req` is\nthe Node.js HTTP request and the `path` is a urlencoded path to send (urlencoded,\nnot the actual file-system path).\n\n#### Options\n\n##### acceptRanges\n\nEnable or disable accepting ranged requests, defaults to true.\nDisabling this will not send `Accept-Ranges` and ignore the contents\nof the `Range` request header.\n\n##### cacheControl\n\nEnable or disable setting `Cache-Control` response header, defaults to\ntrue. Disabling this will ignore the `immutable` and `maxAge` options.\n\n##### dotfiles\n\nSet how \"dotfiles\" are treated when encountered. A dotfile is a file\nor directory that begins with a dot (\".\"). Note this check is done on\nthe path itself without checking if the path actually exists on the\ndisk. If `root` is specified, only the dotfiles above the root are\nchecked (i.e. the root itself can be within a dotfile when when set\nto \"deny\").\n\n  - `'allow'` No special treatment for dotfiles.\n  - `'deny'` Send a 403 for any request for a dotfile.\n  - `'ignore'` Pretend like the dotfile does not exist and 404.\n\nThe default value is _similar_ to `'ignore'`, with the exception that\nthis default will not ignore the files within a directory that begins\nwith a dot, for backward-compatibility.\n\n##### end\n\nByte offset at which the stream ends, defaults to the length of the file\nminus 1. The end is inclusive in the stream, meaning `end: 3` will include\nthe 4th byte in the stream.\n\n##### etag\n\nEnable or disable etag generation, defaults to true.\n\n##### extensions\n\nIf a given file doesn't exist, try appending one of the given extensions,\nin the given order. By default, this is disabled (set to `false`). An\nexample value that will serve extension-less HTML files: `['html', 'htm']`.\nThis is skipped if the requested file already has an extension.\n\n##### immutable\n\nEnable or disable the `immutable` directive in the `Cache-Control` response\nheader, defaults to `false`. If set to `true`, the `maxAge` option should\nalso be specified to enable caching. The `immutable` directive will prevent\nsupported clients from making conditional requests during the life of the\n`maxAge` option to check if the file has changed.\n\n##### index\n\nBy default send supports \"index.html\" files, to disable this\nset `false` or to supply a new index pass a string or an array\nin preferred order.\n\n##### lastModified\n\nEnable or disable `Last-Modified` header, defaults to true. Uses the file\nsystem's last modified value.\n\n##### maxAge\n\nProvide a max-age in milliseconds for http caching, defaults to 0.\nThis can also be a string accepted by the\n[ms](https://www.npmjs.org/package/ms#readme) module.\n\n##### root\n\nServe files relative to `path`.\n\n##### start\n\nByte offset at which the stream starts, defaults to 0. The start is inclusive,\nmeaning `start: 2` will include the 3rd byte in the stream.\n\n#### Events\n\nThe `SendStream` is an event emitter and will emit the following events:\n\n  - `error` an error occurred `(err)`\n  - `directory` a directory was requested `(res, path)`\n  - `file` a file was requested `(path, stat)`\n  - `headers` the headers are about to be set on a file `(res, path, stat)`\n  - `stream` file streaming has started `(stream)`\n  - `end` streaming has completed\n\n#### .pipe\n\nThe `pipe` method is used to pipe the response into the Node.js HTTP response\nobject, typically `send(req, path, options).pipe(res)`.\n\n### .mime\n\nThe `mime` export is the global instance of of the\n[`mime` npm module](https://www.npmjs.com/package/mime).\n\nThis is used to configure the MIME types that are associated with file extensions\nas well as other options for how to resolve the MIME type of a file (like the\ndefault type to use for an unknown file extension).\n\n## Error-handling\n\nBy default when no `error` listeners are present an automatic response will be\nmade, otherwise you have full control over the response, aka you may show a 5xx\npage etc.\n\n## Caching\n\nIt does _not_ perform internal caching, you should use a reverse proxy cache\nsuch as Varnish for this, or those fancy things called CDNs. If your\napplication is small enough that it would benefit from single-node memory\ncaching, it's small enough that it does not need caching at all ;).\n\n## Debugging\n\nTo enable `debug()` instrumentation output export __DEBUG__:\n\n```\n$ DEBUG=send node app\n```\n\n## Running tests\n\n```\n$ npm install\n$ npm test\n```\n\n## Examples\n\n### Serve a specific file\n\nThis simple example will send a specific file to all requests.\n\n```js\nvar http = require('http')\nvar send = require('send')\n\nvar server = http.createServer(function onRequest (req, res) {\n  send(req, '/path/to/index.html')\n    .pipe(res)\n})\n\nserver.listen(3000)\n```\n\n### Serve all files from a directory\n\nThis simple example will just serve up all the files in a\ngiven directory as the top-level. For example, a request\n`GET /foo.txt` will send back `/www/public/foo.txt`.\n\n```js\nvar http = require('http')\nvar parseUrl = require('parseurl')\nvar send = require('send')\n\nvar server = http.createServer(function onRequest (req, res) {\n  send(req, parseUrl(req).pathname, { root: '/www/public' })\n    .pipe(res)\n})\n\nserver.listen(3000)\n```\n\n### Custom file types\n\n```js\nvar http = require('http')\nvar parseUrl = require('parseurl')\nvar send = require('send')\n\n// Default unknown types to text/plain\nsend.mime.default_type = 'text/plain'\n\n// Add a custom type\nsend.mime.define({\n  'application/x-my-type': ['x-mt', 'x-mtt']\n})\n\nvar server = http.createServer(function onRequest (req, res) {\n  send(req, parseUrl(req).pathname, { root: '/www/public' })\n    .pipe(res)\n})\n\nserver.listen(3000)\n```\n\n### Custom directory index view\n\nThis is a example of serving up a structure of directories with a\ncustom function to render a listing of a directory.\n\n```js\nvar http = require('http')\nvar fs = require('fs')\nvar parseUrl = require('parseurl')\nvar send = require('send')\n\n// Transfer arbitrary files from within /www/example.com/public/*\n// with a custom handler for directory listing\nvar server = http.createServer(function onRequest (req, res) {\n  send(req, parseUrl(req).pathname, { index: false, root: '/www/public' })\n    .once('directory', directory)\n    .pipe(res)\n})\n\nserver.listen(3000)\n\n// Custom directory handler\nfunction directory (res, path) {\n  var stream = this\n\n  // redirect to trailing slash for consistent url\n  if (!stream.hasTrailingSlash()) {\n    return stream.redirect(path)\n  }\n\n  // get directory list\n  fs.readdir(path, function onReaddir (err, list) {\n    if (err) return stream.error(err)\n\n    // render an index for the directory\n    res.setHeader('Content-Type', 'text/plain; charset=UTF-8')\n    res.end(list.join('\\n') + '\\n')\n  })\n}\n```\n\n### Serving from a root directory with custom error-handling\n\n```js\nvar http = require('http')\nvar parseUrl = require('parseurl')\nvar send = require('send')\n\nvar server = http.createServer(function onRequest (req, res) {\n  // your custom error-handling logic:\n  function error (err) {\n    res.statusCode = err.status || 500\n    res.end(err.message)\n  }\n\n  // your custom headers\n  function headers (res, path, stat) {\n    // serve all files for download\n    res.setHeader('Content-Disposition', 'attachment')\n  }\n\n  // your custom directory handling logic:\n  function redirect () {\n    res.statusCode = 301\n    res.setHeader('Location', req.url + '/')\n    res.end('Redirecting to ' + req.url + '/')\n  }\n\n  // transfer arbitrary files from within\n  // /www/example.com/public/*\n  send(req, parseUrl(req).pathname, { root: '/www/public' })\n    .on('error', error)\n    .on('directory', redirect)\n    .on('headers', headers)\n    .pipe(res)\n})\n\nserver.listen(3000)\n```\n\n## License\n\n[MIT](LICENSE)\n\n[appveyor-image]: https://badgen.net/appveyor/ci/dougwilson/send/master?label=windows\n[appveyor-url]: https://ci.appveyor.com/project/dougwilson/send\n[coveralls-image]: https://badgen.net/coveralls/c/github/pillarjs/send/master\n[coveralls-url]: https://coveralls.io/r/pillarjs/send?branch=master\n[github-actions-ci-image]: https://badgen.net/github/checks/pillarjs/send/master?label=linux\n[github-actions-ci-url]: https://github.com/pillarjs/send/actions/workflows/ci.yml\n[node-image]: https://badgen.net/npm/node/send\n[node-url]: https://nodejs.org/en/download/\n[npm-downloads-image]: https://badgen.net/npm/dm/send\n[npm-url]: https://npmjs.org/package/send\n[npm-version-image]: https://badgen.net/npm/v/send\n",
+ "readme": "# send\n\n[![NPM Version][npm-version-image]][npm-url]\n[![NPM Downloads][npm-downloads-image]][npm-url]\n[![CI][github-actions-ci-image]][github-actions-ci-url]\n[![Test Coverage][coveralls-image]][coveralls-url]\n\nSend is a library for streaming files from the file system as a http response\nsupporting partial responses (Ranges), conditional-GET negotiation (If-Match,\nIf-Unmodified-Since, If-None-Match, If-Modified-Since), high test coverage,\nand granular events which may be leveraged to take appropriate actions in your\napplication or framework.\n\nLooking to serve up entire folders mapped to URLs? Try [serve-static](https://www.npmjs.org/package/serve-static).\n\n## Installation\n\nThis is a [Node.js](https://nodejs.org/en/) module available through the\n[npm registry](https://www.npmjs.com/). Installation is done using the\n[`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):\n\n```bash\n$ npm install send\n```\n\n## API\n\n```js\nvar send = require('send')\n```\n\n### send(req, path, [options])\n\nCreate a new `SendStream` for the given path to send to a `res`. The `req` is\nthe Node.js HTTP request and the `path` is a urlencoded path to send (urlencoded,\nnot the actual file-system path).\n\n#### Options\n\n##### acceptRanges\n\nEnable or disable accepting ranged requests, defaults to true.\nDisabling this will not send `Accept-Ranges` and ignore the contents\nof the `Range` request header.\n\n##### cacheControl\n\nEnable or disable setting `Cache-Control` response header, defaults to\ntrue. Disabling this will ignore the `immutable` and `maxAge` options.\n\n##### dotfiles\n\nSet how \"dotfiles\" are treated when encountered. A dotfile is a file\nor directory that begins with a dot (\".\"). Note this check is done on\nthe path itself without checking if the path actually exists on the\ndisk. If `root` is specified, only the dotfiles above the root are\nchecked (i.e. the root itself can be within a dotfile when set\nto \"deny\").\n\n  - `'allow'` No special treatment for dotfiles.\n  - `'deny'` Send a 403 for any request for a dotfile.\n  - `'ignore'` Pretend like the dotfile does not exist and 404.\n\nThe default value is _similar_ to `'ignore'`, with the exception that\nthis default will not ignore the files within a directory that begins\nwith a dot, for backward-compatibility.\n\n##### end\n\nByte offset at which the stream ends, defaults to the length of the file\nminus 1. The end is inclusive in the stream, meaning `end: 3` will include\nthe 4th byte in the stream.\n\n##### etag\n\nEnable or disable etag generation, defaults to true.\n\n##### extensions\n\nIf a given file doesn't exist, try appending one of the given extensions,\nin the given order. By default, this is disabled (set to `false`). An\nexample value that will serve extension-less HTML files: `['html', 'htm']`.\nThis is skipped if the requested file already has an extension.\n\n##### immutable\n\nEnable or disable the `immutable` directive in the `Cache-Control` response\nheader, defaults to `false`. If set to `true`, the `maxAge` option should\nalso be specified to enable caching. The `immutable` directive will prevent\nsupported clients from making conditional requests during the life of the\n`maxAge` option to check if the file has changed.\n\n##### index\n\nBy default send supports \"index.html\" files, to disable this\nset `false` or to supply a new index pass a string or an array\nin preferred order.\n\n##### lastModified\n\nEnable or disable `Last-Modified` header, defaults to true. Uses the file\nsystem's last modified value.\n\n##### maxAge\n\nProvide a max-age in milliseconds for http caching, defaults to 0.\nThis can also be a string accepted by the\n[ms](https://www.npmjs.org/package/ms#readme) module.\n\n##### root\n\nServe files relative to `path`.\n\n##### start\n\nByte offset at which the stream starts, defaults to 0. The start is inclusive,\nmeaning `start: 2` will include the 3rd byte in the stream.\n\n#### Events\n\nThe `SendStream` is an event emitter and will emit the following events:\n\n  - `error` an error occurred `(err)`\n  - `directory` a directory was requested `(res, path)`\n  - `file` a file was requested `(path, stat)`\n  - `headers` the headers are about to be set on a file `(res, path, stat)`\n  - `stream` file streaming has started `(stream)`\n  - `end` streaming has completed\n\n#### .pipe\n\nThe `pipe` method is used to pipe the response into the Node.js HTTP response\nobject, typically `send(req, path, options).pipe(res)`.\n\n## Error-handling\n\nBy default when no `error` listeners are present an automatic response will be\nmade, otherwise you have full control over the response, aka you may show a 5xx\npage etc.\n\n## Caching\n\nIt does _not_ perform internal caching, you should use a reverse proxy cache\nsuch as Varnish for this, or those fancy things called CDNs. If your\napplication is small enough that it would benefit from single-node memory\ncaching, it's small enough that it does not need caching at all ;).\n\n## Debugging\n\nTo enable `debug()` instrumentation output export __DEBUG__:\n\n```\n$ DEBUG=send node app\n```\n\n## Running tests\n\n```\n$ npm install\n$ npm test\n```\n\n## Examples\n\n### Serve a specific file\n\nThis simple example will send a specific file to all requests.\n\n```js\nvar http = require('http')\nvar send = require('send')\n\nvar server = http.createServer(function onRequest (req, res) {\n  send(req, '/path/to/index.html')\n    .pipe(res)\n})\n\nserver.listen(3000)\n```\n\n### Serve all files from a directory\n\nThis simple example will just serve up all the files in a\ngiven directory as the top-level. For example, a request\n`GET /foo.txt` will send back `/www/public/foo.txt`.\n\n```js\nvar http = require('http')\nvar parseUrl = require('parseurl')\nvar send = require('send')\n\nvar server = http.createServer(function onRequest (req, res) {\n  send(req, parseUrl(req).pathname, { root: '/www/public' })\n    .pipe(res)\n})\n\nserver.listen(3000)\n```\n\n### Custom file types\n\n```js\nvar extname = require('path').extname\nvar http = require('http')\nvar parseUrl = require('parseurl')\nvar send = require('send')\n\nvar server = http.createServer(function onRequest (req, res) {\n  send(req, parseUrl(req).pathname, { root: '/www/public' })\n    .on('headers', function (res, path) {\n      switch (extname(path)) {\n        case '.x-mt':\n        case '.x-mtt':\n          // custom type for these extensions\n          res.setHeader('Content-Type', 'application/x-my-type')\n          break\n      }\n    })\n    .pipe(res)\n})\n\nserver.listen(3000)\n```\n\n### Custom directory index view\n\nThis is an example of serving up a structure of directories with a\ncustom function to render a listing of a directory.\n\n```js\nvar http = require('http')\nvar fs = require('fs')\nvar parseUrl = require('parseurl')\nvar send = require('send')\n\n// Transfer arbitrary files from within /www/example.com/public/*\n// with a custom handler for directory listing\nvar server = http.createServer(function onRequest (req, res) {\n  send(req, parseUrl(req).pathname, { index: false, root: '/www/public' })\n    .once('directory', directory)\n    .pipe(res)\n})\n\nserver.listen(3000)\n\n// Custom directory handler\nfunction directory (res, path) {\n  var stream = this\n\n  // redirect to trailing slash for consistent url\n  if (!stream.hasTrailingSlash()) {\n    return stream.redirect(path)\n  }\n\n  // get directory list\n  fs.readdir(path, function onReaddir (err, list) {\n    if (err) return stream.error(err)\n\n    // render an index for the directory\n    res.setHeader('Content-Type', 'text/plain; charset=UTF-8')\n    res.end(list.join('\\n') + '\\n')\n  })\n}\n```\n\n### Serving from a root directory with custom error-handling\n\n```js\nvar http = require('http')\nvar parseUrl = require('parseurl')\nvar send = require('send')\n\nvar server = http.createServer(function onRequest (req, res) {\n  // your custom error-handling logic:\n  function error (err) {\n    res.statusCode = err.status || 500\n    res.end(err.message)\n  }\n\n  // your custom headers\n  function headers (res, path, stat) {\n    // serve all files for download\n    res.setHeader('Content-Disposition', 'attachment')\n  }\n\n  // your custom directory handling logic:\n  function redirect () {\n    res.statusCode = 301\n    res.setHeader('Location', req.url + '/')\n    res.end('Redirecting to ' + req.url + '/')\n  }\n\n  // transfer arbitrary files from within\n  // /www/example.com/public/*\n  send(req, parseUrl(req).pathname, { root: '/www/public' })\n    .on('error', error)\n    .on('directory', redirect)\n    .on('headers', headers)\n    .pipe(res)\n})\n\nserver.listen(3000)\n```\n\n## License\n\n[MIT](LICENSE)\n\n[coveralls-image]: https://badgen.net/coveralls/c/github/pillarjs/send/master\n[coveralls-url]: https://coveralls.io/r/pillarjs/send?branch=master\n[github-actions-ci-image]: https://badgen.net/github/checks/pillarjs/send/master?label=linux\n[github-actions-ci-url]: https://github.com/pillarjs/send/actions/workflows/ci.yml\n[node-image]: https://badgen.net/npm/node/send\n[node-url]: https://nodejs.org/en/download/\n[npm-downloads-image]: https://badgen.net/npm/dm/send\n[npm-url]: https://npmjs.org/package/send\n[npm-version-image]: https://badgen.net/npm/v/send\n",
  "readmeFilename": "README.md",
  "users": {
   "xuu": true,

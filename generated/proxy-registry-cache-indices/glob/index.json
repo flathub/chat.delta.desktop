@@ -1,12 +1,12 @@
 {
  "_id": "glob",
- "_rev": "877-198841cb5500e94754ec2654a10e9674",
+ "_rev": "879-5463d930d46fb5a7d51903c551a3bec4",
  "name": "glob",
  "dist-tags": {
   "legacy": "4.5.3",
   "v7-legacy": "7.2.0",
-  "latest": "11.0.1",
-  "legacy-v10": "10.4.5"
+  "legacy-v10": "10.4.5",
+  "latest": "11.0.2"
  },
  "versions": {
   "1.1.0": {
@@ -14313,6 +14313,144 @@
    }
   },
   "11.0.1": {
+   "name": "glob",
+   "version": "11.0.1",
+   "author": {
+    "url": "https://blog.izs.me/",
+    "name": "Isaac Z. Schlueter",
+    "email": "i@izs.me"
+   },
+   "license": "ISC",
+   "_id": "glob@11.0.1",
+   "maintainers": [
+    {
+     "name": "isaacs",
+     "email": "i@izs.me"
+    }
+   ],
+   "homepage": "https://github.com/isaacs/node-glob#readme",
+   "bugs": {
+    "url": "https://github.com/isaacs/node-glob/issues"
+   },
+   "bin": {
+    "glob": "dist/esm/bin.mjs"
+   },
+   "tap": {
+    "before": "test/00-setup.ts"
+   },
+   "dist": {
+    "shasum": "1c3aef9a59d680e611b53dcd24bb8639cef064d9",
+    "tarball": "http://localhost:3000/glob/-/glob-11.0.1.tgz",
+    "fileCount": 65,
+    "integrity": "sha512-zrQDm8XPnYEKawJScsnM0QzobJxlT/kHOOlRTio8IH/GrmxRE5fjllkzdaHclIuNjUQTJYH2xHNIGfdpJkDJUw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCRMPoRGaOPAFRkCkjAol1Dr2kg/XLZZuZxrQT7upupUAIgd0Wcmg/p8rqxZnmdWkD6IqXkIZOQuu0uWZa7+hx4NFk=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 474698
+   },
+   "main": "./dist/commonjs/index.js",
+   "tshy": {
+    "main": true,
+    "exports": {
+     ".": "./src/index.ts",
+     "./package.json": "./package.json"
+    }
+   },
+   "type": "module",
+   "types": "./dist/commonjs/index.d.ts",
+   "module": "./dist/esm/index.js",
+   "engines": {
+    "node": "20 || >=22"
+   },
+   "exports": {
+    ".": {
+     "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+     },
+     "require": {
+      "types": "./dist/commonjs/index.d.ts",
+      "default": "./dist/commonjs/index.js"
+     }
+    },
+    "./package.json": "./package.json"
+   },
+   "funding": {
+    "url": "https://github.com/sponsors/isaacs"
+   },
+   "gitHead": "148ef611eec9454201b1f2e81721e6fa00582043",
+   "scripts": {
+    "prof": "bash prof.sh",
+    "snap": "tap",
+    "test": "tap",
+    "bench": "bash benchmark.sh",
+    "format": "prettier --write . --log-level warn",
+    "prepare": "tshy",
+    "preprof": "npm run prepare",
+    "presnap": "npm run prepare",
+    "pretest": "npm run prepare",
+    "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts",
+    "prebench": "npm run prepare",
+    "profclean": "rm -f v8.log profile.txt",
+    "benchclean": "node benchclean.cjs",
+    "preversion": "npm test",
+    "test-regen": "npm run profclean && TEST_REGEN=1 node --no-warnings --loader ts-node/esm test/00-setup.ts",
+    "postversion": "npm publish",
+    "prepublishOnly": "npm run benchclean; git push origin --follow-tags"
+   },
+   "_npmUser": {
+    "name": "isaacs",
+    "email": "i@izs.me"
+   },
+   "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "endOfLine": "lf",
+    "printWidth": 75,
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "bracketSameLine": true,
+    "experimentalTernaries": true
+   },
+   "repository": {
+    "url": "git://github.com/isaacs/node-glob.git",
+    "type": "git"
+   },
+   "_npmVersion": "11.0.0",
+   "description": "the most correct and second fastest glob implementation in JavaScript",
+   "directories": {},
+   "_nodeVersion": "22.10.0",
+   "dependencies": {
+    "minipass": "^7.1.2",
+    "jackspeak": "^4.0.1",
+    "minimatch": "^10.0.0",
+    "path-scurry": "^2.0.0",
+    "foreground-child": "^3.1.0",
+    "package-json-from-dist": "^1.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^20.0.3",
+    "tshy": "^2.0.1",
+    "memfs": "^4.9.3",
+    "mkdirp": "^3.0.1",
+    "rimraf": "^5.0.7",
+    "typedoc": "^0.26.3",
+    "prettier": "^3.2.5",
+    "@types/node": "^20.11.30",
+    "sync-content": "^1.0.2"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/glob_11.0.1_1736492276681_0.9105813103256173",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "11.0.2": {
    "author": {
     "name": "Isaac Z. Schlueter",
     "email": "i@izs.me",
@@ -14320,7 +14458,7 @@
    },
    "name": "glob",
    "description": "the most correct and second fastest glob implementation in JavaScript",
-   "version": "11.0.1",
+   "version": "11.0.2",
    "type": "module",
    "tshy": {
     "main": true,
@@ -14412,24 +14550,24 @@
     "node": "20 || >=22"
    },
    "module": "./dist/esm/index.js",
-   "_id": "glob@11.0.1",
-   "gitHead": "148ef611eec9454201b1f2e81721e6fa00582043",
+   "_id": "glob@11.0.2",
+   "gitHead": "fd61f2410b4356f202f645661cfa175152702ae6",
    "bugs": {
     "url": "https://github.com/isaacs/node-glob/issues"
    },
    "homepage": "https://github.com/isaacs/node-glob#readme",
-   "_nodeVersion": "22.10.0",
-   "_npmVersion": "11.0.0",
+   "_nodeVersion": "22.14.0",
+   "_npmVersion": "11.2.0",
    "dist": {
-    "integrity": "sha512-zrQDm8XPnYEKawJScsnM0QzobJxlT/kHOOlRTio8IH/GrmxRE5fjllkzdaHclIuNjUQTJYH2xHNIGfdpJkDJUw==",
-    "shasum": "1c3aef9a59d680e611b53dcd24bb8639cef064d9",
-    "tarball": "http://localhost:3000/glob/-/glob-11.0.1.tgz",
+    "integrity": "sha512-YT7U7Vye+t5fZ/QMkBFrTJ7ZQxInIUjwyAjVj84CYXqgBdv30MFUPGnBR6sQaVq6Is15wYJUsnzTuWaGRBhBAQ==",
+    "shasum": "3261e3897bbc603030b041fd77ba636022d51ce0",
+    "tarball": "http://localhost:3000/glob/-/glob-11.0.2.tgz",
     "fileCount": 65,
-    "unpackedSize": 474698,
+    "unpackedSize": 475202,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCRMPoRGaOPAFRkCkjAol1Dr2kg/XLZZuZxrQT7upupUAIgd0Wcmg/p8rqxZnmdWkD6IqXkIZOQuu0uWZa7+hx4NFk="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQD/ZyBt39C3+GkMm0w7HCJAp3Z+4JSBaCdQPtbjY03XUAIhAK95oN96+s5VA0wcLx+1IrolGiYPNmJKS1dIkSGB0O5p"
      }
     ]
    },
@@ -14446,18 +14584,18 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/glob_11.0.1_1736492276681_0.9105813103256173"
+    "tmp": "tmp/glob_11.0.2_1745424153865_0.21973167595933418"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2011-01-02T22:10:36.356Z",
-  "modified": "2025-01-10T06:57:57.074Z",
+  "modified": "2025-04-23T16:02:34.331Z",
+  "1.0.0": "2011-01-02T22:10:36.356Z",
+  "1.0.2": "2011-01-02T22:10:36.356Z",
   "1.0.1": "2011-01-02T22:10:36.356Z",
   "1.0.3": "2011-01-02T22:10:36.356Z",
-  "1.0.2": "2011-01-02T22:10:36.356Z",
-  "1.0.0": "2011-01-02T22:10:36.356Z",
   "1.1.0": "2011-01-13T20:36:17.606Z",
   "2.0.0": "2011-02-19T21:35:22.467Z",
   "2.0.1": "2011-02-20T20:02:51.964Z",
@@ -14625,7 +14763,8 @@
   "10.4.4": "2024-07-08T22:14:30.257Z",
   "11.0.0": "2024-07-08T22:16:14.838Z",
   "10.4.5": "2024-07-09T08:15:43.379Z",
-  "11.0.1": "2025-01-10T06:57:56.875Z"
+  "11.0.1": "2025-01-10T06:57:56.875Z",
+  "11.0.2": "2025-04-23T16:02:34.141Z"
  },
  "bugs": {
   "url": "https://github.com/isaacs/node-glob/issues"
