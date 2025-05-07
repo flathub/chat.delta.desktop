@@ -1,9 +1,9 @@
 {
  "_id": "@electron/osx-sign",
- "_rev": "14-5e87756452b8944a31c0e6daa7be67a2",
+ "_rev": "16-21f3de3c38d0971cb2721d705d7f2b5e",
  "name": "@electron/osx-sign",
  "dist-tags": {
-  "latest": "1.3.3"
+  "latest": "2.0.0"
  },
  "versions": {
   "1.0.0": {
@@ -1067,12 +1067,127 @@
   "1.3.3": {
    "name": "@electron/osx-sign",
    "version": "1.3.3",
-   "description": "Codesign Electron macOS apps",
-   "main": "dist/cjs/index.js",
-   "module": "dist/esm/index.js",
+   "author": {
+    "name": "electron"
+   },
+   "license": "BSD-2-Clause",
+   "_id": "@electron/osx-sign@1.3.3",
+   "maintainers": [
+    {
+     "name": "electron-cfa",
+     "email": "info+cfa-npm@electronjs.org"
+    }
+   ],
+   "homepage": "https://github.com/electron/osx-sign",
+   "bugs": {
+    "url": "https://github.com/electron/osx-sign/issues"
+   },
    "bin": {
     "electron-osx-flat": "bin/electron-osx-flat.js",
     "electron-osx-sign": "bin/electron-osx-sign.js"
+   },
+   "dist": {
+    "shasum": "af751510488318d9f7663694af85819690d75583",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.3.3.tgz",
+    "fileCount": 61,
+    "integrity": "sha512-KZ8mhXvWv2rIEgMbWZ4y33bDHyUKMXnx4M0sTyPNK/vcB81ImdeY9Ggdqy0SWbMDgmbqyQ+phgejh6V3R2QuSg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQD6833B+0eBGlP6FM0myVv9s4CHk9LEl6jgJnggUHAMjwIgeputT6C+OPbevZqXaB5yVyevrYz/MV6KUt5QOTqtV8Q=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fosx-sign@1.3.3",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 196472
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=12.0.0"
+   },
+   "gitHead": "087ddb68ac73c223837bfe456c38078b395769a6",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "yarn lint && tape test",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "pretest": "rimraf test/work",
+    "docs:build": "npx typedoc",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmUser": {
+    "name": "electron-cfa",
+    "email": "info+cfa-npm@electronjs.org"
+   },
+   "standard": {
+    "ignore": [
+     "test/work"
+    ]
+   },
+   "repository": {
+    "url": "git+https://github.com/electron/osx-sign.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Codesign Electron macOS apps",
+   "directories": {},
+   "_nodeVersion": "20.18.3",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "plist": "^3.0.5",
+    "fs-extra": "^10.0.0",
+    "minimist": "^1.2.6",
+    "isbinaryfile": "^4.0.8",
+    "compare-version": "^0.1.2"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tape": "^4.7.1",
+    "eslint": "^8.29.0",
+    "mkdirp": "^1.0.4",
+    "rimraf": "^3.0.2",
+    "typedoc": "~0.25.13",
+    "standard": "^17.0.0",
+    "run-series": "^1.1.9",
+    "typescript": "^4.9.3",
+    "@types/node": "^16.11.6",
+    "extract-zip": "^2.0.1",
+    "@types/debug": "^4.1.7",
+    "@types/plist": "^3.0.2",
+    "@electron/get": "^2.0.2",
+    "run-waterfall": "^1.1.7",
+    "@types/fs-extra": "^9.0.13",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^7.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "@types/compare-version": "^0.1.31",
+    "eslint-config-standard": "^17.0.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/osx-sign_1.3.3_1741138562610_0.028639111139024065",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.0.0": {
+   "name": "@electron/osx-sign",
+   "version": "2.0.0",
+   "description": "Codesign Electron macOS apps",
+   "type": "module",
+   "exports": "./dist/index.js",
+   "bin": {
+    "electron-osx-flat": "bin/electron-osx-flat.mjs",
+    "electron-osx-sign": "bin/electron-osx-sign.mjs"
    },
    "repository": {
     "type": "git",
@@ -1090,67 +1205,66 @@
    },
    "homepage": "https://github.com/electron/osx-sign",
    "dependencies": {
-    "compare-version": "^0.1.2",
+    "@types/graceful-fs": "^4.1.9",
     "debug": "^4.3.4",
-    "fs-extra": "^10.0.0",
+    "graceful-fs": "^4.2.11",
     "isbinaryfile": "^4.0.8",
-    "minimist": "^1.2.6",
-    "plist": "^3.0.5"
+    "plist": "^3.0.5",
+    "semver": "^7.7.1"
    },
    "devDependencies": {
-    "@electron/get": "^2.0.2",
-    "@types/compare-version": "^0.1.31",
+    "@electron/get": "^4.0.0",
+    "@tsconfig/node22": "^22.0.0",
     "@types/debug": "^4.1.7",
-    "@types/fs-extra": "^9.0.13",
-    "@types/node": "^16.11.6",
+    "@types/node": "~22.10.7",
     "@types/plist": "^3.0.2",
-    "@typescript-eslint/eslint-plugin": "^5.45.0",
-    "@typescript-eslint/parser": "^5.45.0",
-    "eslint": "^8.29.0",
-    "eslint-config-eslint": "^7.0.0",
-    "eslint-config-standard": "^17.0.0",
+    "@types/semver": "^7.5.8",
+    "@typescript-eslint/eslint-plugin": "^8.27.0",
+    "@typescript-eslint/parser": "^8.27.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-import-resolver-typescript": "^4.2.2",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "extract-zip": "^2.0.1",
-    "mkdirp": "^1.0.4",
-    "rimraf": "^3.0.2",
-    "run-series": "^1.1.9",
-    "run-waterfall": "^1.1.7",
-    "standard": "^17.0.0",
-    "tape": "^4.7.1",
+    "husky": "^9.1.7",
+    "prettier": "^3.5.3",
     "typedoc": "~0.25.13",
-    "typescript": "^4.9.3"
+    "typescript": "~5.4.5",
+    "vitest": "^3.0.9"
    },
    "scripts": {
-    "build": "tsc && tsc -p tsconfig.esm.json",
-    "docs:build": "npx typedoc",
-    "lint": "eslint --ext .ts,.js src bin test",
-    "pretest": "rimraf test/work",
-    "test": "yarn lint && tape test",
-    "prepublishOnly": "yarn build"
-   },
-   "standard": {
-    "ignore": [
-     "test/work"
-    ]
+    "build": "tsc",
+    "build:docs": "npx typedoc",
+    "lint": "prettier --check **/*.{ts,mjs} && eslint --ext .ts,.mjs src bin spec",
+    "pretest": "node -e 'fs.rmSync(\"spec/work\", { recursive: true, force: true })'",
+    "test": "vitest run",
+    "prepublishOnly": "yarn build",
+    "prepare": "husky"
    },
    "engines": {
-    "node": ">=12.0.0"
+    "node": ">=22.12.0"
    },
-   "_id": "@electron/osx-sign@1.3.3",
-   "gitHead": "087ddb68ac73c223837bfe456c38078b395769a6",
-   "types": "./dist/cjs/index.d.ts",
-   "_nodeVersion": "20.18.3",
-   "_npmVersion": "10.8.2",
+   "lint-staged": {
+    "*.{json}": "prettier --write",
+    "*.{js,ts}": [
+     "prettier --write",
+     "eslint --fix"
+    ]
+   },
+   "_id": "@electron/osx-sign@2.0.0",
+   "gitHead": "929ed187c4be1dc6ba3eab25a84efb68451c6a9e",
+   "_nodeVersion": "22.12.0",
+   "_npmVersion": "10.9.0",
    "dist": {
-    "integrity": "sha512-KZ8mhXvWv2rIEgMbWZ4y33bDHyUKMXnx4M0sTyPNK/vcB81ImdeY9Ggdqy0SWbMDgmbqyQ+phgejh6V3R2QuSg==",
-    "shasum": "af751510488318d9f7663694af85819690d75583",
-    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.3.3.tgz",
-    "fileCount": 61,
-    "unpackedSize": 196472,
+    "integrity": "sha512-jZSzWH21QYbdTy2QxMMtRFlMafyuBRH5EnpC1LJU3uaQV05oo7ldtBRcSI/Eznhw9kFWjjCf2RvC+Nxc1/kQyA==",
+    "shasum": "97821bae15b0aa229ae42808ddb427814a1a472c",
+    "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-2.0.0.tgz",
+    "fileCount": 37,
+    "unpackedSize": 100700,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fosx-sign@1.3.3",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fosx-sign@2.0.0",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -1158,7 +1272,7 @@
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQD6833B+0eBGlP6FM0myVv9s4CHk9LEl6jgJnggUHAMjwIgeputT6C+OPbevZqXaB5yVyevrYz/MV6KUt5QOTqtV8Q="
+      "sig": "MEQCICkPifRs0pUW+fnIBsdNh56ma4OWXR7eTqsvI8e9KbI9AiBLS0RCSwyDlohnL3bjMfrZiqFSDQ4QokKPfpJ4fxEruA=="
      }
     ]
    },
@@ -1175,14 +1289,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/osx-sign_1.3.3_1741138562610_0.028639111139024065"
+    "tmp": "tmp/osx-sign_2.0.0_1743803568992_0.05270883103899626"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2022-03-24T07:39:04.390Z",
-  "modified": "2025-03-05T01:36:03.239Z",
+  "modified": "2025-04-04T21:52:49.759Z",
   "1.0.0": "2022-03-24T07:39:04.591Z",
   "1.0.1": "2022-03-24T07:40:30.337Z",
   "1.0.2": "2022-12-04T11:53:14.864Z",
@@ -1193,7 +1307,8 @@
   "1.3.0": "2024-05-15T02:09:46.307Z",
   "1.3.1": "2024-07-04T17:56:24.046Z",
   "1.3.2": "2024-12-31T00:19:24.824Z",
-  "1.3.3": "2025-03-05T01:36:02.768Z"
+  "1.3.3": "2025-03-05T01:36:02.768Z",
+  "2.0.0": "2025-04-04T21:52:49.299Z"
  },
  "bugs": {
   "url": "https://github.com/electron/osx-sign/issues"
@@ -1214,6 +1329,6 @@
    "email": "info+cfa-npm@electronjs.org"
   }
  ],
- "readme": "# @electron/osx-sign [![npm][npm_img]][npm_url] [![Test][gha_img]][gha_url]\n\nCodesign Electron macOS apps\n\n## About\n\n[`@electron/osx-sign`][electron-osx-sign] minimizes the extra work needed to eventually prepare\nyour apps for shipping, providing options that work out of the box for most applications.\nAdditional configuration is available via its API.\n\nThere are two main functionalities exposed via this package:\n* Signing macOS apps via `sign` functions. Under the hood, this uses the `codesign` utility.\n* Creating `.pkg` installer packages via `flat` functions. Under the hood, this uses the `productbuild` utility.\n\n## Installation\n\n`@electron/osx-sign` is integrated into other Electron packaging tools, and can be configured accordingly:\n* [Electron Packager](https://electron.github.io/packager/main/types/OsxSignOptions.html)\n* [Electron Forge](https://www.electronforge.io/guides/code-signing/code-signing-macos)\n\nYou can also install `@electron/osx-sign` separately if your packaging pipeline does not involve those tools:\n\n```sh\nnpm install --save-dev @electron/osx-sign\n```\n\n## Code signing\n\nThe signing procedure implemented in this package is based on what described in Electron's [Code Signing Guide](https://github.com/electron/electron/blob/main/docs/tutorial/code-signing.md).\n\n### Prerequisites\n\n* You must be a registered member of the [Apple Developer Program](https://developer.apple.com/programs/).\n  Please note that you could be charged by Apple in order to get issued with the required certificates.\n* You must have [Xcode](https://developer.apple.com/xcode/) installed from the\n  [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835). It is not recommended to download your\n  copy from other 3rd party sources for security reasons.\n* You must have Xcode Command Line Tools installed. To check whether it is available,\n  try `xcode-select --install` and follow the instructions.\n* To distribute your app on the Mac App Store, You must create a Mac App on [App Store Connect](https://appstoreconnect.apple.com/).\n* You must give your app a unique Bundle ID.\n* You must give your app a version number.\n\n### Certificates\n\nIn order to distribute your application either inside or outside the Mac App Store,\nyou will have to have the following certificates from Apple after becoming a registered developer.\n\nCertificates can be created through the\n[Certificates, Identities & Profiles](https://developer.apple.com/account/resources/certificates/add)\npage in the Apple Developer website or via [Account Preferences in Xcode](https://help.apple.com/xcode/mac/current/#/dev3a05256b8).\n\nFor distribution inside the Mac App Store, you will need to create:\n* Mac App Distribution: `3rd Party Mac Developer Application: * (*)`\n* Mac Installer Distribution: `3rd Party Mac Developer Installer: * (*)`\n\nFor distribution outside the Mac App Store:\n* Developer ID Application: `Developer ID Application: * (*)`\n* Developer ID Installer: `Developer ID Installer: * (*)`\n\nAfter you create the necessary certifications, download them and open each so that they are\ninstalled in your keychain. We recommend installing them in your system default keychain so\nthat `@electron/osx-sign` can detect them automatically.\n\n**Note:** They appear to come in pairs. It is preferred to have every one of them installed so not to \nare about which is not yet installed for future works. However, if you may only want to distribute\noutside the Mac App Store, there is no need to have the 3rd Party Mac Developer ones installed and vice versa.\n\n### API\n\n```javascript\nconst { signAsync } = require('@electron/osx-sign')\nconst opts = {\n  app: 'path/to/my.app'\n};\nsignAsync(opts)\n  .then(function () {\n    // Application signed\n  })\n  .catch(function (err) {\n    // Handle the error\n  })\n```\n\nThe only mandatory option for `signAsync` is a path to your `.app` package.\nConfiguration for most Electron apps should work out of the box.\nFor full configuration options, see the [API documentation].\n\n### Usage examples\n\n#### Signing for Mac App Store distribution\n\n```javascript\nconst { signAsync } = require('@electron/osx-sign')\nconst opts = {\n  app: 'path/to/my.app',\n  // optional parameters for additional customization\n  platform: \"mas\", // should be auto-detected if your app was packaged for MAS via Packager or Forge\n  type: \"distribution\", // defaults to \"distribution\" for submission to App Store Connect\n  provisioningProfile: 'path/to/my.provisionprofile', // defaults to the current working directory\n  keychain: 'my-keychain', // defaults to the system default login keychain\n};\nsignAsync(opts)\n  .then(function () {\n    // Application signed\n  })\n  .catch(function (err) {\n    // Handle the error\n  })\n```\n\nMac App Store apps require a [Provisioning Profile](https://www.electronjs.org/docs/latest/tutorial/mac-app-store-submission-guide#prepare-provisioning-profile)\nfor submission to App Store Connect. We recommend having the provisioning profile for distribution\nplaced in the current working directory and the signing identity installed in the default keychain.\n\nThe app is not expected to run after codesigning since there is no provisioned device, and it is\nintended only for submission to App Store Connect. Since `@electron/osx-sign` adds the entry\n`com.apple.developer.team-identifier` to a temporary copy of the specified entitlements file\n(with the default option `preAutoEntitlements`), distribution builds can no longer be run directly.\n\nTo run an app codesigned for distribution locally after codesigning, you may manually add\n`ElectronTeamID` in your `Info.plist` and `com.apple.security.application-groups` in the\nentitlements file, and set `preAutoEntitlements: false` for `@electron/osx-sign` to avoid\nthis extra bit. Note that \"certain features are only allowed across apps whose team-identifier value match\"\n([Technical Note TN2415](https://developer.apple.com/library/content/technotes/tn2415/_index.html#//apple_ref/doc/uid/DTS40016427-CH1-ENTITLEMENTSLIST)).\n\nAlternatively, set the app's `type` to `development` to codesign a development version of your app,\nwhich will allow it to be run on your development provisioned machine. Apps signed for development\nwill not be eligible for submission via App Store Connect.\n\n#### Signing with `--deep`\n\nSome subresources that you may include in your Electron app may need to be signed with `--deep`.\nThis is not typically safe to apply to the entire Electron app and therefore should be applied to _just_ your file.\n\n```javascript\nsignAsync({\n  app: 'path/to/my.app',\n  optionsForFile: (filePath) => {\n    // For our one specific file we can pass extra options to be merged\n    // with the default options\n    if (path.basename(filePath) === 'myStrangeFile.jar') {\n      return {\n        additionalArguments: ['--deep'],\n      };\n    }\n\n    // Just use the default options for everything else\n    return null;\n  },\n});\n```\n\n#### Signing legacy versions of Electron\n\n`@electron/osx-sign` maintains backwards compatibility with older versions of Electron, but\ngenerally assumes that you are on the latest stable version.\n\nIf you are running an older unsupported version of Electron, you should pass in the `version`\noption as such:\n\n```javascript\nsignAsync({\n  app: 'path/to/my.app',\n  version: '0.34.0',\n});\n```\n\n## Flat installer packaging\n\nThis module also handles the creation of flat installer packages (`.pkg` installers).\n\n> [!NOTE]\n> Modern `.pkg` installers are also named \"flat\" packages for historical purposes. Prior\n> to Mac OS X Leopard (10.5), installation packages were organized in hierarchical\n> directories. OS X Leopard introduced a new flat package format that is used for modern\n> `.pkg` installers.\n\n### API usage\n\n```javascript\nconst { flatAsync } = require('@electron/osx-sign')\nflatAsync({\n  app: 'path/to/my.app'\n})\n  .then(function () {\n    // Application flattened\n  })\n  .catch(function (err) {\n    // Handle the error\n  })\n```\n\nThe only mandatory option for `flatAsync` is a path to your `.app` package.\nFor full configuration options, see the [API documentation].\n\n## CLI\n\n`@electron/osx-sign` also exposes a legacy command-line interface (CLI) for both signing\nand installer generation. However, we recommend using the JavaScript API as it has a more\ncomplete API surface (e.g. `optionsForFile` is only available via JS).\n\n```sh\n# install the package locally into devDependencies\nnpm install --save-dev @electron/osx-sign\n\n# Sign a packaged .app bundle\nnpx electron-osx-sign path/to/my.app [options ...]\n\n# Create a .pkg installer from a packaged .app bundle\nnpx electron-osx-flat path/to/my.app [options ...]\n```\n\nFor full options, use the `--help` flag for either command.\n\n\n## Debug\n\nThe [`debug`](https://www.npmjs.com/package/debug) module is used to display advanced logs and messages.\nIf you are having problems with signing your app with `@electron/osx-sign`, run your signing scripts with\nthe `DEBUG=electron-osx-sign*` environment variable.\n\n## Test\n\nThe project's configured to run automated tests on CircleCI.\n\nIf you wish to manually test the module, first comment out `opts.identity` in `test/basic.js` to enable\nauto discovery. Then run the command `npm test` from the dev directory.\n\nWhen this command is run for the first time: `@electron/get` will download macOS Electron releases defined\nin `test/config.json`, and save to `~/.electron/`, which might take up less than 1GB of disk space.\n\nA successful testing should look something like:\n\n```\n$ npm test\n\n> electron-osx-sign@0.4.17 pretest electron-osx-sign\n> rimraf test/work\n\n> electron-osx-sign@0.4.17 test electron-osx-sign\n> standard && tape test\n\nCalling @electron/get before running tests...\nRunning tests...\nTAP version 13\n# setup\n# defaults-test:v7.0.0-beta.3-darwin-x64\nok 1 app signed\n# defaults-test:v7.0.0-beta.3-mas-x64\nok 2 app signed\n# defaults-test:v6.0.3-darwin-x64\nok 3 app signed\n# defaults-test:v6.0.3-mas-x64\nok 4 app signed\n# defaults-test:v5.0.10-darwin-x64\nok 5 app signed\n# defaults-test:v5.0.10-mas-x64\nok 6 app signed\n# defaults-test:v4.2.9-darwin-x64\nok 7 app signed\n# defaults-test:v4.2.9-mas-x64\nok 8 app signed\n# defaults-test:v3.1.2-darwin-x64\nok 9 app signed\n# defaults-test:v3.1.2-mas-x64\nok 10 app signed\n# teardown\n\n1..10\n# tests 10\n# pass  10\n\n# ok\n```\n\n[Electron]: https://github.com/electron/electron\n[electron-osx-sign]: https://github.com/electron/osx-sign\n[npm_img]: https://img.shields.io/npm/v/@electron/osx-sign.svg\n[npm_url]: https://npmjs.org/package/@electron/osx-sign\n[gha_img]: https://github.com/electron/osx-sign/actions/workflows/test.yml/badge.svg\n[gha_url]: https://github.com/electron/osx-sign/actions/workflows/test.yml\n",
+ "readme": "# @electron/osx-sign [![npm][npm_img]][npm_url] [![Test][gha_img]][gha_url]\n\nCodesign Electron macOS apps\n\n## About\n\n[`@electron/osx-sign`][electron-osx-sign] minimizes the extra work needed to eventually prepare\nyour apps for shipping, providing options that work out of the box for most applications.\nAdditional configuration is available via its API.\n\nThere are two main functionalities exposed via this package:\n* Signing macOS apps via `sign` functions. Under the hood, this uses the `codesign` utility.\n* Creating `.pkg` installer packages via `flat` functions. Under the hood, this uses the `productbuild` utility.\n\n## Installation\n\n`@electron/osx-sign` is integrated into other Electron packaging tools, and can be configured accordingly:\n* [Electron Packager](https://electron.github.io/packager/main/types/OsxSignOptions.html)\n* [Electron Forge](https://www.electronforge.io/guides/code-signing/code-signing-macos)\n\nYou can also install `@electron/osx-sign` separately if your packaging pipeline does not involve those tools:\n\n```sh\nnpm install --save-dev @electron/osx-sign\n```\n\n## Code signing\n\nThe signing procedure implemented in this package is based on what described in Electron's [Code Signing Guide](https://github.com/electron/electron/blob/main/docs/tutorial/code-signing.md).\n\n### Prerequisites\n\n* You must be a registered member of the [Apple Developer Program](https://developer.apple.com/programs/).\n  Please note that you could be charged by Apple in order to get issued with the required certificates.\n* You must have [Xcode](https://developer.apple.com/xcode/) installed from the\n  [Mac App Store](https://apps.apple.com/us/app/xcode/id497799835). It is not recommended to download your\n  copy from other 3rd party sources for security reasons.\n* You must have Xcode Command Line Tools installed. To check whether it is available,\n  try `xcode-select --install` and follow the instructions.\n* To distribute your app on the Mac App Store, You must create a Mac App on [App Store Connect](https://appstoreconnect.apple.com/).\n* You must give your app a unique Bundle ID.\n* You must give your app a version number.\n\n### Certificates\n\nIn order to distribute your application either inside or outside the Mac App Store,\nyou will have to have the following certificates from Apple after becoming a registered developer.\n\nCertificates can be created through the\n[Certificates, Identities & Profiles](https://developer.apple.com/account/resources/certificates/add)\npage in the Apple Developer website or via [Account Preferences in Xcode](https://help.apple.com/xcode/mac/current/#/dev3a05256b8).\n\nFor distribution inside the Mac App Store, you will need to create:\n* Mac App Distribution: `3rd Party Mac Developer Application: * (*)`\n* Mac Installer Distribution: `3rd Party Mac Developer Installer: * (*)`\n\nFor distribution outside the Mac App Store:\n* Developer ID Application: `Developer ID Application: * (*)`\n* Developer ID Installer: `Developer ID Installer: * (*)`\n\nAfter you create the necessary certifications, download them and open each so that they are\ninstalled in your keychain. We recommend installing them in your system default keychain so\nthat `@electron/osx-sign` can detect them automatically.\n\n**Note:** They appear to come in pairs. It is preferred to have every one of them installed so not to \nare about which is not yet installed for future works. However, if you may only want to distribute\noutside the Mac App Store, there is no need to have the 3rd Party Mac Developer ones installed and vice versa.\n\n### API\n\n```javascript\nimport { sign } = from '@electron/osx-sign'\nconst opts = {\n  app: 'path/to/my.app'\n};\nsign(opts)\n  .then(function () {\n    // Application signed\n  })\n  .catch(function (err) {\n    // Handle the error\n  })\n```\n\nThe only mandatory option for `sign` is a path to your `.app` package.\nConfiguration for most Electron apps should work out of the box.\nFor full configuration options, see the [API documentation].\n\n### Usage examples\n\n#### Signing for Mac App Store distribution\n\n```javascript\nimport { sign } from '@electron/osx-sign'\nconst opts = {\n  app: 'path/to/my.app',\n  // optional parameters for additional customization\n  platform: \"mas\", // should be auto-detected if your app was packaged for MAS via Packager or Forge\n  type: \"distribution\", // defaults to \"distribution\" for submission to App Store Connect\n  provisioningProfile: 'path/to/my.provisionprofile', // defaults to the current working directory\n  keychain: 'my-keychain', // defaults to the system default login keychain\n};\nsign(opts)\n  .then(function () {\n    // Application signed\n  })\n  .catch(function (err) {\n    // Handle the error\n  })\n```\n\nMac App Store apps require a [Provisioning Profile](https://www.electronjs.org/docs/latest/tutorial/mac-app-store-submission-guide#prepare-provisioning-profile)\nfor submission to App Store Connect. We recommend having the provisioning profile for distribution\nplaced in the current working directory and the signing identity installed in the default keychain.\n\nThe app is not expected to run after codesigning since there is no provisioned device, and it is\nintended only for submission to App Store Connect. Since `@electron/osx-sign` adds the entry\n`com.apple.developer.team-identifier` to a temporary copy of the specified entitlements file\n(with the default option `preAutoEntitlements`), distribution builds can no longer be run directly.\n\nTo run an app codesigned for distribution locally after codesigning, you may manually add\n`ElectronTeamID` in your `Info.plist` and `com.apple.security.application-groups` in the\nentitlements file, and set `preAutoEntitlements: false` for `@electron/osx-sign` to avoid\nthis extra bit. Note that \"certain features are only allowed across apps whose team-identifier value match\"\n([Technical Note TN2415](https://developer.apple.com/library/content/technotes/tn2415/_index.html#//apple_ref/doc/uid/DTS40016427-CH1-ENTITLEMENTSLIST)).\n\nAlternatively, set the app's `type` to `development` to codesign a development version of your app,\nwhich will allow it to be run on your development provisioned machine. Apps signed for development\nwill not be eligible for submission via App Store Connect.\n\n#### Signing with `--deep`\n\nSome subresources that you may include in your Electron app may need to be signed with `--deep`.\nThis is not typically safe to apply to the entire Electron app and therefore should be applied to _just_ your file.\n\n```javascript\nsign({\n  app: 'path/to/my.app',\n  optionsForFile: (filePath) => {\n    // For our one specific file we can pass extra options to be merged\n    // with the default options\n    if (path.basename(filePath) === 'myStrangeFile.jar') {\n      return {\n        additionalArguments: ['--deep'],\n      };\n    }\n\n    // Just use the default options for everything else\n    return null;\n  },\n});\n```\n\n#### Signing legacy versions of Electron\n\n`@electron/osx-sign` maintains backwards compatibility with older versions of Electron, but\ngenerally assumes that you are on the latest stable version.\n\nIf you are running an older unsupported version of Electron, you should pass in the `version`\noption as such:\n\n```javascript\nsign({\n  app: 'path/to/my.app',\n  version: '0.34.0',\n});\n```\n\n## Flat installer packaging\n\nThis module also handles the creation of flat installer packages (`.pkg` installers).\n\n> [!NOTE]\n> Modern `.pkg` installers are also named \"flat\" packages for historical purposes. Prior\n> to Mac OS X Leopard (10.5), installation packages were organized in hierarchical\n> directories. OS X Leopard introduced a new flat package format that is used for modern\n> `.pkg` installers.\n\n### API usage\n\n```javascript\nimport { flat } = '@electron/osx-sign'\nflat({\n  app: 'path/to/my.app'\n})\n  .then(function () {\n    // Application flattened\n  })\n  .catch(function (err) {\n    // Handle the error\n  })\n```\n\nThe only mandatory option for `flat` is a path to your `.app` package.\nFor full configuration options, see the [API documentation].\n\n## CLI\n\n`@electron/osx-sign` also exposes a legacy command-line interface (CLI) for both signing\nand installer generation. However, we recommend using the JavaScript API as it has a more\ncomplete API surface (e.g. `optionsForFile` is only available via JS).\n\n```sh\n# install the package locally into devDependencies\nnpm install --save-dev @electron/osx-sign\n\n# Sign a packaged .app bundle\nnpx electron-osx-sign path/to/my.app [options ...]\n\n# Create a .pkg installer from a packaged .app bundle\nnpx electron-osx-flat path/to/my.app [options ...]\n```\n\nFor full options, use the `--help` flag for either command.\n\n\n## Debug\n\nThe [`debug`](https://www.npmjs.com/package/debug) module is used to display advanced logs and messages.\nIf you are having problems with signing your app with `@electron/osx-sign`, run your signing scripts with\nthe `DEBUG=electron-osx-sign*` environment variable.\n\n## Test\n\nThe project's configured to run automated tests on GitHub Actions.\n\nIf you wish to manually test the module, you need to first generate a self-signed certificate\nvia the `spec/ci/generate-identity.sh` script.\n\n[Electron]: https://github.com/electron/electron\n[electron-osx-sign]: https://github.com/electron/osx-sign\n[npm_img]: https://img.shields.io/npm/v/@electron/osx-sign.svg\n[npm_url]: https://npmjs.org/package/@electron/osx-sign\n[gha_img]: https://github.com/electron/osx-sign/actions/workflows/test.yml/badge.svg\n[gha_url]: https://github.com/electron/osx-sign/actions/workflows/test.yml\n",
  "readmeFilename": "README.md"
 }

@@ -1,9 +1,9 @@
 {
  "_id": "copy-anything",
- "_rev": "31-9201cefb56a82a9b33b2e9121b524a66",
+ "_rev": "34-c5f1b14d3c868c7e55b940d65f4102e6",
  "name": "copy-anything",
  "dist-tags": {
-  "latest": "4.0.3"
+  "latest": "4.0.5"
  },
  "versions": {
   "1.0.0": {
@@ -3000,6 +3000,186 @@
   "4.0.3": {
    "name": "copy-anything",
    "version": "4.0.3",
+   "keywords": [
+    "copy",
+    "clone",
+    "json-stringify",
+    "stringify-parse",
+    "object",
+    "copy-objects",
+    "clone-objects",
+    "json-stringify-json-parse",
+    "deep-clone",
+    "deep-copy",
+    "typescript",
+    "ts"
+   ],
+   "author": {
+    "url": "https://cycraft.co",
+    "name": "Luca Ban - Mesqueeb"
+   },
+   "license": "MIT",
+   "_id": "copy-anything@4.0.3",
+   "maintainers": [
+    {
+     "name": "mesqueeb",
+     "email": "mesqueeb@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/mesqueeb/copy-anything#readme",
+   "bugs": {
+    "url": "https://github.com/mesqueeb/copy-anything/issues"
+   },
+   "dist": {
+    "shasum": "00d53d22c01002ad808a73636a0020e4779542b7",
+    "tarball": "http://localhost:3000/copy-anything/-/copy-anything-4.0.3.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-cOfM59OYltWfD8RzLwWUbyuW9mPX4gQlWPIWsa5cNXE7qkaVQO6tX+l2Yo8edZNGt3zVnWFAv8hhiOZIQ2XSwQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIEjWSugvfhHxVl0KN+Ds61QiXXynubiMsDBgqMl84STiAiA9xY4/Iv/Fwb8nXP8Ts0Rlmv5euN22BZXD+5KOPyexzg==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 9081
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=18"
+   },
+   "exports": {
+    ".": "./dist/index.js"
+   },
+   "funding": "https://github.com/sponsors/mesqueeb",
+   "gitHead": "e5276772768819e749463610aac435b9eff4dd71",
+   "scripts": {
+    "lint": "tsc --noEmit && eslint ./src",
+    "test": "vitest run",
+    "build": "del-cli dist && tsc",
+    "release": "npm run lint && npm run build && np"
+   },
+   "_npmUser": {
+    "name": "mesqueeb",
+    "email": "mesqueeb@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/mesqueeb/copy-anything.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.2.4",
+   "description": "An optimised way to copy'ing an object. A small and simple integration",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "20.11.1",
+   "dependencies": {
+    "is-what": "^5.2.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "np": "^10.2.0",
+    "vitest": "^3.0.6",
+    "del-cli": "^6.0.0",
+    "@cycraft/eslint": "^0.4.3",
+    "@cycraft/tsconfig": "^0.1.2"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/copy-anything_4.0.3_1739990926874_0.20293519420563988",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "4.0.4": {
+   "name": "copy-anything",
+   "version": "4.0.4",
+   "keywords": [
+    "copy",
+    "clone",
+    "json-stringify",
+    "stringify-parse",
+    "object",
+    "copy-objects",
+    "clone-objects",
+    "json-stringify-json-parse",
+    "deep-clone",
+    "deep-copy",
+    "typescript",
+    "ts"
+   ],
+   "author": {
+    "url": "https://cycraft.co",
+    "name": "Luca Ban - Mesqueeb"
+   },
+   "license": "MIT",
+   "_id": "copy-anything@4.0.4",
+   "maintainers": [
+    {
+     "name": "mesqueeb",
+     "email": "mesqueeb@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/mesqueeb/copy-anything#readme",
+   "bugs": {
+    "url": "https://github.com/mesqueeb/copy-anything/issues"
+   },
+   "dist": {
+    "shasum": "7f4dcbc5aacb27276806fc1c6700d8e3ef3b2e4a",
+    "tarball": "http://localhost:3000/copy-anything/-/copy-anything-4.0.4.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-1n4wXJ1/kVjOVADnP++yEh46uvvdvxDFRHPRlc66ya2jh27OwwNMcj6Fz4lf5Mnu8mc8aAqnfk49LYD2612AOA==",
+    "signatures": [
+     {
+      "sig": "MEUCIEc8KUGLvAL9VzODcqTYmawiSXMmhLEv1dvG4USIPuDIAiEA2v8GoSezitP3MbBqvBs4rwA33Dq2Nx4Z8ApLaCUXzb0=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 9244
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=18"
+   },
+   "exports": {
+    ".": "./dist/index.js"
+   },
+   "funding": "https://github.com/sponsors/mesqueeb",
+   "gitHead": "fe760210066f0c331322825963beb4c5a735a16c",
+   "scripts": {
+    "lint": "tsc --noEmit && eslint ./src",
+    "test": "vitest run",
+    "build": "del-cli dist && tsc",
+    "release": "npm run lint && npm run build && np"
+   },
+   "_npmUser": {
+    "name": "mesqueeb",
+    "email": "mesqueeb@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/mesqueeb/copy-anything.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "An optimised way to copy'ing an object. A small and simple integration",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "is-what": "^5.2.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "np": "^10.2.0",
+    "vitest": "^3.0.9",
+    "del-cli": "^6.0.0",
+    "@cycraft/eslint": "^0.4.4",
+    "@cycraft/tsconfig": "^0.1.2"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/copy-anything_4.0.4_1742839055030_0.5830144321003452",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "4.0.5": {
+   "name": "copy-anything",
+   "version": "4.0.5",
    "description": "An optimised way to copy'ing an object. A small and simple integration",
    "type": "module",
    "sideEffects": false,
@@ -3019,11 +3199,11 @@
     "is-what": "^5.2.0"
    },
    "devDependencies": {
-    "@cycraft/eslint": "^0.4.3",
+    "@cycraft/eslint": "^0.4.4",
     "@cycraft/tsconfig": "^0.1.2",
     "del-cli": "^6.0.0",
     "np": "^10.2.0",
-    "vitest": "^3.0.6"
+    "vitest": "^3.0.9"
    },
    "keywords": [
     "copy",
@@ -3053,20 +3233,20 @@
    "bugs": {
     "url": "https://github.com/mesqueeb/copy-anything/issues"
    },
-   "_id": "copy-anything@4.0.3",
-   "gitHead": "e5276772768819e749463610aac435b9eff4dd71",
-   "_nodeVersion": "20.11.1",
-   "_npmVersion": "10.2.4",
+   "_id": "copy-anything@4.0.5",
+   "gitHead": "91d437f79baf76098cb58c18e0d070e76197343a",
+   "_nodeVersion": "22.14.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-cOfM59OYltWfD8RzLwWUbyuW9mPX4gQlWPIWsa5cNXE7qkaVQO6tX+l2Yo8edZNGt3zVnWFAv8hhiOZIQ2XSwQ==",
-    "shasum": "00d53d22c01002ad808a73636a0020e4779542b7",
-    "tarball": "http://localhost:3000/copy-anything/-/copy-anything-4.0.3.tgz",
+    "integrity": "sha512-7Vv6asjS4gMOuILabD3l739tsaxFQmC+a7pLZm02zyvs8p977bL3zEgq3yDk5rn9B0PbYgIv++jmHcuUab4RhA==",
+    "shasum": "16cabafd1ea4bb327a540b750f2b4df522825aea",
+    "tarball": "http://localhost:3000/copy-anything/-/copy-anything-4.0.5.tgz",
     "fileCount": 5,
-    "unpackedSize": 9081,
+    "unpackedSize": 9998,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEQCIEjWSugvfhHxVl0KN+Ds61QiXXynubiMsDBgqMl84STiAiA9xY4/Iv/Fwb8nXP8Ts0Rlmv5euN22BZXD+5KOPyexzg=="
+      "sig": "MEUCIHBOds+ivNpP25DEjWR29iDOpL1eEDot4g0ehhCXpuSqAiEAm11dgFghXUpngAIJT+V4C0nJsNQPI+C2Hu7Bx5Fem4s="
      }
     ]
    },
@@ -3083,14 +3263,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/copy-anything_4.0.3_1739990926874_0.20293519420563988"
+    "tmp": "tmp/copy-anything_4.0.5_1742840303092_0.3428922219615076"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2018-12-15T16:29:22.409Z",
-  "modified": "2025-02-19T18:48:47.220Z",
+  "modified": "2025-03-24T18:18:23.442Z",
   "1.0.0": "2018-12-15T16:29:22.602Z",
   "1.1.0": "2019-01-13T03:10:38.144Z",
   "1.1.1": "2019-02-22T06:01:43.072Z",
@@ -3121,7 +3301,9 @@
   "4.0.0": "2024-06-01T07:15:14.474Z",
   "4.0.1": "2024-06-05T01:25:51.679Z",
   "4.0.2": "2024-06-05T02:04:59.412Z",
-  "4.0.3": "2025-02-19T18:48:47.047Z"
+  "4.0.3": "2025-02-19T18:48:47.047Z",
+  "4.0.4": "2025-03-24T17:57:35.183Z",
+  "4.0.5": "2025-03-24T18:18:23.270Z"
  },
  "bugs": {
   "url": "https://github.com/mesqueeb/copy-anything/issues"
@@ -3157,6 +3339,6 @@
    "email": "mesqueeb@gmail.com"
   }
  ],
- "readme": "# Copy anything 🎭\n\n<a href=\"https://www.npmjs.com/package/copy-anything\"><img src=\"https://img.shields.io/npm/v/copy-anything.svg\" alt=\"Total Downloads\"></a>\n<a href=\"https://www.npmjs.com/package/copy-anything\"><img src=\"https://img.shields.io/npm/dw/copy-anything.svg\" alt=\"Latest Stable Version\"></a>\n\n```\nnpm i copy-anything\n```\n\nAn optimised way to copy'ing (cloning) an object or array. A small and simple integration.\n\n## Motivation\n\nI created this package because I tried a lot of similar packages that do copy'ing/cloning. But all had its quirks, and _all of them break things they are not supposed to break_... 😞\n\nI was looking for:\n\n- a simple copy/clone function\n- has to be fast!\n- props must lose any reference to original object\n- works with arrays and objects in arrays!\n- supports symbols\n- can copy non-enumerable props as well\n- **does not break special class instances**　‼️\n\nThis last one is crucial! So many libraries use custom classes that create objects with special prototypes, and such objects all break when trying to copy them inproperly. So we gotta be careful!\n\ncopy-anything will copy objects and nested properties, but only as long as they're \"plain objects\". As soon as a sub-prop is not a \"plain object\" and has a special prototype, it will copy that instance over \"as is\". ♻️\n## Meet the family (more tiny utils with TS support)\n\n- [is-what 🙉](https://github.com/mesqueeb/is-what)\n- [is-where 🙈](https://github.com/mesqueeb/is-where)\n- [merge-anything 🥡](https://github.com/mesqueeb/merge-anything)\n- [check-anything 👁](https://github.com/mesqueeb/check-anything)\n- [remove-anything ✂️](https://github.com/mesqueeb/remove-anything)\n- [getorset-anything 🐊](https://github.com/mesqueeb/getorset-anything)\n- [map-anything 🗺](https://github.com/mesqueeb/map-anything)\n- [filter-anything ⚔️](https://github.com/mesqueeb/filter-anything)\n- [copy-anything 🎭](https://github.com/mesqueeb/copy-anything)\n- [case-anything 🐫](https://github.com/mesqueeb/case-anything)\n- [flatten-anything 🏏](https://github.com/mesqueeb/flatten-anything)\n- [nestify-anything 🧅](https://github.com/mesqueeb/nestify-anything)\n\n## Usage\n\n<!-- prettier-ignore-start -->\n```js\nimport { copy } from 'copy-anything'\n\nconst original = { name: 'Ditto', type: { water: true } }\nconst copy = copy(original)\n\n// now if we change a nested prop like the type\ncopy.type.water = false\n// or add a new nested prop\ncopy.type.fire = true\n\n// then the original object will still be the same:\n(original.type.water === true) // true\n(original.type.fire === undefined) // true\n```\n\n> Please note, by default copy-anything does not copy non-enumerable props. If you need to copy those, see the instructions further down below.\n\n## Works with arrays\n\nIt will also clone arrays, **as well as objects inside arrays!** 😉\n\n```js\nconst original = [{ name: 'Squirtle' }]\nconst copy = copy(original)\n\n// now if we change a prop in the array\ncopy[0].name = 'Wartortle'\n// or add a new item to the array\ncopy.push({ name: 'Charmander' })\n\n// then the original array will still be the same:\n(original[0].name === 'Squirtle') // true\n(original[1] === undefined) // true\n```\n\n## Non-enumerable\n\nBy default, copy-anything only copies enumerable properties. If you also want to copy non-enumerable properties you can do so by passing that as an option.\n\n```js\nconst original = { name: 'Bulbasaur' }\n// bulbasaur's ID is non-enumerable\nObject.defineProperty(original, 'id', {\n  value: '001',\n  writable: true,\n  enumerable: false,\n  configurable: true,\n})\nconst copy1 = copy(original)\n(copy1.id === undefined) // true\n\nconst copy2 = copy(original, { nonenumerable: true })\n(copy2.id === '001') // true\n```\n\n## Limit to specific props\n\nYou can limit to specific props.\n\n```js\nconst original = { name: 'Flareon', type: ['fire'], id: '136' }\nconst copy = copy(original, { props: ['name'] })\n\n(copy) // will look like: `{ name: 'Flareon' }`\n```\n\n> Please note, if the props you have specified are non-enumerable, you will also need to pass `{nonenumerable: true}`.\n\n<!-- prettier-ignore-end -->\n## Source code\n\nThe source code is literally just these lines. Most of the magic comes from the isPlainObject function from the [is-what library](https://github.com/mesqueeb/is-what).\n\n```JavaScript\nimport { isPlainObject } from 'is-what'\n\nexport function copy (target) {\n  if (isArray(target)) return target.map(i => copy(i))\n  if (!isPlainObject(target)) return target\n  return Object.keys(target)\n    .reduce((carry, key) => {\n      const val = target[key]\n      carry[key] = copy(val)\n      return carry\n    }, {})\n}\n```\n",
+ "readme": "# Copy anything 🎭\n\n<a href=\"https://www.npmjs.com/package/copy-anything\"><img src=\"https://img.shields.io/npm/v/copy-anything.svg\" alt=\"Total Downloads\"></a>\n<a href=\"https://www.npmjs.com/package/copy-anything\"><img src=\"https://img.shields.io/npm/dw/copy-anything.svg\" alt=\"Latest Stable Version\"></a>\n\n```\nnpm i copy-anything\n```\n\nAn optimised way to copy'ing (cloning) an object or array. A small and simple integration.\n\n## Motivation\n\nI created this package because I tried a lot of similar packages that do copy'ing/cloning. But all had its quirks, and _all of them break things they are not supposed to break_... 😞\n\nI was looking for:\n\n- a simple copy/clone function\n- has to be fast!\n- props must lose any reference to original object\n- works with arrays and objects in arrays!\n- supports symbols\n- can copy non-enumerable props as well\n- **does not break special class instances**　‼️\n\nThis last one is crucial! So many libraries use custom classes that create objects with special prototypes, and such objects all break when trying to copy them improperly. So we gotta be careful!\n\ncopy-anything will copy objects and nested properties, but only as long as they're \"plain objects\". As soon as a sub-prop is not a \"plain object\" and has a special prototype, it will copy that instance over \"as is\". ♻️\n\n## Meet the family (more tiny utils with TS support)\n\n- [is-what 🙉](https://github.com/mesqueeb/is-what)\n- [is-where 🙈](https://github.com/mesqueeb/is-where)\n- [merge-anything 🥡](https://github.com/mesqueeb/merge-anything)\n- [check-anything 👁](https://github.com/mesqueeb/check-anything)\n- [remove-anything ✂️](https://github.com/mesqueeb/remove-anything)\n- [getorset-anything 🐊](https://github.com/mesqueeb/getorset-anything)\n- [map-anything 🗺](https://github.com/mesqueeb/map-anything)\n- [filter-anything ⚔️](https://github.com/mesqueeb/filter-anything)\n- [copy-anything 🎭](https://github.com/mesqueeb/copy-anything)\n- [case-anything 🐫](https://github.com/mesqueeb/case-anything)\n- [flatten-anything 🏏](https://github.com/mesqueeb/flatten-anything)\n- [nestify-anything 🧅](https://github.com/mesqueeb/nestify-anything)\n\n## Usage\n\n<!-- prettier-ignore-start -->\n```js\nimport { copy } from 'copy-anything'\n\nconst original = { name: 'Ditto', type: { water: true } }\nconst copy = copy(original)\n\n// now if we change a nested prop like the type\ncopy.type.water = false\n// or add a new nested prop\ncopy.type.fire = true\n\n// then the original object will still be the same:\n(original.type.water === true) // true\n(original.type.fire === undefined) // true\n```\n\n> Please note, by default copy-anything does not copy non-enumerable props. If you need to copy those, see the instructions further down below.\n\n## Works with arrays\n\nIt will also clone arrays, **as well as objects inside arrays!** 😉\n\n```js\nconst original = [{ name: 'Squirtle' }]\nconst copy = copy(original)\n\n// now if we change a prop in the array\ncopy[0].name = 'Wartortle'\n// or add a new item to the array\ncopy.push({ name: 'Charmander' })\n\n// then the original array will still be the same:\n(original[0].name === 'Squirtle') // true\n(original[1] === undefined) // true\n```\n\n## Non-enumerable\n\nBy default, copy-anything only copies enumerable properties. If you also want to copy non-enumerable properties you can do so by passing that as an option.\n\n```js\nconst original = { name: 'Bulbasaur' }\n// bulbasaur's ID is non-enumerable\nObject.defineProperty(original, 'id', {\n  value: '001',\n  writable: true,\n  enumerable: false,\n  configurable: true,\n})\nconst copy1 = copy(original)\n(copy1.id === undefined) // true\n\nconst copy2 = copy(original, { nonenumerable: true })\n(copy2.id === '001') // true\n```\n\n## Limit to specific props\n\nYou can limit to specific props.\n\n```js\nconst original = { name: 'Flareon', type: ['fire'], id: '136' }\nconst copy = copy(original, { props: ['name'] })\n\n(copy) // will look like: `{ name: 'Flareon' }`\n```\n\n> Please note, if the props you have specified are non-enumerable, you will also need to pass `{nonenumerable: true}`.\n\n<!-- prettier-ignore-end -->\n\n## Source code\n\nThe source code is literally just these lines. Most of the magic comes from the isPlainObject function from the [is-what library](https://github.com/mesqueeb/is-what).\n\n```JavaScript\nimport { isPlainObject } from 'is-what'\n\nexport function copy (target) {\n  if (isArray(target)) return target.map(i => copy(i))\n  if (!isPlainObject(target)) return target\n  return Object.keys(target)\n    .reduce((carry, key) => {\n      const val = target[key]\n      carry[key] = copy(val)\n      return carry\n    }, {})\n}\n```\n",
  "readmeFilename": "README.md"
 }

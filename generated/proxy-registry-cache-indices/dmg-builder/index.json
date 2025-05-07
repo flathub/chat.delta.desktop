@@ -1,10 +1,10 @@
 {
  "_id": "dmg-builder",
- "_rev": "286-cbe4dfc1e47f6fb8ca5977e7c108ddcc",
+ "_rev": "290-6c95039007dba987a8e50e9e9be4cad9",
  "name": "dmg-builder",
  "dist-tags": {
-  "latest": "25.1.8",
-  "next": "26.0.12"
+  "latest": "26.0.12",
+  "next": "26.0.15"
  },
  "versions": {
   "1.0.0": {
@@ -17810,6 +17810,7 @@
     "builder-util-runtime": "9.2.10"
    },
    "_hasShrinkwrap": false,
+   "readmeFilename": "readme.md",
    "devDependencies": {
     "temp-file": "3.4.0",
     "@types/js-yaml": "4.0.3",
@@ -19650,6 +19651,233 @@
   "26.0.12": {
    "name": "dmg-builder",
    "version": "26.0.12",
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "_id": "dmg-builder@26.0.12",
+   "maintainers": [
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "dist": {
+    "shasum": "6996ad0bab80a861c9a7b33ee9734d4f60566b46",
+    "tarball": "http://localhost:3000/dmg-builder/-/dmg-builder-26.0.12.tgz",
+    "fileCount": 33,
+    "integrity": "sha512-59CAAjAhTaIMCN8y9kD573vDkxbs1uhDcrFLHSgutYdPcGOU35Rf95725snvzEOy4BFB7+eLJ8djCNPmGwG67w==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCEqw3BFzluv14Iv5sb0LYWtUN8MYnJpomUgCxtrt9aRQIgbrVn2bHGowjdhrYO1PRNdU9vB5dV5Ca3K11li1cr318=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 342149
+   },
+   "main": "out/dmgUtil.js",
+   "_from": "file:dmg-builder-26.0.12.tgz",
+   "typings": "./out/dmg.d.ts",
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/tmp/3681eae9a9f6aae0f242a29ac0d6cfed/dmg-builder-26.0.12.tgz",
+   "_integrity": "sha512-59CAAjAhTaIMCN8y9kD573vDkxbs1uhDcrFLHSgutYdPcGOU35Rf95725snvzEOy4BFB7+eLJ8djCNPmGwG67w==",
+   "repository": {
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "type": "git",
+    "directory": "packages/dmg-builder"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Utilities to build DMG. Used by [electron-builder](https://github.com/electron-userland/electron-builder).",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "js-yaml": "^4.1.0",
+    "fs-extra": "^10.1.0",
+    "iconv-lite": "^0.6.2",
+    "builder-util": "26.0.11",
+    "app-builder-lib": "26.0.12",
+    "builder-util-runtime": "9.3.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "temp-file": "3.4.0",
+    "@types/js-yaml": "4.0.3",
+    "@types/fs-extra": "9.0.13"
+   },
+   "optionalDependencies": {
+    "dmg-license": "^1.0.11"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/dmg-builder_26.0.12_1742624038158_0.27539010413103493",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "26.0.13": {
+   "name": "dmg-builder",
+   "version": "26.0.13",
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "_id": "dmg-builder@26.0.13",
+   "maintainers": [
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "dist": {
+    "shasum": "c5dc2db3b23e278ce146e68b45523b3f5f1780c9",
+    "tarball": "http://localhost:3000/dmg-builder/-/dmg-builder-26.0.13.tgz",
+    "fileCount": 33,
+    "integrity": "sha512-OBa6xbQwFAm6gbbClkuGrxnOLbrPauv3yaugnGtIHsn7BvFSmMhZzhmcJQMrAGzDW2M3n/RmG/5mgOYUagqoeg==",
+    "signatures": [
+     {
+      "sig": "MEUCIHWpEzMUSga80pZi61hm09PmeABb1XQSxI2WqU/wxyTfAiEArtQn8Fot06SgpnVMGQoEbazJyKQepQVzrYWQ+jnLYv4=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 342277
+   },
+   "main": "out/dmgUtil.js",
+   "_from": "file:dmg-builder-26.0.13.tgz",
+   "typings": "./out/dmg.d.ts",
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/tmp/260b32bb05bad01b112b0b45d0ae5bc1/dmg-builder-26.0.13.tgz",
+   "_integrity": "sha512-OBa6xbQwFAm6gbbClkuGrxnOLbrPauv3yaugnGtIHsn7BvFSmMhZzhmcJQMrAGzDW2M3n/RmG/5mgOYUagqoeg==",
+   "repository": {
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "type": "git",
+    "directory": "packages/dmg-builder"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Utilities to build DMG. Used by [electron-builder](https://github.com/electron-userland/electron-builder).",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "js-yaml": "^4.1.0",
+    "fs-extra": "^10.1.0",
+    "iconv-lite": "^0.6.2",
+    "builder-util": "26.0.13",
+    "app-builder-lib": "26.0.13",
+    "builder-util-runtime": "9.3.2"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "readme.md",
+   "devDependencies": {
+    "temp-file": "3.4.0",
+    "@types/js-yaml": "4.0.3",
+    "@types/fs-extra": "9.0.13"
+   },
+   "optionalDependencies": {
+    "dmg-license": "^1.0.11"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/dmg-builder_26.0.13_1744434793664_0.18336913937117538",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "26.0.14": {
+   "name": "dmg-builder",
+   "version": "26.0.14",
+   "author": {
+    "name": "Vladimir Krivosheev"
+   },
+   "license": "MIT",
+   "_id": "dmg-builder@26.0.14",
+   "maintainers": [
+    {
+     "name": "develar",
+     "email": "develar@gmail.com"
+    },
+    {
+     "name": "onegoldfishh",
+     "email": "crazym9@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/electron-userland/electron-builder",
+   "bugs": {
+    "url": "https://github.com/electron-userland/electron-builder/issues"
+   },
+   "dist": {
+    "shasum": "ce8180da319cf3ee05d42cd460a7509207ad474b",
+    "tarball": "http://localhost:3000/dmg-builder/-/dmg-builder-26.0.14.tgz",
+    "fileCount": 33,
+    "integrity": "sha512-0l7oEj175hee7NfnaUpb0zf7fsgh1SyHeLjDA0AtOMnBUfTGxPPwrifbUxfd73qzamrGNcyeqza+m/EJx3QUug==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCfjy0euoXxjQdzoDpzN8PbMVc/YtWREDSo2B3periknQIgMUOvHgWhRHyKyL3bcEBkPMVxnT1a1PEofPFOh2wYMPs=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 342277
+   },
+   "main": "out/dmgUtil.js",
+   "_from": "file:dmg-builder-26.0.14.tgz",
+   "typings": "./out/dmg.d.ts",
+   "_npmUser": {
+    "name": "onegoldfishh",
+    "email": "crazym9@gmail.com"
+   },
+   "_resolved": "/tmp/b48806fee38f4f52c5b102464002d993/dmg-builder-26.0.14.tgz",
+   "_integrity": "sha512-0l7oEj175hee7NfnaUpb0zf7fsgh1SyHeLjDA0AtOMnBUfTGxPPwrifbUxfd73qzamrGNcyeqza+m/EJx3QUug==",
+   "repository": {
+    "url": "git+https://github.com/electron-userland/electron-builder.git",
+    "type": "git",
+    "directory": "packages/dmg-builder"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Utilities to build DMG. Used by [electron-builder](https://github.com/electron-userland/electron-builder).",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "js-yaml": "^4.1.0",
+    "fs-extra": "^10.1.0",
+    "iconv-lite": "^0.6.2",
+    "builder-util": "26.0.13",
+    "app-builder-lib": "26.0.14",
+    "builder-util-runtime": "9.3.2"
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "readme.md",
+   "devDependencies": {
+    "temp-file": "3.4.0",
+    "@types/js-yaml": "4.0.3",
+    "@types/fs-extra": "9.0.13"
+   },
+   "optionalDependencies": {
+    "dmg-license": "^1.0.11"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/dmg-builder_26.0.14_1745745728769_0.7657956890779258",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "26.0.15": {
+   "name": "dmg-builder",
+   "version": "26.0.15",
    "main": "out/dmgUtil.js",
    "author": {
     "name": "Vladimir Krivosheev"
@@ -19668,9 +19896,9 @@
     "fs-extra": "^10.1.0",
     "iconv-lite": "^0.6.2",
     "js-yaml": "^4.1.0",
-    "app-builder-lib": "26.0.12",
-    "builder-util": "26.0.11",
-    "builder-util-runtime": "9.3.1"
+    "app-builder-lib": "26.0.15",
+    "builder-util": "26.0.13",
+    "builder-util-runtime": "9.3.2"
    },
    "optionalDependencies": {
     "dmg-license": "^1.0.11"
@@ -19681,24 +19909,24 @@
     "temp-file": "3.4.0"
    },
    "typings": "./out/dmg.d.ts",
-   "_id": "dmg-builder@26.0.12",
+   "_id": "dmg-builder@26.0.15",
    "readmeFilename": "readme.md",
    "description": "Utilities to build DMG. Used by [electron-builder](https://github.com/electron-userland/electron-builder).",
-   "_integrity": "sha512-59CAAjAhTaIMCN8y9kD573vDkxbs1uhDcrFLHSgutYdPcGOU35Rf95725snvzEOy4BFB7+eLJ8djCNPmGwG67w==",
-   "_resolved": "/tmp/3681eae9a9f6aae0f242a29ac0d6cfed/dmg-builder-26.0.12.tgz",
-   "_from": "file:dmg-builder-26.0.12.tgz",
-   "_nodeVersion": "22.14.0",
+   "_integrity": "sha512-RXbDCcrPw2B0q2HIcPI2H7pIFeQiDsLW+ykRVKkW2ke2H3pTgI36r86xLmQZ6397uFCNUjpegRFv6bB+BCWJIA==",
+   "_resolved": "/tmp/3ab3a736fbdb2b44afd223f79ca6bee4/dmg-builder-26.0.15.tgz",
+   "_from": "file:dmg-builder-26.0.15.tgz",
+   "_nodeVersion": "22.15.0",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-59CAAjAhTaIMCN8y9kD573vDkxbs1uhDcrFLHSgutYdPcGOU35Rf95725snvzEOy4BFB7+eLJ8djCNPmGwG67w==",
-    "shasum": "6996ad0bab80a861c9a7b33ee9734d4f60566b46",
-    "tarball": "http://localhost:3000/dmg-builder/-/dmg-builder-26.0.12.tgz",
+    "integrity": "sha512-RXbDCcrPw2B0q2HIcPI2H7pIFeQiDsLW+ykRVKkW2ke2H3pTgI36r86xLmQZ6397uFCNUjpegRFv6bB+BCWJIA==",
+    "shasum": "0cc63db379f9713e8726d5f4ac30709b86720506",
+    "tarball": "http://localhost:3000/dmg-builder/-/dmg-builder-26.0.15.tgz",
     "fileCount": 33,
-    "unpackedSize": 342149,
+    "unpackedSize": 342277,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQCEqw3BFzluv14Iv5sb0LYWtUN8MYnJpomUgCxtrt9aRQIgbrVn2bHGowjdhrYO1PRNdU9vB5dV5Ca3K11li1cr318="
+      "sig": "MEYCIQDTDjjJ68/OmzA5MiZkCncAdxIZAw64qJE2OgEqa77BRQIhAN992hDbnv4Qq2pu82ZUrxB97uAHW6+qaeCiJG4rfkN5"
      }
     ]
    },
@@ -19719,14 +19947,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/dmg-builder_26.0.12_1742624038158_0.27539010413103493"
+    "tmp": "tmp/dmg-builder_26.0.15_1746346190883_0.18009546731437043"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2017-08-25T07:26:17.271Z",
-  "modified": "2025-03-22T06:13:58.528Z",
+  "modified": "2025-05-04T08:09:51.304Z",
   "1.0.0": "2017-08-25T07:26:17.271Z",
   "1.0.1": "2017-08-25T07:31:11.551Z",
   "1.0.2": "2017-08-30T17:18:57.852Z",
@@ -20007,7 +20235,10 @@
   "26.0.9": "2025-02-26T07:14:43.965Z",
   "26.0.10": "2025-03-03T14:52:07.747Z",
   "26.0.11": "2025-03-10T05:01:03.728Z",
-  "26.0.12": "2025-03-22T06:13:58.361Z"
+  "26.0.12": "2025-03-22T06:13:58.361Z",
+  "26.0.13": "2025-04-12T05:13:13.905Z",
+  "26.0.14": "2025-04-27T09:22:08.952Z",
+  "26.0.15": "2025-05-04T08:09:51.116Z"
  },
  "bugs": {
   "url": "https://github.com/electron-userland/electron-builder/issues"

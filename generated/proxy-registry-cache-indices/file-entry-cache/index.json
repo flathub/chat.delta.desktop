@@ -1,9 +1,9 @@
 {
  "_id": "file-entry-cache",
- "_rev": "37-5463979d2775d6441c81f7cf96597340",
+ "_rev": "40-2648b182df0511487b56906d98cd5512",
  "name": "file-entry-cache",
  "dist-tags": {
-  "latest": "10.0.7"
+  "latest": "10.1.0"
  },
  "versions": {
   "1.0.0": {
@@ -2753,6 +2753,190 @@
   "10.0.7": {
    "name": "file-entry-cache",
    "version": "10.0.7",
+   "keywords": [
+    "file cache",
+    "task cache files",
+    "file cache",
+    "key par",
+    "key value",
+    "cache"
+   ],
+   "author": {
+    "name": "Jared Wray",
+    "email": "me@jaredwray.com"
+   },
+   "license": "MIT",
+   "_id": "file-entry-cache@10.0.7",
+   "maintainers": [
+    {
+     "name": "jaredwray",
+     "email": "me@jaredwray.com"
+    }
+   ],
+   "homepage": "https://github.com/jaredwray/cacheable#readme",
+   "bugs": {
+    "url": "https://github.com/jaredwray/cacheable/issues"
+   },
+   "dist": {
+    "shasum": "e0ac34d4b8c44bea8a0a27ceb4dae982f2d32749",
+    "tarball": "http://localhost:3000/file-entry-cache/-/file-entry-cache-10.0.7.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-txsf5fu3anp2ff3+gOJJzRImtrtm/oa9tYLN0iTuINZ++EyVR/nRrg2fKYwvG/pXDofcrvvb0scEbX3NyW/COw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDIyS3be1tBqt9JgEQdlF1ZbqLu5wi3H+6S3eLz//bHHAIhALJrqdyD2hDYzV2QW8iOYbfezbKjgkwRW5f45wribVGl",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 50043
+   },
+   "main": "./dist/index.cjs",
+   "type": "module",
+   "_from": "file:file-entry-cache-10.0.7.tgz",
+   "types": "./dist/index.d.ts",
+   "module": "./dist/index.js",
+   "exports": {
+    ".": {
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "private": false,
+   "scripts": {
+    "test": "xo --fix && vitest run --coverage",
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "clean": "rimraf ./dist ./coverage ./node_modules",
+    "test:ci": "xo && vitest run",
+    "prepublish": "pnpm build"
+   },
+   "_npmUser": {
+    "name": "jaredwray",
+    "email": "me@jaredwray.com"
+   },
+   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/bedb64ea1180eb5f7861b7b871602de3/file-entry-cache-10.0.7.tgz",
+   "_integrity": "sha512-txsf5fu3anp2ff3+gOJJzRImtrtm/oa9tYLN0iTuINZ++EyVR/nRrg2fKYwvG/pXDofcrvvb0scEbX3NyW/COw==",
+   "repository": {
+    "url": "git+https://github.com/jaredwray/cacheable.git",
+    "type": "git",
+    "directory": "packages/file-entry-cache"
+   },
+   "_npmVersion": "11.1.0",
+   "description": "A lightweight cache for file metadata, ideal for processes that work on a specific set of files and only need to reprocess files that have changed since the last run",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "flat-cache": "^6.1.7"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.60.0",
+    "tsup": "^8.4.0",
+    "rimraf": "^6.0.1",
+    "vitest": "^3.0.7",
+    "typescript": "^5.8.2",
+    "@types/node": "^22.13.9",
+    "@vitest/coverage-v8": "^3.0.7"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/file-entry-cache_10.0.7_1741043250340_0.36888796750093267",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "10.0.8": {
+   "name": "file-entry-cache",
+   "version": "10.0.8",
+   "keywords": [
+    "file cache",
+    "task cache files",
+    "file cache",
+    "key par",
+    "key value",
+    "cache"
+   ],
+   "author": {
+    "name": "Jared Wray",
+    "email": "me@jaredwray.com"
+   },
+   "license": "MIT",
+   "_id": "file-entry-cache@10.0.8",
+   "maintainers": [
+    {
+     "name": "jaredwray",
+     "email": "me@jaredwray.com"
+    }
+   ],
+   "homepage": "https://github.com/jaredwray/cacheable#readme",
+   "bugs": {
+    "url": "https://github.com/jaredwray/cacheable/issues"
+   },
+   "dist": {
+    "shasum": "2b7a32c40615c4a6b59c385fb059a2762faf9624",
+    "tarball": "http://localhost:3000/file-entry-cache/-/file-entry-cache-10.0.8.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-FGXHpfmI4XyzbLd3HQ8cbUcsFGohJpZtmQRHr8z8FxxtCe2PcpgIlVLwIgunqjvRmXypBETvwhV4ptJizA+Y1Q==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCJIlCyaIKxPUylfN+H4z9qTY9nX4P8boQaZzr2y7pTNwIgXQv2drgxZcmoasMOStEMUVzTK2bniIPDyMbzQEHWl6k=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 50043
+   },
+   "main": "./dist/index.cjs",
+   "type": "module",
+   "_from": "file:file-entry-cache-10.0.8.tgz",
+   "types": "./dist/index.d.ts",
+   "module": "./dist/index.js",
+   "exports": {
+    ".": {
+     "import": "./dist/index.js",
+     "require": "./dist/index.cjs"
+    }
+   },
+   "private": false,
+   "scripts": {
+    "test": "xo --fix && vitest run --coverage",
+    "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
+    "clean": "rimraf ./dist ./coverage ./node_modules",
+    "test:ci": "xo && vitest run",
+    "prepublish": "pnpm build"
+   },
+   "_npmUser": {
+    "name": "jaredwray",
+    "email": "me@jaredwray.com"
+   },
+   "_resolved": "/private/var/folders/h1/n3vxgc0n1sn5_9pxftc4p6l80000gn/T/0ebe6c26a95fc76656a7a256975259ad/file-entry-cache-10.0.8.tgz",
+   "_integrity": "sha512-FGXHpfmI4XyzbLd3HQ8cbUcsFGohJpZtmQRHr8z8FxxtCe2PcpgIlVLwIgunqjvRmXypBETvwhV4ptJizA+Y1Q==",
+   "repository": {
+    "url": "git+https://github.com/jaredwray/cacheable.git",
+    "type": "git",
+    "directory": "packages/file-entry-cache"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "A lightweight cache for file metadata, ideal for processes that work on a specific set of files and only need to reprocess files that have changed since the last run",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "flat-cache": "^6.1.8"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "xo": "^0.60.0",
+    "tsup": "^8.4.0",
+    "rimraf": "^6.0.1",
+    "vitest": "^3.1.1",
+    "typescript": "^5.8.2",
+    "@types/node": "^22.14.0",
+    "@vitest/coverage-v8": "^3.1.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/file-entry-cache_10.0.8_1743871259862_0.7162771618150221",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "10.1.0": {
+   "name": "file-entry-cache",
+   "version": "10.1.0",
    "description": "A lightweight cache for file metadata, ideal for processes that work on a specific set of files and only need to reprocess files that have changed since the last run",
    "type": "module",
    "main": "./dist/index.cjs",
@@ -2784,16 +2968,16 @@
     "cache"
    ],
    "devDependencies": {
-    "@types/node": "^22.13.9",
-    "@vitest/coverage-v8": "^3.0.7",
+    "@types/node": "^22.15.8",
+    "@vitest/coverage-v8": "^3.1.3",
     "rimraf": "^6.0.1",
     "tsup": "^8.4.0",
-    "typescript": "^5.8.2",
-    "vitest": "^3.0.7",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.3",
     "xo": "^0.60.0"
    },
    "dependencies": {
-    "flat-cache": "^6.1.7"
+    "flat-cache": "^6.1.9"
    },
    "scripts": {
     "build": "rimraf ./dist && tsup src/index.ts --format cjs,esm --dts --clean",
@@ -2802,26 +2986,26 @@
     "test:ci": "xo && vitest run",
     "clean": "rimraf ./dist ./coverage ./node_modules"
    },
-   "_id": "file-entry-cache@10.0.7",
+   "_id": "file-entry-cache@10.1.0",
    "bugs": {
     "url": "https://github.com/jaredwray/cacheable/issues"
    },
    "homepage": "https://github.com/jaredwray/cacheable#readme",
-   "_integrity": "sha512-txsf5fu3anp2ff3+gOJJzRImtrtm/oa9tYLN0iTuINZ++EyVR/nRrg2fKYwvG/pXDofcrvvb0scEbX3NyW/COw==",
-   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/bedb64ea1180eb5f7861b7b871602de3/file-entry-cache-10.0.7.tgz",
-   "_from": "file:file-entry-cache-10.0.7.tgz",
+   "_integrity": "sha512-Et/ex6smi3wOOB+n5mek+Grf7P2AxZR5ueqRUvAAn4qkyatXi3cUC1cuQXVkX0VlzBVsN4BkWJFmY/fYiRTdww==",
+   "_resolved": "/private/var/folders/q4/x95kq1ln6cd7rrnct9cby32r0000gn/T/e45f4005b87f53c5e63b8794c4c73960/file-entry-cache-10.1.0.tgz",
+   "_from": "file:file-entry-cache-10.1.0.tgz",
    "_nodeVersion": "22.12.0",
-   "_npmVersion": "11.1.0",
+   "_npmVersion": "11.3.0",
    "dist": {
-    "integrity": "sha512-txsf5fu3anp2ff3+gOJJzRImtrtm/oa9tYLN0iTuINZ++EyVR/nRrg2fKYwvG/pXDofcrvvb0scEbX3NyW/COw==",
-    "shasum": "e0ac34d4b8c44bea8a0a27ceb4dae982f2d32749",
-    "tarball": "http://localhost:3000/file-entry-cache/-/file-entry-cache-10.0.7.tgz",
+    "integrity": "sha512-Et/ex6smi3wOOB+n5mek+Grf7P2AxZR5ueqRUvAAn4qkyatXi3cUC1cuQXVkX0VlzBVsN4BkWJFmY/fYiRTdww==",
+    "shasum": "54c0117fe76425e9f08a44a3a08bedde0cd93fe8",
+    "tarball": "http://localhost:3000/file-entry-cache/-/file-entry-cache-10.1.0.tgz",
     "fileCount": 7,
-    "unpackedSize": 50043,
+    "unpackedSize": 56053,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEYCIQDIyS3be1tBqt9JgEQdlF1ZbqLu5wi3H+6S3eLz//bHHAIhALJrqdyD2hDYzV2QW8iOYbfezbKjgkwRW5f45wribVGl"
+      "sig": "MEYCIQD56+bWRvDciacfTVOT2lmso8P4wi0YnCeXYrBXr/U2mgIhAOmnpdoW6bMJIIGDZkMP1QaYEMpa5rIez4pQFZX4HBP+"
      }
     ]
    },
@@ -2838,14 +3022,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/file-entry-cache_10.0.7_1741043250340_0.36888796750093267"
+    "tmp": "tmp/file-entry-cache_10.1.0_1746546876636_0.844361504758806"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2015-03-02T09:30:04.174Z",
-  "modified": "2025-03-03T23:07:30.736Z",
+  "modified": "2025-05-06T15:54:37.025Z",
   "1.0.0": "2015-03-02T09:30:04.174Z",
   "1.0.1": "2015-03-03T07:25:43.492Z",
   "1.1.1": "2015-08-30T12:33:58.212Z",
@@ -2873,7 +3057,9 @@
   "10.0.4": "2024-11-24T17:39:17.428Z",
   "10.0.5": "2024-12-27T00:24:44.839Z",
   "10.0.6": "2025-01-27T20:27:00.026Z",
-  "10.0.7": "2025-03-03T23:07:30.575Z"
+  "10.0.7": "2025-03-03T23:07:30.575Z",
+  "10.0.8": "2025-04-05T16:41:00.044Z",
+  "10.1.0": "2025-05-06T15:54:36.825Z"
  },
  "bugs": {
   "url": "https://github.com/jaredwray/cacheable/issues"
@@ -2904,7 +3090,7 @@
    "email": "me@jaredwray.com"
   }
  ],
- "readme": "[<img align=\"center\" src=\"https://cacheable.org/symbol.svg\" alt=\"Cacheable\" />](https://github.com/jaredwray/cacheable)\n\n# file-entry-cache\n> A lightweight cache for file metadata, ideal for processes that work on a specific set of files and only need to reprocess files that have changed since the last run\n\n[![codecov](https://codecov.io/gh/jaredwray/cacheable/graph/badge.svg?token=lWZ9OBQ7GM)](https://codecov.io/gh/jaredwray/cacheable)\n[![tests](https://github.com/jaredwray/cacheable/actions/workflows/tests.yml/badge.svg)](https://github.com/jaredwray/cacheable/actions/workflows/tests.yml)\n[![npm](https://img.shields.io/npm/dm/file-entry-cache.svg)](https://www.npmjs.com/package/file-entry-cache)\n[![npm](https://img.shields.io/npm/v/file-entry-cache)](https://www.npmjs.com/package/file-entry-cache)\n[![license](https://img.shields.io/github/license/jaredwray/cacheable)](https://github.com/jaredwray/cacheable/blob/main/LICENSE)\n\n# Features\n\n- Lightweight cache for file metadata\n- Ideal for processes that work on a specific set of files\n- Persists cache to Disk via `reconcile()` or `persistInterval` on `cache` options.\n- Uses `checksum` to determine if a file has changed\n- Supports `relative` and `absolute` paths\n- Ability to rename keys in the cache. Useful when renaming directories.\n- ESM and CommonJS support with Typescript\n\n# Table of Contents\n\n- [Installation](#installation)\n- [Getting Started](#getting-started)\n- [Changes from v9 to v10](#changes-from-v9-to-v10)\n- [Global Default Functions](#global-default-functions)\n- [FileEntryCache Options (FileEntryCacheOptions)](#fileentrycache-options-fileentrycacheoptions)\n- [API](#api)\n- [Get File Descriptor](#get-file-descriptor)\n- [Using Checksums to Determine if a File has Changed (useCheckSum)](#using-checksums-to-determine-if-a-file-has-changed-usechecksum)\n- [Setting Additional Meta Data](#setting-additional-meta-data)\n- [How to Contribute](#how-to-contribute)\n- [License and Copyright](#license-and-copyright)\n\n# Installation\n```bash\nnpm install file-entry-cache\n```\n\n# Getting Started\n\n```javascript\nimport fileEntryCache from 'file-entry-cache';\nconst cache = fileEntryCache.create('cache1');\nlet fileDescriptor = cache.getFileDescriptor('file.txt');\nconsole.log(fileDescriptor.changed); // true as it is the first time\nfileDescriptor = cache.getFileDescriptor('file.txt');\nconsole.log(fileDescriptor.changed); // false as it has not changed\n// do something to change the file\nfs.writeFileSync('file.txt', 'new data foo bar');\n// check if the file has changed\nfileDescriptor = cache.getFileDescriptor('file.txt');\nconsole.log(fileDescriptor.changed); // true\n```\n\nSave it to Disk and Reconsile files that are no longer found\n```javascript\nimport fileEntryCache from 'file-entry-cache';\nconst cache = fileEntryCache.create('cache1');\nlet fileDescriptor = cache.getFileDescriptor('file.txt');\nconsole.log(fileDescriptor.changed); // true as it is the first time\nfileEntryCache.reconcile(); // save the cache to disk and remove files that are no longer found\n```\n\nLoad the cache from a file:\n\n```javascript\nimport fileEntryCache from 'file-entry-cache';\nconst cache = fileEntryCache.createFromFile('/path/to/cache/file');\nlet fileDescriptor = cache.getFileDescriptor('file.txt');\nconsole.log(fileDescriptor.changed); // false as it has not changed from the saved cache.\n```\n\n# Changes from v9 to v10\n\nThere have been many features added and changes made to the `file-entry-cache` class. Here are the main changes:\n- Added `cache` object to the options to allow for more control over the cache\n- Added `hashAlgorithm` to the options to allow for different checksum algorithms. Note that if you load from file it most likely will break if the value was something before. \n- Updated more on using Relative or Absolute paths. We now support both on `getFileDescriptor()`. You can read more on this in the `Get File Descriptor` section.\n- Migrated to Typescript with ESM and CommonJS support. This allows for better type checking and support for both ESM and CommonJS.\n- Once options are passed in they get assigned as properties such as `hashAlgorithm` and `currentWorkingDirectory`. This allows for better control and access to the options. For the Cache options they are assigned to `cache` such as `cache.ttl` and `cache.lruSize`.\n- Added `cache.persistInterval` to allow for saving the cache to disk at a specific interval. This will save the cache to disk at the interval specified instead of calling `reconsile()` to save. (`off` by default)\n- Added `getFileDescriptorsByPath(filePath: string): FileEntryDescriptor[]` to get all the file descriptors that start with the path specified. This is useful when you want to get all the files in a directory or a specific path.\n- Added `renameAbsolutePathKeys(oldPath: string, newPath: string): void` will rename the keys in the cache from the old path to the new path. This is useful when you rename a directory and want to update the cache without reanalyzing the files.\n- Using `flat-cache` v6 which is a major update. This allows for better performance and more control over the cache.\n- On `FileEntryDescriptor.meta` if using typescript you need to use the `meta.data` to set additional information. This is to allow for better type checking and to avoid conflicts with the `meta` object which was `any`.\n\n# Global Default Functions\n- `create(cacheId: string, cacheDirectory?: string, useCheckSum?: boolean, currentWorkingDirectory?: string)` - Creates a new instance of the `FileEntryCache` class\n- `createFromFile(cachePath: string, useCheckSum?: boolean, currentWorkingDirectory?: string)` - Creates a new instance of the `FileEntryCache` class and loads the cache from a file.\n\n# FileEntryCache Options (FileEntryCacheOptions)\n- `currentWorkingDirectory?` - The current working directory. Used when resolving relative paths.\n- `useCheckSum?` - If `true` it will use a checksum to determine if the file has changed. Default is `false`\n- `hashAlgorithm?` - The algorithm to use for the checksum. Default is `md5` but can be any algorithm supported by `crypto.createHash`\n- `cache.ttl?` - The time to live for the cache in milliseconds. Default is `0` which means no expiration\n- `cache.lruSize?` - The number of items to keep in the cache. Default is `0` which means no limit\n- `cache.useClone?` - If `true` it will clone the data before returning it. Default is `false`\n- `cache.expirationInterval?` - The interval to check for expired items in the cache. Default is `0` which means no expiration\n- `cache.persistInterval?` - The interval to save the data to disk. Default is `0` which means no persistence\n- `cache.cacheDir?` - The directory to save the cache files. Default is `./cache`\n- `cache.cacheId?` - The id of the cache. Default is `cache1`\n- `cache.parse?` - The function to parse the data. Default is `flatted.parse`\n- `cache.stringify?` - The function to stringify the data. Default is `flatted.stringify`\n\n# API\n\n- `constructor(options?: FileEntryCacheOptions)` - Creates a new instance of the `FileEntryCache` class\n- `useCheckSum: boolean` - If `true` it will use a checksum to determine if the file has changed. Default is `false`\n- `hashAlgorithm: string` - The algorithm to use for the checksum. Default is `md5` but can be any algorithm supported by `crypto.createHash`\n- `currentWorkingDirectory: string` - The current working directory. Used when resolving relative paths.\n- `getHash(buffer: Buffer): string` - Gets the hash of a buffer used for checksums\n- `createFileKey(filePath: string): string` - Creates a key for the file path. This is used to store the data in the cache based on relative or absolute paths.\n- `deleteCacheFile(filePath: string): void` - Deletes the cache file\n- `destroy(): void` - Destroys the cache. This will also delete the cache file. If using cache persistence it will stop the interval.\n- `removeEntry(filePath: string): void` - Removes an entry from the cache. This can be `relative` or `absolute` paths.\n- `reconcile(): void` - Saves the cache to disk and removes any files that are no longer found.\n- `hasFileChanged(filePath: string): boolean` - Checks if the file has changed. This will return `true` if the file has changed.\n- `getFileDescriptor(filePath: string, options?: { useCheckSum?: boolean, currentWorkingDirectory?: string }): FileEntryDescriptor` - Gets the file descriptor for the file. Please refer to the entire section on `Get File Descriptor` for more information.\n- `normalizeEntries(entries: FileEntryDescriptor[]): FileEntryDescriptor[]` - Normalizes the entries to have the correct paths. This is used when loading the cache from disk.\n- `analyzeFiles(files: string[])` will return `AnalyzedFiles` object with `changedFiles`, `notFoundFiles`, and `notChangedFiles` as FileDescriptor arrays.\n- `getUpdatedFiles(files: string[])` will return an array of `FileEntryDescriptor` objects that have changed.\n- `getFileDescriptorsByPath(filePath: string): FileEntryDescriptor[]` will return an array of `FileEntryDescriptor` objects that starts with the path specified.\n- `renameAbsolutePathKeys(oldPath: string, newPath: string): void` - Renames the keys in the cache from the old path to the new path. This is useful when you rename a directory and want to update the cache without reanalyzing the files.\n\n# Get File Descriptor\n\nThe `getFileDescriptor(filePath: string, options?: { useCheckSum?: boolean, currentWorkingDirectory?: string }): FileEntryDescriptor` function is used to get the file descriptor for the file. This function will return a `FileEntryDescriptor` object that has the following properties:\n\n- `key: string` - The key for the file. This is the relative or absolute path of the file.\n- `changed: boolean` - If the file has changed since the last time it was analyzed.\n- `notFound: boolean` - If the file was not found.\n- `meta: FileEntryMeta` - The meta data for the file. This has the following prperties: `size`, `mtime`, `ctime`, `hash`, `data`. Note that `data` is an object that can be used to store additional information.\n- `err` - If there was an error analyzing the file.\n\nWe have added the ability to use `relative` or `absolute` paths. If you pass in a `relative` path it will use the `currentWorkingDirectory` to resolve the path. If you pass in an `absolute` path it will use the path as is. This is useful when you want to use `relative` paths but also want to use `absolute` paths. \n\nIf you do not pass in `currentWorkingDirectory` in the class options or in the `getFileDescriptor` function it will use the `process.cwd()` as the default `currentWorkingDirectory`.\n\n```javascript\nconst fileEntryCache = new FileEntryCache();\nconst fileDescriptor = fileEntryCache.getFileDescriptor('file.txt', { currentWorkingDirectory: '/path/to/directory' });\n```\n\nSince this is a relative path it will use the `currentWorkingDirectory` to resolve the path. If you want to use an absolute path you can do the following:\n\n```javascript\nconst fileEntryCache = new FileEntryCache();\nconst filePath = path.resolve('/path/to/directory', 'file.txt');\nconst fileDescriptor = fileEntryCache.getFileDescriptor(filePath);\n```\n\nThis will save the key as the absolute path.\n\nIf there is an error when trying to get the file descriptor it will return an ``notFound` and `err` property with the error.\n\n```javascript\nconst fileEntryCache = new FileEntryCache();\nconst fileDescriptor = fileEntryCache.getFileDescriptor('no-file');\nif (fileDescriptor.err) {\n    console.error(fileDescriptor.err);\n}\n\nif (fileDescriptor.notFound) {\n    console.error('File not found');\n}\n```\n\n# Using Checksums to Determine if a File has Changed (useCheckSum)\n\nBy default the `useCheckSum` is `false`. This means that the `FileEntryCache` will use the `mtime` and `ctime` to determine if the file has changed. If you set `useCheckSum` to `true` it will use a checksum to determine if the file has changed. This is useful when you want to make sure that the file has not changed at all. \n\n```javascript\nconst fileEntryCache = new FileEntryCache();\nconst fileDescriptor = fileEntryCache.getFileDescriptor('file.txt', { useCheckSum: true });\n```\n\nYou can pass `useCheckSum` in the FileEntryCache options, as a property `.useCheckSum` to make it default for all files, or in the `getFileDescriptor` function. Here is an example where you set it globally but then override it for a specific file:\n\n```javascript\nconst fileEntryCache = new FileEntryCache({ useCheckSum: true });\nconst fileDescriptor = fileEntryCache.getFileDescriptor('file.txt', { useCheckSum: false });\n``` \n\n# Setting Additional Meta Data\n\nIn the past we have seen people do random values on the `meta` object. This can cause issues with the `meta` object. To avoid this we have `data` which can be anything. \n\n```javascript \nconst fileEntryCache = new FileEntryCache();\nconst fileDescriptor = fileEntryCache.getFileDescriptor('file.txt');\nfileDescriptor.meta.data = { myData: 'myData' }; //anything you want\n```\n# How to Contribute\n\nYou can contribute by forking the repo and submitting a pull request. Please make sure to add tests and update the documentation. To learn more about how to contribute go to our main README [https://github.com/jaredwray/cacheable](https://github.com/jaredwray/cacheable). This will talk about how to `Open a Pull Request`, `Ask a Question`, or `Post an Issue`.\n\n# License and Copyright\n[MIT © Jared Wray](./LICENSE)",
+ "readme": "[<img align=\"center\" src=\"https://cacheable.org/symbol.svg\" alt=\"Cacheable\" />](https://github.com/jaredwray/cacheable)\n\n# file-entry-cache\n> A lightweight cache for file metadata, ideal for processes that work on a specific set of files and only need to reprocess files that have changed since the last run\n\n[![codecov](https://codecov.io/gh/jaredwray/cacheable/graph/badge.svg?token=lWZ9OBQ7GM)](https://codecov.io/gh/jaredwray/cacheable)\n[![tests](https://github.com/jaredwray/cacheable/actions/workflows/tests.yml/badge.svg)](https://github.com/jaredwray/cacheable/actions/workflows/tests.yml)\n[![npm](https://img.shields.io/npm/dm/file-entry-cache.svg)](https://www.npmjs.com/package/file-entry-cache)\n[![npm](https://img.shields.io/npm/v/file-entry-cache)](https://www.npmjs.com/package/file-entry-cache)\n[![license](https://img.shields.io/github/license/jaredwray/cacheable)](https://github.com/jaredwray/cacheable/blob/main/LICENSE)\n\n# Features\n\n- Lightweight cache for file metadata\n- Ideal for processes that work on a specific set of files\n- Persists cache to Disk via `reconcile()` or `persistInterval` on `cache` options.\n- Uses `checksum` to determine if a file has changed\n- Supports `relative` and `absolute` paths\n- Ability to rename keys in the cache. Useful when renaming directories.\n- ESM and CommonJS support with Typescript\n\n# Table of Contents\n\n- [Installation](#installation)\n- [Getting Started](#getting-started)\n- [Changes from v9 to v10](#changes-from-v9-to-v10)\n- [Global Default Functions](#global-default-functions)\n- [FileEntryCache Options (FileEntryCacheOptions)](#fileentrycache-options-fileentrycacheoptions)\n- [API](#api)\n- [Get File Descriptor](#get-file-descriptor)\n- [Using Checksums to Determine if a File has Changed (useCheckSum)](#using-checksums-to-determine-if-a-file-has-changed-usechecksum)\n- [Setting Additional Meta Data](#setting-additional-meta-data)\n- [How to Contribute](#how-to-contribute)\n- [License and Copyright](#license-and-copyright)\n\n# Installation\n```bash\nnpm install file-entry-cache\n```\n\n# Getting Started\n\n```javascript\nimport fileEntryCache from 'file-entry-cache';\nconst cache = fileEntryCache.create('cache1');\nlet fileDescriptor = cache.getFileDescriptor('file.txt');\nconsole.log(fileDescriptor.changed); // true as it is the first time\nfileDescriptor = cache.getFileDescriptor('file.txt');\nconsole.log(fileDescriptor.changed); // false as it has not changed\n// do something to change the file\nfs.writeFileSync('file.txt', 'new data foo bar');\n// check if the file has changed\nfileDescriptor = cache.getFileDescriptor('file.txt');\nconsole.log(fileDescriptor.changed); // true\n```\n\nSave it to Disk and Reconsile files that are no longer found\n```javascript\nimport fileEntryCache from 'file-entry-cache';\nconst cache = fileEntryCache.create('cache1');\nlet fileDescriptor = cache.getFileDescriptor('file.txt');\nconsole.log(fileDescriptor.changed); // true as it is the first time\nfileEntryCache.reconcile(); // save the cache to disk and remove files that are no longer found\n```\n\nLoad the cache from a file:\n\n```javascript\nimport fileEntryCache from 'file-entry-cache';\nconst cache = fileEntryCache.createFromFile('/path/to/cache/file');\nlet fileDescriptor = cache.getFileDescriptor('file.txt');\nconsole.log(fileDescriptor.changed); // false as it has not changed from the saved cache.\n```\n\n# Changes from v9 to v10\n\nThere have been many features added and changes made to the `file-entry-cache` class. Here are the main changes:\n- Added `cache` object to the options to allow for more control over the cache\n- Added `hashAlgorithm` to the options to allow for different checksum algorithms. Note that if you load from file it most likely will break if the value was something before. \n- Updated more on using Relative or Absolute paths. We now support both on `getFileDescriptor()`. You can read more on this in the `Get File Descriptor` section.\n- Migrated to Typescript with ESM and CommonJS support. This allows for better type checking and support for both ESM and CommonJS.\n- Once options are passed in they get assigned as properties such as `hashAlgorithm` and `currentWorkingDirectory`. This allows for better control and access to the options. For the Cache options they are assigned to `cache` such as `cache.ttl` and `cache.lruSize`.\n- Added `cache.persistInterval` to allow for saving the cache to disk at a specific interval. This will save the cache to disk at the interval specified instead of calling `reconsile()` to save. (`off` by default)\n- Added `getFileDescriptorsByPath(filePath: string): FileEntryDescriptor[]` to get all the file descriptors that start with the path specified. This is useful when you want to get all the files in a directory or a specific path.\n- Added `renameAbsolutePathKeys(oldPath: string, newPath: string): void` will rename the keys in the cache from the old path to the new path. This is useful when you rename a directory and want to update the cache without reanalyzing the files.\n- Using `flat-cache` v6 which is a major update. This allows for better performance and more control over the cache.\n- On `FileEntryDescriptor.meta` if using typescript you need to use the `meta.data` to set additional information. This is to allow for better type checking and to avoid conflicts with the `meta` object which was `any`.\n\n# Global Default Functions\n- `create(cacheId: string, cacheDirectory?: string, useCheckSum?: boolean, currentWorkingDirectory?: string)` - Creates a new instance of the `FileEntryCache` class\n- `createFromFile(cachePath: string, useCheckSum?: boolean, currentWorkingDirectory?: string)` - Creates a new instance of the `FileEntryCache` class and loads the cache from a file.\n\n# FileEntryCache Options (FileEntryCacheOptions)\n- `currentWorkingDirectory?` - The current working directory. Used when resolving relative paths.\n- `useModifiedTime?` - If `true` it will use the modified time to determine if the file has changed. Default is `true`\n- `useCheckSum?` - If `true` it will use a checksum to determine if the file has changed. Default is `false`\n- `hashAlgorithm?` - The algorithm to use for the checksum. Default is `md5` but can be any algorithm supported by `crypto.createHash`\n- `cache.ttl?` - The time to live for the cache in milliseconds. Default is `0` which means no expiration\n- `cache.lruSize?` - The number of items to keep in the cache. Default is `0` which means no limit\n- `cache.useClone?` - If `true` it will clone the data before returning it. Default is `false`\n- `cache.expirationInterval?` - The interval to check for expired items in the cache. Default is `0` which means no expiration\n- `cache.persistInterval?` - The interval to save the data to disk. Default is `0` which means no persistence\n- `cache.cacheDir?` - The directory to save the cache files. Default is `./cache`\n- `cache.cacheId?` - The id of the cache. Default is `cache1`\n- `cache.parse?` - The function to parse the data. Default is `flatted.parse`\n- `cache.stringify?` - The function to stringify the data. Default is `flatted.stringify`\n\n# API\n\n- `constructor(options?: FileEntryCacheOptions)` - Creates a new instance of the `FileEntryCache` class\n- `useCheckSum: boolean` - If `true` it will use a checksum to determine if the file has changed. Default is `false`\n- `hashAlgorithm: string` - The algorithm to use for the checksum. Default is `md5` but can be any algorithm supported by `crypto.createHash`\n- `currentWorkingDirectory: string` - The current working directory. Used when resolving relative paths.\n- `getHash(buffer: Buffer): string` - Gets the hash of a buffer used for checksums\n- `createFileKey(filePath: string): string` - Creates a key for the file path. This is used to store the data in the cache based on relative or absolute paths.\n- `deleteCacheFile(filePath: string): void` - Deletes the cache file\n- `destroy(): void` - Destroys the cache. This will also delete the cache file. If using cache persistence it will stop the interval.\n- `removeEntry(filePath: string): void` - Removes an entry from the cache. This can be `relative` or `absolute` paths.\n- `reconcile(): void` - Saves the cache to disk and removes any files that are no longer found.\n- `hasFileChanged(filePath: string): boolean` - Checks if the file has changed. This will return `true` if the file has changed.\n- `getFileDescriptor(filePath: string, options?: { useModifiedTime?: boolean, useCheckSum?: boolean, currentWorkingDirectory?: string }): FileEntryDescriptor` - Gets the file descriptor for the file. Please refer to the entire section on `Get File Descriptor` for more information.\n- `normalizeEntries(entries: FileEntryDescriptor[]): FileEntryDescriptor[]` - Normalizes the entries to have the correct paths. This is used when loading the cache from disk.\n- `analyzeFiles(files: string[])` will return `AnalyzedFiles` object with `changedFiles`, `notFoundFiles`, and `notChangedFiles` as FileDescriptor arrays.\n- `getUpdatedFiles(files: string[])` will return an array of `FileEntryDescriptor` objects that have changed.\n- `getFileDescriptorsByPath(filePath: string): FileEntryDescriptor[]` will return an array of `FileEntryDescriptor` objects that starts with the path specified.\n- `renameAbsolutePathKeys(oldPath: string, newPath: string): void` - Renames the keys in the cache from the old path to the new path. This is useful when you rename a directory and want to update the cache without reanalyzing the files.\n\n# Get File Descriptor\n\nThe `getFileDescriptor(filePath: string, options?: { useCheckSum?: boolean, currentWorkingDirectory?: string }): FileEntryDescriptor` function is used to get the file descriptor for the file. This function will return a `FileEntryDescriptor` object that has the following properties:\n\n- `key: string` - The key for the file. This is the relative or absolute path of the file.\n- `changed: boolean` - If the file has changed since the last time it was analyzed.\n- `notFound: boolean` - If the file was not found.\n- `meta: FileEntryMeta` - The meta data for the file. This has the following prperties: `size`, `mtime`, `ctime`, `hash`, `data`. Note that `data` is an object that can be used to store additional information.\n- `err` - If there was an error analyzing the file.\n\nWe have added the ability to use `relative` or `absolute` paths. If you pass in a `relative` path it will use the `currentWorkingDirectory` to resolve the path. If you pass in an `absolute` path it will use the path as is. This is useful when you want to use `relative` paths but also want to use `absolute` paths. \n\nIf you do not pass in `currentWorkingDirectory` in the class options or in the `getFileDescriptor` function it will use the `process.cwd()` as the default `currentWorkingDirectory`.\n\n```javascript\nconst fileEntryCache = new FileEntryCache();\nconst fileDescriptor = fileEntryCache.getFileDescriptor('file.txt', { currentWorkingDirectory: '/path/to/directory' });\n```\n\nSince this is a relative path it will use the `currentWorkingDirectory` to resolve the path. If you want to use an absolute path you can do the following:\n\n```javascript\nconst fileEntryCache = new FileEntryCache();\nconst filePath = path.resolve('/path/to/directory', 'file.txt');\nconst fileDescriptor = fileEntryCache.getFileDescriptor(filePath);\n```\n\nThis will save the key as the absolute path.\n\nIf there is an error when trying to get the file descriptor it will return an ``notFound` and `err` property with the error.\n\n```javascript\nconst fileEntryCache = new FileEntryCache();\nconst fileDescriptor = fileEntryCache.getFileDescriptor('no-file');\nif (fileDescriptor.err) {\n    console.error(fileDescriptor.err);\n}\n\nif (fileDescriptor.notFound) {\n    console.error('File not found');\n}\n```\n\n# Using Checksums to Determine if a File has Changed (useCheckSum)\n\nBy default the `useCheckSum` is `false`. This means that the `FileEntryCache` will use the `mtime` and `ctime` to determine if the file has changed. If you set `useCheckSum` to `true` it will use a checksum to determine if the file has changed. This is useful when you want to make sure that the file has not changed at all. \n\n```javascript\nconst fileEntryCache = new FileEntryCache();\nconst fileDescriptor = fileEntryCache.getFileDescriptor('file.txt', { useCheckSum: true });\n```\n\nYou can pass `useCheckSum` in the FileEntryCache options, as a property `.useCheckSum` to make it default for all files, or in the `getFileDescriptor` function. Here is an example where you set it globally but then override it for a specific file:\n\n```javascript\nconst fileEntryCache = new FileEntryCache({ useCheckSum: true });\nconst fileDescriptor = fileEntryCache.getFileDescriptor('file.txt', { useCheckSum: false });\n``` \n\n# Setting Additional Meta Data\n\nIn the past we have seen people do random values on the `meta` object. This can cause issues with the `meta` object. To avoid this we have `data` which can be anything. \n\n```javascript \nconst fileEntryCache = new FileEntryCache();\nconst fileDescriptor = fileEntryCache.getFileDescriptor('file.txt');\nfileDescriptor.meta.data = { myData: 'myData' }; //anything you want\n```\n# How to Contribute\n\nYou can contribute by forking the repo and submitting a pull request. Please make sure to add tests and update the documentation. To learn more about how to contribute go to our main README [https://github.com/jaredwray/cacheable](https://github.com/jaredwray/cacheable). This will talk about how to `Open a Pull Request`, `Ask a Question`, or `Post an Issue`.\n\n# License and Copyright\n[MIT © Jared Wray](./LICENSE)",
  "readmeFilename": "README.md",
  "users": {
   "elussich": true,

@@ -1,6 +1,6 @@
 {
  "_id": "ignore-walk",
- "_rev": "35-b8fab7d0c57313fdd96cd0fa327a1995",
+ "_rev": "37-f1672d5dafdd438d9d7193f7f0711bb9",
  "name": "ignore-walk",
  "dist-tags": {
   "latest": "7.0.0"
@@ -2238,25 +2238,6 @@
   "7.0.0": {
    "name": "ignore-walk",
    "version": "7.0.0",
-   "description": "Nested/recursive `.gitignore`/`.npmignore` parsing and filtering.",
-   "main": "lib/index.js",
-   "devDependencies": {
-    "@npmcli/eslint-config": "^5.0.0",
-    "@npmcli/template-oss": "4.23.3",
-    "mutate-fs": "^2.1.1",
-    "tap": "^16.0.1"
-   },
-   "scripts": {
-    "test": "tap",
-    "posttest": "npm run lint",
-    "lint": "npm run eslint",
-    "lintfix": "npm run eslint -- --fix",
-    "postlint": "template-oss-check",
-    "template-oss-apply": "template-oss-apply --force",
-    "test:windows-coverage": "npm pkg set tap.statements=99 --json && npm pkg set tap.branches=98 --json && npm pkg set tap.lines=99 --json",
-    "snap": "tap",
-    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
-   },
    "keywords": [
     "ignorefile",
     "ignore",
@@ -2269,65 +2250,7 @@
     "name": "GitHub Inc."
    },
    "license": "ISC",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/npm/ignore-walk.git"
-   },
-   "dependencies": {
-    "minimatch": "^9.0.0"
-   },
-   "tap": {
-    "test-env": "LC_ALL=sk",
-    "before": "test/00-setup.js",
-    "after": "test/zz-cleanup.js",
-    "timeout": 600,
-    "jobs": 1,
-    "nyc-arg": [
-     "--exclude",
-     "tap-snapshots/**"
-    ]
-   },
-   "engines": {
-    "node": "^18.17.0 || >=20.5.0"
-   },
-   "templateOSS": {
-    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.23.3",
-    "content": "scripts/template-oss",
-    "publish": "true"
-   },
    "_id": "ignore-walk@7.0.0",
-   "gitHead": "229fc711c3699f0212400145d45f8c4a36034d51",
-   "bugs": {
-    "url": "https://github.com/npm/ignore-walk/issues"
-   },
-   "homepage": "https://github.com/npm/ignore-walk#readme",
-   "_nodeVersion": "22.8.0",
-   "_npmVersion": "10.8.3",
-   "dist": {
-    "integrity": "sha512-T4gbf83A4NH95zvhVYZc+qWocBBGlpzUXLPGurJggw/WIOwicfXJChLDP/iBZnN5WqROSu5Bm3hhle4z8a8YGQ==",
-    "shasum": "8350e475cf4375969c12eb49618b3fd9cca6704f",
-    "tarball": "http://localhost:3000/ignore-walk/-/ignore-walk-7.0.0.tgz",
-    "fileCount": 4,
-    "unpackedSize": 13238,
-    "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/ignore-walk@7.0.0",
-     "provenance": {
-      "predicateType": "https://slsa.dev/provenance/v1"
-     }
-    },
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIC35XGLDAxDpMNQaJ7ohvpowM1e6LD2e7OOLxiKF018IAiAIKdI4DgMkcExGvV2+Ilp903fQXY8+Msx9UYJ45tBHGw=="
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "npm-cli-ops",
-    "email": "npm-cli+bot@github.com"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "hashtagchris",
@@ -2354,16 +2277,93 @@
      "email": "gar+npm@danger.computer"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/ignore-walk_7.0.0_1725486563874_0.3344319358696526"
+   "homepage": "https://github.com/npm/ignore-walk#readme",
+   "bugs": {
+    "url": "https://github.com/npm/ignore-walk/issues"
    },
-   "_hasShrinkwrap": false
+   "tap": {
+    "jobs": 1,
+    "after": "test/zz-cleanup.js",
+    "before": "test/00-setup.js",
+    "nyc-arg": [
+     "--exclude",
+     "tap-snapshots/**"
+    ],
+    "timeout": 600,
+    "test-env": "LC_ALL=sk"
+   },
+   "dist": {
+    "shasum": "8350e475cf4375969c12eb49618b3fd9cca6704f",
+    "tarball": "http://localhost:3000/ignore-walk/-/ignore-walk-7.0.0.tgz",
+    "fileCount": 4,
+    "integrity": "sha512-T4gbf83A4NH95zvhVYZc+qWocBBGlpzUXLPGurJggw/WIOwicfXJChLDP/iBZnN5WqROSu5Bm3hhle4z8a8YGQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIC35XGLDAxDpMNQaJ7ohvpowM1e6LD2e7OOLxiKF018IAiAIKdI4DgMkcExGvV2+Ilp903fQXY8+Msx9UYJ45tBHGw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/ignore-walk@7.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 13238
+   },
+   "main": "lib/index.js",
+   "engines": {
+    "node": "^18.17.0 || >=20.5.0"
+   },
+   "gitHead": "229fc711c3699f0212400145d45f8c4a36034d51",
+   "scripts": {
+    "lint": "npm run eslint",
+    "snap": "tap",
+    "test": "tap",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lintfix": "npm run eslint -- --fix",
+    "postlint": "template-oss-check",
+    "posttest": "npm run lint",
+    "template-oss-apply": "template-oss-apply --force",
+    "test:windows-coverage": "npm pkg set tap.statements=99 --json && npm pkg set tap.branches=98 --json && npm pkg set tap.lines=99 --json"
+   },
+   "_npmUser": {
+    "name": "npm-cli-ops",
+    "email": "npm-cli+bot@github.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/npm/ignore-walk.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "Nested/recursive `.gitignore`/`.npmignore` parsing and filtering.",
+   "directories": {},
+   "templateOSS": {
+    "content": "scripts/template-oss",
+    "publish": "true",
+    "version": "4.23.3",
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+   },
+   "_nodeVersion": "22.8.0",
+   "dependencies": {
+    "minimatch": "^9.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.0.1",
+    "mutate-fs": "^2.1.1",
+    "@npmcli/template-oss": "4.23.3",
+    "@npmcli/eslint-config": "^5.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/ignore-walk_7.0.0_1725486563874_0.3344319358696526",
+    "host": "s3://npm-registry-packages"
+   }
   }
  },
  "time": {
   "created": "2017-05-22T07:05:37.126Z",
-  "modified": "2024-09-04T21:49:24.498Z",
+  "modified": "2025-04-08T18:09:30.487Z",
   "1.0.0": "2017-05-22T07:05:37.126Z",
   "1.0.1": "2017-05-22T07:07:58.102Z",
   "1.0.2": "2017-05-22T16:42:56.183Z",
@@ -2408,34 +2408,38 @@
   "glob"
  ],
  "repository": {
-  "type": "git",
-  "url": "git+https://github.com/npm/ignore-walk.git"
+  "url": "git+https://github.com/npm/ignore-walk.git",
+  "type": "git"
  },
  "description": "Nested/recursive `.gitignore`/`.npmignore` parsing and filtering.",
  "maintainers": [
   {
-   "name": "hashtagchris",
-   "email": "hashtagchris@github.com"
+   "email": "fritzy@github.com",
+   "name": "fritzy"
   },
   {
-   "name": "reggi",
-   "email": "reggi@github.com"
+   "email": "gar+npm@danger.computer",
+   "name": "gar"
   },
   {
-   "name": "npm-cli-ops",
-   "email": "npm-cli+bot@github.com"
+   "email": "saquibkhan@github.com",
+   "name": "saquibkhan"
   },
   {
-   "name": "saquibkhan",
-   "email": "saquibkhan@github.com"
+   "email": "npm-cli+bot@github.com",
+   "name": "npm-cli-ops"
   },
   {
-   "name": "fritzy",
-   "email": "fritzy@github.com"
+   "email": "reggi@github.com",
+   "name": "reggi"
   },
   {
-   "name": "gar",
-   "email": "gar+npm@danger.computer"
+   "email": "hashtagchris@github.com",
+   "name": "hashtagchris"
+  },
+  {
+   "email": "owlstronaut@github.com",
+   "name": "owlstronaut"
   }
  ],
  "readme": "# ignore-walk\n\nNested/recursive `.gitignore`/`.npmignore` parsing and filtering.\n\nWalk a directory creating a list of entries, parsing any `.ignore`\nfiles met along the way to exclude files.\n\n## USAGE\n\n```javascript\nconst walk = require('ignore-walk')\n\n// All options are optional, defaults provided.\n\n// this function returns a promise, but you can also pass a cb\n// if you like that approach better.\nwalk({\n  path: '...', // root dir to start in. defaults to process.cwd()\n  ignoreFiles: [ '.gitignore' ], // list of filenames. defaults to ['.ignore']\n  includeEmpty: true|false, // true to include empty dirs, default false\n  follow: true|false // true to follow symlink dirs, default false\n}, callback)\n\n// to walk synchronously, do it this way:\nconst result = walk.sync({ path: '/wow/such/filepath' })\n```\n\nIf you want to get at the underlying classes, they're at `walk.Walker`\nand `walk.WalkerSync`.\n\n## OPTIONS\n\n* `path` The path to start in.  Defaults to `process.cwd()`\n\n* `ignoreFiles` Filenames to treat as ignore files.  The default is\n  `['.ignore']`.  (This is where you'd put `.gitignore` or\n  `.npmignore` or whatever.)  If multiple ignore files are in a\n  directory, then rules from each are applied in the order that the\n  files are listed.\n\n* `includeEmpty` Set to `true` to include empty directories, assuming\n  they are not excluded by any of the ignore rules.  If not set, then\n  this follows the standard `git` behavior of not including\n  directories that are empty.\n\n    Note: this will cause an empty directory to be included if it\n    would contain an included entry, even if it would have otherwise\n    been excluded itself.\n\n    For example, given the rules `*` (ignore everything) and `!/a/b/c`\n    (re-include the entry at `/a/b/c`), the directory `/a/b` will be\n    included if it is empty.\n\n* `follow`  Set to `true` to treat symbolically linked directories as\n  directories, recursing into them.  There is no handling for nested\n  symlinks, so `ELOOP` errors can occur in some cases when using this\n  option.  Defaults to `false`.\n",

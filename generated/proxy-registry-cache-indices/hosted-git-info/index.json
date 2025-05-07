@@ -1,11 +1,11 @@
 {
  "_id": "hosted-git-info",
- "_rev": "121-00f0f67001ceebb31f81a1e8a2ada8f2",
+ "_rev": "124-2853e60a4af1a78f89e100d65e189547",
  "name": "hosted-git-info",
  "dist-tags": {
   "ancient-legacy-fixes": "2.8.9",
-  "latest": "8.0.2",
-  "backport-v6": "6.1.3"
+  "backport-v6": "6.1.3",
+  "latest": "8.1.0"
  },
  "versions": {
   "1.0.0": {
@@ -5960,6 +5960,124 @@
   "8.0.2": {
    "name": "hosted-git-info",
    "version": "8.0.2",
+   "keywords": [
+    "git",
+    "github",
+    "bitbucket",
+    "gitlab"
+   ],
+   "author": {
+    "name": "GitHub Inc."
+   },
+   "license": "ISC",
+   "_id": "hosted-git-info@8.0.2",
+   "maintainers": [
+    {
+     "name": "hashtagchris",
+     "email": "hashtagchris@github.com"
+    },
+    {
+     "name": "reggi",
+     "email": "reggi@github.com"
+    },
+    {
+     "name": "npm-cli-ops",
+     "email": "npm-cli+bot@github.com"
+    },
+    {
+     "name": "saquibkhan",
+     "email": "saquibkhan@github.com"
+    },
+    {
+     "name": "fritzy",
+     "email": "fritzy@github.com"
+    },
+    {
+     "name": "gar",
+     "email": "gar+npm@danger.computer"
+    }
+   ],
+   "homepage": "https://github.com/npm/hosted-git-info",
+   "bugs": {
+    "url": "https://github.com/npm/hosted-git-info/issues"
+   },
+   "tap": {
+    "color": 1,
+    "nyc-arg": [
+     "--exclude",
+     "tap-snapshots/**"
+    ],
+    "coverage": true
+   },
+   "dist": {
+    "shasum": "5bd7d8b5395616e41cc0d6578381a32f669b14b2",
+    "tarball": "http://localhost:3000/hosted-git-info/-/hosted-git-info-8.0.2.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-sYKnA7eGln5ov8T8gnYlkSOxFJvywzEx9BueN6xo/GKO8PGiI6uK6xx+DIGe45T3bdVjLAQDQW1aicT8z8JwQg==",
+    "signatures": [
+     {
+      "sig": "MEUCIBdkEc+eXB84bN6nREAhjXg1oWtq1FmwWHZkr08qN8MiAiEA9TtaX/OrRn5NwvDhoBaj7LJZ9sH+6zNFrdWYCkZu6cI=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/hosted-git-info@8.0.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 26802
+   },
+   "main": "./lib/index.js",
+   "engines": {
+    "node": "^18.17.0 || >=20.5.0"
+   },
+   "gitHead": "3baf85298e5fd6f1363d060ec9e826ce51971cd1",
+   "scripts": {
+    "lint": "npm run eslint",
+    "snap": "tap",
+    "test": "tap",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lintfix": "npm run eslint -- --fix",
+    "postlint": "template-oss-check",
+    "posttest": "npm run lint",
+    "test:coverage": "tap --coverage-report=html",
+    "template-oss-apply": "template-oss-apply --force"
+   },
+   "_npmUser": {
+    "name": "npm-cli-ops",
+    "email": "npm-cli+bot@github.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/npm/hosted-git-info.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "Provides metadata and conversions from repository urls for GitHub, Bitbucket and GitLab",
+   "directories": {},
+   "templateOSS": {
+    "publish": "true",
+    "version": "4.23.4",
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+   },
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "lru-cache": "^10.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.0.1",
+    "@npmcli/template-oss": "4.23.4",
+    "@npmcli/eslint-config": "^5.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/hosted-git-info_8.0.2_1732222840963_0.5901203556112569",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "8.1.0": {
+   "name": "hosted-git-info",
+   "version": "8.1.0",
    "description": "Provides metadata and conversions from repository urls for GitHub, Bitbucket and GitLab",
    "main": "./lib/index.js",
    "repository": {
@@ -5996,7 +6114,7 @@
    },
    "devDependencies": {
     "@npmcli/eslint-config": "^5.0.0",
-    "@npmcli/template-oss": "4.23.4",
+    "@npmcli/template-oss": "4.24.3",
     "tap": "^16.0.1"
    },
    "engines": {
@@ -6012,29 +6130,29 @@
    },
    "templateOSS": {
     "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.23.4",
+    "version": "4.24.3",
     "publish": "true"
    },
-   "_id": "hosted-git-info@8.0.2",
-   "gitHead": "3baf85298e5fd6f1363d060ec9e826ce51971cd1",
-   "_nodeVersion": "22.11.0",
-   "_npmVersion": "10.9.0",
+   "_id": "hosted-git-info@8.1.0",
+   "gitHead": "3dfd77128d9ecabf9ef692ca5af17c9349c56a4e",
+   "_nodeVersion": "22.14.0",
+   "_npmVersion": "11.3.0",
    "dist": {
-    "integrity": "sha512-sYKnA7eGln5ov8T8gnYlkSOxFJvywzEx9BueN6xo/GKO8PGiI6uK6xx+DIGe45T3bdVjLAQDQW1aicT8z8JwQg==",
-    "shasum": "5bd7d8b5395616e41cc0d6578381a32f669b14b2",
-    "tarball": "http://localhost:3000/hosted-git-info/-/hosted-git-info-8.0.2.tgz",
+    "integrity": "sha512-Rw/B2DNQaPBICNXEm8balFz9a6WpZrkCGpcWFpy7nCj+NyhSdqXipmfvtmWt9xGfp0wZnBxB+iVpLmQMYt47Tw==",
+    "shasum": "153cd84c03c6721481e16a5709eb74b1a0ab2ed0",
+    "tarball": "http://localhost:3000/hosted-git-info/-/hosted-git-info-8.1.0.tgz",
     "fileCount": 7,
-    "unpackedSize": 26802,
+    "unpackedSize": 28098,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/hosted-git-info@8.0.2",
+     "url": "http://localhost:3000/-/npm/v1/attestations/hosted-git-info@8.1.0",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
     },
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIBdkEc+eXB84bN6nREAhjXg1oWtq1FmwWHZkr08qN8MiAiEA9TtaX/OrRn5NwvDhoBaj7LJZ9sH+6zNFrdWYCkZu6cI="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQCmcHdm4a49MeVHsGCxGsMYb2nkPewUW/L4VK/pz8XkugIhANcnetYw7biNdYmHPxxVIxFPTCz5Fmv3lsmCFgq9Ws2v"
      }
     ]
    },
@@ -6045,40 +6163,44 @@
    "directories": {},
    "maintainers": [
     {
-     "name": "hashtagchris",
-     "email": "hashtagchris@github.com"
-    },
-    {
-     "name": "reggi",
-     "email": "reggi@github.com"
-    },
-    {
-     "name": "npm-cli-ops",
-     "email": "npm-cli+bot@github.com"
-    },
-    {
-     "name": "saquibkhan",
-     "email": "saquibkhan@github.com"
-    },
-    {
      "name": "fritzy",
      "email": "fritzy@github.com"
     },
     {
      "name": "gar",
      "email": "gar+npm@danger.computer"
+    },
+    {
+     "name": "saquibkhan",
+     "email": "saquibkhan@github.com"
+    },
+    {
+     "name": "npm-cli-ops",
+     "email": "npm-cli+bot@github.com"
+    },
+    {
+     "name": "reggi",
+     "email": "reggi@github.com"
+    },
+    {
+     "name": "hashtagchris",
+     "email": "hashtagchris@github.com"
+    },
+    {
+     "name": "owlstronaut",
+     "email": "owlstronaut@github.com"
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/hosted-git-info_8.0.2_1732222840963_0.5901203556112569"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/hosted-git-info_8.1.0_1744655505757_0.6313803793946688"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2014-10-09T18:34:13.442Z",
-  "modified": "2024-11-21T21:00:41.785Z",
+  "modified": "2025-04-14T18:31:46.384Z",
   "1.0.0": "2014-10-09T18:34:13.442Z",
   "1.1.0": "2014-10-17T11:13:06.236Z",
   "1.2.0": "2014-10-28T02:04:51.706Z",
@@ -6148,7 +6270,8 @@
   "8.0.1": "2024-11-20T22:01:03.260Z",
   "6.1.2": "2024-11-21T17:41:45.729Z",
   "6.1.3": "2024-11-21T20:52:51.496Z",
-  "8.0.2": "2024-11-21T21:00:41.213Z"
+  "8.0.2": "2024-11-21T21:00:41.213Z",
+  "8.1.0": "2025-04-14T18:31:45.932Z"
  },
  "bugs": {
   "url": "https://github.com/npm/hosted-git-info/issues"
@@ -6171,31 +6294,35 @@
  "description": "Provides metadata and conversions from repository urls for GitHub, Bitbucket and GitLab",
  "maintainers": [
   {
-   "name": "hashtagchris",
-   "email": "hashtagchris@github.com"
-  },
-  {
-   "name": "reggi",
-   "email": "reggi@github.com"
-  },
-  {
-   "name": "npm-cli-ops",
-   "email": "npm-cli+bot@github.com"
-  },
-  {
-   "name": "saquibkhan",
-   "email": "saquibkhan@github.com"
-  },
-  {
    "name": "fritzy",
    "email": "fritzy@github.com"
   },
   {
    "name": "gar",
    "email": "gar+npm@danger.computer"
+  },
+  {
+   "name": "saquibkhan",
+   "email": "saquibkhan@github.com"
+  },
+  {
+   "name": "npm-cli-ops",
+   "email": "npm-cli+bot@github.com"
+  },
+  {
+   "name": "reggi",
+   "email": "reggi@github.com"
+  },
+  {
+   "name": "hashtagchris",
+   "email": "hashtagchris@github.com"
+  },
+  {
+   "name": "owlstronaut",
+   "email": "owlstronaut@github.com"
   }
  ],
- "readme": "# hosted-git-info\n\nThis will let you identify and transform various git hosts URLs between\nprotocols.  It also can tell you what the URL is for the raw path for\nparticular file for direct access without git.\n\n## Example\n\n```javascript\nconst hostedGitInfo = require(\"hosted-git-info\")\nconst info = hostedGitInfo.fromUrl(\"git@github.com:npm/hosted-git-info.git\", opts)\n/* info looks like:\n{\n  type: \"github\",\n  domain: \"github.com\",\n  user: \"npm\",\n  project: \"hosted-git-info\"\n}\n*/\n```\n\nIf the URL can't be matched with a git host, `null` will be returned.  We\ncan match git, ssh and https urls.  Additionally, we can match ssh connect\nstrings (`git@github.com:npm/hosted-git-info`) and shortcuts (eg,\n`github:npm/hosted-git-info`).  GitHub specifically, is detected in the case\nof a third, unprefixed, form: `npm/hosted-git-info`.\n\nIf it does match, the returned object has properties of:\n\n* info.type -- The short name of the service\n* info.domain -- The domain for git protocol use\n* info.user -- The name of the user/org on the git host\n* info.project -- The name of the project on the git host\n\n## Version Contract\n\nThe major version will be bumped any time…\n\n* The constructor stops accepting URLs that it previously accepted.\n* A method is removed.\n* A method can no longer accept the number and type of arguments it previously accepted.\n* A method can return a different type than it currently returns.\n\nImplications:\n\n* I do not consider the specific format of the urls returned from, say\n  `.https()` to be a part of the contract.  The contract is that it will\n  return a string that can be used to fetch the repo via HTTPS.  But what\n  that string looks like, specifically, can change.\n* Dropping support for a hosted git provider would constitute a breaking\n  change.\n\n## Usage\n\n### const info = hostedGitInfo.fromUrl(gitSpecifier[, options])\n\n* *gitSpecifer* is a URL of a git repository or a SCP-style specifier of one.\n* *options* is an optional object. It can have the following properties:\n  * *noCommittish* — If true then committishes won't be included in generated URLs.\n  * *noGitPlus* — If true then `git+` won't be prefixed on URLs.\n\n## Methods\n\nAll of the methods take the same options as the `fromUrl` factory.  Options\nprovided to a method override those provided to the constructor.\n\n* info.file(path, opts)\n\nGiven the path of a file relative to the repository, returns a URL for\ndirectly fetching it from the githost.  If no committish was set then\n`HEAD` will be used as the default.\n\nFor example `hostedGitInfo.fromUrl(\"git@github.com:npm/hosted-git-info.git#v1.0.0\").file(\"package.json\")`\nwould return `https://raw.githubusercontent.com/npm/hosted-git-info/v1.0.0/package.json`\n\n* info.shortcut(opts)\n\neg, `github:npm/hosted-git-info`\n\n* info.browse(path, fragment, opts)\n\neg, `https://github.com/npm/hosted-git-info/tree/v1.2.0`,\n`https://github.com/npm/hosted-git-info/tree/v1.2.0/package.json`,\n`https://github.com/npm/hosted-git-info/tree/v1.2.0/README.md#supported-hosts`\n\n* info.bugs(opts)\n\neg, `https://github.com/npm/hosted-git-info/issues`\n\n* info.docs(opts)\n\neg, `https://github.com/npm/hosted-git-info/tree/v1.2.0#readme`\n\n* info.https(opts)\n\neg, `git+https://github.com/npm/hosted-git-info.git`\n\n* info.sshurl(opts)\n\neg, `git+ssh://git@github.com/npm/hosted-git-info.git`\n\n* info.ssh(opts)\n\neg, `git@github.com:npm/hosted-git-info.git`\n\n* info.path(opts)\n\neg, `npm/hosted-git-info`\n\n* info.tarball(opts)\n\neg, `https://github.com/npm/hosted-git-info/archive/v1.2.0.tar.gz`\n\n* info.getDefaultRepresentation()\n\nReturns the default output type. The default output type is based on the\nstring you passed in to be parsed\n\n* info.toString(opts)\n\nUses the getDefaultRepresentation to call one of the other methods to get a URL for\nthis resource. As such `hostedGitInfo.fromUrl(url).toString()` will give\nyou a normalized version of the URL that still uses the same protocol.\n\nShortcuts will still be returned as shortcuts, but the special case github\nform of `org/project` will be normalized to `github:org/project`.\n\nSSH connect strings will be normalized into `git+ssh` URLs.\n\n## Supported hosts\n\nCurrently this supports GitHub (including Gists), Bitbucket, GitLab and Sourcehut.\nPull requests for additional hosts welcome.\n",
+ "readme": "# hosted-git-info\n\nThis will let you identify and transform various git hosts URLs between\nprotocols.  It also can tell you what the URL is for the raw path for\nparticular file for direct access without git.\n\n## Example\n\n```javascript\nconst hostedGitInfo = require(\"hosted-git-info\")\nconst info = hostedGitInfo.fromUrl(\"git@github.com:npm/hosted-git-info.git\", opts)\n/* info looks like:\n{\n  type: \"github\",\n  domain: \"github.com\",\n  user: \"npm\",\n  project: \"hosted-git-info\"\n}\n*/\n```\n\nIf the URL can't be matched with a git host, `null` will be returned. We\ncan match git, ssh and https urls.  Additionally, we can match ssh connect\nstrings (`git@github.com:npm/hosted-git-info`) and shortcuts (eg,\n`github:npm/hosted-git-info`).  GitHub specifically, is detected in the case\nof a third, unprefixed, form: `npm/hosted-git-info`.\n\nIf it does match, the returned object has properties of:\n\n* info.type -- The short name of the service\n* info.domain -- The domain for git protocol use\n* info.user -- The name of the user/org on the git host\n* info.project -- The name of the project on the git host\n\n## Version Contract\n\nThe major version will be bumped any time…\n\n* The constructor stops accepting URLs that it previously accepted.\n* A method is removed.\n* A method can no longer accept the number and type of arguments it previously accepted.\n* A method can return a different type than it currently returns.\n\nImplications:\n\n* I do not consider the specific format of the urls returned from, say\n  `.https()` to be a part of the contract.  The contract is that it will\n  return a string that can be used to fetch the repo via HTTPS.  But what\n  that string looks like, specifically, can change.\n* Dropping support for a hosted git provider would constitute a breaking\n  change.\n\n## Usage\n\n### const info = hostedGitInfo.fromUrl(gitSpecifier[, options])\n\n* *gitSpecifer* is a URL of a git repository or a SCP-style specifier of one.\n* *options* is an optional object. It can have the following properties:\n  * *noCommittish* — If true then committishes won't be included in generated URLs.\n  * *noGitPlus* — If true then `git+` won't be prefixed on URLs.\n\n### const infoOrURL = hostedGitInfo.fromManifest(manifest[, options])\n\n* *manifest* is a package manifest, such as that returned by [`pacote.manifest()`](https://npmjs.com/pacote)\n* *options* is an optional object. It can have the same properties as `fromUrl` above.\n\n## Methods\n\nAll of the methods take the same options as the `fromUrl` factory.  Options\nprovided to a method override those provided to the constructor.\n\n* info.file(path, opts)\n\nGiven the path of a file relative to the repository, returns a URL for\ndirectly fetching it from the githost.  If no committish was set then\n`HEAD` will be used as the default.\n\nFor example `hostedGitInfo.fromUrl(\"git@github.com:npm/hosted-git-info.git#v1.0.0\").file(\"package.json\")`\nwould return `https://raw.githubusercontent.com/npm/hosted-git-info/v1.0.0/package.json`\n\n* info.shortcut(opts)\n\neg, `github:npm/hosted-git-info`\n\n* info.browse(path, fragment, opts)\n\neg, `https://github.com/npm/hosted-git-info/tree/v1.2.0`,\n`https://github.com/npm/hosted-git-info/tree/v1.2.0/package.json`,\n`https://github.com/npm/hosted-git-info/tree/v1.2.0/README.md#supported-hosts`\n\n* info.bugs(opts)\n\neg, `https://github.com/npm/hosted-git-info/issues`\n\n* info.docs(opts)\n\neg, `https://github.com/npm/hosted-git-info/tree/v1.2.0#readme`\n\n* info.https(opts)\n\neg, `git+https://github.com/npm/hosted-git-info.git`\n\n* info.sshurl(opts)\n\neg, `git+ssh://git@github.com/npm/hosted-git-info.git`\n\n* info.ssh(opts)\n\neg, `git@github.com:npm/hosted-git-info.git`\n\n* info.path(opts)\n\neg, `npm/hosted-git-info`\n\n* info.tarball(opts)\n\neg, `https://github.com/npm/hosted-git-info/archive/v1.2.0.tar.gz`\n\n* info.getDefaultRepresentation()\n\nReturns the default output type. The default output type is based on the\nstring you passed in to be parsed\n\n* info.toString(opts)\n\nUses the getDefaultRepresentation to call one of the other methods to get a URL for\nthis resource. As such `hostedGitInfo.fromUrl(url).toString()` will give\nyou a normalized version of the URL that still uses the same protocol.\n\nShortcuts will still be returned as shortcuts, but the special case github\nform of `org/project` will be normalized to `github:org/project`.\n\nSSH connect strings will be normalized into `git+ssh` URLs.\n\n## Supported hosts\n\nCurrently this supports GitHub (including Gists), Bitbucket, GitLab and Sourcehut.\nPull requests for additional hosts welcome.\n",
  "readmeFilename": "README.md",
  "users": {
   "iarna": true,

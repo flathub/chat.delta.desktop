@@ -1,10 +1,10 @@
 {
  "_id": "@tauri-apps/cli",
- "_rev": "150-69c7e8059ba1971d129ab0fb8688f3c6",
+ "_rev": "152-320de7638792f178098d8997c79124d5",
  "name": "@tauri-apps/cli",
  "dist-tags": {
   "next": "2.0.0-rc.18",
-  "latest": "2.4.0"
+  "latest": "2.5.0"
  },
  "versions": {
   "0.0.0": {
@@ -20302,6 +20302,276 @@
   "2.4.0": {
    "name": "@tauri-apps/cli",
    "version": "2.4.0",
+   "license": "Apache-2.0 OR MIT",
+   "_id": "@tauri-apps/cli@2.4.0",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "Tauri Programme within The Commons Conservancy"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/tauri#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/tauri/issues"
+   },
+   "bin": {
+    "tauri": "tauri.js"
+   },
+   "dist": {
+    "shasum": "d1174ee62f5d982a2c6e65101c53e6763e40b2d6",
+    "tarball": "http://localhost:3000/@tauri-apps/cli/-/cli-2.4.0.tgz",
+    "fileCount": 18,
+    "integrity": "sha512-Esg7s20tuSULd2YF3lmtMa1vF7yr5eh/TlBHXjEyrC+XSD9aBxHVoXb6oz7oKybDY9Jf9OiBa0bf2PbybcmOLA==",
+    "signatures": [
+     {
+      "sig": "MEQCIGX0u4sJrzzK5JKDKpSUEgjrwpoh4DcfkR9gQXpmxBFwAiBhpdGlbyU9FN7TWcHkNx3E0Ivov0+GABFHRRiOyJHgiQ==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fcli@2.4.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 313165
+   },
+   "main": "main.js",
+   "napi": {
+    "name": "cli",
+    "triples": {
+     "additional": [
+      "aarch64-apple-darwin",
+      "aarch64-unknown-linux-gnu",
+      "aarch64-unknown-linux-musl",
+      "armv7-unknown-linux-gnueabihf",
+      "x86_64-unknown-linux-musl",
+      "riscv64gc-unknown-linux-gnu",
+      "i686-pc-windows-msvc",
+      "aarch64-pc-windows-msvc"
+     ]
+    }
+   },
+   "types": "main.d.ts",
+   "engines": {
+    "node": ">= 10"
+   },
+   "funding": {
+    "url": "https://opencollective.com/tauri",
+    "type": "opencollective"
+   },
+   "gitHead": "be3a79c864bf034b5d55c8eb448e85e78bb16cb4",
+   "scripts": {
+    "test": "vitest run",
+    "build": "cross-env TARGET=node napi build --platform --profile release-size-optimized",
+    "tauri": "node ./tauri.js",
+    "prepack": "cp ../../crates/tauri-schema-generator/schemas/config.schema.json .",
+    "version": "napi version",
+    "artifacts": "napi artifacts",
+    "postbuild": "node append-headers.js",
+    "build:debug": "cross-env TARGET=node napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm --gh-release-id $RELEASE_ID",
+    "postbuild:debug": "node append-headers.js"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/tauri.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Command line interface for building Tauri apps",
+   "directories": {},
+   "_nodeVersion": "20.19.0",
+   "publishConfig": {
+    "access": "public"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "vitest": "^3.0.7",
+    "cross-env": "7.0.3",
+    "@types/node": "^22.13.5",
+    "@napi-rs/cli": "2.18.4"
+   },
+   "optionalDependencies": {
+    "@tauri-apps/cli-darwin-x64": "2.4.0",
+    "@tauri-apps/cli-darwin-arm64": "2.4.0",
+    "@tauri-apps/cli-linux-x64-gnu": "2.4.0",
+    "@tauri-apps/cli-linux-x64-musl": "2.4.0",
+    "@tauri-apps/cli-win32-x64-msvc": "2.4.0",
+    "@tauri-apps/cli-linux-arm64-gnu": "2.4.0",
+    "@tauri-apps/cli-win32-ia32-msvc": "2.4.0",
+    "@tauri-apps/cli-linux-arm64-musl": "2.4.0",
+    "@tauri-apps/cli-win32-arm64-msvc": "2.4.0",
+    "@tauri-apps/cli-linux-riscv64-gnu": "2.4.0",
+    "@tauri-apps/cli-linux-arm-gnueabihf": "2.4.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/cli_2.4.0_1742499621705_0.031158812357288568",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.4.1": {
+   "name": "@tauri-apps/cli",
+   "version": "2.4.1",
+   "license": "Apache-2.0 OR MIT",
+   "_id": "@tauri-apps/cli@2.4.1",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "contributors": [
+    {
+     "name": "Tauri Programme within The Commons Conservancy"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/tauri#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/tauri/issues"
+   },
+   "bin": {
+    "tauri": "tauri.js"
+   },
+   "dist": {
+    "shasum": "8114d293c1d021e0ea20927544e0ae54d370fc48",
+    "tarball": "http://localhost:3000/@tauri-apps/cli/-/cli-2.4.1.tgz",
+    "fileCount": 18,
+    "integrity": "sha512-9Ta81jx9+57FhtU/mPIckDcOBtPTUdKM75t4+aA0X84b8Sclb0jy1xA8NplmcRzp2fsfIHNngU2NiRxsW5+yOQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIA9UP8QtdJ76wbg8TY0kzSJBrPqBaKa+Emvy4RYlH6HIAiEA5FYDEaWXfeVJFnL9wY/v4M0to2AQ95oZzpVppe1DDsI=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fcli@2.4.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 313899
+   },
+   "main": "main.js",
+   "napi": {
+    "name": "cli",
+    "triples": {
+     "additional": [
+      "aarch64-apple-darwin",
+      "aarch64-unknown-linux-gnu",
+      "aarch64-unknown-linux-musl",
+      "armv7-unknown-linux-gnueabihf",
+      "x86_64-unknown-linux-musl",
+      "riscv64gc-unknown-linux-gnu",
+      "i686-pc-windows-msvc",
+      "aarch64-pc-windows-msvc"
+     ]
+    }
+   },
+   "types": "main.d.ts",
+   "engines": {
+    "node": ">= 10"
+   },
+   "funding": {
+    "url": "https://opencollective.com/tauri",
+    "type": "opencollective"
+   },
+   "gitHead": "b154826881f3aea8086b0bf4d5fdc005efd3debe",
+   "scripts": {
+    "test": "vitest run",
+    "build": "cross-env TARGET=node napi build --platform --profile release-size-optimized",
+    "tauri": "node ./tauri.js",
+    "prepack": "cp ../../crates/tauri-schema-generator/schemas/config.schema.json .",
+    "version": "napi version",
+    "artifacts": "napi artifacts",
+    "postbuild": "node append-headers.js",
+    "build:debug": "cross-env TARGET=node napi build --platform",
+    "prepublishOnly": "napi prepublish -t npm --gh-release-id $RELEASE_ID",
+    "postbuild:debug": "node append-headers.js"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/tauri.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "Command line interface for building Tauri apps",
+   "directories": {},
+   "_nodeVersion": "20.19.0",
+   "publishConfig": {
+    "access": "public"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "vitest": "^3.0.7",
+    "cross-env": "7.0.3",
+    "@types/node": "^22.13.5",
+    "@napi-rs/cli": "2.18.4"
+   },
+   "optionalDependencies": {
+    "@tauri-apps/cli-darwin-x64": "2.4.1",
+    "@tauri-apps/cli-darwin-arm64": "2.4.1",
+    "@tauri-apps/cli-linux-x64-gnu": "2.4.1",
+    "@tauri-apps/cli-linux-x64-musl": "2.4.1",
+    "@tauri-apps/cli-win32-x64-msvc": "2.4.1",
+    "@tauri-apps/cli-linux-arm64-gnu": "2.4.1",
+    "@tauri-apps/cli-win32-ia32-msvc": "2.4.1",
+    "@tauri-apps/cli-linux-arm64-musl": "2.4.1",
+    "@tauri-apps/cli-win32-arm64-msvc": "2.4.1",
+    "@tauri-apps/cli-linux-riscv64-gnu": "2.4.1",
+    "@tauri-apps/cli-linux-arm-gnueabihf": "2.4.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/cli_2.4.1_1743530282319_0.11613188702853994",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.5.0": {
+   "name": "@tauri-apps/cli",
+   "version": "2.5.0",
    "description": "Command line interface for building Tauri apps",
    "funding": {
     "type": "opencollective",
@@ -20366,30 +20636,30 @@
     "tauri": "node ./tauri.js"
    },
    "optionalDependencies": {
-    "@tauri-apps/cli-win32-x64-msvc": "2.4.0",
-    "@tauri-apps/cli-darwin-x64": "2.4.0",
-    "@tauri-apps/cli-linux-x64-gnu": "2.4.0",
-    "@tauri-apps/cli-darwin-arm64": "2.4.0",
-    "@tauri-apps/cli-linux-arm64-gnu": "2.4.0",
-    "@tauri-apps/cli-linux-arm64-musl": "2.4.0",
-    "@tauri-apps/cli-linux-arm-gnueabihf": "2.4.0",
-    "@tauri-apps/cli-linux-x64-musl": "2.4.0",
-    "@tauri-apps/cli-linux-riscv64-gnu": "2.4.0",
-    "@tauri-apps/cli-win32-ia32-msvc": "2.4.0",
-    "@tauri-apps/cli-win32-arm64-msvc": "2.4.0"
+    "@tauri-apps/cli-win32-x64-msvc": "2.5.0",
+    "@tauri-apps/cli-darwin-x64": "2.5.0",
+    "@tauri-apps/cli-linux-x64-gnu": "2.5.0",
+    "@tauri-apps/cli-darwin-arm64": "2.5.0",
+    "@tauri-apps/cli-linux-arm64-gnu": "2.5.0",
+    "@tauri-apps/cli-linux-arm64-musl": "2.5.0",
+    "@tauri-apps/cli-linux-arm-gnueabihf": "2.5.0",
+    "@tauri-apps/cli-linux-x64-musl": "2.5.0",
+    "@tauri-apps/cli-linux-riscv64-gnu": "2.5.0",
+    "@tauri-apps/cli-win32-ia32-msvc": "2.5.0",
+    "@tauri-apps/cli-win32-arm64-msvc": "2.5.0"
    },
-   "_id": "@tauri-apps/cli@2.4.0",
-   "gitHead": "be3a79c864bf034b5d55c8eb448e85e78bb16cb4",
+   "_id": "@tauri-apps/cli@2.5.0",
+   "gitHead": "62fb07b10e7586712db15078d09aa4d66540b6b0",
    "_nodeVersion": "20.19.0",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-Esg7s20tuSULd2YF3lmtMa1vF7yr5eh/TlBHXjEyrC+XSD9aBxHVoXb6oz7oKybDY9Jf9OiBa0bf2PbybcmOLA==",
-    "shasum": "d1174ee62f5d982a2c6e65101c53e6763e40b2d6",
-    "tarball": "http://localhost:3000/@tauri-apps/cli/-/cli-2.4.0.tgz",
+    "integrity": "sha512-rAtHqG0Gh/IWLjN2zTf3nZqYqbo81oMbqop56rGTjrlWk9pTTAjkqOjSL9XQLIMZ3RbeVjveCqqCA0s8RnLdMg==",
+    "shasum": "828cefd5c64be9f96a0379583f9ad25e17c43208",
+    "tarball": "http://localhost:3000/@tauri-apps/cli/-/cli-2.5.0.tgz",
     "fileCount": 18,
-    "unpackedSize": 313165,
+    "unpackedSize": 320468,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fcli@2.4.0",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fcli@2.5.0",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
@@ -20397,7 +20667,7 @@
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEQCIGX0u4sJrzzK5JKDKpSUEgjrwpoh4DcfkR9gQXpmxBFwAiBhpdGlbyU9FN7TWcHkNx3E0Ivov0+GABFHRRiOyJHgiQ=="
+      "sig": "MEUCIQC0yrYsXHp2g/EdQv8O0gMnBXTx8IOy6PNp2y3nLwQw5QIgcIodZznZMYKNhdx1MJpx5W0b/FVVyTDDuLzAGpp231A="
      }
     ]
    },
@@ -20430,14 +20700,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/cli_2.4.0_1742499621705_0.031158812357288568"
+    "tmp": "tmp/cli_2.5.0_1744744380114_0.07142461032415581"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2021-04-13T22:40:24.987Z",
-  "modified": "2025-03-20T19:40:22.465Z",
+  "modified": "2025-04-15T19:13:00.754Z",
   "0.0.0": "2021-04-13T22:40:25.321Z",
   "1.0.0-beta-rc.0": "2021-04-14T17:22:38.522Z",
   "1.0.0-beta-rc.1": "2021-04-14T23:49:21.161Z",
@@ -20582,7 +20852,9 @@
   "2.2.7": "2025-01-25T18:11:16.203Z",
   "2.3.0": "2025-02-26T17:12:39.911Z",
   "2.3.1": "2025-02-28T14:05:34.319Z",
-  "2.4.0": "2025-03-20T19:40:21.968Z"
+  "2.4.0": "2025-03-20T19:40:21.968Z",
+  "2.4.1": "2025-04-01T17:58:02.645Z",
+  "2.5.0": "2025-04-15T19:13:00.305Z"
  },
  "bugs": {
   "url": "https://github.com/tauri-apps/tauri/issues"

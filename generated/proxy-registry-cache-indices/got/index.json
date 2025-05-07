@@ -1,10 +1,10 @@
 {
  "_id": "got",
- "_rev": "379-e6fd895bb53ecfdd84acae028424a548",
+ "_rev": "381-35c7a90ba9d66763206e28cb4b1092c5",
  "name": "got",
  "dist-tags": {
   "version-11": "11.8.6",
-  "latest": "14.4.6"
+  "latest": "14.4.7"
  },
  "versions": {
   "0.1.0": {
@@ -25445,6 +25445,201 @@
   "14.4.6": {
    "name": "got",
    "version": "14.4.6",
+   "keywords": [
+    "http",
+    "https",
+    "http2",
+    "get",
+    "got",
+    "url",
+    "uri",
+    "request",
+    "simple",
+    "curl",
+    "wget",
+    "fetch",
+    "net",
+    "network",
+    "gzip",
+    "brotli",
+    "requests",
+    "human-friendly",
+    "axios",
+    "superagent",
+    "node-fetch",
+    "ky"
+   ],
+   "license": "MIT",
+   "_id": "got@14.4.6",
+   "maintainers": [
+    {
+     "name": "sindresorhus",
+     "email": "sindresorhus@gmail.com"
+    },
+    {
+     "name": "szmarczak",
+     "email": "sz.marczak@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/sindresorhus/got#readme",
+   "bugs": {
+    "url": "https://github.com/sindresorhus/got/issues"
+   },
+   "xo": {
+    "rules": {
+     "no-lone-blocks": "off",
+     "n/no-deprecated-api": "off",
+     "ava/assertion-arguments": "off",
+     "unicorn/prefer-event-target": "off",
+     "@typescript-eslint/await-thenable": "off",
+     "@typescript-eslint/no-unsafe-call": "off",
+     "unicorn/no-await-expression-member": "off",
+     "@typescript-eslint/no-unsafe-return": "off",
+     "@typescript-eslint/no-empty-function": "off",
+     "@typescript-eslint/no-unsafe-argument": "off",
+     "@typescript-eslint/no-unsafe-assignment": "off",
+     "@typescript-eslint/no-implicit-any-catch": "off",
+     "@typescript-eslint/promise-function-async": "off",
+     "@typescript-eslint/no-unsafe-member-access": "off",
+     "@typescript-eslint/no-redundant-type-constituents": "off"
+    },
+    "ignores": [
+     "documentation/examples/*"
+    ]
+   },
+   "ava": {
+    "files": [
+     "test/*",
+     "!test/*.types.ts"
+    ],
+    "timeout": "10m",
+    "extensions": {
+     "ts": "module"
+    },
+    "workerThreads": false
+   },
+   "nyc": {
+    "exclude": [
+     "**/test/**"
+    ],
+    "reporter": [
+     "text",
+     "html",
+     "lcov"
+    ],
+    "extension": [
+     ".ts"
+    ]
+   },
+   "dist": {
+    "shasum": "c8c4ca3250296686e47b16ec155c684e1a588348",
+    "tarball": "http://localhost:3000/got/-/got-14.4.6.tgz",
+    "fileCount": 45,
+    "integrity": "sha512-rnhwfM/PhMNJ1i17k3DuDqgj0cKx3IHxBKVv/WX1uDKqrhi2Gv3l7rhPThR/Cc6uU++dD97W9c8Y0qyw9x0jag==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDYdQCJKGgmg5m9UhTFU9fuTcdV3FwreVRK0pqjGkeTLwIgF66Ksfq3aAjEVnoLLzOfP2lleXraFEt1OfmMUerJWZ4=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 242185
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=20"
+   },
+   "exports": {
+    "types": "./dist/source/index.d.ts",
+    "default": "./dist/source/index.js"
+   },
+   "funding": "https://github.com/sindresorhus/got?sponsor=1",
+   "gitHead": "383a3ff4ff88d4059519efe8b3d6b27e9a6a8066",
+   "scripts": {
+    "test": "xo && tsc --noEmit && NODE_OPTIONS='--import=tsx/esm' ava",
+    "build": "del-cli dist && tsc",
+    "prepare": "npm run build",
+    "release": "np"
+   },
+   "_npmUser": {
+    "name": "sindresorhus",
+    "email": "sindresorhus@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/sindresorhus/got.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Human-friendly and powerful HTTP request library for Node.js",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "23.6.1",
+   "dependencies": {
+    "type-fest": "^4.26.1",
+    "p-cancelable": "^4.0.1",
+    "responselike": "^3.0.0",
+    "http2-wrapper": "^2.2.1",
+    "lowercase-keys": "^3.0.0",
+    "@sindresorhus/is": "^7.0.1",
+    "cacheable-lookup": "^7.0.0",
+    "cacheable-request": "^12.0.1",
+    "form-data-encoder": "^4.0.2",
+    "decompress-response": "^6.0.0",
+    "@szmarczak/http-timer": "^5.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "np": "^10.0.5",
+    "xo": "^0.56.0",
+    "ava": "^5.3.1",
+    "nyc": "^17.1.0",
+    "pem": "^1.14.8",
+    "tsx": "^4.19.1",
+    "nock": "^13.5.5",
+    "pify": "^6.1.0",
+    "axios": "^1.7.7",
+    "delay": "^6.0.0",
+    "sinon": "^19.0.2",
+    "tempy": "^3.1.0",
+    "del-cli": "^6.0.0",
+    "express": "^4.21.1",
+    "p-event": "^6.0.1",
+    "request": "^2.88.2",
+    "bluebird": "^3.7.2",
+    "benchmark": "^2.1.4",
+    "form-data": "^4.0.0",
+    "@types/pem": "^1.14.4",
+    "get-stream": "^9.0.1",
+    "node-fetch": "^3.3.2",
+    "typescript": "^5.6.3",
+    "@types/node": "^22.7.5",
+    "body-parser": "^1.20.3",
+    "create-cert": "^1.0.6",
+    "expect-type": "^1.0.0",
+    "slow-stream": "0.0.4",
+    "then-busboy": "^5.2.1",
+    "@hapi/bourne": "^3.0.0",
+    "@types/sinon": "^17.0.2",
+    "tough-cookie": "^4.1.4",
+    "formdata-node": "^6.0.3",
+    "@types/express": "^5.0.0",
+    "@types/request": "^2.48.12",
+    "readable-stream": "^4.4.2",
+    "@types/benchmark": "^2.1.5",
+    "create-test-server": "^3.0.1",
+    "@sinonjs/fake-timers": "^11.2.2",
+    "@sindresorhus/tsconfig": "^6.0.0",
+    "@types/readable-stream": "^4.0.14",
+    "@types/sinonjs__fake-timers": "^8.1.5"
+   },
+   "runkitExampleFilename": "./documentation/examples/runkit-example.js",
+   "_npmOperationalInternal": {
+    "tmp": "tmp/got_14.4.6_1739174064054_0.5468981618260389",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "14.4.7": {
+   "name": "got",
+   "version": "14.4.7",
    "description": "Human-friendly and powerful HTTP request library for Node.js",
    "license": "MIT",
    "repository": {
@@ -25595,8 +25790,8 @@
     }
    },
    "runkitExampleFilename": "./documentation/examples/runkit-example.js",
-   "_id": "got@14.4.6",
-   "gitHead": "383a3ff4ff88d4059519efe8b3d6b27e9a6a8066",
+   "_id": "got@14.4.7",
+   "gitHead": "a359bd385129d2adbc765b52dfbbadac5f54a825",
    "bugs": {
     "url": "https://github.com/sindresorhus/got/issues"
    },
@@ -25604,15 +25799,15 @@
    "_nodeVersion": "23.6.1",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-rnhwfM/PhMNJ1i17k3DuDqgj0cKx3IHxBKVv/WX1uDKqrhi2Gv3l7rhPThR/Cc6uU++dD97W9c8Y0qyw9x0jag==",
-    "shasum": "c8c4ca3250296686e47b16ec155c684e1a588348",
-    "tarball": "http://localhost:3000/got/-/got-14.4.6.tgz",
+    "integrity": "sha512-DI8zV1231tqiGzOiOzQWDhsBmncFW7oQDH6Zgy6pDPrqJuVZMtoSgPLLsBZQj8Jg4JFfwoOsDA8NGtLQLnIx2g==",
+    "shasum": "f23644b9bc16d6f35fafdf410c18116614b922dd",
+    "tarball": "http://localhost:3000/got/-/got-14.4.7.tgz",
     "fileCount": 45,
-    "unpackedSize": 242185,
+    "unpackedSize": 241584,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEUCIQDYdQCJKGgmg5m9UhTFU9fuTcdV3FwreVRK0pqjGkeTLwIgF66Ksfq3aAjEVnoLLzOfP2lleXraFEt1OfmMUerJWZ4="
+      "sig": "MEUCIH5SsG9kAj6qzZ44tTWqmdV0UGXXXIhhwALFmOt4VIYNAiEAqJofo+YI7mXTL6AzmDMkrHuiFP22GBu0HU6XYXIUk5k="
      }
     ]
    },
@@ -25633,14 +25828,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/got_14.4.6_1739174064054_0.5468981618260389"
+    "tmp": "tmp/got_14.4.7_1743432450236_0.8212555530331478"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2014-03-27T22:43:12.196Z",
-  "modified": "2025-02-10T07:54:24.476Z",
+  "modified": "2025-03-31T14:47:30.645Z",
   "0.1.0": "2014-03-27T22:43:12.196Z",
   "0.1.1": "2014-04-12T13:47:38.755Z",
   "0.2.0": "2014-04-13T18:14:49.110Z",
@@ -25822,7 +26017,8 @@
   "14.4.3": "2024-10-09T07:16:24.912Z",
   "14.4.4": "2024-11-04T11:03:15.454Z",
   "14.4.5": "2024-11-23T16:00:06.858Z",
-  "14.4.6": "2025-02-10T07:54:24.295Z"
+  "14.4.6": "2025-02-10T07:54:24.295Z",
+  "14.4.7": "2025-03-31T14:47:30.478Z"
  },
  "bugs": {
   "url": "https://github.com/sindresorhus/got/issues"

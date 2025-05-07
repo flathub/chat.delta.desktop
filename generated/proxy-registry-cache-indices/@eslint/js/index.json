@@ -1,11 +1,11 @@
 {
  "_id": "@eslint/js",
- "_rev": "64-18c992691f825db23e57f909eeffef1d",
+ "_rev": "68-bf4aaa0400ec27ed1dfa33026cef7513",
  "name": "@eslint/js",
  "dist-tags": {
   "next": "9.0.0-rc.0",
   "maintenance": "8.57.1",
-  "latest": "9.23.0"
+  "latest": "9.26.0"
  },
  "versions": {
   "8.33.0": {
@@ -3942,6 +3942,278 @@
   "9.23.0": {
    "name": "@eslint/js",
    "version": "9.23.0",
+   "keywords": [
+    "javascript",
+    "eslint-plugin",
+    "eslint"
+   ],
+   "license": "MIT",
+   "_id": "@eslint/js@9.23.0",
+   "maintainers": [
+    {
+     "name": "openjsfoundation",
+     "email": "npm@openjsf.org"
+    },
+    {
+     "name": "eslintbot",
+     "email": "contact@eslint.org"
+    }
+   ],
+   "homepage": "https://eslint.org",
+   "bugs": {
+    "url": "https://github.com/eslint/eslint/issues/"
+   },
+   "dist": {
+    "shasum": "c09ded4f3dc63b40b933bcaeb853fceddb64da30",
+    "tarball": "http://localhost:3000/@eslint/js/-/js-9.23.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-35MJ8vCPU0ZMxo7zfev2pypqTwWTofFZO6m4KAtdoFhRpLJUpHTZZ+KB3C7Hb1d7bULYwO4lJXGCi5Se+8OMbw==",
+    "signatures": [
+     {
+      "sig": "MEQCIHCR5/dAqBFQgZAi3KVAQth5on3Mc2bqzk1U9+ttmOipAiBImRT7ggEvG8GJ/Y0XxAZ/fbUl0EiSPbWtqUsdukMvdw==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 14427
+   },
+   "main": "./src/index.js",
+   "types": "./types/index.d.ts",
+   "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+   },
+   "gitHead": "20591c49ff27435b1555111a929a6966febc249f",
+   "scripts": {
+    "test:types": "tsc -p tests/types/tsconfig.json"
+   },
+   "_npmUser": {
+    "name": "eslintbot",
+    "email": "contact@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint/eslint.git",
+    "type": "git",
+    "directory": "packages/js"
+   },
+   "_npmVersion": "10.1.0",
+   "description": "ESLint JavaScript language implementation",
+   "directories": {},
+   "_nodeVersion": "20.9.0",
+   "publishConfig": {
+    "access": "public"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/js_9.23.0_1742588086544_0.12285618881880356",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "9.24.0": {
+   "name": "@eslint/js",
+   "version": "9.24.0",
+   "keywords": [
+    "javascript",
+    "eslint-plugin",
+    "eslint"
+   ],
+   "license": "MIT",
+   "_id": "@eslint/js@9.24.0",
+   "maintainers": [
+    {
+     "name": "openjsfoundation",
+     "email": "npm@openjsf.org"
+    },
+    {
+     "name": "eslintbot",
+     "email": "contact@eslint.org"
+    }
+   ],
+   "homepage": "https://eslint.org",
+   "bugs": {
+    "url": "https://github.com/eslint/eslint/issues/"
+   },
+   "dist": {
+    "shasum": "685277980bb7bf84ecc8e4e133ccdda7545a691e",
+    "tarball": "http://localhost:3000/@eslint/js/-/js-9.24.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-uIY/y3z0uvOGX8cp1C2fiC4+ZmBhp6yZWkojtHL1YEMnRt1Y63HB9TM17proGEmeG7HeUY+UP36F0aknKYTpYA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDJPxZY9jTgZQE02I/wOzh41Ko2NiIgKANAjiUsPQ9n1AIgPREG2dXVSWciD6LFrVNVywyGjeVThcqjCivbdO4esYA=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 14427
+   },
+   "main": "./src/index.js",
+   "types": "./types/index.d.ts",
+   "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+   },
+   "gitHead": "4946847bb675ee26c3a52bfe3bca63a0dc5e5c61",
+   "scripts": {
+    "test:types": "tsc -p tests/types/tsconfig.json"
+   },
+   "_npmUser": {
+    "name": "eslintbot",
+    "email": "contact@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint/eslint.git",
+    "type": "git",
+    "directory": "packages/js"
+   },
+   "_npmVersion": "10.1.0",
+   "description": "ESLint JavaScript language implementation",
+   "directories": {},
+   "_nodeVersion": "20.9.0",
+   "publishConfig": {
+    "access": "public"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/js_9.24.0_1743792822934_0.39781482664337076",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "9.25.0": {
+   "name": "@eslint/js",
+   "version": "9.25.0",
+   "keywords": [
+    "javascript",
+    "eslint-plugin",
+    "eslint"
+   ],
+   "license": "MIT",
+   "_id": "@eslint/js@9.25.0",
+   "maintainers": [
+    {
+     "name": "openjsfoundation",
+     "email": "npm@openjsf.org"
+    },
+    {
+     "name": "eslintbot",
+     "email": "contact@eslint.org"
+    }
+   ],
+   "homepage": "https://eslint.org",
+   "bugs": {
+    "url": "https://github.com/eslint/eslint/issues/"
+   },
+   "dist": {
+    "shasum": "4656b39de7cbf12fd66e7d54d9a26d05855b2a5a",
+    "tarball": "http://localhost:3000/@eslint/js/-/js-9.25.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-iWhsUS8Wgxz9AXNfvfOPFSW4VfMXdVhp1hjkZVhXCrpgh/aLcc45rX6MPu+tIVUWDw0HfNwth7O28M1xDxNf9w==",
+    "signatures": [
+     {
+      "sig": "MEQCIFcThexr1Pm9qVv6nMih0i1HS3QD7YHEaZTH4steeCcPAiB0wc4ZXF2YfSwp23C/dmXFhK8v6Adr4U3NwOoHnQTFzA==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 14427
+   },
+   "main": "./src/index.js",
+   "types": "./types/index.d.ts",
+   "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+   },
+   "gitHead": "345288d7b270e8c122e922bfa31f219aedc4e63b",
+   "scripts": {
+    "test:types": "tsc -p tests/types/tsconfig.json"
+   },
+   "_npmUser": {
+    "name": "eslintbot",
+    "email": "contact@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint/eslint.git",
+    "type": "git",
+    "directory": "packages/js"
+   },
+   "_npmVersion": "10.1.0",
+   "description": "ESLint JavaScript language implementation",
+   "directories": {},
+   "_nodeVersion": "20.9.0",
+   "publishConfig": {
+    "access": "public"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/js_9.25.0_1744999778406_0.4596273213042146",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "9.25.1": {
+   "name": "@eslint/js",
+   "version": "9.25.1",
+   "keywords": [
+    "javascript",
+    "eslint-plugin",
+    "eslint"
+   ],
+   "license": "MIT",
+   "_id": "@eslint/js@9.25.1",
+   "maintainers": [
+    {
+     "name": "openjsfoundation",
+     "email": "npm@openjsf.org"
+    },
+    {
+     "name": "eslintbot",
+     "email": "contact@eslint.org"
+    }
+   ],
+   "homepage": "https://eslint.org",
+   "bugs": {
+    "url": "https://github.com/eslint/eslint/issues/"
+   },
+   "dist": {
+    "shasum": "25f5c930c2b68b5ebe7ac857f754cbd61ef6d117",
+    "tarball": "http://localhost:3000/@eslint/js/-/js-9.25.1.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-dEIwmjntEx8u3Uvv+kr3PDeeArL8Hw07H9kyYxCjnM9pBjfEhk6uLXSchxxzgiwtRhhzVzqmUSDFBOi1TuZ7qg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQD/sZlB2gaXmBkuq3XpXgcZInp9cSRnth+xa+yCAC939gIhAKHA/cTTWa5BHBUSHqRYxwOTNfgwQN7JLeZxwy7AGIm5",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 14427
+   },
+   "main": "./src/index.js",
+   "types": "./types/index.d.ts",
+   "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+   },
+   "gitHead": "771317fa937a07277201f7155e9b835e6a5658f9",
+   "scripts": {
+    "test:types": "tsc -p tests/types/tsconfig.json"
+   },
+   "_npmUser": {
+    "name": "eslintbot",
+    "email": "contact@eslint.org"
+   },
+   "repository": {
+    "url": "git+https://github.com/eslint/eslint.git",
+    "type": "git",
+    "directory": "packages/js"
+   },
+   "_npmVersion": "10.1.0",
+   "description": "ESLint JavaScript language implementation",
+   "directories": {},
+   "_nodeVersion": "20.9.0",
+   "publishConfig": {
+    "access": "public"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/js_9.25.1_1745253947748_0.19961230434082178",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "9.26.0": {
+   "name": "@eslint/js",
+   "version": "9.26.0",
    "description": "ESLint JavaScript language implementation",
    "main": "./src/index.js",
    "types": "./types/index.d.ts",
@@ -3969,20 +4241,20 @@
    "engines": {
     "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
    },
-   "_id": "@eslint/js@9.23.0",
-   "gitHead": "20591c49ff27435b1555111a929a6966febc249f",
+   "_id": "@eslint/js@9.26.0",
+   "gitHead": "d6fa4ac031c2fe24fb778e84940393fbda3ddf77",
    "_nodeVersion": "20.9.0",
    "_npmVersion": "10.1.0",
    "dist": {
-    "integrity": "sha512-35MJ8vCPU0ZMxo7zfev2pypqTwWTofFZO6m4KAtdoFhRpLJUpHTZZ+KB3C7Hb1d7bULYwO4lJXGCi5Se+8OMbw==",
-    "shasum": "c09ded4f3dc63b40b933bcaeb853fceddb64da30",
-    "tarball": "http://localhost:3000/@eslint/js/-/js-9.23.0.tgz",
+    "integrity": "sha512-I9XlJawFdSMvWjDt6wksMCrgns5ggLNfFwFvnShsleWruvXM514Qxk8V246efTw+eo9JABvVz+u3q2RiAowKxQ==",
+    "shasum": "1e13126b67a3db15111d2dcc61f69a2acff70bd5",
+    "tarball": "http://localhost:3000/@eslint/js/-/js-9.26.0.tgz",
     "fileCount": 7,
-    "unpackedSize": 14427,
+    "unpackedSize": 14423,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEQCIHCR5/dAqBFQgZAi3KVAQth5on3Mc2bqzk1U9+ttmOipAiBImRT7ggEvG8GJ/Y0XxAZ/fbUl0EiSPbWtqUsdukMvdw=="
+      "sig": "MEQCIBFh06qe3XnlyvdzDZGk2dww5HI7ySburj23Xax2IElXAiBhYC/0eBNeqPST7TRJ08cZxdUQi3ivVF9MEWpSqpD5bA=="
      }
     ]
    },
@@ -4003,14 +4275,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/js_9.23.0_1742588086544_0.12285618881880356"
+    "tmp": "tmp/js_9.26.0_1746219152471_0.803147549197488"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2023-01-31T18:07:13.747Z",
-  "modified": "2025-03-21T20:14:46.963Z",
+  "modified": "2025-05-02T20:52:32.845Z",
   "8.33.0": "2023-01-31T18:07:13.955Z",
   "8.34.0": "2023-02-26T00:49:55.619Z",
   "8.35.0": "2023-02-26T00:50:48.539Z",
@@ -4071,7 +4343,11 @@
   "9.20.0": "2025-02-07T21:08:27.344Z",
   "9.21.0": "2025-02-21T21:21:46.789Z",
   "9.22.0": "2025-03-07T21:00:18.975Z",
-  "9.23.0": "2025-03-21T20:14:46.756Z"
+  "9.23.0": "2025-03-21T20:14:46.756Z",
+  "9.24.0": "2025-04-04T18:53:43.129Z",
+  "9.25.0": "2025-04-18T18:09:38.611Z",
+  "9.25.1": "2025-04-21T16:45:47.946Z",
+  "9.26.0": "2025-05-02T20:52:32.674Z"
  },
  "bugs": {
   "url": "https://github.com/eslint/eslint/issues/"
@@ -4099,7 +4375,7 @@
    "email": "contact@eslint.org"
   }
  ],
- "readme": "[![npm version](https://img.shields.io/npm/v/@eslint/js.svg)](https://www.npmjs.com/package/@eslint/js)\n\n# ESLint JavaScript Plugin\n\n[Website](https://eslint.org) | [Configure ESLint](https://eslint.org/docs/latest/use/configure) | [Rules](https://eslint.org/docs/rules/) | [Contributing](https://eslint.org/docs/latest/contribute) | [Twitter](https://twitter.com/geteslint) | [Chatroom](https://eslint.org/chat)\n\nThe beginnings of separating out JavaScript-specific functionality from ESLint.\n\nRight now, this plugin contains two configurations:\n\n-   `recommended` - enables the rules recommended by the ESLint team (the replacement for `\"eslint:recommended\"`)\n-   `all` - enables all ESLint rules (the replacement for `\"eslint:all\"`)\n\n## Installation\n\n```shell\nnpm install @eslint/js -D\n```\n\n## Usage\n\nUse in your `eslint.config.js` file anytime you want to extend one of the configs:\n\n```js\nimport { defineConfig } from \"eslint/config\";\nimport js from \"@eslint/js\";\n\nexport default defineConfig([\n\t// apply recommended rules to JS files\n\t{\n\t\tname: \"your-project/recommended-rules\",\n\t\tfiles: [\"**/*.js\"],\n\t\tplugins: {\n\t\t\tjs,\n\t\t},\n\t\textends: [\"js/recommended\"],\n\t},\n\n\t// apply recommended rules to JS files with an override\n\t{\n\t\tname: \"your-project/recommended-rules-with-override\",\n\t\tfiles: [\"**/*.js\"],\n\t\tplugins: {\n\t\t\tjs,\n\t\t},\n\t\textends: [\"js/recommended\"],\n\t\trules: {\n\t\t\t\"no-unused-vars\": \"warn\",\n\t\t},\n\t},\n\n\t// apply all rules to JS files\n\t{\n\t\tname: \"your-project/all-rules\",\n\t\tfiles: [\"**/*.js\"],\n\t\tplugins: {\n\t\t\tjs,\n\t\t},\n\t\textends: [\"js/all\"],\n\t\trules: {\n\t\t\t\"no-unused-vars\": \"warn\",\n\t\t},\n\t},\n]);\n```\n\n## License\n\nMIT\n",
+ "readme": "[![npm version](https://img.shields.io/npm/v/@eslint/js.svg)](https://www.npmjs.com/package/@eslint/js)\n\n# ESLint JavaScript Plugin\n\n[Website](https://eslint.org) | [Configure ESLint](https://eslint.org/docs/latest/use/configure) | [Rules](https://eslint.org/docs/rules/) | [Contributing](https://eslint.org/docs/latest/contribute) | [Twitter](https://twitter.com/geteslint) | [Chatroom](https://eslint.org/chat)\n\nThe beginnings of separating out JavaScript-specific functionality from ESLint.\n\nRight now, this plugin contains two configurations:\n\n- `recommended` - enables the rules recommended by the ESLint team (the replacement for `\"eslint:recommended\"`)\n- `all` - enables all ESLint rules (the replacement for `\"eslint:all\"`)\n\n## Installation\n\n```shell\nnpm install @eslint/js -D\n```\n\n## Usage\n\nUse in your `eslint.config.js` file anytime you want to extend one of the configs:\n\n```js\nimport { defineConfig } from \"eslint/config\";\nimport js from \"@eslint/js\";\n\nexport default defineConfig([\n\t// apply recommended rules to JS files\n\t{\n\t\tname: \"your-project/recommended-rules\",\n\t\tfiles: [\"**/*.js\"],\n\t\tplugins: {\n\t\t\tjs,\n\t\t},\n\t\textends: [\"js/recommended\"],\n\t},\n\n\t// apply recommended rules to JS files with an override\n\t{\n\t\tname: \"your-project/recommended-rules-with-override\",\n\t\tfiles: [\"**/*.js\"],\n\t\tplugins: {\n\t\t\tjs,\n\t\t},\n\t\textends: [\"js/recommended\"],\n\t\trules: {\n\t\t\t\"no-unused-vars\": \"warn\",\n\t\t},\n\t},\n\n\t// apply all rules to JS files\n\t{\n\t\tname: \"your-project/all-rules\",\n\t\tfiles: [\"**/*.js\"],\n\t\tplugins: {\n\t\t\tjs,\n\t\t},\n\t\textends: [\"js/all\"],\n\t\trules: {\n\t\t\t\"no-unused-vars\": \"warn\",\n\t\t},\n\t},\n]);\n```\n\n## License\n\nMIT\n",
  "readmeFilename": "README.md",
  "users": {
   "flumpus-dev": true

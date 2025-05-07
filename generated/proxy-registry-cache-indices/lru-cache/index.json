@@ -1,6 +1,6 @@
 {
  "_id": "lru-cache",
- "_rev": "315-c58516c6a29d0a5827e7ca09916a6a4d",
+ "_rev": "317-c4a87a67b1f960c42cc2256aa497b017",
  "name": "lru-cache",
  "dist-tags": {
   "legacy": "4.1.5",
@@ -13,7 +13,7 @@
   "v7.1-backport": "7.1.3",
   "v7.0-backport": "7.0.4",
   "legacy-v10": "10.4.3",
-  "latest": "11.0.2"
+  "latest": "11.1.0"
  },
  "versions": {
   "1.0.2": {
@@ -14061,8 +14061,160 @@
   },
   "11.0.2": {
    "name": "lru-cache",
-   "description": "A cache object that deletes the least-recently-used items.",
    "version": "11.0.2",
+   "keywords": [
+    "mru",
+    "lru",
+    "cache"
+   ],
+   "author": {
+    "name": "Isaac Z. Schlueter",
+    "email": "i@izs.me"
+   },
+   "license": "ISC",
+   "_id": "lru-cache@11.0.2",
+   "maintainers": [
+    {
+     "name": "isaacs",
+     "email": "i@izs.me"
+    }
+   ],
+   "homepage": "https://github.com/isaacs/node-lru-cache#readme",
+   "bugs": {
+    "url": "https://github.com/isaacs/node-lru-cache/issues"
+   },
+   "tap": {
+    "plugin": [
+     "@tapjs/clock"
+    ],
+    "node-arg": [
+     "--expose-gc"
+    ]
+   },
+   "dist": {
+    "shasum": "fbd8e7cf8211f5e7e5d91905c415a3f55755ca39",
+    "tarball": "http://localhost:3000/lru-cache/-/lru-cache-11.0.2.tgz",
+    "fileCount": 17,
+    "integrity": "sha512-123qHRfJBmo2jXDbo/a5YOQrJoHF/GNQTLzQ5+IdK5pWpceK17yRc6ozlWd25FxvGKQbIUs91fDFkXmDHTKcyA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCoOEDA5ZwfskJK7UkLiszBmmv0GxggpYShS7aIcDimCgIhANeyvSCuvuRqhNfUU06gvXEsC4Jb3TAMPYwMftv88Cna",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 807860
+   },
+   "main": "./dist/commonjs/index.js",
+   "tshy": {
+    "exports": {
+     ".": "./src/index.ts",
+     "./min": {
+      "import": {
+       "types": "./dist/esm/index.d.ts",
+       "default": "./dist/esm/index.min.js"
+      },
+      "require": {
+       "types": "./dist/commonjs/index.d.ts",
+       "default": "./dist/commonjs/index.min.js"
+      }
+     }
+    }
+   },
+   "type": "module",
+   "types": "./dist/commonjs/index.d.ts",
+   "module": "./dist/esm/index.js",
+   "engines": {
+    "node": "20 || >=22"
+   },
+   "exports": {
+    ".": {
+     "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+     },
+     "require": {
+      "types": "./dist/commonjs/index.d.ts",
+      "default": "./dist/commonjs/index.js"
+     }
+    },
+    "./min": {
+     "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.min.js"
+     },
+     "require": {
+      "types": "./dist/commonjs/index.d.ts",
+      "default": "./dist/commonjs/index.min.js"
+     }
+    }
+   },
+   "gitHead": "65c9971e3fef123ff0f17d67add53b2d99b461b0",
+   "scripts": {
+    "snap": "tap",
+    "test": "tap",
+    "build": "npm run prepare",
+    "format": "prettier --write .",
+    "prepare": "tshy && bash fixup.sh",
+    "presnap": "npm run prepare",
+    "pretest": "npm run prepare",
+    "profile": "make -C benchmark profile",
+    "typedoc": "typedoc --tsconfig ./.tshy/esm.json ./src/*.ts",
+    "benchmark": "make -C benchmark",
+    "preprofile": "npm run prepare",
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "prebenchmark": "npm run prepare",
+    "prepublishOnly": "git push origin --follow-tags",
+    "benchmark-results-typedoc": "bash scripts/benchmark-results-typedoc.sh"
+   },
+   "_npmUser": {
+    "name": "isaacs",
+    "email": "i@izs.me"
+   },
+   "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "endOfLine": "lf",
+    "printWidth": 70,
+    "arrowParens": "avoid",
+    "singleQuote": true,
+    "jsxSingleQuote": false,
+    "bracketSameLine": true
+   },
+   "repository": {
+    "url": "git://github.com/isaacs/node-lru-cache.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "A cache object that deletes the least-recently-used items.",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "22.10.0",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^21.0.1",
+    "tshy": "^3.0.2",
+    "tslib": "^2.4.0",
+    "marked": "^4.2.12",
+    "mkdirp": "^2.1.5",
+    "esbuild": "^0.17.11",
+    "typedoc": "^0.26.6",
+    "prettier": "^2.6.2",
+    "benchmark": "^2.1.4",
+    "@types/tap": "^15.0.6",
+    "@types/node": "^22.5.4",
+    "eslint-config-prettier": "^8.5.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/lru-cache_11.0.2_1730397080054_0.9058538021200011",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "11.1.0": {
+   "name": "lru-cache",
+   "description": "A cache object that deletes the least-recently-used items.",
+   "version": "11.1.0",
    "author": {
     "name": "Isaac Z. Schlueter",
     "email": "i@izs.me"
@@ -14114,17 +14266,14 @@
    },
    "devDependencies": {
     "@types/node": "^22.5.4",
-    "@types/tap": "^15.0.6",
     "benchmark": "^2.1.4",
-    "esbuild": "^0.17.11",
-    "eslint-config-prettier": "^8.5.0",
+    "esbuild": "^0.25.1",
     "marked": "^4.2.12",
-    "mkdirp": "^2.1.5",
-    "prettier": "^2.6.2",
-    "tap": "^21.0.1",
+    "mkdirp": "^3.0.1",
+    "prettier": "^3.5.3",
+    "tap": "^21.1.0",
     "tshy": "^3.0.2",
-    "tslib": "^2.4.0",
-    "typedoc": "^0.26.6"
+    "typedoc": "^0.28.1"
    },
    "license": "ISC",
    "engines": {
@@ -14173,24 +14322,24 @@
    },
    "type": "module",
    "module": "./dist/esm/index.js",
-   "_id": "lru-cache@11.0.2",
-   "gitHead": "65c9971e3fef123ff0f17d67add53b2d99b461b0",
+   "_id": "lru-cache@11.1.0",
+   "gitHead": "44e56735e5da8582a63b2f0a41af8b5f9d4a069b",
    "bugs": {
     "url": "https://github.com/isaacs/node-lru-cache/issues"
    },
    "homepage": "https://github.com/isaacs/node-lru-cache#readme",
-   "_nodeVersion": "22.10.0",
-   "_npmVersion": "10.9.0",
+   "_nodeVersion": "22.14.0",
+   "_npmVersion": "11.2.0",
    "dist": {
-    "integrity": "sha512-123qHRfJBmo2jXDbo/a5YOQrJoHF/GNQTLzQ5+IdK5pWpceK17yRc6ozlWd25FxvGKQbIUs91fDFkXmDHTKcyA==",
-    "shasum": "fbd8e7cf8211f5e7e5d91905c415a3f55755ca39",
-    "tarball": "http://localhost:3000/lru-cache/-/lru-cache-11.0.2.tgz",
+    "integrity": "sha512-QIXZUBJUx+2zHUdQujWejBkcD9+cs94tLn0+YL8UrCh+D5sCXZ4c7LaEH48pNwRY3MLDgqUFyhlCyjJPf1WP0A==",
+    "shasum": "afafb060607108132dbc1cf8ae661afb69486117",
+    "tarball": "http://localhost:3000/lru-cache/-/lru-cache-11.1.0.tgz",
     "fileCount": 17,
-    "unpackedSize": 807860,
+    "unpackedSize": 819995,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQCoOEDA5ZwfskJK7UkLiszBmmv0GxggpYShS7aIcDimCgIhANeyvSCuvuRqhNfUU06gvXEsC4Jb3TAMPYwMftv88Cna"
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEQCIB4CQotciE7WpG65dGN6OMNdJrcFsxCuVBm4fbz2W/lZAiA70bK6zhbDvptwW0rG2vu0os33rZig5jpfq9OzVZMKLA=="
      }
     ]
    },
@@ -14206,15 +14355,15 @@
     }
    ],
    "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/lru-cache_11.0.2_1730397080054_0.9058538021200011"
+    "host": "s3://npm-registry-packages-npm-production",
+    "tmp": "tmp/lru-cache_11.1.0_1742829258301_0.1662545006796785"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2011-07-16T09:09:00.041Z",
-  "modified": "2024-10-31T17:51:20.557Z",
+  "modified": "2025-03-24T15:14:18.754Z",
   "1.0.2": "2011-07-16T09:09:00.041Z",
   "1.0.1": "2011-07-16T09:09:00.041Z",
   "1.0.3": "2011-07-16T09:09:00.041Z",
@@ -14357,7 +14506,8 @@
   "10.4.2": "2024-07-09T02:54:48.371Z",
   "10.4.3": "2024-07-09T17:20:52.211Z",
   "11.0.1": "2024-09-06T03:17:19.396Z",
-  "11.0.2": "2024-10-31T17:51:20.390Z"
+  "11.0.2": "2024-10-31T17:51:20.390Z",
+  "11.1.0": "2025-03-24T15:14:18.553Z"
  },
  "bugs": {
   "url": "https://github.com/isaacs/node-lru-cache/issues"
@@ -14384,7 +14534,7 @@
    "email": "i@izs.me"
   }
  ],
- "readme": "# lru-cache\n\nA cache object that deletes the least-recently-used items.\n\nSpecify a max number of the most recently used items that you\nwant to keep, and this cache will keep that many of the most\nrecently accessed items.\n\nThis is not primarily a TTL cache, and does not make strong TTL\nguarantees. There is no preemptive pruning of expired items by\ndefault, but you _may_ set a TTL on the cache or on a single\n`set`. If you do so, it will treat expired items as missing, and\ndelete them when fetched. If you are more interested in TTL\ncaching than LRU caching, check out\n[@isaacs/ttlcache](http://npm.im/@isaacs/ttlcache).\n\nAs of version 7, this is one of the most performant LRU\nimplementations available in JavaScript, and supports a wide\ndiversity of use cases. However, note that using some of the\nfeatures will necessarily impact performance, by causing the\ncache to have to do more work. See the \"Performance\" section\nbelow.\n\n## Installation\n\n```bash\nnpm install lru-cache --save\n```\n\n## Usage\n\n```js\n// hybrid module, either works\nimport { LRUCache } from 'lru-cache'\n// or:\nconst { LRUCache } = require('lru-cache')\n// or in minified form for web browsers:\nimport { LRUCache } from 'http://unpkg.com/lru-cache@9/dist/mjs/index.min.mjs'\n\n// At least one of 'max', 'ttl', or 'maxSize' is required, to prevent\n// unsafe unbounded storage.\n//\n// In most cases, it's best to specify a max for performance, so all\n// the required memory allocation is done up-front.\n//\n// All the other options are optional, see the sections below for\n// documentation on what each one does.  Most of them can be\n// overridden for specific items in get()/set()\nconst options = {\n  max: 500,\n\n  // for use with tracking overall storage size\n  maxSize: 5000,\n  sizeCalculation: (value, key) => {\n    return 1\n  },\n\n  // for use when you need to clean up something when objects\n  // are evicted from the cache\n  dispose: (value, key) => {\n    freeFromMemoryOrWhatever(value)\n  },\n\n  // how long to live in ms\n  ttl: 1000 * 60 * 5,\n\n  // return stale items before removing from cache?\n  allowStale: false,\n\n  updateAgeOnGet: false,\n  updateAgeOnHas: false,\n\n  // async method to use for cache.fetch(), for\n  // stale-while-revalidate type of behavior\n  fetchMethod: async (\n    key,\n    staleValue,\n    { options, signal, context }\n  ) => {},\n}\n\nconst cache = new LRUCache(options)\n\ncache.set('key', 'value')\ncache.get('key') // \"value\"\n\n// non-string keys ARE fully supported\n// but note that it must be THE SAME object, not\n// just a JSON-equivalent object.\nvar someObject = { a: 1 }\ncache.set(someObject, 'a value')\n// Object keys are not toString()-ed\ncache.set('[object Object]', 'a different value')\nassert.equal(cache.get(someObject), 'a value')\n// A similar object with same keys/values won't work,\n// because it's a different object identity\nassert.equal(cache.get({ a: 1 }), undefined)\n\ncache.clear() // empty the cache\n```\n\nIf you put more stuff in the cache, then less recently used items\nwill fall out. That's what an LRU cache is.\n\nFor full description of the API and all options, please see [the\nLRUCache typedocs](https://isaacs.github.io/node-lru-cache/)\n\n## Storage Bounds Safety\n\nThis implementation aims to be as flexible as possible, within\nthe limits of safe memory consumption and optimal performance.\n\nAt initial object creation, storage is allocated for `max` items.\nIf `max` is set to zero, then some performance is lost, and item\ncount is unbounded. Either `maxSize` or `ttl` _must_ be set if\n`max` is not specified.\n\nIf `maxSize` is set, then this creates a safe limit on the\nmaximum storage consumed, but without the performance benefits of\npre-allocation. When `maxSize` is set, every item _must_ provide\na size, either via the `sizeCalculation` method provided to the\nconstructor, or via a `size` or `sizeCalculation` option provided\nto `cache.set()`. The size of every item _must_ be a positive\ninteger.\n\nIf neither `max` nor `maxSize` are set, then `ttl` tracking must\nbe enabled. Note that, even when tracking item `ttl`, items are\n_not_ preemptively deleted when they become stale, unless\n`ttlAutopurge` is enabled. Instead, they are only purged the\nnext time the key is requested. Thus, if `ttlAutopurge`, `max`,\nand `maxSize` are all not set, then the cache will potentially\ngrow unbounded.\n\nIn this case, a warning is printed to standard error. Future\nversions may require the use of `ttlAutopurge` if `max` and\n`maxSize` are not specified.\n\nIf you truly wish to use a cache that is bound _only_ by TTL\nexpiration, consider using a `Map` object, and calling\n`setTimeout` to delete entries when they expire. It will perform\nmuch better than an LRU cache.\n\nHere is an implementation you may use, under the same\n[license](./LICENSE) as this package:\n\n```js\n// a storage-unbounded ttl cache that is not an lru-cache\nconst cache = {\n  data: new Map(),\n  timers: new Map(),\n  set: (k, v, ttl) => {\n    if (cache.timers.has(k)) {\n      clearTimeout(cache.timers.get(k))\n    }\n    cache.timers.set(\n      k,\n      setTimeout(() => cache.delete(k), ttl)\n    )\n    cache.data.set(k, v)\n  },\n  get: k => cache.data.get(k),\n  has: k => cache.data.has(k),\n  delete: k => {\n    if (cache.timers.has(k)) {\n      clearTimeout(cache.timers.get(k))\n    }\n    cache.timers.delete(k)\n    return cache.data.delete(k)\n  },\n  clear: () => {\n    cache.data.clear()\n    for (const v of cache.timers.values()) {\n      clearTimeout(v)\n    }\n    cache.timers.clear()\n  },\n}\n```\n\nIf that isn't to your liking, check out\n[@isaacs/ttlcache](http://npm.im/@isaacs/ttlcache).\n\n## Storing Undefined Values\n\nThis cache never stores undefined values, as `undefined` is used\ninternally in a few places to indicate that a key is not in the\ncache.\n\nYou may call `cache.set(key, undefined)`, but this is just\nan alias for `cache.delete(key)`. Note that this has the effect\nthat `cache.has(key)` will return _false_ after setting it to\nundefined.\n\n```js\ncache.set(myKey, undefined)\ncache.has(myKey) // false!\n```\n\nIf you need to track `undefined` values, and still note that the\nkey is in the cache, an easy workaround is to use a sigil object\nof your own.\n\n```js\nimport { LRUCache } from 'lru-cache'\nconst undefinedValue = Symbol('undefined')\nconst cache = new LRUCache(...)\nconst mySet = (key, value) =>\n  cache.set(key, value === undefined ? undefinedValue : value)\nconst myGet = (key, value) => {\n  const v = cache.get(key)\n  return v === undefinedValue ? undefined : v\n}\n```\n\n## Performance\n\nAs of January 2022, version 7 of this library is one of the most\nperformant LRU cache implementations in JavaScript.\n\nBenchmarks can be extremely difficult to get right. In\nparticular, the performance of set/get/delete operations on\nobjects will vary _wildly_ depending on the type of key used. V8\nis highly optimized for objects with keys that are short strings,\nespecially integer numeric strings. Thus any benchmark which\ntests _solely_ using numbers as keys will tend to find that an\nobject-based approach performs the best.\n\nNote that coercing _anything_ to strings to use as object keys is\nunsafe, unless you can be 100% certain that no other type of\nvalue will be used. For example:\n\n```js\nconst myCache = {}\nconst set = (k, v) => (myCache[k] = v)\nconst get = k => myCache[k]\n\nset({}, 'please hang onto this for me')\nset('[object Object]', 'oopsie')\n```\n\nAlso beware of \"Just So\" stories regarding performance. Garbage\ncollection of large (especially: deep) object graphs can be\nincredibly costly, with several \"tipping points\" where it\nincreases exponentially. As a result, putting that off until\nlater can make it much worse, and less predictable. If a library\nperforms well, but only in a scenario where the object graph is\nkept shallow, then that won't help you if you are using large\nobjects as keys.\n\nIn general, when attempting to use a library to improve\nperformance (such as a cache like this one), it's best to choose\nan option that will perform well in the sorts of scenarios where\nyou'll actually use it.\n\nThis library is optimized for repeated gets and minimizing\neviction time, since that is the expected need of a LRU. Set\noperations are somewhat slower on average than a few other\noptions, in part because of that optimization. It is assumed\nthat you'll be caching some costly operation, ideally as rarely\nas possible, so optimizing set over get would be unwise.\n\nIf performance matters to you:\n\n1. If it's at all possible to use small integer values as keys,\n   and you can guarantee that no other types of values will be\n   used as keys, then do that, and use a cache such as\n   [lru-fast](https://npmjs.com/package/lru-fast), or\n   [mnemonist's\n   LRUCache](https://yomguithereal.github.io/mnemonist/lru-cache)\n   which uses an Object as its data store.\n\n2. Failing that, if at all possible, use short non-numeric\n   strings (ie, less than 256 characters) as your keys, and use\n   [mnemonist's\n   LRUCache](https://yomguithereal.github.io/mnemonist/lru-cache).\n\n3. If the types of your keys will be anything else, especially\n   long strings, strings that look like floats, objects, or some\n   mix of types, or if you aren't sure, then this library will\n   work well for you.\n\n   If you do not need the features that this library provides\n   (like asynchronous fetching, a variety of TTL staleness\n   options, and so on), then [mnemonist's\n   LRUMap](https://yomguithereal.github.io/mnemonist/lru-map) is\n   a very good option, and just slightly faster than this module\n   (since it does considerably less).\n\n4. Do not use a `dispose` function, size tracking, or especially\n   ttl behavior, unless absolutely needed. These features are\n   convenient, and necessary in some use cases, and every attempt\n   has been made to make the performance impact minimal, but it\n   isn't nothing.\n\n## Breaking Changes in Version 7\n\nThis library changed to a different algorithm and internal data\nstructure in version 7, yielding significantly better\nperformance, albeit with some subtle changes as a result.\n\nIf you were relying on the internals of LRUCache in version 6 or\nbefore, it probably will not work in version 7 and above.\n\n## Breaking Changes in Version 8\n\n- The `fetchContext` option was renamed to `context`, and may no\n  longer be set on the cache instance itself.\n- Rewritten in TypeScript, so pretty much all the types moved\n  around a lot.\n- The AbortController/AbortSignal polyfill was removed. For this\n  reason, **Node version 16.14.0 or higher is now required**.\n- Internal properties were moved to actual private class\n  properties.\n- Keys and values must not be `null` or `undefined`.\n- Minified export available at `'lru-cache/min'`, for both CJS\n  and MJS builds.\n\n## Breaking Changes in Version 9\n\n- Named export only, no default export.\n- AbortController polyfill returned, albeit with a warning when\n  used.\n\n## Breaking Changes in Version 10\n\n- `cache.fetch()` return type is now `Promise<V | undefined>`\n  instead of `Promise<V | void>`. This is an irrelevant change\n  practically speaking, but can require changes for TypeScript\n  users.\n\nFor more info, see the [change log](CHANGELOG.md).\n",
+ "readme": "# lru-cache\n\nA cache object that deletes the least-recently-used items.\n\nSpecify a max number of the most recently used items that you\nwant to keep, and this cache will keep that many of the most\nrecently accessed items.\n\nThis is not primarily a TTL cache, and does not make strong TTL\nguarantees. There is no preemptive pruning of expired items by\ndefault, but you _may_ set a TTL on the cache or on a single\n`set`. If you do so, it will treat expired items as missing, and\ndelete them when fetched. If you are more interested in TTL\ncaching than LRU caching, check out\n[@isaacs/ttlcache](http://npm.im/@isaacs/ttlcache).\n\nAs of version 7, this is one of the most performant LRU\nimplementations available in JavaScript, and supports a wide\ndiversity of use cases. However, note that using some of the\nfeatures will necessarily impact performance, by causing the\ncache to have to do more work. See the \"Performance\" section\nbelow.\n\n## Installation\n\n```bash\nnpm install lru-cache --save\n```\n\n## Usage\n\n```js\n// hybrid module, either works\nimport { LRUCache } from 'lru-cache'\n// or:\nconst { LRUCache } = require('lru-cache')\n// or in minified form for web browsers:\nimport { LRUCache } from 'http://unpkg.com/lru-cache@9/dist/mjs/index.min.mjs'\n\n// At least one of 'max', 'ttl', or 'maxSize' is required, to prevent\n// unsafe unbounded storage.\n//\n// In most cases, it's best to specify a max for performance, so all\n// the required memory allocation is done up-front.\n//\n// All the other options are optional, see the sections below for\n// documentation on what each one does.  Most of them can be\n// overridden for specific items in get()/set()\nconst options = {\n  max: 500,\n\n  // for use with tracking overall storage size\n  maxSize: 5000,\n  sizeCalculation: (value, key) => {\n    return 1\n  },\n\n  // for use when you need to clean up something when objects\n  // are evicted from the cache\n  dispose: (value, key, reason) => {\n    freeFromMemoryOrWhatever(value)\n  },\n\n  // for use when you need to know that an item is being inserted\n  // note that this does NOT allow you to prevent the insertion,\n  // it just allows you to know about it.\n  onInsert: (value, key, reason) => {\n    logInsertionOrWhatever(key, value)\n  },\n\n  // how long to live in ms\n  ttl: 1000 * 60 * 5,\n\n  // return stale items before removing from cache?\n  allowStale: false,\n\n  updateAgeOnGet: false,\n  updateAgeOnHas: false,\n\n  // async method to use for cache.fetch(), for\n  // stale-while-revalidate type of behavior\n  fetchMethod: async (\n    key,\n    staleValue,\n    { options, signal, context }\n  ) => {},\n}\n\nconst cache = new LRUCache(options)\n\ncache.set('key', 'value')\ncache.get('key') // \"value\"\n\n// non-string keys ARE fully supported\n// but note that it must be THE SAME object, not\n// just a JSON-equivalent object.\nvar someObject = { a: 1 }\ncache.set(someObject, 'a value')\n// Object keys are not toString()-ed\ncache.set('[object Object]', 'a different value')\nassert.equal(cache.get(someObject), 'a value')\n// A similar object with same keys/values won't work,\n// because it's a different object identity\nassert.equal(cache.get({ a: 1 }), undefined)\n\ncache.clear() // empty the cache\n```\n\nIf you put more stuff in the cache, then less recently used items\nwill fall out. That's what an LRU cache is.\n\nFor full description of the API and all options, please see [the\nLRUCache typedocs](https://isaacs.github.io/node-lru-cache/)\n\n## Storage Bounds Safety\n\nThis implementation aims to be as flexible as possible, within\nthe limits of safe memory consumption and optimal performance.\n\nAt initial object creation, storage is allocated for `max` items.\nIf `max` is set to zero, then some performance is lost, and item\ncount is unbounded. Either `maxSize` or `ttl` _must_ be set if\n`max` is not specified.\n\nIf `maxSize` is set, then this creates a safe limit on the\nmaximum storage consumed, but without the performance benefits of\npre-allocation. When `maxSize` is set, every item _must_ provide\na size, either via the `sizeCalculation` method provided to the\nconstructor, or via a `size` or `sizeCalculation` option provided\nto `cache.set()`. The size of every item _must_ be a positive\ninteger.\n\nIf neither `max` nor `maxSize` are set, then `ttl` tracking must\nbe enabled. Note that, even when tracking item `ttl`, items are\n_not_ preemptively deleted when they become stale, unless\n`ttlAutopurge` is enabled. Instead, they are only purged the\nnext time the key is requested. Thus, if `ttlAutopurge`, `max`,\nand `maxSize` are all not set, then the cache will potentially\ngrow unbounded.\n\nIn this case, a warning is printed to standard error. Future\nversions may require the use of `ttlAutopurge` if `max` and\n`maxSize` are not specified.\n\nIf you truly wish to use a cache that is bound _only_ by TTL\nexpiration, consider using a `Map` object, and calling\n`setTimeout` to delete entries when they expire. It will perform\nmuch better than an LRU cache.\n\nHere is an implementation you may use, under the same\n[license](./LICENSE) as this package:\n\n```js\n// a storage-unbounded ttl cache that is not an lru-cache\nconst cache = {\n  data: new Map(),\n  timers: new Map(),\n  set: (k, v, ttl) => {\n    if (cache.timers.has(k)) {\n      clearTimeout(cache.timers.get(k))\n    }\n    cache.timers.set(\n      k,\n      setTimeout(() => cache.delete(k), ttl)\n    )\n    cache.data.set(k, v)\n  },\n  get: k => cache.data.get(k),\n  has: k => cache.data.has(k),\n  delete: k => {\n    if (cache.timers.has(k)) {\n      clearTimeout(cache.timers.get(k))\n    }\n    cache.timers.delete(k)\n    return cache.data.delete(k)\n  },\n  clear: () => {\n    cache.data.clear()\n    for (const v of cache.timers.values()) {\n      clearTimeout(v)\n    }\n    cache.timers.clear()\n  },\n}\n```\n\nIf that isn't to your liking, check out\n[@isaacs/ttlcache](http://npm.im/@isaacs/ttlcache).\n\n## Storing Undefined Values\n\nThis cache never stores undefined values, as `undefined` is used\ninternally in a few places to indicate that a key is not in the\ncache.\n\nYou may call `cache.set(key, undefined)`, but this is just\nan alias for `cache.delete(key)`. Note that this has the effect\nthat `cache.has(key)` will return _false_ after setting it to\nundefined.\n\n```js\ncache.set(myKey, undefined)\ncache.has(myKey) // false!\n```\n\nIf you need to track `undefined` values, and still note that the\nkey is in the cache, an easy workaround is to use a sigil object\nof your own.\n\n```js\nimport { LRUCache } from 'lru-cache'\nconst undefinedValue = Symbol('undefined')\nconst cache = new LRUCache(...)\nconst mySet = (key, value) =>\n  cache.set(key, value === undefined ? undefinedValue : value)\nconst myGet = (key, value) => {\n  const v = cache.get(key)\n  return v === undefinedValue ? undefined : v\n}\n```\n\n## Performance\n\nAs of January 2022, version 7 of this library is one of the most\nperformant LRU cache implementations in JavaScript.\n\nBenchmarks can be extremely difficult to get right. In\nparticular, the performance of set/get/delete operations on\nobjects will vary _wildly_ depending on the type of key used. V8\nis highly optimized for objects with keys that are short strings,\nespecially integer numeric strings. Thus any benchmark which\ntests _solely_ using numbers as keys will tend to find that an\nobject-based approach performs the best.\n\nNote that coercing _anything_ to strings to use as object keys is\nunsafe, unless you can be 100% certain that no other type of\nvalue will be used. For example:\n\n```js\nconst myCache = {}\nconst set = (k, v) => (myCache[k] = v)\nconst get = k => myCache[k]\n\nset({}, 'please hang onto this for me')\nset('[object Object]', 'oopsie')\n```\n\nAlso beware of \"Just So\" stories regarding performance. Garbage\ncollection of large (especially: deep) object graphs can be\nincredibly costly, with several \"tipping points\" where it\nincreases exponentially. As a result, putting that off until\nlater can make it much worse, and less predictable. If a library\nperforms well, but only in a scenario where the object graph is\nkept shallow, then that won't help you if you are using large\nobjects as keys.\n\nIn general, when attempting to use a library to improve\nperformance (such as a cache like this one), it's best to choose\nan option that will perform well in the sorts of scenarios where\nyou'll actually use it.\n\nThis library is optimized for repeated gets and minimizing\neviction time, since that is the expected need of a LRU. Set\noperations are somewhat slower on average than a few other\noptions, in part because of that optimization. It is assumed\nthat you'll be caching some costly operation, ideally as rarely\nas possible, so optimizing set over get would be unwise.\n\nIf performance matters to you:\n\n1. If it's at all possible to use small integer values as keys,\n   and you can guarantee that no other types of values will be\n   used as keys, then do that, and use a cache such as\n   [lru-fast](https://npmjs.com/package/lru-fast), or\n   [mnemonist's\n   LRUCache](https://yomguithereal.github.io/mnemonist/lru-cache)\n   which uses an Object as its data store.\n\n2. Failing that, if at all possible, use short non-numeric\n   strings (ie, less than 256 characters) as your keys, and use\n   [mnemonist's\n   LRUCache](https://yomguithereal.github.io/mnemonist/lru-cache).\n\n3. If the types of your keys will be anything else, especially\n   long strings, strings that look like floats, objects, or some\n   mix of types, or if you aren't sure, then this library will\n   work well for you.\n\n   If you do not need the features that this library provides\n   (like asynchronous fetching, a variety of TTL staleness\n   options, and so on), then [mnemonist's\n   LRUMap](https://yomguithereal.github.io/mnemonist/lru-map) is\n   a very good option, and just slightly faster than this module\n   (since it does considerably less).\n\n4. Do not use a `dispose` function, size tracking, or especially\n   ttl behavior, unless absolutely needed. These features are\n   convenient, and necessary in some use cases, and every attempt\n   has been made to make the performance impact minimal, but it\n   isn't nothing.\n\n## Breaking Changes in Version 7\n\nThis library changed to a different algorithm and internal data\nstructure in version 7, yielding significantly better\nperformance, albeit with some subtle changes as a result.\n\nIf you were relying on the internals of LRUCache in version 6 or\nbefore, it probably will not work in version 7 and above.\n\n## Breaking Changes in Version 8\n\n- The `fetchContext` option was renamed to `context`, and may no\n  longer be set on the cache instance itself.\n- Rewritten in TypeScript, so pretty much all the types moved\n  around a lot.\n- The AbortController/AbortSignal polyfill was removed. For this\n  reason, **Node version 16.14.0 or higher is now required**.\n- Internal properties were moved to actual private class\n  properties.\n- Keys and values must not be `null` or `undefined`.\n- Minified export available at `'lru-cache/min'`, for both CJS\n  and MJS builds.\n\n## Breaking Changes in Version 9\n\n- Named export only, no default export.\n- AbortController polyfill returned, albeit with a warning when\n  used.\n\n## Breaking Changes in Version 10\n\n- `cache.fetch()` return type is now `Promise<V | undefined>`\n  instead of `Promise<V | void>`. This is an irrelevant change\n  practically speaking, but can require changes for TypeScript\n  users.\n\nFor more info, see the [change log](CHANGELOG.md).\n",
  "readmeFilename": "README.md",
  "users": {
   "285858315": true,

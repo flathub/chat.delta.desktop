@@ -1,9 +1,9 @@
 {
  "_id": "mime",
- "_rev": "281-3ee1a907365df9c4720637407008da96",
+ "_rev": "283-8d7bc8a71b9d97527d79502a72243d15",
  "name": "mime",
  "dist-tags": {
-  "latest": "4.0.6"
+  "latest": "4.0.7"
  },
  "versions": {
   "1.0.0": {
@@ -4267,6 +4267,113 @@
    }
   },
   "4.0.6": {
+   "name": "mime",
+   "version": "4.0.6",
+   "keywords": [
+    "extension",
+    "file",
+    "mime",
+    "mime-db",
+    "mimetypes",
+    "util"
+   ],
+   "author": {
+    "url": "http://github.com/broofa",
+    "name": "Robert Kieffer",
+    "email": "robert@broofa.com"
+   },
+   "license": "MIT",
+   "_id": "mime@4.0.6",
+   "maintainers": [
+    {
+     "name": "broofa",
+     "email": "robert@broofa.com"
+    }
+   ],
+   "contributors": [],
+   "homepage": "https://github.com/broofa/mime#readme",
+   "bugs": {
+    "url": "https://github.com/broofa/mime/issues"
+   },
+   "bin": {
+    "mime": "bin/cli.js"
+   },
+   "dist": {
+    "shasum": "ca83bec0bcf2a02353d0e02da99be05603d04839",
+    "tarball": "http://localhost:3000/mime/-/mime-4.0.6.tgz",
+    "fileCount": 22,
+    "integrity": "sha512-4rGt7rvQHBbaSOF9POGkk1ocRP16Md1x36Xma8sz8h8/vfCUI2OtEIeCqe4Ofes853x4xDoPiFLIT47J5fI/7A==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDcDA+8drml0tMFCNxDG4+hw73Vjn31lRszlbQqXOsWawIhAMNlI9q74nGsMnO7ZaSgESluuLzxje1KuuvkX1yIOtrW",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 105887
+   },
+   "main": "./dist/src/index.js",
+   "type": "module",
+   "types": "./dist/src/index.d.ts",
+   "engines": {
+    "node": ">=16"
+   },
+   "exports": {
+    ".": "./dist/src/index.js",
+    "./lite": "./dist/src/index_lite.js",
+    "./package.json": "./package.json",
+    "./types/other.js": "./dist/types/other.js",
+    "./types/standard.js": "./dist/types/standard.js"
+   },
+   "funding": [
+    "https://github.com/sponsors/broofa"
+   ],
+   "gitHead": "a9263fe0419378a6b1429a2b31892d203d1f2507",
+   "scripts": {
+    "lint": "prettier -c .",
+    "test": "node --test && ./test/exports_test.sh",
+    "build": "rm -fr dist && tsc",
+    "prepack": "npm run build",
+    "pretest": "npm run build",
+    "lint:fix": "prettier -w .",
+    "test:watch": "clear && node --enable-source-maps --test --watch test",
+    "build:types": "node dist/scripts/build.js",
+    "build:watch": "npm run build -- --watch",
+    "prepublishOnly": "npm test"
+   },
+   "_npmUser": {
+    "name": "broofa",
+    "email": "robert@broofa.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/broofa/mime.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "A comprehensive library for mime-type mapping",
+   "directories": {},
+   "_nodeVersion": "20.18.1",
+   "_hasShrinkwrap": false,
+   "packageManager": "npm@11.0.0",
+   "devDependencies": {
+    "chalk": "5.3.0",
+    "runmd": "1.3.9",
+    "prettier": "3.4.2",
+    "mime-score": "2.0.4",
+    "mime-types": "2.1.35",
+    "typescript": "5.7.2",
+    "@types/node": "22.10.2",
+    "@types/mime-db": "1.*",
+    "release-please": "16.15.0",
+    "@types/mime-types": "2.1.4",
+    "@typescript-eslint/parser": "8.18.1",
+    "@typescript-eslint/eslint-plugin": "8.18.1"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/mime_4.0.6_1734471408940_0.735007444687436",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "4.0.7": {
    "author": {
     "name": "Robert Kieffer",
     "email": "robert@broofa.com",
@@ -4293,16 +4400,16 @@
    "devDependencies": {
     "@types/mime-db": "1.*",
     "@types/mime-types": "2.1.4",
-    "@types/node": "22.10.2",
-    "@typescript-eslint/eslint-plugin": "8.18.1",
-    "@typescript-eslint/parser": "8.18.1",
-    "chalk": "5.3.0",
+    "@types/node": "22.14.0",
+    "@typescript-eslint/eslint-plugin": "8.29.0",
+    "@typescript-eslint/parser": "8.29.0",
+    "chalk": "5.4.1",
     "mime-score": "2.0.4",
-    "mime-types": "2.1.35",
-    "prettier": "3.4.2",
-    "release-please": "16.15.0",
-    "runmd": "1.3.9",
-    "typescript": "5.7.2"
+    "mime-types": "3.0.1",
+    "prettier": "3.5.3",
+    "release-please": "17.0.0",
+    "runmd": "1.4.1",
+    "typescript": "5.8.2"
    },
    "scripts": {
     "build": "rm -fr dist && tsc",
@@ -4329,30 +4436,30 @@
     "url": "git+https://github.com/broofa/mime.git",
     "type": "git"
    },
-   "version": "4.0.6",
+   "version": "4.0.7",
    "funding": [
     "https://github.com/sponsors/broofa"
    ],
-   "packageManager": "npm@11.0.0",
-   "_id": "mime@4.0.6",
-   "gitHead": "a9263fe0419378a6b1429a2b31892d203d1f2507",
+   "packageManager": "npm@11.2.0",
+   "_id": "mime@4.0.7",
+   "gitHead": "295382f7c1893de2b40e28464e6e6f700e4f2877",
    "types": "./dist/src/index.d.ts",
    "bugs": {
     "url": "https://github.com/broofa/mime/issues"
    },
    "homepage": "https://github.com/broofa/mime#readme",
-   "_nodeVersion": "20.18.1",
+   "_nodeVersion": "20.19.0",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-4rGt7rvQHBbaSOF9POGkk1ocRP16Md1x36Xma8sz8h8/vfCUI2OtEIeCqe4Ofes853x4xDoPiFLIT47J5fI/7A==",
-    "shasum": "ca83bec0bcf2a02353d0e02da99be05603d04839",
-    "tarball": "http://localhost:3000/mime/-/mime-4.0.6.tgz",
+    "integrity": "sha512-2OfDPL+e03E0LrXaGYOtTFIYhiuzep94NSsuhrNULq+stylcJedcHdzHtz0atMUuGwJfFYs0YL5xeC/Ca2x0eQ==",
+    "shasum": "0b7a98b08c63bd3c10251e797d67840c9bde9f13",
+    "tarball": "http://localhost:3000/mime/-/mime-4.0.7.tgz",
     "fileCount": 22,
-    "unpackedSize": 105887,
+    "unpackedSize": 108025,
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDcDA+8drml0tMFCNxDG4+hw73Vjn31lRszlbQqXOsWawIhAMNlI9q74nGsMnO7ZaSgESluuLzxje1KuuvkX1yIOtrW"
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIQCeN7rIllTJpdJI1Ovprh4R6o0rftLHcQaWyucgViQy/QIgR/H1OSgvPvI6B/0Hf62PipMiatN7PmH688OPoM65Td0="
      }
     ]
    },
@@ -4369,14 +4476,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/mime_4.0.6_1734471408940_0.735007444687436"
+    "tmp": "tmp/mime_4.0.7_1743690706796_0.7622679366290435"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2011-01-20T16:27:31.008Z",
-  "modified": "2024-12-17T21:36:49.316Z",
+  "modified": "2025-04-03T14:31:47.136Z",
   "1.0.0": "2011-01-20T16:27:31.008Z",
   "1.1.0": "2011-01-20T16:27:31.008Z",
   "1.2.1": "2011-01-20T16:27:31.008Z",
@@ -4432,7 +4539,8 @@
   "4.0.3": "2024-04-25T13:03:07.063Z",
   "4.0.4": "2024-07-06T00:54:56.724Z",
   "4.0.5": "2024-12-17T21:31:51.050Z",
-  "4.0.6": "2024-12-17T21:36:49.144Z"
+  "4.0.6": "2024-12-17T21:36:49.144Z",
+  "4.0.7": "2025-04-03T14:31:46.967Z"
  },
  "bugs": {
   "url": "https://github.com/broofa/mime/issues"

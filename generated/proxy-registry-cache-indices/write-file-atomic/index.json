@@ -1,6 +1,6 @@
 {
  "_id": "write-file-atomic",
- "_rev": "91-97a632d10010ff9a206190672a24b653",
+ "_rev": "93-758f63a775c3232700af230756340f42",
  "name": "write-file-atomic",
  "dist-tags": {
   "latest": "6.0.0"
@@ -2556,22 +2556,6 @@
   "6.0.0": {
    "name": "write-file-atomic",
    "version": "6.0.0",
-   "description": "Write files in an atomic fashion w/configurable ownership",
-   "main": "./lib/index.js",
-   "scripts": {
-    "test": "tap",
-    "posttest": "npm run lint",
-    "lint": "npm run eslint",
-    "postlint": "template-oss-check",
-    "lintfix": "npm run eslint -- --fix",
-    "snap": "tap",
-    "template-oss-apply": "template-oss-apply --force",
-    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
-   },
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/npm/write-file-atomic.git"
-   },
    "keywords": [
     "writeFile",
     "atomic"
@@ -2580,62 +2564,7 @@
     "name": "GitHub Inc."
    },
    "license": "ISC",
-   "bugs": {
-    "url": "https://github.com/npm/write-file-atomic/issues"
-   },
-   "homepage": "https://github.com/npm/write-file-atomic",
-   "dependencies": {
-    "imurmurhash": "^0.1.4",
-    "signal-exit": "^4.0.1"
-   },
-   "devDependencies": {
-    "@npmcli/eslint-config": "^5.0.0",
-    "@npmcli/template-oss": "4.23.3",
-    "tap": "^16.0.1"
-   },
-   "engines": {
-    "node": "^18.17.0 || >=20.5.0"
-   },
-   "templateOSS": {
-    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "windowsCI": false,
-    "version": "4.23.3",
-    "publish": "true"
-   },
-   "tap": {
-    "nyc-arg": [
-     "--exclude",
-     "tap-snapshots/**"
-    ]
-   },
    "_id": "write-file-atomic@6.0.0",
-   "gitHead": "9fcd4021b8a0c86bf54deded4905aec68d968161",
-   "_nodeVersion": "22.9.0",
-   "_npmVersion": "10.8.3",
-   "dist": {
-    "integrity": "sha512-GmqrO8WJ1NuzJ2DrziEI2o57jKAVIQNf8a18W3nCYU3H7PNWqCCVTeH6/NQE93CIllIgQS98rrmVkYgTX9fFJQ==",
-    "shasum": "e9c89c8191b3ef0606bc79fb92681aa1aa16fa93",
-    "tarball": "http://localhost:3000/write-file-atomic/-/write-file-atomic-6.0.0.tgz",
-    "fileCount": 4,
-    "unpackedSize": 12202,
-    "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/write-file-atomic@6.0.0",
-     "provenance": {
-      "predicateType": "https://slsa.dev/provenance/v1"
-     }
-    },
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIHRVsY6kOqYyc5+lzTFlZ3XeUCFCezFPnZzqsK5HVEuxAiEAncU2Wq7vuEmGjBtWbUc7oI+mavj8AzUhEHXn8/YYtvk="
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "npm-cli-ops",
-    "email": "npm-cli+bot@github.com"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "hashtagchris",
@@ -2662,16 +2591,87 @@
      "email": "gar+npm@danger.computer"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/write-file-atomic_6.0.0_1727285807414_0.2588495531603523"
+   "homepage": "https://github.com/npm/write-file-atomic",
+   "bugs": {
+    "url": "https://github.com/npm/write-file-atomic/issues"
    },
-   "_hasShrinkwrap": false
+   "tap": {
+    "nyc-arg": [
+     "--exclude",
+     "tap-snapshots/**"
+    ]
+   },
+   "dist": {
+    "shasum": "e9c89c8191b3ef0606bc79fb92681aa1aa16fa93",
+    "tarball": "http://localhost:3000/write-file-atomic/-/write-file-atomic-6.0.0.tgz",
+    "fileCount": 4,
+    "integrity": "sha512-GmqrO8WJ1NuzJ2DrziEI2o57jKAVIQNf8a18W3nCYU3H7PNWqCCVTeH6/NQE93CIllIgQS98rrmVkYgTX9fFJQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIHRVsY6kOqYyc5+lzTFlZ3XeUCFCezFPnZzqsK5HVEuxAiEAncU2Wq7vuEmGjBtWbUc7oI+mavj8AzUhEHXn8/YYtvk=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/write-file-atomic@6.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 12202
+   },
+   "main": "./lib/index.js",
+   "engines": {
+    "node": "^18.17.0 || >=20.5.0"
+   },
+   "gitHead": "9fcd4021b8a0c86bf54deded4905aec68d968161",
+   "scripts": {
+    "lint": "npm run eslint",
+    "snap": "tap",
+    "test": "tap",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lintfix": "npm run eslint -- --fix",
+    "postlint": "template-oss-check",
+    "posttest": "npm run lint",
+    "template-oss-apply": "template-oss-apply --force"
+   },
+   "_npmUser": {
+    "name": "npm-cli-ops",
+    "email": "npm-cli+bot@github.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/npm/write-file-atomic.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "Write files in an atomic fashion w/configurable ownership",
+   "directories": {},
+   "templateOSS": {
+    "publish": "true",
+    "version": "4.23.3",
+    "windowsCI": false,
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+   },
+   "_nodeVersion": "22.9.0",
+   "dependencies": {
+    "imurmurhash": "^0.1.4",
+    "signal-exit": "^4.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.0.1",
+    "@npmcli/template-oss": "4.23.3",
+    "@npmcli/eslint-config": "^5.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/write-file-atomic_6.0.0_1727285807414_0.2588495531603523",
+    "host": "s3://npm-registry-packages"
+   }
   }
  },
  "time": {
   "created": "2014-09-10T23:26:27.142Z",
-  "modified": "2024-09-25T17:36:48.078Z",
+  "modified": "2025-04-08T18:10:19.348Z",
   "1.0.0": "2014-09-10T23:26:27.142Z",
   "1.0.1": "2014-09-10T23:27:54.551Z",
   "1.0.2": "2014-09-11T23:53:33.815Z",
@@ -2718,34 +2718,38 @@
   "atomic"
  ],
  "repository": {
-  "type": "git",
-  "url": "git+https://github.com/npm/write-file-atomic.git"
+  "url": "git+https://github.com/npm/write-file-atomic.git",
+  "type": "git"
  },
  "description": "Write files in an atomic fashion w/configurable ownership",
  "maintainers": [
   {
-   "name": "hashtagchris",
-   "email": "hashtagchris@github.com"
+   "email": "fritzy@github.com",
+   "name": "fritzy"
   },
   {
-   "name": "reggi",
-   "email": "reggi@github.com"
+   "email": "gar+npm@danger.computer",
+   "name": "gar"
   },
   {
-   "name": "npm-cli-ops",
-   "email": "npm-cli+bot@github.com"
+   "email": "saquibkhan@github.com",
+   "name": "saquibkhan"
   },
   {
-   "name": "saquibkhan",
-   "email": "saquibkhan@github.com"
+   "email": "npm-cli+bot@github.com",
+   "name": "npm-cli-ops"
   },
   {
-   "name": "fritzy",
-   "email": "fritzy@github.com"
+   "email": "reggi@github.com",
+   "name": "reggi"
   },
   {
-   "name": "gar",
-   "email": "gar+npm@danger.computer"
+   "email": "hashtagchris@github.com",
+   "name": "hashtagchris"
+  },
+  {
+   "email": "owlstronaut@github.com",
+   "name": "owlstronaut"
   }
  ],
  "readme": "write-file-atomic\n-----------------\n\nThis is an extension for node's `fs.writeFile` that makes its operation\natomic and allows you set ownership (uid/gid of the file).\n\n### `writeFileAtomic(filename, data, [options], [callback])`\n\n#### Description:\n\nAtomically and asynchronously writes data to a file, replacing the file if it already\nexists.  data can be a string or a buffer.\n\n#### Options:\n* filename **String**\n* data **String** | **Buffer**\n* options **Object** | **String**\n  * chown **Object** default, uid & gid of existing file, if any\n    * uid **Number**\n    * gid **Number**\n  * encoding **String** | **Null** default = 'utf8'\n  * fsync **Boolean** default = true\n  * mode **Number** default, from existing file, if any\n  * tmpfileCreated **Function** called when the tmpfile is created\n* callback **Function**\n\n#### Usage:\n\n```js\nvar writeFileAtomic = require('write-file-atomic')\nwriteFileAtomic(filename, data, [options], [callback])\n```\n\nThe file is initially named `filename + \".\" + murmurhex(__filename, process.pid, ++invocations)`.\nNote that `require('worker_threads').threadId` is used in addition to `process.pid` if running inside of a worker thread.\nIf writeFile completes successfully then, if passed the **chown** option it will change\nthe ownership of the file. Finally it renames the file back to the filename you specified. If\nit encounters errors at any of these steps it will attempt to unlink the temporary file and then\npass the error back to the caller.\nIf multiple writes are concurrently issued to the same file, the write operations are put into a queue and serialized in the order they were called, using Promises. Writes to different files are still executed in parallel.\n\nIf provided, the **chown** option requires both **uid** and **gid** properties or else\nyou'll get an error.  If **chown** is not specified it will default to using\nthe owner of the previous file.  To prevent chown from being ran you can\nalso pass `false`, in which case the file will be created with the current user's credentials.\n\nIf **mode** is not specified, it will default to using the permissions from\nan existing file, if any.  Expicitly setting this to `false` remove this default, resulting\nin a file created with the system default permissions.\n\nIf options is a String, it's assumed to be the **encoding** option. The **encoding** option is ignored if **data** is a buffer. It defaults to 'utf8'.\n\nIf the **fsync** option is **false**, writeFile will skip the final fsync call.\n\nIf the **tmpfileCreated** option is specified it will be called with the name of the tmpfile when created.\n\nExample:\n\n```javascript\nwriteFileAtomic('message.txt', 'Hello Node', {chown:{uid:100,gid:50}}, function (err) {\n  if (err) throw err;\n  console.log('It\\'s saved!');\n});\n```\n\nThis function also supports async/await:\n\n```javascript\n(async () => {\n  try {\n    await writeFileAtomic('message.txt', 'Hello Node', {chown:{uid:100,gid:50}});\n    console.log('It\\'s saved!');\n  } catch (err) {\n    console.error(err);\n    process.exit(1);\n  }\n})();\n```\n\n### `writeFileAtomicSync(filename, data, [options])`\n\n#### Description:\n\nThe synchronous version of **writeFileAtomic**.\n\n#### Usage:\n```js\nvar writeFileAtomicSync = require('write-file-atomic').sync\nwriteFileAtomicSync(filename, data, [options])\n```\n\n",

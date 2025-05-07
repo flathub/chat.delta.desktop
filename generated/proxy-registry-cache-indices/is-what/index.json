@@ -1,10 +1,10 @@
 {
  "_id": "is-what",
- "_rev": "75-33cfa73639dbe48890ffd4004c530928",
+ "_rev": "77-8d60f5f9093bd003d448079fb9d3ac33",
  "name": "is-what",
  "dist-tags": {
   "next": "4.1.15-3",
-  "latest": "5.2.0"
+  "latest": "5.2.1"
  },
  "versions": {
   "1.0.0": {
@@ -8201,6 +8201,103 @@
   "5.2.0": {
    "name": "is-what",
    "version": "5.2.0",
+   "keywords": [
+    "javascript",
+    "typescript",
+    "typechecker",
+    "check-type",
+    "javascript-type",
+    "primitive-types",
+    "plain-object",
+    "plain-objects",
+    "class-instance",
+    "class-identifier",
+    "type-checking",
+    "type-checker",
+    "type-check",
+    "define-type",
+    "get-type",
+    "what-type",
+    "is-object",
+    "is-plain-obj",
+    "is-plain-object"
+   ],
+   "author": {
+    "url": "https://cycraft.co",
+    "name": "Luca Ban - Mesqueeb"
+   },
+   "license": "MIT",
+   "_id": "is-what@5.2.0",
+   "maintainers": [
+    {
+     "name": "mesqueeb",
+     "email": "mesqueeb@gmail.com"
+    }
+   ],
+   "homepage": "https://github.com/mesqueeb/is-what#readme",
+   "bugs": {
+    "url": "https://github.com/mesqueeb/is-what/issues"
+   },
+   "dist": {
+    "shasum": "5254dd0f6279e668014e86b1c1583ef4414bdc69",
+    "tarball": "http://localhost:3000/is-what/-/is-what-5.2.0.tgz",
+    "fileCount": 83,
+    "integrity": "sha512-IPOooAvDsC9AaL36TR6/pWlCTgQcCgZZR2IY6p8DCjJ84WVdH/f6SCZr8ngAY9wohbF5bvjOoqrVnBQGZiln/A==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDqck/beeIFBXkCsm41mrumSpTpHIWEA1kj9+c8g1gPRAIhAJal5f/hAAREP0SNOpSmyh9rVJgVf15vGdmjZ7E/nYDz",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 35385
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=18"
+   },
+   "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*"
+   },
+   "funding": "https://github.com/sponsors/mesqueeb",
+   "gitHead": "eacec07ab354a3d63cc210398c9660539015d951",
+   "scripts": {
+    "lint": "tsc --noEmit && eslint ./src",
+    "test": "vitest run",
+    "build": "del-cli dist && tsc",
+    "release": "npm run lint && npm run build && np --no-publish",
+    "build:docs": "typedoc"
+   },
+   "_npmUser": {
+    "name": "mesqueeb",
+    "email": "mesqueeb@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/mesqueeb/is-what.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.2",
+   "description": "JS type check (TypeScript supported) functions like `isPlainObject() isArray()` etc. A simple & small integration.",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "20.18.2",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "np": "^10.2.0",
+    "vitest": "^3.0.5",
+    "del-cli": "^6.0.0",
+    "typedoc": "^0.27.7",
+    "@cycraft/eslint": "^0.4.3",
+    "@cycraft/tsconfig": "^0.1.2"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/is-what_5.2.0_1739559459864_0.4143252111464919",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "5.2.1": {
+   "name": "is-what",
+   "version": "5.2.1",
    "description": "JS type check (TypeScript supported) functions like `isPlainObject() isArray()` etc. A simple & small integration.",
    "type": "module",
    "sideEffects": false,
@@ -8219,12 +8316,12 @@
     "release": "npm run lint && npm run build && np --no-publish"
    },
    "devDependencies": {
-    "@cycraft/eslint": "^0.4.3",
+    "@cycraft/eslint": "^0.4.4",
     "@cycraft/tsconfig": "^0.1.2",
     "del-cli": "^6.0.0",
     "np": "^10.2.0",
-    "typedoc": "^0.27.7",
-    "vitest": "^3.0.5"
+    "typedoc": "^0.28.1",
+    "vitest": "^3.0.9"
    },
    "keywords": [
     "javascript",
@@ -8261,20 +8358,20 @@
    "bugs": {
     "url": "https://github.com/mesqueeb/is-what/issues"
    },
-   "_id": "is-what@5.2.0",
-   "gitHead": "eacec07ab354a3d63cc210398c9660539015d951",
-   "_nodeVersion": "20.18.2",
+   "_id": "is-what@5.2.1",
+   "gitHead": "a0eee619400bcbdfd0dd59483dd089cd98708aea",
+   "_nodeVersion": "20.19.0",
    "_npmVersion": "10.8.2",
    "dist": {
-    "integrity": "sha512-IPOooAvDsC9AaL36TR6/pWlCTgQcCgZZR2IY6p8DCjJ84WVdH/f6SCZr8ngAY9wohbF5bvjOoqrVnBQGZiln/A==",
-    "shasum": "5254dd0f6279e668014e86b1c1583ef4414bdc69",
-    "tarball": "http://localhost:3000/is-what/-/is-what-5.2.0.tgz",
+    "integrity": "sha512-FLNNgur29o+0/G6RcG3B6KRDCT6SvMfb7MlfjdydTZWPgBLfiemceChDhY0DHu50O35BDNbNp4rJLQXMt4fG0g==",
+    "shasum": "f8c23952fa1047386784d2ea6d548860bf027642",
+    "tarball": "http://localhost:3000/is-what/-/is-what-5.2.1.tgz",
     "fileCount": 83,
     "unpackedSize": 35385,
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEYCIQDqck/beeIFBXkCsm41mrumSpTpHIWEA1kj9+c8g1gPRAIhAJal5f/hAAREP0SNOpSmyh9rVJgVf15vGdmjZ7E/nYDz"
+      "sig": "MEUCIGezdku6e6J0JEZ+xqZo8+tBOradRcPEyDcu/tfGNNlGAiEAgURjqXRvUoKqWCgr1lUhIZWs5UbKzK/qhI7rCCAtbe8="
      }
     ]
    },
@@ -8291,14 +8388,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/is-what_5.2.0_1739559459864_0.4143252111464919"
+    "tmp": "tmp/is-what_5.2.1_1742840905621_0.19864836600302116"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2018-06-19T04:47:25.489Z",
-  "modified": "2025-02-14T18:57:40.235Z",
+  "modified": "2025-03-24T18:28:26.364Z",
   "1.0.0": "2018-06-19T04:47:25.556Z",
   "1.0.1": "2018-06-19T05:43:59.251Z",
   "1.0.2": "2018-06-19T06:37:54.271Z",
@@ -8372,7 +8469,8 @@
   "5.0.2": "2024-06-07T04:55:42.313Z",
   "5.1.0": "2025-02-14T17:20:01.038Z",
   "5.1.1": "2025-02-14T18:32:45.620Z",
-  "5.2.0": "2025-02-14T18:57:40.056Z"
+  "5.2.0": "2025-02-14T18:57:40.056Z",
+  "5.2.1": "2025-03-24T18:28:25.904Z"
  },
  "bugs": {
   "url": "https://github.com/mesqueeb/is-what/issues"

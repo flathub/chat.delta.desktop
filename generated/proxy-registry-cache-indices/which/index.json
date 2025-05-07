@@ -1,6 +1,6 @@
 {
  "_id": "which",
- "_rev": "90-af6909e08acc85a04e91516e5d424346",
+ "_rev": "92-d6b5ef5495cdfea1c02f0be5c25d7ab2",
  "name": "which",
  "dist-tags": {
   "latest": "5.0.0"
@@ -2295,86 +2295,13 @@
    }
   },
   "5.0.0": {
+   "name": "which",
+   "version": "5.0.0",
    "author": {
     "name": "GitHub Inc."
    },
-   "name": "which",
-   "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
-   "version": "5.0.0",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/npm/node-which.git"
-   },
-   "main": "lib/index.js",
-   "bin": {
-    "node-which": "bin/which.js"
-   },
    "license": "ISC",
-   "dependencies": {
-    "isexe": "^3.1.1"
-   },
-   "devDependencies": {
-    "@npmcli/eslint-config": "^5.0.0",
-    "@npmcli/template-oss": "4.23.3",
-    "tap": "^16.3.0"
-   },
-   "scripts": {
-    "test": "tap",
-    "lint": "npm run eslint",
-    "postlint": "template-oss-check",
-    "template-oss-apply": "template-oss-apply --force",
-    "lintfix": "npm run eslint -- --fix",
-    "snap": "tap",
-    "posttest": "npm run lint",
-    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
-   },
-   "tap": {
-    "check-coverage": true,
-    "nyc-arg": [
-     "--exclude",
-     "tap-snapshots/**"
-    ]
-   },
-   "engines": {
-    "node": "^18.17.0 || >=20.5.0"
-   },
-   "templateOSS": {
-    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
-    "version": "4.23.3",
-    "publish": "true"
-   },
    "_id": "which@5.0.0",
-   "gitHead": "b8d11c791296a3baf44703352619621215189b0e",
-   "bugs": {
-    "url": "https://github.com/npm/node-which/issues"
-   },
-   "homepage": "https://github.com/npm/node-which#readme",
-   "_nodeVersion": "22.9.0",
-   "_npmVersion": "10.8.3",
-   "dist": {
-    "integrity": "sha512-JEdGzHwwkrbWoGOlIHqQ5gtprKGOenpDHpxE9zVR1bWbOtYRyPPHMe9FaP6x61CmNaTThSkb0DAJte5jD+DmzQ==",
-    "shasum": "d93f2d93f79834d4363c7d0c23e00d07c466c8d6",
-    "tarball": "http://localhost:3000/which/-/which-5.0.0.tgz",
-    "fileCount": 5,
-    "unpackedSize": 7477,
-    "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/which@5.0.0",
-     "provenance": {
-      "predicateType": "https://slsa.dev/provenance/v1"
-     }
-    },
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCS2eteVPSvsL5TUrOB/UoA4c/f04/wnyN/KL/bv1v6QAIgYxhqQX6hbluit1v/hKWZQpEdfSggGwQzlcOnhwbnLbs="
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "npm-cli-ops",
-    "email": "npm-cli+bot@github.com"
-   },
-   "directories": {},
    "maintainers": [
     {
      "name": "hashtagchris",
@@ -2401,16 +2328,89 @@
      "email": "gar+npm@danger.computer"
     }
    ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/which_5.0.0_1727805778596_0.1336750694702682"
+   "homepage": "https://github.com/npm/node-which#readme",
+   "bugs": {
+    "url": "https://github.com/npm/node-which/issues"
    },
-   "_hasShrinkwrap": false
+   "bin": {
+    "node-which": "bin/which.js"
+   },
+   "tap": {
+    "nyc-arg": [
+     "--exclude",
+     "tap-snapshots/**"
+    ],
+    "check-coverage": true
+   },
+   "dist": {
+    "shasum": "d93f2d93f79834d4363c7d0c23e00d07c466c8d6",
+    "tarball": "http://localhost:3000/which/-/which-5.0.0.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-JEdGzHwwkrbWoGOlIHqQ5gtprKGOenpDHpxE9zVR1bWbOtYRyPPHMe9FaP6x61CmNaTThSkb0DAJte5jD+DmzQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCS2eteVPSvsL5TUrOB/UoA4c/f04/wnyN/KL/bv1v6QAIgYxhqQX6hbluit1v/hKWZQpEdfSggGwQzlcOnhwbnLbs=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/which@5.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 7477
+   },
+   "main": "lib/index.js",
+   "engines": {
+    "node": "^18.17.0 || >=20.5.0"
+   },
+   "gitHead": "b8d11c791296a3baf44703352619621215189b0e",
+   "scripts": {
+    "lint": "npm run eslint",
+    "snap": "tap",
+    "test": "tap",
+    "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+    "lintfix": "npm run eslint -- --fix",
+    "postlint": "template-oss-check",
+    "posttest": "npm run lint",
+    "template-oss-apply": "template-oss-apply --force"
+   },
+   "_npmUser": {
+    "name": "npm-cli-ops",
+    "email": "npm-cli+bot@github.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/npm/node-which.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.8.3",
+   "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
+   "directories": {},
+   "templateOSS": {
+    "publish": "true",
+    "version": "4.23.3",
+    "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+   },
+   "_nodeVersion": "22.9.0",
+   "dependencies": {
+    "isexe": "^3.1.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tap": "^16.3.0",
+    "@npmcli/template-oss": "4.23.3",
+    "@npmcli/eslint-config": "^5.0.0"
+   },
+   "_npmOperationalInternal": {
+    "tmp": "tmp/which_5.0.0_1727805778596_0.1336750694702682",
+    "host": "s3://npm-registry-packages"
+   }
   }
  },
  "time": {
   "created": "2011-08-07T18:36:12.410Z",
-  "modified": "2024-10-01T18:02:59.256Z",
+  "modified": "2025-04-08T18:10:18.470Z",
   "1.0.0": "2011-08-07T18:36:17.514Z",
   "1.0.1": "2011-09-03T00:20:41.576Z",
   "1.0.2": "2011-09-13T20:01:41.982Z",
@@ -2458,34 +2458,38 @@
  "license": "ISC",
  "homepage": "https://github.com/npm/node-which#readme",
  "repository": {
-  "type": "git",
-  "url": "git+https://github.com/npm/node-which.git"
+  "url": "git+https://github.com/npm/node-which.git",
+  "type": "git"
  },
  "description": "Like which(1) unix command. Find the first instance of an executable in the PATH.",
  "maintainers": [
   {
-   "name": "hashtagchris",
-   "email": "hashtagchris@github.com"
+   "email": "fritzy@github.com",
+   "name": "fritzy"
   },
   {
-   "name": "reggi",
-   "email": "reggi@github.com"
+   "email": "gar+npm@danger.computer",
+   "name": "gar"
   },
   {
-   "name": "npm-cli-ops",
-   "email": "npm-cli+bot@github.com"
+   "email": "saquibkhan@github.com",
+   "name": "saquibkhan"
   },
   {
-   "name": "saquibkhan",
-   "email": "saquibkhan@github.com"
+   "email": "npm-cli+bot@github.com",
+   "name": "npm-cli-ops"
   },
   {
-   "name": "fritzy",
-   "email": "fritzy@github.com"
+   "email": "reggi@github.com",
+   "name": "reggi"
   },
   {
-   "name": "gar",
-   "email": "gar+npm@danger.computer"
+   "email": "hashtagchris@github.com",
+   "name": "hashtagchris"
+  },
+  {
+   "email": "owlstronaut@github.com",
+   "name": "owlstronaut"
   }
  ],
  "readme": "# which\n\nLike the unix `which` utility.\n\nFinds the first instance of a specified executable in the PATH\nenvironment variable.  Does not cache the results, so `hash -r` is not\nneeded when the PATH changes.\n\n## USAGE\n\n```javascript\nconst which = require('which')\n\n// async usage\n// rejects if not found\nconst resolved = await which('node')\n\n// if nothrow option is used, returns null if not found\nconst resolvedOrNull = await which('node', { nothrow: true })\n\n// sync usage\n// throws if not found\nconst resolved = which.sync('node')\n\n// if nothrow option is used, returns null if not found\nconst resolvedOrNull = which.sync('node', { nothrow: true })\n\n// Pass options to override the PATH and PATHEXT environment vars.\nawait which('node', { path: someOtherPath, pathExt: somePathExt })\n```\n\n## CLI USAGE\n\nJust like the BSD `which(1)` binary but using `node-which`.\n\n```\nusage: node-which [-as] program ...\n```\n\nYou can learn more about why the binary is `node-which` and not `which` \n[here](https://github.com/npm/node-which/pull/67)\n\n## OPTIONS\n\nYou may pass an options object as the second argument.\n\n- `path`: Use instead of the `PATH` environment variable.\n- `pathExt`: Use instead of the `PATHEXT` environment variable.\n- `all`: Return all matches, instead of just the first one.  Note that\n  this means the function returns an array of strings instead of a\n  single string.\n",

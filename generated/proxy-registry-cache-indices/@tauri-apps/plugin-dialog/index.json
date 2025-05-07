@@ -1,9 +1,9 @@
 {
  "_id": "@tauri-apps/plugin-dialog",
- "_rev": "22-c6b6563b760067a76a0dd21538464743",
+ "_rev": "24-e1a968f8ae48954278b8f4918f3cd657",
  "name": "@tauri-apps/plugin-dialog",
  "dist-tags": {
-  "latest": "2.2.0"
+  "latest": "2.2.1"
  },
  "versions": {
   "2.0.0-alpha.0": {
@@ -1572,6 +1572,93 @@
    "name": "@tauri-apps/plugin-dialog",
    "version": "2.2.0",
    "license": "MIT OR Apache-2.0",
+   "_id": "@tauri-apps/plugin-dialog@2.2.0",
+   "maintainers": [
+    {
+     "name": "nothingismagick",
+     "email": "denjell@sfosc.org"
+    },
+    {
+     "name": "lucasfernog",
+     "email": "lucasfernandesnog@gmail.com"
+    },
+    {
+     "name": "tauri-apps-ci-user",
+     "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+    },
+    {
+     "name": "amrbashir",
+     "email": "amr.bashir2015@gmail.com"
+    },
+    {
+     "name": "beanow",
+     "email": "beanow@oscp.info"
+    }
+   ],
+   "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
+   "bugs": {
+    "url": "https://github.com/tauri-apps/plugins-workspace/issues"
+   },
+   "dist": {
+    "shasum": "2f7b841a982820adbc9c182e0e95acd8d90aa6fc",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-dialog/-/plugin-dialog-2.2.0.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-6bLkYK68zyK31418AK5fNccCdVuRnNpbxquCl8IqgFByOgWFivbiIlvb79wpSXi0O+8k8RCSsIpOquebusRVSg==",
+    "signatures": [
+     {
+      "sig": "MEQCIFRPR5ifDG6bkeyktZqvByCbZIbucO4vQm3FlESWwYY2AiBSoaZahTzKdmdFiTdQYNpI4w7eZwtcLF2DF14v82Mfmg==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-dialog@2.2.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 23674
+   },
+   "main": "./dist-js/index.cjs",
+   "type": "module",
+   "types": "./dist-js/index.d.ts",
+   "module": "./dist-js/index.js",
+   "authors": [
+    "Tauri Programme within The Commons Conservancy"
+   ],
+   "exports": {
+    "types": "./dist-js/index.d.ts",
+    "import": "./dist-js/index.js",
+    "require": "./dist-js/index.cjs"
+   },
+   "gitHead": "6fcb2f5f401fcaca98d40243e7def282875827de",
+   "scripts": {
+    "build": "rollup -c"
+   },
+   "_npmUser": {
+    "name": "tauri-apps-ci-user",
+    "email": "drthompsonsmagickindustries+npmtauri@gmail.com"
+   },
+   "repository": {
+    "url": "git+https://github.com/tauri-apps/plugins-workspace.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.0",
+   "description": "![plugin-dialog](https://github.com/tauri-apps/plugins-workspace/raw/v2/plugins/dialog/banner.png)",
+   "directories": {},
+   "_nodeVersion": "22.11.0",
+   "dependencies": {
+    "@tauri-apps/api": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/plugin-dialog_2.2.0_1733759264338_0.6455547889498705",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "2.2.1": {
+   "name": "@tauri-apps/plugin-dialog",
+   "version": "2.2.1",
+   "license": "MIT OR Apache-2.0",
    "authors": [
     "Tauri Programme within The Commons Conservancy"
    ],
@@ -1594,31 +1681,31 @@
    "dependencies": {
     "@tauri-apps/api": "^2.0.0"
    },
-   "_id": "@tauri-apps/plugin-dialog@2.2.0",
-   "gitHead": "6fcb2f5f401fcaca98d40243e7def282875827de",
+   "_id": "@tauri-apps/plugin-dialog@2.2.1",
+   "gitHead": "8b39aefb1b036d251350ae144b7975b170d8735b",
    "description": "![plugin-dialog](https://github.com/tauri-apps/plugins-workspace/raw/v2/plugins/dialog/banner.png)",
    "bugs": {
     "url": "https://github.com/tauri-apps/plugins-workspace/issues"
    },
    "homepage": "https://github.com/tauri-apps/plugins-workspace#readme",
-   "_nodeVersion": "22.11.0",
-   "_npmVersion": "10.9.0",
+   "_nodeVersion": "22.14.0",
+   "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-6bLkYK68zyK31418AK5fNccCdVuRnNpbxquCl8IqgFByOgWFivbiIlvb79wpSXi0O+8k8RCSsIpOquebusRVSg==",
-    "shasum": "2f7b841a982820adbc9c182e0e95acd8d90aa6fc",
-    "tarball": "http://localhost:3000/@tauri-apps/plugin-dialog/-/plugin-dialog-2.2.0.tgz",
+    "integrity": "sha512-wZmCouo4PgTosh/UoejPw9DPs6RllS5Pp3fuOV2JobCu36mR5AXU2MzU9NZiVaFi/5Zfc8RN0IhcZHnksJ1o8A==",
+    "shasum": "7b4818dd2754c3a1a29a98cab5f8166e1591f2ac",
+    "tarball": "http://localhost:3000/@tauri-apps/plugin-dialog/-/plugin-dialog-2.2.1.tgz",
     "fileCount": 7,
     "unpackedSize": 23674,
     "attestations": {
-     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-dialog@2.2.0",
+     "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fplugin-dialog@2.2.1",
      "provenance": {
       "predicateType": "https://slsa.dev/provenance/v1"
      }
     },
     "signatures": [
      {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIFRPR5ifDG6bkeyktZqvByCbZIbucO4vQm3FlESWwYY2AiBSoaZahTzKdmdFiTdQYNpI4w7eZwtcLF2DF14v82Mfmg=="
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIHMlbvGBhOP/noOB2J4MOIRfjZ/yASXTrWFsfYMdYIJuAiEA8G3i73OVAsA8l2F2rslGWTi9jzPDNXCUy/3Gcqs8czg="
      }
     ]
    },
@@ -1651,14 +1738,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/plugin-dialog_2.2.0_1733759264338_0.6455547889498705"
+    "tmp": "tmp/plugin-dialog_2.2.1_1743564801339_0.4057926889959873"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2023-05-24T15:26:57.348Z",
-  "modified": "2024-12-09T15:47:45.017Z",
+  "modified": "2025-04-02T03:33:22.163Z",
   "2.0.0-alpha.0": "2023-05-24T15:26:57.649Z",
   "2.0.0-alpha.1": "2023-08-14T20:58:54.379Z",
   "2.0.0-alpha.2": "2023-10-23T14:43:44.689Z",
@@ -1679,7 +1766,8 @@
   "2.0.0": "2024-10-02T15:10:54.834Z",
   "2.0.1": "2024-10-20T11:55:22.393Z",
   "2.0.2": "2024-12-09T13:16:42.277Z",
-  "2.2.0": "2024-12-09T15:47:44.522Z"
+  "2.2.0": "2024-12-09T15:47:44.522Z",
+  "2.2.1": "2025-04-02T03:33:21.522Z"
  },
  "bugs": {
   "url": "https://github.com/tauri-apps/plugins-workspace/issues"

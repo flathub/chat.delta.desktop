@@ -1,9 +1,9 @@
 {
  "_id": "synckit",
- "_rev": "38-6aa58b9d0fe763dbc4cd17d2861ced37",
+ "_rev": "46-1d9dfed7a96d17ee08a1877c5222a419",
  "name": "synckit",
  "dist-tags": {
-  "latest": "0.10.0"
+  "latest": "0.11.4"
  },
  "versions": {
   "0.1.0": {
@@ -3860,6 +3860,748 @@
   "0.10.0": {
    "name": "synckit",
    "version": "0.10.0",
+   "keywords": [
+    "deasync",
+    "make-synchronized",
+    "make-synchronous",
+    "sync",
+    "sync-exec",
+    "sync-rpc",
+    "sync-threads",
+    "synchronize",
+    "synckit"
+   ],
+   "author": {
+    "url": "https://www.1stG.me",
+    "name": "JounQin",
+    "email": "admin@1stg.me"
+   },
+   "license": "MIT",
+   "_id": "synckit@0.10.0",
+   "maintainers": [
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    },
+    {
+     "name": "i1stg",
+     "email": "i@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/un-ts/synckit#readme",
+   "bugs": {
+    "url": "https://github.com/un-ts/synckit/issues"
+   },
+   "dist": {
+    "shasum": "5e8c833566e7cbae8a1546fdbfe679359023f6d1",
+    "tarball": "http://localhost:3000/synckit/-/synckit-0.10.0.tgz",
+    "fileCount": 10,
+    "integrity": "sha512-Jiv0SYq91y6UGQGDpxIxhlPSX/hcq/f9XExoge2+muBGUmURpQ+DUUzf6MpgJQZCOAfI/uT5BDC5X8hlQb1Fkg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDwhhNFNWCuhflvaBY6fpNjzPWE6zaUnjXBOQNFNOSQBQIhALkGRPjmQI4wMeGw+KvJkNGImlnNGcQ317dCkWJ8khgR",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 64693
+   },
+   "main": "./lib/index.cjs",
+   "type": "module",
+   "types": "./lib/index.d.ts",
+   "module": "./lib/index.js",
+   "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+   },
+   "exports": {
+    "types": "./lib/index.d.ts",
+    "import": "./lib/index.js",
+    "require": "./lib/index.cjs"
+   },
+   "funding": "https://opencollective.com/unts",
+   "gitHead": "db702f1b535bc960981d7fbf96e99cc9971fa31f",
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "repository": {
+    "url": "git+https://github.com/un-ts/synckit.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Perform async work synchronously in Node.js using `worker_threads` with first-class TypeScript support.",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "tslib": "^2.8.1",
+    "@pkgr/core": "^0.1.1"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/synckit_0.10.0_1742465562255_0.6190298510507175",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.10.1": {
+   "name": "synckit",
+   "version": "0.10.1",
+   "keywords": [
+    "deasync",
+    "make-synchronized",
+    "make-synchronous",
+    "sync",
+    "sync-exec",
+    "sync-rpc",
+    "sync-threads",
+    "synchronize",
+    "synckit"
+   ],
+   "author": {
+    "url": "https://www.1stG.me",
+    "name": "JounQin",
+    "email": "admin@1stg.me"
+   },
+   "license": "MIT",
+   "_id": "synckit@0.10.1",
+   "maintainers": [
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    },
+    {
+     "name": "i1stg",
+     "email": "i@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/un-ts/synckit#readme",
+   "bugs": {
+    "url": "https://github.com/un-ts/synckit/issues"
+   },
+   "dist": {
+    "shasum": "d482719cefa59cee24cb6c088ec9440d04454538",
+    "tarball": "http://localhost:3000/synckit/-/synckit-0.10.1.tgz",
+    "fileCount": 10,
+    "integrity": "sha512-vbJPHQcAwz8szAww4Le28u60LKfoh9y3h5yEewy+uaX5mhVWu2iQHyMPrJTXZ31R1IbEmSvHZci0U69cECnygw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCpUud8ExFgKzeVUEWRFjLQaotNkG41m2MtWVMbqSwqrgIhAIQ8sWQdkKDqR43I5552jmG220SANo0P+FVgnlawXZE3",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 63003
+   },
+   "main": "./lib/index.cjs",
+   "type": "module",
+   "types": "./lib/index.d.ts",
+   "module": "./lib/index.js",
+   "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+   },
+   "exports": {
+    "types": "./lib/index.d.ts",
+    "import": "./lib/index.js",
+    "require": "./lib/index.cjs"
+   },
+   "funding": "https://opencollective.com/unts",
+   "gitHead": "86e00fe51df975fe1ba60c10d352879becf25957",
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "repository": {
+    "url": "git+https://github.com/un-ts/synckit.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Perform async work synchronously in Node.js using `worker_threads` with first-class TypeScript support.",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "tslib": "^2.8.1",
+    "@pkgr/core": "^0.1.1"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/synckit_0.10.1_1742704707655_0.3494267076649946",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.10.2": {
+   "name": "synckit",
+   "version": "0.10.2",
+   "keywords": [
+    "deasync",
+    "make-synchronized",
+    "make-synchronous",
+    "sync",
+    "sync-exec",
+    "sync-rpc",
+    "sync-threads",
+    "synchronize",
+    "synckit"
+   ],
+   "author": {
+    "url": "https://www.1stG.me",
+    "name": "JounQin",
+    "email": "admin@1stg.me"
+   },
+   "license": "MIT",
+   "_id": "synckit@0.10.2",
+   "maintainers": [
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    },
+    {
+     "name": "i1stg",
+     "email": "i@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/un-ts/synckit#readme",
+   "bugs": {
+    "url": "https://github.com/un-ts/synckit/issues"
+   },
+   "dist": {
+    "shasum": "000b87488453b7943edd7ee5c3028057c4490af0",
+    "tarball": "http://localhost:3000/synckit/-/synckit-0.10.2.tgz",
+    "fileCount": 11,
+    "integrity": "sha512-cSGiaCPhFzeFIQY8KKEacv46LclENY4d60jgkwCrKomvRkIjtMyss1dPkHLp/62c1leuOjEedB1+lWcwqTJSvA==",
+    "signatures": [
+     {
+      "sig": "MEQCIFILyrKWjmX3yvVBpVrpMyS6BVTI+y/V1LcHcfwhQTYgAiAMptrEOdkmNaiK/kHu9KtyGqILTDOiXVScK1gU+NMqYA==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 79083
+   },
+   "main": "./lib/index.cjs",
+   "type": "module",
+   "types": "./lib/index.d.ts",
+   "module": "./lib/index.js",
+   "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+   },
+   "exports": {
+    "import": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    },
+    "require": {
+     "types": "./index.d.cts",
+     "default": "./lib/index.cjs"
+    }
+   },
+   "funding": "https://opencollective.com/unts",
+   "gitHead": "38578a5e6858d54958d41a17e3dc240a56da65d4",
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "repository": {
+    "url": "git+https://github.com/un-ts/synckit.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Perform async work synchronously in Node.js using `worker_threads` with first-class TypeScript support.",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "tslib": "^2.8.1",
+    "@pkgr/core": "^0.2.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/synckit_0.10.2_1742750430159_0.8704658774321519",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.10.3": {
+   "name": "synckit",
+   "version": "0.10.3",
+   "keywords": [
+    "deasync",
+    "make-synchronized",
+    "make-synchronous",
+    "sync",
+    "sync-exec",
+    "sync-rpc",
+    "sync-threads",
+    "synchronize",
+    "synckit"
+   ],
+   "author": {
+    "url": "https://www.1stG.me",
+    "name": "JounQin",
+    "email": "admin@1stg.me"
+   },
+   "license": "MIT",
+   "_id": "synckit@0.10.3",
+   "maintainers": [
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    },
+    {
+     "name": "i1stg",
+     "email": "i@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/un-ts/synckit#readme",
+   "bugs": {
+    "url": "https://github.com/un-ts/synckit/issues"
+   },
+   "dist": {
+    "shasum": "940aea2c7b6d141a4f74dbdebc81e0958c331a4b",
+    "tarball": "http://localhost:3000/synckit/-/synckit-0.10.3.tgz",
+    "fileCount": 11,
+    "integrity": "sha512-R1urvuyiTaWfeCggqEvpDJwAlDVdsT9NM+IP//Tk2x7qHCkSvBk/fwFgw/TLAHzZlrAnnazMcRw0ZD8HlYFTEQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIDvC9ayGvm49+HYhnIB5RJp4X8qETfEw8BKFnM5V8RsKAiEA8m3DE9X43Qx9C+gVJo0Gpk7Wv9aA1vDYmDe/7t8HI+A=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 78902
+   },
+   "main": "./lib/index.cjs",
+   "type": "module",
+   "types": "./lib/index.d.ts",
+   "module": "./lib/index.js",
+   "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+   },
+   "exports": {
+    "import": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    },
+    "require": {
+     "types": "./index.d.cts",
+     "default": "./lib/index.cjs"
+    }
+   },
+   "funding": "https://opencollective.com/unts",
+   "gitHead": "e1476edb9e60a704de122b892aaf57d7a12f0689",
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "repository": {
+    "url": "git+https://github.com/un-ts/synckit.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Perform async work synchronously in Node.js using `worker_threads` with first-class TypeScript support.",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "tslib": "^2.8.1",
+    "@pkgr/core": "^0.2.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/synckit_0.10.3_1742807916618_0.7246735593915206",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.11.0": {
+   "name": "synckit",
+   "version": "0.11.0",
+   "keywords": [
+    "deasync",
+    "make-synchronized",
+    "make-synchronous",
+    "sync",
+    "sync-exec",
+    "sync-rpc",
+    "sync-threads",
+    "synchronize",
+    "synckit"
+   ],
+   "author": {
+    "url": "https://www.1stG.me",
+    "name": "JounQin",
+    "email": "admin@1stg.me"
+   },
+   "license": "MIT",
+   "_id": "synckit@0.11.0",
+   "maintainers": [
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    },
+    {
+     "name": "i1stg",
+     "email": "i@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/un-ts/synckit#readme",
+   "bugs": {
+    "url": "https://github.com/un-ts/synckit/issues"
+   },
+   "dist": {
+    "shasum": "b6fd0e9bbccf72b5ff778917acaca520837012c9",
+    "tarball": "http://localhost:3000/synckit/-/synckit-0.11.0.tgz",
+    "fileCount": 20,
+    "integrity": "sha512-Cb312ALiP+Dme7dWQ5veJu5rLTDw0ClTx41fOGxjApiJwhHtbNt75JaXS5QSIA2BMECiD+Sz4a7BeFgtGfD9SA==",
+    "signatures": [
+     {
+      "sig": "MEQCIFRIK9ulVdZA108AzcuJGiMcxR8QrJgyZA4tX//8PkKMAiBYFNjxseIyhufWteR1XPjmqJEuDQ1iuXRHTQUmy2xaEQ==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/synckit@0.11.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 92721
+   },
+   "main": "./lib/index.cjs",
+   "type": "module",
+   "types": "./lib/index.d.ts",
+   "module": "./lib/index.js",
+   "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+   },
+   "exports": {
+    "import": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    },
+    "require": {
+     "types": "./index.d.cts",
+     "default": "./lib/index.cjs"
+    },
+    "module-sync": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    }
+   },
+   "funding": "https://opencollective.com/synckit",
+   "gitHead": "63036a0cb4a2b99a391a30a9546144b8c75977e5",
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "repository": {
+    "url": "git+https://github.com/un-ts/synckit.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Perform async work synchronously in Node.js using `worker_threads` with first-class TypeScript support.",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "tslib": "^2.8.1",
+    "@pkgr/core": "^0.2.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/synckit_0.11.0_1743586038839_0.41099534311921304",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.11.1": {
+   "name": "synckit",
+   "version": "0.11.1",
+   "keywords": [
+    "deasync",
+    "make-synchronized",
+    "make-synchronous",
+    "sync",
+    "sync-exec",
+    "sync-rpc",
+    "sync-threads",
+    "synchronize",
+    "synckit"
+   ],
+   "author": {
+    "url": "https://www.1stG.me",
+    "name": "JounQin",
+    "email": "admin@1stg.me"
+   },
+   "license": "MIT",
+   "_id": "synckit@0.11.1",
+   "maintainers": [
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    },
+    {
+     "name": "i1stg",
+     "email": "i@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/un-ts/synckit#readme",
+   "bugs": {
+    "url": "https://github.com/un-ts/synckit/issues"
+   },
+   "dist": {
+    "shasum": "8ea44544e9d9c0540963c6bddb8f14616fef5425",
+    "tarball": "http://localhost:3000/synckit/-/synckit-0.11.1.tgz",
+    "fileCount": 20,
+    "integrity": "sha512-fWZqNBZNNFp/7mTUy1fSsydhKsAKJ+u90Nk7kOK5Gcq9vObaqLBLjWFDBkyVU9Vvc6Y71VbOevMuGhqv02bT+Q==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCCQYQdrgQoEJ/54hnNygCZCqanj9Xa/9ECmTVvNt3BTwIhAI66/3ielFVvSze4o49xwFLkcwwugWL6dwD5YJenzd5R",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/synckit@0.11.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 92767
+   },
+   "main": "./lib/index.cjs",
+   "type": "module",
+   "types": "./lib/index.d.ts",
+   "module": "./lib/index.js",
+   "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+   },
+   "exports": {
+    "import": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    },
+    "require": {
+     "types": "./index.d.cts",
+     "default": "./lib/index.cjs"
+    },
+    "module-sync": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    }
+   },
+   "funding": "https://opencollective.com/synckit",
+   "gitHead": "f8457927c124be4c4f9507f4b6ee8aa698d77f1e",
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "repository": {
+    "url": "git+https://github.com/un-ts/synckit.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Perform async work synchronously in Node.js using `worker_threads` with first-class TypeScript support.",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "tslib": "^2.8.1",
+    "@pkgr/core": "^0.2.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/synckit_0.11.1_1743591070872_0.5986586151894153",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.11.2": {
+   "name": "synckit",
+   "version": "0.11.2",
+   "keywords": [
+    "deasync",
+    "make-synchronized",
+    "make-synchronous",
+    "sync",
+    "sync-exec",
+    "sync-rpc",
+    "sync-threads",
+    "synchronize",
+    "synckit"
+   ],
+   "author": {
+    "url": "https://www.1stG.me",
+    "name": "JounQin",
+    "email": "admin@1stg.me"
+   },
+   "license": "MIT",
+   "_id": "synckit@0.11.2",
+   "maintainers": [
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    },
+    {
+     "name": "i1stg",
+     "email": "i@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/un-ts/synckit#readme",
+   "bugs": {
+    "url": "https://github.com/un-ts/synckit/issues"
+   },
+   "dist": {
+    "shasum": "2a8015ce5df8d5eb0cc47ee55924ad8f8756c24b",
+    "tarball": "http://localhost:3000/synckit/-/synckit-0.11.2.tgz",
+    "fileCount": 20,
+    "integrity": "sha512-1IUffI8zZ8qUMB3NUJIjk0RpLroG/8NkQDAWH1NbB2iJ0/5pn3M8rxfNzMz4GH9OnYaGYn31LEDSXJp/qIlxgA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDxqfpEHdqfb1KgcFjTsSI2Fbm1deExRCyyJ+9X0hXLmAIgPFuT6AgmXcb3z1jeInTa+Segh8soSPnL6HG1r7tx/Zo=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/synckit@0.11.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 92879
+   },
+   "main": "./lib/index.cjs",
+   "type": "module",
+   "types": "./lib/index.d.ts",
+   "module": "./lib/index.js",
+   "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+   },
+   "exports": {
+    "import": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    },
+    "require": {
+     "types": "./index.d.cts",
+     "default": "./lib/index.cjs"
+    },
+    "module-sync": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    }
+   },
+   "funding": "https://opencollective.com/synckit",
+   "gitHead": "7003b6872bcda2e8c3701729c06049b2441e7e53",
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "repository": {
+    "url": "git+https://github.com/un-ts/synckit.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Perform async work synchronously in Node.js using `worker_threads` with first-class TypeScript support.",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "tslib": "^2.8.1",
+    "@pkgr/core": "^0.2.0"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/synckit_0.11.2_1743749701397_0.8710853550083126",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.11.3": {
+   "name": "synckit",
+   "version": "0.11.3",
+   "keywords": [
+    "deasync",
+    "make-synchronized",
+    "make-synchronous",
+    "sync",
+    "sync-exec",
+    "sync-rpc",
+    "sync-threads",
+    "synchronize",
+    "synckit"
+   ],
+   "author": {
+    "url": "https://www.1stG.me",
+    "name": "JounQin",
+    "email": "admin@1stg.me"
+   },
+   "license": "MIT",
+   "_id": "synckit@0.11.3",
+   "maintainers": [
+    {
+     "name": "jounqin",
+     "email": "admin@1stg.me"
+    },
+    {
+     "name": "i1stg",
+     "email": "i@1stg.me"
+    }
+   ],
+   "homepage": "https://github.com/un-ts/synckit#readme",
+   "bugs": {
+    "url": "https://github.com/un-ts/synckit/issues"
+   },
+   "dist": {
+    "shasum": "8b83e145d7cedc56c01e3510cf516d91a0e568c2",
+    "tarball": "http://localhost:3000/synckit/-/synckit-0.11.3.tgz",
+    "fileCount": 20,
+    "integrity": "sha512-szhWDqNNI9etJUvbZ1/cx1StnZx8yMmFxme48SwR4dty4ioSY50KEZlpv0qAfgc1fpRzuh9hBXEzoCpJ779dLg==",
+    "signatures": [
+     {
+      "sig": "MEUCIDsS1UZpThGo1cC51dIQtw1dm2RFhKXVOEhq2f+zJ/3rAiEApur4IOJ0xSXBJkGwPELFML/B4HKAWfTneY3wtNUxgNs=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/synckit@0.11.3",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 93004
+   },
+   "main": "./lib/index.cjs",
+   "type": "module",
+   "types": "./index.d.cts",
+   "module": "./lib/index.js",
+   "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+   },
+   "exports": {
+    "import": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    },
+    "require": {
+     "types": "./index.d.cts",
+     "default": "./lib/index.cjs"
+    },
+    "module-sync": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    }
+   },
+   "funding": "https://opencollective.com/synckit",
+   "gitHead": "48837a9e0228341c1a031a965b772cfc2884037f",
+   "_npmUser": {
+    "name": "jounqin",
+    "email": "admin@1stg.me"
+   },
+   "repository": {
+    "url": "git+https://github.com/un-ts/synckit.git",
+    "type": "git"
+   },
+   "_npmVersion": "10.9.2",
+   "description": "Perform async work synchronously in Node.js using `worker_threads` with first-class TypeScript support.",
+   "directories": {},
+   "_nodeVersion": "22.14.0",
+   "dependencies": {
+    "tslib": "^2.8.1",
+    "@pkgr/core": "^0.2.1"
+   },
+   "_hasShrinkwrap": false,
+   "_npmOperationalInternal": {
+    "tmp": "tmp/synckit_0.11.3_1744035772865_0.6698835807074577",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
+  },
+  "0.11.4": {
+   "name": "synckit",
+   "version": "0.11.4",
    "type": "module",
    "description": "Perform async work synchronously in Node.js using `worker_threads` with first-class TypeScript support.",
    "repository": {
@@ -3871,19 +4613,24 @@
     "email": "admin@1stg.me",
     "url": "https://www.1stG.me"
    },
-   "funding": "https://opencollective.com/unts",
+   "funding": "https://opencollective.com/synckit",
    "license": "MIT",
    "engines": {
     "node": "^14.18.0 || >=16.0.0"
    },
    "main": "./lib/index.cjs",
+   "types": "./index.d.cts",
    "module": "./lib/index.js",
    "exports": {
-    "types": "./lib/index.d.ts",
-    "import": "./lib/index.js",
-    "require": "./lib/index.cjs"
+    "import": {
+     "types": "./lib/index.d.ts",
+     "default": "./lib/index.js"
+    },
+    "require": {
+     "types": "./index.d.cts",
+     "default": "./lib/index.cjs"
+    }
    },
-   "types": "./lib/index.d.ts",
    "keywords": [
     "deasync",
     "make-synchronized",
@@ -3896,11 +4643,11 @@
     "synckit"
    ],
    "dependencies": {
-    "@pkgr/core": "^0.1.1",
+    "@pkgr/core": "^0.2.3",
     "tslib": "^2.8.1"
    },
-   "_id": "synckit@0.10.0",
-   "gitHead": "db702f1b535bc960981d7fbf96e99cc9971fa31f",
+   "_id": "synckit@0.11.4",
+   "gitHead": "337356d33f0707a2f03138836967d00655a9d198",
    "bugs": {
     "url": "https://github.com/un-ts/synckit/issues"
    },
@@ -3908,15 +4655,21 @@
    "_nodeVersion": "22.14.0",
    "_npmVersion": "10.9.2",
    "dist": {
-    "integrity": "sha512-Jiv0SYq91y6UGQGDpxIxhlPSX/hcq/f9XExoge2+muBGUmURpQ+DUUzf6MpgJQZCOAfI/uT5BDC5X8hlQb1Fkg==",
-    "shasum": "5e8c833566e7cbae8a1546fdbfe679359023f6d1",
-    "tarball": "http://localhost:3000/synckit/-/synckit-0.10.0.tgz",
-    "fileCount": 10,
-    "unpackedSize": 64693,
+    "integrity": "sha512-Q/XQKRaJiLiFIBNN+mndW7S/RHxvwzuZS6ZwmRzUBqJBv/5QIKCEwkBC8GBf8EQJKYnaFs0wOZbKTXBPj8L9oQ==",
+    "shasum": "48972326b59723fc15b8d159803cf8302b545d59",
+    "tarball": "http://localhost:3000/synckit/-/synckit-0.11.4.tgz",
+    "fileCount": 20,
+    "unpackedSize": 92955,
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/synckit@0.11.4",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
     "signatures": [
      {
       "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-      "sig": "MEYCIQDwhhNFNWCuhflvaBY6fpNjzPWE6zaUnjXBOQNFNOSQBQIhALkGRPjmQI4wMeGw+KvJkNGImlnNGcQ317dCkWJ8khgR"
+      "sig": "MEUCIFYvEj3sQ6RK2Cz/CPzesChznvKjceecZnXmXTiwzS5MAiEAnXwlxijXh3qbn6juQsadpM1DZ8zAjizsqFp4mWw/na0="
      }
     ]
    },
@@ -3937,14 +4690,14 @@
    ],
    "_npmOperationalInternal": {
     "host": "s3://npm-registry-packages-npm-production",
-    "tmp": "tmp/synckit_0.10.0_1742465562255_0.6190298510507175"
+    "tmp": "tmp/synckit_0.11.4_1744645462795_0.5215601981401121"
    },
    "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2021-04-26T05:32:31.641Z",
-  "modified": "2025-03-20T10:12:42.618Z",
+  "modified": "2025-04-14T15:44:23.361Z",
   "0.1.0": "2021-04-26T05:32:31.940Z",
   "0.1.1": "2021-04-26T08:44:18.616Z",
   "0.1.2": "2021-04-26T08:54:47.499Z",
@@ -3980,7 +4733,15 @@
   "0.9.0": "2024-01-04T05:43:19.810Z",
   "0.9.1": "2024-07-14T12:42:01.448Z",
   "0.9.2": "2024-10-07T08:13:52.649Z",
-  "0.10.0": "2025-03-20T10:12:42.439Z"
+  "0.10.0": "2025-03-20T10:12:42.439Z",
+  "0.10.1": "2025-03-23T04:38:27.835Z",
+  "0.10.2": "2025-03-23T17:20:30.352Z",
+  "0.10.3": "2025-03-24T09:18:36.920Z",
+  "0.11.0": "2025-04-02T09:27:19.033Z",
+  "0.11.1": "2025-04-02T10:51:11.037Z",
+  "0.11.2": "2025-04-04T06:55:01.613Z",
+  "0.11.3": "2025-04-07T14:22:53.025Z",
+  "0.11.4": "2025-04-14T15:44:22.983Z"
  },
  "bugs": {
   "url": "https://github.com/un-ts/synckit/issues"
@@ -4018,6 +4779,6 @@
    "email": "i@1stg.me"
   }
  ],
- "readme": "# synckit\n\n[![GitHub Actions](https://github.com/un-ts/synckit/workflows/CI/badge.svg)](https://github.com/un-ts/synckit/actions/workflows/ci.yml)\n[![Codecov](https://img.shields.io/codecov/c/github/un-ts/synckit.svg)](https://codecov.io/gh/un-ts/synckit)\n[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fun-ts%2Fsynckit%2Fmain%2Fpackage.json)](https://github.com/plantain-00/type-coverage)\n[![npm](https://img.shields.io/npm/v/synckit.svg)](https://www.npmjs.com/package/synckit)\n[![GitHub Release](https://img.shields.io/github/release/un-ts/synckit)](https://github.com/un-ts/synckit/releases)\n\n[![Conventional Commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)\n[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)\n[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)\n[![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)\n\nPerform async work synchronously in Node.js using `worker_threads` with first-class TypeScript and Yarn P'n'P support.\n\n## TOC <!-- omit in toc -->\n\n- [Usage](#usage)\n  - [Install](#install)\n  - [API](#api)\n  - [Types](#types)\n  - [Options](#options)\n  - [Envs](#envs)\n  - [TypeScript](#typescript)\n    - [`node` (Default, Node 23+)](#node-default-node-23)\n    - [`ts-node` (Default)](#ts-node-default)\n    - [`esbuild-register`](#esbuild-register)\n    - [`esbuild-runner`](#esbuild-runner)\n    - [`swc`](#swc)\n    - [`tsx`](#tsx)\n- [Benchmark](#benchmark)\n- [Sponsors](#sponsors)\n- [Backers](#backers)\n- [Changelog](#changelog)\n- [License](#license)\n\n## Usage\n\n### Install\n\n```sh\n# yarn\nyarn add synckit\n\n# npm\nnpm i synckit\n```\n\n### API\n\n```js\n// runner.js\nimport { createSyncFn } from 'synckit'\n\n// the worker path must be absolute\nconst syncFn = createSyncFn(require.resolve('./worker'), {\n  tsRunner: 'tsx', // optional, can be `'node' | 'ts-node' | 'esbuild-register' | 'esbuild-runner' | 'tsx'`\n})\n\n// do whatever you want, you will get the result synchronously!\nconst result = syncFn(...args)\n```\n\n```js\n// worker.js\nimport { runAsWorker } from 'synckit'\n\nrunAsWorker(async (...args) => {\n  // do expensive work\n  return result\n})\n```\n\nYou must make sure, the `result` is serializable by [`Structured Clone Algorithm`](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)\n\n### Types\n\n````ts\nexport interface GlobalShim {\n  moduleName: string\n  /**\n   * `undefined` means side effect only\n   */\n  globalName?: string\n  /**\n   * 1. `undefined` or empty string means `default`, for example:\n   * ```js\n   * import globalName from 'module-name'\n   * ```\n   *\n   * 2. `null` means namespaced, for example:\n   * ```js\n   * import * as globalName from 'module-name'\n   * ```\n   *\n   */\n  named?: string | null\n  /**\n   * If not `false`, the shim will only be applied when the original `globalName` unavailable,\n   * for example you may only want polyfill `globalThis.fetch` when it's unavailable natively:\n   * ```js\n   * import fetch from 'node-fetch'\n   *\n   * if (!globalThis.fetch) {\n   *   globalThis.fetch = fetch\n   * }\n   * ```\n   */\n  conditional?: boolean\n}\n````\n\n### Options\n\n1. `execArgv` same as env `SYNCKIT_EXEC_ARGV`\n2. `globalShims`: Similar like env `SYNCKIT_GLOBAL_SHIMS` but much more flexible which can be a `GlobalShim` `Array`, see `GlobalShim`'s [definition](#types) for more details\n3. `timeout` same as env `SYNCKIT_TIMEOUT`\n4. `transferList`: Please refer Node.js [`worker_threads`](https://nodejs.org/api/worker_threads.html#:~:text=Default%3A%20true.-,transferList,-%3CObject%5B%5D%3E%20If) documentation\n5. `tsRunner` same as env `SYNCKIT_TS_RUNNER`\n\n### Envs\n\n1. `SYNCKIT_EXEC_ARGV`: List of node CLI options passed to the worker, split with comma `,`. (default as `[]`), see also [`node` docs](https://nodejs.org/api/worker_threads.html)\n2. `SYNCKIT_GLOBAL_SHIMS`: Whether to enable the default `DEFAULT_GLOBAL_SHIMS_PRESET` as `globalShims`\n3. `SYNCKIT_TIMEOUT`: `timeout` for performing the async job (no default)\n4. `SYNCKIT_TS_RUNNER`: Which TypeScript runner to be used, it could be very useful for development, could be `'ts-node' | 'esbuild-register' | 'esbuild-runner' | 'swc' | 'tsx'`, `'ts-node'` is used by default, make sure you have installed them already\n\n### TypeScript\n\n#### `node` (Default, Node 23+)\n\nOn recent Node versions, you may select this runner to execute your worker file (a `.ts` file) in the native runtime.\n\nAs of Node v23, this feature is supported out of the box. To enable it in the current LTS, you can pass the [`--experimental-strip-types`](https://nodejs.org/docs/latest-v22.x/api/typescript.html#type-stripping) flag to the process. Visit the [documentation](https://nodejs.org/docs/latest/api/typescript.html#type-stripping) to learn more.\n\nWhen `synckit` detects the process to be running with this flag, it will execute the worker file with the `node` runner by default.\n\n#### `ts-node` (Default)\n\nPrior to Node v23, you may want to use `ts-node` to execute your worker file (a `.ts` file).\n\nIf you want to use a custom tsconfig as project instead of default `tsconfig.json`, use `TS_NODE_PROJECT` env. Please view [ts-node](https://github.com/TypeStrong/ts-node#tsconfig) for more details.\n\nIf you want to integrate with [tsconfig-paths](https://www.npmjs.com/package/tsconfig-paths), please view [ts-node](https://github.com/TypeStrong/ts-node#paths-and-baseurl) for more details.\n\n#### `esbuild-register`\n\nPlease view [`esbuild-register`][] for its document\n\n#### `esbuild-runner`\n\nPlease view [`esbuild-runner`][] for its document\n\n#### `swc`\n\nPlease view [`@swc-node/register`][] for its document\n\n#### `tsx`\n\nPlease view [`tsx`][] for its document\n\n## Benchmark\n\nIt is about 50x faster than [`sync-threads`](https://github.com/lambci/sync-threads) but 10x slower than native for reading the file content itself 1000 times during runtime, and 40x faster than `sync-threads` but 10x slower than native for total time on my personal MacBook Pro with 64G M1 Max.\n\nAnd it's almost 5x faster than [`deasync`](https://github.com/abbr/deasync) but requires no native bindings or `node-gyp`.\n\nSee [benchmark.cjs](./benchmarks/benchmark.cjs.txt) and [benchmark.esm](./benchmarks/benchmark.esm.txt) for more details.\n\nYou can try it with running `yarn benchmark` by yourself. [Here](./benchmarks/benchmark.js) is the benchmark source code.\n\n## Sponsors\n\n| 1stG                                                                                                                               | RxTS                                                                                                                               | UnTS                                                                                                                               |\n| ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |\n| [![1stG Open Collective backers and sponsors](https://opencollective.com/1stG/organizations.svg)](https://opencollective.com/1stG) | [![RxTS Open Collective backers and sponsors](https://opencollective.com/rxts/organizations.svg)](https://opencollective.com/rxts) | [![UnTS Open Collective backers and sponsors](https://opencollective.com/unts/organizations.svg)](https://opencollective.com/unts) |\n\n## Backers\n\n[![Backers](https://raw.githubusercontent.com/1stG/static/master/sponsors.svg)](https://github.com/sponsors/JounQin)\n\n| 1stG                                                                                                                             | RxTS                                                                                                                             | UnTS                                                                                                                             |\n| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |\n| [![1stG Open Collective backers and sponsors](https://opencollective.com/1stG/individuals.svg)](https://opencollective.com/1stG) | [![RxTS Open Collective backers and sponsors](https://opencollective.com/rxts/individuals.svg)](https://opencollective.com/rxts) | [![UnTS Open Collective backers and sponsors](https://opencollective.com/unts/individuals.svg)](https://opencollective.com/unts) |\n\n## Changelog\n\nDetailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.md).\n\n## License\n\n[MIT][] © [JounQin][]@[1stG.me][]\n\n[`esbuild-register`]: https://github.com/egoist/esbuild-register\n[`esbuild-runner`]: https://github.com/folke/esbuild-runner\n[`@swc-node/register`]: https://github.com/swc-project/swc-node/tree/master/packages/register\n[`tsx`]: https://github.com/esbuild-kit/tsx\n[1stg.me]: https://www.1stg.me\n[jounqin]: https://GitHub.com/JounQin\n[mit]: http://opensource.org/licenses/MIT\n",
+ "readme": "# synckit\n\n[![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/un-ts/synckit/ci.yml?branch=main)](https://github.com/un-ts/synckit/actions/workflows/ci.yml?query=branch%3Amain)\n[![Codecov](https://img.shields.io/codecov/c/github/un-ts/synckit.svg)](https://codecov.io/gh/un-ts/synckit)\n[![type-coverage](https://img.shields.io/badge/dynamic/json.svg?label=type-coverage&prefix=%E2%89%A5&suffix=%&query=$.typeCoverage.atLeast&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fun-ts%2Fsynckit%2Fmain%2Fpackage.json)](https://github.com/plantain-00/type-coverage)\n[![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/un-ts/synckit)](https://coderabbit.ai)\n[![npm](https://img.shields.io/npm/v/synckit.svg)](https://www.npmjs.com/package/synckit)\n[![GitHub Release](https://img.shields.io/github/release/un-ts/synckit)](https://github.com/un-ts/synckit/releases)\n\n[![Conventional Commits](https://img.shields.io/badge/conventional%20commits-1.0.0-yellow.svg)](https://conventionalcommits.org)\n[![Renovate enabled](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)\n[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)\n[![Code Style: Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)\n[![changesets](https://img.shields.io/badge/maintained%20with-changesets-176de3.svg)](https://github.com/changesets/changesets)\n\nPerform async work synchronously in Node.js/Bun using `worker_threads` with first-class TypeScript and Yarn P'n'P support.\n\n## TOC <!-- omit in toc -->\n\n- [Usage](#usage)\n  - [Install](#install)\n  - [API](#api)\n  - [Types](#types)\n  - [Options](#options)\n  - [Envs](#envs)\n  - [TypeScript](#typescript)\n    - [`node` (Default, Node 22.6+)](#node-default-node-226)\n    - [`bun` (Default, Bun)](#bun-default-bun)\n    - [`ts-node` (Default)](#ts-node-default)\n    - [`esbuild-register`](#esbuild-register)\n    - [`esbuild-runner`](#esbuild-runner)\n    - [`oxc`](#oxc)\n    - [`swc`](#swc)\n    - [`tsx`](#tsx)\n- [Benchmark](#benchmark)\n- [Sponsors](#sponsors)\n- [Backers](#backers)\n- [Who are using `synckit`](#who-are-using-synckit)\n- [Acknowledgements](#acknowledgements)\n- [Changelog](#changelog)\n- [License](#license)\n\n## Usage\n\n### Install\n\n```sh\n# yarn\nyarn add synckit\n\n# npm\nnpm i synckit\n```\n\n### API\n\n```js\n// runner.js\nimport { createSyncFn } from 'synckit'\n\n// the worker path must be absolute\nconst syncFn = createSyncFn(require.resolve('./worker'), {\n  tsRunner: 'tsx', // optional, can be `'node' | 'ts-node' | 'esbuild-register' | 'esbuild-runner' | 'tsx'`\n})\n\n// do whatever you want, you will get the result synchronously!\nconst result = syncFn(...args)\n```\n\n```js\n// worker.js\nimport { runAsWorker } from 'synckit'\n\nrunAsWorker(async (...args) => {\n  // do expensive work\n  return result\n})\n```\n\nYou must make sure, the `result` is serializable by [`Structured Clone Algorithm`](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)\n\n### Types\n\n````ts\nexport interface GlobalShim {\n  moduleName: string\n  /** `undefined` means side effect only */\n  globalName?: string\n  /**\n   * 1. `undefined` or empty string means `default`, for example:\n   *\n   * ```js\n   * import globalName from 'module-name'\n   * ```\n   *\n   * 2. `null` means namespaced, for example:\n   *\n   * ```js\n   * import * as globalName from 'module-name'\n   * ```\n   */\n  named?: string | null\n  /**\n   * If not `false`, the shim will only be applied when the original\n   * `globalName` unavailable, for example you may only want polyfill\n   * `globalThis.fetch` when it's unavailable natively:\n   *\n   * ```js\n   * import fetch from 'node-fetch'\n   *\n   * if (!globalThis.fetch) {\n   *   globalThis.fetch = fetch\n   * }\n   * ```\n   */\n  conditional?: boolean\n}\n````\n\n### Options\n\n1. `execArgv` same as env `SYNCKIT_EXEC_ARGV`\n2. `globalShims`: Similar like env `SYNCKIT_GLOBAL_SHIMS` but much more flexible which can be a `GlobalShim` `Array`, see `GlobalShim`'s [definition](#types) for more details\n3. `timeout` same as env `SYNCKIT_TIMEOUT`\n4. `transferList`: Please refer Node.js [`worker_threads`](https://nodejs.org/api/worker_threads.html#:~:text=Default%3A%20true.-,transferList,-%3CObject%5B%5D%3E%20If) documentation\n5. `tsRunner` same as env `SYNCKIT_TS_RUNNER`\n\n### Envs\n\n1. `SYNCKIT_EXEC_ARGV`: List of node CLI options passed to the worker, split with comma `,`. (default as `[]`), see also [`node` docs](https://nodejs.org/api/worker_threads.html)\n2. `SYNCKIT_GLOBAL_SHIMS`: Whether to enable the default `DEFAULT_GLOBAL_SHIMS_PRESET` as `globalShims`\n3. `SYNCKIT_TIMEOUT`: `timeout` for performing the async job (no default)\n4. `SYNCKIT_TS_RUNNER`: Which TypeScript runner to be used, it could be very useful for development, could be `'node' | 'ts-node' | 'esbuild-register' | 'esbuild-runner' | 'oxc' | 'swc' | 'tsx'`, `node` or `ts-node` will be used by default accordingly, make sure you have installed them already\n\n### TypeScript\n\n#### `node` (Default, Node 22.6+)\n\nOn recent `Node` versions, you may select this runner to execute your worker file (a `.ts` file) in the native runtime.\n\nAs of `Node` v23.6, this feature is supported out of the box. For `Node` `>=22.6 <23.6`, this feature is supported via `--experimental-strip-types` flag. Visit the [documentation](https://nodejs.org/docs/latest/api/typescript.html#type-stripping) to learn more.\n\nWhen `synckit` detects the process to be running with supported `Node` versions (>=22.6), it will execute the worker file with the `node` runner by default, you can disable this behavior by setting `--no-experimental-strip-types` flag via `NODE_OPTIONS` env or cli arg.\n\n#### `bun` (Default, Bun)\n\n[`Bun`](https://bun.sh/docs/typescript) supports `TypeScript` natively.\n\nWhen `synckit` detects the process to be running with `Bun`, it will execute the worker file with the `bun` runner by default.\n\nIn this case, `synckit` doesn't do anything to the worker itself, it just passes through the worker directly.\n\n#### `ts-node` (Default)\n\nPrior to Node v22.6, you may want to use `ts-node` to execute your worker file (a `.ts` file).\n\nIf you want to use a custom tsconfig as project instead of default `tsconfig.json`, use `TS_NODE_PROJECT` env. Please view [ts-node](https://github.com/TypeStrong/ts-node#tsconfig) for more details.\n\nIf you want to integrate with [tsconfig-paths](https://www.npmjs.com/package/tsconfig-paths), please view [ts-node](https://github.com/TypeStrong/ts-node#paths-and-baseurl) for more details.\n\n#### `esbuild-register`\n\nPlease view [`esbuild-register`][] for its document\n\n#### `esbuild-runner`\n\nPlease view [`esbuild-runner`][] for its document\n\n#### `oxc`\n\nPlease view [`@oxc-node/core`][] for its document\n\n#### `swc`\n\nPlease view [`@swc-node/register`][] for its document\n\n#### `tsx`\n\nPlease view [`tsx`][] for its document\n\n## Benchmark\n\nThe following are the benchmark results of `synckit` against other libraries with Node.js v20.19.0 on my personal MacBook Pro with 64G M1 Max:\n\n```sh\n# cjs\n┌───────────┬────────────┬──────────────┬───────────────────┬─────────────┬────────────────┬───────────────────┬────────────────────────┬───────────┬─────────────────┐\n│ (index)   │ synckit    │ sync-threads │ perf sync-threads │ deasync     │ perf deasync   │ make-synchronized │ perf make-synchronized │ native    │ perf native     │\n├───────────┼────────────┼──────────────┼───────────────────┼─────────────┼────────────────┼───────────────────┼────────────────────────┼───────────┼─────────────────┤\n│ loadTime  │ '17.26ms'  │ '1.49ms'     │ '11.57x slower'   │ '146.55ms'  │ '8.49x faster' │ '1025.77ms'       │ '59.42x faster'        │ '0.29ms'  │ '59.71x slower' │\n│ runTime   │ '143.12ms' │ '3689.15ms'  │ '25.78x faster'   │ '1221.11ms' │ '8.53x faster' │ '2842.50ms'       │ '19.86x faster'        │ '12.64ms' │ '11.33x slower' │\n│ totalTime │ '160.38ms' │ '3690.64ms'  │ '23.01x faster'   │ '1367.66ms' │ '8.53x faster' │ '3868.27ms'       │ '24.12x faster'        │ '12.93ms' │ '12.41x slower' │\n└───────────┴────────────┴──────────────┴───────────────────┴─────────────┴────────────────┴───────────────────┴────────────────────────┴───────────┴─────────────────┘\n```\n\n```sh\n# esm\n┌───────────┬────────────┬──────────────┬───────────────────┬─────────────┬────────────────┬───────────────────┬────────────────────────┬───────────┬─────────────────┐\n│ (index)   │ synckit    │ sync-threads │ perf sync-threads │ deasync     │ perf deasync   │ make-synchronized │ perf make-synchronized │ native    │ perf native     │\n├───────────┼────────────┼──────────────┼───────────────────┼─────────────┼────────────────┼───────────────────┼────────────────────────┼───────────┼─────────────────┤\n│ loadTime  │ '23.88ms'  │ '2.03ms'     │ '11.75x slower'   │ '70.95ms'   │ '2.97x faster' │ '400.24ms'        │ '16.76x faster'        │ '0.44ms'  │ '54.70x slower' │\n│ runTime   │ '139.56ms' │ '3570.12ms'  │ '25.58x faster'   │ '1150.99ms' │ '8.25x faster' │ '3484.04ms'       │ '24.96x faster'        │ '12.98ms' │ '10.75x slower' │\n│ totalTime │ '163.44ms' │ '3572.15ms'  │ '21.86x faster'   │ '1221.93ms' │ '7.48x faster' │ '3884.28ms'       │ '23.77x faster'        │ '13.42ms' │ '12.18x slower' │\n└───────────┴────────────┴──────────────┴───────────────────┴─────────────┴────────────────┴───────────────────┴────────────────────────┴───────────┴─────────────────┘\n```\n\nSee [benchmark.cjs](./benchmarks/benchmark.cjs.txt) and [benchmark.esm](./benchmarks/benchmark.esm.txt) for more details.\n\nYou can try it with running `yarn benchmark` by yourself. [Here](./benchmarks/benchmark.js) is the benchmark source code.\n\n## Sponsors and Backers\n\n[![Sponsors and Backers](https://raw.githubusercontent.com/1stG/static/master/sponsors.svg)](https://github.com/sponsors/JounQin)\n\n### Sponsors\n\n| 1stG                                                                                                                   | RxTS                                                                                                                   | UnTS                                                                                                                   |\n| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |\n| [![1stG Open Collective sponsors](https://opencollective.com/1stG/organizations.svg)](https://opencollective.com/1stG) | [![RxTS Open Collective sponsors](https://opencollective.com/rxts/organizations.svg)](https://opencollective.com/rxts) | [![UnTS Open Collective sponsors](https://opencollective.com/unts/organizations.svg)](https://opencollective.com/unts) |\n\n### Backers\n\n| 1stG                                                                                                                | RxTS                                                                                                                | UnTS                                                                                                                |\n| ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |\n| [![1stG Open Collective backers](https://opencollective.com/1stG/individuals.svg)](https://opencollective.com/1stG) | [![RxTS Open Collective backers](https://opencollective.com/rxts/individuals.svg)](https://opencollective.com/rxts) | [![UnTS Open Collective backers](https://opencollective.com/unts/individuals.svg)](https://opencollective.com/unts) |\n\n## Who are using `synckit`\n\n- [`@cspell/eslint-plugin`](https://github.com/streetsidesoftware/cspell/blob/ec04bcee0c90ff4e2a9fb5ef4421714796fb58ba/packages/cspell-eslint-plugin/package.json#L80)\n- [`astrojs-compiler-sync`](https://github.com/ota-meshi/astrojs-compiler-sync/blob/da4e86fd601755e40599d7f5121bc83d08255c42/package.json#L52)\n- [`eslint-plugin-prettier`](https://github.com/prettier/eslint-plugin-prettier/blob/ca5eb3ec11c4ae511e1da22736c73b253210b73b/package.json#L67)\n- [`eslint-plugin-prettier-vue`](https://github.com/meteorlxy/eslint-plugin-prettier-vue/blob/d3f6722303d66a2b223df2f750982e33c1143d5d/package.json#L40)\n- [`eslint-mdx`](https://github.com/mdx-js/eslint-mdx/blob/4623359cc9784d3e38bd917ed001c5d7d826f990/packages/eslint-mdx/package.json#L40)\n- [`prettier-plugin-packagejson`](https://github.com/matzkoh/prettier-plugin-packagejson/blob/eb7ade2a048d6d163cf8ef37e098ee273f72c585/package.json#L31)\n- [`jest-snapshot`](https://github.com/jestjs/jest/blob/4e7d916ec6a16de5548273c17b5d2c5761b0aebb/packages/jest-snapshot/package.json#L42)\n\n## Acknowledgements\n\nThis package is original inspired by [`esbuild`](https://github.com/evanw/esbuild) and [`sync-threads`](https://github.com/lambci/sync-threads).\n\n## Changelog\n\nDetailed changes for each release are documented in [CHANGELOG.md](./CHANGELOG.md).\n\n## License\n\n[MIT][] © [JounQin][]@[1stG.me][]\n\n[`esbuild-register`]: https://github.com/egoist/esbuild-register\n[`esbuild-runner`]: https://github.com/folke/esbuild-runner\n[`@oxc-node/core`]: https://github.com/oxc-project/oxc-node\n[`@swc-node/register`]: https://github.com/swc-project/swc-node/tree/master/packages/register\n[`tsx`]: https://github.com/esbuild-kit/tsx\n[1stG.me]: https://www.1stG.me\n[JounQin]: https://github.com/JounQin\n[MIT]: http://opensource.org/licenses/MIT\n",
  "readmeFilename": "README.md"
 }

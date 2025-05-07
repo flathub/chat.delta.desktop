@@ -1,6 +1,6 @@
 {
  "_id": "diff",
- "_rev": "168-c2dd83a17abff643bf66db1c21b7b246",
+ "_rev": "171-c1b4302fc8a606c290e3a8e1c27b126e",
  "name": "diff",
  "dist-tags": {
   "latest": "7.0.0"
@@ -3793,7 +3793,6 @@
   "7.0.0": {
    "name": "diff",
    "version": "7.0.0",
-   "description": "A JavaScript text diff implementation.",
    "keywords": [
     "diff",
     "jsdiff",
@@ -3804,6 +3803,8 @@
     "css",
     "javascript"
    ],
+   "license": "BSD-3-Clause",
+   "_id": "diff@7.0.0",
    "maintainers": [
     {
      "name": "kpdecker",
@@ -3815,104 +3816,265 @@
     }
    ],
    "bugs": {
-    "email": "kpdecker@gmail.com",
-    "url": "http://github.com/kpdecker/jsdiff/issues"
+    "url": "http://github.com/kpdecker/jsdiff/issues",
+    "email": "kpdecker@gmail.com"
    },
-   "license": "BSD-3-Clause",
-   "repository": {
-    "type": "git",
-    "url": "git://github.com/kpdecker/jsdiff.git"
+   "dist": {
+    "shasum": "3fb34d387cd76d803f6eebea67b921dab0182a9a",
+    "tarball": "http://localhost:3000/diff/-/diff-7.0.0.tgz",
+    "fileCount": 38,
+    "integrity": "sha512-PJWHUb1RFevKCwaFA9RlG5tCd+FO5iRh9A8HEtkmBH2Li03iJriB6m6JIN4rGz3K3JLawI7/veA1xzRKP6ISBw==",
+    "signatures": [
+     {
+      "sig": "MEUCIEOBjEyHLBNsrOx1bNJ9HJqcjlBnMB7Weav1LBNqons6AiEAuxupGQ8LTuXa2aJVHrMG1bP6leeKaC17/bxVVqBBZvA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 621296
    },
+   "main": "./lib/index.js",
+   "unpkg": "./dist/diff.js",
+   "module": "./lib/index.es6.js",
+   "browser": "./dist/diff.js",
    "engines": {
     "node": ">=0.3.1"
    },
-   "main": "./lib/index.js",
-   "module": "./lib/index.es6.js",
-   "browser": "./dist/diff.js",
-   "unpkg": "./dist/diff.js",
    "exports": {
     ".": {
      "import": "./lib/index.mjs",
      "require": "./lib/index.js"
     },
-    "./package.json": "./package.json",
     "./": "./",
-    "./*": "./*"
+    "./*": "./*",
+    "./package.json": "./package.json"
    },
    "scripts": {
+    "test": "grunt",
     "clean": "rm -rf lib/ dist/",
-    "build:node": "yarn babel --out-dir lib  --source-maps=inline src",
-    "test": "grunt"
-   },
-   "devDependencies": {
-    "@babel/cli": "^7.24.1",
-    "@babel/core": "^7.24.1",
-    "@babel/plugin-transform-modules-commonjs": "^7.24.1",
-    "@babel/preset-env": "^7.24.1",
-    "@babel/register": "^7.23.7",
-    "@colors/colors": "^1.6.0",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^9.1.3",
-    "chai": "^4.2.0",
-    "eslint": "^5.12.0",
-    "grunt": "^1.6.1",
-    "grunt-babel": "^8.0.0",
-    "grunt-cli": "^1.4.3",
-    "grunt-contrib-clean": "^2.0.1",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-uglify": "^5.2.2",
-    "grunt-contrib-watch": "^1.1.0",
-    "grunt-eslint": "^24.3.0",
-    "grunt-exec": "^3.0.0",
-    "grunt-karma": "^4.0.2",
-    "grunt-mocha-istanbul": "^5.0.2",
-    "grunt-mocha-test": "^0.13.3",
-    "grunt-webpack": "^6.0.0",
-    "istanbul": "github:kpdecker/istanbul",
-    "karma": "^6.4.3",
-    "karma-chrome-launcher": "^3.2.0",
-    "karma-mocha": "^2.0.1",
-    "karma-mocha-reporter": "^2.2.5",
-    "karma-sourcemap-loader": "^0.4.0",
-    "karma-webpack": "^5.0.1",
-    "mocha": "^7.0.0",
-    "rollup": "^4.13.0",
-    "rollup-plugin-babel": "^4.2.0",
-    "semver": "^7.6.0",
-    "webpack": "^5.90.3",
-    "webpack-dev-server": "^5.0.3"
-   },
-   "optionalDependencies": {},
-   "licenseText": "BSD 3-Clause License\n\nCopyright (c) 2009-2015, Kevin Decker <kpdecker@gmail.com>\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
-   "_id": "diff@7.0.0",
-   "dist": {
-    "shasum": "3fb34d387cd76d803f6eebea67b921dab0182a9a",
-    "integrity": "sha512-PJWHUb1RFevKCwaFA9RlG5tCd+FO5iRh9A8HEtkmBH2Li03iJriB6m6JIN4rGz3K3JLawI7/veA1xzRKP6ISBw==",
-    "tarball": "http://localhost:3000/diff/-/diff-7.0.0.tgz",
-    "fileCount": 38,
-    "unpackedSize": 621296,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIEOBjEyHLBNsrOx1bNJ9HJqcjlBnMB7Weav1LBNqons6AiEAuxupGQ8LTuXa2aJVHrMG1bP6leeKaC17/bxVVqBBZvA="
-     }
-    ]
+    "build:node": "yarn babel --out-dir lib  --source-maps=inline src"
    },
    "_npmUser": {
     "name": "explodingcabbage",
     "email": "markrobertamery+npm@gmail.com"
    },
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/diff_7.0.0_1725660425047_0.3545935565973366"
+   "repository": {
+    "url": "git://github.com/kpdecker/jsdiff.git",
+    "type": "git"
    },
-   "_hasShrinkwrap": false
+   "description": "A JavaScript text diff implementation.",
+   "directories": {},
+   "licenseText": "BSD 3-Clause License\n\nCopyright (c) 2009-2015, Kevin Decker <kpdecker@gmail.com>\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "chai": "^4.2.0",
+    "grunt": "^1.6.1",
+    "karma": "^6.4.3",
+    "mocha": "^7.0.0",
+    "eslint": "^5.12.0",
+    "rollup": "^4.13.0",
+    "semver": "^7.6.0",
+    "webpack": "^5.90.3",
+    "istanbul": "github:kpdecker/istanbul",
+    "grunt-cli": "^1.4.3",
+    "@babel/cli": "^7.24.1",
+    "grunt-exec": "^3.0.0",
+    "@babel/core": "^7.24.1",
+    "grunt-babel": "^8.0.0",
+    "grunt-karma": "^4.0.2",
+    "karma-mocha": "^2.0.1",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^9.1.3",
+    "grunt-eslint": "^24.3.0",
+    "grunt-webpack": "^6.0.0",
+    "karma-webpack": "^5.0.1",
+    "@colors/colors": "^1.6.0",
+    "@babel/register": "^7.23.7",
+    "grunt-mocha-test": "^0.13.3",
+    "@babel/preset-env": "^7.24.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "webpack-dev-server": "^5.0.3",
+    "grunt-contrib-clean": "^2.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "rollup-plugin-babel": "^4.2.0",
+    "grunt-contrib-uglify": "^5.2.2",
+    "grunt-mocha-istanbul": "^5.0.2",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-chrome-launcher": "^3.2.0",
+    "karma-sourcemap-loader": "^0.4.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.24.1"
+   },
+   "optionalDependencies": {},
+   "_npmOperationalInternal": {
+    "tmp": "tmp/diff_7.0.0_1725660425047_0.3545935565973366",
+    "host": "s3://npm-registry-packages"
+   }
+  },
+  "8.0.0-beta": {
+   "name": "diff",
+   "version": "8.0.0-beta",
+   "keywords": [
+    "diff",
+    "jsdiff",
+    "compare",
+    "patch",
+    "text",
+    "json",
+    "css",
+    "javascript"
+   ],
+   "license": "BSD-3-Clause",
+   "_id": "diff@8.0.0-beta",
+   "maintainers": [
+    {
+     "name": "kpdecker",
+     "email": "kpdecker@gmail.com"
+    },
+    {
+     "name": "explodingcabbage",
+     "email": "markrobertamery+npm@gmail.com"
+    }
+   ],
+   "bugs": {
+    "url": "http://github.com/kpdecker/jsdiff/issues",
+    "email": "kpdecker@gmail.com"
+   },
+   "nyc": {
+    "lines": 100,
+    "require": [
+     "@babel/register"
+    ],
+    "branches": 100,
+    "reporter": [
+     "lcov",
+     "text"
+    ],
+    "functions": 100,
+    "sourceMap": false,
+    "instrument": false,
+    "statements": 100,
+    "check-coverage": true
+   },
+   "dist": {
+    "shasum": "d0631166e7e57c5c809bdc9e7dfd6c59e43db497",
+    "tarball": "http://localhost:3000/diff/-/diff-8.0.0-beta.tgz",
+    "fileCount": 148,
+    "integrity": "sha512-8HPs1nLtHTt0/hDBhJbuWrZr7DmUsTUewMxANDVzXm4x35gX4DjPrR2hGaRxweDHkphI9idTBTAI0MAHC/W8OQ==",
+    "signatures": [
+     {
+      "sig": "MEUCID3i+Fx7wB4eMSVyb2TLTukJEdpcKdCASTKRvKgAiGyyAiEA6wfxkrqgwY/P5DSQ3j815ZQdnAVpx5fpELpJ367KVQA=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 512842
+   },
+   "main": "./libcjs/index.js",
+   "type": "module",
+   "types": "libcjs/index.d.ts",
+   "unpkg": "./dist/diff.js",
+   "module": "./libesm/index.js",
+   "browser": "./dist/diff.js",
+   "engines": {
+    "node": ">=0.3.1"
+   },
+   "exports": {
+    ".": {
+     "import": {
+      "types": "./libesm/index.d.ts",
+      "default": "./libesm/index.js"
+     },
+     "require": {
+      "types": "./libcjs/index.d.ts",
+      "default": "./libcjs/index.js"
+     }
+    },
+    "./lib/": {
+     "import": {
+      "types": "./libesm/",
+      "default": "./libesm/"
+     },
+     "require": {
+      "types": "./libcjs/",
+      "default": "./libcjs/"
+     }
+    },
+    "./lib/*.js": {
+     "import": {
+      "types": "./libesm/*.d.ts",
+      "default": "./libesm/*.js"
+     },
+     "require": {
+      "types": "./libcjs/*.d.ts",
+      "default": "./libcjs/*.js"
+     }
+    },
+    "./package.json": "./package.json"
+   },
+   "scripts": {
+    "lint": "yarn eslint",
+    "test": "nyc yarn _test",
+    "_test": "yarn build && cross-env NODE_ENV=test yarn run-mocha",
+    "build": "yarn lint && yarn generate-esm && yarn generate-cjs && yarn check-types && yarn run-rollup && yarn run-uglify",
+    "clean": "rm -rf libcsm/ libesm/ dist/ coverage/ .nyc_output/",
+    "run-tsd": "yarn tsd --typings libesm/ && yarn tsd --files test-d/",
+    "run-attw": "yarn attw --pack --entrypoints . && yarn attw --pack --entrypoints lib/diff/word.js --profile node16",
+    "run-mocha": "mocha --require ./runtime 'test/**/*.js'",
+    "run-rollup": "rollup -c rollup.config.mjs",
+    "run-uglify": "uglifyjs dist/diff.js -c -o dist/diff.min.js",
+    "check-types": "yarn run-tsd && yarn run-attw",
+    "generate-cjs": "yarn tsc --module commonjs --outDir libcjs && echo '{\"type\": \"commonjs\"}' > libcjs/package.json",
+    "generate-esm": "yarn tsc --module nodenext --outDir libesm && echo '{\"type\": \"module\"}' > libesm/package.json"
+   },
+   "_npmUser": {
+    "name": "explodingcabbage",
+    "email": "markrobertamery+npm@gmail.com"
+   },
+   "repository": {
+    "url": "git://github.com/kpdecker/jsdiff.git",
+    "type": "git"
+   },
+   "description": "A JavaScript text diff implementation.",
+   "directories": {},
+   "licenseText": "BSD 3-Clause License\n\nCopyright (c) 2009-2015, Kevin Decker <kpdecker@gmail.com>\nAll rights reserved.\n\nRedistribution and use in source and binary forms, with or without\nmodification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this\n   list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice,\n   this list of conditions and the following disclaimer in the documentation\n   and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its\n   contributors may be used to endorse or promote products derived from\n   this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\"\nAND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\nIMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE\nDISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE\nFOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\nDAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR\nSERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER\nCAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,\nOR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE\nOF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n",
+   "dependencies": {},
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^17.1.0",
+    "tsd": "^0.32.0",
+    "chai": "^4.2.0",
+    "karma": "^6.4.4",
+    "mocha": "^11.1.0",
+    "eslint": "^9.24.0",
+    "rollup": "^4.34.8",
+    "globals": "^16.0.0",
+    "webpack": "^5.98.0",
+    "cross-env": "^7.0.3",
+    "uglify-js": "^3.19.3",
+    "@eslint/js": "^9.24.0",
+    "typescript": "^5.8.3",
+    "@babel/core": "^7.26.9",
+    "karma-mocha": "^2.0.1",
+    "babel-loader": "^9.2.1",
+    "karma-webpack": "^5.0.1",
+    "@colors/colors": "^1.6.0",
+    "@babel/register": "^7.25.9",
+    "@babel/preset-env": "^7.26.9",
+    "typescript-eslint": "^8.29.1",
+    "webpack-dev-server": "^5.2.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "@arethetypeswrong/cli": "^0.17.4",
+    "babel-plugin-istanbul": "^7.0.0",
+    "karma-sourcemap-loader": "^0.4.0"
+   },
+   "optionalDependencies": {},
+   "_npmOperationalInternal": {
+    "tmp": "tmp/diff_8.0.0-beta_1745831593980_0.13345129049743187",
+    "host": "s3://npm-registry-packages-npm-production"
+   }
   }
  },
  "time": {
   "created": "2011-03-29T17:19:02.655Z",
-  "modified": "2024-09-06T22:07:05.614Z",
+  "modified": "2025-04-30T11:49:56.968Z",
   "1.0.0": "2011-03-29T17:19:02.881Z",
   "1.0.1": "2011-05-08T17:51:33.752Z",
   "1.0.2": "2011-12-24T20:52:37.847Z",
@@ -3957,11 +4119,12 @@
   "5.2.0": "2024-02-12T16:02:01.349Z",
   "6.0.0-beta": "2024-08-20T16:40:31.599Z",
   "6.0.0": "2024-09-02T19:04:04.049Z",
-  "7.0.0": "2024-09-06T22:07:05.433Z"
+  "7.0.0": "2024-09-06T22:07:05.433Z",
+  "8.0.0-beta": "2025-04-28T09:13:14.241Z"
  },
  "bugs": {
-  "email": "kpdecker@gmail.com",
-  "url": "http://github.com/kpdecker/jsdiff/issues"
+  "url": "http://github.com/kpdecker/jsdiff/issues",
+  "email": "kpdecker@gmail.com"
  },
  "license": "BSD-3-Clause",
  "keywords": [
@@ -3975,8 +4138,8 @@
   "javascript"
  ],
  "repository": {
-  "type": "git",
-  "url": "git://github.com/kpdecker/jsdiff.git"
+  "url": "git://github.com/kpdecker/jsdiff.git",
+  "type": "git"
  },
  "description": "A JavaScript text diff implementation.",
  "maintainers": [
@@ -3989,7 +4152,7 @@
    "email": "markrobertamery+npm@gmail.com"
   }
  ],
- "readme": "# jsdiff\n\nA JavaScript text differencing implementation. Try it out in the **[online demo](https://kpdecker.github.io/jsdiff)**.\n\nBased on the algorithm proposed in\n[\"An O(ND) Difference Algorithm and its Variations\" (Myers, 1986)](http://www.xmailserver.org/diff2.pdf).\n\n## Installation\n```bash\nnpm install diff --save\n```\n\n## Usage\n\nBroadly, jsdiff's diff functions all take an old text and a new text and perform three steps:\n\n1. Split both texts into arrays of \"tokens\". What constitutes a token varies; in `diffChars`, each character is a token, while in `diffLines`, each line is a token.\n\n2. Find the smallest set of single-token *insertions* and *deletions* needed to transform the first array of tokens into the second.\n\n   This step depends upon having some notion of a token from the old array being \"equal\" to one from the new array, and this notion of equality affects the results. Usually two tokens are equal if `===` considers them equal, but some of the diff functions use an alternative notion of equality or have options to configure it. For instance, by default `diffChars(\"Foo\", \"FOOD\")` will require two deletions (`o`, `o`) and three insertions (`O`, `O`, `D`), but `diffChars(\"Foo\", \"FOOD\", {ignoreCase: true})` will require just one insertion (of a `D`), since `ignoreCase` causes `o` and `O` to be considered equal.\n\n3. Return an array representing the transformation computed in the previous step as a series of [change objects](#change-objects). The array is ordered from the start of the input to the end, and each change object represents *inserting* one or more tokens, *deleting* one or more tokens, or *keeping* one or more tokens.\n\n### API\n\n* `Diff.diffChars(oldStr, newStr[, options])` - diffs two blocks of text, treating each character as a token.\n\n    (\"Characters\" here means Unicode code points - the elements you get when you loop over a string with a `for ... of ...` loop.)\n\n    Returns a list of [change objects](#change-objects).\n\n    Options\n    * `ignoreCase`: If `true`, the uppercase and lowercase forms of a character are considered equal. Defaults to `false`.\n\n* `Diff.diffWords(oldStr, newStr[, options])` - diffs two blocks of text, treating each word and each punctuation mark as a token. Whitespace is ignored when computing the diff (but preserved as far as possible in the final change objects).\n\n    Returns a list of [change objects](#change-objects).\n\n    Options\n    * `ignoreCase`: Same as in `diffChars`. Defaults to false.\n    * `intlSegmenter`: An optional [`Intl.Segmenter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object (which must have a `granularity` of `'word'`) for `diffWords` to use to split the text into words.\n\n      By default, `diffWords` does not use an `Intl.Segmenter`, just some regexes for splitting text into words. This will tend to give worse results than `Intl.Segmenter` would, but ensures the results are consistent across environments; `Intl.Segmenter` behaviour is only loosely specced and the implementations in browsers could in principle change dramatically in future. If you want to use `diffWords` with an `Intl.Segmenter` but ensure it behaves the same whatever environment you run it in, use an `Intl.Segmenter` polyfill instead of the JavaScript engine's native `Intl.Segmenter` implementation.\n\n      Using an `Intl.Segmenter` should allow better word-level diffing of non-English text than the default behaviour. For instance, `Intl.Segmenter`s can generally identify via built-in dictionaries which sequences of adjacent Chinese characters form words, allowing word-level diffing of Chinese. By specifying a language when instantiating the segmenter (e.g. `new Intl.Segmenter('sv', {granularity: 'word'})`) you can also support language-specific rules, like treating Swedish's colon separated contractions (like *k:a* for *kyrka*) as single words; by default this would be seen as two words separated by a colon.\n\n* `Diff.diffWordsWithSpace(oldStr, newStr[, options])` - diffs two blocks of text, treating each word, punctuation mark, newline, or run of (non-newline) whitespace as a token.\n\n* `Diff.diffLines(oldStr, newStr[, options])` - diffs two blocks of text, treating each line as a token.\n\n    Options\n    * `ignoreWhitespace`: `true` to ignore leading and trailing whitespace characters when checking if two lines are equal. Defaults to `false`.\n    * `ignoreNewlineAtEof`: `true` to ignore a missing newline character at the end of the last line when comparing it to other lines. (By default, the line `'b\\n'` in text `'a\\nb\\nc'` is not considered equal to the line `'b'` in text `'a\\nb'`; this option makes them be considered equal.) Ignored if `ignoreWhitespace` or `newlineIsToken` are also true.\n    * `stripTrailingCr`: `true` to remove all trailing CR (`\\r`) characters before performing the diff. Defaults to `false`.\n      This helps to get a useful diff when diffing UNIX text files against Windows text files.\n    * `newlineIsToken`: `true` to treat the newline character at the end of each line as its own token. This allows for changes to the newline structure to occur independently of the line content and to be treated as such. In general this is the more human friendly form of `diffLines`; the default behavior with this option turned off is better suited for patches and other computer friendly output. Defaults to `false`.\n\n    Note that while using `ignoreWhitespace` in combination with `newlineIsToken` is not an error, results may not be as expected. With `ignoreWhitespace: true` and `newlineIsToken: false`, changing a completely empty line to contain some spaces is treated as a non-change, but with `ignoreWhitespace: true` and `newlineIsToken: true`, it is treated as an insertion. This is because the content of a completely blank line is not a token at all in `newlineIsToken` mode.\n\n    Returns a list of [change objects](#change-objects).\n\n* `Diff.diffSentences(oldStr, newStr[, options])` - diffs two blocks of text, treating each sentence as a token. The characters `.`, `!`, and `?`, when followed by whitespace, are treated as marking the end of a sentence; nothing else is considered to mark a sentence end.\n\n  (For more sophisticated detection of sentence breaks, including support for non-English punctuation, consider instead tokenizing with an [`Intl.Segmenter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) with `granularity: 'sentence'` and passing the result to `Diff.diffArrays`.)\n\n    Returns a list of [change objects](#change-objects).\n\n* `Diff.diffCss(oldStr, newStr[, options])` - diffs two blocks of text, comparing CSS tokens.\n\n    Returns a list of [change objects](#change-objects).\n\n* `Diff.diffJson(oldObj, newObj[, options])` - diffs two JSON-serializable objects by first serializing them to prettily-formatted JSON and then treating each line of the JSON as a token. Object properties are ordered alphabetically in the serialized JSON, so the order of properties in the objects being compared doesn't affect the result.\n\n    Returns a list of [change objects](#change-objects).\n    \n    Options\n    * `stringifyReplacer`: A custom replacer function. Operates similarly to the `replacer` parameter to [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter), but must be a function.\n    *  `undefinedReplacement`: A value to replace `undefined` with. Ignored if a `stringifyReplacer` is provided.\n\n* `Diff.diffArrays(oldArr, newArr[, options])` - diffs two arrays of tokens, comparing each item for strict equality (===).\n\n    Options\n    * `comparator`: `function(left, right)` for custom equality checks\n\n    Returns a list of [change objects](#change-objects).\n\n* `Diff.createTwoFilesPatch(oldFileName, newFileName, oldStr, newStr[, oldHeader[, newHeader[, options]]])` - creates a unified diff patch by first computing a diff with `diffLines` and then serializing it to unified diff format.\n\n    Parameters:\n    * `oldFileName` : String to be output in the filename section of the patch for the removals\n    * `newFileName` : String to be output in the filename section of the patch for the additions\n    * `oldStr` : Original string value\n    * `newStr` : New string value\n    * `oldHeader` : Optional additional information to include in the old file header. Default: `undefined`.\n    * `newHeader` : Optional additional information to include in the new file header. Default: `undefined`.\n    * `options` : An object with options. \n      - `context` describes how many lines of context should be included. You can set this to `Number.MAX_SAFE_INTEGER` or `Infinity` to include the entire file content in one hunk.\n      - `ignoreWhitespace`: Same as in `diffLines`. Defaults to `false`.\n      - `stripTrailingCr`: Same as in `diffLines`. Defaults to `false`.\n\n* `Diff.createPatch(fileName, oldStr, newStr[, oldHeader[, newHeader[, options]]])` - creates a unified diff patch.\n\n    Just like Diff.createTwoFilesPatch, but with oldFileName being equal to newFileName.\n\n* `Diff.formatPatch(patch)` - creates a unified diff patch.\n\n    `patch` may be either a single structured patch object (as returned by `structuredPatch`) or an array of them (as returned by `parsePatch`).\n\n* `Diff.structuredPatch(oldFileName, newFileName, oldStr, newStr[, oldHeader[, newHeader[, options]]])` - returns an object with an array of hunk objects.\n\n    This method is similar to createTwoFilesPatch, but returns a data structure\n    suitable for further processing. Parameters are the same as createTwoFilesPatch. The data structure returned may look like this:\n\n    ```js\n    {\n      oldFileName: 'oldfile', newFileName: 'newfile',\n      oldHeader: 'header1', newHeader: 'header2',\n      hunks: [{\n        oldStart: 1, oldLines: 3, newStart: 1, newLines: 3,\n        lines: [' line2', ' line3', '-line4', '+line5', '\\\\ No newline at end of file'],\n      }]\n    }\n    ```\n\n* `Diff.applyPatch(source, patch[, options])` - attempts to apply a unified diff patch.\n\n    Hunks are applied first to last. `applyPatch` first tries to apply the first hunk at the line number specified in the hunk header, and with all context lines matching exactly. If that fails, it tries scanning backwards and forwards, one line at a time, to find a place to apply the hunk where the context lines match exactly. If that still fails, and `fuzzFactor` is greater than zero, it increments the maximum number of mismatches (missing, extra, or changed context lines) that there can be between the hunk context and a region where we are trying to apply the patch such that the hunk will still be considered to match. Regardless of `fuzzFactor`, lines to be deleted in the hunk *must* be present for a hunk to match, and the context lines *immediately* before and after an insertion must match exactly.\n\n    Once a hunk is successfully fitted, the process begins again with the next hunk. Regardless of `fuzzFactor`, later hunks must be applied later in the file than earlier hunks.\n\n    If a hunk cannot be successfully fitted *anywhere* with fewer than `fuzzFactor` mismatches, `applyPatch` fails and returns `false`.\n\n    If a hunk is successfully fitted but not at the line number specified by the hunk header, all subsequent hunks have their target line number adjusted accordingly. (e.g. if the first hunk is applied 10 lines below where the hunk header said it should fit, `applyPatch` will *start* looking for somewhere to apply the second hunk 10 lines below where its hunk header says it goes.)\n\n    If the patch was applied successfully, returns a string containing the patched text. If the patch could not be applied (because some hunks in the patch couldn't be fitted to the text in `source`), `applyPatch` returns false.\n\n    `patch` may be a string diff or the output from the `parsePatch` or `structuredPatch` methods.\n\n    The optional `options` object may have the following keys:\n\n    - `fuzzFactor`: Maximum Levenshtein distance (in lines deleted, added, or subtituted) between the context shown in a patch hunk and the lines found in the file. Defaults to 0.\n    - `autoConvertLineEndings`: If `true`, and if the file to be patched consistently uses different line endings to the patch (i.e. either the file always uses Unix line endings while the patch uses Windows ones, or vice versa), then `applyPatch` will behave as if the line endings in the patch were the same as those in the source file. (If `false`, the patch will usually fail to apply in such circumstances since lines deleted in the patch won't be considered to match those in the source file.) Defaults to `true`.\n    - `compareLine(lineNumber, line, operation, patchContent)`: Callback used to compare to given lines to determine if they should be considered equal when patching. Defaults to strict equality but may be overridden to provide fuzzier comparison. Should return false if the lines should be rejected.\n\n* `Diff.applyPatches(patch, options)` - applies one or more patches.\n\n    `patch` may be either an array of structured patch objects, or a string representing a patch in unified diff format (which may patch one or more files).\n\n    This method will iterate over the contents of the patch and apply to data provided through callbacks. The general flow for each patch index is:\n\n    - `options.loadFile(index, callback)` is called. The caller should then load the contents of the file and then pass that to the `callback(err, data)` callback. Passing an `err` will terminate further patch execution.\n    - `options.patched(index, content, callback)` is called once the patch has been applied. `content` will be the return value from `applyPatch`. When it's ready, the caller should call `callback(err)` callback. Passing an `err` will terminate further patch execution.\n\n    Once all patches have been applied or an error occurs, the `options.complete(err)` callback is made.\n\n* `Diff.parsePatch(diffStr)` - Parses a patch into structured data\n\n    Return a JSON object representation of the a patch, suitable for use with the `applyPatch` method. This parses to the same structure returned by `Diff.structuredPatch`.\n\n* `Diff.reversePatch(patch)` - Returns a new structured patch which when applied will undo the original `patch`.\n\n    `patch` may be either a single structured patch object (as returned by `structuredPatch`) or an array of them (as returned by `parsePatch`).\n\n* `Diff.convertChangesToXML(changes)` - converts a list of change objects to a serialized XML format\n\n* `Diff.convertChangesToDMP(changes)` - converts a list of change objects to the format returned by Google's [diff-match-patch](https://github.com/google/diff-match-patch) library\n\n#### Universal `options`\n\nCertain options can be provided in the `options` object of *any* method that calculates a diff (including `diffChars`, `diffLines` etc. as well as `structuredPatch`, `createPatch`, and `createTwoFilesPatch`):\n\n* `callback`: if provided, the diff will be computed in async mode to avoid blocking the event loop while the diff is calculated. The value of the `callback` option should be a function and will be passed the computed diff or patch as its first argument.\n\n  (Note that if the ONLY option you want to provide is a callback, you can pass the callback function directly as the `options` parameter instead of passing an object with a `callback` property.)\n\n* `maxEditLength`: a number specifying the maximum edit distance to consider between the old and new texts. You can use this to limit the computational cost of diffing large, very different texts by giving up early if the cost will be huge. This option can be passed either to diffing functions (`diffLines`, `diffChars`, etc) or to patch-creation function (`structuredPatch`, `createPatch`, etc), all of which will indicate that the max edit length was reached by returning `undefined` instead of whatever they'd normally return.\n\n* `timeout`: a number of milliseconds after which the diffing algorithm will abort and return `undefined`. Supported by the same functions as `maxEditLength`.\n\n* `oneChangePerToken`: if `true`, the array of change objects returned will contain one change object per token (e.g. one per line if calling `diffLines`), instead of runs of consecutive tokens that are all added / all removed / all conserved being combined into a single change object.\n\n### Defining custom diffing behaviors\n\nIf you need behavior a little different to what any of the text diffing functions above offer, you can roll your own by customizing both the tokenization behavior used and the notion of equality used to determine if two tokens are equal.\n\nThe simplest way to customize tokenization behavior is to simply tokenize the texts you want to diff yourself, with your own code, then pass the arrays of tokens to `diffArrays`. For instance, if you wanted a semantically-aware diff of some code, you could try tokenizing it using a parser specific to the programming language the code is in, then passing the arrays of tokens to `diffArrays`.\n\nTo customize the notion of token equality used, use the `comparator` option to `diffArrays`.\n\nFor even more customisation of the diffing behavior, you can create a `new Diff.Diff()` object, overwrite its `castInput`, `tokenize`, `removeEmpty`, `equals`, and `join` properties with your own functions, then call its `diff(oldString, newString[, options])` method. The methods you can overwrite are used as follows:\n\n* `castInput(value, options)`: used to transform the `oldString` and `newString` before any other steps in the diffing algorithm happen. For instance, `diffJson` uses `castInput` to serialize the objects being diffed to JSON. Defaults to a no-op.\n* `tokenize(value, options)`: used to convert each of `oldString` and `newString` (after they've gone through `castInput`) to an array of tokens. Defaults to returning `value.split('')` (returning an array of individual characters).\n* `removeEmpty(array)`: called on the arrays of tokens returned by `tokenize` and can be used to modify them. Defaults to stripping out falsey tokens, such as empty strings. `diffArrays` overrides this to simply return the `array`, which means that falsey values like empty strings can be handled like any other token by `diffArrays`.\n* `equals(left, right, options)`: called to determine if two tokens (one from the old string, one from the new string) should be considered equal. Defaults to comparing them with `===`.\n* `join(tokens)`: gets called with an array of consecutive tokens that have either all been added, all been removed, or are all common. Needs to join them into a single value that can be used as the `value` property of the [change object](#change-objects) for these tokens. Defaults to simply returning `tokens.join('')`.\n* `postProcess(changeObjects)`: gets called at the end of the algorithm with the [change objects](#change-objects) produced, and can do final cleanups on them. Defaults to simply returning `changeObjects` unchanged.\n\n### Change Objects\nMany of the methods above return change objects. These objects consist of the following fields:\n\n* `value`: The concatenated content of all the tokens represented by this change object - i.e. generally the text that is either added, deleted, or common, as a single string. In cases where tokens are considered common but are non-identical (e.g. because an option like `ignoreCase` or a custom `comparator` was used), the value from the *new* string will be provided here.\n* `added`: true if the value was inserted into the new string, otherwise false\n* `removed`: true if the value was removed from the old string, otherwise false\n* `count`: How many tokens (e.g. chars for `diffChars`, lines for `diffLines`) the value in the change object consists of\n\n(Change objects where `added` and `removed` are both false represent content that is common to the old and new strings.)\n\n## Examples\n\n#### Basic example in Node\n\n```js\nrequire('colors');\nconst Diff = require('diff');\n\nconst one = 'beep boop';\nconst other = 'beep boob blah';\n\nconst diff = Diff.diffChars(one, other);\n\ndiff.forEach((part) => {\n  // green for additions, red for deletions\n  let text = part.added ? part.value.bgGreen :\n             part.removed ? part.value.bgRed :\n                            part.value;\n  process.stderr.write(text);\n});\n\nconsole.log();\n```\nRunning the above program should yield\n\n<img src=\"images/node_example.png\" alt=\"Node Example\">\n\n#### Basic example in a web page\n\n```html\n<pre id=\"display\"></pre>\n<script src=\"diff.js\"></script>\n<script>\nconst one = 'beep boop',\n    other = 'beep boob blah',\n    color = '';\n    \nlet span = null;\n\nconst diff = Diff.diffChars(one, other),\n    display = document.getElementById('display'),\n    fragment = document.createDocumentFragment();\n\ndiff.forEach((part) => {\n  // green for additions, red for deletions\n  // grey for common parts\n  const color = part.added ? 'green' :\n    part.removed ? 'red' : 'grey';\n  span = document.createElement('span');\n  span.style.color = color;\n  span.appendChild(document\n    .createTextNode(part.value));\n  fragment.appendChild(span);\n});\n\ndisplay.appendChild(fragment);\n</script>\n```\n\nOpen the above .html file in a browser and you should see\n\n<img src=\"images/web_example.png\" alt=\"Node Example\">\n\n#### Example of generating a patch from Node\n\nThe code below is roughly equivalent to the Unix command `diff -u file1.txt file2.txt > mydiff.patch`:\n\n```\nconst Diff = require('diff');\nconst file1Contents = fs.readFileSync(\"file1.txt\").toString();\nconst file2Contents = fs.readFileSync(\"file2.txt\").toString();\nconst patch = Diff.createTwoFilesPatch(\"file1.txt\", \"file2.txt\", file1Contents, file2Contents);\nfs.writeFileSync(\"mydiff.patch\", patch);\n```\n\n#### Examples of parsing and applying a patch from Node\n\n##### Applying a patch to a specified file\n\nThe code below is roughly equivalent to the Unix command `patch file1.txt mydiff.patch`:\n\n```\nconst Diff = require('diff');\nconst file1Contents = fs.readFileSync(\"file1.txt\").toString();\nconst patch = fs.readFileSync(\"mydiff.patch\").toString();\nconst patchedFile = Diff.applyPatch(file1Contents, patch);\nfs.writeFileSync(\"file1.txt\", patchedFile);\n```\n\n##### Applying a multi-file patch to the files specified by the patch file itself\n\nThe code below is roughly equivalent to the Unix command `patch < mydiff.patch`:\n\n```\nconst Diff = require('diff');\nconst patch = fs.readFileSync(\"mydiff.patch\").toString();\nDiff.applyPatches(patch, {\n    loadFile: (patch, callback) => {\n        let fileContents;\n        try {\n            fileContents = fs.readFileSync(patch.oldFileName).toString();\n        } catch (e) {\n            callback(`No such file: ${patch.oldFileName}`);\n            return;\n        }\n        callback(undefined, fileContents);\n    },\n    patched: (patch, patchedContent, callback) => {\n        if (patchedContent === false) {\n            callback(`Failed to apply patch to ${patch.oldFileName}`)\n            return;\n        }\n        fs.writeFileSync(patch.oldFileName, patchedContent);\n        callback();\n    },\n    complete: (err) => {\n        if (err) {\n            console.log(\"Failed with error:\", err);\n        }\n    }\n});\n```\n\n## Compatibility\n\njsdiff supports all ES3 environments with some known issues on IE8 and below. Under these browsers some diff algorithms such as word diff and others may fail due to lack of support for capturing groups in the `split` operation.\n\n## License\n\nSee [LICENSE](https://github.com/kpdecker/jsdiff/blob/master/LICENSE).\n\n## Deviations from the published Myers diff algorithm\n\njsdiff deviates from the published algorithm in a couple of ways that don't affect results but do affect performance:\n\n* jsdiff keeps track of the diff for each diagonal using a linked list of change objects for each diagonal, rather than the historical array of furthest-reaching D-paths on each diagonal contemplated on page 8 of Myers's paper.\n* jsdiff skips considering diagonals where the furthest-reaching D-path would go off the edge of the edit graph. This dramatically reduces the time cost (from quadratic to linear) in cases where the new text just appends or truncates content at the end of the old text.\n",
+ "readme": "# jsdiff\n\nA JavaScript text differencing implementation. Try it out in the **[online demo](https://kpdecker.github.io/jsdiff)**.\n\nBased on the algorithm proposed in\n[\"An O(ND) Difference Algorithm and its Variations\" (Myers, 1986)](http://www.xmailserver.org/diff2.pdf).\n\n## Installation\n```bash\nnpm install diff --save\n```\n\n## Getting started\n\n### Imports\n\nIn an environment where you can use imports, everything you need can be imported directly from `diff`. e.g.\n\nESM:\n\n```\nimport {diffChars, createPatch} from 'diff';\n```\n\nCommonJS\n\n```\nconst {diffChars, createPatch} = require('diff');\n```\n\nIf you want to serve jsdiff to a web page without using a module system, you can use `dist/diff.js` or `dist/diff.min.js`. These create a global called `Diff` that contains the entire JsDiff API as its properties.\n\n### Usage\n\njsdiff's diff functions all take an old text and a new text and perform three steps:\n\n1. Split both texts into arrays of \"tokens\". What constitutes a token varies; in `diffChars`, each character is a token, while in `diffLines`, each line is a token.\n\n2. Find the smallest set of single-token *insertions* and *deletions* needed to transform the first array of tokens into the second.\n\n   This step depends upon having some notion of a token from the old array being \"equal\" to one from the new array, and this notion of equality affects the results. Usually two tokens are equal if `===` considers them equal, but some of the diff functions use an alternative notion of equality or have options to configure it. For instance, by default `diffChars(\"Foo\", \"FOOD\")` will require two deletions (`o`, `o`) and three insertions (`O`, `O`, `D`), but `diffChars(\"Foo\", \"FOOD\", {ignoreCase: true})` will require just one insertion (of a `D`), since `ignoreCase` causes `o` and `O` to be considered equal.\n\n3. Return an array representing the transformation computed in the previous step as a series of [change objects](#change-objects). The array is ordered from the start of the input to the end, and each change object represents *inserting* one or more tokens, *deleting* one or more tokens, or *keeping* one or more tokens.\n\n## API\n\n* `diffChars(oldStr, newStr[, options])` - diffs two blocks of text, treating each character as a token.\n\n    (\"Characters\" here means Unicode code points - the elements you get when you loop over a string with a `for ... of ...` loop.)\n\n    Returns a list of [change objects](#change-objects).\n\n    Options\n    * `ignoreCase`: If `true`, the uppercase and lowercase forms of a character are considered equal. Defaults to `false`.\n\n* `diffWords(oldStr, newStr[, options])` - diffs two blocks of text, treating each word and each punctuation mark as a token. Whitespace is ignored when computing the diff (but preserved as far as possible in the final change objects).\n\n    Returns a list of [change objects](#change-objects).\n\n    Options\n    * `ignoreCase`: Same as in `diffChars`. Defaults to false.\n    * `intlSegmenter`: An optional [`Intl.Segmenter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) object (which must have a `granularity` of `'word'`) for `diffWords` to use to split the text into words.\n\n      By default, `diffWords` does not use an `Intl.Segmenter`, just some regexes for splitting text into words. This will tend to give worse results than `Intl.Segmenter` would, but ensures the results are consistent across environments; `Intl.Segmenter` behaviour is only loosely specced and the implementations in browsers could in principle change dramatically in future. If you want to use `diffWords` with an `Intl.Segmenter` but ensure it behaves the same whatever environment you run it in, use an `Intl.Segmenter` polyfill instead of the JavaScript engine's native `Intl.Segmenter` implementation.\n\n      Using an `Intl.Segmenter` should allow better word-level diffing of non-English text than the default behaviour. For instance, `Intl.Segmenter`s can generally identify via built-in dictionaries which sequences of adjacent Chinese characters form words, allowing word-level diffing of Chinese. By specifying a language when instantiating the segmenter (e.g. `new Intl.Segmenter('sv', {granularity: 'word'})`) you can also support language-specific rules, like treating Swedish's colon separated contractions (like *k:a* for *kyrka*) as single words; by default this would be seen as two words separated by a colon.\n\n* `diffWordsWithSpace(oldStr, newStr[, options])` - diffs two blocks of text, treating each word, punctuation mark, newline, or run of (non-newline) whitespace as a token.\n\n* `diffLines(oldStr, newStr[, options])` - diffs two blocks of text, treating each line as a token.\n\n    Options\n    * `ignoreWhitespace`: `true` to ignore leading and trailing whitespace characters when checking if two lines are equal. Defaults to `false`.\n    * `ignoreNewlineAtEof`: `true` to ignore a missing newline character at the end of the last line when comparing it to other lines. (By default, the line `'b\\n'` in text `'a\\nb\\nc'` is not considered equal to the line `'b'` in text `'a\\nb'`; this option makes them be considered equal.) Ignored if `ignoreWhitespace` or `newlineIsToken` are also true.\n    * `stripTrailingCr`: `true` to remove all trailing CR (`\\r`) characters before performing the diff. Defaults to `false`.\n      This helps to get a useful diff when diffing UNIX text files against Windows text files.\n    * `newlineIsToken`: `true` to treat the newline character at the end of each line as its own token. This allows for changes to the newline structure to occur independently of the line content and to be treated as such. In general this is the more human friendly form of `diffLines`; the default behavior with this option turned off is better suited for patches and other computer friendly output. Defaults to `false`.\n\n    Note that while using `ignoreWhitespace` in combination with `newlineIsToken` is not an error, results may not be as expected. With `ignoreWhitespace: true` and `newlineIsToken: false`, changing a completely empty line to contain some spaces is treated as a non-change, but with `ignoreWhitespace: true` and `newlineIsToken: true`, it is treated as an insertion. This is because the content of a completely blank line is not a token at all in `newlineIsToken` mode.\n\n    Returns a list of [change objects](#change-objects).\n\n* `diffSentences(oldStr, newStr[, options])` - diffs two blocks of text, treating each sentence, and the whitespace between each pair of sentences, as a token. The characters `.`, `!`, and `?`, when followed by whitespace, are treated as marking the end of a sentence; nothing else besides the end of the string is considered to mark a sentence end.\n\n  (For more sophisticated detection of sentence breaks, including support for non-English punctuation, consider instead tokenizing with an [`Intl.Segmenter`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) with `granularity: 'sentence'` and passing the result to `diffArrays`.)\n\n    Returns a list of [change objects](#change-objects).\n\n* `diffCss(oldStr, newStr[, options])` - diffs two blocks of text, comparing CSS tokens.\n\n    Returns a list of [change objects](#change-objects).\n\n* `diffJson(oldObj, newObj[, options])` - diffs two JSON-serializable objects by first serializing them to prettily-formatted JSON and then treating each line of the JSON as a token. Object properties are ordered alphabetically in the serialized JSON, so the order of properties in the objects being compared doesn't affect the result.\n\n    Returns a list of [change objects](#change-objects).\n    \n    Options\n    * `stringifyReplacer`: A custom replacer function. Operates similarly to the `replacer` parameter to [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#the_replacer_parameter), but must be a function.\n    *  `undefinedReplacement`: A value to replace `undefined` with. Ignored if a `stringifyReplacer` is provided.\n\n* `diffArrays(oldArr, newArr[, options])` - diffs two arrays of tokens, comparing each item for strict equality (===).\n\n    Options\n    * `comparator`: `function(left, right)` for custom equality checks\n\n    Returns a list of [change objects](#change-objects).\n\n* `createTwoFilesPatch(oldFileName, newFileName, oldStr, newStr[, oldHeader[, newHeader[, options]]])` - creates a unified diff patch by first computing a diff with `diffLines` and then serializing it to unified diff format.\n\n    Parameters:\n    * `oldFileName` : String to be output in the filename section of the patch for the removals\n    * `newFileName` : String to be output in the filename section of the patch for the additions\n    * `oldStr` : Original string value\n    * `newStr` : New string value\n    * `oldHeader` : Optional additional information to include in the old file header. Default: `undefined`.\n    * `newHeader` : Optional additional information to include in the new file header. Default: `undefined`.\n    * `options` : An object with options. \n      - `context` describes how many lines of context should be included. You can set this to `Number.MAX_SAFE_INTEGER` or `Infinity` to include the entire file content in one hunk.\n      - `ignoreWhitespace`: Same as in `diffLines`. Defaults to `false`.\n      - `stripTrailingCr`: Same as in `diffLines`. Defaults to `false`.\n\n* `createPatch(fileName, oldStr, newStr[, oldHeader[, newHeader[, options]]])` - creates a unified diff patch.\n\n    Just like createTwoFilesPatch, but with oldFileName being equal to newFileName.\n\n* `formatPatch(patch)` - creates a unified diff patch.\n\n    `patch` may be either a single structured patch object (as returned by `structuredPatch`) or an array of them (as returned by `parsePatch`).\n\n* `structuredPatch(oldFileName, newFileName, oldStr, newStr[, oldHeader[, newHeader[, options]]])` - returns an object with an array of hunk objects.\n\n    This method is similar to createTwoFilesPatch, but returns a data structure\n    suitable for further processing. Parameters are the same as createTwoFilesPatch. The data structure returned may look like this:\n\n    ```js\n    {\n      oldFileName: 'oldfile', newFileName: 'newfile',\n      oldHeader: 'header1', newHeader: 'header2',\n      hunks: [{\n        oldStart: 1, oldLines: 3, newStart: 1, newLines: 3,\n        lines: [' line2', ' line3', '-line4', '+line5', '\\\\ No newline at end of file'],\n      }]\n    }\n    ```\n\n* `applyPatch(source, patch[, options])` - attempts to apply a unified diff patch.\n\n    Hunks are applied first to last. `applyPatch` first tries to apply the first hunk at the line number specified in the hunk header, and with all context lines matching exactly. If that fails, it tries scanning backwards and forwards, one line at a time, to find a place to apply the hunk where the context lines match exactly. If that still fails, and `fuzzFactor` is greater than zero, it increments the maximum number of mismatches (missing, extra, or changed context lines) that there can be between the hunk context and a region where we are trying to apply the patch such that the hunk will still be considered to match. Regardless of `fuzzFactor`, lines to be deleted in the hunk *must* be present for a hunk to match, and the context lines *immediately* before and after an insertion must match exactly.\n\n    Once a hunk is successfully fitted, the process begins again with the next hunk. Regardless of `fuzzFactor`, later hunks must be applied later in the file than earlier hunks.\n\n    If a hunk cannot be successfully fitted *anywhere* with fewer than `fuzzFactor` mismatches, `applyPatch` fails and returns `false`.\n\n    If a hunk is successfully fitted but not at the line number specified by the hunk header, all subsequent hunks have their target line number adjusted accordingly. (e.g. if the first hunk is applied 10 lines below where the hunk header said it should fit, `applyPatch` will *start* looking for somewhere to apply the second hunk 10 lines below where its hunk header says it goes.)\n\n    If the patch was applied successfully, returns a string containing the patched text. If the patch could not be applied (because some hunks in the patch couldn't be fitted to the text in `source`), `applyPatch` returns false.\n\n    `patch` may be a string diff or the output from the `parsePatch` or `structuredPatch` methods.\n\n    The optional `options` object may have the following keys:\n\n    - `fuzzFactor`: Maximum Levenshtein distance (in lines deleted, added, or subtituted) between the context shown in a patch hunk and the lines found in the file. Defaults to 0.\n    - `autoConvertLineEndings`: If `true`, and if the file to be patched consistently uses different line endings to the patch (i.e. either the file always uses Unix line endings while the patch uses Windows ones, or vice versa), then `applyPatch` will behave as if the line endings in the patch were the same as those in the source file. (If `false`, the patch will usually fail to apply in such circumstances since lines deleted in the patch won't be considered to match those in the source file.) Defaults to `true`.\n    - `compareLine(lineNumber, line, operation, patchContent)`: Callback used to compare to given lines to determine if they should be considered equal when patching. Defaults to strict equality but may be overridden to provide fuzzier comparison. Should return false if the lines should be rejected.\n\n* `applyPatches(patch, options)` - applies one or more patches.\n\n    `patch` may be either an array of structured patch objects, or a string representing a patch in unified diff format (which may patch one or more files).\n\n    This method will iterate over the contents of the patch and apply to data provided through callbacks. The general flow for each patch index is:\n\n    - `options.loadFile(index, callback)` is called. The caller should then load the contents of the file and then pass that to the `callback(err, data)` callback. Passing an `err` will terminate further patch execution.\n    - `options.patched(index, content, callback)` is called once the patch has been applied. `content` will be the return value from `applyPatch`. When it's ready, the caller should call `callback(err)` callback. Passing an `err` will terminate further patch execution.\n\n    Once all patches have been applied or an error occurs, the `options.complete(err)` callback is made.\n\n* `parsePatch(diffStr)` - Parses a patch into structured data\n\n    Return a JSON object representation of the a patch, suitable for use with the `applyPatch` method. This parses to the same structure returned by `structuredPatch`.\n\n* `reversePatch(patch)` - Returns a new structured patch which when applied will undo the original `patch`.\n\n    `patch` may be either a single structured patch object (as returned by `structuredPatch`) or an array of them (as returned by `parsePatch`).\n\n* `convertChangesToXML(changes)` - converts a list of change objects to a serialized XML format\n\n* `convertChangesToDMP(changes)` - converts a list of change objects to the format returned by Google's [diff-match-patch](https://github.com/google/diff-match-patch) library\n\n#### Universal `options`\n\nCertain options can be provided in the `options` object of *any* method that calculates a diff (including `diffChars`, `diffLines` etc. as well as `structuredPatch`, `createPatch`, and `createTwoFilesPatch`):\n\n* `callback`: if provided, the diff will be computed in async mode to avoid blocking the event loop while the diff is calculated. The value of the `callback` option should be a function and will be passed the computed diff or patch as its first argument.\n\n  (Note that if the ONLY option you want to provide is a callback, you can pass the callback function directly as the `options` parameter instead of passing an object with a `callback` property.)\n\n* `maxEditLength`: a number specifying the maximum edit distance to consider between the old and new texts. You can use this to limit the computational cost of diffing large, very different texts by giving up early if the cost will be huge. This option can be passed either to diffing functions (`diffLines`, `diffChars`, etc) or to patch-creation function (`structuredPatch`, `createPatch`, etc), all of which will indicate that the max edit length was reached by returning `undefined` instead of whatever they'd normally return.\n\n* `timeout`: a number of milliseconds after which the diffing algorithm will abort and return `undefined`. Supported by the same functions as `maxEditLength`.\n\n* `oneChangePerToken`: if `true`, the array of change objects returned will contain one change object per token (e.g. one per line if calling `diffLines`), instead of runs of consecutive tokens that are all added / all removed / all conserved being combined into a single change object.\n\n### Defining custom diffing behaviors\n\nIf you need behavior a little different to what any of the text diffing functions above offer, you can roll your own by customizing both the tokenization behavior used and the notion of equality used to determine if two tokens are equal.\n\nThe simplest way to customize tokenization behavior is to simply tokenize the texts you want to diff yourself, with your own code, then pass the arrays of tokens to `diffArrays`. For instance, if you wanted a semantically-aware diff of some code, you could try tokenizing it using a parser specific to the programming language the code is in, then passing the arrays of tokens to `diffArrays`.\n\nTo customize the notion of token equality used, use the `comparator` option to `diffArrays`.\n\nFor even more customisation of the diffing behavior, you can extend the `Diff()` class, override its `castInput`, `tokenize`, `removeEmpty`, `equals`, and `join` properties with your own functions, then call its `diff(oldString, newString[, options])` method. The methods you can override are used as follows:\n\n* `castInput(value, options)`: used to transform the `oldString` and `newString` before any other steps in the diffing algorithm happen. For instance, `diffJson` uses `castInput` to serialize the objects being diffed to JSON. Defaults to a no-op.\n* `tokenize(value, options)`: used to convert each of `oldString` and `newString` (after they've gone through `castInput`) to an array of tokens. Defaults to returning `value.split('')` (returning an array of individual characters).\n* `removeEmpty(array)`: called on the arrays of tokens returned by `tokenize` and can be used to modify them. Defaults to stripping out falsey tokens, such as empty strings. `diffArrays` overrides this to simply return the `array`, which means that falsey values like empty strings can be handled like any other token by `diffArrays`.\n* `equals(left, right, options)`: called to determine if two tokens (one from the old string, one from the new string) should be considered equal. Defaults to comparing them with `===`.\n* `join(tokens)`: gets called with an array of consecutive tokens that have either all been added, all been removed, or are all common. Needs to join them into a single value that can be used as the `value` property of the [change object](#change-objects) for these tokens. Defaults to simply returning `tokens.join('')` (and therefore by default will error out if your tokens are not strings; differs that support non-string tokens like `diffArrays` should override it to be a no-op to fix this).\n* `postProcess(changeObjects, options)`: gets called at the end of the algorithm with the [change objects](#change-objects) produced, and can do final cleanups on them. Defaults to simply returning `changeObjects` unchanged.\n\n### Change Objects\nMany of the methods above return change objects. These objects consist of the following fields:\n\n* `value`: The concatenated content of all the tokens represented by this change object - i.e. generally the text that is either added, deleted, or common, as a single string. In cases where tokens are considered common but are non-identical (e.g. because an option like `ignoreCase` or a custom `comparator` was used), the value from the *new* string will be provided here.\n* `added`: true if the value was inserted into the new string, otherwise false\n* `removed`: true if the value was removed from the old string, otherwise false\n* `count`: How many tokens (e.g. chars for `diffChars`, lines for `diffLines`) the value in the change object consists of\n\n(Change objects where `added` and `removed` are both false represent content that is common to the old and new strings.)\n\n## Examples\n\n#### Basic example in Node\n\n```js\nrequire('colors');\nconst {diffChars} = require('diff');\n\nconst one = 'beep boop';\nconst other = 'beep boob blah';\n\nconst diff = diffChars(one, other);\n\ndiff.forEach((part) => {\n  // green for additions, red for deletions\n  let text = part.added ? part.value.bgGreen :\n             part.removed ? part.value.bgRed :\n                            part.value;\n  process.stderr.write(text);\n});\n\nconsole.log();\n```\nRunning the above program should yield\n\n<img src=\"images/node_example.png\" alt=\"Node Example\">\n\n#### Basic example in a web page\n\n```html\n<pre id=\"display\"></pre>\n<script src=\"diff.js\"></script>\n<script>\nconst one = 'beep boop',\n    other = 'beep boob blah',\n    color = '';\n    \nlet span = null;\n\nconst diff = Diff.diffChars(one, other),\n    display = document.getElementById('display'),\n    fragment = document.createDocumentFragment();\n\ndiff.forEach((part) => {\n  // green for additions, red for deletions\n  // grey for common parts\n  const color = part.added ? 'green' :\n    part.removed ? 'red' : 'grey';\n  span = document.createElement('span');\n  span.style.color = color;\n  span.appendChild(document\n    .createTextNode(part.value));\n  fragment.appendChild(span);\n});\n\ndisplay.appendChild(fragment);\n</script>\n```\n\nOpen the above .html file in a browser and you should see\n\n<img src=\"images/web_example.png\" alt=\"Node Example\">\n\n#### Example of generating a patch from Node\n\nThe code below is roughly equivalent to the Unix command `diff -u file1.txt file2.txt > mydiff.patch`:\n\n```\nconst {createTwoFilesPatch} = require('diff');\nconst file1Contents = fs.readFileSync(\"file1.txt\").toString();\nconst file2Contents = fs.readFileSync(\"file2.txt\").toString();\nconst patch = createTwoFilesPatch(\"file1.txt\", \"file2.txt\", file1Contents, file2Contents);\nfs.writeFileSync(\"mydiff.patch\", patch);\n```\n\n#### Examples of parsing and applying a patch from Node\n\n##### Applying a patch to a specified file\n\nThe code below is roughly equivalent to the Unix command `patch file1.txt mydiff.patch`:\n\n```\nconst {applyPatch} = require('diff');\nconst file1Contents = fs.readFileSync(\"file1.txt\").toString();\nconst patch = fs.readFileSync(\"mydiff.patch\").toString();\nconst patchedFile = applyPatch(file1Contents, patch);\nfs.writeFileSync(\"file1.txt\", patchedFile);\n```\n\n##### Applying a multi-file patch to the files specified by the patch file itself\n\nThe code below is roughly equivalent to the Unix command `patch < mydiff.patch`:\n\n```\nconst {applyPatches} = require('diff');\nconst patch = fs.readFileSync(\"mydiff.patch\").toString();\napplyPatches(patch, {\n    loadFile: (patch, callback) => {\n        let fileContents;\n        try {\n            fileContents = fs.readFileSync(patch.oldFileName).toString();\n        } catch (e) {\n            callback(`No such file: ${patch.oldFileName}`);\n            return;\n        }\n        callback(undefined, fileContents);\n    },\n    patched: (patch, patchedContent, callback) => {\n        if (patchedContent === false) {\n            callback(`Failed to apply patch to ${patch.oldFileName}`)\n            return;\n        }\n        fs.writeFileSync(patch.oldFileName, patchedContent);\n        callback();\n    },\n    complete: (err) => {\n        if (err) {\n            console.log(\"Failed with error:\", err);\n        }\n    }\n});\n```\n\n## Compatibility\n\njsdiff should support all ES5 environments. If you find one that it doesn't support, please [open an issue](https://github.com/kpdecker/jsdiff/issues).\n\n## TypeScript\n\nAs of version 8, JsDiff ships with type definitions. From version 8 onwards, you should not depend on the `@types/diff` package.\n\nOne tricky pattern pervades the type definitions and is worth explaining here. Most diff-generating and patch-generating functions (`diffChars`, `diffWords`, `structuredPatch`, etc) can be run in async mode (by providing a `callback` option), in abortable mode (by passing a `timeout` or `maxEditLength` property), or both. This is awkward for typing, because these modes have different call signatures:\n  * in abortable mode, the result *might* be `undefined`, and\n  * in async mode, the result (which *might* be allowed to be `undefined`, depending upon whether we're in abortable mode) is passed to the provide callback instead of being returned, and the return value is always `undefined`\n\nOur type definitions handle this as best they can by declaring different types for multiple [overload signatures](https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads) for each such function - and also by declaring different types for abortable and nonabortable options objects. For instance, an object of type `DiffCharsOptionsAbortable` is valid to pass as the `options` argument to `diffChars` and represents an *abortable* call (whose result may be `undefined`) since it necessarily contains either the `timeout` or `maxEditLength` property.\n\nThis approach, while probably the least bad way available to add types to JsDiff without radically refactoring the library's API, does not yield perfect results. *As long as* TypeScript is able to statically determine the type of your options, and therefore which overload signature is appropriate, everything should work fine. This should always be the case if you are passing an object literal as the `options` argument and inlining the definition of any `callback` function within that literal. But in cases where TypeScript *cannot* manage to do this - as may often be the case if you, say, define an `options: any = {}` object, build up your options programmatically, and then pass the result to a JsDiff function - then it is likely to fail to match the correct overload signature (probably defaulting to assuming you are calling the function in non-abortable, non-async mode), potentially causing type errors. You can either ignore (e.g. with `@ts-expect-error`) any such errors, or try to avoid them by refactoring your code so that TypeScript can always statically determine the type of the options you pass.\n\n## License\n\nSee [LICENSE](https://github.com/kpdecker/jsdiff/blob/master/LICENSE).\n\n## Deviations from the published Myers diff algorithm\n\njsdiff deviates from the published algorithm in a couple of ways that don't affect results but do affect performance:\n\n* jsdiff keeps track of the diff for each diagonal using a linked list of change objects for each diagonal, rather than the historical array of furthest-reaching D-paths on each diagonal contemplated on page 8 of Myers's paper.\n* jsdiff skips considering diagonals where the furthest-reaching D-path would go off the edge of the edit graph. This dramatically reduces the time cost (from quadratic to linear) in cases where the new text just appends or truncates content at the end of the old text.\n",
  "readmeFilename": "README.md",
  "users": {
   "sq": true,
