@@ -60,10 +60,41 @@ const server = createServer((req, res) => {
                             dest,
                             basename(filename)
                         )
+                        let parsed_data = JSON.parse(data);
+
+                        // delete some fields that we don't need
+                        delete parsed_data["keywords"]
+                        delete parsed_data["repository"]
+                        delete parsed_data["contributors"]
+                        delete parsed_data["author"]
+                        delete parsed_data["bugs"]
+                        delete parsed_data["readme"]
+                        delete parsed_data["readmeFilename"]
+                        delete parsed_data["maintainers"]
+                        delete parsed_data["homepage"]
+                        delete parsed_data["description"]
+
+                        for (const key in parsed_data["versions"]) {
+                            if (Object.prototype.hasOwnProperty.call(parsed_data["versions"], key)) {
+                                const element = parsed_data["versions"][key];
+                                delete element["keywords"]
+                                delete element["repository"]
+                                delete element["contributors"]
+                                delete element["maintainers"]
+                                delete element["author"]
+                                delete element["homepage"]
+                                delete element["_npmUser"]
+                                delete element["_npmOperationalInternal"]
+                                delete element["description"]
+                            }
+                        }
+
+                        // data._rev - could be some hash that we need to adjust because we modified the content?
+
                         writeFileSync(
                             the_path,
                             // make it take multiple lines, otherwise git diff would not be more efficient than with inlining into builder manifest
-                            JSON.stringify(JSON.parse(data), null, 1),
+                            JSON.stringify(parsed_data, null, 1),
                             'utf-8')
                         flatpakManifestIndices.push({
                             type: "file",
