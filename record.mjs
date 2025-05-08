@@ -11,7 +11,7 @@ const flatpakManifest = {}
 const flatpakManifestIndices = []
 
 /** @type {string[]} */
-const packages_which_should_dl_metdata = []
+const packages_which_should_dl_metadata = []
 
 function stripSuffix(str, suffix) {
     if (str.endsWith(suffix)) {
@@ -123,7 +123,7 @@ const server = createServer((req, res) => {
             }
 
             if (req.url.endsWith(".tgz")) {
-                packages_which_should_dl_metdata.push(
+                packages_which_should_dl_metadata.push(
                     stripSuffix(stripSuffix(req.url, basename(req.url)), '/-/')
                 )
             } else {
@@ -164,7 +164,7 @@ server.listen(PORT, () => {
 
 async function save() {
     // force downloading of index files
-    const indexUrls = packages_which_should_dl_metdata.map(relativeUrl => `http://localhost:${PORT}${relativeUrl}`)
+    const indexUrls = packages_which_should_dl_metadata.map(relativeUrl => `http://localhost:${PORT}${relativeUrl}`)
     // console.log(indexUrls);
 
     await Promise.all(indexUrls.map(url => fetch(url)))
