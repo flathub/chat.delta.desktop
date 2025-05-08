@@ -13,6 +13,9 @@ const flatpakManifestIndices = []
 /** @type {string[]} */
 const packages_which_should_dl_metadata = []
 
+/** @type {Record<string,string[]>} */
+const usedVersions = {}
+
 function stripSuffix(str, suffix) {
     if (str.endsWith(suffix)) {
         return str.slice(0, -suffix.length);
@@ -143,6 +146,18 @@ const server = createServer((req, res) => {
                 dest: dirname(destPath),
                 "dest-filename": basename(destPath),
             }
+
+            let [name, version] = req.url.split("/-/")
+            name = name.substring(1) // remove `/` in beginning
+            const sub_package_name = name.split('/').slice(-1)[0]
+            version = version.replace(`${sub_package_name}-`, '')
+            version = version.substring(0, version.lastIndexOf(".tgz"))
+
+            if (usedVersions[name]) {
+                usedVersions[name].push(version)
+            } else {
+                usedVersions[name] = [version]
+            }
         })
     });
 
@@ -175,6 +190,7 @@ async function save() {
     flatpakManifestIndices.sort((a, b) => a.path.localeCompare(b.path))
 
     writeFileSync('generated/proxy-registry-cache-manifest.json', JSON.stringify([...arrayManifest, ...flatpakManifestIndices], null, 2), 'utf-8')
+    writeFileSync('generated/used_versions_strip_info.json', JSON.stringify(usedVersions, null, 2), 'utf-8')
 }
 
 process.on('SIGINT', async (ev) => {

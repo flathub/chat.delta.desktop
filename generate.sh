@@ -123,4 +123,8 @@ echo "[generate manifest that puts electron binary into cache]"
 
 node generate_electron_dependency.mjs
 
+echo "[strip unused versions from pnpm package indices]"
+
+node tool_strip.mjs
+
 echo "[done]"
