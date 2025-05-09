@@ -1,648 +1,80 @@
 {
- "_id": "@aashutoshrathi/word-wrap",
- "_rev": "2-f1167cb1a21c5792e35eb001f8e72073",
- "name": "@aashutoshrathi/word-wrap",
- "dist-tags": {
-  "latest": "1.2.6"
- },
- "versions": {
-  "1.2.4": {
-   "name": "@aashutoshrathi/word-wrap",
-   "description": "Wrap words to a specified length.",
-   "version": "1.2.4",
-   "homepage": "https://github.com/jonschlinkert/word-wrap",
-   "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-   },
-   "contributors": [
-    {
-     "name": "Danilo Sampaio",
-     "email": "danilo.sampaio@gmail.com",
-     "url": "localhost:8080"
-    },
-    {
-     "name": "Fede Ramirez",
-     "email": "i@2fd.me",
-     "url": "https://2fd.github.io"
-    },
-    {
-     "name": "Joe Hildebrand",
-     "email": "joe-github@cursive.net",
-     "url": "https://twitter.com/hildjj"
-    },
-    {
-     "name": "Jon Schlinkert",
-     "email": "jon.schlinkert@sellside.com",
-     "url": "http://twitter.com/jonschlinkert"
-    },
-    {
-     "name": "Todd Kennedy",
-     "url": "https://tck.io"
-    },
-    {
-     "name": "Waldemar Reusch",
-     "url": "https://github.com/lordvlad"
-    },
-    {
-     "name": "Wolfgang Faust",
-     "url": "http://www.linestarve.com"
-    },
-    {
-     "name": "Zach Hale",
-     "email": "zachhale@gmail.com",
-     "url": "http://zachhale.com"
+  "_id": "@aashutoshrathi/word-wrap",
+  "_rev": "2-f1167cb1a21c5792e35eb001f8e72073",
+  "name": "@aashutoshrathi/word-wrap",
+  "dist-tags": {
+    "latest": "1.2.6"
+  },
+  "versions": {
+    "1.2.6": {
+      "name": "@aashutoshrathi/word-wrap",
+      "version": "1.2.6",
+      "bugs": {
+        "url": "https://github.com/aashutoshrathi/word-wrap/issues"
+      },
+      "license": "MIT",
+      "main": "index.js",
+      "engines": {
+        "node": ">=0.10.0"
+      },
+      "scripts": {
+        "test": "mocha"
+      },
+      "devDependencies": {
+        "gulp-format-md": "^0.1.11",
+        "mocha": "^10.2.0"
+      },
+      "typings": "index.d.ts",
+      "verb": {
+        "toc": false,
+        "layout": "default",
+        "tasks": [
+          "readme"
+        ],
+        "plugins": [
+          "gulp-format-md"
+        ],
+        "lint": {
+          "reflinks": true
+        },
+        "related": {
+          "list": [
+            "common-words",
+            "shuffle-words",
+            "unique-words",
+            "wordcount"
+          ]
+        },
+        "reflinks": [
+          "verb",
+          "verb-generate-readme"
+        ]
+      },
+      "gitHead": "87a3667df0dda1ebf5f6175a040286f1e1d14ea3",
+      "_id": "@aashutoshrathi/word-wrap@1.2.6",
+      "_nodeVersion": "18.12.1",
+      "_npmVersion": "9.5.1",
+      "dist": {
+        "integrity": "sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==",
+        "shasum": "bd9154aec9983f77b3a034ecaa015c2e4201f6cf",
+        "tarball": "http://localhost:3000/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz",
+        "fileCount": 5,
+        "unpackedSize": 10859,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEYCIQDcTgsSQ7hA7WHfaAaooLf/M5zYwfIeMhjDbscvwFJqwwIhAMHMstv2NYesG8M3Za4HlvC0eeb7mHxJsIRLqXKYBfTX"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
-   ],
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jonschlinkert/word-wrap.git"
-   },
-   "bugs": {
-    "url": "https://github.com/jonschlinkert/word-wrap/issues"
-   },
-   "license": "MIT",
-   "main": "index.js",
-   "engines": {
-    "node": ">=0.10.0"
-   },
-   "scripts": {
-    "test": "mocha"
-   },
-   "devDependencies": {
-    "gulp-format-md": "^0.1.11",
-    "mocha": "^3.2.0"
-   },
-   "keywords": [
-    "break",
-    "carriage",
-    "line",
-    "new-line",
-    "newline",
-    "return",
-    "soft",
-    "text",
-    "word",
-    "word-wrap",
-    "words",
-    "wrap"
-   ],
-   "typings": "index.d.ts",
-   "verb": {
-    "toc": false,
-    "layout": "default",
-    "tasks": [
-     "readme"
-    ],
-    "plugins": [
-     "gulp-format-md"
-    ],
-    "lint": {
-     "reflinks": true
-    },
-    "related": {
-     "list": [
-      "common-words",
-      "shuffle-words",
-      "unique-words",
-      "wordcount"
-     ]
-    },
-    "reflinks": [
-     "verb",
-     "verb-generate-readme"
-    ]
-   },
-   "dependencies": {
-    "argparse": "^1.0.10",
-    "arr-union": "^3.1.0",
-    "array-slice": "^0.2.3",
-    "assign-symbols": "^1.0.0",
-    "atob": "^2.1.2",
-    "autolinker": "^0.28.1",
-    "balanced-match": "^1.0.2",
-    "base": "^0.11.2",
-    "brace-expansion": "^1.1.11",
-    "browser-stdout": "^1.3.0",
-    "cache-base": "^1.0.1",
-    "class-utils": "^0.3.6",
-    "collection-visit": "^1.0.0",
-    "commander": "^2.9.0",
-    "component-emitter": "^1.3.0",
-    "concat-map": "^0.0.1",
-    "concat-with-sourcemaps": "^1.1.0",
-    "copy-descriptor": "^0.1.1",
-    "core-util-is": "^1.0.3",
-    "debug": "^2.6.8",
-    "decode-uri-component": "^0.2.2",
-    "define-property": "^0.2.5",
-    "diff": "^3.2.0",
-    "escape-string-regexp": "^1.0.5",
-    "expand-range": "^1.8.2",
-    "expand-reflinks": "^0.2.1",
-    "extend-shallow": "^2.0.1",
-    "fill-range": "^2.2.4",
-    "for-in": "^1.0.2",
-    "fs.realpath": "^1.0.0",
-    "get-value": "^2.0.6",
-    "gfm-code-block-regex": "^1.0.0",
-    "gfm-code-blocks": "^1.0.0",
-    "glob": "^7.1.1",
-    "graceful-readlink": "^1.0.1",
-    "growl": "^1.9.2",
-    "gulp-header": "^1.8.12",
-    "has-flag": "^1.0.0",
-    "has-value": "^1.0.0",
-    "has-values": "^1.0.0",
-    "he": "^1.1.1",
-    "inflight": "^1.0.6",
-    "inherits": "^2.0.4",
-    "is-accessor-descriptor": "^0.1.6",
-    "is-buffer": "^1.1.6",
-    "is-data-descriptor": "^0.1.4",
-    "is-descriptor": "^0.1.6",
-    "is-extendable": "^0.1.1",
-    "is-number": "^2.1.0",
-    "is-plain-object": "^2.0.4",
-    "isarray": "^1.0.0",
-    "isobject": "^2.1.0",
-    "json3": "^3.3.2",
-    "kind-of": "^5.1.0",
-    "lazy-cache": "^2.0.2",
-    "list-item": "^1.1.1",
-    "lodash._baseassign": "^3.2.0",
-    "lodash._basecopy": "^3.0.1",
-    "lodash._basecreate": "^3.0.3",
-    "lodash._getnative": "^3.9.1",
-    "lodash._isiterateecall": "^3.0.9",
-    "lodash._reinterpolate": "^3.0.0",
-    "lodash.create": "^3.1.1",
-    "lodash.isarguments": "^3.1.0",
-    "lodash.isarray": "^3.0.4",
-    "lodash.keys": "^3.1.2",
-    "lodash.template": "^4.5.0",
-    "lodash.templatesettings": "^4.2.0",
-    "map-cache": "^0.2.2",
-    "map-visit": "^1.0.0",
-    "markdown-utils": "^0.7.3",
-    "math-random": "^1.0.4",
-    "minimatch": "^3.1.2",
-    "minimist": "^0.0.8",
-    "mixin-deep": "^1.3.2",
-    "mkdirp": "^0.5.1",
-    "ms": "^2.0.0",
-    "object-copy": "^0.1.0",
-    "object-visit": "^1.0.1",
-    "once": "^1.4.0",
-    "pascalcase": "^0.1.1",
-    "path-is-absolute": "^1.0.1",
-    "pretty-remarkable": "^0.4.1",
-    "process-nextick-args": "^2.0.1",
-    "randomatic": "^3.1.1",
-    "readable-stream": "^2.3.8",
-    "regex-not": "^1.0.2",
-    "remarkable": "^1.7.4",
-    "repeat-element": "^1.1.4",
-    "repeat-string": "^1.6.1",
-    "resolve-url": "^0.2.1",
-    "ret": "^0.1.15",
-    "safe-buffer": "^5.1.2",
-    "safe-regex": "^1.1.0",
-    "sections": "^0.1.10",
-    "set-getter": "^0.1.1",
-    "set-value": "^2.0.1",
-    "snapdragon": "^0.8.2",
-    "source-map": "^0.6.1",
-    "source-map-resolve": "^0.5.3",
-    "source-map-url": "^0.4.1",
-    "split-string": "^3.1.0",
-    "sprintf-js": "^1.0.3",
-    "static-extend": "^0.1.2",
-    "string_decoder": "^1.1.1",
-    "supports-color": "^3.1.2",
-    "through2": "^2.0.5",
-    "to-gfm-code-block": "^0.1.1",
-    "to-object-path": "^0.3.0",
-    "to-regex": "^3.0.2",
-    "union-value": "^1.0.1",
-    "unset-value": "^1.0.0",
-    "urix": "^0.1.0",
-    "use": "^3.1.1",
-    "util-deprecate": "^1.0.2",
-    "wrappy": "^1.0.2",
-    "xtend": "^4.0.2"
-   },
-   "gitHead": "aa1cc3a6016ffa75ccd74d043419204f549bc2ad",
-   "_id": "@aashutoshrathi/word-wrap@1.2.4",
-   "_nodeVersion": "19.7.0",
-   "_npmVersion": "9.5.1",
-   "dist": {
-    "integrity": "sha512-6+UOPxuPnAYqOfItfzCRqJ2N1aIRAQyO+DiTEjmUrKW+Q2RkgUz+eWH7FkpDqGrVaBOUmDK1yLIzCOsYC5V9Gw==",
-    "shasum": "9e6e70abeb685e0986881411db9fa4cb6d1ab842",
-    "tarball": "http://localhost:3000/@aashutoshrathi/word-wrap/-/word-wrap-1.2.4.tgz",
-    "fileCount": 5,
-    "unpackedSize": 14293,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDnnCcl9NEh+9RGJMmAjETXlh4gGKMsoNxd4h/lv2PMpQIhAJluKvVM+aT3/JXB3OJLdlOQMM5ORv7mp/XvP/0pIPFZ"
-     }
-    ],
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkOm7ZACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpVsg//SpkRh4MxQgBwEWteZRXBY15u9tOz9rHRJqQHYWFGGlYsERDC\r\n8RVxqX5MkSuReQhKxvJ2+6ANWj4g1Khw+jVRlo2OXwNSERTAWVIq3SgjpmBE\r\ndynCQjQ5Sq+R894/jWmXCVyrQ38iOcRuM7VGsFkXNkeK0v1BB8rsLm+p5FHO\r\nlWuxBKENdspVae6WqGpqrCBGJ528aSq2UAbMGlk33EqxpoZpBg3sFv2QCzUF\r\n98qtw6HohWBxBSBK/5BklVR/R1g8xGUAaXUX8OPX82ciuxQq8ygmdlNAYSa0\r\nm5M/XGY3j2F+R1w+RtI3xEAuWpKvr13DljXBqD3hl6fZ0zoFsuWwTwfonH9F\r\nK6Lpnb1dD5by0yjTGSQCv1tF9bBgrC6kqU3pcT2N7blUhXGZ8iftjhMwIU+t\r\nmBrxqq1ebM6Ju3uxGdqIxNMDhycPYfOzQSmrHLpyT9csXxGWWDPlrup2+OU6\r\nzSo6CLmCuIrKfcxDY7X7LR62BqGbQdB2oO71M3u+XRG+aH3Rg7tXDCIINglI\r\nvI/9En8wSJdssFvp2ZS/0W4QGrmyHmNX/5DP5rLZp4GFD1nLSe6MaCjGEac+\r\nQ6uadm0YzUEMYENwBEOqQ45rI51/TTa7R91fbmiLBifyK3coZP7B33GNRqks\r\nX6ZW1j0YflPAr7sZ380TfRPEXbsCzgBsj5U=\r\n=F3sW\r\n-----END PGP SIGNATURE-----\r\n"
-   },
-   "_npmUser": {
-    "name": "aashutoshrathi",
-    "email": "aashutoshrathi@gmail.com"
-   },
-   "directories": {},
-   "maintainers": [
-    {
-     "name": "aashutoshrathi",
-     "email": "aashutoshrathi@gmail.com"
-    }
-   ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/word-wrap_1.2.4_1681551065302_0.41623719160733974"
-   },
-   "_hasShrinkwrap": false
   },
-  "1.2.5": {
-   "name": "@aashutoshrathi/word-wrap",
-   "description": "Wrap words to a specified length.",
-   "version": "1.2.5",
-   "homepage": "https://github.com/aashutoshrathi/word-wrap",
-   "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-   },
-   "contributors": [
-    {
-     "name": "Aashutosh Rathi",
-     "email": "aashutoshrathi@gmail.com"
-    },
-    {
-     "name": "Danilo Sampaio",
-     "email": "danilo.sampaio@gmail.com",
-     "url": "localhost:8080"
-    },
-    {
-     "name": "Fede Ramirez",
-     "email": "i@2fd.me",
-     "url": "https://2fd.github.io"
-    },
-    {
-     "name": "Joe Hildebrand",
-     "email": "joe-github@cursive.net",
-     "url": "https://twitter.com/hildjj"
-    },
-    {
-     "name": "Jon Schlinkert",
-     "email": "jon.schlinkert@sellside.com",
-     "url": "http://twitter.com/jonschlinkert"
-    },
-    {
-     "name": "Todd Kennedy",
-     "url": "https://tck.io"
-    },
-    {
-     "name": "Waldemar Reusch",
-     "url": "https://github.com/lordvlad"
-    },
-    {
-     "name": "Wolfgang Faust",
-     "url": "http://www.linestarve.com"
-    },
-    {
-     "name": "Zach Hale",
-     "email": "zachhale@gmail.com",
-     "url": "http://zachhale.com"
-    }
-   ],
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aashutoshrathi/word-wrap.git"
-   },
-   "bugs": {
-    "url": "https://github.com/aashutoshrathi/word-wrap/issues"
-   },
-   "license": "MIT",
-   "main": "index.js",
-   "engines": {
-    "node": ">=0.10.0"
-   },
-   "scripts": {
-    "test": "mocha"
-   },
-   "devDependencies": {
-    "gulp-format-md": "^0.1.11",
-    "mocha": "^3.2.0"
-   },
-   "keywords": [
-    "break",
-    "carriage",
-    "line",
-    "new-line",
-    "newline",
-    "return",
-    "soft",
-    "text",
-    "word",
-    "word-wrap",
-    "words",
-    "wrap"
-   ],
-   "typings": "index.d.ts",
-   "verb": {
-    "toc": false,
-    "layout": "default",
-    "tasks": [
-     "readme"
-    ],
-    "plugins": [
-     "gulp-format-md"
-    ],
-    "lint": {
-     "reflinks": true
-    },
-    "related": {
-     "list": [
-      "common-words",
-      "shuffle-words",
-      "unique-words",
-      "wordcount"
-     ]
-    },
-    "reflinks": [
-     "verb",
-     "verb-generate-readme"
-    ]
-   },
-   "gitHead": "87a3667df0dda1ebf5f6175a040286f1e1d14ea3",
-   "_id": "@aashutoshrathi/word-wrap@1.2.5",
-   "_nodeVersion": "19.7.0",
-   "_npmVersion": "9.5.1",
-   "dist": {
-    "integrity": "sha512-plhoNEfSVdHMKXQyAxvH0Zyv3/4NL8r6pwgMQdmHR2vBUXn2t74PN2pBRppqKUa6RMT0yldyvOHG5Dbjwy2mBQ==",
-    "shasum": "383aeebd5c176c320d6364fb869669559bbdbac9",
-    "tarball": "http://localhost:3000/@aashutoshrathi/word-wrap/-/word-wrap-1.2.5.tgz",
-    "fileCount": 5,
-    "unpackedSize": 10858,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCICnsE1xv8lctXqrEIwotNuBQ5FThom93XqsYhUyf4Wg0AiBRVqo9f4af6+WcKY4VNydYGjDolM9b4y6usEzZLwVOpg=="
-     }
-    ],
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkPYXBACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrCBA/9ErrLZrod2PtJYWE0RQLnMv8R6KY1X0FM5AYpy1SQ8fwJDpT6\r\n3Y+7traiNQw9sHsCki57j8bZ1mIDduuS7wn6kfVgB0tHHWYvVA+44Efl7kZS\r\nhdUzNae21fVRFjV8alldkbtukJNnrSfxX2XxpCHMn4cE4CsSQITw2pLjDF1E\r\nVlsnzrTaT0p3wUAg8oZ2PfXWMkgZeouHT9aMhYm2U7AeWOqtGwMiM9A+eNJY\r\n3uEfPXC9anmXI28sC1Zh+ecpN5eHsKmLugNByFJ8AXVAiY+RHhcK/5vdFNs0\r\nHpa7bGLP7/KyJL94FMX6LNPjukGb8ygX+3RFH9kUFSV8vYHTHHFI3Bqka9D1\r\neuhzUj/+IgnrhO7ZIuw28T3dBnPosx0UQ9zFqEaESozK8O5qtBrjbbbxaZ2U\r\nCnKIbHkNIPgv1DJLhOQwl6RytMT1BKLN4+Su1gWU/JD1kURCC6l8rZHfDCtS\r\nl3jSTHidR7XOrroxvblYTWWHph41FIcHIuUUBCnZT5dnTa+FR+Z8zm3OB+H3\r\nA+/GazzNau6t6X7/de0CYnPf3Ow+Esz/0Lbufnw0rfYK3cBpYgcXSba0P5cl\r\nNpfzD5+K4LbESQGODK5RBzzCemV1Roo6Nve4/mYyRxiqg8WO8MFHc1iFDqlp\r\ncCabvLCJdZEZfEy+Y97e5SknvBfwe1a9DA4=\r\n=yAfd\r\n-----END PGP SIGNATURE-----\r\n"
-   },
-   "_npmUser": {
-    "name": "aashutoshrathi",
-    "email": "aashutoshrathi@gmail.com"
-   },
-   "directories": {},
-   "maintainers": [
-    {
-     "name": "aashutoshrathi",
-     "email": "aashutoshrathi@gmail.com"
-    }
-   ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/word-wrap_1.2.5_1681753537435_0.1564959467103979"
-   },
-   "_hasShrinkwrap": false
+  "time": {
+    "created": "2023-04-15T09:31:05.240Z",
+    "modified": "2023-06-28T07:39:37.241Z",
+    "1.2.6": "2023-06-28T07:39:37.091Z"
   },
-  "1.2.6": {
-   "name": "@aashutoshrathi/word-wrap",
-   "description": "Wrap words to a specified length.",
-   "version": "1.2.6",
-   "homepage": "https://github.com/aashutoshrathi/word-wrap",
-   "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-   },
-   "contributors": [
-    {
-     "name": "Aashutosh Rathi",
-     "email": "aashutoshrathi@gmail.com"
-    },
-    {
-     "name": "Danilo Sampaio",
-     "email": "danilo.sampaio@gmail.com",
-     "url": "localhost:8080"
-    },
-    {
-     "name": "Fede Ramirez",
-     "email": "i@2fd.me",
-     "url": "https://2fd.github.io"
-    },
-    {
-     "name": "Joe Hildebrand",
-     "email": "joe-github@cursive.net",
-     "url": "https://twitter.com/hildjj"
-    },
-    {
-     "name": "Jon Schlinkert",
-     "email": "jon.schlinkert@sellside.com",
-     "url": "http://twitter.com/jonschlinkert"
-    },
-    {
-     "name": "Todd Kennedy",
-     "url": "https://tck.io"
-    },
-    {
-     "name": "Waldemar Reusch",
-     "url": "https://github.com/lordvlad"
-    },
-    {
-     "name": "Wolfgang Faust",
-     "url": "http://www.linestarve.com"
-    },
-    {
-     "name": "Zach Hale",
-     "email": "zachhale@gmail.com",
-     "url": "http://zachhale.com"
-    }
-   ],
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aashutoshrathi/word-wrap.git"
-   },
-   "bugs": {
-    "url": "https://github.com/aashutoshrathi/word-wrap/issues"
-   },
-   "license": "MIT",
-   "main": "index.js",
-   "engines": {
-    "node": ">=0.10.0"
-   },
-   "scripts": {
-    "test": "mocha"
-   },
-   "devDependencies": {
-    "gulp-format-md": "^0.1.11",
-    "mocha": "^10.2.0"
-   },
-   "keywords": [
-    "break",
-    "carriage",
-    "line",
-    "new-line",
-    "newline",
-    "return",
-    "soft",
-    "text",
-    "word",
-    "word-wrap",
-    "words",
-    "wrap"
-   ],
-   "typings": "index.d.ts",
-   "verb": {
-    "toc": false,
-    "layout": "default",
-    "tasks": [
-     "readme"
-    ],
-    "plugins": [
-     "gulp-format-md"
-    ],
-    "lint": {
-     "reflinks": true
-    },
-    "related": {
-     "list": [
-      "common-words",
-      "shuffle-words",
-      "unique-words",
-      "wordcount"
-     ]
-    },
-    "reflinks": [
-     "verb",
-     "verb-generate-readme"
-    ]
-   },
-   "gitHead": "87a3667df0dda1ebf5f6175a040286f1e1d14ea3",
-   "_id": "@aashutoshrathi/word-wrap@1.2.6",
-   "_nodeVersion": "18.12.1",
-   "_npmVersion": "9.5.1",
-   "dist": {
-    "integrity": "sha512-1Yjs2SvM8TflER/OD3cOjhWWOZb58A2t7wpE2S9XfBYTiIl+XFhQG2bjy4Pu1I+EAlCNUzRDYDdFwFYUKvXcIA==",
-    "shasum": "bd9154aec9983f77b3a034ecaa015c2e4201f6cf",
-    "tarball": "http://localhost:3000/@aashutoshrathi/word-wrap/-/word-wrap-1.2.6.tgz",
-    "fileCount": 5,
-    "unpackedSize": 10859,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQDcTgsSQ7hA7WHfaAaooLf/M5zYwfIeMhjDbscvwFJqwwIhAMHMstv2NYesG8M3Za4HlvC0eeb7mHxJsIRLqXKYBfTX"
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "aashutoshrathi",
-    "email": "aashutoshrathi@gmail.com"
-   },
-   "directories": {},
-   "maintainers": [
-    {
-     "name": "aashutoshrathi",
-     "email": "aashutoshrathi@gmail.com"
-    }
-   ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/word-wrap_1.2.6_1687937976893_0.8480362477454975"
-   },
-   "_hasShrinkwrap": false
-  }
- },
- "time": {
-  "created": "2023-04-15T09:31:05.240Z",
-  "1.2.4": "2023-04-15T09:31:05.472Z",
-  "modified": "2023-06-28T07:39:37.241Z",
-  "1.2.5": "2023-04-17T17:45:37.590Z",
-  "1.2.6": "2023-06-28T07:39:37.091Z"
- },
- "maintainers": [
-  {
-   "name": "aashutoshrathi",
-   "email": "aashutoshrathi@gmail.com"
-  }
- ],
- "description": "Wrap words to a specified length.",
- "homepage": "https://github.com/aashutoshrathi/word-wrap",
- "keywords": [
-  "break",
-  "carriage",
-  "line",
-  "new-line",
-  "newline",
-  "return",
-  "soft",
-  "text",
-  "word",
-  "word-wrap",
-  "words",
-  "wrap"
- ],
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/aashutoshrathi/word-wrap.git"
- },
- "contributors": [
-  {
-   "name": "Aashutosh Rathi",
-   "email": "aashutoshrathi@gmail.com"
-  },
-  {
-   "name": "Danilo Sampaio",
-   "email": "danilo.sampaio@gmail.com",
-   "url": "localhost:8080"
-  },
-  {
-   "name": "Fede Ramirez",
-   "email": "i@2fd.me",
-   "url": "https://2fd.github.io"
-  },
-  {
-   "name": "Joe Hildebrand",
-   "email": "joe-github@cursive.net",
-   "url": "https://twitter.com/hildjj"
-  },
-  {
-   "name": "Jon Schlinkert",
-   "email": "jon.schlinkert@sellside.com",
-   "url": "http://twitter.com/jonschlinkert"
-  },
-  {
-   "name": "Todd Kennedy",
-   "url": "https://tck.io"
-  },
-  {
-   "name": "Waldemar Reusch",
-   "url": "https://github.com/lordvlad"
-  },
-  {
-   "name": "Wolfgang Faust",
-   "url": "http://www.linestarve.com"
-  },
-  {
-   "name": "Zach Hale",
-   "email": "zachhale@gmail.com",
-   "url": "http://zachhale.com"
-  }
- ],
- "author": {
-  "name": "Jon Schlinkert",
-  "url": "https://github.com/jonschlinkert"
- },
- "bugs": {
-  "url": "https://github.com/aashutoshrathi/word-wrap/issues"
- },
- "license": "MIT",
- "readme": "# word-wrap [![NPM version](https://img.shields.io/npm/v/word-wrap.svg?style=flat)](https://www.npmjs.com/package/word-wrap) [![NPM monthly downloads](https://img.shields.io/npm/dm/word-wrap.svg?style=flat)](https://npmjs.org/package/word-wrap) [![NPM total downloads](https://img.shields.io/npm/dt/word-wrap.svg?style=flat)](https://npmjs.org/package/word-wrap) [![Linux Build Status](https://img.shields.io/travis/jonschlinkert/word-wrap.svg?style=flat&label=Travis)](https://travis-ci.org/jonschlinkert/word-wrap)\n\n> Wrap words to a specified length.\n\n## Install\n\nInstall with [npm](https://www.npmjs.com/):\n\n```sh\n$ npm install --save word-wrap\n```\n\n## Usage\n\n```js\nvar wrap = require('word-wrap');\n\nwrap('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');\n```\n\nResults in:\n\n```\n  Lorem ipsum dolor sit amet, consectetur adipiscing\n  elit, sed do eiusmod tempor incididunt ut labore\n  et dolore magna aliqua. Ut enim ad minim veniam,\n  quis nostrud exercitation ullamco laboris nisi ut\n  aliquip ex ea commodo consequat.\n```\n\n## Options\n\n![image](https://cloud.githubusercontent.com/assets/383994/6543728/7a381c08-c4f6-11e4-8b7d-b6ba197569c9.png)\n\n### options.width\n\nType: `Number`\n\nDefault: `50`\n\nThe width of the text before wrapping to a new line.\n\n**Example:**\n\n```js\nwrap(str, {width: 60});\n```\n\n### options.indent\n\nType: `String`\n\nDefault: `` (none)\n\nThe string to use at the beginning of each line.\n\n**Example:**\n\n```js\nwrap(str, {indent: '      '});\n```\n\n### options.newline\n\nType: `String`\n\nDefault: `\\n`\n\nThe string to use at the end of each line.\n\n**Example:**\n\n```js\nwrap(str, {newline: '\\n\\n'});\n```\n\n### options.escape\n\nType: `function`\n\nDefault: `function(str){return str;}`\n\nAn escape function to run on each line after splitting them.\n\n**Example:**\n\n```js\nvar xmlescape = require('xml-escape');\nwrap(str, {\n  escape: function(string){\n    return xmlescape(string);\n  }\n});\n```\n\n### options.trim\n\nType: `Boolean`\n\nDefault: `false`\n\nTrim trailing whitespace from the returned string. This option is included since `.trim()` would also strip the leading indentation from the first line.\n\n**Example:**\n\n```js\nwrap(str, {trim: true});\n```\n\n### options.cut\n\nType: `Boolean`\n\nDefault: `false`\n\nBreak a word between any two letters when the word is longer than the specified width.\n\n**Example:**\n\n```js\nwrap(str, {cut: true});\n```\n\n## About\n\n### Related projects\n\n* [common-words](https://www.npmjs.com/package/common-words): Updated list (JSON) of the 100 most common words in the English language. Useful for… [more](https://github.com/jonschlinkert/common-words) | [homepage](https://github.com/jonschlinkert/common-words \"Updated list (JSON) of the 100 most common words in the English language. Useful for excluding these words from arrays.\")\n* [shuffle-words](https://www.npmjs.com/package/shuffle-words): Shuffle the words in a string and optionally the letters in each word using the… [more](https://github.com/jonschlinkert/shuffle-words) | [homepage](https://github.com/jonschlinkert/shuffle-words \"Shuffle the words in a string and optionally the letters in each word using the Fisher-Yates algorithm. Useful for creating test fixtures, benchmarking samples, etc.\")\n* [unique-words](https://www.npmjs.com/package/unique-words): Return the unique words in a string or array. | [homepage](https://github.com/jonschlinkert/unique-words \"Return the unique words in a string or array.\")\n* [wordcount](https://www.npmjs.com/package/wordcount): Count the words in a string. Support for english, CJK and Cyrillic. | [homepage](https://github.com/jonschlinkert/wordcount \"Count the words in a string. Support for english, CJK and Cyrillic.\")\n\n### Contributing\n\nPull requests and stars are always welcome. For bugs and feature requests, [please create an issue](../../issues/new).\n\n### Contributors\n\n| **Commits** | **Contributor** | \n| --- | --- |\n| 43 | [jonschlinkert](https://github.com/jonschlinkert) |\n| 2 | [lordvlad](https://github.com/lordvlad) |\n| 2 | [hildjj](https://github.com/hildjj) |\n| 1 | [danilosampaio](https://github.com/danilosampaio) |\n| 1 | [2fd](https://github.com/2fd) |\n| 1 | [toddself](https://github.com/toddself) |\n| 1 | [wolfgang42](https://github.com/wolfgang42) |\n| 1 | [zachhale](https://github.com/zachhale) |\n\n### Building docs\n\n_(This project's readme.md is generated by [verb](https://github.com/verbose/verb-generate-readme), please don't edit the readme directly. Any changes to the readme must be made in the [.verb.md](.verb.md) readme template.)_\n\nTo generate the readme, run the following command:\n\n```sh\n$ npm install -g verbose/verb#dev verb-generate-readme && verb\n```\n\n### Running tests\n\nRunning and reviewing unit tests is a great way to get familiarized with a library and its API. You can install dependencies and run tests with the following command:\n\n```sh\n$ npm install && npm test\n```\n\n### Author\n\n**Jon Schlinkert**\n\n* [github/jonschlinkert](https://github.com/jonschlinkert)\n* [twitter/jonschlinkert](https://twitter.com/jonschlinkert)\n\n### License\n\nCopyright © 2017, [Jon Schlinkert](https://github.com/jonschlinkert).\nReleased under the [MIT License](LICENSE).\n\n***\n\n_This file was generated by [verb-generate-readme](https://github.com/verbose/verb-generate-readme), v0.6.0, on June 02, 2017._\n",
- "readmeFilename": "README.md"
+  "license": "MIT"
 }

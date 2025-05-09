@@ -1,614 +1,85 @@
 {
- "_id": "@types/rc",
- "_rev": "562-1eb177d09214436663e7c82e45e6fee5",
- "name": "@types/rc",
- "dist-tags": {
-  "ts2.0": "0.0.2",
-  "ts2.1": "0.0.2",
-  "ts2.2": "1.1.0",
-  "ts2.3": "1.1.0",
-  "ts2.4": "1.1.0",
-  "ts2.5": "1.1.0",
-  "ts2.6": "1.1.0",
-  "ts2.7": "1.1.0",
-  "ts2.8": "1.1.0",
-  "ts2.9": "1.1.0",
-  "ts3.0": "1.1.0",
-  "ts3.1": "1.1.0",
-  "ts3.2": "1.1.0",
-  "ts3.3": "1.1.0",
-  "ts3.4": "1.1.0",
-  "ts3.5": "1.1.0",
-  "ts3.6": "1.2.0",
-  "ts3.7": "1.2.0",
-  "ts3.8": "1.2.1",
-  "ts3.9": "1.2.1",
-  "ts4.0": "1.2.1",
-  "ts4.1": "1.2.1",
-  "ts4.2": "1.2.1",
-  "ts4.3": "1.2.1",
-  "ts4.4": "1.2.1",
-  "ts5.8": "1.2.4",
-  "ts5.7": "1.2.4",
-  "latest": "1.2.4",
-  "ts4.5": "1.2.4",
-  "ts4.6": "1.2.4",
-  "ts4.7": "1.2.4",
-  "ts4.8": "1.2.4",
-  "ts4.9": "1.2.4",
-  "ts5.0": "1.2.4",
-  "ts5.1": "1.2.4",
-  "ts5.2": "1.2.4",
-  "ts5.3": "1.2.4",
-  "ts5.4": "1.2.4",
-  "ts5.5": "1.2.4",
-  "ts5.6": "1.2.4",
-  "ts5.9": "1.2.4"
- },
- "versions": {
-  "0.0.1": {
-   "name": "@types/rc",
-   "version": "0.0.1",
-   "author": "Daniel Rosenwasser <https://github.com/DanielRosenwasser>",
-   "license": "MIT",
-   "_id": "@types/rc@0.0.1",
-   "maintainers": [
-    {
-     "name": "types",
-     "email": "ts-npm-types@microsoft.com"
-    }
-   ],
-   "dist": {
-    "shasum": "1f5b8a1b3b1ac6d1fee137c53fac5fa0f28ae0d7",
-    "tarball": "http://localhost:3000/@types/rc/-/rc-0.0.1.tgz",
-    "integrity": "sha512-uQAUkHol29eqCbIGTviUuTBJTJSMkAjnT18qMlKuVdaTZWVzftcEUh/85SJ2vx72/DpiPPg8ZAPtPk383T3qvw==",
-    "signatures": [
-     {
-      "sig": "MEQCIBn/VEZIb+20Ut91eA/a+YSdVTCD+irNRNnO3ohYM0VhAiAhMwCKxMzKI6Xqng0ZyeG+Xm3yBThCKdVxZTOE7alnRw==",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ]
-   },
-   "main": "",
-   "scripts": {},
-   "typings": "index.d.ts",
-   "_npmUser": {
-    "name": "types",
-    "email": "ts-npm-types@microsoft.com"
-   },
-   "repository": {
-    "url": "https://www.github.com/DefinitelyTyped/DefinitelyTyped.git",
-    "type": "git"
-   },
-   "description": "TypeScript definitions for rc",
-   "directories": {},
-   "dependencies": {},
-   "_npmOperationalInternal": {
-    "tmp": "tmp/rc-0.0.1.tgz_1474406163577_0.3853431264869869",
-    "host": "packages-12-west.internal.npmjs.com"
-   },
-   "typesPublisherContentHash": "4b83505de7a8cfe213f4d5d6009d9786a21b4b6d52733806364e60c6385029d4"
+  "_id": "@types/rc",
+  "_rev": "562-1eb177d09214436663e7c82e45e6fee5",
+  "name": "@types/rc",
+  "dist-tags": {
+    "ts2.0": "0.0.2",
+    "ts2.1": "0.0.2",
+    "ts2.2": "1.1.0",
+    "ts2.3": "1.1.0",
+    "ts2.4": "1.1.0",
+    "ts2.5": "1.1.0",
+    "ts2.6": "1.1.0",
+    "ts2.7": "1.1.0",
+    "ts2.8": "1.1.0",
+    "ts2.9": "1.1.0",
+    "ts3.0": "1.1.0",
+    "ts3.1": "1.1.0",
+    "ts3.2": "1.1.0",
+    "ts3.3": "1.1.0",
+    "ts3.4": "1.1.0",
+    "ts3.5": "1.1.0",
+    "ts3.6": "1.2.0",
+    "ts3.7": "1.2.0",
+    "ts3.8": "1.2.1",
+    "ts3.9": "1.2.1",
+    "ts4.0": "1.2.1",
+    "ts4.1": "1.2.1",
+    "ts4.2": "1.2.1",
+    "ts4.3": "1.2.1",
+    "ts4.4": "1.2.1",
+    "ts5.8": "1.2.4",
+    "ts5.7": "1.2.4",
+    "latest": "1.2.4",
+    "ts4.5": "1.2.4",
+    "ts4.6": "1.2.4",
+    "ts4.7": "1.2.4",
+    "ts4.8": "1.2.4",
+    "ts4.9": "1.2.4",
+    "ts5.0": "1.2.4",
+    "ts5.1": "1.2.4",
+    "ts5.2": "1.2.4",
+    "ts5.3": "1.2.4",
+    "ts5.4": "1.2.4",
+    "ts5.5": "1.2.4",
+    "ts5.6": "1.2.4",
+    "ts5.9": "1.2.4"
   },
-  "0.0.2": {
-   "name": "@types/rc",
-   "version": "0.0.2",
-   "license": "MIT",
-   "_id": "@types/rc@0.0.2",
-   "maintainers": [
-    {
-     "name": "types",
-     "email": "ts-npm-types@microsoft.com"
+  "versions": {
+    "1.2.4": {
+      "name": "@types/rc",
+      "version": "1.2.4",
+      "license": "MIT",
+      "_id": "@types/rc@1.2.4",
+      "dist": {
+        "shasum": "fac9aca9fbc7a7e1b83d29ed38a565b4b2dd4d9b",
+        "tarball": "http://localhost:3000/@types/rc/-/rc-1.2.4.tgz",
+        "fileCount": 5,
+        "integrity": "sha512-xD6+epQoMH79A1uwmJIq25D+XZ57jUzCQ1DGSvs3tGKdx7QDYOOaMh6m5KBkEIW4+Cy5++bZ7NLDfdpNiYVKYA==",
+        "signatures": [
+          {
+            "sig": "MEQCIDl/FgPc10HfXzdKsvN5eE4wCtlnF250zmsgsHdVgYmRAiAtIae15OgweLjf/SXp+MC0zBXK7rDchQCycN5puU93gg==",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 9441
+      },
+      "main": "",
+      "types": "index.d.ts",
+      "scripts": {},
+      "directories": {},
+      "dependencies": {
+        "@types/minimist": "*"
+      },
+      "_hasShrinkwrap": false,
+      "typeScriptVersion": "4.5",
+      "typesPublisherContentHash": "dcd40a3e03563bbe6225c95bc987d6603af74c6fa0e3cf9148e930fa2eb31366"
     }
-   ],
-   "contributors": [
-    {
-     "url": "https://github.com/DanielRosenwasser",
-     "name": "Daniel Rosenwasser",
-     "githubUsername": "DanielRosenwasser"
-    }
-   ],
-   "dist": {
-    "shasum": "cb639295e98fb2f7c4d008d7647e9b1aa304e4e3",
-    "tarball": "http://localhost:3000/@types/rc/-/rc-0.0.2.tgz",
-    "fileCount": 4,
-    "integrity": "sha512-/SPcseKv5YkXpkKxISvx6T4eQGQNkgmRDrAZdGtkdcjHWHAMDs6LMu3rkJpmUdh7hOZDvX88zA21VLOktSk+UQ==",
-    "signatures": [
-     {
-      "sig": "MEQCIAgYvsf0vo3GpqilWDcfXGl7btK/xSZL/pXv1CDRneC6AiAFXLngeIY6SypuCFGH632gvyin/1Nf6UKmUcxzMvWR/w==",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ],
-    "unpackedSize": 3092,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcGAtnCRA9TVsSAnZWagAAYSgP/00cko58oqGTyBhRZDcB\nmuv/Oy5JLlXl++HrUsixPeaHY/NJ3REQfzu4NKAJbNVNyYXvU0MKncMFT6ur\nAjV24Ls+K2rHcS1Nn7F1hcrGCMAvaxly1gcnKr8cN8Q4IR4UOYb8isoezb8Q\npFuMQubfTtiC3Uc0Wy0zzTiRa2ysezWyYJXSomGyUDgC4ULFXIR0A9oGQNVT\nyc/6k7umcPOpeJ5nF+kple/T1GZomjBCsnaKdyIeVm1fxENWU4qZidfOy2ZK\negDalQg/8zF1+lPnJjHGxmrRO/2hhu29rsX7u+mpYMuyQ+NqvRr8/7hXEczZ\nnPoNlnDTEUxeaFSQTqor5lsLiQUekm2wiSetLzcUIY/hU9mOtpflBSagTcRW\nQWgOPFMOU3bvhtwbb6ap1ENk+MdXZOn/7A2rkVAxSK5xQik2dFQ3k2kuuhRs\nhqq1jOymWoV4XRszeKYFYcJzLvTYfoNKulOYDHJtj1IDY0J5SJuYLKMal9ca\n2hOfmRtyld0RCXQdq+lvO2udKMJV0u34aT1KtLMdpF3aUKXO0rD/34I1E0vO\nJ5rni0o4ETTDt/wzImEFp8pnM/WwIgx44P8u9+bjfi5UrDuTsxqhuNRFg3SV\nxx8Ujz+k8lOEevJMEtxyZmtSTogwDcER6W4gmkdJY/QP63WlNoEpSYF4Stpj\nAql4\r\n=Q8XT\r\n-----END PGP SIGNATURE-----\r\n"
-   },
-   "main": "",
-   "types": "index",
-   "scripts": {},
-   "_npmUser": {
-    "name": "types",
-    "email": "ts-npm-types@microsoft.com"
-   },
-   "repository": {
-    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
-    "type": "git"
-   },
-   "description": "TypeScript definitions for rc",
-   "directories": {},
-   "dependencies": {},
-   "_hasShrinkwrap": false,
-   "typeScriptVersion": "2.0",
-   "_npmOperationalInternal": {
-    "tmp": "tmp/rc_0.0.2_1545079655245_0.5850541604547557",
-    "host": "s3://npm-registry-packages"
-   },
-   "typesPublisherContentHash": "93bf16e76347c35ae0ed33558b63dcb3117870f4575721a1153d58b6c17c5c84"
   },
-  "1.1.0": {
-   "name": "@types/rc",
-   "version": "1.1.0",
-   "license": "MIT",
-   "_id": "@types/rc@1.1.0",
-   "maintainers": [
-    {
-     "name": "types",
-     "email": "ts-npm-types@microsoft.com"
-    }
-   ],
-   "contributors": [
-    {
-     "url": "https://github.com/DanielRosenwasser",
-     "name": "Daniel Rosenwasser",
-     "githubUsername": "DanielRosenwasser"
-    },
-    {
-     "url": "https://github.com/BendingBender",
-     "name": "BendingBender",
-     "githubUsername": "BendingBender"
-    }
-   ],
-   "dist": {
-    "shasum": "59cf49ae07e2a34ab744231287b85d9e15a580a2",
-    "tarball": "http://localhost:3000/@types/rc/-/rc-1.1.0.tgz",
-    "fileCount": 4,
-    "integrity": "sha512-qw1q31xPnaeExbOA1daA3nfeKW2uZQN4Xg8QqZDM3vsXPHK/lyDpjWXJQIcrByRDcBzZJ3ccchSMMTDtCWgFpA==",
-    "signatures": [
-     {
-      "sig": "MEUCIAO10WHwTsV2OcJNPcYvWbBqTkjx9NpumVeW7pMYdt74AiEAyrKftbxcUs7O32JDe87ZJlXK5H7fDMsZGb6xK1ETW1k=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ],
-    "unpackedSize": 3489,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcKl/mCRA9TVsSAnZWagAAvcsP/iexygcJyfFMgsoktacS\nTwcj8bczpd7pM2L0cf/wprTIqrS2UhBuxfAB/GkHcWJDACITIMRjDk6v78C9\nerkcLloO6uOR8K6f6+F89MbAq5aRIP4XMyPieRy7uNvS+QIwXSRR+XXuIUFo\nGnCMAJztCcQbbJojioz63HMI9NswRfI/4gjyvPN5qxDK/jajti4Xz2zlkfuH\nDaU1m+8Hzqi60XgELAtFqsBpZ3U2Bk/ks0GNAT/UwX6MkU6JYAYvugtVRGsv\nVP3PckF8uSrSGzwIQgrw1ZPil7zrLSmQH+yesxWumnU0zKRekzKAHIq5SvKu\nB1f6KCQZUVT4gJFFpZwvEZPuSjlQYHhpTEAyduJK+DiSVk/vH83oO/OQ54A2\n8WRaNL6kLn3RKWs2SiXYlVGxeoHrKbvwGO8cs4EyWxa3MT9WqThn9FFZWtaq\nOCORmHh8qisqmatDN/V98kRR1FmXu3NMWbsfBRA9CvH6a9b9mg6R7KKi2OxS\nH19qt2KN9XbkQjsfuzK38d46O+uLI4acdQ94xToM3ltOUGHV+eGnxbyw7ClG\nMdErZRTnh/Whdcj3WTxYgGRAehIW2d+GTz8+EKFcR31lFH5gjUj0gkXd+s5e\nIPe+28MKATiPmBR/yquoGvhIykZpWCPygtDfApZHfCsvwQz9h5R+pneDzQCy\nvrwG\r\n=01yz\r\n-----END PGP SIGNATURE-----\r\n"
-   },
-   "main": "",
-   "types": "index",
-   "scripts": {},
-   "_npmUser": {
-    "name": "types",
-    "email": "ts-npm-types@microsoft.com"
-   },
-   "repository": {
-    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
-    "type": "git"
-   },
-   "description": "TypeScript definitions for rc",
-   "directories": {},
-   "dependencies": {},
-   "_hasShrinkwrap": false,
-   "typeScriptVersion": "2.2",
-   "_npmOperationalInternal": {
-    "tmp": "tmp/rc_1.1.0_1546280934103_0.06299415747540471",
-    "host": "s3://npm-registry-packages"
-   },
-   "typesPublisherContentHash": "88e197a6f22314a967b93ea0e9753a31d5bb72161f1dbcb17b973fa44a584ef1"
+  "time": {
+    "created": "2016-09-20T21:16:03.817Z",
+    "modified": "2025-02-23T07:35:57.910Z",
+    "1.2.4": "2023-11-07T13:47:42.930Z"
   },
-  "1.2.0": {
-   "name": "@types/rc",
-   "version": "1.2.0",
-   "license": "MIT",
-   "_id": "@types/rc@1.2.0",
-   "maintainers": [
-    {
-     "name": "types",
-     "email": "ts-npm-types@microsoft.com"
-    }
-   ],
-   "contributors": [
-    {
-     "url": "https://github.com/DanielRosenwasser",
-     "name": "Daniel Rosenwasser",
-     "githubUsername": "DanielRosenwasser"
-    },
-    {
-     "url": "https://github.com/BendingBender",
-     "name": "BendingBender",
-     "githubUsername": "BendingBender"
-    },
-    {
-     "url": "https://github.com/kusyka911",
-     "name": "kusyka911",
-     "githubUsername": "kusyka911"
-    }
-   ],
-   "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/rc",
-   "dist": {
-    "shasum": "2d52af5df08017ceb5fe4b96e437b4e719c0ec83",
-    "tarball": "http://localhost:3000/@types/rc/-/rc-1.2.0.tgz",
-    "fileCount": 4,
-    "integrity": "sha512-eEQ6Hq0K0VShe00iDzG1DKxA5liTsk7jgcR5eDZ5d5cnivLjPqqcDgqurS5NlQJNfgTNg51dp7zFGWHomr5NJQ==",
-    "signatures": [
-     {
-      "sig": "MEUCIQCnHs/zZbq3APSocZvvlCJTicx2CJXYTueee9OYN81IVQIgM1l6fWZncPrOLzzo3tiXaYdtq/S21lxTsSIE9qRqKLM=",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ],
-    "unpackedSize": 5770,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJhG7NCCRA9TVsSAnZWagAAUScP/jRr/drx8q7AeJZWX3l+\nQbKGOtC7he7Dcy3lvtuaMzx1CJMyxurDgBc4fZr6UMDKa0rGwlTNp3Pb7XJC\nxypObPYwmM5OkahPS23RVu9xprXETSrhNHTnEFGWgHLVdHrSx5lrTa6IJ5Jj\n5E2rR/Bxw9GEkZzhCONiWO2i/qf3rWg/URvv5OL6pWW4+uUR1YRtTM3/SOi+\nRDulr8LIP8RoDjiVQIrrkdZKXIKy/qOdRASVUwBDvGhxxWxXDq/RMXHilN/Y\nUb5q8HexNRRVMb910e7pKbUsjBCp60g7D/Wy9Wf2KRXj3bZH/VcdUinMOtEL\nfcMCOQawoTTJYXe/i9aviYjLBGMOs3xA/6Zgx1IfoDnl3SN65h/512N3p2vm\nMlrAs0g6sNIS2UVIhzMKcXVCUMCf3ucOHxcb9aZjRYP6pcfeW8n0wSzHez1h\n49SyeKDaIOnDhNC8ha8dKuZ4yETb9xInP7t0Qyl+Xc+tGVKR6fjkrqIWHXSJ\ns02lVWKHFo0HZyriHJt0Ho7vp2IJXX9UMTn61ncshF72ps/fSTPZSpRaJkii\nkMf434lK3NYOac0RvSwIRoDbY2S1CjQCmApmsYCg0qCiBer/8Zb4bstqp2pq\n4bAWK2x8T7Y+6te6u01kiVygqcNzDJRxafION/e0BdTsqaVy/7jMR+zgbZeL\n73mJ\r\n=vJoT\r\n-----END PGP SIGNATURE-----\r\n"
-   },
-   "main": "",
-   "types": "index.d.ts",
-   "scripts": {},
-   "_npmUser": {
-    "name": "types",
-    "email": "ts-npm-types@microsoft.com"
-   },
-   "repository": {
-    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
-    "type": "git",
-    "directory": "types/rc"
-   },
-   "description": "TypeScript definitions for rc",
-   "directories": {},
-   "dependencies": {},
-   "_hasShrinkwrap": false,
-   "typeScriptVersion": "3.6",
-   "_npmOperationalInternal": {
-    "tmp": "tmp/rc_1.2.0_1629205313976_0.9142664622758752",
-    "host": "s3://npm-registry-packages"
-   },
-   "typesPublisherContentHash": "6ff726fe238164b307832e6ccd925156fae23b0192ce813fe34d3bfc82724ca3"
-  },
-  "1.2.1": {
-   "name": "@types/rc",
-   "version": "1.2.1",
-   "license": "MIT",
-   "_id": "@types/rc@1.2.1",
-   "maintainers": [
-    {
-     "name": "types",
-     "email": "ts-npm-types@microsoft.com"
-    }
-   ],
-   "contributors": [
-    {
-     "url": "https://github.com/DanielRosenwasser",
-     "name": "Daniel Rosenwasser",
-     "githubUsername": "DanielRosenwasser"
-    },
-    {
-     "url": "https://github.com/BendingBender",
-     "name": "BendingBender",
-     "githubUsername": "BendingBender"
-    },
-    {
-     "url": "https://github.com/kusyka911",
-     "name": "kusyka911",
-     "githubUsername": "kusyka911"
-    },
-    {
-     "url": "https://github.com/pulsovi",
-     "name": "David Gabison",
-     "githubUsername": "pulsovi"
-    }
-   ],
-   "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/rc",
-   "dist": {
-    "shasum": "d2d0c2778b2a54fffe018f69b5091b4936ca7263",
-    "tarball": "http://localhost:3000/@types/rc/-/rc-1.2.1.tgz",
-    "fileCount": 4,
-    "integrity": "sha512-+TRLFmHLnpoV0uw4O/PzqMbPT6bhQM0q2KO0l+R7M3sHYRndPpNL6kv8p7Ee9ZxgQ6noYB18/t+heQi7eijOHA==",
-    "signatures": [
-     {
-      "sig": "MEQCIDhNqR2kp81aV4FKwUpoJgCrbUyh0Z/YxRbQddLe8YPeAiABTNLUFRexn4IF12Thf0RBKFv7GA08BO/k9pFqiBSdFA==",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ],
-    "unpackedSize": 9872,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiHa/UACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrcsQ//deVX9qhY+uOv7mpx4pP9DMgLvOWm6Caa8+k0tyK8XOMBBJE/\r\nQ254EaDADIVBMarawj61IqiWvvyjtTeRalb1gAnKIp7YrfW2HLHNj3liCEXw\r\nRYaaY7NIeX2uD4BSJfIFUZhRcurEwPoHBWjOT89Ug5xDr9RqN6eVBkmoGcix\r\nbTafTNUP9ReiKOwr+PuoJpp0FU3vlAP/6wtQhXjxCCEZKwft3OvadCwR03yK\r\nUiM1p7VustYhYy09/xWI8RdYvWsPzjc52Dp/8dtphydH/8QvbY991alsPeYZ\r\ntqLS3FwZ4mQHy0KeHcM2gTezNLnbqi+/ds8eJefxGAvDOB1Oce9sIki38qSW\r\nlWCtfcHHr8Zx4Y/qGOgISRnWbXOdn2vnWfqJUa28sH2Bsv9fc+2eK02na1zQ\r\nck8fMBVT7I4lDorcSouOjATLeZ3FmPK7aBrfUNay95oJi/87mis9Zs6waSWt\r\nBrx5mRPoebsS12q35pMxsqorPV5qVB6U2cpdMxJJgCp/MYov8m3zfXIH9FZ6\r\n5xadWOhaXCQMYMKfTAoBM6RhrVf3GZ6Z1wFGo/K+rBcKbuZWD8BO5MmpQA+M\r\ntagWxVkVQ/XGZTjzjyDWFWZctmYFvFMDzaNOHj/H2WOZ3mEsV6TBxVzQQzHG\r\nMEFG51uJJ9WjYtcygyFh0F6wpDW/tOAHRR0=\r\n=qjPM\r\n-----END PGP SIGNATURE-----\r\n"
-   },
-   "main": "",
-   "types": "index.d.ts",
-   "scripts": {},
-   "_npmUser": {
-    "name": "types",
-    "email": "ts-npm-types@microsoft.com"
-   },
-   "repository": {
-    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
-    "type": "git",
-    "directory": "types/rc"
-   },
-   "description": "TypeScript definitions for rc",
-   "directories": {},
-   "dependencies": {
-    "@types/minimist": "*"
-   },
-   "_hasShrinkwrap": false,
-   "typeScriptVersion": "3.8",
-   "_npmOperationalInternal": {
-    "tmp": "tmp/rc_1.2.1_1646112724112_0.9202232191294029",
-    "host": "s3://npm-registry-packages"
-   },
-   "typesPublisherContentHash": "6774a7d44b9caae6f48a1745fe2ed3e200e4704ba663ba4d67a2eb4542b60173"
-  },
-  "1.2.2": {
-   "name": "@types/rc",
-   "version": "1.2.2",
-   "license": "MIT",
-   "_id": "@types/rc@1.2.2",
-   "maintainers": [
-    {
-     "name": "types",
-     "email": "ts-npm-types@microsoft.com"
-    }
-   ],
-   "contributors": [
-    {
-     "url": "https://github.com/DanielRosenwasser",
-     "name": "Daniel Rosenwasser",
-     "githubUsername": "DanielRosenwasser"
-    },
-    {
-     "url": "https://github.com/BendingBender",
-     "name": "BendingBender",
-     "githubUsername": "BendingBender"
-    },
-    {
-     "url": "https://github.com/kusyka911",
-     "name": "kusyka911",
-     "githubUsername": "kusyka911"
-    },
-    {
-     "url": "https://github.com/pulsovi",
-     "name": "David Gabison",
-     "githubUsername": "pulsovi"
-    }
-   ],
-   "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/rc",
-   "dist": {
-    "shasum": "1f524a9ce38483c3359a0ccc36ae8342db63262c",
-    "tarball": "http://localhost:3000/@types/rc/-/rc-1.2.2.tgz",
-    "fileCount": 5,
-    "integrity": "sha512-rzxU1jGB2r1b25MFaybykVTfuZwOvJegM6x/NgxXVjEKv9N3LNRHqitnTCtdWy9fiMIC9enRzWChJTsb+sFUOA==",
-    "signatures": [
-     {
-      "sig": "MEYCIQC23QInUDIHBA8ACscMfvY4QqbCrqT+vY6GogHmY6oxtQIhAOLnjdO1czkw2hGcByC2ZxpjALP57/Y1V9J7V5vI/ngQ",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ],
-    "unpackedSize": 9877
-   },
-   "main": "",
-   "types": "index.d.ts",
-   "scripts": {},
-   "_npmUser": {
-    "name": "types",
-    "email": "ts-npm-types@microsoft.com"
-   },
-   "repository": {
-    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
-    "type": "git",
-    "directory": "types/rc"
-   },
-   "description": "TypeScript definitions for rc",
-   "directories": {},
-   "dependencies": {
-    "@types/minimist": "*"
-   },
-   "_hasShrinkwrap": false,
-   "typeScriptVersion": "4.5",
-   "_npmOperationalInternal": {
-    "tmp": "tmp/rc_1.2.2_1695799178013_0.6172966981499493",
-    "host": "s3://npm-registry-packages"
-   },
-   "typesPublisherContentHash": "5d686488dc54f7c7165458442f3dabd5e054b4a6a0c6e98ba79dae7c263ad9ea"
-  },
-  "1.2.3": {
-   "name": "@types/rc",
-   "version": "1.2.3",
-   "license": "MIT",
-   "_id": "@types/rc@1.2.3",
-   "maintainers": [
-    {
-     "name": "types",
-     "email": "ts-npm-types@microsoft.com"
-    }
-   ],
-   "contributors": [
-    {
-     "url": "https://github.com/DanielRosenwasser",
-     "name": "Daniel Rosenwasser",
-     "githubUsername": "DanielRosenwasser"
-    },
-    {
-     "url": "https://github.com/BendingBender",
-     "name": "BendingBender",
-     "githubUsername": "BendingBender"
-    },
-    {
-     "url": "https://github.com/kusyka911",
-     "name": "kusyka911",
-     "githubUsername": "kusyka911"
-    },
-    {
-     "url": "https://github.com/pulsovi",
-     "name": "David Gabison",
-     "githubUsername": "pulsovi"
-    }
-   ],
-   "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/rc",
-   "dist": {
-    "shasum": "0dc01d5999d73642db24367ed2ee6c60eb3e626e",
-    "tarball": "http://localhost:3000/@types/rc/-/rc-1.2.3.tgz",
-    "fileCount": 5,
-    "integrity": "sha512-SMwt8fuoR/fwK/4x7fscVguJWRzpqoZ9je/s7kUgvF2Jowd4ZNto7M4sYHMwt5/elEkCpGLGYdYD/E1WcDQwCA==",
-    "signatures": [
-     {
-      "sig": "MEYCIQCD/Knzo1nzwhH+DQ/7buzbCs2dZACkEzHztNzDivVveQIhANtJZDfrw7gpBuoQeF+kURlFGaCtAFqqljd7FUCiVj2G",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ],
-    "unpackedSize": 9441
-   },
-   "main": "",
-   "types": "index.d.ts",
-   "scripts": {},
-   "_npmUser": {
-    "name": "types",
-    "email": "ts-npm-types@microsoft.com"
-   },
-   "repository": {
-    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
-    "type": "git",
-    "directory": "types/rc"
-   },
-   "description": "TypeScript definitions for rc",
-   "directories": {},
-   "dependencies": {
-    "@types/minimist": "*"
-   },
-   "_hasShrinkwrap": false,
-   "typeScriptVersion": "4.5",
-   "_npmOperationalInternal": {
-    "tmp": "tmp/rc_1.2.3_1697630138313_0.46239581864055457",
-    "host": "s3://npm-registry-packages"
-   },
-   "typesPublisherContentHash": "3346dbdc717ec2ef9b949d974c96afef7ec8258a9b2efe72a452e728719ae9f7"
-  },
-  "1.2.4": {
-   "name": "@types/rc",
-   "version": "1.2.4",
-   "license": "MIT",
-   "_id": "@types/rc@1.2.4",
-   "maintainers": [
-    {
-     "name": "types",
-     "email": "ts-npm-types@microsoft.com"
-    }
-   ],
-   "contributors": [
-    {
-     "url": "https://github.com/DanielRosenwasser",
-     "name": "Daniel Rosenwasser",
-     "githubUsername": "DanielRosenwasser"
-    },
-    {
-     "url": "https://github.com/BendingBender",
-     "name": "BendingBender",
-     "githubUsername": "BendingBender"
-    },
-    {
-     "url": "https://github.com/kusyka911",
-     "name": "kusyka911",
-     "githubUsername": "kusyka911"
-    },
-    {
-     "url": "https://github.com/pulsovi",
-     "name": "David Gabison",
-     "githubUsername": "pulsovi"
-    }
-   ],
-   "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/rc",
-   "dist": {
-    "shasum": "fac9aca9fbc7a7e1b83d29ed38a565b4b2dd4d9b",
-    "tarball": "http://localhost:3000/@types/rc/-/rc-1.2.4.tgz",
-    "fileCount": 5,
-    "integrity": "sha512-xD6+epQoMH79A1uwmJIq25D+XZ57jUzCQ1DGSvs3tGKdx7QDYOOaMh6m5KBkEIW4+Cy5++bZ7NLDfdpNiYVKYA==",
-    "signatures": [
-     {
-      "sig": "MEQCIDl/FgPc10HfXzdKsvN5eE4wCtlnF250zmsgsHdVgYmRAiAtIae15OgweLjf/SXp+MC0zBXK7rDchQCycN5puU93gg==",
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-     }
-    ],
-    "unpackedSize": 9441
-   },
-   "main": "",
-   "types": "index.d.ts",
-   "scripts": {},
-   "_npmUser": {
-    "name": "types",
-    "email": "ts-npm-types@microsoft.com"
-   },
-   "repository": {
-    "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
-    "type": "git",
-    "directory": "types/rc"
-   },
-   "description": "TypeScript definitions for rc",
-   "directories": {},
-   "dependencies": {
-    "@types/minimist": "*"
-   },
-   "_hasShrinkwrap": false,
-   "typeScriptVersion": "4.5",
-   "_npmOperationalInternal": {
-    "tmp": "tmp/rc_1.2.4_1699364862749_0.877142089539374",
-    "host": "s3://npm-registry-packages"
-   },
-   "typesPublisherContentHash": "dcd40a3e03563bbe6225c95bc987d6603af74c6fa0e3cf9148e930fa2eb31366"
-  }
- },
- "time": {
-  "created": "2016-09-20T21:16:03.817Z",
-  "modified": "2025-02-23T07:35:57.910Z",
-  "0.0.1": "2016-09-20T21:16:03.817Z",
-  "0.0.2": "2018-12-17T20:47:35.440Z",
-  "1.1.0": "2018-12-31T18:28:54.295Z",
-  "1.2.0": "2021-08-17T13:01:54.140Z",
-  "1.2.1": "2022-03-01T05:32:04.253Z",
-  "1.2.2": "2023-09-27T07:19:38.241Z",
-  "1.2.3": "2023-10-18T11:55:38.518Z",
-  "1.2.4": "2023-11-07T13:47:42.930Z"
- },
- "license": "MIT",
- "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/rc",
- "repository": {
-  "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
-  "type": "git",
-  "directory": "types/rc"
- },
- "description": "TypeScript definitions for rc",
- "contributors": [
-  {
-   "url": "https://github.com/DanielRosenwasser",
-   "name": "Daniel Rosenwasser",
-   "githubUsername": "DanielRosenwasser"
-  },
-  {
-   "url": "https://github.com/BendingBender",
-   "name": "BendingBender",
-   "githubUsername": "BendingBender"
-  },
-  {
-   "url": "https://github.com/kusyka911",
-   "name": "kusyka911",
-   "githubUsername": "kusyka911"
-  },
-  {
-   "url": "https://github.com/pulsovi",
-   "name": "David Gabison",
-   "githubUsername": "pulsovi"
-  }
- ],
- "maintainers": [
-  {
-   "name": "types",
-   "email": "ts-npm-types@microsoft.com"
-  }
- ],
- "readme": "[object Object]",
- "readmeFilename": "",
- "users": {
-  "flumpus-dev": true
- }
+  "license": "MIT"
 }

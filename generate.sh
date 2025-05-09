@@ -3,8 +3,8 @@ set -e
 
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
-CORE_CHECKOUT=v1.157.3
-DESKTOP_CHECKOUT=v1.56.0
+CORE_CHECKOUT=v1.159.3
+DESKTOP_CHECKOUT=v1.58.1
 
 # this script needs:
 # - serveral repos checked out next to this repo
@@ -122,5 +122,10 @@ EOL
 echo "[generate manifest that puts electron binary into cache]"
 
 node generate_electron_dependency.mjs
+
+echo "[strip unused versions from pnpm package indices]"
+
+node tool_strip.mjs
+rm generated/used_versions_strip_info.json
 
 echo "[done]"
