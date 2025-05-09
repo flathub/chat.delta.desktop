@@ -4,7 +4,7 @@ set -e
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
 CORE_CHECKOUT=v1.159.3
-DESKTOP_CHECKOUT=v1.58.0
+DESKTOP_CHECKOUT=v1.58.1
 
 # this script needs:
 # - serveral repos checked out next to this repo

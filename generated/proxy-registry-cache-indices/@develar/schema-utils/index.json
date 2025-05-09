@@ -1,263 +1,105 @@
 {
- "_id": "@develar/schema-utils",
- "_rev": "2-15910c3ce2172160568e0a69c505eceb",
- "name": "@develar/schema-utils",
- "dist-tags": {
-  "latest": "2.6.5"
- },
- "versions": {
-  "2.1.0": {
-   "name": "@develar/schema-utils",
-   "version": "2.1.0",
-   "description": "webpack Validation Utils",
-   "license": "MIT",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/webpack-contrib/schema-utils.git"
-   },
-   "author": {
-    "name": "webpack Contrib",
-    "url": "https://github.com/webpack-contrib"
-   },
-   "homepage": "https://github.com/webpack-contrib/schema-utils",
-   "bugs": {
-    "url": "https://github.com/webpack-contrib/schema-utils/issues"
-   },
-   "main": "dist/index.js",
-   "engines": {
-    "node": ">= 8.9.0"
-   },
-   "scripts": {
-    "start": "npm run build -- -w",
-    "prebuild": "npm run clean",
-    "build": "cross-env NODE_ENV=production babel src -d dist --ignore \"src/**/*.test.js\" --copy-files",
-    "clean": "del-cli dist",
-    "commitlint": "commitlint --from=master",
-    "lint:prettier": "prettier \"{**/*,*}.{js,json,md,yml,css}\" --list-different",
-    "lint:js": "eslint --cache src test",
-    "lint": "npm-run-all -l -p \"lint:**\"",
-    "prepare": "npm run build",
-    "release": "standard-version",
-    "security": "npm audit",
-    "test:only": "cross-env NODE_ENV=test jest",
-    "test:watch": "cross-env NODE_ENV=test jest --watch",
-    "test:coverage": "cross-env NODE_ENV=test jest --collectCoverageFrom=\"src/**/*.js\" --coverage",
-    "pretest": "npm run lint",
-    "test": "cross-env NODE_ENV=test npm run test:coverage",
-    "defaults": "webpack-defaults"
-   },
-   "dependencies": {
-    "ajv": "^6.1.0",
-    "ajv-keywords": "^3.1.0"
-   },
-   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@commitlint/cli": "^8.0.0",
-    "@commitlint/config-conventional": "^8.0.0",
-    "@webpack-contrib/defaults": "^5.0.0",
-    "@webpack-contrib/eslint-config-webpack": "^3.0.0",
-    "babel-jest": "^24.8.0",
-    "commitlint-azure-pipelines-cli": "^1.0.2",
-    "cross-env": "^5.2.0",
-    "del": "^5.0.0",
-    "del-cli": "^2.0.0",
-    "eslint": "^6.0.1",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-plugin-import": "^2.0.0",
-    "husky": "^3.0.0",
-    "jest": "^24.8.0",
-    "jest-junit": "^6.4.0",
-    "lint-staged": "^9.2.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^1.0.0",
-    "standard-version": "^6.0.1"
-   },
-   "keywords": [
-    "webpack"
-   ],
-   "gitHead": "ebbbe2c6ab023083e726c3ba7f1bc49a6d642d8b",
-   "_id": "@develar/schema-utils@2.1.0",
-   "_nodeVersion": "12.6.0",
-   "_npmVersion": "6.10.1",
-   "dist": {
-    "integrity": "sha512-qjCqB4ctMig9Gz5bd6lkdFr3bO6arOdQqptdBSpF1ZpCnjofieCciEzkoS9ujY9cMGyllYSCSmBJ3x9OKHXzoA==",
-    "shasum": "eceb1695bfbed6f6bb84666d5d3abe5e1fd54e17",
-    "tarball": "http://localhost:3000/@develar/schema-utils/-/schema-utils-2.1.0.tgz",
-    "fileCount": 8,
-    "unpackedSize": 39479,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdOAiCCRA9TVsSAnZWagAAvGMP/0nkGx/demXtdm90RyZx\n4hBcY4KyNt3J2OGkWo4WTpEduCjAULsv0nCX9ilgJu+q0zZ2qo349YmcEnfX\nAYbNhc8NQPORMlFvYU8wAjLoZK0+McisAKB74dELbg2tBG+qGWlr7xj/ldKz\nl0nYUk1LR1GOSi5btBBou/7uVK34k900E8j5Dx8AfvyBL75Im4eKr4tPQwdR\n9RQ/48W6WGUGKPkvhAENZnqCUm9/Nt1FztvDoxE9TcclSZf1Z9e2yEhmJqKE\nlqrsxjqFHBI01htrIfYDZBPuL9eRCNgc03FVLuWtUW8oshTsc4ZKSRUalt5V\ncLrUJXHWpyth5JOryn2L1n169IxZacqIP+XiSngG4rqJYGORqYL01IO6WjTv\ngWudeBG1C6QIms/CjEchjLYSmdi8vCiP+awQ4CXrezYJzGHfcOuLTic62Hf6\nd3eLiXOQTMViwE3KNdhdssbOMpBbQKPa9HRQXYOl7bSYNl9iDR/fEonsmn0i\n2oEfUygSd4qS2RdoyTMdItMGkbBvlqrgftG4/Rxf/kojFEeoWPiG3FbaovXt\nvlfrV84ea6EgOf+4E1EvJvWCR6zEjCtZ4qGCXQa2hYEMfOKnbUzkDqbeDDRk\ndoVDNmRCeKCk6lYn7dn3XUOw/lWs562bwyg4KqRIKspZ3vOnXRsf5zvxRZb+\nvvg6\r\n=vecE\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQCIG8u8J52kkQVYno6+XM1lWP/biCjc9NBupbKncK9ubAIgf2i/MwuI7hhxuQKxv+LAiGwzVvqvDi2Fv0YFIdmS958="
-     }
-    ]
-   },
-   "maintainers": [
-    {
-     "name": "develar",
-     "email": "develar@gmail.com"
-    }
-   ],
-   "_npmUser": {
-    "name": "develar",
-    "email": "develar@gmail.com"
-   },
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/schema-utils_2.1.0_1563953281933_0.45522595342107386"
-   },
-   "_hasShrinkwrap": false
+  "_id": "@develar/schema-utils",
+  "_rev": "2-15910c3ce2172160568e0a69c505eceb",
+  "name": "@develar/schema-utils",
+  "dist-tags": {
+    "latest": "2.6.5"
   },
-  "2.6.5": {
-   "name": "@develar/schema-utils",
-   "version": "2.6.5",
-   "description": "webpack Validation Utils",
-   "license": "MIT",
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/webpack/schema-utils.git"
-   },
-   "author": {
-    "name": "webpack Contrib",
-    "url": "https://github.com/webpack-contrib"
-   },
-   "homepage": "https://github.com/webpack/schema-utils",
-   "bugs": {
-    "url": "https://github.com/webpack/schema-utils/issues"
-   },
-   "funding": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/webpack"
-   },
-   "main": "dist/index.js",
-   "types": "declarations/index.d.ts",
-   "engines": {
-    "node": ">= 8.9.0"
-   },
-   "scripts": {
-    "start": "npm run build -- -w",
-    "clean": "del-cli dist declarations",
-    "prebuild": "npm run clean",
-    "build:types": "tsc --declaration --emitDeclarationOnly --outDir declarations && prettier \"declarations/**/*.ts\" --write",
-    "build:code": "cross-env NODE_ENV=production babel src -d dist --copy-files",
-    "build": "npm-run-all -p \"build:**\"",
-    "commitlint": "commitlint --from=master",
-    "security": "npm audit",
-    "lint:prettier": "prettier \"{**/*,*}.{js,json,md,yml,css,ts}\" --list-different",
-    "lint:js": "eslint --cache .",
-    "lint:types": "tsc --pretty --noEmit",
-    "lint": "npm-run-all -l -p \"lint:**\"",
-    "test:only": "cross-env NODE_ENV=test jest",
-    "test:watch": "npm run test:only -- --watch",
-    "test:coverage": "npm run test:only -- --collectCoverageFrom=\"src/**/*.js\" --coverage",
-    "pretest": "npm run lint",
-    "test": "npm run test:coverage",
-    "prepare": "npm run build",
-    "release": "standard-version",
-    "defaults": "webpack-defaults"
-   },
-   "dependencies": {
-    "ajv": "^6.12.0",
-    "ajv-keywords": "^3.4.1"
-   },
-   "devDependencies": {
-    "@babel/cli": "^7.8.3",
-    "@babel/core": "^7.8.3",
-    "@babel/preset-env": "^7.8.3",
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-conventional": "^8.3.4",
-    "@types/json-schema": "^7.0.4",
-    "@webpack-contrib/defaults": "^6.3.0",
-    "@webpack-contrib/eslint-config-webpack": "^3.0.0",
-    "babel-jest": "^24.9.0",
-    "commitlint-azure-pipelines-cli": "^1.0.3",
-    "cross-env": "^6.0.3",
-    "del": "^5.1.0",
-    "del-cli": "^3.0.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-import": "^2.20.0",
-    "husky": "^4.0.10",
-    "jest": "^24.9.0",
-    "jest-junit": "^10.0.0",
-    "lint-staged": "^9.5.0",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^1.19.1",
-    "standard-version": "^7.0.1",
-    "typescript": "^3.7.5"
-   },
-   "keywords": [
-    "webpack"
-   ],
-   "gitHead": "1654f1a3b5781aeb2ba2a2be83246d2a577dd16a",
-   "_id": "@develar/schema-utils@2.6.5",
-   "_nodeVersion": "12.16.1",
-   "_npmVersion": "6.13.4",
-   "dist": {
-    "integrity": "sha512-0cp4PsWQ/9avqTVMCtZ+GirikIA36ikvjtHweU4/j8yLtgObI0+JUPhYFScgwlteveGB1rt3Cm8UhN04XayDig==",
-    "shasum": "3ece22c5838402419a6e0425f85742b961d9b6c6",
-    "tarball": "http://localhost:3000/@develar/schema-utils/-/schema-utils-2.6.5.tgz",
-    "fileCount": 14,
-    "unpackedSize": 72241,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeaL5hCRA9TVsSAnZWagAAGL0P/RrTGMA4i4vVElV5wC20\n7f/R//3uK34Ve9aigGiMNMHqPmuddHq2G4b3oqB6uDrpDZWGPRR20uH018A3\nXB83G6aQf+l2hdR7I6Gz2KKjXikeeBoBHm35XsfFnnMdj5RO5NzJrUGYtjLj\n6fKvrpVYI5iUGXQ6HdOAXOdo123gCXXthA7wWv32Ri3qNqO0C/NpqhY7z/JY\nE61njmwME4jVndKIYybniWpHcSTHx6J4TM54Mjqi4MNzNV5xWNbDqkdIvJrD\nk6uSSi0c5I6Of6szXRKUUO/Ddp8k9oSmzwLMZjvnboL+Lu+NvC9bxd4HIpCt\nuYCpjtLyOVVwk0c+gMapynULSreD8OjJfly4yDk+mOPNeZiaUMRw/Ip0v/jT\nYz6m1IK9fnnVdLqmM2USn+kDpzMDdbqpFjejTKE/mUwkFuCjlaO5xJUUl/sI\nxCXJx/ykvudydDmJqJKuqn8taN8EToyKoTVgd/5fH8Z7VxnkAOuxMLBcZvUL\nQpirD4RLmXsxlncgku2NsWpK1PzLQLSLgL4Gq7QCc1mUq7ntGUmO/8QXv9eU\n8TzOUltNc04B2duyQ+lu0uSCjoNI9D1F3tMiiltrMdrHQqQaYPMxN3Mc9r2n\n8OqC3SmeMmD35W/sqKj5grO3FCPA5GsGOKRIghQ1cMr8ie78Qa/vrRwcRjeU\ncdZb\r\n=dU7c\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQDTUk5l/y0zAznQmBVkb60yIpNiH7gu3ZtkbRKSjHdjvAIgJQgbhLG4YA6tFw1+4qYOXaR4LDq+UM6ih0KczXrKPzI="
-     }
-    ]
-   },
-   "maintainers": [
-    {
-     "name": "develar",
-     "email": "develar@gmail.com"
+  "versions": {
+    "2.6.5": {
+      "name": "@develar/schema-utils",
+      "version": "2.6.5",
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/webpack/schema-utils/issues"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/webpack"
+      },
+      "main": "dist/index.js",
+      "types": "declarations/index.d.ts",
+      "engines": {
+        "node": ">= 8.9.0"
+      },
+      "scripts": {
+        "start": "npm run build -- -w",
+        "clean": "del-cli dist declarations",
+        "prebuild": "npm run clean",
+        "build:types": "tsc --declaration --emitDeclarationOnly --outDir declarations && prettier \"declarations/**/*.ts\" --write",
+        "build:code": "cross-env NODE_ENV=production babel src -d dist --copy-files",
+        "build": "npm-run-all -p \"build:**\"",
+        "commitlint": "commitlint --from=master",
+        "security": "npm audit",
+        "lint:prettier": "prettier \"{**/*,*}.{js,json,md,yml,css,ts}\" --list-different",
+        "lint:js": "eslint --cache .",
+        "lint:types": "tsc --pretty --noEmit",
+        "lint": "npm-run-all -l -p \"lint:**\"",
+        "test:only": "cross-env NODE_ENV=test jest",
+        "test:watch": "npm run test:only -- --watch",
+        "test:coverage": "npm run test:only -- --collectCoverageFrom=\"src/**/*.js\" --coverage",
+        "pretest": "npm run lint",
+        "test": "npm run test:coverage",
+        "prepare": "npm run build",
+        "release": "standard-version",
+        "defaults": "webpack-defaults"
+      },
+      "dependencies": {
+        "ajv": "^6.12.0",
+        "ajv-keywords": "^3.4.1"
+      },
+      "devDependencies": {
+        "@babel/cli": "^7.8.3",
+        "@babel/core": "^7.8.3",
+        "@babel/preset-env": "^7.8.3",
+        "@commitlint/cli": "^8.3.5",
+        "@commitlint/config-conventional": "^8.3.4",
+        "@types/json-schema": "^7.0.4",
+        "@webpack-contrib/defaults": "^6.3.0",
+        "@webpack-contrib/eslint-config-webpack": "^3.0.0",
+        "babel-jest": "^24.9.0",
+        "commitlint-azure-pipelines-cli": "^1.0.3",
+        "cross-env": "^6.0.3",
+        "del": "^5.1.0",
+        "del-cli": "^3.0.0",
+        "eslint": "^6.8.0",
+        "eslint-config-prettier": "^6.9.0",
+        "eslint-plugin-import": "^2.20.0",
+        "husky": "^4.0.10",
+        "jest": "^24.9.0",
+        "jest-junit": "^10.0.0",
+        "lint-staged": "^9.5.0",
+        "npm-run-all": "^4.1.5",
+        "prettier": "^1.19.1",
+        "standard-version": "^7.0.1",
+        "typescript": "^3.7.5"
+      },
+      "gitHead": "1654f1a3b5781aeb2ba2a2be83246d2a577dd16a",
+      "_id": "@develar/schema-utils@2.6.5",
+      "_nodeVersion": "12.16.1",
+      "_npmVersion": "6.13.4",
+      "dist": {
+        "integrity": "sha512-0cp4PsWQ/9avqTVMCtZ+GirikIA36ikvjtHweU4/j8yLtgObI0+JUPhYFScgwlteveGB1rt3Cm8UhN04XayDig==",
+        "shasum": "3ece22c5838402419a6e0425f85742b961d9b6c6",
+        "tarball": "http://localhost:3000/@develar/schema-utils/-/schema-utils-2.6.5.tgz",
+        "fileCount": 14,
+        "unpackedSize": 72241,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeaL5hCRA9TVsSAnZWagAAGL0P/RrTGMA4i4vVElV5wC20\n7f/R//3uK34Ve9aigGiMNMHqPmuddHq2G4b3oqB6uDrpDZWGPRR20uH018A3\nXB83G6aQf+l2hdR7I6Gz2KKjXikeeBoBHm35XsfFnnMdj5RO5NzJrUGYtjLj\n6fKvrpVYI5iUGXQ6HdOAXOdo123gCXXthA7wWv32Ri3qNqO0C/NpqhY7z/JY\nE61njmwME4jVndKIYybniWpHcSTHx6J4TM54Mjqi4MNzNV5xWNbDqkdIvJrD\nk6uSSi0c5I6Of6szXRKUUO/Ddp8k9oSmzwLMZjvnboL+Lu+NvC9bxd4HIpCt\nuYCpjtLyOVVwk0c+gMapynULSreD8OjJfly4yDk+mOPNeZiaUMRw/Ip0v/jT\nYz6m1IK9fnnVdLqmM2USn+kDpzMDdbqpFjejTKE/mUwkFuCjlaO5xJUUl/sI\nxCXJx/ykvudydDmJqJKuqn8taN8EToyKoTVgd/5fH8Z7VxnkAOuxMLBcZvUL\nQpirD4RLmXsxlncgku2NsWpK1PzLQLSLgL4Gq7QCc1mUq7ntGUmO/8QXv9eU\n8TzOUltNc04B2duyQ+lu0uSCjoNI9D1F3tMiiltrMdrHQqQaYPMxN3Mc9r2n\n8OqC3SmeMmD35W/sqKj5grO3FCPA5GsGOKRIghQ1cMr8ie78Qa/vrRwcRjeU\ncdZb\r\n=dU7c\r\n-----END PGP SIGNATURE-----\r\n",
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCIQDTUk5l/y0zAznQmBVkb60yIpNiH7gu3ZtkbRKSjHdjvAIgJQgbhLG4YA6tFw1+4qYOXaR4LDq+UM6ih0KczXrKPzI="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
-   ],
-   "_npmUser": {
-    "name": "develar",
-    "email": "develar@gmail.com"
-   },
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/schema-utils_2.6.5_1583922784999_0.907898880112129"
-   },
-   "_hasShrinkwrap": false
-  }
- },
- "time": {
-  "created": "2019-07-24T07:28:01.728Z",
-  "2.1.0": "2019-07-24T07:28:02.230Z",
-  "modified": "2022-04-05T04:04:30.420Z",
-  "2.6.5": "2020-03-11T10:33:05.126Z"
- },
- "maintainers": [
-  {
-   "name": "develar",
-   "email": "develar@gmail.com"
-  }
- ],
- "description": "webpack Validation Utils",
- "homepage": "https://github.com/webpack/schema-utils",
- "keywords": [
-  "webpack"
- ],
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/webpack/schema-utils.git"
- },
- "author": {
-  "name": "webpack Contrib",
-  "url": "https://github.com/webpack-contrib"
- },
- "bugs": {
-  "url": "https://github.com/webpack/schema-utils/issues"
- },
- "license": "MIT",
- "readme": "<div align=\"center\">\n  <a href=\"http://json-schema.org\">\n    <img width=\"160\" height=\"160\"\n      src=\"https://raw.githubusercontent.com/webpack-contrib/schema-utils/master/.github/assets/logo.png\">\n  </a>\n  <a href=\"https://github.com/webpack/webpack\">\n    <img width=\"200\" height=\"200\"\n      src=\"https://webpack.js.org/assets/icon-square-big.svg\">\n  </a>\n</div>\n\n[![npm][npm]][npm-url]\n[![node][node]][node-url]\n[![deps][deps]][deps-url]\n[![tests][tests]][tests-url]\n[![coverage][cover]][cover-url]\n[![chat][chat]][chat-url]\n[![size][size]][size-url]\n\n# schema-utils\n\nPackage for validate options in loaders and plugins.\n\n## Getting Started\n\nTo begin, you'll need to install `schema-utils`:\n\n```console\nnpm install schema-utils\n```\n\n## API\n\n**schema.json**\n\n```json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"option\": {\n      \"type\": [\"boolean\"]\n    }\n  },\n  \"additionalProperties\": false\n}\n```\n\n```js\nimport schema from './path/to/schema.json';\nimport validate from 'schema-utils';\n\nconst options = { option: true };\nconst configuration = { name: 'Loader Name/Plugin Name/Name' };\n\nvalidate(schema, options, configuration);\n```\n\n### `schema`\n\nType: `String`\n\nJSON schema.\n\nSimple example of schema:\n\n```json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\n      \"description\": \"This is description of option.\",\n      \"type\": \"string\"\n    }\n  },\n  \"additionalProperties\": false\n}\n```\n\n### `options`\n\nType: `Object`\n\nObject with options.\n\n```js\nvalidate(\n  schema,\n  {\n    name: 123,\n  },\n  { name: 'MyPlugin' }\n);\n```\n\n### `configuration`\n\nAllow to configure validator.\n\nThere is an alternative method to configure the `name` and`baseDataPath` options via the `title` property in the schema.\nFor example:\n\n```json\n{\n  \"title\": \"My Loader options\",\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\n      \"description\": \"This is description of option.\",\n      \"type\": \"string\"\n    }\n  },\n  \"additionalProperties\": false\n}\n```\n\nThe last word used for the `baseDataPath` option, other words used for the `name` option.\nBased on the example above the `name` option equals `My Loader`, the `baseDataPath` option equals `options`.\n\n#### `name`\n\nType: `Object`\nDefault: `\"Object\"`\n\nAllow to setup name in validation errors.\n\n```js\nvalidate(schema, options, { name: 'MyPlugin' });\n```\n\n```shell\nInvalid configuration object. MyPlugin has been initialised using a configuration object that does not match the API schema.\n - configuration.optionName should be a integer.\n```\n\n#### `baseDataPath`\n\nType: `String`\nDefault: `\"configuration\"`\n\nAllow to setup base data path in validation errors.\n\n```js\nvalidate(schema, options, { name: 'MyPlugin', baseDataPath: 'options' });\n```\n\n```shell\nInvalid options object. MyPlugin has been initialised using an options object that does not match the API schema.\n - options.optionName should be a integer.\n```\n\n#### `postFormatter`\n\nType: `Function`\nDefault: `undefined`\n\nAllow to reformat errors.\n\n```js\nvalidate(schema, options, {\n  name: 'MyPlugin',\n  postFormatter: (formattedError, error) => {\n    if (error.keyword === 'type') {\n      return `${formattedError}\\nAdditional Information.`;\n    }\n\n    return formattedError;\n  },\n});\n```\n\n```shell\nInvalid options object. MyPlugin has been initialized using an options object that does not match the API schema.\n - options.optionName should be a integer.\n   Additional Information.\n```\n\n## Examples\n\n**schema.json**\n\n```json\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"name\": {\n      \"type\": \"string\"\n    },\n    \"test\": {\n      \"anyOf\": [\n        { \"type\": \"array\" },\n        { \"type\": \"string\" },\n        { \"instanceof\": \"RegExp\" }\n      ]\n    },\n    \"transform\": {\n      \"instanceof\": \"Function\"\n    },\n    \"sourceMap\": {\n      \"type\": \"boolean\"\n    }\n  },\n  \"additionalProperties\": false\n}\n```\n\n### `Loader`\n\n```js\nimport { getOptions } from 'loader-utils';\nimport validateOptions from 'schema-utils';\n\nimport schema from 'path/to/schema.json';\n\nfunction loader(src, map) {\n  const options = getOptions(this) || {};\n\n  validateOptions(schema, options, {\n    name: 'Loader Name',\n    baseDataPath: 'options',\n  });\n\n  // Code...\n}\n\nexport default loader;\n```\n\n### `Plugin`\n\n```js\nimport validateOptions from 'schema-utils';\n\nimport schema from 'path/to/schema.json';\n\nclass Plugin {\n  constructor(options) {\n    validateOptions(schema, options, {\n      name: 'Plugin Name',\n      baseDataPath: 'options',\n    });\n\n    this.options = options;\n  }\n\n  apply(compiler) {\n    // Code...\n  }\n}\n\nexport default Plugin;\n```\n\n## Contributing\n\nPlease take a moment to read our contributing guidelines if you haven't yet done so.\n\n[CONTRIBUTING](./.github/CONTRIBUTING.md)\n\n## License\n\n[MIT](./LICENSE)\n\n[npm]: https://img.shields.io/npm/v/schema-utils.svg\n[npm-url]: https://npmjs.com/package/schema-utils\n[node]: https://img.shields.io/node/v/schema-utils.svg\n[node-url]: https://nodejs.org\n[deps]: https://david-dm.org/webpack/schema-utils.svg\n[deps-url]: https://david-dm.org/webpack/schema-utils\n[tests]: https://dev.azure.com/webpack/schema-utils/_apis/build/status/webpack.schema-utils?branchName=master\n[tests-url]: https://dev.azure.com/webpack/schema-utils/_build/latest?definitionId=9&branchName=master\n[cover]: https://codecov.io/gh/webpack/schema-utils/branch/master/graph/badge.svg\n[cover-url]: https://codecov.io/gh/webpack/schema-utils\n[chat]: https://badges.gitter.im/webpack/webpack.svg\n[chat-url]: https://gitter.im/webpack/webpack\n[size]: https://packagephobia.now.sh/badge?p=schema-utils\n[size-url]: https://packagephobia.now.sh/result?p=schema-utils\n",
- "readmeFilename": "README.md"
+  },
+  "time": {
+    "created": "2019-07-24T07:28:01.728Z",
+    "modified": "2022-04-05T04:04:30.420Z",
+    "2.6.5": "2020-03-11T10:33:05.126Z"
+  },
+  "license": "MIT"
 }

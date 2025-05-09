@@ -1,473 +1,53 @@
 {
- "_id": "fast-diff",
- "_rev": "21-fb25895c25bf41695fea7fc2732506c4",
- "name": "fast-diff",
- "description": "Fast Javascript text diff",
- "dist-tags": {
-  "latest": "1.3.0"
- },
- "versions": {
-  "1.0.0": {
-   "name": "fast-diff",
-   "version": "1.0.0",
-   "description": "Fast Javascript text diff",
-   "main": "diff.js",
-   "devDependencies": {
-    "googlediff": "~0.1.0",
-    "lodash": "~2.4.1",
-    "seedrandom": "~2.3.10"
-   },
-   "scripts": {
-    "test": "node test.js"
-   },
-   "license": "Apache 2.0",
-   "_id": "fast-diff@1.0.0",
-   "dist": {
-    "shasum": "c24be1c1c6e5222e46616a5ac67201efca2b2f6b",
-    "tarball": "http://localhost:3000/fast-diff/-/fast-diff-1.0.0.tgz",
-    "integrity": "sha512-PMSJ3O2e8A7lF40cD1wJp5ph+wIS+Xvg89zoF0+zkOgFRZ3lVM4diWi7nI+Q89B+RHQUwh3HDDpBYgn2WdYD1Q==",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIQC0WwFXBp/vN9X6iUwmmgtZIn7ORj/Lwazh8dbKHB0nCgIgRuNK3gFtcMJEuLLVMVPogLR9QUQKck8/RJ/KIAJaRvg="
-     }
-    ]
-   },
-   "_from": ".",
-   "_npmVersion": "1.3.14",
-   "_npmUser": {
-    "name": "jhchen",
-    "email": "jhchen7@gmail.com"
-   },
-   "maintainers": [
-    {
-     "name": "jhchen",
-     "email": "jhchen7@gmail.com"
-    }
-   ],
-   "directories": {}
+  "_id": "fast-diff",
+  "_rev": "21-fb25895c25bf41695fea7fc2732506c4",
+  "name": "fast-diff",
+  "dist-tags": {
+    "latest": "1.3.0"
   },
-  "1.0.1": {
-   "name": "fast-diff",
-   "version": "1.0.1",
-   "description": "Fast Javascript text diff",
-   "author": {
-    "name": "Jason Chen",
-    "email": "jhchen7@gmail.com"
-   },
-   "main": "diff.js",
-   "devDependencies": {
-    "googlediff": "~0.1.0",
-    "lodash": "~3.9.3",
-    "seedrandom": "~2.4.0"
-   },
-   "repository": {
-    "type": "git",
-    "url": "https://github.com/jhchen/fast-diff"
-   },
-   "bugs": {
-    "url": "https://github.com/jhchen/fast-diff/issues"
-   },
-   "scripts": {
-    "test": "node test.js"
-   },
-   "license": "Apache 2.0",
-   "keywords": [
-    "diff"
-   ],
-   "gitHead": "03a02c4649c444b4c2b00c23348d695ce5d2055c",
-   "homepage": "https://github.com/jhchen/fast-diff",
-   "_id": "fast-diff@1.0.1",
-   "_shasum": "76532d5b8e49f6770fd464658628f9ed47eb5ac8",
-   "_from": ".",
-   "_npmVersion": "2.7.4",
-   "_nodeVersion": "0.12.2",
-   "_npmUser": {
-    "name": "jhchen",
-    "email": "jhchen7@gmail.com"
-   },
-   "maintainers": [
-    {
-     "name": "jhchen",
-     "email": "jhchen7@gmail.com"
+  "versions": {
+    "1.3.0": {
+      "name": "fast-diff",
+      "version": "1.3.0",
+      "main": "diff.js",
+      "types": "diff.d.ts",
+      "devDependencies": {
+        "lodash": "~4.17.21",
+        "nyc": "~15.1.0",
+        "seedrandom": "~3.0.5"
+      },
+      "bugs": {
+        "url": "https://github.com/jhchen/fast-diff/issues"
+      },
+      "scripts": {
+        "test": "nyc node test.js"
+      },
+      "license": "Apache-2.0",
+      "gitHead": "0e27223f8792083f5a49a193eb1ddbf26125fdb2",
+      "_id": "fast-diff@1.3.0",
+      "_nodeVersion": "18.16.0",
+      "_npmVersion": "9.5.1",
+      "dist": {
+        "integrity": "sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==",
+        "shasum": "ece407fa550a64d638536cd727e129c61616e0f0",
+        "tarball": "http://localhost:3000/fast-diff/-/fast-diff-1.3.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 52314,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEQCIDp1jBijfHW4deos8wEQZJlToRols1g/ryI609YwF5rrAiBEriUaU7Sf0f7Zn2HceqeKOGmUW+hVPlF8BwKsVTQzlg=="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
-   ],
-   "dist": {
-    "shasum": "76532d5b8e49f6770fd464658628f9ed47eb5ac8",
-    "tarball": "http://localhost:3000/fast-diff/-/fast-diff-1.0.1.tgz",
-    "integrity": "sha512-anEzYJ8VOA5iAMjDOVMTVMrUOXveDTMMk5x0E4p0nJ3VPoIOolF51AqYyE+UD0QIyggUwqppqH7XVA9lF3fdaQ==",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIE9lAEehL6ZT+QUTruKB8es12pq85D3LcyUB6LlfBBEbAiEAuCBL77SPPxK6XWC5LXw0CttU3gEwhEQ4MdafEf7zU8Q="
-     }
-    ]
-   },
-   "directories": {}
   },
-  "1.1.0": {
-   "name": "fast-diff",
-   "version": "1.1.0",
-   "description": "Fast Javascript text diff",
-   "author": {
-    "name": "Jason Chen",
-    "email": "jhchen7@gmail.com"
-   },
-   "main": "diff.js",
-   "devDependencies": {
-    "googlediff": "~0.1.0",
-    "lodash": "~3.9.3",
-    "seedrandom": "~2.4.0"
-   },
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jhchen/fast-diff.git"
-   },
-   "bugs": {
-    "url": "https://github.com/jhchen/fast-diff/issues"
-   },
-   "scripts": {
-    "test": "node test.js"
-   },
-   "license": "Apache-2.0",
-   "keywords": [
-    "diff"
-   ],
-   "gitHead": "c4d52b51324f6951a5b71d5444a8148aac018361",
-   "homepage": "https://github.com/jhchen/fast-diff#readme",
-   "_id": "fast-diff@1.1.0",
-   "_shasum": "9439f279c20a9c1dcda71aab127c7e505d148954",
-   "_from": ".",
-   "_npmVersion": "3.9.5",
-   "_nodeVersion": "6.2.1",
-   "_npmUser": {
-    "name": "jhchen",
-    "email": "jhchen7@gmail.com"
-   },
-   "maintainers": [
-    {
-     "name": "jhchen",
-     "email": "jhchen7@gmail.com"
-    }
-   ],
-   "dist": {
-    "shasum": "9439f279c20a9c1dcda71aab127c7e505d148954",
-    "tarball": "http://localhost:3000/fast-diff/-/fast-diff-1.1.0.tgz",
-    "integrity": "sha512-U+R1xWz3LFzBAQdXpYMLmxnYwoLqsKUjDXhfPlRGIBjbJhkc4UZaw+gv60sjJmaWyV2eLfguGOB7umdKnXZuBA==",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEYCIQCfwdjXxqgZzuO6UMflWWIiObzqRhZOag0jfW+9pCE5IQIhAMI9nMeDs+itmOBvhMGXZzF4if6euLttXXOeqhmKm5YP"
-     }
-    ]
-   },
-   "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/fast-diff-1.1.0.tgz_1476919260221_0.08733992953784764"
-   },
-   "directories": {}
+  "time": {
+    "modified": "2023-06-09T21:33:46.067Z",
+    "created": "2014-10-03T07:56:13.509Z",
+    "1.3.0": "2023-05-19T08:34:57.408Z"
   },
-  "1.1.1": {
-   "name": "fast-diff",
-   "version": "1.1.1",
-   "description": "Fast Javascript text diff",
-   "author": {
-    "name": "Jason Chen",
-    "email": "jhchen7@gmail.com"
-   },
-   "main": "diff.js",
-   "devDependencies": {
-    "googlediff": "~0.1.0",
-    "lodash": "~3.9.3",
-    "seedrandom": "~2.4.0"
-   },
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jhchen/fast-diff.git"
-   },
-   "bugs": {
-    "url": "https://github.com/jhchen/fast-diff/issues"
-   },
-   "scripts": {
-    "test": "node test.js"
-   },
-   "license": "Apache-2.0",
-   "keywords": [
-    "diff"
-   ],
-   "gitHead": "de7329a22025a4f58412cdc4902b30a148c76bea",
-   "homepage": "https://github.com/jhchen/fast-diff#readme",
-   "_id": "fast-diff@1.1.1",
-   "_shasum": "0aea0e4e605b6a2189f0e936d4b7fbaf1b7cfd9b",
-   "_from": ".",
-   "_npmVersion": "3.9.5",
-   "_nodeVersion": "6.2.1",
-   "_npmUser": {
-    "name": "jhchen",
-    "email": "jhchen7@gmail.com"
-   },
-   "maintainers": [
-    {
-     "name": "jhchen",
-     "email": "jhchen7@gmail.com"
-    }
-   ],
-   "dist": {
-    "shasum": "0aea0e4e605b6a2189f0e936d4b7fbaf1b7cfd9b",
-    "tarball": "http://localhost:3000/fast-diff/-/fast-diff-1.1.1.tgz",
-    "integrity": "sha512-Pzbs7RHoGhMyySmzrcP5vjrwqUL8GQZGYV0dIcsyy7DFMd+EYXLMxlnC1azb32HI90LQHFanAjPgcsT0PXxl0w==",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIAZr/McoY6AqPMeeacp47AW+jkMwk6CCzQk0VdZhQzYeAiBGHICYNr8PCis0/Kswf7iWWTBJNav2QGQ/UcU0JIeqnQ=="
-     }
-    ]
-   },
-   "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/fast-diff-1.1.1.tgz_1477257869597_0.3502913611009717"
-   },
-   "directories": {}
-  },
-  "1.1.2": {
-   "name": "fast-diff",
-   "version": "1.1.2",
-   "description": "Fast Javascript text diff",
-   "author": {
-    "name": "Jason Chen",
-    "email": "jhchen7@gmail.com"
-   },
-   "main": "diff.js",
-   "devDependencies": {
-    "googlediff": "~0.1.0",
-    "lodash": "~3.9.3",
-    "seedrandom": "~2.4.0"
-   },
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jhchen/fast-diff.git"
-   },
-   "bugs": {
-    "url": "https://github.com/jhchen/fast-diff/issues"
-   },
-   "scripts": {
-    "test": "node test.js"
-   },
-   "license": "Apache-2.0",
-   "keywords": [
-    "diff"
-   ],
-   "gitHead": "3068710be7decb6cffb6259faf67e2e21ba5c6dc",
-   "homepage": "https://github.com/jhchen/fast-diff#readme",
-   "_id": "fast-diff@1.1.2",
-   "_npmVersion": "5.4.1",
-   "_nodeVersion": "8.2.1",
-   "_npmUser": {
-    "name": "jhchen",
-    "email": "jhchen7@gmail.com"
-   },
-   "maintainers": [
-    {
-     "name": "jhchen",
-     "email": "jhchen7@gmail.com"
-    }
-   ],
-   "dist": {
-    "integrity": "sha512-KaJUt+M9t1qaIteSvjc6P3RbMdXsNhK61GRftR6SNxqmhthcd9MGIi4T+o0jD8LUSpSnSKXE20nLtJ3fOHxQig==",
-    "shasum": "4b62c42b8e03de3f848460b639079920695d0154",
-    "tarball": "http://localhost:3000/fast-diff/-/fast-diff-1.1.2.tgz",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEUCIBjmWFdMEPzh8bqI9nsjfhWzE2aYO4nz26CWvVBucTKRAiEA7fvCYNuNvnKnJIisMwJtz7mFnK4YSrXaBe4Zs6NiguI="
-     }
-    ]
-   },
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/fast-diff-1.1.2.tgz_1505684559924_0.8983699560631067"
-   },
-   "directories": {}
-  },
-  "1.2.0": {
-   "name": "fast-diff",
-   "version": "1.2.0",
-   "description": "Fast Javascript text diff",
-   "author": {
-    "name": "Jason Chen",
-    "email": "jhchen7@gmail.com"
-   },
-   "main": "diff.js",
-   "types": "diff.d.ts",
-   "devDependencies": {
-    "lodash": "~3.9.3",
-    "seedrandom": "~2.4.0"
-   },
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jhchen/fast-diff.git"
-   },
-   "bugs": {
-    "url": "https://github.com/jhchen/fast-diff/issues"
-   },
-   "scripts": {
-    "test": "node test.js"
-   },
-   "license": "Apache-2.0",
-   "keywords": [
-    "diff"
-   ],
-   "gitHead": "bc1e462881948c4d97b6103efd655b47bc4aab05",
-   "homepage": "https://github.com/jhchen/fast-diff#readme",
-   "_id": "fast-diff@1.2.0",
-   "_npmVersion": "6.4.1",
-   "_nodeVersion": "10.0.0",
-   "_npmUser": {
-    "name": "dgreensp",
-    "email": "davidgreenspan@gmail.com"
-   },
-   "dist": {
-    "integrity": "sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==",
-    "shasum": "73ee11982d86caaf7959828d519cfe927fac5f03",
-    "tarball": "http://localhost:3000/fast-diff/-/fast-diff-1.2.0.tgz",
-    "fileCount": 6,
-    "unpackedSize": 39898,
-    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbu8r9CRA9TVsSAnZWagAA/tgQAJ64y3NcgTcIK1/zjH/I\nsIl6ZoJsWKTvqqUQfchK6UKt58zK5ARZFgbt70osGPDEL4fXFrzt9UxlEmj0\n5hX61yGruwwDORGMPdKy3eibkJIKpnpuKV5jPU3GhsB/LqgH85wGv1759ROw\na/zsysB8iKblDBaHHyUbE5edGYum0+gx0uZGmrDO38hE+NTdQBRfC5x6gCHT\nu1J2ffYCicCAj+yGHnUHp7eHo2Kf6s01ZGz/5XTOEbsA7n3t0MDB44L/58zT\nA3K+VUFDFYFMq3GqyIT1Axr7EI2WdHaQUrttIHTZzM2k6L10TwoVmlVnnH+5\nfPLSaDnRB4lPAKdAeSaiigIMXgQCXdBTwnYN9kYddritmJ7aAznTUQjyQ1VW\nnIpngxLAmPe9epH2zWcqGlKVLjLI/XoHnJBhA3Nd/BUXb+5xr73KTSDXnklb\niMYETqt6JxxCbnjtsbk0Q6KyIECUkqeiunfRfOdjIGCVk5H9gEjP3dByMiY+\nAWLDMYNuyJXyGbGeqfYBXG1jLiPhLtyPSl9ltoVWXL4yIwmsxW4QZqTjnRbx\nEFfignbIIPwKSamfrTtkJ9YUzY3kbEFxtomRXn4DZEeIlXiy9uWn33Iq3ZOG\nJw2+IX3L4NShC133pAS01V4AWIL0SkJBUL2W1WYch1Yt4so8DR+jYsb4/k8E\nrE+3\r\n=40vD\r\n-----END PGP SIGNATURE-----\r\n",
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIDw5lV/Hq+UNJtsnpkJq5b6VJNCEvkoptgtAgacwICN5AiBviP3qEw5NVz7sueNPJqjRGMysB5MjM8ijO+DAWYw4+A=="
-     }
-    ]
-   },
-   "maintainers": [
-    {
-     "name": "jhchen",
-     "email": "jhchen7@gmail.com"
-    }
-   ],
-   "directories": {},
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/fast-diff_1.2.0_1539033852577_0.6651218806054966"
-   },
-   "_hasShrinkwrap": false
-  },
-  "1.3.0": {
-   "name": "fast-diff",
-   "version": "1.3.0",
-   "description": "Fast Javascript text diff",
-   "author": {
-    "name": "Jason Chen",
-    "email": "jhchen7@gmail.com"
-   },
-   "main": "diff.js",
-   "types": "diff.d.ts",
-   "devDependencies": {
-    "lodash": "~4.17.21",
-    "nyc": "~15.1.0",
-    "seedrandom": "~3.0.5"
-   },
-   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jhchen/fast-diff.git"
-   },
-   "bugs": {
-    "url": "https://github.com/jhchen/fast-diff/issues"
-   },
-   "scripts": {
-    "test": "nyc node test.js"
-   },
-   "license": "Apache-2.0",
-   "keywords": [
-    "diff"
-   ],
-   "gitHead": "0e27223f8792083f5a49a193eb1ddbf26125fdb2",
-   "homepage": "https://github.com/jhchen/fast-diff#readme",
-   "_id": "fast-diff@1.3.0",
-   "_nodeVersion": "18.16.0",
-   "_npmVersion": "9.5.1",
-   "dist": {
-    "integrity": "sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw==",
-    "shasum": "ece407fa550a64d638536cd727e129c61616e0f0",
-    "tarball": "http://localhost:3000/fast-diff/-/fast-diff-1.3.0.tgz",
-    "fileCount": 5,
-    "unpackedSize": 52314,
-    "signatures": [
-     {
-      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-      "sig": "MEQCIDp1jBijfHW4deos8wEQZJlToRols1g/ryI609YwF5rrAiBEriUaU7Sf0f7Zn2HceqeKOGmUW+hVPlF8BwKsVTQzlg=="
-     }
-    ]
-   },
-   "_npmUser": {
-    "name": "luin",
-    "email": "i@zihua.li"
-   },
-   "directories": {},
-   "maintainers": [
-    {
-     "name": "luin",
-     "email": "i@zihua.li"
-    },
-    {
-     "name": "jhchen",
-     "email": "jhchen7@gmail.com"
-    }
-   ],
-   "_npmOperationalInternal": {
-    "host": "s3://npm-registry-packages",
-    "tmp": "tmp/fast-diff_1.3.0_1684485297218_0.20600688932341904"
-   },
-   "_hasShrinkwrap": false
-  }
- },
- "readme": "# Fast Diff ![Build Status](https://github.com/jhchen/fast-diff/actions/workflows/test.yml/badge.svg)\n\nThis is a simplified import of the excellent [diff-match-patch](https://code.google.com/p/google-diff-match-patch/) library by [Neil Fraser](https://neil.fraser.name/) into the Node.js environment. The match and patch parts are removed, as well as all the extra diff options. What remains is incredibly fast diffing between two strings.\n\n The diff function is an implementation of [\"An O(ND) Difference Algorithm and its Variations\" (Myers, 1986)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.4.6927&rep=rep1&type=pdf) with the suggested divide and conquer strategy along with several [optimizations](http://neil.fraser.name/news/2007/10/09/) Neil added.\n\n```js\nvar diff = require('fast-diff');\n\nvar good = 'Good dog';\nvar bad = 'Bad dog';\n\nvar result = diff(good, bad);\n// [[-1, \"Goo\"], [1, \"Ba\"], [0, \"d dog\"]]\n\n// Respect suggested edit location (cursor position), added in v1.1\ndiff('aaa', 'aaaa', 1)\n// [[0, \"a\"], [1, \"a\"], [0, \"aa\"]]\n\n// For convenience\ndiff.INSERT === 1;\ndiff.EQUAL === 0;\ndiff.DELETE === -1;\n```\n",
- "maintainers": [
-  {
-   "name": "luin",
-   "email": "i@zihua.li"
-  },
-  {
-   "name": "jhchen",
-   "email": "jhchen7@gmail.com"
-  }
- ],
- "time": {
-  "modified": "2023-06-09T21:33:46.067Z",
-  "created": "2014-10-03T07:56:13.509Z",
-  "1.0.0": "2014-10-03T07:56:14.459Z",
-  "1.0.1": "2015-06-03T21:43:35.073Z",
-  "1.1.0": "2016-10-19T23:21:01.968Z",
-  "1.1.1": "2016-10-23T21:24:29.885Z",
-  "1.1.2": "2017-09-17T21:42:40.039Z",
-  "1.2.0": "2018-10-08T21:24:12.776Z",
-  "1.3.0": "2023-05-19T08:34:57.408Z"
- },
- "readmeFilename": "README.md",
- "license": "Apache-2.0",
- "homepage": "https://github.com/jhchen/fast-diff#readme",
- "keywords": [
-  "diff"
- ],
- "repository": {
-  "type": "git",
-  "url": "git+https://github.com/jhchen/fast-diff.git"
- },
- "author": {
-  "name": "Jason Chen",
-  "email": "jhchen7@gmail.com"
- },
- "bugs": {
-  "url": "https://github.com/jhchen/fast-diff/issues"
- },
- "users": {
-  "demoive": true,
-  "icflorescu": true,
-  "shanewholloway": true,
-  "invntrm": true,
-  "paraself": true,
-  "denji": true,
-  "flumpus-dev": true
- }
+  "license": "Apache-2.0"
 }
