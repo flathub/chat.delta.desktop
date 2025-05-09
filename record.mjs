@@ -23,9 +23,13 @@ function stripSuffix(str, suffix) {
     return str; // Return the original string if it doesn't end with the suffix
 }
 
-/**
- * TODO: describe what this server does and why
- */
+/* Hosts a proxy to npmjs on http://localhost:3000
+that records what packages are accessed
+and saves them in the manifest generated/proxy-registry-cache-manifest.json
+and the package indices to generated/proxy-registry-cache-indices
+
+This proxy pretends to be a registry, we set the pnpm registry to it to make pnpm use it.
+*/
 const server = createServer((req, res) => {
     if (!req.url) {
         res.writeHead(400)
