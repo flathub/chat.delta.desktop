@@ -8,6 +8,9 @@ const PORT = 3000;
 
 const base_directory = '../npm-registry-proxy-offline-cache'
 
+/**
+ * TODO: describe what this server does and why
+ */
 const server = createServer(async (req, res) => {
     if (!req.url) {
         res.writeHead(400)
