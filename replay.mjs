@@ -8,9 +8,12 @@ const PORT = 3000;
 
 const base_directory = '../npm-registry-proxy-offline-cache'
 
-/**
- * TODO: describe what this server does and why
- */
+/*
+Hosts a proxy on http://localhost:3000 that
+serves/replays the packages that were recorded in record.mjs
+
+This proxy pretends to be a registry, we set the pnpm registry to it to make pnpm use it.
+*/
 const server = createServer(async (req, res) => {
     if (!req.url) {
         res.writeHead(400)
