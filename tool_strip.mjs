@@ -32,8 +32,3 @@ for (const packageName in stripInfo) {
         await writeFile(pathToIndex, JSON.stringify(index, null, 2), 'utf-8')
     }
 }
-
-// remove pnpm index - since it is propbabaly only needed for version check and we can live without that
-try {
-    await rm(join("generated/proxy-registry-cache-indices", 'pnpm', 'index.json'))
-} catch (error) {}
