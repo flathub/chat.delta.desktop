@@ -11,7 +11,10 @@ const flatpakManifest = {}
 const flatpakManifestIndices = []
 
 /** @type {string[]} */
-const packages_which_should_dl_metdata = []
+const packages_which_should_dl_metadata = []
+
+/** @type {Record<string,string[]>} */
+const usedVersions = {}
 
 function stripSuffix(str, suffix) {
     if (str.endsWith(suffix)) {
@@ -20,6 +23,9 @@ function stripSuffix(str, suffix) {
     return str; // Return the original string if it doesn't end with the suffix
 }
 
+/**
+ * TODO: describe what this server does and why
+ */
 const server = createServer((req, res) => {
     if (!req.url) {
         res.writeHead(400)
@@ -60,10 +66,41 @@ const server = createServer((req, res) => {
                             dest,
                             basename(filename)
                         )
+                        let parsed_data = JSON.parse(data);
+
+                        // delete some fields that we don't need
+                        delete parsed_data["keywords"]
+                        delete parsed_data["repository"]
+                        delete parsed_data["contributors"]
+                        delete parsed_data["author"]
+                        delete parsed_data["bugs"]
+                        delete parsed_data["readme"]
+                        delete parsed_data["readmeFilename"]
+                        delete parsed_data["maintainers"]
+                        delete parsed_data["homepage"]
+                        delete parsed_data["description"]
+
+                        for (const key in parsed_data["versions"]) {
+                            if (Object.prototype.hasOwnProperty.call(parsed_data["versions"], key)) {
+                                const element = parsed_data["versions"][key];
+                                delete element["keywords"]
+                                delete element["repository"]
+                                delete element["contributors"]
+                                delete element["maintainers"]
+                                delete element["author"]
+                                delete element["homepage"]
+                                delete element["_npmUser"]
+                                delete element["_npmOperationalInternal"]
+                                delete element["description"]
+                            }
+                        }
+
+                        // data._rev - could be some hash that we need to adjust because we modified the content?
+
                         writeFileSync(
                             the_path,
                             // make it take multiple lines, otherwise git diff would not be more efficient than with inlining into builder manifest
-                            JSON.stringify(JSON.parse(data), null, 1),
+                            JSON.stringify(parsed_data, null, 1),
                             'utf-8')
                         flatpakManifestIndices.push({
                             type: "file",
@@ -92,7 +129,7 @@ const server = createServer((req, res) => {
             }
 
             if (req.url.endsWith(".tgz")) {
-                packages_which_should_dl_metdata.push(
+                packages_which_should_dl_metadata.push(
                     stripSuffix(stripSuffix(req.url, basename(req.url)), '/-/')
                 )
             } else {
@@ -111,6 +148,18 @@ const server = createServer((req, res) => {
                 sha512,
                 dest: dirname(destPath),
                 "dest-filename": basename(destPath),
+            }
+
+            let [name, version] = req.url.split("/-/")
+            name = name.substring(1) // remove `/` in beginning
+            const sub_package_name = name.split('/').slice(-1)[0]
+            version = version.replace(`${sub_package_name}-`, '')
+            version = version.substring(0, version.lastIndexOf(".tgz"))
+
+            if (usedVersions[name]) {
+                usedVersions[name].push(version)
+            } else {
+                usedVersions[name] = [version]
             }
         })
     });
@@ -133,7 +182,7 @@ server.listen(PORT, () => {
 
 async function save() {
     // force downloading of index files
-    const indexUrls = packages_which_should_dl_metdata.map(relativeUrl => `http://localhost:${PORT}${relativeUrl}`)
+    const indexUrls = packages_which_should_dl_metadata.map(relativeUrl => `http://localhost:${PORT}${relativeUrl}`)
     // console.log(indexUrls);
 
     await Promise.all(indexUrls.map(url => fetch(url)))
@@ -144,6 +193,7 @@ async function save() {
     flatpakManifestIndices.sort((a, b) => a.path.localeCompare(b.path))
 
     writeFileSync('generated/proxy-registry-cache-manifest.json', JSON.stringify([...arrayManifest, ...flatpakManifestIndices], null, 2), 'utf-8')
+    writeFileSync('generated/used_versions_strip_info.json', JSON.stringify(usedVersions, null, 2), 'utf-8')
 }
 
 process.on('SIGINT', async (ev) => {
