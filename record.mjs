@@ -23,6 +23,9 @@ function stripSuffix(str, suffix) {
     return str; // Return the original string if it doesn't end with the suffix
 }
 
+/**
+ * TODO: describe what this server does and why
+ */
 const server = createServer((req, res) => {
     if (!req.url) {
         res.writeHead(400)
