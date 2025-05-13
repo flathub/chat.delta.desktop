@@ -1,5 +1,9 @@
 {
-  description = "all dependencies for generating dependencies for deltachat tauri";
+  # This file is a convinience helper for maintainers that use nix(os).
+  # it is not required to build the package:
+  # you can also install the dependencies like nodejs and flatpak-builder manually.
+  
+  description = "all dependencies for running the ./generate.sh script which generates manifests for deltachat";
 
   inputs = {
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.*.tar.gz";

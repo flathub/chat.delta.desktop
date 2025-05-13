@@ -7,12 +7,17 @@ CORE_CHECKOUT=v1.159.3
 DESKTOP_CHECKOUT=v1.58.1
 
 # this script needs:
-# - serveral repos checked out next to this repo
+# environment:
+# - serveral repos checked out next to this repo (you may run setup.sh to do that for you)
 #  - flatpak-builder-tools
 #  - deltachat-core-rust
 #  - deltachat-desktop
-# - python3, nodejs 20, flatpak-node-generator
+# dependencies:
+# - python3, nodejs 20
 # - jq
+# - flatpak-node-generator (setup.sh installs this for you)
+# you can call "nix develop" to install those dependencies if you are doing this on nix
+
 
 # if -d ../.venv
 # then
