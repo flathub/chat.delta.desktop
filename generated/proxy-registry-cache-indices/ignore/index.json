@@ -1,37 +1,37 @@
 {
   "_id": "ignore",
-  "_rev": "158-1c94d71700f648806f54c838b477f1ae",
+  "_rev": "159-a5e261d36c6bd6d56895fd9e68f7106c",
   "name": "ignore",
   "dist-tags": {
-    "latest": "7.0.4"
+    "latest": "7.0.5"
   },
   "versions": {
-    "5.3.1": {
+    "5.3.2": {
       "name": "ignore",
-      "version": "5.3.1",
+      "version": "5.3.2",
       "license": "MIT",
-      "_id": "ignore@5.3.1",
+      "_id": "ignore@5.3.2",
       "bugs": {
         "url": "https://github.com/kaelzhang/node-ignore/issues"
       },
       "dist": {
-        "shasum": "5073e554cd42c5b33b394375f538b8593e34d4ef",
-        "tarball": "http://localhost:3000/ignore/-/ignore-5.3.1.tgz",
+        "shasum": "3cd40e729f3643fd87cb04e50bf0eb722bc596f5",
+        "tarball": "http://localhost:3000/ignore/-/ignore-5.3.2.tgz",
         "fileCount": 6,
-        "integrity": "sha512-5Fytz/IraMjqpwfd34ke28PTVMjZjJG2MPn5t7OE4eUCUNf8BAa7b5WUS9/Qvr6mwOQS7Mk6vdsMno5he+T8Xw==",
+        "integrity": "sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==",
         "signatures": [
           {
-            "sig": "MEUCICNWFIDxMP736k7iT38Rs9oysecolj9dKu6uyrWovYnrAiEA96gTJoFchGJL/XYauufH0rB5lKGS+e1ivt2Uwya5/rs=",
+            "sig": "MEQCIHPELocnAYOzbeD3jL5ncfyVJlmuYK8abQDwvVcwzPplAiAwInO5nUYUQ9IEYbQ0OGHigYYpYXL2ECaTsl/mzGMpuA==",
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
         ],
-        "unpackedSize": 51455
+        "unpackedSize": 53630
       },
       "types": "./index.d.ts",
       "engines": {
         "node": ">= 4"
       },
-      "gitHead": "49bd7fa2f1be34ed3e78995d4f6a92fa0b5033d2",
+      "gitHead": "cfd0fce1258fe87950d8ce3d18b345bf7d4ed780",
       "scripts": {
         "tap": "tap --reporter classic",
         "test": "npm run test:only",
@@ -48,19 +48,20 @@
         "test:ignore": "npm run tap test/ignore.js",
         "test:others": "npm run tap test/others.js",
         "prepublishOnly": "npm run build",
+        "test:ignore:only": "IGNORE_ONLY_IGNORES=1 npm run tap test/ignore.js",
         "test:no-coverage": "npm run tap test/*.js -- --no-check-coverage"
       },
-      "_npmVersion": "9.8.0",
+      "_npmVersion": "10.2.4",
       "directories": {},
-      "_nodeVersion": "20.5.1",
+      "_nodeVersion": "21.6.2",
       "_hasShrinkwrap": false,
       "devDependencies": {
         "tap": "^16.3.9",
-        "tmp": "0.2.1",
+        "tmp": "0.2.3",
         "debug": "^4.3.4",
         "eslint": "^8.46.0",
         "mkdirp": "^3.0.1",
-        "rimraf": "^5.0.1",
+        "rimraf": "^6.0.1",
         "codecov": "^3.8.2",
         "pre-suf": "^1.1.1",
         "@babel/cli": "^7.22.9",
@@ -71,13 +72,88 @@
         "eslint-config-ostai": "^3.0.0",
         "eslint-plugin-import": "^2.28.0"
       }
+    },
+    "7.0.4": {
+      "name": "ignore",
+      "version": "7.0.4",
+      "license": "MIT",
+      "_id": "ignore@7.0.4",
+      "bugs": {
+        "url": "https://github.com/kaelzhang/node-ignore/issues"
+      },
+      "dist": {
+        "shasum": "a12c70d0f2607c5bf508fb65a40c75f037d7a078",
+        "tarball": "http://localhost:3000/ignore/-/ignore-7.0.4.tgz",
+        "fileCount": 6,
+        "integrity": "sha512-gJzzk+PQNznz8ysRrC0aOkBNVRBDtE1n53IqyqEf3PXrYwomFs5q4pGMizBMJF+ykh03insJ27hB8gSrD2Hn8A==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCFSvmkDSxak9lDs6IuOnsp/8onheQTqehW19T3aY4GogIhAIyRmNyqUYhvDAjRdQ+BOROEXWkuDkV/K3hn3U2Y81Xd",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 63139
+      },
+      "types": "index.d.ts",
+      "engines": {
+        "node": ">= 4"
+      },
+      "gitHead": "93669c063b2d9fa21bd293390ef6543dc5ee3009",
+      "scripts": {
+        "ts": "npm run test:ts && npm run test:16",
+        "tap": "tap --reporter classic",
+        "lint": "eslint .",
+        "test": "npm run lint && npm run ts && npm run build && npm run test:cases",
+        "build": "babel -o legacy.js index.js",
+        "report": "tap --coverage-report=html",
+        "test:16": "npm run test:ts:16 && npm run test:cjs:16 && npm run test:mjs:16",
+        "test:ts": "ts-node ./test/import/simple.ts",
+        "test:git": "npm run tap test/git-check-ignore.test.js",
+        "test:cases": "npm run tap test/*.test.js -- --coverage",
+        "test:ts:16": "ts-node --compilerOptions '{\"moduleResolution\": \"Node16\", \"module\": \"Node16\"}' ./test/import/simple.ts && tsc ./test/import/simple.ts --lib ES6 --moduleResolution Node16 --module Node16 && node ./test/import/simple.js",
+        "test:win32": "IGNORE_TEST_WIN32=1 npm run test",
+        "test:cjs:16": "ts-node --compilerOptions '{\"moduleResolution\": \"Node16\", \"module\": \"Node16\"}' ./test/import/simple.cjs",
+        "test:ignore": "npm run tap test/ignore.test.js",
+        "test:mjs:16": "ts-node --compilerOptions '{\"moduleResolution\": \"Node16\", \"module\": \"Node16\"}' ./test/import/simple.mjs && babel -o ./test/import/simple-mjs.js ./test/import/simple.mjs && node ./test/import/simple-mjs.js",
+        "test:others": "npm run tap test/others.test.js",
+        "prepublishOnly": "npm run build",
+        "test:ignore:only": "IGNORE_ONLY_IGNORES=1 npm run tap test/ignore.test.js",
+        "test:no-coverage": "npm run tap test/*.test.js -- --no-check-coverage",
+        "==================== linting ======================": "",
+        "===================== cases =======================": "",
+        "===================== debug =======================": "",
+        "===================== import ======================": ""
+      },
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "_nodeVersion": "22.8.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.3.9",
+        "tmp": "0.2.3",
+        "debug": "^4.3.4",
+        "eslint": "^8.46.0",
+        "mkdirp": "^3.0.1",
+        "rimraf": "^6.0.1",
+        "pre-suf": "^1.1.1",
+        "ts-node": "^10.9.2",
+        "@babel/cli": "^7.22.9",
+        "spawn-sync": "^2.0.0",
+        "typescript": "^5.6.2",
+        "@babel/core": "^7.22.9",
+        "@babel/preset-env": "^7.22.9",
+        "eslint-config-ostai": "^3.0.0",
+        "eslint-plugin-import": "^2.28.0",
+        "@typescript-eslint/eslint-plugin": "^8.19.1"
+      }
     }
   },
   "time": {
     "created": "2013-09-02T07:32:08.169Z",
-    "modified": "2025-04-25T02:29:12.403Z",
+    "modified": "2025-05-31T02:18:53.593Z",
     "1.1.2": "2013-10-07T07:16:23.194Z",
-    "5.3.1": "2024-02-01T02:26:41.175Z"
+    "5.3.2": "2024-08-12T08:51:00.065Z",
+    "7.0.4": "2025-04-25T02:29:12.203Z"
   },
   "license": "MIT"
 }

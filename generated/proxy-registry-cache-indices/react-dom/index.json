@@ -1,82 +1,127 @@
 {
   "_id": "react-dom",
-  "_rev": "3476-e293503439610c88048ccf050e2f000b",
+  "_rev": "3608-f24d6e53ea0cb38bd16d384af34c8ace",
   "name": "react-dom",
   "dist-tags": {
     "beta": "19.0.0-beta-26f2496093-20240514",
     "rc": "19.0.0-rc.1",
     "latest": "19.1.0",
-    "experimental": "0.0.0-experimental-d85f86cf-20250514",
-    "next": "19.2.0-canary-d85f86cf-20250514",
-    "canary": "19.2.0-canary-d85f86cf-20250514"
+    "experimental": "0.0.0-experimental-dffacc7b-20250717",
+    "next": "19.2.0-canary-dffacc7b-20250717",
+    "canary": "19.2.0-canary-dffacc7b-20250717"
   },
   "versions": {
-    "18.3.1": {
+    "19.1.0": {
       "name": "react-dom",
-      "version": "18.3.1",
+      "version": "19.1.0",
       "license": "MIT",
-      "_id": "react-dom@18.3.1",
+      "_id": "react-dom@19.1.0",
       "bugs": {
         "url": "https://github.com/facebook/react/issues"
       },
       "dist": {
-        "shasum": "c2265d79511b57d479b3dd3fdfa51536494c5cb4",
-        "tarball": "http://localhost:3000/react-dom/-/react-dom-18.3.1.tgz",
-        "fileCount": 32,
-        "integrity": "sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==",
+        "shasum": "133558deca37fa1d682708df8904b25186793623",
+        "tarball": "http://localhost:3000/react-dom/-/react-dom-19.1.0.tgz",
+        "fileCount": 43,
+        "integrity": "sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==",
         "signatures": [
           {
-            "sig": "MEQCIBgs6vDETA10ELaVd+qrTsj8Epj+CNwukjKzegXwgk1jAiBFFV5NUIaUVA0qvHRTQhjYx2O3WXd9xUUPRnGSAxyHLQ==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEYCIQCb6LCGEipbux/stdbARORtu/+8g0lMwP7xUqEgJcWcAwIhAM02BtyS26d+1HSkbuplm3LQf1ckWsU5JvnU3clcv2kR",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 4513549
+        "unpackedSize": 6552660
       },
       "main": "index.js",
       "browser": {
-        "./server.js": "./server.browser.js"
+        "./server.js": "./server.browser.js",
+        "./static.js": "./static.browser.js"
       },
       "exports": {
-        ".": "./index.js",
-        "./client": "./client.js",
+        ".": {
+          "default": "./index.js",
+          "react-server": "./react-dom.react-server.js"
+        },
+        "./client": {
+          "default": "./client.js",
+          "react-server": "./client.react-server.js"
+        },
         "./server": {
+          "bun": "./server.bun.js",
           "deno": "./server.browser.js",
+          "node": "./server.node.js",
           "worker": "./server.browser.js",
           "browser": "./server.browser.js",
-          "default": "./server.node.js"
+          "default": "./server.node.js",
+          "workerd": "./server.edge.js",
+          "edge-light": "./server.edge.js",
+          "react-server": "./server.react-server.js"
         },
-        "./profiling": "./profiling.js",
+        "./static": {
+          "deno": "./static.browser.js",
+          "node": "./static.node.js",
+          "worker": "./static.browser.js",
+          "browser": "./static.browser.js",
+          "default": "./static.node.js",
+          "workerd": "./static.edge.js",
+          "edge-light": "./static.edge.js",
+          "react-server": "./static.react-server.js"
+        },
+        "./profiling": {
+          "default": "./profiling.js",
+          "react-server": "./profiling.react-server.js"
+        },
+        "./server.bun": {
+          "default": "./server.bun.js",
+          "react-server": "./server.react-server.js"
+        },
         "./test-utils": "./test-utils.js",
-        "./server.node": "./server.node.js",
+        "./server.edge": {
+          "default": "./server.edge.js",
+          "react-server": "./server.react-server.js"
+        },
+        "./server.node": {
+          "default": "./server.node.js",
+          "react-server": "./server.react-server.js"
+        },
+        "./static.edge": {
+          "default": "./static.edge.js",
+          "react-server": "./static.react-server.js"
+        },
+        "./static.node": {
+          "default": "./static.node.js",
+          "react-server": "./static.react-server.js"
+        },
         "./package.json": "./package.json",
-        "./server.browser": "./server.browser.js"
+        "./server.browser": {
+          "default": "./server.browser.js",
+          "react-server": "./server.react-server.js"
+        },
+        "./static.browser": {
+          "default": "./static.browser.js",
+          "react-server": "./static.react-server.js"
+        }
       },
-      "gitHead": "a87edf62d7d69705ddbcec9a24f0780b3db7535f",
+      "gitHead": "1825990c5608f0ab0c1475b4292218a508a171c9",
       "scripts": {
         "start": "node server.js"
       },
-      "browserify": {
-        "transform": [
-          "loose-envify"
-        ]
-      },
-      "_npmVersion": "10.5.0",
+      "_npmVersion": "10.9.0",
       "directories": {},
-      "_nodeVersion": "18.20.0",
+      "_nodeVersion": "18.20.1",
       "dependencies": {
-        "scheduler": "^0.23.2",
-        "loose-envify": "^1.1.0"
+        "scheduler": "^0.26.0"
       },
       "_hasShrinkwrap": false,
       "peerDependencies": {
-        "react": "^18.3.1"
+        "react": "^19.1.0"
       }
     }
   },
   "time": {
     "created": "2014-05-06T18:59:36.160Z",
-    "modified": "2025-05-14T16:20:41.001Z",
-    "18.3.1": "2024-04-26T16:42:49.931Z"
+    "modified": "2025-07-17T16:20:57.579Z",
+    "19.1.0": "2025-03-28T19:59:53.229Z"
   },
   "license": "MIT"
 }

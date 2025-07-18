@@ -1,40 +1,44 @@
 {
   "_id": "@eslint/js",
-  "_rev": "68-bf4aaa0400ec27ed1dfa33026cef7513",
+  "_rev": "74-3067fa6930e1728267cb56433f7d2274",
   "name": "@eslint/js",
   "dist-tags": {
     "next": "9.0.0-rc.0",
     "maintenance": "8.57.1",
-    "latest": "9.26.0"
+    "latest": "9.31.0"
   },
   "versions": {
-    "8.57.0": {
+    "9.27.0": {
       "name": "@eslint/js",
-      "version": "8.57.0",
+      "version": "9.27.0",
       "license": "MIT",
-      "_id": "@eslint/js@8.57.0",
+      "_id": "@eslint/js@9.27.0",
       "bugs": {
         "url": "https://github.com/eslint/eslint/issues/"
       },
       "dist": {
-        "shasum": "a5417ae8427873f1dd08b70b3574b453e67b5f7f",
-        "tarball": "http://localhost:3000/@eslint/js/-/js-8.57.0.tgz",
-        "fileCount": 6,
-        "integrity": "sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==",
+        "shasum": "181a23460877c484f6dd03890f4e3fa2fdeb8ff0",
+        "tarball": "http://localhost:3000/@eslint/js/-/js-9.27.0.tgz",
+        "fileCount": 7,
+        "integrity": "sha512-G5JD9Tu5HJEu4z2Uo4aHY2sLV64B7CDMXxFzqzjl3NKd6RVzSXNoE80jk7Y0lJkTTkjiIhBAqmlYwjuBY3tvpA==",
         "signatures": [
           {
-            "sig": "MEYCIQC79PTzzD8tjNcd3FKWAGP/PzxyIGcVFjsNGtHPQsgXvAIhAOAX5f/NwiXMU5xahiQUJOiDynxqRPC09s2LzIADzXaH",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEUCIQC9Z4BL+J5q7cl2UxhzQ3x6Y0x68gDlGotBAACRScbwawIgVcvxNBYjXxDfKuhaJ7E057egBUPFT5JkVI1DFW7Vcak=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 13895
+        "unpackedSize": 14504
       },
       "main": "./src/index.js",
+      "types": "./types/index.d.ts",
       "engines": {
-        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
       },
-      "gitHead": "5c356bb0c6f53c570224f8e9f02c4baca8fc6d2f",
-      "scripts": {},
+      "funding": "https://eslint.org/donate",
+      "gitHead": "ecaef7351f9f3220aa57409bf98db3e55b07a02a",
+      "scripts": {
+        "test:types": "tsc -p tests/types/tsconfig.json"
+      },
       "_npmVersion": "10.1.0",
       "directories": {},
       "_nodeVersion": "20.9.0",
@@ -46,8 +50,8 @@
   },
   "time": {
     "created": "2023-01-31T18:07:13.747Z",
-    "modified": "2025-05-02T20:52:32.845Z",
-    "8.57.0": "2024-02-23T20:12:18.738Z"
+    "modified": "2025-07-11T20:06:47.914Z",
+    "9.27.0": "2025-05-16T18:28:37.807Z"
   },
   "license": "MIT"
 }

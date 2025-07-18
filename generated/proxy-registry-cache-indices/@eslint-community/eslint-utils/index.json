@@ -8,33 +8,14 @@
     "latest": "4.7.0"
   },
   "versions": {
-    "4.4.0": {
+    "4.7.0": {
       "name": "@eslint-community/eslint-utils",
-      "version": "4.4.0",
-      "license": "MIT",
-      "_id": "@eslint-community/eslint-utils@4.4.0",
+      "version": "4.7.0",
       "bugs": {
         "url": "https://github.com/eslint-community/eslint-utils/issues"
       },
-      "dist": {
-        "shasum": "a23514e8fb9af1269d5f7788aa556798d61c6b59",
-        "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz",
-        "fileCount": 7,
-        "integrity": "sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==",
-        "signatures": [
-          {
-            "sig": "MEQCIEQJ04YIVJD+YnwsGPVs74xAjp33dsqZNhHqaE5H5yRmAiAoDme9EWkVgi8ogHxBGKhvmwSvrUfHwwvCQ915/5B99g==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 379062,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkHRywACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrBbQ/9Hnttk6zjSabZSBFPD2GSXQu2KNSyCt6ALyDudUyaaJIl//yV\r\nosi73fAPiycSOv9NYfGMzb54l8fQ/Bkf6ZtQGISZMI8LfNljIbM4x+eem2DT\r\nP8KqPk7v+18kkMFUGRUf2xWvfOI050PW35LX+FV5wtFuHJyPTngHfQAHhHrT\r\n9kaltkVc+G96TB6jTfO0bJWHv1UdorsfxOvqg26hfMOjZuXbEGChrKYuaBwP\r\nqoJestSuP2bNRa88WdXY/bp9vlGo5t4UrzplyYZKRh/K/Z6wz9KUIbY7pTBm\r\nPJ+dkI856hq4trAZpgVpDrQVkw2s2hf2Rt03XoILwKraKPe16IKlfR9IGs1J\r\nBtfB5YRAIHoN+nsAt24cyuBhdxVvuO3zZhHZrL8MKA9MUOllqmYtND6bMvfa\r\nS3HeGYTaQGylBH5yyHbXGcDMzfv+GVyGARHWgMWnNy/CEV5qUNv1cJf5kMXV\r\nBRPVqUg4iv/tfWwloFUjM+M/Qrq8g0TYZ+Jj+UwUB2YU8E126xpBwkM+0A6r\r\nDCnpguFDpEL0DXhy1ds3oLpmeJsDcTsaUnHf9nvhIom1u4lVE286BbhM5HsQ\r\ndDxxsUJAOsaucCna8DR5F5wHvwucpuA4M9rGUrK0cQ0DqRyp4Wt3Oe8MLD+7\r\nNs+VbZRDMQHSXxJPI2h0h5tFoYcac+WNzI4=\r\n=kr2/\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "main": "index",
-      "module": "index.mjs",
-      "engines": {
-        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
-      },
+      "license": "MIT",
+      "sideEffects": false,
       "exports": {
         ".": {
           "import": "./index.mjs",
@@ -42,57 +23,98 @@
         },
         "./package.json": "./package.json"
       },
-      "gitHead": "0540eb3435a80cce4a02c663833d800812dcff51",
+      "main": "index",
+      "module": "index.mjs",
       "scripts": {
-        "lint": "eslint .",
-        "test": "c8 mocha --reporter dot \"test/*.mjs\"",
-        "build": "rollup -c",
-        "clean": "rimraf .nyc_output coverage index.*",
-        "watch": "warun \"{src,test}/**/*.mjs\" -- npm run -s test:mocha",
-        "format": "npm run -s format:prettier -- --write",
-        "coverage": "opener ./coverage/lcov-report/index.html",
         "prebuild": "npm run -s clean",
-        "prewatch": "npm run -s clean",
+        "build": "npm run build:dts && npm run build:rollup",
+        "build:dts": "tsc -p tsconfig.build.json",
+        "build:rollup": "rollup -c",
+        "clean": "rimraf .nyc_output coverage index.* dist",
+        "coverage": "opener ./coverage/lcov-report/index.html",
         "docs:build": "vitepress build docs",
         "docs:watch": "vitepress dev docs",
-        "preversion": "npm test && npm run -s build",
-        "postversion": "git push && git push --tags",
+        "format": "npm run -s format:prettier -- --write",
+        "format:prettier": "prettier .",
         "format:check": "npm run -s format:prettier -- --check",
-        "format:prettier": "prettier ."
+        "lint:eslint": "eslint .",
+        "lint:format": "npm run -s format:check",
+        "lint:installed-check": "installed-check -v -i installed-check -i npm-run-all2 -i knip -i rollup-plugin-dts",
+        "lint:knip": "knip",
+        "lint": "run-p lint:*",
+        "test-coverage": "c8 mocha --reporter dot \"test/*.mjs\"",
+        "test": "mocha --reporter dot \"test/*.mjs\"",
+        "preversion": "npm run test-coverage && npm run -s build",
+        "postversion": "git push && git push --tags",
+        "prewatch": "npm run -s clean",
+        "watch": "warun \"{src,test}/**/*.mjs\" -- npm run -s test:mocha"
       },
-      "_npmVersion": "8.11.0",
-      "directories": {},
-      "sideEffects": false,
-      "_nodeVersion": "16.16.0",
       "dependencies": {
-        "eslint-visitor-keys": "^3.3.0"
+        "eslint-visitor-keys": "^3.4.3"
       },
-      "_hasShrinkwrap": false,
       "devDependencies": {
-        "c8": "^7.12.0",
+        "@eslint-community/eslint-plugin-mysticatea": "^15.6.1",
+        "@types/eslint": "^9.6.1",
+        "@types/estree": "^1.0.7",
+        "@typescript-eslint/parser": "^5.62.0",
+        "@typescript-eslint/types": "^5.62.0",
+        "c8": "^8.0.1",
+        "dot-prop": "^7.2.0",
+        "eslint": "^8.57.1",
+        "installed-check": "^8.0.1",
+        "knip": "^5.33.3",
         "mocha": "^9.2.2",
-        "warun": "^1.0.0",
-        "eslint": "^8.28.0",
+        "npm-run-all2": "^6.2.3",
         "opener": "^1.5.2",
+        "prettier": "2.8.8",
         "rimraf": "^3.0.2",
-        "rollup": "^2.79.1",
-        "semver": "^7.3.8",
-        "dot-prop": "^6.0.1",
-        "prettier": "2.8.4",
-        "vitepress": "^1.0.0-alpha.40",
-        "npm-run-all": "^4.1.5",
+        "rollup": "^2.79.2",
+        "rollup-plugin-dts": "^4.2.3",
         "rollup-plugin-sourcemaps": "^0.6.3",
-        "@eslint-community/eslint-plugin-mysticatea": "^15.2.0"
+        "semver": "^7.6.3",
+        "typescript": "^4.9.5",
+        "vitepress": "^1.4.1",
+        "warun": "^1.0.0"
       },
       "peerDependencies": {
         "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0"
-      }
+      },
+      "engines": {
+        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "_id": "@eslint-community/eslint-utils@4.7.0",
+      "gitHead": "38c229b5ceccfedad80a6ec539b621dacfbbfcef",
+      "types": "./index.d.ts",
+      "_nodeVersion": "20.19.0",
+      "_npmVersion": "10.8.2",
+      "dist": {
+        "integrity": "sha512-dyybb3AcajC7uha6CvhdVRJqaKyn7w2YKqKyAN37NKYgZT36w+iRb0Dymmc5qEJ549c/S31cMMSFd75bteCpCw==",
+        "shasum": "607084630c6c033992a082de6e6fbc1a8b52175a",
+        "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-4.7.0.tgz",
+        "fileCount": 9,
+        "unpackedSize": 482928,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint-community%2feslint-utils@4.7.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQDXUIhUxEcV5rngL8p80A2Tm03WZZdc6prW6gEiEiKtVQIhANHu+CLlWF6bwgjCU49qrN7yz5KesKixdSP6AAS+Z4YD"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2022-11-20T18:57:08.771Z",
     "modified": "2025-05-02T07:52:14.764Z",
-    "4.4.0": "2023-03-24T03:44:48.001Z"
+    "4.7.0": "2025-05-02T07:52:14.328Z"
   },
   "license": "MIT"
 }

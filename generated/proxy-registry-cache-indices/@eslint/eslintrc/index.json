@@ -6,102 +6,104 @@
     "latest": "3.3.1"
   },
   "versions": {
-    "2.1.4": {
+    "3.3.1": {
       "name": "@eslint/eslintrc",
-      "version": "2.1.4",
-      "license": "MIT",
-      "_id": "@eslint/eslintrc@2.1.4",
-      "bugs": {
-        "url": "https://github.com/eslint/eslintrc/issues"
-      },
-      "dist": {
-        "shasum": "388a269f0f25c1b6adc317b5a2c55714894c70ad",
-        "tarball": "http://localhost:3000/@eslint/eslintrc/-/eslintrc-2.1.4.tgz",
-        "fileCount": 28,
-        "integrity": "sha512-269Z39MS6wVJtsoUl10L60WdkhJVdPG24Q4eZTH3nnF6lpvSShEK3wQjDX9JRWAUPvPh7COouPpU9IrqaZFvtQ==",
-        "signatures": [
-          {
-            "sig": "MEYCIQCBJKP7mS1FB6msDX0VkBr6HPMmrd7qWQEJ5yo/Q2JjUwIhAPzr3lGRdA0OOIvAXY/iNq49Da06WYIdu95k/SAMubDV",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2feslintrc@2.1.4",
-          "provenance": {
-            "predicateType": "https://slsa.dev/provenance/v1"
-          }
-        },
-        "unpackedSize": 658746
-      },
-      "main": "./dist/eslintrc.cjs",
+      "version": "3.3.1",
       "type": "module",
-      "engines": {
-        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
-      },
+      "main": "./dist/eslintrc.cjs",
+      "types": "./dist/eslintrc.d.cts",
       "exports": {
         ".": {
           "import": "./lib/index.js",
-          "require": "./dist/eslintrc.cjs"
+          "require": "./dist/eslintrc.cjs",
+          "types": "./lib/types/index.d.ts"
         },
+        "./package.json": "./package.json",
         "./universal": {
           "import": "./lib/index-universal.js",
           "require": "./dist/eslintrc-universal.cjs"
-        },
-        "./package.json": "./package.json"
-      },
-      "funding": "https://opencollective.com/eslint",
-      "gitHead": "01db002fdc8d6c9df3a922f701fc626da342cb97",
-      "scripts": {
-        "lint": "eslint . --report-unused-disable-directives",
-        "test": "mocha -R progress -c 'tests/lib/*.cjs' && c8 mocha -R progress -c 'tests/lib/**/*.js'",
-        "build": "rollup -c",
-        "prepare": "npm run build",
-        "lint:fix": "npm run lint -- --fix",
-        "release:publish": "eslint-publish-release",
-        "release:generate:rc": "eslint-generate-prerelease rc",
-        "release:generate:beta": "eslint-generate-prerelease beta",
-        "release:generate:alpha": "eslint-generate-prerelease alpha",
-        "release:generate:latest": "eslint-generate-release"
-      },
-      "_npmVersion": "10.2.3",
-      "directories": {},
-      "_nodeVersion": "20.10.0",
-      "dependencies": {
-        "ajv": "^6.12.4",
-        "debug": "^4.3.2",
-        "espree": "^9.6.0",
-        "ignore": "^5.2.0",
-        "globals": "^13.19.0",
-        "js-yaml": "^4.1.0",
-        "minimatch": "^3.1.2",
-        "import-fresh": "^3.2.1",
-        "strip-json-comments": "^3.1.1"
+        }
       },
       "publishConfig": {
         "access": "public"
       },
-      "_hasShrinkwrap": false,
+      "scripts": {
+        "build": "rollup -c && node -e \"fs.copyFileSync('./lib/types/index.d.ts', './dist/eslintrc.d.cts')\"",
+        "lint": "eslint . --report-unused-disable-directives",
+        "lint:fix": "npm run lint -- --fix",
+        "prepare": "npm run build",
+        "release:generate:latest": "eslint-generate-release",
+        "release:generate:alpha": "eslint-generate-prerelease alpha",
+        "release:generate:beta": "eslint-generate-prerelease beta",
+        "release:generate:rc": "eslint-generate-prerelease rc",
+        "release:publish": "eslint-publish-release",
+        "test": "mocha -R progress -c 'tests/lib/*.cjs' && c8 mocha -R progress -c 'tests/lib/**/*.js'",
+        "test:types": "tsc -p tests/lib/types/tsconfig.json"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/eslint/eslintrc/issues"
+      },
       "devDependencies": {
         "c8": "^7.7.3",
         "chai": "^4.3.4",
-        "mocha": "^9.0.3",
-        "sinon": "^11.1.2",
-        "eslint": "^7.31.0",
-        "rollup": "^2.70.1",
-        "shelljs": "^0.8.4",
-        "temp-dir": "^2.0.0",
-        "fs-teardown": "^0.1.3",
+        "eslint": "^9.20.1",
+        "eslint-config-eslint": "^11.0.0",
         "eslint-release": "^3.2.0",
-        "eslint-plugin-node": "^11.1.0",
-        "eslint-plugin-jsdoc": "^35.4.1",
-        "eslint-config-eslint": "^7.0.0"
-      }
+        "fs-teardown": "^0.1.3",
+        "mocha": "^9.0.3",
+        "rollup": "^2.70.1",
+        "shelljs": "^0.8.5",
+        "sinon": "^11.1.2",
+        "temp-dir": "^2.0.0",
+        "typescript": "^5.7.3"
+      },
+      "dependencies": {
+        "ajv": "^6.12.4",
+        "debug": "^4.3.2",
+        "espree": "^10.0.1",
+        "globals": "^14.0.0",
+        "ignore": "^5.2.0",
+        "import-fresh": "^3.2.1",
+        "js-yaml": "^4.1.0",
+        "minimatch": "^3.1.2",
+        "strip-json-comments": "^3.1.1"
+      },
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "_id": "@eslint/eslintrc@3.3.1",
+      "gitHead": "556e80029f01d07758ab1f5801bc9421bca4b072",
+      "_nodeVersion": "22.14.0",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-gtF186CXhIl1p4pJNGZw8Yc6RlshoePRvE0X91oPGb3vZ8pM3qOS9W9NGPat9LziaBV7XrJWGylNQXkGcnM3IQ==",
+        "shasum": "e55f7f1dd400600dd066dbba349c4c0bac916964",
+        "tarball": "http://localhost:3000/@eslint/eslintrc/-/eslintrc-3.3.1.tgz",
+        "fileCount": 31,
+        "unpackedSize": 690806,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2feslintrc@3.3.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQCu1TP/w3ic5X9YSQnYuSfN2gcyHe7CKm4jgPfbQAbExgIgR9FPxJm8w3zT+XqHLvWTNMmvz5Pt72L5w4jPspVXZoc="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2020-08-24T19:00:15.734Z",
     "modified": "2025-03-21T20:07:55.125Z",
-    "2.1.4": "2023-12-01T21:03:13.123Z"
+    "3.3.1": "2025-03-21T20:07:54.663Z"
   },
   "license": "MIT"
 }

@@ -6,87 +6,6 @@
     "latest": "4.0.3"
   },
   "versions": {
-    "3.5.3": {
-      "name": "chokidar",
-      "version": "3.5.3",
-      "license": "MIT",
-      "_id": "chokidar@3.5.3",
-      "bugs": {
-        "url": "https://github.com/paulmillr/chokidar/issues"
-      },
-      "nyc": {
-        "include": [
-          "index.js",
-          "lib/*.js"
-        ],
-        "reporter": [
-          "html",
-          "text"
-        ]
-      },
-      "dist": {
-        "shasum": "1cf37c8707b932bd1af1ae22c0432e2acd1903bd",
-        "tarball": "http://localhost:3000/chokidar/-/chokidar-3.5.3.tgz",
-        "fileCount": 8,
-        "integrity": "sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==",
-        "signatures": [
-          {
-            "sig": "MEQCIBqrpMd48PaVgpiPiccV8ZZER9JTLuAFkTTMXVA+3+QVAiBn1fNB/S2cZhsfStE3FfuGB3h2+Ba+axG1d+LwT9sPPQ==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 90082,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJh5m9bCRA9TVsSAnZWagAAztcQAIDHyIl6hzpIDyV0qrhG\n+z/l/zKpe8R73nh8apUd41z29D7aDUj1piRXt+CaCfLfrRCrmflHN52v2JIM\nv4BV8gh4dMmAvXbCIHpJdjdOzfsqt2Qc9Aabg+HaFBcF8Psc9LlWKHFeaRPU\n2YnZeDjSxHaP2mUCAFkww67wSU60yhjD6zTm61MCt7zezjJSTV3d6HFLE2CN\n8SzY80PoKFjPxyXyYNcP/4XTsWNq2h6jmc1jMqgWqkbYzq9Au7luWmxGnYvq\n1qsIPbDeByu6+UqshsIsQLs2poJIjrdJt2QJK+WxOrtFg1m1ka4Ie4T6jAEc\nxnzWQLe4Nv3On6EXAT2oVRuCLZEGuT2AQKUOMYjLdQudJK6RStuqcgWY8qEm\n2M0kiaa877nEZkehibI0Z0PE0kLVpxrVB82QeHFV1eVOURHAl/SpFw69LBpL\n65zkrMTXY+Ox99JQtXjxAFIhE7Hl5WaVwhw6xCzSsDsQ7SQtFAqsSsNZ2ZQp\nzNifKP7J9Dbm+GWIdtAq6+LOfuWr/D6jX/I2JY2bcRCOHSPgCDYxE8jaZ8Qc\nw6DCFOCkXXgFFNtO3IaeGIHEV7NPEqqEKLU2ZCd5NZZBpVXrnbISBGIOrAW5\nG+fdggxnFb1Xst3+f8/6ZpP6Se6yFgyEoXGo8GvBBZiarAYYLYvY2WJeA8pu\nn2iN\r\n=BB/X\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "main": "index.js",
-      "types": "./types/index.d.ts",
-      "engines": {
-        "node": ">= 8.10.0"
-      },
-      "funding": [
-        {
-          "url": "https://paulmillr.com/funding/",
-          "type": "individual"
-        }
-      ],
-      "gitHead": "4804aba7377baa3e1e22265619c06d374b167fcf",
-      "scripts": {
-        "lint": "eslint --report-unused-disable-directives --ignore-path .gitignore .",
-        "test": "npm run lint && npm run mocha",
-        "mocha": "mocha --exit --timeout 90000",
-        "dtslint": "dtslint types"
-      },
-      "_npmVersion": "8.1.2",
-      "directories": {},
-      "_nodeVersion": "16.13.1",
-      "dependencies": {
-        "braces": "~3.0.2",
-        "is-glob": "~4.0.1",
-        "anymatch": "~3.1.2",
-        "fsevents": "~2.3.2",
-        "readdirp": "~3.6.0",
-        "glob-parent": "~5.1.2",
-        "is-binary-path": "~2.1.0",
-        "normalize-path": "~3.0.0"
-      },
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "nyc": "^15.0.0",
-        "chai": "^4.3",
-        "mocha": "^7.0.0",
-        "sinon": "^9.0.1",
-        "upath": "^1.2.0",
-        "eslint": "^7.0.0",
-        "rimraf": "^3.0.0",
-        "dtslint": "^3.3.0",
-        "sinon-chai": "^3.3.0",
-        "typescript": "~4.4.3",
-        "@types/node": "^14"
-      },
-      "optionalDependencies": {
-        "fsevents": "~2.3.2"
-      }
-    },
     "3.6.0": {
       "name": "chokidar",
       "version": "3.6.0",
@@ -228,7 +147,6 @@
     "modified": "2024-12-18T22:21:34.619Z",
     "1.0.0-rc6": "2015-04-01T18:49:05.263Z",
     "2.1.7": "2019-08-21T17:38:26.838Z",
-    "3.5.3": "2022-01-18T07:42:19.335Z",
     "3.6.0": "2024-02-06T22:57:34.159Z",
     "4.0.3": "2024-12-18T22:21:34.451Z"
   },

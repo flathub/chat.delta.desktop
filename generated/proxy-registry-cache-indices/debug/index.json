@@ -113,127 +113,70 @@
         "karma-phantomjs-launcher": "^1.0.2"
       }
     },
-    "4.3.4": {
+    "4.4.1": {
       "name": "debug",
-      "version": "4.3.4",
+      "version": "4.4.1",
       "license": "MIT",
-      "_id": "debug@4.3.4",
-      "bugs": {
-        "url": "https://github.com/debug-js/debug/issues"
-      },
-      "dist": {
-        "shasum": "1319f6579357f2338d3337d2cdd4914bb5dcc865",
-        "tarball": "http://localhost:3000/debug/-/debug-4.3.4.tgz",
-        "fileCount": 7,
-        "integrity": "sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==",
-        "signatures": [
-          {
-            "sig": "MEYCIQCmcTC92IvJtPeBp+GZTfC1ozrd1sQ/d3Se3U7wCosyfAIhAKHyskAwrm7eSg/krxHRnxiCP8ig1GxbJ5psYv8Pwfn9",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 42352,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiMznnACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpAgw/+NHpSQ+LWMx6GQJ9qSYwtaT3YjCidhAMmCsTrWdsCd2GjfWmr\r\nZMbQmyd8ACK1L6dxCegWa8bOms8vCiQCFukzFRYxeXSYkVqPueHtfXbEDVwk\r\nC8uVdifmtXYp7bamROLrRzKilsVAshn19poz28DRH48pbaNh7yVnvT89DJji\r\nMx0u7xOZHJ7dhniwenivY1zd+gnvAgoXAioWJg1echYSfVCzfrex1KPzwc0I\r\n1Eo+qtSCgotylm37OYVPLoY/yDSeIydL3F56XtzVXpukZ1G3fKD6o9zSfrqt\r\nbrujSxRo0xys4J5kbj5ONaiwLhUpTxh7UdOLhrdZBM3/D29Hz9Do076WngmQ\r\nUoCg2Qh3b05eOvVSuU1KLPg25NDM3wXNWctFyoGFBvbor5ITWZY1W4IqcDvC\r\nxpYYOlJ75evHmouPikVJXEd67qSzs0Lb7jAhrewoBY7YH8Imljk4mzt++cJ6\r\nm69zCwbiQLULYUieLcON/Aplb//9pvQUycP2604gcdgf45NyPx08vjMmnWCt\r\nv0szJjclPl/UQr9w4yg9Tf4YZtgcNfEOnUVKZ9TH/w8B9sOWEg0Qx/diaroJ\r\nN0KZVXaIWvVMKUioK40VYUILPOjoAx9KIT0m6KuMGx+eZtPN1PXO64cpWxlB\r\nzUJ3TguaRW12vECh6zyfkyUXh0C4ADFDYp4=\r\n=9E9I\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "main": "./src/index.js",
-      "browser": "./src/browser.js",
-      "engines": {
-        "node": ">=6.0"
-      },
-      "gitHead": "da66c86c5fd71ef570f36b5b1edfa4472149f1bc",
       "scripts": {
         "lint": "xo",
         "test": "npm run test:node && npm run test:browser && npm run lint",
-        "test:node": "istanbul cover _mocha -- test.js",
+        "test:node": "mocha test.js test.node.js",
         "test:browser": "karma start --single-run",
         "test:coverage": "cat ./coverage/lcov.info | coveralls"
       },
-      "_npmVersion": "8.3.0",
-      "directories": {},
-      "_nodeVersion": "17.3.1",
       "dependencies": {
-        "ms": "2.1.2"
+        "ms": "^2.1.3"
       },
-      "_hasShrinkwrap": false,
       "devDependencies": {
-        "xo": "^0.23.0",
         "brfs": "^2.0.1",
-        "karma": "^3.1.4",
-        "mocha": "^5.2.0",
-        "istanbul": "^0.4.5",
-        "coveralls": "^3.0.2",
         "browserify": "^16.2.3",
-        "karma-mocha": "^1.3.0",
-        "karma-browserify": "^6.0.0",
-        "mocha-lcov-reporter": "^1.2.0",
-        "karma-chrome-launcher": "^2.2.0"
-      },
-      "peerDependenciesMeta": {
-        "supports-color": {
-          "optional": true
-        }
-      }
-    },
-    "4.3.6": {
-      "name": "debug",
-      "version": "4.3.6",
-      "license": "MIT",
-      "_id": "debug@4.3.6",
-      "bugs": {
-        "url": "https://github.com/debug-js/debug/issues"
-      },
-      "dist": {
-        "shasum": "2ab2c38fbaffebf8aa95fdfe6d88438c7a13c52b",
-        "tarball": "http://localhost:3000/debug/-/debug-4.3.6.tgz",
-        "fileCount": 7,
-        "integrity": "sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==",
-        "signatures": [
-          {
-            "sig": "MEUCICM4wOOFMyB8VKp5QzbkLY6P1j0pTYU1aD3/Y1GyMqLJAiEA3cJIP+BsJ2L4IL9vHlNz7sFwmwazGOpJnO/vx2qCI0g=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 42440
-      },
-      "main": "./src/index.js",
-      "browser": "./src/browser.js",
-      "engines": {
-        "node": ">=6.0"
-      },
-      "gitHead": "c33b464a797d6cf8c72b8d84d87e02b2822494c9",
-      "scripts": {
-        "lint": "xo",
-        "test": "npm run test:node && npm run test:browser && npm run lint",
-        "test:node": "istanbul cover _mocha -- test.js test.node.js",
-        "test:browser": "karma start --single-run",
-        "test:coverage": "cat ./coverage/lcov.info | coveralls"
-      },
-      "_npmVersion": "9.8.0",
-      "directories": {},
-      "_nodeVersion": "20.5.1",
-      "dependencies": {
-        "ms": "2.1.2"
-      },
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "xo": "^0.23.0",
-        "brfs": "^2.0.1",
+        "coveralls": "^3.0.2",
         "karma": "^3.1.4",
+        "karma-browserify": "^6.0.0",
+        "karma-chrome-launcher": "^2.2.0",
+        "karma-mocha": "^1.3.0",
         "mocha": "^5.2.0",
+        "mocha-lcov-reporter": "^1.2.0",
         "sinon": "^14.0.0",
-        "istanbul": "^0.4.5",
-        "coveralls": "^3.0.2",
-        "browserify": "^16.2.3",
-        "karma-mocha": "^1.3.0",
-        "karma-browserify": "^6.0.0",
-        "mocha-lcov-reporter": "^1.2.0",
-        "karma-chrome-launcher": "^2.2.0"
+        "xo": "^0.23.0"
       },
       "peerDependenciesMeta": {
         "supports-color": {
           "optional": true
         }
-      }
+      },
+      "main": "./src/index.js",
+      "browser": "./src/browser.js",
+      "engines": {
+        "node": ">=6.0"
+      },
+      "xo": {
+        "rules": {
+          "import/extensions": "off"
+        }
+      },
+      "_id": "debug@4.4.1",
+      "gitHead": "33330fa8616b9b33f29f7674747be77266878ba6",
+      "bugs": {
+        "url": "https://github.com/debug-js/debug/issues"
+      },
+      "_nodeVersion": "22.15.0",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==",
+        "shasum": "e5a8bc6cbc4c6cd3e64308b0693a3d4fa550189b",
+        "tarball": "http://localhost:3000/debug/-/debug-4.4.1.tgz",
+        "fileCount": 7,
+        "unpackedSize": 42793,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIFYe34T3MTMz7GUYtvascO8kejy1IQelEEiXvtCY7ZJzAiEA65tNrHJkzI1TkrE1u4sq8InCFcWUG4iblPW3GCW5Ni8="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
@@ -241,8 +184,7 @@
     "modified": "2025-05-13T20:56:36.586Z",
     "2.6.9": "2017-09-22T13:32:35.541Z",
     "3.2.7": "2020-11-19T12:57:17.399Z",
-    "4.3.4": "2022-03-17T13:38:47.641Z",
-    "4.3.6": "2024-07-27T09:23:24.842Z"
+    "4.4.1": "2025-05-13T20:56:36.431Z"
   },
   "license": "MIT"
 }

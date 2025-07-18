@@ -1,43 +1,43 @@
 {
   "_id": "espree",
-  "_rev": "149-8b74678363385ad95ca607f9f06f74e5",
+  "_rev": "151-ab9367068e33beead09d885c22dc22b4",
   "name": "espree",
   "dist-tags": {
     "next": "8.0.0-beta.1",
-    "latest": "10.3.0"
+    "latest": "10.4.0"
   },
   "versions": {
-    "9.6.1": {
+    "10.3.0": {
       "name": "espree",
-      "version": "9.6.1",
+      "version": "10.3.0",
       "license": "BSD-2-Clause",
-      "_id": "espree@9.6.1",
+      "_id": "espree@10.3.0",
       "bugs": {
-        "url": "https://github.com/eslint/espree/issues"
+        "url": "https://github.com/eslint/js/issues"
       },
       "dist": {
-        "shasum": "a2a17b8e434690a5432f2f8018ce71d331a48c6f",
-        "tarball": "http://localhost:3000/espree/-/espree-9.6.1.tgz",
+        "shasum": "29267cf5b0cb98735b65e64ba07e0ed49d1eed8a",
+        "tarball": "http://localhost:3000/espree/-/espree-10.3.0.tgz",
         "fileCount": 10,
-        "integrity": "sha512-oruZaFkjorTpF32kDSI5/75ViwGeZginGGy2NoOSg3Q9bnwlnmDm4HLnkl0RE3n+njDXR037aY1+x58Z/zFdwQ==",
+        "integrity": "sha512-0QYC8b24HWY8zjRnDTL6RiHfDbAWn63qb4LMj1Z4b076A4une81+z03Kg7l7mn/48PUTqoLptSXez8oknU8Clg==",
         "signatures": [
           {
-            "sig": "MEUCIHoFsX/QehBa6wJX1N2vUvd6hfkWiLhZHXKklvp5kqsAAiEAkCW5WkTHD2B+2SubGRuJUtv0uPXWAcahgNZbV+qJyQQ=",
+            "sig": "MEUCIQDF/BhD1H5PJYtwo3rDN239Slh3NsU/1nvfITZQGKZWpAIgVZVgVNfAgF4e3/6DFsFZkNpeXZ80I4av0s9ZPk5s8ws=",
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
         ],
         "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/espree@9.6.1",
+          "url": "http://localhost:3000/-/npm/v1/attestations/espree@10.3.0",
           "provenance": {
-            "predicateType": "https://slsa.dev/provenance/v0.2"
+            "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "unpackedSize": 73642
+        "unpackedSize": 79348
       },
       "main": "dist/espree.cjs",
       "type": "module",
       "engines": {
-        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
       },
       "exports": {
         ".": [
@@ -51,63 +51,50 @@
         "./package.json": "./package.json"
       },
       "funding": "https://opencollective.com/eslint",
-      "gitHead": "91ea3503112f380fba8eb2fb4cbeb7c6ebb71899",
+      "gitHead": "844078a1df7736019eee52665b67393ffcfd4c18",
       "scripts": {
-        "lint": "eslint .  --report-unused-disable-directives",
-        "test": "npm-run-all -p unit lint",
-        "unit": "npm-run-all -s unit:*",
+        "test": "npm-run-all -s test:*",
         "build": "rollup -c rollup.config.js",
-        "fixlint": "npm run lint -- --fix",
         "pretest": "npm run build",
-        "unit:cjs": "mocha --color --reporter progress --timeout 30000 tests/lib/commonjs.cjs",
-        "unit:esm": "c8 mocha --color --reporter progress --timeout 30000 'tests/lib/**/*.js'",
-        "sync-docs": "node sync-docs.js",
+        "test:cjs": "mocha --color --reporter progress --timeout 30000 tests/lib/commonjs.cjs",
+        "test:esm": "c8 mocha --color --reporter progress --timeout 30000 'tests/lib/**/*.js'",
+        "build:docs": "node tools/sync-docs.js",
         "build:debug": "npm run build -- -m",
-        "prepublishOnly": "npm run update-version && npm run build",
-        "update-version": "node tools/update-version.js",
-        "publish-release": "eslint-publish-release",
-        "generate-release": "eslint-generate-release",
-        "generate-rcrelease": "eslint-generate-prerelease rc",
-        "generate-betarelease": "eslint-generate-prerelease beta",
-        "generate-alpharelease": "eslint-generate-prerelease alpha"
+        "prepublishOnly": "npm run build:update-version && npm run build",
+        "release:publish": "eslint-publish-release",
+        "release:generate:rc": "eslint-generate-prerelease rc",
+        "build:update-version": "node tools/update-version.js",
+        "release:generate:beta": "eslint-generate-prerelease beta",
+        "release:generate:alpha": "eslint-generate-prerelease alpha",
+        "release:generate:latest": "eslint-generate-release"
       },
-      "gitHooks": {
-        "pre-commit": "lint-staged"
-      },
-      "_npmVersion": "9.5.1",
+      "_npmVersion": "10.8.2",
       "directories": {},
-      "_nodeVersion": "18.16.1",
+      "_nodeVersion": "20.18.0",
       "dependencies": {
-        "acorn": "^8.9.0",
+        "acorn": "^8.14.0",
         "acorn-jsx": "^5.3.2",
-        "eslint-visitor-keys": "^3.4.1"
+        "eslint-visitor-keys": "^4.2.0"
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
         "c8": "^7.11.0",
-        "chai": "^4.3.6",
         "mocha": "^9.2.2",
-        "eslint": "^8.44.0",
-        "rollup": "^2.41.2",
-        "yorkie": "^2.0.0",
-        "globals": "^13.20.0",
-        "shelljs": "^0.3.0",
+        "rollup": "^2.79.1",
+        "shelljs": "^0.8.5",
         "esprima-fb": "^8001.2001.0-dev-harmony-fb",
-        "lint-staged": "^13.2.0",
-        "npm-run-all": "^4.1.5",
+        "npm-run-all2": "^6.2.2",
         "eslint-release": "^3.2.0",
-        "eslint-plugin-n": "^16.0.0",
-        "@rollup/plugin-json": "^4.1.0",
-        "eslint-config-eslint": "^8.0.0",
-        "@rollup/plugin-commonjs": "^17.1.0",
-        "@rollup/plugin-node-resolve": "^11.2.0"
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-commonjs": "^28.0.0",
+        "@rollup/plugin-node-resolve": "^15.3.0"
       }
     }
   },
   "time": {
     "created": "2014-12-06T03:10:12.402Z",
-    "modified": "2024-12-10T23:44:48.405Z",
-    "9.6.1": "2023-07-14T15:47:50.615Z"
+    "modified": "2025-06-09T15:46:04.281Z",
+    "10.3.0": "2024-10-29T19:25:10.561Z"
   },
   "license": "BSD-2-Clause"
 }

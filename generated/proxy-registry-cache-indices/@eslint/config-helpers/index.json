@@ -1,0 +1,88 @@
+{
+  "_id": "@eslint/config-helpers",
+  "_rev": "6-47309e62bf55538f5f580b38f07d7bf6",
+  "name": "@eslint/config-helpers",
+  "dist-tags": {
+    "latest": "0.3.0"
+  },
+  "versions": {
+    "0.2.2": {
+      "name": "@eslint/config-helpers",
+      "version": "0.2.2",
+      "license": "Apache-2.0",
+      "_id": "@eslint/config-helpers@0.2.2",
+      "bugs": {
+        "url": "https://github.com/eslint/rewrite/issues"
+      },
+      "dist": {
+        "shasum": "3779f76b894de3a8ec4763b79660e6d54d5b1010",
+        "tarball": "http://localhost:3000/@eslint/config-helpers/-/config-helpers-0.2.2.tgz",
+        "fileCount": 10,
+        "integrity": "sha512-+GPzk8PlG0sPpzdU5ZvIRMPidzAnZDl/s9L+y13iodqvb8leL53bTannOrQ/Im7UkpsmFU5Ily5U60LWixnmLg==",
+        "signatures": [
+          {
+            "sig": "MEUCIQClY9ZdilsHrK5f3nGY2HrI/HwtUxvcnAh9iNNd+opgQQIgC7qDTkSKm8Vd8ViAoL+Muu3/W52Eu80MclNagViYHdE=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2fconfig-helpers@0.2.2",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 55271
+      },
+      "main": "dist/esm/index.js",
+      "type": "module",
+      "types": "dist/esm/index.d.ts",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "exports": {
+        "import": {
+          "types": "./dist/esm/index.d.ts",
+          "default": "./dist/esm/index.js"
+        },
+        "require": {
+          "types": "./dist/cjs/index.d.cts",
+          "default": "./dist/cjs/index.cjs"
+        }
+      },
+      "gitHead": "0fa78612cb4d26e2de812e776ba749b882a64548",
+      "scripts": {
+        "test": "mocha tests/*.js",
+        "build": "rollup -c && npm run build:dedupe-types && tsc -p tsconfig.esm.json && npm run build:cts",
+        "test:jsr": "npx jsr@latest publish --dry-run",
+        "build:cts": "node ../../tools/build-cts.js dist/esm/index.d.ts dist/cjs/index.d.cts",
+        "test:types": "tsc -p tests/types/tsconfig.json",
+        "test:coverage": "c8 npm test",
+        "build:dedupe-types": "node ../../tools/dedupe-types.js dist/cjs/index.cjs dist/esm/index.js"
+      },
+      "_npmVersion": "10.9.2",
+      "directories": {
+        "test": "tests"
+      },
+      "_nodeVersion": "22.15.0",
+      "publishConfig": {
+        "access": "public"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "c8": "^9.1.0",
+        "mocha": "^10.4.0",
+        "eslint": "^9.19.0",
+        "rollup": "^4.16.2",
+        "typescript": "^5.4.5",
+        "@eslint/core": "^0.14.0",
+        "rollup-plugin-copy": "^3.5.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2025-03-06T21:53:33.745Z",
+    "modified": "2025-06-25T14:04:30.119Z",
+    "0.2.2": "2025-05-01T15:21:00.395Z"
+  },
+  "license": "Apache-2.0"
+}
