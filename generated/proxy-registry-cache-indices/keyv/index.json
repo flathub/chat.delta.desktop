@@ -1,23 +1,25 @@
 {
   "_id": "keyv",
-  "_rev": "76-0fa14814794460fc6439521274817180",
+  "_rev": "77-b19ecf599bf46063aae3ff0d60b98ea1",
   "name": "keyv",
   "dist-tags": {
     "next": "5.0.0-rc.1",
-    "latest": "5.3.3"
+    "latest": "5.3.4"
   },
   "versions": {
-    "4.5.2": {
+    "4.5.4": {
       "name": "keyv",
-      "version": "4.5.2",
+      "version": "4.5.4",
       "license": "MIT",
-      "_id": "keyv@4.5.2",
+      "_id": "keyv@4.5.4",
       "bugs": {
         "url": "https://github.com/jaredwray/keyv/issues"
       },
       "xo": {
         "rules": {
           "unicorn/prefer-module": 0,
+          "unicorn/no-typeof-undefined": 0,
+          "unicorn/prefer-event-target": 0,
           "unicorn/prefer-node-protocol": 0,
           "@typescript-eslint/consistent-type-definitions": 0
         }
@@ -26,25 +28,26 @@
         "directory": "test"
       },
       "dist": {
-        "shasum": "0e310ce73bf7851ec702f2eaf46ec4e3805cce56",
-        "tarball": "http://localhost:3000/keyv/-/keyv-4.5.2.tgz",
+        "shasum": "a879a99e29452f942439f2a405e3af8b31d4de93",
+        "tarball": "http://localhost:3000/keyv/-/keyv-4.5.4.tgz",
         "fileCount": 6,
-        "integrity": "sha512-5MHbFaKn8cNSmVW7BYnijeAVlE4cYA/SVkifVgrh7yotnfhKmjuXpDKjrABLnT0SfHWV21P8ow07OGfRrNDg8g==",
+        "integrity": "sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==",
         "signatures": [
           {
-            "sig": "MEQCIDRHH7VSXvCNsmiqeSpspc2Bj6rU2x0nGQEXR8d+28FQAiAejI1jNsOL6hwpVH8Zz9fYe+jqvmqxmYtE3dr9MXz0Kw==",
+            "sig": "MEUCIFXCz2pv9p8Kh/Wv6ymxIRKYcY3kCH3Gik7kKWpdDllQAiEA52qU4jmbB8gbNL8i7CCryMmUpJrQD/YZKQmDGAQozcw=",
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
         ],
-        "unpackedSize": 27468,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjaSLyACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpMxhAAkiJtapdvYppAFaMz2RADwlzOTwsBnnYte4OIR0/+0sVAonhA\r\niRXC3SVxA0xBbNQHPrtsCe/rAwaGUKn1bKh1wc1piYbWzCvFVCYck3dm03JP\r\nYNTeaj5Uw9BD7WwdXecmm06uXAKX3HfC2FQHTDT35Ccl+nagJqkzU4cy8TMi\r\nRlUET7jseGrKXTSk7Re9/4ik5RCA7zL7mTMdKh/AyBDhmb/9B5wmBNIxkene\r\n+jR0N73NeYVzubCFtcVyumhX2Y8CweBJo4MeJ0lSK/FvRksAU6qrv42gcCK4\r\nj0A6nDHhPGgITPulx44y9UQmtZ5Nv6fEK44C6Jw3Mh4zhPETCooNM/siyIQV\r\nYlCaaylqvXLnX7pDRCSli3ZFBH9tH+aboekkZVZd8wdJXJCuz8HVy0/sImTp\r\n6lnH+BasDemIjmHyeZRmEeXZ50SA8rWFfHNBZvLT2Fna+dWW4z1aMSn1bgig\r\ndlGnwn9jOr8rMVbW3+mjoVTi+pkI7i64NI7NMfE8Uuv2eAxr+BK+6/hd7bs/\r\nsmzC8vH8QyOLL3U5NMkA0isVDhkl12BMIb7SIFvp3RU7biFvG0AIPMZXvs5G\r\nG2PTuqNp+08w8ORG5ZzCJ0TimzSsGicadXxeXXCfNgUpIPdl6k5RPcAic53m\r\nAso2r4g6A23rsl5+CbDAoDbtJr2Q/MRSOP8=\r\n=aafD\r\n-----END PGP SIGNATURE-----\r\n"
+        "unpackedSize": 27751
       },
       "main": "src/index.js",
       "types": "./src/index.d.ts",
       "scripts": {
-        "test": "xo && nyc ava --serial",
-        "clean": "rm -rf node_modules && rm -rf .nyc_output && rm -rf coverage.lcov && rm -rf ./test/testdb.sqlite",
-        "coverage": "nyc report --reporter=text-lcov > coverage.lcov"
+        "test": "xo && c8 ava --serial",
+        "build": "echo 'No build step required.'",
+        "clean": "rm -rf node_modules && rm -rf ./coverage && rm -rf ./test/testdb.sqlite",
+        "prepare": "yarn build",
+        "test:ci": "xo && ava --serial"
       },
       "directories": {},
       "dependencies": {
@@ -52,15 +55,10 @@
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "xo": "^0.52.4",
-        "ava": "^5.0.1",
-        "nyc": "^15.1.0",
-        "tsd": "^0.24.1",
-        "pify": "5.0.0",
-        "this": "^1.1.0",
-        "eslint": "^8.26.0",
-        "timekeeper": "^2.2.0",
-        "typescript": "^4.8.4",
+        "tsd": "^0.29.0",
+        "pify": "^5.0.0",
+        "eslint": "^8.51.0",
+        "timekeeper": "^2.3.1",
         "@keyv/test-suite": "*",
         "eslint-plugin-promise": "^6.1.1"
       }
@@ -68,8 +66,8 @@
   },
   "time": {
     "created": "2017-07-07T13:43:26.836Z",
-    "modified": "2025-04-19T15:12:47.831Z",
-    "4.5.2": "2022-11-07T15:23:30.660Z"
+    "modified": "2025-06-10T02:27:41.914Z",
+    "4.5.4": "2023-10-07T16:53:54.487Z"
   },
   "license": "MIT"
 }

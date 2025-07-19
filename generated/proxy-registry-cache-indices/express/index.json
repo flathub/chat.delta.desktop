@@ -1,37 +1,41 @@
 {
   "_id": "express",
-  "_rev": "4190-0f89004c5c203386e769b87a118d911b",
+  "_rev": "4200-4d9aa377b57091d0fe0bb4460cee08e7",
   "name": "express",
   "dist-tags": {
     "latest-4": "4.21.2",
     "latest": "5.1.0"
   },
   "versions": {
-    "4.20.0": {
+    "4.21.2": {
       "name": "express",
-      "version": "4.20.0",
+      "version": "4.21.2",
       "license": "MIT",
-      "_id": "express@4.20.0",
+      "_id": "express@4.21.2",
       "bugs": {
         "url": "https://github.com/expressjs/express/issues"
       },
       "dist": {
-        "shasum": "f1d08e591fcec770c07be4767af8eb9bcfd67c48",
-        "tarball": "http://localhost:3000/express/-/express-4.20.0.tgz",
+        "shasum": "cf250e48362174ead6cea4a566abef0162c1ec32",
+        "tarball": "http://localhost:3000/express/-/express-4.21.2.tgz",
         "fileCount": 16,
-        "integrity": "sha512-pLdae7I6QqShF5PnNTCVn4hI91Dx0Grkn2+IAsMTgMIKuQVte2dN9PeGSSAME2FR8anOhVA62QDIUaWVfEXVLw==",
+        "integrity": "sha512-28HqgMZAmih1Czt9ny7qr6ek2qddF4FclbMzwhCREB6OFfH+rXAnuNCwo1/wFvrtbgsQDb4kSbX9de9lFbrXnA==",
         "signatures": [
           {
-            "sig": "MEMCHzoFziE9EIL7mQTWYNRSC8OsFYK7KgxetnT7Gb1ycosCIBvXLtOV/D5A5TUhfagBQw1ggBmJDY8ldwTvUmafBI28",
+            "sig": "MEUCIQDgW+EeVA3ED3nIfT7ipG0ojC1lhtT1OknpYrIK0VbOyAIgeASCxbafoIFAu0dare62N0BImlTfYMUQ4Z7MDXa0x80=",
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
         ],
-        "unpackedSize": 220461
+        "unpackedSize": 221226
       },
       "engines": {
         "node": ">= 0.10.0"
       },
-      "gitHead": "21df421ebc7a5249bb31101da666bbf22adc3f18",
+      "funding": {
+        "url": "https://opencollective.com/express",
+        "type": "opencollective"
+      },
+      "gitHead": "1faf228935aa0a13111f92c28ee795be64ce3f0f",
       "scripts": {
         "lint": "eslint .",
         "test": "mocha --require test/support/env --reporter spec --bail --check-leaks test/ test/acceptance/",
@@ -39,18 +43,18 @@
         "test-cov": "nyc --exclude examples --exclude test --exclude benchmarks --reporter=html --reporter=text npm test",
         "test-tap": "mocha --require test/support/env --reporter tap --check-leaks test/ test/acceptance/"
       },
-      "_npmVersion": "10.8.2",
+      "_npmVersion": "10.8.1",
       "directories": {},
-      "_nodeVersion": "22.5.1",
+      "_nodeVersion": "20.16.0",
       "dependencies": {
-        "qs": "6.11.0",
+        "qs": "6.13.0",
         "depd": "2.0.0",
         "etag": "~1.8.1",
         "send": "0.19.0",
         "vary": "~1.1.2",
         "debug": "2.6.9",
         "fresh": "0.5.2",
-        "cookie": "0.6.0",
+        "cookie": "0.7.1",
         "accepts": "~1.3.8",
         "methods": "~1.1.2",
         "type-is": "~1.6.18",
@@ -65,11 +69,11 @@
         "safe-buffer": "5.2.1",
         "utils-merge": "1.0.1",
         "content-type": "~1.0.4",
-        "finalhandler": "1.2.0",
+        "finalhandler": "1.3.1",
         "range-parser": "~1.2.1",
-        "serve-static": "1.16.0",
+        "serve-static": "1.16.2",
         "array-flatten": "1.1.1",
-        "path-to-regexp": "0.1.10",
+        "path-to-regexp": "0.1.12",
         "setprototypeof": "1.2.0",
         "cookie-signature": "1.0.6",
         "merge-descriptors": "1.0.3",
@@ -98,13 +102,13 @@
   },
   "time": {
     "created": "2010-12-29T19:38:25.450Z",
-    "modified": "2025-05-14T19:33:38.891Z",
-    "1.0.0rc2": "2010-12-29T19:38:25.450Z",
-    "1.0.0beta2": "2010-12-29T19:38:25.450Z",
-    "1.0.0beta": "2010-12-29T19:38:25.450Z",
-    "1.0.0rc4": "2010-12-29T19:38:25.450Z",
-    "1.0.0rc3": "2010-12-29T19:38:25.450Z",
+    "modified": "2025-07-05T02:31:56.563Z",
     "1.0.0rc": "2010-12-29T19:38:25.450Z",
+    "1.0.0rc3": "2010-12-29T19:38:25.450Z",
+    "1.0.0rc4": "2010-12-29T19:38:25.450Z",
+    "1.0.0beta": "2010-12-29T19:38:25.450Z",
+    "1.0.0beta2": "2010-12-29T19:38:25.450Z",
+    "1.0.0rc2": "2010-12-29T19:38:25.450Z",
     "2.0.0-pre": "2011-02-21T21:46:44.987Z",
     "2.0.0beta": "2011-03-04T00:19:22.568Z",
     "2.0.0beta2": "2011-03-07T17:40:46.229Z",
@@ -129,7 +133,7 @@
     "3.0.0rc3": "2012-08-14T03:24:13.107Z",
     "3.0.0rc4": "2012-08-31T05:13:49.677Z",
     "3.0.0rc5": "2012-10-09T15:44:52.115Z",
-    "4.20.0": "2024-09-10T02:07:55.590Z"
+    "4.21.2": "2024-12-05T22:31:40.945Z"
   },
   "license": "MIT"
 }

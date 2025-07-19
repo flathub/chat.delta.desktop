@@ -1,50 +1,53 @@
 {
   "_id": "pump",
-  "_rev": "132-9ea0afbc1c9775bbed6947b20d422eb5",
+  "_rev": "134-f0ea8ea67e373c3980adc04a92042e34",
   "name": "pump",
   "dist-tags": {
-    "latest": "3.0.2"
+    "latest": "3.0.3"
   },
   "versions": {
-    "3.0.0": {
+    "3.0.3": {
       "name": "pump",
-      "version": "3.0.0",
+      "version": "3.0.3",
       "license": "MIT",
-      "_id": "pump@3.0.0",
-      "bugs": {
-        "url": "https://github.com/mafintosh/pump/issues"
-      },
-      "dist": {
-        "shasum": "b4a2116815bde2f4e1ea602354e8c75565107a64",
-        "tarball": "http://localhost:3000/pump/-/pump-3.0.0.tgz",
-        "integrity": "sha512-LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww==",
-        "signatures": [
-          {
-            "sig": "MEUCIQCnqwEjimrryOA0b/S3hj6MZt/VsYtHGq92eiD9Y8fetAIgRSz5+zCGno6tMfrWUZbMfzQ7fgz9gkAvkj1W0O7kWMI=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ]
-      },
       "browser": {
         "fs": false
       },
-      "gitHead": "b05d1838cc3be47f7c3cd9020c73f6ebbafd3aa0",
+      "dependencies": {
+        "end-of-stream": "^1.1.0",
+        "once": "^1.3.1"
+      },
       "scripts": {
         "test": "node test-browser.js && node test-node.js"
       },
-      "_npmVersion": "5.6.0",
+      "_id": "pump@3.0.3",
+      "gitHead": "723ecd008c5b7c3021573b864402f01b7005f297",
+      "bugs": {
+        "url": "https://github.com/mafintosh/pump/issues"
+      },
+      "_nodeVersion": "22.16.0",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-todwxLMY7/heScKmntwQG8CXVkWUOdYxIvY2s0VWAAMh/nd8SoYiRaKjlr7+iCs984f2P8zvrfWcDDYVb73NfA==",
+        "shasum": "151d979f1a29668dc0025ec589a455b53282268d",
+        "tarball": "http://localhost:3000/pump/-/pump-3.0.3.tgz",
+        "fileCount": 9,
+        "unpackedSize": 8803,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQDvYZvcaaCUQSIZxEU3fXCV48swbK7MhtUH4Y9TqXSNJwIhALKIkSXy07c55SN+lT4vhF3FVtih831Tvr0aWhydHyAT"
+          }
+        ]
+      },
       "directories": {},
-      "_nodeVersion": "9.4.0",
-      "dependencies": {
-        "once": "^1.3.1",
-        "end-of-stream": "^1.1.0"
-      }
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2013-08-14T20:03:55.441Z",
-    "modified": "2024-11-06T08:59:07.721Z",
-    "3.0.0": "2018-01-31T09:46:35.636Z"
+    "modified": "2025-06-16T09:15:59.764Z",
+    "3.0.3": "2025-06-16T09:15:59.585Z"
   },
   "license": "MIT"
 }

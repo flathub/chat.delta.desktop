@@ -1,104 +1,77 @@
 {
   "_id": "flat-cache",
-  "_rev": "57-5624baa4734c02eaf7485fc5997d19a7",
+  "_rev": "59-59f299f07a38f8ce95fe500c7e3a56c0",
   "name": "flat-cache",
   "dist-tags": {
-    "latest": "6.1.9"
+    "latest": "6.1.11"
   },
   "versions": {
-    "3.0.4": {
+    "4.0.1": {
       "name": "flat-cache",
-      "version": "3.0.4",
+      "version": "4.0.1",
       "license": "MIT",
-      "_id": "flat-cache@3.0.4",
-      "bugs": {
-        "url": "https://github.com/royriojas/flat-cache/issues"
-      },
+      "_id": "flat-cache@4.0.1",
       "dist": {
-        "shasum": "61b0338302b2fe9f957dcc32fc2a87f1c3048b11",
-        "tarball": "http://localhost:3000/flat-cache/-/flat-cache-3.0.4.tgz",
-        "fileCount": 7,
-        "integrity": "sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==",
+        "shasum": "0ece39fcb14ee012f4b0410bd33dd9c1f011127c",
+        "tarball": "http://localhost:3000/flat-cache/-/flat-cache-4.0.1.tgz",
+        "fileCount": 9,
+        "integrity": "sha512-f7ccFPK3SXFHpx15UIGyRJ/FJQctuKZ0zVuN3frBo4HnK3cay9VEW0R6yPYFHC0AgqhukPzKjq22t5DmAyqGyw==",
         "signatures": [
           {
-            "sig": "MEQCIGH39ygEd+2VkQW3PW2dnjFc0X2dwG20RvTw9J0UOKTjAiBO5DtYF3cARvFfBHhjsg8MtvomiJqPWZnexmnyJLehaQ==",
+            "sig": "MEQCIET+P8A8GKhteygYQxhzURL1fKhW75XIEYs/+FWKHP2zAiBb1ue7T5wnBX3YtMmty5jeM2smCCjyK+SKpqarwU/XPg==",
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
         ],
-        "unpackedSize": 30009,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfp8oQCRA9TVsSAnZWagAAsH8P/AmOT8hqEyxjXTYETIqA\nrIYhbZOwVoh7TUt/1G+hAUeMdIxaaSYc4VT8u7smVu4idWOMNg9w7G2TNjRd\nrla70FxlCP6gRHUeR0sUB7idHKEnu0FDMD4gWtRA3DWXpwUQUeLNvgddkSFL\naahYOBeCfZ1gAnzRB8QXlzgGmSNgJwUHhi8jIT/s+0DJZXHldc2xA2QWjA7O\nTbPDfbMAwFDwcKUoASV9ydc6D5kifJfI+nyLh3jYm+eWOYQjWglk+Cf/Knqr\nz3BoP+NjxcoTPpRa8qoc4gtLWMhbW1IaAKTbQl/uB7fF+hbESSL6jqLeIH1O\nv/Hvo9qdKn4uhg8gCnRB8WJVBAayxjDT63N6nkFD+O5OLhcQQosKWB1061gI\nj6C49849DlH0aB3FqcDT/i/VUpcfmwxYps2o6jt5PRsQJPThhAUCnWhHmO9h\nbNABovQAXNr2KGjQxxhPFDqW98VolJtJSUlN32RyzJGCRVUjlgunjpWKaKMV\nCAMOkL/cCGRE5YBaS/tGfQtp8W9pFRU3cqsFO4TiQlabD0Yh557XHyl8Buit\n/eiXX5HjhhoE/Q82wyM/6lsFU1Q4OVRirKrTs18C6VlTUOTbG3p5JJ7nhFWn\nr7IfQKS6mqXEYc+7T+bpUd4mRI4P1uL+g300kHVdONSFTFFiIrFbQDz3Ixvm\nSvZX\r\n=LRSR\r\n-----END PGP SIGNATURE-----\r\n"
+        "unpackedSize": 29321
       },
       "main": "src/cache.js",
       "engines": {
-        "node": "^10.12.0 || >=12.0.0"
+        "node": ">=16"
       },
-      "gitHead": "aae8784c384896ef610e7d0f4ea82be4932bfd2a",
       "prepush": [
         "npm run verify --silent"
       ],
       "scripts": {
         "test": "npm run verify --silent",
         "check": "npm run eslint",
-        "cover": "istanbul cover test/runner.js html text-summary",
-        "pre-v": "npm run verify",
-        "watch": "watch-run -i -p 'test/specs/**/*.js' istanbul cover test/runner.js html text-summary",
+        "clean": "rimraf ./node_modules ./package-lock.json ./yarn.lock ./coverage",
         "eslint": "eslint --cache --cache-location=node_modules/.cache/ ./src/**/*.js ./test/**/*.js",
-        "post-v": "npm run do-changelog && git push --no-verify && git push --tags --no-verify",
+        "format": "prettier --write .",
         "verify": "npm run eslint && npm run test:cache",
         "autofix": "npm run eslint-fix",
-        "changelog": "changelogx -f markdown -o ./changelog.md",
-        "bump-major": "npm run pre-v && npm version major -m 'BLD: Release v%s' && npm run post-v",
-        "bump-minor": "npm run pre-v && npm version minor -m 'BLD: Release v%s' && npm run post-v",
-        "bump-patch": "npm run pre-v && npm version patch -m 'BLD: Release v%s' && npm run post-v",
         "eslint-fix": "npm run eslint -- --fix",
-        "test:cache": "mocha -R spec test/specs",
-        "do-changelog": "npm run changelog && git add ./changelog.md && git commit -m 'DOC: Generate changelog' --no-verify",
-        "install-hooks": "prepush install && changelogx install-hook && precommit install"
+        "test:cache": "c8 mocha -R spec test/specs",
+        "test:ci:cache": "c8 --reporter=lcov mocha -R spec test/specs"
       },
       "precommit": [
         "npm run verify --silent"
       ],
-      "changelogx": {
-        "authorURL": "https://github.com/{0}",
-        "commitURL": "https://github.com/royriojas/flat-cache/commit/{0}",
-        "issueIDURL": "https://github.com/royriojas/flat-cache/issues/{0}",
-        "projectName": "flat-cache",
-        "ignoreRegExp": [
-          "BLD: Release",
-          "DOC: Generate Changelog",
-          "Generated Changelog"
-        ],
-        "issueIDRegExp": "#(\\d+)"
-      },
-      "_npmVersion": "6.14.4",
       "directories": {},
-      "_nodeVersion": "12.16.3",
+      "licenseText": "The MIT License (MIT)\n\nCopyright (c) Roy Riojas and Jared Wray\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n\n",
       "dependencies": {
-        "rimraf": "^3.0.2",
-        "flatted": "^3.1.0"
+        "keyv": "^4.5.4",
+        "flatted": "^3.2.9"
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "chai": "^4.2.0",
-        "mocha": "^8.2.1",
-        "eslint": "^7.13.0",
-        "prepush": "^3.1.11",
-        "istanbul": "^0.4.5",
-        "prettier": "^2.1.2",
-        "precommit": "^1.2.2",
-        "watch-run": "^1.2.5",
-        "changelogx": "^5.0.6",
+        "c8": "^9.1.0",
+        "chai": "^4.3.10",
+        "mocha": "^10.3.0",
+        "sinon": "^17.0.1",
+        "write": "^2.0.0",
+        "eslint": "^8.56.0",
+        "rimraf": "^5.0.5",
+        "prettier": "^3.2.4",
         "glob-expand": "^0.2.1",
-        "eslint-plugin-mocha": "^8.0.0",
-        "eslint-config-prettier": "^6.15.0",
-        "eslint-plugin-prettier": "^3.1.4"
+        "eslint-plugin-mocha": "^10.2.0",
+        "eslint-config-prettier": "^9.1.0"
       }
     }
   },
   "time": {
     "created": "2015-02-26T12:20:02.550Z",
-    "modified": "2025-05-06T15:53:44.521Z",
-    "3.0.4": "2020-11-08T10:36:00.554Z"
+    "modified": "2025-06-30T16:41:55.598Z",
+    "4.0.1": "2024-03-02T16:09:41.118Z"
   },
   "license": "MIT"
 }

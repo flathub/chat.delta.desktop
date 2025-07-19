@@ -1,60 +1,78 @@
 {
   "_id": "eslint-plugin-react-hooks",
-  "_rev": "2999-a1d8aba646eef4085a8aada91e71aa69",
+  "_rev": "3131-8cf1f52cfdf700aa60214c129edd6641",
   "name": "eslint-plugin-react-hooks",
   "dist-tags": {
     "beta": "5.1.0-beta-26f2496093-20240514",
     "latest": "5.2.0",
     "rc": "6.0.0-rc.1",
-    "experimental": "0.0.0-experimental-d85f86cf-20250514",
-    "next": "6.1.0-canary-d85f86cf-20250514",
-    "canary": "6.1.0-canary-d85f86cf-20250514"
+    "experimental": "0.0.0-experimental-dffacc7b-20250717",
+    "canary": "6.1.0-canary-dffacc7b-20250717",
+    "next": "6.1.0-canary-dffacc7b-20250717"
   },
   "versions": {
-    "4.6.2": {
+    "5.2.0": {
       "name": "eslint-plugin-react-hooks",
-      "version": "4.6.2",
+      "version": "5.2.0",
       "license": "MIT",
-      "_id": "eslint-plugin-react-hooks@4.6.2",
+      "_id": "eslint-plugin-react-hooks@5.2.0",
       "bugs": {
         "url": "https://github.com/facebook/react/issues"
       },
       "dist": {
-        "shasum": "c829eb06c0e6f484b3fbb85a97e57784f328c596",
-        "tarball": "http://localhost:3000/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.2.tgz",
-        "fileCount": 6,
-        "integrity": "sha512-QzliNJq4GinDBcD8gPB5v0wh6g8q3SUi6EFF0x8N/BL9PoVs0atuGc47ozMRyOWAKdwaZ5OnbOEa3WR+dSGKuQ==",
+        "shasum": "1be0080901e6ac31ce7971beed3d3ec0a423d9e3",
+        "tarball": "http://localhost:3000/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-5.2.0.tgz",
+        "fileCount": 8,
+        "integrity": "sha512-+f15FfK64YQwZdJNELETdn5ibXEUQmW1DZL6KXhNnc2heoy/sg9VJJeT7n8TlMWouzWqSWavFkIhHyIbIAEapg==",
         "signatures": [
           {
-            "sig": "MEUCIQDsvdwc1QG71Lv6s/pxAW52kHV5k6zpezhXh0/1KTkV/gIgZezvsleXG4lTjILv/z8J1y6C8pZZf69tz2AgDHJQ/Ds=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEUCIFHVMEDnd2hu7+6WYVykUBExXcFucpXqmxnCA5GezD3rAiEA5AvhXsQV5ZVTL72mfAV3+ddCymr8Tld/S7XstwxYoPU=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 117662
+        "unpackedSize": 277861
       },
+      "main": "./index.js",
+      "types": "./index.d.ts",
       "engines": {
         "node": ">=10"
       },
-      "gitHead": "a87edf62d7d69705ddbcec9a24f0780b3db7535f",
+      "gitHead": "3607f4838a8f4a87160da36aa26bb1432d7a5f11",
+      "scripts": {
+        "test": "jest",
+        "typecheck": "tsc --noEmit"
+      },
       "_npmVersion": "10.5.0",
       "directories": {},
-      "_nodeVersion": "18.20.0",
+      "_nodeVersion": "18.20.1",
       "_hasShrinkwrap": false,
       "devDependencies": {
+        "jest": "^29.5.0",
+        "eslint-v7": "npm:eslint@^7.7.0",
+        "eslint-v9": "npm:eslint@^9.0.0",
+        "typescript": "^5.4.3",
+        "@types/node": "^20.2.5",
+        "babel-eslint": "^10.0.3",
+        "@types/eslint": "^8.56.12",
+        "@types/estree": "^1.0.6",
+        "@types/estree-jsx": "^1.0.5",
+        "@tsconfig/strictest": "^2.0.5",
+        "@babel/eslint-parser": "^7.11.4",
+        "@babel/preset-typescript": "^7.26.0",
         "@typescript-eslint/parser-v2": "npm:@typescript-eslint/parser@^2.26.0",
         "@typescript-eslint/parser-v3": "npm:@typescript-eslint/parser@^3.10.0",
         "@typescript-eslint/parser-v4": "npm:@typescript-eslint/parser@^4.1.0",
-        "@typescript-eslint/parser-v5": "npm:@typescript-eslint/parser@^5.0.0-0"
+        "@typescript-eslint/parser-v5": "npm:@typescript-eslint/parser@^5.62.0"
       },
       "peerDependencies": {
-        "eslint": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0"
+        "eslint": "^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0-0 || ^9.0.0"
       }
     }
   },
   "time": {
     "created": "2018-10-25T16:13:37.192Z",
-    "modified": "2025-05-14T16:20:25.703Z",
-    "4.6.2": "2024-04-26T16:42:06.111Z"
+    "modified": "2025-07-17T16:20:43.431Z",
+    "5.2.0": "2025-02-28T15:30:44.852Z"
   },
   "license": "MIT"
 }

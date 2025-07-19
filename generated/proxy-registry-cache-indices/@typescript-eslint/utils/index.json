@@ -1,140 +1,40 @@
 {
   "_id": "@typescript-eslint/utils",
-  "_rev": "2501-16b91cca531a830dc47f71d83f9f009e",
+  "_rev": "2579-529deb4019c47f6c8a9a0facca5859de",
   "name": "@typescript-eslint/utils",
   "dist-tags": {
     "rc-v": "6.0.0-alpha.58",
     "rc-v6": "7.0.0-alpha.0",
     "rc-v8": "8.0.0-alpha.62",
-    "canary": "8.32.2-alpha.0",
-    "latest": "8.32.1"
+    "latest": "8.37.0",
+    "canary": "8.37.1-alpha.3"
   },
   "versions": {
-    "7.8.0": {
+    "8.32.1": {
       "name": "@typescript-eslint/utils",
-      "version": "7.8.0",
+      "version": "8.32.1",
       "license": "MIT",
-      "_id": "@typescript-eslint/utils@7.8.0",
+      "_id": "@typescript-eslint/utils@8.32.1",
       "bugs": {
         "url": "https://github.com/typescript-eslint/typescript-eslint/issues"
       },
       "dist": {
-        "shasum": "57a79f9c0c0740ead2f622e444cfaeeb9fd047cd",
-        "tarball": "http://localhost:3000/@typescript-eslint/utils/-/utils-7.8.0.tgz",
-        "fileCount": 159,
-        "integrity": "sha512-L0yFqOCflVqXxiZyXrDr80lnahQfSOfc9ELAAZ75sqicqp2i36kEZZGuUymHNFoYOqxRT05up760b4iGsl02nQ==",
+        "shasum": "4d6d5d29b9e519e9a85e9a74e9f7bdb58abe9704",
+        "tarball": "http://localhost:3000/@typescript-eslint/utils/-/utils-8.32.1.tgz",
+        "fileCount": 120,
+        "integrity": "sha512-DsSFNIgLSrc89gpq1LJB7Hm1YpuhK086DRDJSNrewcGvYloWW1vZLHBTIvarKZDcAORIy/uWNx8Gad+4oMpkSA==",
         "signatures": [
           {
-            "sig": "MEYCIQCpZeKCLmiXrTUf8KXkmEXbGgwaigJiPu9SxVZud+xGxwIhAPpD7owNITu7f95g0AdJiyoBKt+JbVtArCaMi3etrZgJ",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEUCIBDVsC0A3+cT4Czx6J/ZwhPGZQFfc2toOEHV89WHOSJHAiEAk15t99u/37k6AaFGYVjkTvxBmJOStBbXCTecfFnR340=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 332560
+        "unpackedSize": 267422
       },
       "type": "commonjs",
       "types": "./dist/index.d.ts",
       "engines": {
-        "node": "^18.18.0 || >=20.0.0"
-      },
-      "exports": {
-        ".": {
-          "types": "./dist/index.d.ts",
-          "default": "./dist/index.js"
-        },
-        "./ast-utils": {
-          "types": "./dist/ast-utils/index.d.ts",
-          "default": "./dist/ast-utils/index.js"
-        },
-        "./ts-eslint": {
-          "types": "./dist/ts-eslint/index.d.ts",
-          "default": "./dist/ts-eslint/index.js"
-        },
-        "./json-schema": {
-          "types": "./dist/json-schema.d.ts",
-          "default": "./dist/json-schema.js"
-        },
-        "./eslint-utils": {
-          "types": "./dist/eslint-utils/index.d.ts",
-          "default": "./dist/eslint-utils/index.js"
-        },
-        "./package.json": "./package.json",
-        "./eslint-utils/rule-tester": {
-          "types": "./dist/eslint-utils/rule-tester/RuleTester.d.ts",
-          "default": "./dist/eslint-utils/rule-tester/RuleTester.js"
-        }
-      },
-      "funding": {
-        "url": "https://opencollective.com/typescript-eslint",
-        "type": "opencollective"
-      },
-      "gitHead": "ee677f6f67259f0081ad1a87b1fd9c89692eda21",
-      "scripts": {
-        "lint": "npx nx lint",
-        "test": "jest --coverage",
-        "build": "tsc -b tsconfig.build.json",
-        "clean": "tsc -b tsconfig.build.json --clean",
-        "format": "prettier --write \"./**/*.{ts,mts,cts,tsx,js,mjs,cjs,jsx,json,md,css}\" --ignore-path ../../.prettierignore",
-        "postbuild": "downlevel-dts dist _ts4.3/dist --to=4.3",
-        "postclean": "rimraf dist && rimraf _ts3.4 && rimraf _ts4.3 && rimraf coverage",
-        "typecheck": "tsc -p tsconfig.json --noEmit"
-      },
-      "_npmVersion": "10.5.0",
-      "directories": {},
-      "_nodeVersion": "20.12.2",
-      "dependencies": {
-        "semver": "^7.6.0",
-        "@types/semver": "^7.5.8",
-        "@types/json-schema": "^7.0.15",
-        "@typescript-eslint/types": "7.8.0",
-        "@eslint-community/eslint-utils": "^4.4.0",
-        "@typescript-eslint/scope-manager": "7.8.0",
-        "@typescript-eslint/typescript-estree": "7.8.0"
-      },
-      "typesVersions": {
-        "<4.7": {
-          "*": [
-            "_ts4.3/*"
-          ]
-        }
-      },
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "jest": "29.7.0",
-        "rimraf": "*",
-        "prettier": "^3.2.5",
-        "typescript": "*",
-        "downlevel-dts": "*",
-        "@typescript-eslint/parser": "7.8.0"
-      },
-      "peerDependencies": {
-        "eslint": "^8.56.0"
-      }
-    },
-    "7.18.0": {
-      "name": "@typescript-eslint/utils",
-      "version": "7.18.0",
-      "license": "MIT",
-      "_id": "@typescript-eslint/utils@7.18.0",
-      "bugs": {
-        "url": "https://github.com/typescript-eslint/typescript-eslint/issues"
-      },
-      "dist": {
-        "shasum": "bca01cde77f95fc6a8d5b0dbcbfb3d6ca4be451f",
-        "tarball": "http://localhost:3000/@typescript-eslint/utils/-/utils-7.18.0.tgz",
-        "fileCount": 159,
-        "integrity": "sha512-kK0/rNa2j74XuHVcoCZxdFBMF+aq/vH83CXAOHieC+2Gis4mF8jJXT5eAfyD3K0sAxtPuwxaIOIOvhwzVDt/kw==",
-        "signatures": [
-          {
-            "sig": "MEYCIQDs5dJ30m8g10cGmFAEx0btMU/K7fN6JEXitRG/ExQo8AIhANk4WEUy5zbUiLHlDZ8DgnEsIwNeZBqbQu0Bu/DuaObv",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 284391
-      },
-      "type": "commonjs",
-      "types": "./dist/index.d.ts",
-      "engines": {
-        "node": "^18.18.0 || >=20.0.0"
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
       },
       "exports": {
         ".": {
@@ -163,51 +63,43 @@
         "url": "https://opencollective.com/typescript-eslint",
         "type": "opencollective"
       },
-      "gitHead": "35cf3d2b2b9611c3812b120c461d863c7881ac04",
+      "gitHead": "af077a040cab200c0c5d973e0c4f2cfce75cfa88",
       "scripts": {
         "lint": "npx nx lint",
-        "test": "jest --coverage",
+        "test": "vitest --run --config=$INIT_CWD/vitest.config.mts",
         "build": "tsc -b tsconfig.build.json",
         "clean": "tsc -b tsconfig.build.json --clean",
         "format": "prettier --write \"./**/*.{ts,mts,cts,tsx,js,mjs,cjs,jsx,json,md,css}\" --ignore-path ../../.prettierignore",
-        "postbuild": "downlevel-dts dist _ts4.3/dist --to=4.3",
-        "postclean": "rimraf dist && rimraf _ts3.4 && rimraf _ts4.3 && rimraf coverage",
-        "typecheck": "tsc --noEmit"
+        "postclean": "rimraf dist/ coverage/",
+        "check-types": "npx nx typecheck"
       },
-      "_npmVersion": "10.7.0",
+      "_npmVersion": "10.8.2",
       "directories": {},
-      "_nodeVersion": "20.15.1",
+      "_nodeVersion": "20.19.1",
       "dependencies": {
-        "@typescript-eslint/types": "7.18.0",
-        "@eslint-community/eslint-utils": "^4.4.0",
-        "@typescript-eslint/scope-manager": "7.18.0",
-        "@typescript-eslint/typescript-estree": "7.18.0"
-      },
-      "typesVersions": {
-        "<4.7": {
-          "*": [
-            "_ts4.3/*"
-          ]
-        }
+        "@typescript-eslint/types": "8.32.1",
+        "@eslint-community/eslint-utils": "^4.7.0",
+        "@typescript-eslint/scope-manager": "8.32.1",
+        "@typescript-eslint/typescript-estree": "8.32.1"
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "jest": "29.7.0",
         "rimraf": "*",
+        "vitest": "^3.1.3",
         "prettier": "^3.2.5",
         "typescript": "*",
-        "downlevel-dts": "*"
+        "@vitest/coverage-v8": "^3.1.3"
       },
       "peerDependencies": {
-        "eslint": "^8.56.0"
+        "eslint": "^8.57.0 || ^9.0.0",
+        "typescript": ">=4.8.4 <5.9.0"
       }
     }
   },
   "time": {
     "created": "2022-01-14T12:07:43.266Z",
-    "modified": "2025-05-12T17:37:17.567Z",
-    "7.8.0": "2024-04-29T17:15:50.663Z",
-    "7.18.0": "2024-07-29T17:16:33.884Z"
+    "modified": "2025-07-18T13:33:02.815Z",
+    "8.32.1": "2025-05-12T17:19:25.415Z"
   },
   "license": "MIT"
 }

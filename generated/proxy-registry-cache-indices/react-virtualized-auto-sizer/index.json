@@ -6,29 +6,11 @@
     "latest": "1.0.26"
   },
   "versions": {
-    "1.0.24": {
+    "1.0.26": {
       "name": "react-virtualized-auto-sizer",
-      "version": "1.0.24",
+      "version": "1.0.26",
       "license": "MIT",
-      "_id": "react-virtualized-auto-sizer@1.0.24",
-      "bugs": {
-        "url": "https://github.com/bvaughn/react-virtualized-auto-sizer/issues"
-      },
-      "dist": {
-        "shasum": "3ebdc92f4b05ad65693b3cc8e7d8dd54924c0227",
-        "tarball": "http://localhost:3000/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.24.tgz",
-        "fileCount": 16,
-        "integrity": "sha512-3kCn7N9NEb3FlvJrSHWGQ4iVl+ydQObq2fHMn12i5wbtm74zHOPhz/i64OL3c1S1vi9i2GXtZqNqUJTQ+BnNfg==",
-        "signatures": [
-          {
-            "sig": "MEQCIDb/HWCoLeRNoDiBeJG2v9YftF1f+X1Vr2JMaSurXQISAiAdHEcDb/gR3KAuIU2dPlzLYvYz8pmrbOombgi2WecI9g==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 44923
-      },
       "main": "dist/react-virtualized-auto-sizer.cjs.js",
-      "types": "dist/react-virtualized-auto-sizer.cjs.d.ts",
       "module": "dist/react-virtualized-auto-sizer.esm.js",
       "exports": {
         ".": {
@@ -36,35 +18,42 @@
             "import": "./dist/react-virtualized-auto-sizer.cjs.mjs",
             "default": "./dist/react-virtualized-auto-sizer.cjs.js"
           },
-          "import": "./dist/react-virtualized-auto-sizer.cjs.mjs",
           "module": "./dist/react-virtualized-auto-sizer.esm.js",
+          "import": "./dist/react-virtualized-auto-sizer.cjs.mjs",
           "default": "./dist/react-virtualized-auto-sizer.cjs.js"
         },
         "./package.json": "./package.json"
       },
-      "gitHead": "7d76028bc817ea344af4f076e1fc596a2be36098",
-      "scripts": {
-        "test": "jest",
-        "clear": "npm run clear:builds & npm run clear:node_modules",
-        "prettier": "prettier --write \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
-        "prerelease": "preconstruct build",
-        "test:watch": "jest --watch",
-        "typescript": "tsc --noEmit",
-        "prettier:ci": "prettier --check \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
-        "clear:builds": "rm -rf ./dist",
-        "typescript:watch": "tsc --noEmit --watch",
-        "clear:node_modules": "rm -rf ./node_modules"
-      },
-      "_npmVersion": "9.6.7",
-      "directories": {},
+      "types": "dist/react-virtualized-auto-sizer.cjs.d.ts",
       "lint-staged": {
-        "**/*.js": "eslint --max-warnings 0",
         "{example,src}/**/*.{js,json,css}": [
           "prettier --write",
           "git add"
-        ]
+        ],
+        "**/*.js": "eslint --max-warnings 0"
       },
-      "_nodeVersion": "18.17.1",
+      "devDependencies": {
+        "@babel/core": "^7.21.4",
+        "@babel/helper-create-class-features-plugin": "^7.21.4",
+        "@babel/plugin-proposal-class-properties": "^7.18.6",
+        "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6",
+        "@babel/preset-typescript": "^7.21.5",
+        "@preconstruct/cli": "^2.8.1",
+        "@types/jest": "^26.0.15",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "jest": "^29.5.0",
+        "jest-environment-jsdom": "^29.5.0",
+        "prettier": "^2.8.6",
+        "react": "^18",
+        "react-dom": "^18",
+        "ts-jest": "^29.1.0",
+        "typescript": "^4.1.2"
+      },
+      "peerDependencies": {
+        "react": "^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0 || ^19.0.0",
+        "react-dom": "^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0 || ^19.0.0"
+      },
       "preconstruct": {
         "exports": {
           "importConditionDefaultExport": "default"
@@ -73,29 +62,42 @@
           "importsConditions": true
         }
       },
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "jest": "^29.5.0",
-        "react": "^18",
-        "ts-jest": "^29.1.0",
-        "prettier": "^2.8.6",
-        "react-dom": "^18",
-        "typescript": "^4.1.2",
-        "@babel/core": "^7.21.4",
-        "@types/jest": "^26.0.15",
-        "@types/react": "^18",
-        "@types/react-dom": "^18",
-        "@preconstruct/cli": "^2.8.1",
-        "jest-environment-jsdom": "^29.5.0",
-        "@babel/preset-typescript": "^7.21.5",
-        "@babel/plugin-proposal-class-properties": "^7.18.6",
-        "@babel/helper-create-class-features-plugin": "^7.21.4",
-        "@babel/plugin-proposal-nullish-coalescing-operator": "^7.18.6"
+      "scripts": {
+        "clear": "npm run clear:builds & npm run clear:node_modules",
+        "clear:builds": "rm -rf ./dist",
+        "clear:node_modules": "rm -rf ./node_modules",
+        "prerelease": "preconstruct build",
+        "prettier": "prettier --write \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
+        "prettier:ci": "prettier --check \"**/*.{css,html,js,json,jsx,ts,tsx}\"",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "typescript": "tsc --noEmit",
+        "typescript:watch": "tsc --noEmit --watch"
       },
-      "peerDependencies": {
-        "react": "^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0",
-        "react-dom": "^15.3.0 || ^16.0.0-alpha || ^17.0.0 || ^18.0.0"
-      }
+      "bugs": {
+        "url": "https://github.com/bvaughn/react-virtualized-auto-sizer/issues"
+      },
+      "_id": "react-virtualized-auto-sizer@1.0.26",
+      "_integrity": "sha512-CblNyiNVw2o+hsa5/49NH2ogGxZ+t+3aweRvNSq7TVjDIlwk7ir4lencEg5HxHeSzwNarSkNkiu0qJSOXtxm5A==",
+      "_resolved": "/Users/bvaughn/Documents/git/oss/react-virtualized-auto-sizer/react-virtualized-auto-sizer-1.0.26.tgz",
+      "_from": "file:react-virtualized-auto-sizer-1.0.26.tgz",
+      "_nodeVersion": "20.2.0",
+      "_npmVersion": "9.6.6",
+      "dist": {
+        "integrity": "sha512-CblNyiNVw2o+hsa5/49NH2ogGxZ+t+3aweRvNSq7TVjDIlwk7ir4lencEg5HxHeSzwNarSkNkiu0qJSOXtxm5A==",
+        "shasum": "e9470ef6a778dc4f1d5fd76305fa2d8b610c357a",
+        "tarball": "http://localhost:3000/react-virtualized-auto-sizer/-/react-virtualized-auto-sizer-1.0.26.tgz",
+        "fileCount": 16,
+        "unpackedSize": 51603,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQDNJ68KGHnjUYmHZG9l2ueYcNuPiuufGQeDetQf9wG8KgIhAPGuf+VZkcFdTA1U9+toyYpMABCxDIu9jhD2yfg4HgYg"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
@@ -103,7 +105,7 @@
     "modified": "2025-03-30T16:12:35.836Z",
     "1.0.0": "2018-06-18T16:00:01.481Z",
     "1.0.1": "2018-06-18T16:01:53.450Z",
-    "1.0.24": "2024-03-06T22:48:17.716Z"
+    "1.0.26": "2025-03-30T16:12:35.674Z"
   },
   "license": "MIT"
 }

@@ -1,14 +1,14 @@
 {
   "_id": "@types/react",
-  "_rev": "4565-427012da17189b211d1174398ffe43a7",
+  "_rev": "4617-7c0890c222d9129a20b6156670a87488",
   "name": "@types/react",
   "dist-tags": {
     "ts2.0": "15.0.1",
     "ts2.1": "15.0.20",
     "ts2.2": "15.0.30",
-    "ts2.4": "16.0.36",
     "ts2.3": "16.0.36",
     "ts2.5": "16.0.36",
+    "ts2.4": "16.0.36",
     "ts2.7": "16.4.7",
     "ts2.6": "16.4.7",
     "ts2.8": "16.9.34",
@@ -34,35 +34,35 @@
     "ts4.8": "18.3.12",
     "ts4.9": "18.3.12",
     "ts5.0": "19.0.12",
-    "ts5.9": "19.1.4",
-    "ts5.2": "19.1.4",
-    "ts5.4": "19.1.4",
-    "ts5.7": "19.1.4",
-    "ts5.5": "19.1.4",
-    "ts5.1": "19.1.4",
-    "ts5.6": "19.1.4",
-    "latest": "19.1.4",
-    "ts5.3": "19.1.4",
-    "ts5.8": "19.1.4"
+    "ts5.9": "19.1.8",
+    "ts5.6": "19.1.8",
+    "ts5.7": "19.1.8",
+    "ts5.8": "19.1.8",
+    "latest": "19.1.8",
+    "ts5.1": "19.1.8",
+    "ts5.2": "19.1.8",
+    "ts5.3": "19.1.8",
+    "ts5.4": "19.1.8",
+    "ts5.5": "19.1.8"
   },
   "versions": {
-    "18.3.17": {
+    "19.1.5": {
       "name": "@types/react",
-      "version": "18.3.17",
+      "version": "19.1.5",
       "license": "MIT",
-      "_id": "@types/react@18.3.17",
+      "_id": "@types/react@19.1.5",
       "dist": {
-        "shasum": "d86ca0e081c7a5e979b7db175f9515a41038cea7",
-        "tarball": "http://localhost:3000/@types/react/-/react-18.3.17.tgz",
-        "fileCount": 17,
-        "integrity": "sha512-opAQ5no6LqJNo9TqnxBKsgnkIYHozW9KSTlFVoSUJYh1Fl/sswkEoqIugRSm7tbh6pABtYjGAjW+GOS23j8qbw==",
+        "shasum": "9feb3bdeb506d0c79d8533b6ebdcacdbcb4756db",
+        "tarball": "http://localhost:3000/@types/react/-/react-19.1.5.tgz",
+        "fileCount": 28,
+        "integrity": "sha512-piErsCVVbpMMT2r7wbawdZsq4xMvIAhQuac2gedQHysu1TZYEigE6pnFfgZT+/jQnrRuF5r+SHzuehFjfRjr4g==",
         "signatures": [
           {
-            "sig": "MEQCIBh2X4Sgj+NYAL7tnJjJfhiG7ExBPLt+Z+F0PFNPeGd2AiAObjmjXAE+m9ap9lgJPP5zYrS56XiLn+Gh7GJPJo8GWg==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEUCIQDqxa5ARgB4e2ResDg4aI6LXHKqUEt3VBJOcWpuf+E+vgIgEDHqEBKEk+pUKTfQwIFJEmuNkhlbrMooNcv5PTtHFtk=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 438833
+        "unpackedSize": 804188
       },
       "main": "",
       "types": "index.d.ts",
@@ -107,13 +107,17 @@
           "types@<=5.0": {
             "default": "./ts5.0/jsx-dev-runtime.d.ts"
           }
+        },
+        "./compiler-runtime": {
+          "types": {
+            "default": "./compiler-runtime.d.ts"
+          }
         }
       },
       "scripts": {},
       "directories": {},
       "dependencies": {
-        "csstype": "^3.0.2",
-        "@types/prop-types": "*"
+        "csstype": "^3.0.2"
       },
       "typesVersions": {
         "<=5.0": {
@@ -124,14 +128,14 @@
       },
       "_hasShrinkwrap": false,
       "peerDependencies": {},
-      "typeScriptVersion": "5.0",
-      "typesPublisherContentHash": "f8c1650d1099e4f098246067ac4105b0fa376c5cb8197c08daab74d4dc2defbd"
+      "typeScriptVersion": "5.1",
+      "typesPublisherContentHash": "d2687e6a6a92b300c5f3ff4789f9080f45116bb0bdd8d9bb7b94443fa00cfa00"
     }
   },
   "time": {
     "created": "2016-05-17T18:43:22.882Z",
-    "modified": "2025-05-12T19:32:27.589Z",
-    "18.3.17": "2024-12-16T12:44:18.722Z"
+    "modified": "2025-06-11T13:41:28.690Z",
+    "19.1.5": "2025-05-21T10:38:16.688Z"
   },
   "license": "MIT"
 }

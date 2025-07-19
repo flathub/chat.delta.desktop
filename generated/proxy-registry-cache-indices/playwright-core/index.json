@@ -1,19 +1,19 @@
 {
   "_id": "playwright-core",
-  "_rev": "4927-96989a49243dbbac9babe6b34ff2944c",
+  "_rev": "5024-37871082437828f1666de3facab1cd89",
   "name": "playwright-core",
   "dist-tags": {
     "rc": "1.18.0-rc1",
-    "latest": "1.52.0",
-    "beta": "1.52.0-beta-1746003413000",
-    "next": "1.53.0-alpha-2025-05-15"
+    "beta": "1.54.1-beta-1752237287000",
+    "latest": "1.54.1",
+    "next": "1.55.0-alpha-2025-07-18"
   },
   "versions": {
-    "1.50.1": {
+    "1.52.0": {
       "name": "playwright-core",
-      "version": "1.50.1",
+      "version": "1.52.0",
       "license": "Apache-2.0",
-      "_id": "playwright-core@1.50.1",
+      "_id": "playwright-core@1.52.0",
       "bugs": {
         "url": "https://github.com/microsoft/playwright/issues"
       },
@@ -21,23 +21,23 @@
         "playwright-core": "cli.js"
       },
       "dist": {
-        "shasum": "6a0484f1f1c939168f40f0ab3828c4a1592c4504",
-        "tarball": "http://localhost:3000/playwright-core/-/playwright-core-1.50.1.tgz",
-        "fileCount": 324,
-        "integrity": "sha512-ra9fsNWayuYumt+NiM069M6OkcRb1FZSK8bgi66AtpFoWkg2+y0bJSNmkFrWhMbEBbVKC/EruAHH3g0zmtwGmQ==",
+        "shasum": "238f1f0c3edd4ebba0434ce3f4401900319a3dca",
+        "tarball": "http://localhost:3000/playwright-core/-/playwright-core-1.52.0.tgz",
+        "fileCount": 340,
+        "integrity": "sha512-l2osTgLXSMeuLZOML9qYODUQoPPnUsKsb5/P6LJ2e6uPKXUdPK5WYhN4z03G+YNbWmGDY4YENauNu4ZKczreHg==",
         "signatures": [
           {
-            "sig": "MEUCIQCsQIkyf6ThBP2V8gyS7+MAPEy7wi6dRdn9SGHwXE+F0wIgF+OkJOxxe+h9HKUMRjZh6q8YW+fE1hyG/HffN9I05dM=",
+            "sig": "MEUCIQCr/JeZJauPw8smkryPoncl8CxuH9o7nsFuwAXs2jih9AIgVKnSMYrWeWHTr0fRPo77aaHH6jS273uh/qyoe/cY28g=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
         "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/playwright-core@1.50.1",
+          "url": "http://localhost:3000/-/npm/v1/attestations/playwright-core@1.52.0",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "unpackedSize": 7842116
+        "unpackedSize": 7962441
       },
       "types": "types/types.d.ts",
       "engines": {
@@ -50,7 +50,7 @@
           "default": "./index.js",
           "require": "./index.js"
         },
-        "./lib/utils": "./lib/utils/index.js",
+        "./lib/utils": "./lib/utils.js",
         "./lib/server": "./lib/server/index.js",
         "./package.json": "./package.json",
         "./lib/zipBundle": "./lib/zipBundle.js",
@@ -59,24 +59,24 @@
         "./lib/cli/program": "./lib/cli/program.js",
         "./lib/utilsBundle": "./lib/utilsBundle.js",
         "./lib/outofprocess": "./lib/outofprocess.js",
-        "./lib/image_tools/stats": "./lib/image_tools/stats.js",
-        "./lib/image_tools/compare": "./lib/image_tools/compare.js",
         "./lib/server/registry/index": "./lib/server/registry/index.js",
-        "./lib/image_tools/colorUtils": "./lib/image_tools/colorUtils.js",
         "./lib/remote/playwrightServer": "./lib/remote/playwrightServer.js",
-        "./lib/image_tools/imageChannel": "./lib/image_tools/imageChannel.js"
+        "./lib/server/utils/image_tools/stats": "./lib/server/utils/image_tools/stats.js",
+        "./lib/server/utils/image_tools/compare": "./lib/server/utils/image_tools/compare.js",
+        "./lib/server/utils/image_tools/colorUtils": "./lib/server/utils/image_tools/colorUtils.js",
+        "./lib/server/utils/image_tools/imageChannel": "./lib/server/utils/image_tools/imageChannel.js"
       },
-      "gitHead": "dbc685ca98bf937a318f36b0de9ed6e48dac2db5",
+      "gitHead": "471930b1ceae03c9e66e0eb80c1364a1a788e7db",
       "_npmVersion": "10.8.2",
       "directories": {},
-      "_nodeVersion": "18.20.6",
+      "_nodeVersion": "18.20.8",
       "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2020-01-17T16:44:00.542Z",
-    "modified": "2025-05-15T00:36:39.176Z",
-    "1.50.1": "2025-01-31T16:35:35.647Z"
+    "modified": "2025-07-18T00:40:08.882Z",
+    "1.52.0": "2025-04-17T17:09:33.314Z"
   },
   "license": "Apache-2.0"
 }

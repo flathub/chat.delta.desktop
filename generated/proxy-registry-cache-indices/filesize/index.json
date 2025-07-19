@@ -1,31 +1,31 @@
 {
   "_id": "filesize",
-  "_rev": "231-d10974811578f6ffd7c4b0be067f7933",
+  "_rev": "235-5a20e3f9e421cc59dc023f37079465c6",
   "name": "filesize",
   "dist-tags": {
-    "latest": "10.1.6"
+    "latest": "11.0.2"
   },
   "versions": {
-    "10.1.4": {
+    "10.1.6": {
       "name": "filesize",
-      "version": "10.1.4",
+      "version": "10.1.6",
       "license": "BSD-3-Clause",
-      "_id": "filesize@10.1.4",
+      "_id": "filesize@10.1.6",
       "bugs": {
         "url": "https://github.com/avoidwork/filesize.js/issues"
       },
       "dist": {
-        "shasum": "184f256063a201f08b6e6b3cc47d21b60f5b8d89",
-        "tarball": "http://localhost:3000/filesize/-/filesize-10.1.4.tgz",
+        "shasum": "31194da825ac58689c0bce3948f33ce83aabd361",
+        "tarball": "http://localhost:3000/filesize/-/filesize-10.1.6.tgz",
         "fileCount": 6,
-        "integrity": "sha512-ryBwPIIeErmxgPnm6cbESAzXjuEFubs+yKYLBZvg3CaiNcmkJChoOGcBSrZ6IwkMwPABwPpVXE6IlNdGJJrvEg==",
+        "integrity": "sha512-sJslQKU2uM33qH5nqewAwVB2QgR6w1aMNsYUp3aN5rMRyXEwJGmZvaWzeJFNTOXWlHQyBFCWrdj3fV/fsTOX8w==",
         "signatures": [
           {
-            "sig": "MEUCIQCtVRwxFkOu2Ep1srEvW4JnudIhP6PW0wOacn+h3EBm+gIgNwBSthAFLTR+QmtE0bii3l2J7TvpAFPWJhYg/1w7+mA=",
+            "sig": "MEYCIQCGdJCuHj4goYCklnz0e31Z4U3uPzjGKurtFCBsAtqrnQIhAIP8rVplABC6ePbMpiAEFFt2wtdT0FVE2DL0fdV15CzR",
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
         ],
-        "unpackedSize": 20190
+        "unpackedSize": 20231
       },
       "main": "dist/filesize.cjs",
       "type": "module",
@@ -34,7 +34,7 @@
       "engines": {
         "node": ">= 10.4.0"
       },
-      "gitHead": "bb0fe7cc321270818a672023a1f978d734706b16",
+      "gitHead": "b480b2992a3ac2acb18a030c7b3ce11fe91fb6e0",
       "scripts": {
         "fix": "eslint --fix *.js src/*.js test/*.js",
         "lint": "eslint *.js src/*.js test/*.js",
@@ -43,15 +43,15 @@
         "mocha": "nyc mocha test/*.js",
         "types": "npx -p typescript tsc src/*.js --declaration --allowJs --emitDeclarationOnly --outDir types",
         "rollup": "rollup --config",
-        "prepare": "husky install",
+        "prepare": "husky",
         "coverage": "nyc npm run test",
         "changelog": "auto-changelog -p",
         "test-webpack": "mkdir -p test/webpack && rm -rf test/webpack/* && git clone git@github.com:rabelais88/typescript-webpack.git test/webpack && echo \"import { filesize } from 'filesize';console.log(filesize(1234));\" >> test/webpack/src/index.ts && cd test/webpack && npm install && mkdir -p node_modules/filesize/dist && cp ../../package.json node_modules/filesize/ && cp ../../dist/* node_modules/filesize/dist/ && npm run build"
       },
       "sourceType": "module",
-      "_npmVersion": "10.7.0",
+      "_npmVersion": "10.8.2",
       "directories": {},
-      "_nodeVersion": "20.14.0",
+      "_nodeVersion": "22.7.0",
       "_hasShrinkwrap": false,
       "devDependencies": {
         "nyc": "^17.0.0",
@@ -67,8 +67,8 @@
   },
   "time": {
     "created": "2012-05-08T18:45:10.479Z",
-    "modified": "2024-09-04T16:29:10.308Z",
-    "10.1.4": "2024-07-09T00:37:17.679Z"
+    "modified": "2025-07-16T09:51:56.157Z",
+    "10.1.6": "2024-09-04T16:29:10.148Z"
   },
   "license": "BSD-3-Clause"
 }

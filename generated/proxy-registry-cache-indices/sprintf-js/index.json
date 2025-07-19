@@ -6,39 +6,41 @@
     "latest": "1.1.3"
   },
   "versions": {
-    "1.1.2": {
+    "1.1.3": {
       "name": "sprintf-js",
-      "version": "1.1.2",
+      "version": "1.1.3",
       "license": "BSD-3-Clause",
-      "_id": "sprintf-js@1.1.2",
+      "_id": "sprintf-js@1.1.3",
       "bugs": {
         "url": "https://github.com/alexei/sprintf.js/issues"
       },
       "dist": {
-        "shasum": "da1765262bf8c0f571749f2ad6c26300207ae673",
-        "tarball": "http://localhost:3000/sprintf-js/-/sprintf-js-1.1.2.tgz",
-        "fileCount": 12,
-        "integrity": "sha512-VE0SOVEHCk7Qc8ulkWw3ntAzXuqf7S2lvwQaDLRnUeIEaKNQJzV6BwmLKhOqT61aGhfUMrXeaBk+oDGCzvhcug==",
+        "shasum": "4914b903a2f8b685d17fdf78a70e917e872e444a",
+        "tarball": "http://localhost:3000/sprintf-js/-/sprintf-js-1.1.3.tgz",
+        "fileCount": 11,
+        "integrity": "sha512-Oo+0REFV59/rz3gfJNKQiBlwfHaSESl1pcGyABQsnnIfWOFt6JNj5gCog2U6MLZ//IGYD+nA8nI+mTShREReaA==",
         "signatures": [
           {
-            "sig": "MEUCIQDLrYox3B7TVrVwp6JhCgq4JHze+AHVBzABb2D14BIlYgIgDObujuR953IJNu3Pku6Cg1c4oUiKzF9Z45tQGWnczAs=",
+            "sig": "MEQCIFqEdBzxc5TO4qHn2Vaj+rUbeXXAIrldXZrm+Oh3ctpGAiA9wmSjDRjIGR5h/m5RnndPawduJOh1VPtIhc1D08pEew==",
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
         ],
-        "unpackedSize": 40231,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcDSE4CRA9TVsSAnZWagAAaNwP/1h7BqeK4PRzJRpu7PsQ\nEohuxkAhwGYnx6iTt+S5kB55BiVot9WSzOxDCvTfdcD9msg2ejdtgOLPq9kN\ntTBQOtvoXy6Xc5RwYiH+o3Kla6qir+69XBXC9CkwdOAEcPSkDvB2QFUmiUo/\ni8Mkg9r/JGtsjwSxAYcryLUUIOZkDuoMu/YCVeUWRcxPi7WiKgumQsRGW8VY\nQnJiplaydvcYREw5efMvKo3iiK2Puts0Y6KohrBvLTxFK1gnAIX/Ycq/PfYa\npDLFMwLiuvZ799Hbs44yb+52M7SX1H0Y3VULOeFWY5vYJT1I5Xqnr6U8QsQ2\nFIVMeOL2jn8gq+LcP+nUT41V1ij/L3MvMISo4YBqr32dji3+JgC0tqHxqjdi\nph36pRpEgz8cU4Nu0d0ssH9Ubx+MsbLfQ2+cWAR5BJfs79Yhu/6eo1Te0XUi\njQMstGdcQi2jyKCiBMUVaatrqiMeXhvBdnnGd7QRR0ooRZatrCpYATvnwPGl\nXfRG7MjLiFSbrYmMsnpZW09IT3FG88SwoVVnk8VhMR5glUMTS+XUJ5QT7h8F\nqhz9gjQNSUJceKMsSsrjiiRUj93/diqVVGAp7juCHQESEKHe8BCKWDguCAGg\nOsb4YsSCnj5YnCLjuvTF4dYZln9OQ5/kq3PIUbfrBp6KBg4UwQKwems9C+sp\nWCGx\r\n=4TfB\r\n-----END PGP SIGNATURE-----\r\n"
+        "unpackedSize": 39879
       },
       "main": "src/sprintf.js",
-      "gitHead": "ceb9b805e6d594a9c24cdde02890d3c00c6643b7",
+      "gitHead": "3a0d8c26d291b5bd9f1974877ecc50739921d6f5",
       "scripts": {
         "lint": "eslint .",
         "test": "mocha test/*.js",
         "pretest": "npm run lint",
         "lint:fix": "eslint --fix ."
       },
-      "_npmVersion": "6.4.1",
+      "overrides": {
+        "graceful-fs": "^4.2.11"
+      },
+      "_npmVersion": "9.5.1",
       "directories": {},
-      "_nodeVersion": "9.0.0",
+      "_nodeVersion": "18.16.0",
       "_hasShrinkwrap": false,
       "devDependencies": {
         "gulp": "^3.9.1",
@@ -58,7 +60,7 @@
   "time": {
     "created": "2013-04-03T13:24:36.516Z",
     "modified": "2024-10-22T17:26:19.033Z",
-    "1.1.2": "2018-12-09T14:05:44.561Z"
+    "1.1.3": "2023-09-11T13:12:09.207Z"
   },
   "license": "BSD-3-Clause"
 }

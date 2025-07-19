@@ -1,0 +1,185 @@
+{
+  "_id": "@humanwhocodes/retry",
+  "_rev": "15-959e79c5f4aa647b2ca322dfdcc6c4d8",
+  "name": "@humanwhocodes/retry",
+  "dist-tags": {
+    "latest": "0.4.3"
+  },
+  "versions": {
+    "0.3.1": {
+      "name": "@humanwhocodes/retry",
+      "version": "0.3.1",
+      "license": "Apache-2.0",
+      "_id": "@humanwhocodes/retry@0.3.1",
+      "bugs": {
+        "url": "https://github.com/humanwhocodes/retry/issues"
+      },
+      "dist": {
+        "shasum": "c72a5c76a9fbaf3488e231b13dc52c0da7bab42a",
+        "tarball": "http://localhost:3000/@humanwhocodes/retry/-/retry-0.3.1.tgz",
+        "fileCount": 9,
+        "integrity": "sha512-JBxkERygn7Bv/GbN5Rv8Ul6LVknS+5Bp6RgDC/O8gEBU/yeH5Ui5C/OlWrTb6qct7LjjfT6Re2NxB0ln0yYybA==",
+        "signatures": [
+          {
+            "sig": "MEQCIBdUz35OOPbuYuBD5p5FiLorvp9uEs2rPT8CBbE2ey7dAiAILjgIu3jtD3duONO2LR0oj9vvLHqgg7U4/Sc9IPW2CA==",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 45429
+      },
+      "main": "dist/retrier.cjs",
+      "type": "module",
+      "types": "dist/retrier.d.ts",
+      "module": "dist/retrier.js",
+      "engines": {
+        "node": ">=18.18"
+      },
+      "exports": {
+        "import": {
+          "types": "./dist/retrier.d.ts",
+          "default": "./dist/retrier.js"
+        },
+        "require": {
+          "types": "./dist/retrier.d.cts",
+          "default": "./dist/retrier.cjs"
+        }
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/nzakas",
+        "type": "github"
+      },
+      "gitHead": "77ab8face0d554980ef02efa45aec051a09494d9",
+      "scripts": {
+        "lint": "eslint src/ tests/",
+        "test": "npm run test:unit && npm run test:build",
+        "build": "rollup -c && tsc && npm run build:cts-types",
+        "prepare": "npm run build",
+        "pretest": "npm run build",
+        "test:jsr": "npx jsr@latest publish --dry-run",
+        "test:unit": "mocha tests/retrier.test.js",
+        "test:build": "node tests/pkg.test.cjs && node tests/pkg.test.mjs",
+        "test:emfile": "node tools/check-emfile-handling.js",
+        "build:cts-types": "node -e \"fs.copyFileSync('dist/retrier.d.ts', 'dist/retrier.d.cts')\""
+      },
+      "gitHooks": {
+        "pre-commit": "lint-staged"
+      },
+      "_npmVersion": "10.7.0",
+      "directories": {},
+      "lint-staged": {
+        "*.js": [
+          "eslint --fix"
+        ]
+      },
+      "_nodeVersion": "18.20.4",
+      "publishConfig": {
+        "access": "public"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "mocha": "^10.3.0",
+        "eslint": "^8.21.0",
+        "rollup": "3.29.4",
+        "yorkie": "2.0.0",
+        "@eslint/js": "^8.49.0",
+        "typescript": "5.4.4",
+        "@types/node": "20.12.6",
+        "lint-staged": "15.2.1",
+        "@types/mocha": "^10.0.3",
+        "@tsconfig/node16": "^16.1.1",
+        "@rollup/plugin-terser": "0.4.4"
+      }
+    },
+    "0.4.3": {
+      "name": "@humanwhocodes/retry",
+      "version": "0.4.3",
+      "type": "module",
+      "main": "dist/retrier.cjs",
+      "module": "dist/retrier.js",
+      "types": "dist/retrier.d.ts",
+      "exports": {
+        "require": {
+          "types": "./dist/retrier.d.cts",
+          "default": "./dist/retrier.cjs"
+        },
+        "import": {
+          "types": "./dist/retrier.d.ts",
+          "default": "./dist/retrier.js"
+        }
+      },
+      "engines": {
+        "node": ">=18.18"
+      },
+      "publishConfig": {
+        "access": "public"
+      },
+      "gitHooks": {
+        "pre-commit": "lint-staged"
+      },
+      "lint-staged": {
+        "*.js": [
+          "eslint --fix"
+        ]
+      },
+      "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/nzakas"
+      },
+      "scripts": {
+        "build:cts-types": "node -e \"fs.copyFileSync('dist/retrier.d.ts', 'dist/retrier.d.cts')\"",
+        "build": "rollup -c && tsc && npm run build:cts-types",
+        "prepare": "npm run build",
+        "lint": "eslint src/ tests/",
+        "pretest": "npm run build",
+        "test:unit": "mocha tests/retrier.test.js",
+        "test:build": "node tests/pkg.test.cjs && node tests/pkg.test.mjs",
+        "test:jsr": "npx jsr@latest publish --dry-run",
+        "test:emfile": "node tools/check-emfile-handling.js",
+        "test": "npm run test:unit && npm run test:build"
+      },
+      "license": "Apache-2.0",
+      "devDependencies": {
+        "@eslint/js": "^8.49.0",
+        "@rollup/plugin-terser": "0.4.4",
+        "@tsconfig/node16": "^16.1.1",
+        "@types/mocha": "^10.0.3",
+        "@types/node": "20.12.6",
+        "eslint": "^8.21.0",
+        "lint-staged": "15.2.1",
+        "mocha": "^10.3.0",
+        "rollup": "3.29.4",
+        "typescript": "5.4.4",
+        "yorkie": "2.0.0"
+      },
+      "_id": "@humanwhocodes/retry@0.4.3",
+      "gitHead": "e4cd0fc1148c51de3df40ff8b40f975f5cabf6c9",
+      "bugs": {
+        "url": "https://github.com/humanwhocodes/retry/issues"
+      },
+      "_nodeVersion": "22.15.0",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==",
+        "shasum": "c2b9d2e374ee62c586d3adbea87199b1d7a7a6ba",
+        "tarball": "http://localhost:3000/@humanwhocodes/retry/-/retry-0.4.3.tgz",
+        "fileCount": 9,
+        "unpackedSize": 65711,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQDMCRthHuR66AlmhYiZ+rKkXT3JnOBdKjwGKorPTvCdnAIhAN3JlApaHn2fVTLplXStspkNNpyDBbUw0kQTkm05GLkX"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2024-01-17T00:18:36.363Z",
+    "modified": "2025-05-07T14:25:57.572Z",
+    "0.3.1": "2024-10-04T16:22:04.392Z",
+    "0.4.3": "2025-05-07T14:25:57.372Z"
+  },
+  "license": "Apache-2.0"
+}

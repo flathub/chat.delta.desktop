@@ -6,57 +6,62 @@
     "latest": "3.3.1"
   },
   "versions": {
-    "3.3.0": {
+    "3.3.1": {
       "name": "import-fresh",
-      "version": "3.3.0",
+      "version": "3.3.1",
       "license": "MIT",
-      "_id": "import-fresh@3.3.0",
-      "bugs": {
-        "url": "https://github.com/sindresorhus/import-fresh/issues"
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "exports": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
       },
-      "dist": {
-        "shasum": "37162c25fcb9ebaa2e6e53d5b4d88ce17d9e0c2b",
-        "tarball": "http://localhost:3000/import-fresh/-/import-fresh-3.3.0.tgz",
-        "fileCount": 5,
-        "integrity": "sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==",
-        "signatures": [
-          {
-            "sig": "MEUCIQC+WNpCgiJKCYRI700fV/+YhxQJqk9z82PAW0I9BJG3wgIgZhfgu5epfoL8Toda8yFrIy68FX6Yp3AwonvP+PokCQ4=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 4866,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJf31MtCRA9TVsSAnZWagAAdgMP/jqssukwWjy8es55q7qv\npQL/80b5Fs6m4iIIfPcQxAdA+tnI+/C1SPqlkV8+BuWQShykSYC5jfpuV88u\nmSMTx3L12AlxBbn9AQbuaHdlFhACBsMzW/UJPQ1Tt7IW8SBFPnVL8pSsf+ox\nUMk03C1PgpgdZ/rv+BAji32LZsqSVFG7GoBiz7cjr1uAryiaSYh8Rbxc8fhw\nvYuNqIdnRv8OxMlH0EBUrULoPb4zaYkZR2aQSLn7S7i8tlQJYaqDpHqop1e/\n4Lo3MzJvEntke+vEYSketsImNh7+7ztcU8+pdy27akcyD8Ge/dmb7bIE1YBo\nUiuM8QExZWZfDv4mkZ+5EcUdDF/wF2AW9iT6R4oRgYREghIhain2cHVD/L4B\n0tb3aCYMAs0fwoGIsOqjoVZHCIqB8l55U/sXF0IUZUz0qkQTmKyymOqPQMTQ\nivaknpM511wFUfY/HkMi8OFrIMsyvo732Us9EKu/IJKBk3RhqK0HBDXEcAVw\nWQkBDzK9/fWyVM98XxaYmcCF4htTCMXPLC+YYdrazCN5kL21S+DZa2sOzx+c\nmA9ImScJjknALNv+cxQeMLs9M5jj2jBUBWzKRkKXxfKqTK2de0ooSM9ld0/E\nY7KW4blaH0+xhUVoVLza/+j+nR5O9TGjBCexbQW5dS4wzQKTVUqMP7ZiJhv7\nQbyd\r\n=V64p\r\n-----END PGP SIGNATURE-----\r\n"
-      },
+      "sideEffects": false,
       "engines": {
         "node": ">=6"
       },
-      "funding": "https://github.com/sponsors/sindresorhus",
-      "gitHead": "f1dddc06da4f1cdfb44a3aaba1f2c353c00dea02",
       "scripts": {
         "test": "xo && ava && tsd",
         "heapdump": "node heapdump.js"
       },
-      "_npmVersion": "6.14.9",
-      "directories": {},
-      "_nodeVersion": "15.4.0",
       "dependencies": {
-        "resolve-from": "^4.0.0",
-        "parent-module": "^1.0.0"
+        "parent-module": "^1.0.0",
+        "resolve-from": "^4.0.0"
       },
-      "_hasShrinkwrap": false,
       "devDependencies": {
-        "xo": "^0.23.0",
         "ava": "^1.0.1",
+        "heapdump": "^0.3.12",
         "tsd": "^0.7.3",
-        "heapdump": "^0.3.12"
-      }
+        "xo": "^0.23.0"
+      },
+      "_id": "import-fresh@3.3.1",
+      "gitHead": "1fad065ac60c08a99d69a6b8a6f5f50e1bcdaaa9",
+      "types": "./index.d.ts",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/import-fresh/issues"
+      },
+      "_nodeVersion": "23.6.1",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-TR3KfrTZTYLPB6jUjfx6MF9WcWrHL9su5TObK4ZkYgBdWKPOFoSoQIdEuTuR82pmtxH2spWG9h6etwfr1pLBqQ==",
+        "shasum": "9cecb56503c0ada1f2741dbbd6546e4b13b57ccf",
+        "tarball": "http://localhost:3000/import-fresh/-/import-fresh-3.3.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 4693,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQDK1iiHtPpYzaAHuvkWyQ/MZlbJAgu+a5S2T5HA8E45WwIga63wDHMqIut2oXoz64+RzXroFStjdvvBG0uDJc7k5l0="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2017-05-21T11:39:44.813Z",
     "modified": "2025-02-02T09:45:41.907Z",
-    "3.3.0": "2020-12-20T13:35:41.167Z"
+    "3.3.1": "2025-02-02T09:45:41.743Z"
   },
   "license": "MIT"
 }

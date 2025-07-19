@@ -1,0 +1,84 @@
+{
+  "_id": "@eslint/object-schema",
+  "_rev": "3-264867575cda218f072edb485c24298c",
+  "name": "@eslint/object-schema",
+  "dist-tags": {
+    "latest": "2.1.6"
+  },
+  "versions": {
+    "2.1.6": {
+      "name": "@eslint/object-schema",
+      "version": "2.1.6",
+      "type": "module",
+      "main": "dist/esm/index.js",
+      "types": "dist/esm/index.d.ts",
+      "exports": {
+        "require": {
+          "types": "./dist/cjs/index.d.cts",
+          "default": "./dist/cjs/index.cjs"
+        },
+        "import": {
+          "types": "./dist/esm/index.d.ts",
+          "default": "./dist/esm/index.js"
+        }
+      },
+      "publishConfig": {
+        "access": "public"
+      },
+      "directories": {
+        "test": "tests"
+      },
+      "scripts": {
+        "build:cts": "node ../../tools/build-cts.js dist/esm/index.d.ts dist/cjs/index.d.cts",
+        "build": "rollup -c && tsc -p tsconfig.esm.json && npm run build:cts",
+        "test:jsr": "npx jsr@latest publish --dry-run",
+        "test": "mocha tests/",
+        "test:coverage": "c8 npm test"
+      },
+      "license": "Apache-2.0",
+      "bugs": {
+        "url": "https://github.com/eslint/rewrite/issues"
+      },
+      "devDependencies": {
+        "c8": "^9.1.0",
+        "mocha": "^10.4.0",
+        "rollup": "^4.16.2",
+        "rollup-plugin-copy": "^3.5.0",
+        "typescript": "^5.4.5"
+      },
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "_id": "@eslint/object-schema@2.1.6",
+      "gitHead": "e1cb6037bc237313dbf3f6a7b9f5cd3c3105b668",
+      "_nodeVersion": "22.13.1",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-RBMg5FRL0I0gs51M/guSAj5/e14VQ4tpZnQNWwuDT66P14I43ItmPfIZRhO9fUVIPOAQXU47atlywZ/czoqFPA==",
+        "shasum": "58369ab5b5b3ca117880c0f6c0b0f32f6950f24f",
+        "tarball": "http://localhost:3000/@eslint/object-schema/-/object-schema-2.1.6.tgz",
+        "fileCount": 10,
+        "unpackedSize": 56960,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2fobject-schema@2.1.6",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQDDMEh/N3HSCxrAbPFSoR+5b4AiJV0i+ekupaMB70CpMAIgHUnHk9TpbvgxmZMl9XVz8UxJTBtVNLKTewhnONDeCCk="
+          }
+        ]
+      },
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2024-05-30T20:40:22.953Z",
+    "modified": "2025-01-31T17:22:47.181Z",
+    "2.1.6": "2025-01-31T17:22:46.772Z"
+  },
+  "license": "Apache-2.0"
+}

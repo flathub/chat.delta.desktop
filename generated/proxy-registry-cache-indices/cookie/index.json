@@ -6,43 +6,92 @@
     "latest": "1.0.2"
   },
   "versions": {
-    "0.6.0": {
+    "0.7.1": {
       "name": "cookie",
-      "version": "0.6.0",
+      "version": "0.7.1",
       "license": "MIT",
-      "_id": "cookie@0.6.0",
+      "_id": "cookie@0.7.1",
       "bugs": {
         "url": "https://github.com/jshttp/cookie/issues"
       },
       "dist": {
-        "shasum": "2798b04b071b0ecbff0dbb62a505a8efa4e19051",
-        "tarball": "http://localhost:3000/cookie/-/cookie-0.6.0.tgz",
-        "fileCount": 6,
-        "integrity": "sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==",
+        "shasum": "2f73c42142d5d5cf71310a74fc4ae61670e5dbc9",
+        "tarball": "http://localhost:3000/cookie/-/cookie-0.7.1.tgz",
+        "fileCount": 5,
+        "integrity": "sha512-6DnInpx7SJ2AK3+CTUE/ZM0vWTUboZCegxhC2xiIydHR9jNuTAASBrfEpHhiGOZw/nX51bHt6YQl8jsGo4y/0w==",
         "signatures": [
           {
-            "sig": "MEQCIEL2HouINUZMTIik3Y3nbvRXXwWmfFN4K7ptI3x8KlV4AiAJDsHTaKH4r35aCzLz9tnjrAATCN7WAW351QYb2GvkNw==",
+            "sig": "MEUCIDKL4lc0hvH9qowdRFxv5qw1rB0u+IxHTqUPE76emvk8AiEA+9e03z9xhRG3US5bb1Sbp8J4OJ2Scaa5p45AV4EXPxQ=",
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
         ],
-        "unpackedSize": 23736
+        "unpackedSize": 23319
       },
+      "main": "index.js",
       "engines": {
         "node": ">= 0.6"
       },
-      "gitHead": "38323bad3aa04bce840103ff6075bc05cc0bf884",
+      "gitHead": "cf4658f492c5bd96aeaf5693c3500f8495031014",
       "scripts": {
         "lint": "eslint .",
         "test": "mocha --reporter spec --bail --check-leaks test/",
         "bench": "node benchmark/index.js",
         "test-ci": "nyc --reporter=lcov --reporter=text npm test",
-        "version": "node scripts/version-history.js && git add HISTORY.md",
         "test-cov": "nyc --reporter=html --reporter=text npm test",
         "update-bench": "node scripts/update-benchmark.js"
       },
-      "_npmVersion": "9.8.1",
+      "_npmVersion": "10.8.3",
       "directories": {},
-      "_nodeVersion": "18.18.2",
+      "_nodeVersion": "22.9.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "nyc": "15.1.0",
+        "mocha": "10.2.0",
+        "eslint": "8.53.0",
+        "benchmark": "2.1.4",
+        "top-sites": "1.1.194",
+        "safe-buffer": "5.2.1",
+        "beautify-benchmark": "0.2.4",
+        "eslint-plugin-markdown": "3.0.1"
+      }
+    },
+    "0.7.2": {
+      "name": "cookie",
+      "version": "0.7.2",
+      "license": "MIT",
+      "_id": "cookie@0.7.2",
+      "bugs": {
+        "url": "https://github.com/jshttp/cookie/issues"
+      },
+      "dist": {
+        "shasum": "556369c472a2ba910f2979891b526b3436237ed7",
+        "tarball": "http://localhost:3000/cookie/-/cookie-0.7.2.tgz",
+        "fileCount": 5,
+        "integrity": "sha512-yki5XnKuf750l50uGTllt6kKILY4nQ1eNIQatoXEByZ5dWgnKqbnqmTrBE5B4N7lrMJKQ2ytWMiTO2o0v6Ew/w==",
+        "signatures": [
+          {
+            "sig": "MEQCIDm2q0PZlFEgY8XPuCXZEtK9ipN/2FVDL23gDjKWfQrUAiAyqfSsVQIrmonFoOR0wyDolkwCbU/PyQaDeLT6zBKrRA==",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 23382
+      },
+      "main": "index.js",
+      "engines": {
+        "node": ">= 0.6"
+      },
+      "gitHead": "d19eaa1a2bb9ca43ac0951edd852ba4e88e410e0",
+      "scripts": {
+        "lint": "eslint .",
+        "test": "mocha --reporter spec --bail --check-leaks test/",
+        "bench": "node benchmark/index.js",
+        "test-ci": "nyc --reporter=lcov --reporter=text npm test",
+        "test-cov": "nyc --reporter=html --reporter=text npm test",
+        "update-bench": "node scripts/update-benchmark.js"
+      },
+      "_npmVersion": "10.8.3",
+      "directories": {},
+      "_nodeVersion": "22.9.0",
       "_hasShrinkwrap": false,
       "devDependencies": {
         "nyc": "15.1.0",
@@ -59,7 +108,8 @@
   "time": {
     "created": "2012-05-28T23:56:11.938Z",
     "modified": "2025-05-14T14:55:58.052Z",
-    "0.6.0": "2023-11-07T05:01:09.857Z"
+    "0.7.1": "2024-10-03T18:17:17.990Z",
+    "0.7.2": "2024-10-07T03:41:28.828Z"
   },
   "license": "MIT"
 }

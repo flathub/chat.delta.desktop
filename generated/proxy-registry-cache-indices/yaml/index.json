@@ -117,121 +117,119 @@
         "@babel/plugin-proposal-class-properties": "^7.12.1"
       }
     },
-    "2.4.5": {
+    "2.8.0": {
       "name": "yaml",
-      "version": "2.4.5",
+      "version": "2.8.0",
       "license": "ISC",
-      "_id": "yaml@2.4.5",
-      "bugs": {
-        "url": "https://github.com/eemeli/yaml/issues"
-      },
+      "type": "commonjs",
+      "main": "./dist/index.js",
       "bin": {
         "yaml": "bin.mjs"
       },
-      "dist": {
-        "shasum": "60630b206dd6d84df97003d33fc1ddf6296cca5e",
-        "tarball": "http://localhost:3000/yaml/-/yaml-2.4.5.tgz",
-        "fileCount": 231,
-        "integrity": "sha512-aBx2bnqDzVOyNKfsysjA2ms5ZlnjSAW2eG3/L5G/CSujfjLJTJsEw1bGw8kCf04KodQWk1pxlGnZ56CRxiawmg==",
-        "signatures": [
-          {
-            "sig": "MEUCIQCn9ywj18m2oD02hbzi5figW1Hf/1phPpNVFQP7uZ4eNwIgJJ6lcUyJm35UjGlMdpYFOL50sLXE6Wdmj0i/WU7y+NY=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 674680
-      },
-      "main": "./dist/index.js",
-      "type": "commonjs",
-      "types": "./dist/index.d.ts",
       "browser": {
-        "./util.js": "./browser/dist/util.js",
+        "./dist/index.js": "./browser/index.js",
         "./dist/util.js": "./browser/dist/util.js",
-        "./dist/index.js": "./browser/index.js"
-      },
-      "engines": {
-        "node": ">= 14"
+        "./util.js": "./browser/dist/util.js"
       },
       "exports": {
         ".": {
-          "node": "./dist/index.js",
           "types": "./dist/index.d.ts",
+          "node": "./dist/index.js",
           "default": "./browser/index.js"
         },
+        "./package.json": "./package.json",
         "./util": {
-          "node": "./dist/util.js",
           "types": "./dist/util.d.ts",
+          "node": "./dist/util.js",
           "default": "./browser/dist/util.js"
-        },
-        "./package.json": "./package.json"
+        }
       },
-      "gitHead": "1b8fde6717c096446d4b1cf9e21ef1fb87090385",
       "scripts": {
-        "docs": "cd docs-slate && bundle exec middleman server",
-        "lint": "eslint src/",
-        "test": "jest --config config/jest.config.js",
         "build": "npm run build:node && npm run build:browser",
-        "clean": "git clean -fdxe node_modules",
-        "start": "node --enable-source-maps -i -e 'YAML=require(\"./dist/index.js\");const{parse,parseDocument,parseAllDocuments}=YAML'",
-        "predocs": "node docs/prepare-docs.mjs",
-        "prestart": "rollup --sourcemap -c config/rollup.node-config.mjs",
-        "prettier": "prettier --write .",
-        "test:all": "npm test && npm run test:types && npm run test:dist && npm run test:dist:types",
-        "test:dist": "npm run build:node && jest --config config/jest.config.js",
-        "build:node": "rollup -c config/rollup.node-config.mjs",
-        "preversion": "npm test && npm run build",
-        "test:types": "tsc --noEmit && tsc --noEmit -p tests/tsconfig.json",
-        "docs:deploy": "cd docs-slate && ./deploy.sh",
-        "docs:install": "cd docs-slate && bundle install",
         "build:browser": "rollup -c config/rollup.browser-config.mjs",
+        "build:node": "rollup -c config/rollup.node-config.mjs",
+        "clean": "git clean -fdxe node_modules",
+        "lint": "eslint config/ src/",
+        "prettier": "prettier --write .",
+        "prestart": "rollup --sourcemap -c config/rollup.node-config.mjs",
+        "start": "node --enable-source-maps -i -e 'YAML=require(\"./dist/index.js\");const{parse,parseDocument,parseAllDocuments}=YAML'",
+        "test": "jest --config config/jest.config.js",
+        "test:all": "npm test && npm run test:types && npm run test:dist && npm run test:dist:types",
         "test:browsers": "cd playground && npm test",
+        "test:dist": "npm run build:node && jest --config config/jest.config.js",
+        "test:dist:types": "tsc --allowJs --moduleResolution node --noEmit --target es5 dist/index.js",
+        "test:types": "tsc --noEmit && tsc --noEmit -p tests/tsconfig.json",
+        "docs:install": "cd docs-slate && bundle install",
         "predocs:deploy": "node docs/prepare-docs.mjs",
-        "prepublishOnly": "npm run clean && npm test && npm run build",
-        "test:dist:types": "tsc --allowJs --moduleResolution node --noEmit --target es5 dist/index.js"
+        "docs:deploy": "cd docs-slate && ./deploy.sh",
+        "predocs": "node docs/prepare-docs.mjs",
+        "docs": "cd docs-slate && bundle exec middleman server",
+        "preversion": "npm test && npm run build",
+        "prepublishOnly": "npm run clean && npm test && npm run build"
       },
+      "browserslist": "defaults, not ie 11",
       "prettier": {
-        "semi": false,
         "arrowParens": "avoid",
+        "semi": false,
         "singleQuote": true,
         "trailingComma": "none"
       },
-      "_npmVersion": "10.2.4",
-      "directories": {},
-      "_nodeVersion": "21.6.2",
-      "browserslist": "defaults, not ie 11",
-      "_hasShrinkwrap": false,
       "devDependencies": {
-        "jest": "^29.0.1",
-        "tslib": "^2.1.0",
-        "eslint": "^8.2.0",
-        "rollup": "^4.12.0",
-        "prettier": "^3.0.2",
-        "cross-env": "^7.0.3",
-        "babel-jest": "^29.0.1",
-        "fast-check": "^2.12.0",
-        "typescript": "^5.0.3",
         "@babel/core": "^7.12.10",
-        "@types/jest": "^29.2.4",
-        "@types/node": "^20.11.20",
+        "@babel/plugin-transform-typescript": "^7.12.17",
         "@babel/preset-env": "^7.12.11",
+        "@eslint/js": "^9.9.1",
         "@rollup/plugin-babel": "^6.0.3",
         "@rollup/plugin-replace": "^5.0.2",
+        "@rollup/plugin-typescript": "^12.1.1",
+        "@types/jest": "^29.2.4",
+        "@types/node": "^20.11.20",
+        "babel-jest": "^29.0.1",
+        "cross-env": "^7.0.3",
+        "eslint": "^9.9.1",
         "eslint-config-prettier": "^9.0.0",
-        "@rollup/plugin-typescript": "^11.0.0",
-        "@typescript-eslint/parser": "^7.0.2",
+        "fast-check": "^2.12.0",
+        "jest": "^29.0.1",
         "jest-ts-webcompat-resolver": "^1.0.0",
-        "@typescript-eslint/eslint-plugin": "^7.0.2",
-        "@babel/plugin-transform-typescript": "^7.12.17",
-        "@babel/plugin-transform-class-properties": "^7.23.3",
-        "@babel/plugin-transform-nullish-coalescing-operator": "^7.23.4"
-      }
+        "prettier": "^3.0.2",
+        "rollup": "^4.12.0",
+        "tslib": "^2.8.1",
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.4.0"
+      },
+      "engines": {
+        "node": ">= 14.6"
+      },
+      "_id": "yaml@2.8.0",
+      "gitHead": "c000eb708fc04910a0b034572c6febb090ca7035",
+      "types": "./dist/index.d.ts",
+      "bugs": {
+        "url": "https://github.com/eemeli/yaml/issues"
+      },
+      "_nodeVersion": "23.11.0",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-4lLa/EcQCB0cJkyts+FpIRx5G/llPxfP6VQU5KByHEhLxY3IJCH0f0Hy1MHI8sClTvsIb8qwRJ6R/ZdlDJ/leQ==",
+        "shasum": "15f8c9866211bdc2d3781a0890e44d4fa1a5fff6",
+        "tarball": "http://localhost:3000/yaml/-/yaml-2.8.0.tgz",
+        "fileCount": 233,
+        "unpackedSize": 683419,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQDhFTgJ6Px1HOUpnBEteaoTACUC5bkY6gTUfNcecHwYbAIhAOWfEGjbAv5+i8QVfYDa41iDjfZUfehqzYBzY++eFIT5"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2011-04-15T16:25:52.216Z",
     "modified": "2025-05-15T07:58:15.973Z",
     "1.10.2": "2021-03-13T21:02:56.363Z",
-    "2.4.5": "2024-06-08T21:42:26.758Z"
+    "2.8.0": "2025-05-15T07:58:15.800Z"
   },
   "license": "ISC"
 }
