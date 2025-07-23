@@ -24,6 +24,7 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications # needed for dbus notification, as the notification portal crashed because of a bug in electron https://github.com/electron/electron/issues/40461
   - --talk-name=com.canonical.AppMenu.Registrar # fix https://github.com/flathub/chat.delta.desktop/issues/118
   - --talk-name=org.kde.StatusNotifierWatcher # fix https://github.com/flathub/chat.delta.desktop/issues/143
+  - --talk-name=com.canonical.Unity # D-Bus talk for Unity desktop
   - --env=ELECTRON_OZONE_PLATFORM_HINT=auto # tell electron to choose Wayland if it is available
   - --env=NOTIFY_IGNORE_PORTAL=1 # fix https://github.com/deltachat/deltachat-desktop/issues/3590
 
