@@ -1,40 +1,19 @@
 {
   "_id": "@typescript-eslint/type-utils",
-  "_rev": "2595-a61e6e5edcb6ec87487a05c941172686",
+  "_rev": "2599-633b8ca0b71998b230f0f8cbec9ea897",
   "name": "@typescript-eslint/type-utils",
   "dist-tags": {
     "rc-v": "6.0.0-alpha.58",
     "rc-v6": "7.0.0-alpha.0",
     "rc-v8": "8.0.0-alpha.62",
-    "latest": "8.37.0",
-    "canary": "8.37.1-alpha.3"
+    "latest": "8.38.0",
+    "canary": "8.37.1-alpha.6"
   },
   "versions": {
-    "8.32.1": {
+    "8.38.0": {
       "name": "@typescript-eslint/type-utils",
-      "version": "8.32.1",
-      "license": "MIT",
-      "_id": "@typescript-eslint/type-utils@8.32.1",
-      "bugs": {
-        "url": "https://github.com/typescript-eslint/typescript-eslint/issues"
-      },
-      "dist": {
-        "shasum": "b9292a45f69ecdb7db74d1696e57d1a89514d21e",
-        "tarball": "http://localhost:3000/@typescript-eslint/type-utils/-/type-utils-8.32.1.tgz",
-        "fileCount": 66,
-        "integrity": "sha512-mv9YpQGA8iIsl5KyUPi+FGLm7+bA4fgXaeRcFKRDRwDMu4iwrSHeDPipwueNXhdIIZltwCJv+NkxftECbIZWfA==",
-        "signatures": [
-          {
-            "sig": "MEQCIE7o81RSGQ+mdjhyT5U0pdeURFSe1quDZm9gzYMb/x3KAiBNWluIHDcbsEX38agZrH4af08fDZqVFScosNuI4AAWdQ==",
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
-          }
-        ],
-        "unpackedSize": 96040
-      },
+      "version": "8.38.0",
       "type": "commonjs",
-      "engines": {
-        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-      },
       "exports": {
         ".": {
           "types": "./dist/index.d.ts",
@@ -42,49 +21,81 @@
         },
         "./package.json": "./package.json"
       },
-      "funding": {
-        "url": "https://opencollective.com/typescript-eslint",
-        "type": "opencollective"
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
       },
-      "gitHead": "af077a040cab200c0c5d973e0c4f2cfce75cfa88",
+      "bugs": {
+        "url": "https://github.com/typescript-eslint/typescript-eslint/issues"
+      },
+      "license": "MIT",
       "scripts": {
-        "lint": "npx nx lint",
-        "test": "vitest --run --config=$INIT_CWD/vitest.config.mts",
-        "build": "tsc -b tsconfig.build.json",
+        "build": "yarn run -BT nx build",
         "clean": "rimraf dist/ coverage/",
-        "format": "prettier --write \"./**/*.{ts,mts,cts,tsx,js,mjs,cjs,jsx,json,md,css}\" --ignore-path ../../.prettierignore",
-        "check-types": "npx nx typecheck"
+        "format": "yarn run -T format",
+        "lint": "yarn run -BT nx lint",
+        "test": "yarn run -BT nx test",
+        "typecheck": "yarn run -BT nx typecheck"
       },
-      "_npmVersion": "10.8.2",
-      "directories": {},
-      "_nodeVersion": "20.19.1",
       "dependencies": {
+        "@typescript-eslint/types": "8.38.0",
+        "@typescript-eslint/typescript-estree": "8.38.0",
+        "@typescript-eslint/utils": "8.38.0",
         "debug": "^4.3.4",
-        "ts-api-utils": "^2.1.0",
-        "@typescript-eslint/utils": "8.32.1",
-        "@typescript-eslint/typescript-estree": "8.32.1"
-      },
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "ajv": "^6.12.6",
-        "eslint": "*",
-        "rimraf": "*",
-        "vitest": "^3.1.3",
-        "prettier": "^3.2.5",
-        "typescript": "*",
-        "@vitest/coverage-v8": "^3.1.3",
-        "@typescript-eslint/parser": "8.32.1"
+        "ts-api-utils": "^2.1.0"
       },
       "peerDependencies": {
         "eslint": "^8.57.0 || ^9.0.0",
         "typescript": ">=4.8.4 <5.9.0"
-      }
+      },
+      "devDependencies": {
+        "@typescript-eslint/parser": "8.38.0",
+        "@vitest/coverage-v8": "^3.1.3",
+        "ajv": "^6.12.6",
+        "eslint": "*",
+        "rimraf": "*",
+        "typescript": "*",
+        "vitest": "^3.1.3"
+      },
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/typescript-eslint"
+      },
+      "nx": {
+        "name": "type-utils",
+        "includedScripts": [
+          "clean"
+        ],
+        "targets": {
+          "lint": {
+            "command": "eslint"
+          }
+        }
+      },
+      "_id": "@typescript-eslint/type-utils@8.38.0",
+      "gitHead": "d11e79e9c9edc9f6f5e66306e3b3d65f3149a760",
+      "_nodeVersion": "20.19.3",
+      "_npmVersion": "10.8.2",
+      "dist": {
+        "integrity": "sha512-c7jAvGEZVf0ao2z+nnz8BUaHZD09Agbh+DY7qvBQqLiz8uJzRgVPj5YvOh8I8uEiH8oIUGIfHzMwUcGVco/SJg==",
+        "shasum": "a56cd84765fa6ec135fe252b5db61e304403a85b",
+        "tarball": "http://localhost:3000/@typescript-eslint/type-utils/-/type-utils-8.38.0.tgz",
+        "fileCount": 66,
+        "unpackedSize": 98663,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEQCIAdgsVmgmkiuDJhzk75jGmZ8oLfiXHlPmhkHNyowTmQkAiADg/HAo5jdYsvbHNhFIM1OnOC40J5xNA1WiJ+hHdrsnA=="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2022-01-03T18:10:13.955Z",
-    "modified": "2025-07-18T13:33:08.387Z",
-    "8.32.1": "2025-05-12T17:19:32.179Z"
+    "modified": "2025-07-21T17:22:17.598Z",
+    "8.38.0": "2025-07-21T17:22:17.126Z"
   },
   "license": "MIT"
 }

@@ -1,90 +1,86 @@
 {
   "_id": "@eslint/plugin-kit",
-  "_rev": "13-5a8ce5e29b4bef71be63047facc162a6",
+  "_rev": "14-f076246b1492e43533a082a7c54e48dd",
   "name": "@eslint/plugin-kit",
   "dist-tags": {
-    "latest": "0.3.3"
+    "latest": "0.3.4"
   },
   "versions": {
-    "0.3.1": {
+    "0.3.4": {
       "name": "@eslint/plugin-kit",
-      "version": "0.3.1",
-      "license": "Apache-2.0",
-      "_id": "@eslint/plugin-kit@0.3.1",
-      "bugs": {
-        "url": "https://github.com/eslint/rewrite/issues"
-      },
-      "dist": {
-        "shasum": "b71b037b2d4d68396df04a8c35a49481e5593067",
-        "tarball": "http://localhost:3000/@eslint/plugin-kit/-/plugin-kit-0.3.1.tgz",
-        "fileCount": 10,
-        "integrity": "sha512-0J+zgWxHN+xXONWIyPWKFMgVuJoZuGiIFu8yxk7RJjxkzpGmyja5wRFqZIVtjDVOQpV+Rw0iOAjYPE2eQyjr0w==",
-        "signatures": [
-          {
-            "sig": "MEUCIG+ltl5FJFwVwxfPelXOXQsCaegaNJNJSBjUPMLkf9CCAiEAye80AHJkKK0MzrsxwmRmJsh8svVzj6ByKC69WCBwma4=",
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
-          }
-        ],
-        "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2fplugin-kit@0.3.1",
-          "provenance": {
-            "predicateType": "https://slsa.dev/provenance/v1"
-          }
-        },
-        "unpackedSize": 80311
-      },
-      "main": "dist/esm/index.js",
+      "version": "0.3.4",
       "type": "module",
+      "main": "dist/esm/index.js",
       "types": "dist/esm/index.d.ts",
-      "engines": {
-        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-      },
       "exports": {
-        "import": {
-          "types": "./dist/esm/index.d.ts",
-          "default": "./dist/esm/index.js"
-        },
         "require": {
           "types": "./dist/cjs/index.d.cts",
           "default": "./dist/cjs/index.cjs"
+        },
+        "import": {
+          "types": "./dist/esm/index.d.ts",
+          "default": "./dist/esm/index.js"
         }
-      },
-      "gitHead": "daa19551d7a52673ccaf7656c726dca6679ebd24",
-      "scripts": {
-        "test": "mocha tests/",
-        "build": "rollup -c && npm run build:dedupe-types && tsc -p tsconfig.esm.json && npm run build:cts",
-        "pretest": "npm run build",
-        "test:jsr": "npx jsr@latest publish --dry-run",
-        "build:cts": "node ../../tools/build-cts.js dist/esm/index.d.ts dist/cjs/index.d.cts",
-        "test:types": "tsc -p tests/types/tsconfig.json",
-        "test:coverage": "c8 npm test",
-        "build:dedupe-types": "node ../../tools/dedupe-types.js dist/cjs/index.cjs dist/esm/index.js"
-      },
-      "_npmVersion": "10.9.2",
-      "directories": {},
-      "_nodeVersion": "22.15.0",
-      "dependencies": {
-        "levn": "^0.4.1",
-        "@eslint/core": "^0.14.0"
       },
       "publishConfig": {
         "access": "public"
       },
-      "_hasShrinkwrap": false,
+      "bugs": {
+        "url": "https://github.com/eslint/rewrite/issues"
+      },
+      "scripts": {
+        "build:dedupe-types": "node ../../tools/dedupe-types.js dist/cjs/index.cjs dist/esm/index.js",
+        "build:cts": "node ../../tools/build-cts.js dist/esm/index.d.ts dist/cjs/index.d.cts",
+        "build": "rollup -c && npm run build:dedupe-types && tsc -p tsconfig.esm.json && npm run build:cts",
+        "pretest": "npm run build",
+        "test": "mocha tests/",
+        "test:coverage": "c8 npm test",
+        "test:jsr": "npx jsr@latest publish --dry-run",
+        "test:types": "tsc -p tests/types/tsconfig.json"
+      },
+      "license": "Apache-2.0",
+      "dependencies": {
+        "@eslint/core": "^0.15.1",
+        "levn": "^0.4.1"
+      },
       "devDependencies": {
-        "c8": "^9.1.0",
-        "mocha": "^10.4.0",
-        "rollup": "^4.16.2",
-        "typescript": "^5.4.5",
         "@types/levn": "^0.4.0",
         "rollup-plugin-copy": "^3.5.0"
-      }
+      },
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "_id": "@eslint/plugin-kit@0.3.4",
+      "gitHead": "380c2248711f5277e56c2977b6b440577b210023",
+      "_nodeVersion": "22.17.0",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-Ul5l+lHEcw3L5+k8POx6r74mxEYKG5kOb6Xpy2gCRW6zweT6TEhAf8vhxGgjhqrd/VO/Dirhsb+1hNpD1ue9hw==",
+        "shasum": "c6b9f165e94bf4d9fdd493f1c028a94aaf5fc1cc",
+        "tarball": "http://localhost:3000/@eslint/plugin-kit/-/plugin-kit-0.3.4.tgz",
+        "fileCount": 10,
+        "unpackedSize": 81379,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2fplugin-kit@0.3.4",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQDy2FjMj62uOoMMvLSE5injTlDRW0jwU2813b8N9TpkgwIhAIAkX9MF2Q81WvMaCwWxjvZ5Xqi/IioRPNtt+k6E6YdZ"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2024-08-27T13:59:03.959Z",
-    "modified": "2025-06-25T14:04:36.337Z",
-    "0.3.1": "2025-05-01T15:02:41.535Z"
+    "modified": "2025-07-21T15:31:41.573Z",
+    "0.3.4": "2025-07-21T15:31:41.111Z"
   },
   "license": "Apache-2.0"
 }

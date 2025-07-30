@@ -7,70 +7,70 @@
     "latest": "4.2.0"
   },
   "versions": {
-    "4.0.5": {
+    "4.2.0": {
       "name": "postcss-modules-local-by-default",
-      "version": "4.0.5",
-      "license": "MIT",
-      "_id": "postcss-modules-local-by-default@4.0.5",
-      "bugs": {
-        "url": "https://github.com/css-modules/postcss-modules-local-by-default/issues"
-      },
-      "dist": {
-        "shasum": "f1b9bd757a8edf4d8556e8d0f4f894260e3df78f",
-        "tarball": "http://localhost:3000/postcss-modules-local-by-default/-/postcss-modules-local-by-default-4.0.5.tgz",
-        "fileCount": 4,
-        "integrity": "sha512-6MieY7sIfTK0hYfafw1OMEG+2bg8Q1ocHCpoWLqOKj3JXlKu4G7btkmM/B7lFubYkYWmRSPLZi5chid63ZaZYw==",
-        "signatures": [
-          {
-            "sig": "MEUCIBtj075ZLBG0djme0fZO4fT5KngRUVIxHRFfd+koULaNAiEA1pzHToAC72CCy7x/P6/AC/5v0qB3Q0HAwVjiCcfbC4k=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 22528
-      },
+      "version": "4.2.0",
       "main": "src/index.js",
+      "license": "MIT",
       "engines": {
         "node": "^10 || ^12 || >= 14"
       },
-      "gitHead": "5eeb3053bc40061022ebc6f41cd207a405484de1",
       "scripts": {
-        "lint": "yarn eslint && yarn prettier",
-        "test": "yarn test:coverage",
-        "eslint": "eslint --ignore-path .gitignore .",
         "prettier": "prettier -l --ignore-path .gitignore .",
+        "eslint": "eslint --ignore-path .gitignore .",
+        "lint": "yarn eslint && yarn prettier",
         "test:only": "jest",
         "test:watch": "jest --watch",
         "test:coverage": "jest --coverage --collectCoverageFrom=\"src/**/*\"",
+        "test": "yarn test:coverage",
         "prepublishOnly": "yarn lint && yarn test"
       },
-      "_npmVersion": "10.2.3",
-      "directories": {},
-      "_nodeVersion": "18.19.0",
       "dependencies": {
         "icss-utils": "^5.0.0",
-        "postcss-value-parser": "^4.1.0",
-        "postcss-selector-parser": "^6.0.2"
+        "postcss-selector-parser": "^7.0.0",
+        "postcss-value-parser": "^4.1.0"
       },
-      "_hasShrinkwrap": false,
       "devDependencies": {
-        "jest": "^26.5.2",
-        "husky": "^4.3.0",
-        "eslint": "^7.10.0",
-        "postcss": "^8.1.0",
-        "prettier": "^2.1.2",
         "coveralls": "^3.1.0",
+        "eslint": "^7.10.0",
+        "eslint-config-prettier": "^6.12.0",
+        "husky": "^4.3.0",
+        "jest": "^26.5.2",
         "lint-staged": "^10.4.0",
-        "eslint-config-prettier": "^6.12.0"
+        "postcss": "^8.1.0",
+        "prettier": "^2.1.2"
       },
       "peerDependencies": {
         "postcss": "^8.1.0"
-      }
+      },
+      "gitHead": "db195e7e18bf0151b082f50f891809c0bf557e4e",
+      "bugs": {
+        "url": "https://github.com/css-modules/postcss-modules-local-by-default/issues"
+      },
+      "_id": "postcss-modules-local-by-default@4.2.0",
+      "_nodeVersion": "22.11.0",
+      "_npmVersion": "9.6.0",
+      "dist": {
+        "integrity": "sha512-5kcJm/zk+GJDSfw+V/42fJ5fhjL5YbFDl8nVdXkJPLLW+Vf9mTD5Xe0wqIaDnLuL2U6cDNpTr+UQ+v2HWIBhzw==",
+        "shasum": "d150f43837831dae25e4085596e84f6f5d6ec368",
+        "tarball": "http://localhost:3000/postcss-modules-local-by-default/-/postcss-modules-local-by-default-4.2.0.tgz",
+        "fileCount": 4,
+        "unpackedSize": 26331,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCIAo6DfHBlrEa0RyiIOcwGP02+3Lx1h4PR7Nw8Ev22bXIAiEAx6OOtXZejcPUimSRMsWunrno1Eq4ejK3bhgZpbuygp8="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2015-05-27T21:08:00.603Z",
     "modified": "2024-12-11T14:47:47.674Z",
-    "4.0.5": "2024-04-03T11:08:24.785Z"
+    "4.2.0": "2024-12-11T14:47:47.509Z"
   },
   "license": "MIT"
 }

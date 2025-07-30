@@ -6,36 +6,9 @@
     "latest": "8.5.6"
   },
   "versions": {
-    "8.4.41": {
+    "8.5.6": {
       "name": "postcss",
-      "version": "8.4.41",
-      "license": "MIT",
-      "_id": "postcss@8.4.41",
-      "bugs": {
-        "url": "https://github.com/postcss/postcss/issues"
-      },
-      "dist": {
-        "shasum": "d6104d3ba272d882fe18fc07d15dc2da62fa2681",
-        "tarball": "http://localhost:3000/postcss/-/postcss-8.4.41.tgz",
-        "fileCount": 55,
-        "integrity": "sha512-TesUflQ0WKZqAvg52PWL6kHgLKP6xB6heTOdoYM0Wt2UHyxNa4K25EZZMgKns3BH1RLVbZCREPpLY0rhnNoHVQ==",
-        "signatures": [
-          {
-            "sig": "MEUCIFkh2PNqnsc+2TZO5aiQH3qkPrYRxlqDg5H0fICKAy4cAiEAseFe5NZrXJFnH4TKj+6bSP33E1YopwE+/O5G5PMne9I=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 198296
-      },
-      "main": "./lib/postcss.js",
-      "types": "./lib/postcss.d.ts",
-      "browser": {
-        "fs": false,
-        "url": false,
-        "path": false,
-        "source-map-js": false,
-        "./lib/terminal-highlight": false
-      },
+      "version": "8.5.6",
       "engines": {
         "node": "^10 || ^12 || >=14"
       },
@@ -44,58 +17,85 @@
           "import": "./lib/postcss.mjs",
           "require": "./lib/postcss.js"
         },
-        "./lib/list": "./lib/list.js",
-        "./lib/node": "./lib/node.js",
-        "./lib/root": "./lib/root.js",
-        "./lib/rule": "./lib/rule.js",
-        "./lib/input": "./lib/input.js",
-        "./lib/parse": "./lib/parse.js",
-        "./lib/parser": "./lib/parser.js",
-        "./lib/result": "./lib/result.js",
         "./lib/at-rule": "./lib/at-rule.js",
         "./lib/comment": "./lib/comment.js",
-        "./lib/postcss": "./lib/postcss.js",
-        "./lib/symbols": "./lib/symbols.js",
-        "./lib/warning": "./lib/warning.js",
-        "./lib/fromJSON": "./lib/fromJSON.js",
-        "./lib/tokenize": "./lib/tokenize.js",
-        "./package.json": "./package.json",
         "./lib/container": "./lib/container.js",
-        "./lib/processor": "./lib/processor.js",
-        "./lib/stringify": "./lib/stringify.js",
-        "./lib/warn-once": "./lib/warn-once.js",
-        "./lib/declaration": "./lib/declaration.js",
-        "./lib/lazy-result": "./lib/lazy-result.js",
-        "./lib/stringifier": "./lib/stringifier.js",
-        "./lib/previous-map": "./lib/previous-map.js",
-        "./lib/map-generator": "./lib/map-generator.js",
-        "./lib/no-work-result": "./lib/no-work-result.js",
         "./lib/css-syntax-error": "./lib/css-syntax-error.js",
-        "./lib/terminal-highlight": "./lib/terminal-highlight.js"
+        "./lib/declaration": "./lib/declaration.js",
+        "./lib/fromJSON": "./lib/fromJSON.js",
+        "./lib/input": "./lib/input.js",
+        "./lib/lazy-result": "./lib/lazy-result.js",
+        "./lib/no-work-result": "./lib/no-work-result.js",
+        "./lib/list": "./lib/list.js",
+        "./lib/map-generator": "./lib/map-generator.js",
+        "./lib/node": "./lib/node.js",
+        "./lib/parse": "./lib/parse.js",
+        "./lib/parser": "./lib/parser.js",
+        "./lib/postcss": "./lib/postcss.js",
+        "./lib/previous-map": "./lib/previous-map.js",
+        "./lib/processor": "./lib/processor.js",
+        "./lib/result": "./lib/result.js",
+        "./lib/root": "./lib/root.js",
+        "./lib/rule": "./lib/rule.js",
+        "./lib/stringifier": "./lib/stringifier.js",
+        "./lib/stringify": "./lib/stringify.js",
+        "./lib/symbols": "./lib/symbols.js",
+        "./lib/terminal-highlight": "./lib/terminal-highlight.js",
+        "./lib/tokenize": "./lib/tokenize.js",
+        "./lib/warn-once": "./lib/warn-once.js",
+        "./lib/warning": "./lib/warning.js",
+        "./package.json": "./package.json"
       },
+      "main": "./lib/postcss.js",
+      "types": "./lib/postcss.d.ts",
       "funding": [
         {
-          "url": "https://opencollective.com/postcss/",
-          "type": "opencollective"
+          "type": "opencollective",
+          "url": "https://opencollective.com/postcss/"
         },
         {
-          "url": "https://tidelift.com/funding/github/npm/postcss",
-          "type": "tidelift"
+          "type": "tidelift",
+          "url": "https://tidelift.com/funding/github/npm/postcss"
         },
         {
-          "url": "https://github.com/sponsors/ai",
-          "type": "github"
+          "type": "github",
+          "url": "https://github.com/sponsors/ai"
         }
       ],
-      "gitHead": "57e02115e41c91cb67974092eea58c649b24d7b1",
-      "_npmVersion": "10.5.0",
-      "directories": {},
-      "_nodeVersion": "20.12.2",
-      "dependencies": {
-        "nanoid": "^3.3.7",
-        "picocolors": "^1.0.1",
-        "source-map-js": "^1.2.0"
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/postcss/postcss/issues"
       },
+      "dependencies": {
+        "nanoid": "^3.3.11",
+        "picocolors": "^1.1.1",
+        "source-map-js": "^1.2.1"
+      },
+      "browser": {
+        "./lib/terminal-highlight": false,
+        "source-map-js": false,
+        "path": false,
+        "url": false,
+        "fs": false
+      },
+      "_id": "postcss@8.5.6",
+      "gitHead": "91d6eb5c3d1ca8acb4e8e3926005acf2b066c211",
+      "_nodeVersion": "22.16.0",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==",
+        "shasum": "2825006615a619b4f62a9e7426cc120b349a8f3c",
+        "tarball": "http://localhost:3000/postcss/-/postcss-8.5.6.tgz",
+        "fileCount": 55,
+        "unpackedSize": 204337,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEQCIFCgBFanBpih9N8QYLeJmeBFBJ4ppSUuEtVbK6jrETP1AiAPNGDcHK00TRH6+ApWPH4qjmmOHQmnQzZQHgM9BqJDzg=="
+          }
+        ]
+      },
+      "directories": {},
       "_hasShrinkwrap": false
     }
   },
@@ -103,7 +103,7 @@
     "created": "2013-11-04T19:57:14.218Z",
     "modified": "2025-06-16T13:58:02.419Z",
     "1.1.0": "2014-07-21T17:35:24.381Z",
-    "8.4.41": "2024-08-05T23:08:39.503Z"
+    "8.5.6": "2025-06-16T13:58:02.262Z"
   },
   "license": "MIT"
 }
