@@ -89,12 +89,94 @@
         "@rollup/plugin-commonjs": "^28.0.0",
         "@rollup/plugin-node-resolve": "^15.3.0"
       }
+    },
+    "10.4.0": {
+      "name": "espree",
+      "main": "dist/espree.cjs",
+      "type": "module",
+      "exports": {
+        ".": [
+          {
+            "import": "./espree.js",
+            "require": "./dist/espree.cjs",
+            "default": "./dist/espree.cjs"
+          },
+          "./dist/espree.cjs"
+        ],
+        "./package.json": "./package.json"
+      },
+      "version": "10.4.0",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "bugs": {
+        "url": "https://github.com/eslint/js/issues"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "license": "BSD-2-Clause",
+      "dependencies": {
+        "acorn": "^8.15.0",
+        "acorn-jsx": "^5.3.2",
+        "eslint-visitor-keys": "^4.2.1"
+      },
+      "devDependencies": {
+        "@rollup/plugin-commonjs": "^28.0.0",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^15.3.0",
+        "eslint-release": "^3.2.0",
+        "esprima-fb": "^8001.2001.0-dev-harmony-fb",
+        "npm-run-all2": "^6.2.2",
+        "rollup": "^2.79.1",
+        "shelljs": "^0.8.5"
+      },
+      "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "build:debug": "npm run build -- -m",
+        "build:docs": "node tools/sync-docs.js",
+        "build:update-version": "node tools/update-version.js",
+        "prepublishOnly": "npm run build:update-version && npm run build",
+        "pretest": "npm run build",
+        "release:generate:latest": "eslint-generate-release",
+        "release:generate:alpha": "eslint-generate-prerelease alpha",
+        "release:generate:beta": "eslint-generate-prerelease beta",
+        "release:generate:rc": "eslint-generate-prerelease rc",
+        "release:publish": "eslint-publish-release",
+        "test": "npm-run-all -s test:*",
+        "test:cjs": "mocha --color --reporter progress --timeout 30000 tests/lib/commonjs.cjs",
+        "test:esm": "c8 mocha --color --reporter progress --timeout 30000 tests/lib/**/*.js"
+      },
+      "_id": "espree@10.4.0",
+      "gitHead": "ab3d59382b03d03a4e57def3742f94da16d88738",
+      "_nodeVersion": "22.16.0",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-j6PAQ2uUr79PZhBjP5C5fhl8e39FmRnOjsD5lGnWrFU8i2G776tBK7+nP8KuQUTTyAZUwfQqXAgrVH5MbH9CYQ==",
+        "shasum": "d54f4949d4629005a1fa168d937c3ff1f7e2a837",
+        "tarball": "http://localhost:3000/espree/-/espree-10.4.0.tgz",
+        "fileCount": 10,
+        "unpackedSize": 80383,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/espree@10.4.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQCbxdDfjl4vgedjYkZs6Clk6BY2XZ55D4UWuTj3rj4KOgIhAPmZZlNBnWPzKrMPpDPidjxyh6cQ35MjDiz7BPCfZvA+"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2014-12-06T03:10:12.402Z",
     "modified": "2025-06-09T15:46:04.281Z",
-    "10.3.0": "2024-10-29T19:25:10.561Z"
+    "10.3.0": "2024-10-29T19:25:10.561Z",
+    "10.4.0": "2025-06-09T15:46:03.805Z"
   },
   "license": "BSD-2-Clause"
 }

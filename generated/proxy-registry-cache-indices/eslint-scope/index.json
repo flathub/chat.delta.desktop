@@ -8,38 +8,10 @@
     "latest": "8.4.0"
   },
   "versions": {
-    "8.3.0": {
+    "8.4.0": {
       "name": "eslint-scope",
-      "version": "8.3.0",
-      "license": "BSD-2-Clause",
-      "_id": "eslint-scope@8.3.0",
-      "bugs": {
-        "url": "https://github.com/eslint/js/issues"
-      },
-      "dist": {
-        "shasum": "10cd3a918ffdd722f5f3f7b5b83db9b23c87340d",
-        "tarball": "http://localhost:3000/eslint-scope/-/eslint-scope-8.3.0.tgz",
-        "fileCount": 14,
-        "integrity": "sha512-pUNxi75F8MJ/GdeKtVLSbYg4ZI34J6C0C7sbL4YOp2exGwen7ZsuBqKzUhXd0qMQ362yET3z+uPwKeg/0C2XCQ==",
-        "signatures": [
-          {
-            "sig": "MEQCIGhH/V+tayebtN88RS+3gBSUgOXCGmUN7+urF7CB0D4wAiA1HKC06Wjnu0oLE4v6o7QOuz5vS3d5kMirpY3gXKCYXg==",
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
-          }
-        ],
-        "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/eslint-scope@8.3.0",
-          "provenance": {
-            "predicateType": "https://slsa.dev/provenance/v1"
-          }
-        },
-        "unpackedSize": 155422
-      },
       "main": "./dist/eslint-scope.cjs",
       "type": "module",
-      "engines": {
-        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-      },
       "exports": {
         ".": {
           "import": "./lib/index.js",
@@ -47,48 +19,74 @@
         },
         "./package.json": "./package.json"
       },
-      "funding": "https://opencollective.com/eslint",
-      "gitHead": "e01326a62008e678c9393518383256ab6a496936",
-      "scripts": {
-        "test": "node Makefile.js test",
-        "build": "rollup -c",
-        "pretest": "npm run build",
-        "prepublishOnly": "npm run build:update-version && npm run build",
-        "release:publish": "eslint-publish-release",
-        "release:generate:rc": "eslint-generate-prerelease rc",
-        "build:update-version": "node tools/update-version.js",
-        "release:generate:beta": "eslint-generate-prerelease beta",
-        "release:generate:alpha": "eslint-generate-prerelease alpha",
-        "release:generate:latest": "eslint-generate-release"
+      "version": "8.4.0",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
       },
-      "_npmVersion": "10.9.2",
-      "directories": {},
-      "_nodeVersion": "22.14.0",
+      "funding": "https://opencollective.com/eslint",
+      "bugs": {
+        "url": "https://github.com/eslint/js/issues"
+      },
+      "license": "BSD-2-Clause",
+      "scripts": {
+        "build": "rollup -c",
+        "build:update-version": "node tools/update-version.js",
+        "prepublishOnly": "npm run build:update-version && npm run build",
+        "pretest": "npm run build",
+        "release:generate:latest": "eslint-generate-release",
+        "release:generate:alpha": "eslint-generate-prerelease alpha",
+        "release:generate:beta": "eslint-generate-prerelease beta",
+        "release:generate:rc": "eslint-generate-prerelease rc",
+        "release:publish": "eslint-publish-release",
+        "test": "node Makefile.js test"
+      },
       "dependencies": {
         "esrecurse": "^4.3.0",
         "estraverse": "^5.2.0"
       },
-      "_hasShrinkwrap": false,
       "devDependencies": {
-        "c8": "^7.7.3",
+        "@typescript-eslint/parser": "^8.7.0",
         "chai": "^4.3.4",
-        "mocha": "^9.0.1",
-        "espree": "^10.3.0",
+        "eslint-release": "^3.2.0",
+        "eslint-visitor-keys": "^4.2.1",
+        "espree": "^10.4.0",
+        "npm-license": "^0.3.3",
         "rollup": "^2.52.7",
         "shelljs": "^0.8.5",
-        "typescript": "^5.4.2",
-        "npm-license": "^0.3.3",
-        "eslint-release": "^3.2.0",
-        "eslint-visitor-keys": "^4.2.0",
-        "@typescript-eslint/parser": "^8.7.0"
-      }
+        "typescript": "^5.4.2"
+      },
+      "_id": "eslint-scope@8.4.0",
+      "gitHead": "ab3d59382b03d03a4e57def3742f94da16d88738",
+      "_nodeVersion": "22.16.0",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-sNXOfKCn74rt8RICKMvJS7XKV/Xk9kA7DyJr8mJik3S7Cwgy3qlkkmyS2uQB3jiJg6VNdZd/pDBJu0nvG2NlTg==",
+        "shasum": "88e646a207fad61436ffa39eb505147200655c82",
+        "tarball": "http://localhost:3000/eslint-scope/-/eslint-scope-8.4.0.tgz",
+        "fileCount": 14,
+        "unpackedSize": 159607,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/eslint-scope@8.4.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIA6b1T9Xdcze1HMNd9++0mEdlixNpCf8Fq/n/M/SKPb/AiEAmb5JqarA85Y51hrChwa/6BThTAnNSLtlkqFCFxSXvMU="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2017-03-17T22:10:11.109Z",
     "modified": "2025-06-09T15:46:11.606Z",
     "3.7.2": "2018-07-12T10:40:00.478Z",
-    "8.3.0": "2025-03-07T20:42:29.837Z"
+    "8.4.0": "2025-06-09T15:46:11.133Z"
   },
   "license": "BSD-2-Clause"
 }

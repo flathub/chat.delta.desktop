@@ -7,95 +7,83 @@
     "latest": "1.5.4"
   },
   "versions": {
-    "1.5.0": {
+    "1.5.4": {
       "name": "@jridgewell/sourcemap-codec",
-      "version": "1.5.0",
-      "license": "MIT",
-      "_id": "@jridgewell/sourcemap-codec@1.5.0",
-      "bugs": {
-        "url": "https://github.com/jridgewell/sourcemap-codec/issues"
-      },
-      "dist": {
-        "shasum": "3188bcb273a414b0d215fd22a58540b989b9409a",
-        "tarball": "http://localhost:3000/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.0.tgz",
-        "fileCount": 11,
-        "integrity": "sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ==",
-        "signatures": [
-          {
-            "sig": "MEYCIQDTKlVwpijmiYpDTegYxRDpI1KCdd96r1ALsKPOlAvH+AIhALOiPy+SkgREuRW/t4xOBLy7hxTbOUcFvcha9pjPMB3Y",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 112815
-      },
+      "version": "1.5.4",
       "main": "dist/sourcemap-codec.umd.js",
-      "types": "dist/types/sourcemap-codec.d.ts",
       "module": "dist/sourcemap-codec.mjs",
+      "types": "types/sourcemap-codec.d.cts",
       "exports": {
         ".": [
           {
-            "types": "./dist/types/sourcemap-codec.d.ts",
-            "import": "./dist/sourcemap-codec.mjs",
-            "browser": "./dist/sourcemap-codec.umd.js",
-            "require": "./dist/sourcemap-codec.umd.js"
+            "import": {
+              "types": "./types/sourcemap-codec.d.mts",
+              "default": "./dist/sourcemap-codec.mjs"
+            },
+            "require": {
+              "types": "./types/sourcemap-codec.d.cts",
+              "default": "./dist/sourcemap-codec.umd.js"
+            },
+            "browser": {
+              "types": "./types/sourcemap-codec.d.cts",
+              "default": "./dist/sourcemap-codec.umd.js"
+            }
           },
           "./dist/sourcemap-codec.umd.js"
         ],
         "./package.json": "./package.json"
       },
-      "gitHead": "d8dc7fc3f7602043f56f3efa801569f983d756ec",
       "scripts": {
-        "lint": "run-s -n lint:*",
-        "test": "run-s -n test:lint test:only",
-        "build": "run-s -n build:*",
-        "lint:ts": "npm run test:lint:ts -- --fix",
-        "build:ts": "tsc --project tsconfig.build.json",
-        "prebuild": "rm -rf dist",
-        "benchmark": "run-s build:rollup benchmark:*",
-        "test:lint": "run-s -n test:lint:*",
-        "test:only": "mocha",
-        "preversion": "run-s test build",
-        "test:debug": "mocha --inspect-brk",
-        "test:watch": "mocha --watch",
-        "build:rollup": "rollup -c rollup.config.js",
-        "test:lint:ts": "eslint '{src,test}/**/*.ts'",
-        "lint:prettier": "npm run test:lint:prettier -- --write",
-        "test:coverage": "c8 mocha",
-        "benchmark:only": "node --expose-gc benchmark/index.js",
-        "prepublishOnly": "npm run preversion",
+        "benchmark": "run-s build:code benchmark:*",
         "benchmark:install": "cd benchmark && npm install",
-        "test:lint:prettier": "prettier --check '{src,test}/**/*.ts'"
+        "benchmark:only": "node --expose-gc benchmark/index.js",
+        "build": "run-s -n build:code build:types",
+        "build:code": "node ../../esbuild.mjs sourcemap-codec.ts",
+        "build:types": "run-s build:types:force build:types:emit build:types:mts",
+        "build:types:force": "rimraf tsconfig.build.tsbuildinfo",
+        "build:types:emit": "tsc --project tsconfig.build.json",
+        "build:types:mts": "node ../../mts-types.mjs",
+        "clean": "run-s -n clean:code clean:types",
+        "clean:code": "tsc --build --clean tsconfig.build.json",
+        "clean:types": "rimraf dist types",
+        "test": "run-s -n test:types test:only test:format",
+        "test:format": "prettier --check '{src,test}/**/*.ts'",
+        "test:only": "mocha",
+        "test:types": "eslint '{src,test}/**/*.ts'",
+        "lint": "run-s -n lint:types lint:format",
+        "lint:format": "npm run test:format -- --write",
+        "lint:types": "npm run test:types -- --fix",
+        "prepublishOnly": "npm run-s -n build test"
       },
-      "_npmVersion": "10.2.3",
-      "directories": {},
+      "license": "MIT",
+      "_id": "@jridgewell/sourcemap-codec@1.5.4",
+      "gitHead": "3c6286e949d58c2bc6e27334385349c6a83c6d7d",
+      "bugs": {
+        "url": "https://github.com/jridgewell/sourcemaps/issues"
+      },
       "_nodeVersion": "20.10.0",
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "c8": "7.11.2",
-        "tsx": "4.7.1",
-        "mocha": "9.2.0",
-        "eslint": "8.7.0",
-        "rollup": "2.64.0",
-        "prettier": "2.5.1",
-        "benchmark": "2.1.4",
-        "source-map": "0.6.1",
-        "typescript": "4.5.4",
-        "@types/node": "17.0.15",
-        "npm-run-all": "4.1.5",
-        "@types/mocha": "10.0.6",
-        "source-map-js": "1.0.2",
-        "sourcemap-codec": "1.4.8",
-        "eslint-config-prettier": "8.3.0",
-        "@rollup/plugin-typescript": "8.3.0",
-        "@typescript-eslint/parser": "5.10.0",
-        "@typescript-eslint/eslint-plugin": "5.10.0"
-      }
+      "_npmVersion": "10.2.3",
+      "dist": {
+        "integrity": "sha512-VT2+G1VQs/9oz078bLrYbecdZKs912zQlkelYpuf+SXF+QvZDYJlbx/LSx+meSAwdDFnF8FVXW92AVjjkVmgFw==",
+        "shasum": "7358043433b2e5da569aa02cbc4c121da3af27d7",
+        "tarball": "http://localhost:3000/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.5.4.tgz",
+        "fileCount": 27,
+        "unpackedSize": 86928,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQCP9uQgKpwScluxfUpwNDd95bXEuhzMJm+RGJQn6jmRJAIhAOjp1KMeaE2bWuzKOn4xiYiE5jXsYj3uMDZpl5l4Brpr"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2022-02-05T04:51:19.696Z",
     "modified": "2025-07-01T18:18:17.271Z",
-    "1.5.0": "2024-07-09T19:28:12.902Z"
+    "1.5.4": "2025-07-01T18:18:17.094Z"
   },
   "license": "MIT"
 }
