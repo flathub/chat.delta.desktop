@@ -7,20 +7,55 @@
     "latest": "7.1.0"
   },
   "versions": {
-    "6.0.13": {
+    "7.1.0": {
       "name": "postcss-selector-parser",
-      "version": "6.0.13",
+      "version": "7.1.0",
+      "devDependencies": {
+        "@babel/cli": "^7.11.6",
+        "@babel/core": "^7.11.6",
+        "@babel/eslint-parser": "^7.11.5",
+        "@babel/eslint-plugin": "^7.11.5",
+        "@babel/plugin-proposal-class-properties": "^7.10.4",
+        "@babel/preset-env": "^7.11.5",
+        "@babel/register": "^7.11.5",
+        "ava": "^5.1.0",
+        "babel-plugin-add-module-exports": "^1.0.4",
+        "coveralls": "^3.1.0",
+        "del-cli": "^5.0.0",
+        "eslint": "^8.28.0",
+        "eslint-plugin-import": "^2.26.0",
+        "glob": "^8.0.3",
+        "minimist": "^1.2.5",
+        "nyc": "^15.1.0",
+        "postcss": "^8.4.31",
+        "semver": "^7.3.2",
+        "typescript": "^4.0.3"
+      },
+      "main": "dist/index.js",
+      "types": "postcss-selector-parser.d.ts",
+      "scripts": {
+        "typecheck": "tsc --noEmit --strict postcss-selector-parser.d.ts postcss-selector-parser.test.ts",
+        "pretest": "eslint src && npm run typecheck",
+        "prepare": "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
+        "lintfix": "eslint --fix src",
+        "report": "nyc report --reporter=html",
+        "test": "nyc ava src/__tests__/*.mjs",
+        "testone": "ava"
+      },
+      "dependencies": {
+        "cssesc": "^3.0.0",
+        "util-deprecate": "^1.0.2"
+      },
       "license": "MIT",
-      "_id": "postcss-selector-parser@6.0.13",
-      "bugs": {
-        "url": "https://github.com/postcss/postcss-selector-parser/issues"
+      "engines": {
+        "node": ">=4"
       },
       "ava": {
         "require": [
           "@babel/register"
         ],
-        "timeout": "25s",
         "concurrency": 5,
+        "timeout": "25s",
         "nodeArguments": []
       },
       "nyc": {
@@ -29,68 +64,34 @@
           "**/__tests__"
         ]
       },
+      "_id": "postcss-selector-parser@7.1.0",
+      "gitHead": "ea6cd9324b4be90a4c529c3602deefbc4a2d7a82",
+      "bugs": {
+        "url": "https://github.com/postcss/postcss-selector-parser/issues"
+      },
+      "_nodeVersion": "22.13.1",
+      "_npmVersion": "10.9.2",
       "dist": {
-        "shasum": "d05d8d76b1e8e173257ef9d60b706a8e5e99bf1b",
-        "tarball": "http://localhost:3000/postcss-selector-parser/-/postcss-selector-parser-6.0.13.tgz",
+        "integrity": "sha512-8sLjZwK0R+JlxlYcTuVnyT2v+htpdrjDOKuMcOVdYjt52Lh8hWRYpxBPoKx/Zg+bcjc3wx6fmQevMmUztS/ccA==",
+        "shasum": "4d6af97eba65d73bc4d84bcb343e865d7dd16262",
+        "tarball": "http://localhost:3000/postcss-selector-parser/-/postcss-selector-parser-7.1.0.tgz",
         "fileCount": 36,
-        "integrity": "sha512-EaV1Gl4mUEV4ddhDnv/xtj7sxwrwxdetHdWUGnT4VJQf+4d05v6lHYZr8N573k5Z0BViss7BDhfWtKS3+sfAqQ==",
+        "unpackedSize": 187187,
         "signatures": [
           {
-            "sig": "MEUCIQC4LOE07buNhHhohR3nzbcHy9AxE6ildFJoUy5I0+gDfgIgTc1v++DsrEOVb43FDjUKpxYgL7QttkLRM8sbpYNawSQ=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEQCIBZSbKQXH9IRdnHstWBDbJEJRw/eSXvzihYdFI4xGL3PAiAUfI0JWyB1BDDRRaJp5WL6kHR3V0Zb/uiIZtbdSqmvFQ=="
           }
-        ],
-        "unpackedSize": 185617
+        ]
       },
-      "main": "dist/index.js",
-      "types": "postcss-selector-parser.d.ts",
-      "engines": {
-        "node": ">=4"
-      },
-      "gitHead": "9b5ade24d4c15029a65dddf6d6bdedbf67789045",
-      "scripts": {
-        "test": "nyc ava src/__tests__/*.mjs",
-        "report": "nyc report --reporter=html",
-        "lintfix": "eslint --fix src",
-        "prepare": "del-cli dist && BABEL_ENV=publish babel src --out-dir dist --ignore /__tests__/",
-        "pretest": "eslint src && tsc --noEmit postcss-selector-parser.d.ts",
-        "testone": "ava"
-      },
-      "_npmVersion": "9.5.0",
       "directories": {},
-      "_nodeVersion": "18.15.0",
-      "dependencies": {
-        "cssesc": "^3.0.0",
-        "util-deprecate": "^1.0.2"
-      },
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "ava": "^5.1.0",
-        "nyc": "^15.1.0",
-        "glob": "^8.0.3",
-        "eslint": "^8.28.0",
-        "semver": "^7.3.2",
-        "del-cli": "^5.0.0",
-        "postcss": "^8.0.0",
-        "minimist": "^1.2.5",
-        "coveralls": "^3.1.0",
-        "@babel/cli": "^7.11.6",
-        "typescript": "^4.0.3",
-        "@babel/core": "^7.11.6",
-        "@babel/register": "^7.11.5",
-        "@babel/preset-env": "^7.11.5",
-        "@babel/eslint-parser": "^7.11.5",
-        "@babel/eslint-plugin": "^7.11.5",
-        "eslint-plugin-import": "^2.26.0",
-        "babel-plugin-add-module-exports": "^1.0.4",
-        "@babel/plugin-proposal-class-properties": "^7.10.4"
-      }
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2015-05-29T11:29:38.195Z",
     "modified": "2025-02-07T14:48:51.797Z",
-    "6.0.13": "2023-05-15T16:35:49.762Z"
+    "7.1.0": "2025-02-07T14:48:51.617Z"
   },
   "license": "MIT"
 }

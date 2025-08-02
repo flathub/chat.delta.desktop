@@ -57,12 +57,94 @@
       },
       "directories": {},
       "_hasShrinkwrap": false
+    },
+    "1.2.8": {
+      "name": "minimist",
+      "version": "1.2.8",
+      "main": "index.js",
+      "devDependencies": {
+        "@ljharb/eslint-config": "^21.0.1",
+        "aud": "^2.0.2",
+        "auto-changelog": "^2.4.0",
+        "eslint": "=8.8.0",
+        "in-publish": "^2.0.1",
+        "npmignore": "^0.3.0",
+        "nyc": "^10.3.2",
+        "safe-publish-latest": "^2.0.0",
+        "tape": "^5.6.3"
+      },
+      "scripts": {
+        "prepack": "npmignore --auto --commentLines=auto",
+        "prepublishOnly": "safe-publish-latest",
+        "prepublish": "not-in-publish || npm run prepublishOnly",
+        "lint": "eslint --ext=js,mjs .",
+        "pretest": "npm run lint",
+        "tests-only": "nyc tape 'test/**/*.js'",
+        "test": "npm run tests-only",
+        "posttest": "aud --production",
+        "version": "auto-changelog && git add CHANGELOG.md",
+        "postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
+      },
+      "testling": {
+        "files": "test/*.js",
+        "browsers": [
+          "ie/6..latest",
+          "ff/5",
+          "firefox/latest",
+          "chrome/10",
+          "chrome/latest",
+          "safari/5.1",
+          "safari/latest",
+          "opera/12"
+        ]
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/ljharb"
+      },
+      "license": "MIT",
+      "auto-changelog": {
+        "output": "CHANGELOG.md",
+        "template": "keepachangelog",
+        "unreleased": false,
+        "commitLimit": false,
+        "backfillLimit": false,
+        "hideCredit": true
+      },
+      "publishConfig": {
+        "ignore": [
+          ".github/workflows"
+        ]
+      },
+      "gitHead": "6901ee286bc4c16da6830b48b46ce1574703cea1",
+      "bugs": {
+        "url": "https://github.com/minimistjs/minimist/issues"
+      },
+      "_id": "minimist@1.2.8",
+      "_nodeVersion": "19.6.0",
+      "_npmVersion": "9.4.0",
+      "dist": {
+        "integrity": "sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==",
+        "shasum": "c1a464e7693302e082a075cee0c057741ac4772c",
+        "tarball": "http://localhost:3000/minimist/-/minimist-1.2.8.tgz",
+        "fileCount": 24,
+        "unpackedSize": 54477,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEQCIE/uB8pUkpXsJIGjGPJIRRIM/9D62XpwJl6Yg3btMkeXAiA/cv8nZVixZjGdNXEgMX11f/N/2VXu+o5woeX5b9tn2A=="
+          }
+        ],
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJj5V7FACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrRgQ//UOnz6KMAn81WnyW7HHaDJod7K1B/7esKtuUjltRxB2l8ddE/\r\nY0hTaRokSzDACo9p+x1OK/1d6OuCsoOlIn2ypAdGbftaTdDSWLJ0empTGXeq\r\n4Eh6+ND9/JF4H6293+zV0feEJ29EiBgI2x9izYeo/1qGufQwszGL6JNNl0OV\r\nvtJz1xJWnYyWKDSUoQhsf3C5GAqCUW4GDS8/XI8ZsaV6UTRJl/kawFGX0glC\r\nc2NZtzvoKWduVyBa5XKAGyq4x1lGCDDHGwi8pt0Dt32Vm8eci9nDBc8yvRUv\r\nTBAjRR8FkjGKNSAyR+3WU54CLyFMWCZcCaMtFBLrstR1YDP+S1ICDku6yy8I\r\nt4Ir+HAswSkimWnMh/ehvzKQIDOw2po5QEIlS6ZZyavWFZaHCAGbJb+RbCbV\r\nw6v1lQL8edEumEM5oJSJ5rYR+YfkWbfWRf+x3GAaqv1lSgMb1Ujen704KcNy\r\nXMSPsYh7yuO+Vmr9Zyith0XLsBpd/aHmrQoTW9tdic/xS0RTC1g7sk5BrpNd\r\n9ywPe0Va5F2nC22dBalXzI6qgdLBOdOC4A5IdpUoH0IivdBirifW8ncOAIy9\r\nIJaF5ZmslIf2kLuq2+mhc3X6Z7cjBqug58whq2AEYeCRop1POtTZ4ihmGkI0\r\nkaVMSKOyvBcFQzpShsO8Ajsn9O45p5TJ42A=\r\n=h76k\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "modified": "2023-06-09T21:33:07.258Z",
     "created": "2013-06-25T08:17:16.343Z",
-    "1.2.6": "2022-03-22T02:50:30.352Z"
+    "1.2.6": "2022-03-22T02:50:30.352Z",
+    "1.2.8": "2023-02-09T20:59:49.233Z"
   },
   "license": "MIT"
 }

@@ -50,12 +50,58 @@
         "webpack": "^1.12.0",
         "clean-publish": "^3.1.0"
       }
+    },
+    "1.2.1": {
+      "name": "source-map-js",
+      "version": "1.2.1",
+      "main": "./source-map.js",
+      "engines": {
+        "node": ">=0.10.0"
+      },
+      "license": "BSD-3-Clause",
+      "scripts": {
+        "test": "npm run build && node test/run-tests.js",
+        "build": "webpack --color",
+        "toc": "doctoc --title '## Table of Contents' README.md && doctoc --title '## Table of Contents' CONTRIBUTING.md"
+      },
+      "devDependencies": {
+        "clean-publish": "^3.1.0",
+        "doctoc": "^0.15.0",
+        "webpack": "^1.12.0"
+      },
+      "clean-publish": {
+        "cleanDocs": true
+      },
+      "typings": "source-map.d.ts",
+      "_id": "source-map-js@1.2.1",
+      "gitHead": "428d49f6b1e1614f082b7706fa879a3d9c64f728",
+      "bugs": {
+        "url": "https://github.com/7rulnik/source-map-js/issues"
+      },
+      "_nodeVersion": "22.8.0",
+      "_npmVersion": "10.8.2",
+      "dist": {
+        "integrity": "sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==",
+        "shasum": "1ce5650fddd87abc099eda37dcff024c2667ae46",
+        "tarball": "http://localhost:3000/source-map-js/-/source-map-js-1.2.1.tgz",
+        "fileCount": 18,
+        "unpackedSize": 139872,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEQCIF7zHaog7N5XY2DykQjfGxUeAeVvRFqUB8sMKuD4ChEpAiB50o3vma1R3cIXK4qnyc0QLZHy4+HJnMWjhJr9mK4jnQ=="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2021-02-07T21:53:50.190Z",
     "modified": "2024-09-08T16:22:55.834Z",
-    "1.2.0": "2024-03-19T16:21:36.869Z"
+    "1.2.0": "2024-03-19T16:21:36.869Z",
+    "1.2.1": "2024-09-08T16:22:55.645Z"
   },
   "license": "BSD-3-Clause"
 }
