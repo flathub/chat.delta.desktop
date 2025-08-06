@@ -1,6 +1,6 @@
 {
   "_id": "@typescript-eslint/types",
-  "_rev": "3564-e35c8d6741921907ad99ffa75fcd4f58",
+  "_rev": "3577-38e29ce8093c72846d98175d7db94abd",
   "name": "@typescript-eslint/types",
   "dist-tags": {
     "rc-v4": "4.0.0-alpha.16",
@@ -8,57 +8,28 @@
     "rc-v": "6.0.0-alpha.58",
     "rc-v6": "7.0.0-alpha.0",
     "rc-v8": "8.0.0-alpha.62",
-    "latest": "8.38.0",
-    "canary": "8.37.1-alpha.6"
+    "latest": "8.39.0",
+    "canary": "8.39.1-alpha.2"
   },
   "versions": {
     "8.38.0": {
       "name": "@typescript-eslint/types",
       "version": "8.38.0",
-      "type": "commonjs",
-      "exports": {
-        ".": {
-          "types": "./dist/index.d.ts",
-          "default": "./dist/index.js"
-        },
-        "./package.json": "./package.json"
-      },
-      "types": "./dist/index.d.ts",
-      "engines": {
-        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-      },
+      "license": "MIT",
+      "_id": "@typescript-eslint/types@8.38.0",
       "bugs": {
         "url": "https://github.com/typescript-eslint/typescript-eslint/issues"
       },
-      "license": "MIT",
-      "scripts": {
-        "build": "yarn run -BT nx build",
-        "clean": "rimraf dist/ src/generated/ coverage/",
-        "copy-ast-spec": "yarn run -BT nx copy-ast-spec",
-        "format": "yarn run -T format",
-        "generate-lib": "yarn run -BT nx generate-lib repo",
-        "lint": "yarn run -BT nx lint",
-        "test": "yarn run -BT nx test",
-        "typecheck": "yarn run -BT nx typecheck"
-      },
-      "devDependencies": {
-        "@vitest/coverage-v8": "^3.1.3",
-        "eslint": "*",
-        "rimraf": "*",
-        "tsx": "*",
-        "typescript": "*",
-        "vitest": "^3.1.3"
-      },
-      "funding": {
-        "type": "opencollective",
-        "url": "https://opencollective.com/typescript-eslint"
-      },
       "nx": {
         "name": "types",
-        "includedScripts": [
-          "clean"
-        ],
         "targets": {
+          "lint": {
+            "command": "eslint",
+            "dependsOn": [
+              "typescript-eslint:build",
+              "eslint-plugin-internal:build"
+            ]
+          },
           "build": {
             "dependsOn": [
               "copy-ast-spec"
@@ -67,49 +38,78 @@
           "copy-ast-spec": {
             "cache": false,
             "command": "tsx tools/copy-ast-spec.mts",
-            "dependsOn": [
-              "ast-spec:build"
-            ],
             "options": {
               "cwd": "{projectRoot}"
             },
             "outputs": [
               "{projectRoot}/src/generated"
-            ]
-          },
-          "lint": {
-            "command": "eslint",
+            ],
             "dependsOn": [
-              "typescript-eslint:build",
-              "eslint-plugin-internal:build"
+              "ast-spec:build"
             ]
           }
-        }
+        },
+        "includedScripts": [
+          "clean"
+        ]
       },
-      "_id": "@typescript-eslint/types@8.38.0",
-      "gitHead": "d11e79e9c9edc9f6f5e66306e3b3d65f3149a760",
-      "_nodeVersion": "20.19.3",
-      "_npmVersion": "10.8.2",
       "dist": {
-        "integrity": "sha512-wzkUfX3plUqij4YwWaJyqhiPE5UCRVlFpKn1oCRn2O1bJ592XxWJj8ROQ3JD5MYXLORW84063z3tZTb/cs4Tyw==",
         "shasum": "297351c994976b93c82ac0f0e206c8143aa82529",
         "tarball": "http://localhost:3000/@typescript-eslint/types/-/types-8.38.0.tgz",
         "fileCount": 18,
-        "unpackedSize": 171482,
+        "integrity": "sha512-wzkUfX3plUqij4YwWaJyqhiPE5UCRVlFpKn1oCRn2O1bJ592XxWJj8ROQ3JD5MYXLORW84063z3tZTb/cs4Tyw==",
         "signatures": [
           {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIEp/udGVxbxFmr6nsJPGgrPdd8Nf6M4w9GR2/8ujNHV/AiEAs5pDb3BOeszEsdhe5mgv34iyiPlV1GaEoNkQc7pWpYk="
+            "sig": "MEUCIEp/udGVxbxFmr6nsJPGgrPdd8Nf6M4w9GR2/8ujNHV/AiEAs5pDb3BOeszEsdhe5mgv34iyiPlV1GaEoNkQc7pWpYk=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
-        ]
+        ],
+        "unpackedSize": 171482
       },
+      "type": "commonjs",
+      "types": "./dist/index.d.ts",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "funding": {
+        "url": "https://opencollective.com/typescript-eslint",
+        "type": "opencollective"
+      },
+      "gitHead": "d11e79e9c9edc9f6f5e66306e3b3d65f3149a760",
+      "scripts": {
+        "lint": "yarn run -BT nx lint",
+        "test": "yarn run -BT nx test",
+        "build": "yarn run -BT nx build",
+        "clean": "rimraf dist/ src/generated/ coverage/",
+        "format": "yarn run -T format",
+        "typecheck": "yarn run -BT nx typecheck",
+        "generate-lib": "yarn run -BT nx generate-lib repo",
+        "copy-ast-spec": "yarn run -BT nx copy-ast-spec"
+      },
+      "_npmVersion": "10.8.2",
       "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "20.19.3",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tsx": "*",
+        "eslint": "*",
+        "rimraf": "*",
+        "vitest": "^3.1.3",
+        "typescript": "*",
+        "@vitest/coverage-v8": "^3.1.3"
+      }
     }
   },
   "time": {
     "created": "2020-06-29T18:42:26.860Z",
-    "modified": "2025-07-21T17:21:49.260Z",
+    "modified": "2025-08-05T00:24:21.817Z",
     "8.38.0": "2025-07-21T17:21:48.982Z"
   },
   "license": "MIT"
