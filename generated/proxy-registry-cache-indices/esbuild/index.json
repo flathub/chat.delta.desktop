@@ -1,14 +1,80 @@
 {
   "_id": "esbuild",
-  "_rev": "475-7bea97d5ce56d2d9eee8bcd0d3c4f9c8",
+  "_rev": "476-8b47744f8d290304933839cee86b1c39",
   "name": "esbuild",
   "dist-tags": {
-    "latest": "0.25.8"
+    "latest": "0.25.9"
   },
   "versions": {
     "0.25.8": {
       "name": "esbuild",
       "version": "0.25.8",
+      "license": "MIT",
+      "_id": "esbuild@0.25.8",
+      "bugs": {
+        "url": "https://github.com/evanw/esbuild/issues"
+      },
+      "bin": {
+        "esbuild": "bin/esbuild"
+      },
+      "dist": {
+        "shasum": "482d42198b427c9c2f3a81b63d7663aecb1dda07",
+        "tarball": "http://localhost:3000/esbuild/-/esbuild-0.25.8.tgz",
+        "fileCount": 7,
+        "integrity": "sha512-vVC0USHGtMi8+R4Kz8rt6JhEWLxsv9Rnu/lGYbPR8u47B+DCBksq9JarW0zOO7bs37hyOK1l2/oqtbciutL5+Q==",
+        "signatures": [
+          {
+            "sig": "MEYCIQDcstfxT44rboZaJL2diRU0eoDMB3QCDaeN7gRyCy8KAgIhALQWp1B3UXjsM6T/b4o5D0AGnvCyxPLmKyovnC7xURD9",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 135307
+      },
+      "main": "lib/main.js",
+      "types": "lib/main.d.ts",
+      "engines": {
+        "node": ">=18"
+      },
+      "gitHead": "8c71947edbe5a158fec3a6d1cbfea1e8d5cdee70",
+      "scripts": {
+        "postinstall": "node install.js"
+      },
+      "_npmVersion": "10.9.2",
+      "directories": {},
+      "_nodeVersion": "22.14.0",
+      "_hasShrinkwrap": false,
+      "optionalDependencies": {
+        "@esbuild/aix-ppc64": "0.25.8",
+        "@esbuild/linux-arm": "0.25.8",
+        "@esbuild/linux-x64": "0.25.8",
+        "@esbuild/sunos-x64": "0.25.8",
+        "@esbuild/win32-x64": "0.25.8",
+        "@esbuild/darwin-x64": "0.25.8",
+        "@esbuild/linux-ia32": "0.25.8",
+        "@esbuild/netbsd-x64": "0.25.8",
+        "@esbuild/win32-ia32": "0.25.8",
+        "@esbuild/android-arm": "0.25.8",
+        "@esbuild/android-x64": "0.25.8",
+        "@esbuild/freebsd-x64": "0.25.8",
+        "@esbuild/linux-arm64": "0.25.8",
+        "@esbuild/linux-ppc64": "0.25.8",
+        "@esbuild/linux-s390x": "0.25.8",
+        "@esbuild/openbsd-x64": "0.25.8",
+        "@esbuild/win32-arm64": "0.25.8",
+        "@esbuild/darwin-arm64": "0.25.8",
+        "@esbuild/netbsd-arm64": "0.25.8",
+        "@esbuild/android-arm64": "0.25.8",
+        "@esbuild/freebsd-arm64": "0.25.8",
+        "@esbuild/linux-loong64": "0.25.8",
+        "@esbuild/linux-riscv64": "0.25.8",
+        "@esbuild/openbsd-arm64": "0.25.8",
+        "@esbuild/linux-mips64el": "0.25.8",
+        "@esbuild/openharmony-arm64": "0.25.8"
+      }
+    },
+    "0.25.9": {
+      "name": "esbuild",
+      "version": "0.25.9",
       "scripts": {
         "postinstall": "node install.js"
       },
@@ -21,51 +87,51 @@
         "esbuild": "bin/esbuild"
       },
       "optionalDependencies": {
-        "@esbuild/aix-ppc64": "0.25.8",
-        "@esbuild/android-arm": "0.25.8",
-        "@esbuild/android-arm64": "0.25.8",
-        "@esbuild/android-x64": "0.25.8",
-        "@esbuild/darwin-arm64": "0.25.8",
-        "@esbuild/darwin-x64": "0.25.8",
-        "@esbuild/freebsd-arm64": "0.25.8",
-        "@esbuild/freebsd-x64": "0.25.8",
-        "@esbuild/linux-arm": "0.25.8",
-        "@esbuild/linux-arm64": "0.25.8",
-        "@esbuild/linux-ia32": "0.25.8",
-        "@esbuild/linux-loong64": "0.25.8",
-        "@esbuild/linux-mips64el": "0.25.8",
-        "@esbuild/linux-ppc64": "0.25.8",
-        "@esbuild/linux-riscv64": "0.25.8",
-        "@esbuild/linux-s390x": "0.25.8",
-        "@esbuild/linux-x64": "0.25.8",
-        "@esbuild/netbsd-arm64": "0.25.8",
-        "@esbuild/netbsd-x64": "0.25.8",
-        "@esbuild/openbsd-arm64": "0.25.8",
-        "@esbuild/openbsd-x64": "0.25.8",
-        "@esbuild/openharmony-arm64": "0.25.8",
-        "@esbuild/sunos-x64": "0.25.8",
-        "@esbuild/win32-arm64": "0.25.8",
-        "@esbuild/win32-ia32": "0.25.8",
-        "@esbuild/win32-x64": "0.25.8"
+        "@esbuild/aix-ppc64": "0.25.9",
+        "@esbuild/android-arm": "0.25.9",
+        "@esbuild/android-arm64": "0.25.9",
+        "@esbuild/android-x64": "0.25.9",
+        "@esbuild/darwin-arm64": "0.25.9",
+        "@esbuild/darwin-x64": "0.25.9",
+        "@esbuild/freebsd-arm64": "0.25.9",
+        "@esbuild/freebsd-x64": "0.25.9",
+        "@esbuild/linux-arm": "0.25.9",
+        "@esbuild/linux-arm64": "0.25.9",
+        "@esbuild/linux-ia32": "0.25.9",
+        "@esbuild/linux-loong64": "0.25.9",
+        "@esbuild/linux-mips64el": "0.25.9",
+        "@esbuild/linux-ppc64": "0.25.9",
+        "@esbuild/linux-riscv64": "0.25.9",
+        "@esbuild/linux-s390x": "0.25.9",
+        "@esbuild/linux-x64": "0.25.9",
+        "@esbuild/netbsd-arm64": "0.25.9",
+        "@esbuild/netbsd-x64": "0.25.9",
+        "@esbuild/openbsd-arm64": "0.25.9",
+        "@esbuild/openbsd-x64": "0.25.9",
+        "@esbuild/openharmony-arm64": "0.25.9",
+        "@esbuild/sunos-x64": "0.25.9",
+        "@esbuild/win32-arm64": "0.25.9",
+        "@esbuild/win32-ia32": "0.25.9",
+        "@esbuild/win32-x64": "0.25.9"
       },
       "license": "MIT",
-      "_id": "esbuild@0.25.8",
-      "gitHead": "8c71947edbe5a158fec3a6d1cbfea1e8d5cdee70",
+      "_id": "esbuild@0.25.9",
+      "gitHead": "195e05c16f03a341390feef38b8ebf17d3075e14",
       "bugs": {
         "url": "https://github.com/evanw/esbuild/issues"
       },
       "_nodeVersion": "22.14.0",
       "_npmVersion": "10.9.2",
       "dist": {
-        "integrity": "sha512-vVC0USHGtMi8+R4Kz8rt6JhEWLxsv9Rnu/lGYbPR8u47B+DCBksq9JarW0zOO7bs37hyOK1l2/oqtbciutL5+Q==",
-        "shasum": "482d42198b427c9c2f3a81b63d7663aecb1dda07",
-        "tarball": "http://localhost:3000/esbuild/-/esbuild-0.25.8.tgz",
+        "integrity": "sha512-CRbODhYyQx3qp7ZEwzxOk4JBqmD/seJrzPa/cGjY1VtIn5E09Oi9/dB4JwctnfZ8Q8iT7rioVv5k/FNT/uf54g==",
+        "shasum": "15ab8e39ae6cdc64c24ff8a2c0aef5b3fd9fa976",
+        "tarball": "http://localhost:3000/esbuild/-/esbuild-0.25.9.tgz",
         "fileCount": 7,
         "unpackedSize": 135307,
         "signatures": [
           {
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEYCIQDcstfxT44rboZaJL2diRU0eoDMB3QCDaeN7gRyCy8KAgIhALQWp1B3UXjsM6T/b4o5D0AGnvCyxPLmKyovnC7xURD9"
+            "sig": "MEYCIQCr3ceSOM4LEvuCYr/gwAeEUIhIT5TjFdgUFvPkcRbsJQIhAKzW9EPlKsszJJ6Rj8VYf6Jvr0lL9mabqVcD6lk71zw2"
           }
         ]
       },
@@ -75,8 +141,9 @@
   },
   "time": {
     "created": "2017-11-26T05:52:58.272Z",
-    "modified": "2025-07-19T19:24:29.071Z",
-    "0.25.8": "2025-07-19T19:24:28.893Z"
+    "modified": "2025-08-12T23:27:07.308Z",
+    "0.25.8": "2025-07-19T19:24:28.893Z",
+    "0.25.9": "2025-08-12T23:27:07.104Z"
   },
   "license": "MIT"
 }
