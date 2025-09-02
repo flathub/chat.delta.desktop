@@ -6,49 +6,57 @@
     "latest": "3.0.0"
   },
   "versions": {
-    "1.0.1": {
+    "3.0.0": {
       "name": "application-config",
-      "version": "1.0.1",
+      "version": "3.0.0",
       "license": "MIT",
-      "main": "index.js",
-      "dependencies": {
-        "application-config-path": "^0.1.0",
-        "mkdirp": "^0.5.1"
-      },
-      "devDependencies": {
-        "mocha": "^2.1.0",
-        "standard": "*"
-      },
+      "type": "module",
+      "exports": "./index.js",
       "scripts": {
         "test": "standard && mocha"
       },
-      "gitHead": "dc0b5be579e1b8f2c764cbd31335b4d3bf11eca8",
+      "dependencies": {
+        "application-config-path": "^1.0.0",
+        "load-json-file": "^7.0.1",
+        "write-json-file": "^5.0.0"
+      },
+      "devDependencies": {
+        "mocha": "^10.2.0",
+        "standard": "^17.0.0"
+      },
+      "engines": {
+        "node": "^14.18.0 || ^16.14.0 || >=18.0.0"
+      },
+      "types": "./index.d.ts",
+      "gitHead": "d9c829a63f5553fb23fa84d7b7586c7b470fb27e",
       "bugs": {
         "url": "https://github.com/LinusU/node-application-config/issues"
       },
-      "_id": "application-config@1.0.1",
-      "_shasum": "5aa2e2a5ed6abd2e5d1d473d3596f574044fe9e7",
-      "_from": ".",
-      "_npmVersion": "3.10.3",
-      "_nodeVersion": "6.5.0",
+      "_id": "application-config@3.0.0",
+      "_nodeVersion": "18.12.1",
+      "_npmVersion": "8.19.2",
       "dist": {
-        "shasum": "5aa2e2a5ed6abd2e5d1d473d3596f574044fe9e7",
-        "tarball": "http://localhost:3000/application-config/-/application-config-1.0.1.tgz",
-        "integrity": "sha512-4/pxvg7ujMT7UD+b0OyXwlYntRnqZxjBUoA+vtYwdUA6Nxfx4rGPMaP3kQQcm1aZ9fnXl6Aw2sJy+ZID85/nug==",
+        "integrity": "sha512-7ViR4soQJDx2O9iLf1vGxvekkPqvwqV/AZ2OL3DNcAQrg03UjJE1VeBk7oYNoN9AKB0eNyVrcM7kPD30NKeLLw==",
+        "shasum": "9adec84dd2d81e97dd78ea0dffcbf97381a1f55c",
+        "tarball": "http://localhost:3000/application-config/-/application-config-3.0.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 4111,
         "signatures": [
           {
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-            "sig": "MEUCIE/M2gkqNobxclCEt3fcBpgTA/ybbv43oyGFAiUNiGOyAiEAsLS0EW3R0rz01o+xcDrPi6ElP+7sm5afb8Bj5/PQ3eA="
+            "sig": "MEQCIGEsWSuOKWUTskZi9D1xB3l5j/+ETXEpG5RYIbmVImv+AiAhMlQk6eHBxAjFYU43xnGs/psckRwzkiAz8aIaFeSD3w=="
           }
-        ]
+        ],
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjuC11ACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmr0sA//eum7a7CqjCyYgEOoCk+s1Wc7A1D+KWDaZGobJy/rNw9rPjkn\r\nxFaQAGXQhdE8l0n/3yHIECV3KCkf0LQq1li9g3DBWcrDF7bf/doqa/ey+xKm\r\npAk3wpOibp6/y2lZt777HSL8Hu7wlCdqmKxQfIBVCQbkztaYXrdyYRqFa+Bf\r\nXJ1Vq7bXsHCmDToKiwbERoTzeWbnSRVidOc31zFSHLc+HitUiywvM35fyWuX\r\nNp5X7sHu5jSOuIP1vVC4lrhk7oZapyIyOx+DEXylAWjlN+DZ988VXYtnr9UO\r\n0OZKzj5qqLS+P91Eh6ll7xT701oG9dXFDrEKp+l9/1TGlObrfPxHpMWPg2cK\r\na/Nj71h8TWK/7nSvROr48wlzWBpHciZD6F9Yvl4p/oXZChOnQhwGnAAANkF1\r\ndEiN7ZTZA6MOguPFqgu6+TLKCl2oEzrva1Mam4D4u+prm+0u5+hKAr/1UUe0\r\nsie3zh8FVZPlypWsRZ4zB35Ef7tFTcMkVImo7RPbP3Z1/Kq1J2nemLADb4JD\r\naEZi/jfp+sfDdw6E9HgmdH9oOdJJic37z1VTmXu2NwVw5j/o/Mxn8oMuqsYt\r\nu1N0+mZak/GIZ13jmcWvKUTMwPWnsoOzC63z1M61a9vW7jWC9OQ4v9mzjB4b\r\nb/0NEmuvtz9u/2mqxdXVxiePl/VZWJ5PqKs=\r\n=HlpU\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "directories": {}
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "modified": "2023-01-06T14:17:25.330Z",
     "created": "2014-12-28T21:39:15.641Z",
-    "1.0.1": "2016-09-23T09:45:59.846Z"
+    "3.0.0": "2023-01-06T14:17:25.222Z"
   },
   "license": "MIT"
 }

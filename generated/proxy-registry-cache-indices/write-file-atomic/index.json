@@ -6,6 +6,60 @@
     "latest": "6.0.0"
   },
   "versions": {
+    "3.0.3": {
+      "name": "write-file-atomic",
+      "version": "3.0.3",
+      "license": "ISC",
+      "_id": "write-file-atomic@3.0.3",
+      "bugs": {
+        "url": "https://github.com/npm/write-file-atomic/issues"
+      },
+      "tap": {
+        "100": true
+      },
+      "dist": {
+        "shasum": "56bd5c5a5c70481cd19c571bd39ab965a5de56e8",
+        "tarball": "http://localhost:3000/write-file-atomic/-/write-file-atomic-3.0.3.tgz",
+        "fileCount": 5,
+        "integrity": "sha512-AvHcyZ5JnSfq3ioSyjrBkH9yW4m7Ayk8/9My/DD9onKeu/94fwrMocemO2QAJFAlnnDN+ZDS+ZjAR5ua1/PV/Q==",
+        "signatures": [
+          {
+            "sig": "MEUCIFTHZ0a4a77TWvBA4fr8ZPlnaJf2WMDAcKr7eASANB0qAiEAnBOzLyLfsZya9CAH5Iti6LIv/3plhHjHEI9S5gjeCx0=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 12787,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeVE24CRA9TVsSAnZWagAAZ1oP/izZvazxVzxm9iG6jaq6\nFuYMxO/dmoTAml/sAnFtEhP/XxCn8bqzR96FCde+yeFFLHY96kRsd4fbMD6E\nJtGTVyvGxIv9T4gcjwesw/XRs28bTL8ustWDG/rFxiwR2DsPpjmmgA76LnWK\n9u0FSzz3j+XbclQxbwnjBmS+0fwZpe4JBK6ig9fp8RLc6gI8QKgvVgMgzEl4\ncPwEzDs5YrPgMnM+obzbQEegnG3JRpdcPiAY4dZEchKXfgorbxUpaGV5wZ/5\nLNqAxpIHy7mlIQAAmmbroezfOR4jq417+Ue6sjU0mz6jcGHCmM2R2tRSRaCf\nGPHKjdHA0jctoayAWZIs7wIUtQhOiOsyVqdD9JtNE431oIbzgvX//GCVJE/U\noMWKI/51WpT/X2VzU6DO7WaHwOInEykeR+EEW2TXKrWcJUu/gDoe3VL/fvTJ\njR+EUINXWWn9BC19ZNx0mOLx4HH0r6EYgGnPPeuwzaVXumc5zFYgLCOoigMi\nO19OWetKThqA0+evO7MpoZs2ea05AvIzBQYwq4cnDLsRIaeSJsYhwWB4wetY\n6yPytApnjAw6DW9Wcqu2KTeHIJ1nbCuU7p8M1wcnDq5oMoW65UrBcP2LMhSp\nNDWcmssNk0ayubl4QEZ2oKyMty9EXLj6hiXBYUk1k5NnCsYAL9LFzIiukixH\n80WP\r\n=wDSu\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "main": "index.js",
+      "gitHead": "eb8dff15f83f16be1e0b89be54fa80200356614a",
+      "scripts": {
+        "lint": "standard",
+        "test": "tap",
+        "postlint": "rimraf chowncopy good nochmod nochown nofsync nofsyncopt noopen norename \"norename nounlink\" nowrite",
+        "posttest": "npm run lint",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "_npmVersion": "6.13.6",
+      "directories": {},
+      "_nodeVersion": "13.7.0",
+      "dependencies": {
+        "imurmurhash": "^0.1.4",
+        "signal-exit": "^3.0.2",
+        "is-typedarray": "^1.0.0",
+        "typedarray-to-buffer": "^3.1.5"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^14.10.6",
+        "mkdirp": "^0.5.1",
+        "rimraf": "^2.6.3",
+        "standard": "^14.3.1",
+        "require-inject": "^1.4.4"
+      }
+    },
     "5.0.1": {
       "name": "write-file-atomic",
       "version": "5.0.1",
@@ -78,6 +132,7 @@
   "time": {
     "created": "2014-09-10T23:26:27.142Z",
     "modified": "2025-05-14T20:04:28.405Z",
+    "3.0.3": "2020-02-24T22:27:04.013Z",
     "5.0.1": "2023-04-26T19:28:58.689Z"
   },
   "license": "ISC"
