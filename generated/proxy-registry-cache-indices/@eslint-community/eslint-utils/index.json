@@ -1,21 +1,46 @@
 {
   "_id": "@eslint-community/eslint-utils",
-  "_rev": "21-1fbf201e14ab34f229cf747c5b97d97b",
+  "_rev": "22-9e936d78fe1eff2e1df65edef83f0635",
   "name": "@eslint-community/eslint-utils",
   "dist-tags": {
     "beta": "4.0.0-beta.1",
     "alpha": "5.0.0-alpha.1",
-    "latest": "4.7.0"
+    "latest": "4.8.0"
   },
   "versions": {
     "4.7.0": {
       "name": "@eslint-community/eslint-utils",
       "version": "4.7.0",
+      "license": "MIT",
+      "_id": "@eslint-community/eslint-utils@4.7.0",
       "bugs": {
         "url": "https://github.com/eslint-community/eslint-utils/issues"
       },
-      "license": "MIT",
-      "sideEffects": false,
+      "dist": {
+        "shasum": "607084630c6c033992a082de6e6fbc1a8b52175a",
+        "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-4.7.0.tgz",
+        "fileCount": 9,
+        "integrity": "sha512-dyybb3AcajC7uha6CvhdVRJqaKyn7w2YKqKyAN37NKYgZT36w+iRb0Dymmc5qEJ549c/S31cMMSFd75bteCpCw==",
+        "signatures": [
+          {
+            "sig": "MEYCIQDXUIhUxEcV5rngL8p80A2Tm03WZZdc6prW6gEiEiKtVQIhANHu+CLlWF6bwgjCU49qrN7yz5KesKixdSP6AAS+Z4YD",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint-community%2feslint-utils@4.7.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 482928
+      },
+      "main": "index",
+      "types": "./index.d.ts",
+      "module": "index.mjs",
+      "engines": {
+        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+      },
       "exports": {
         ".": {
           "import": "./index.mjs",
@@ -23,97 +48,72 @@
         },
         "./package.json": "./package.json"
       },
-      "main": "index",
-      "module": "index.mjs",
+      "funding": "https://opencollective.com/eslint",
+      "gitHead": "38c229b5ceccfedad80a6ec539b621dacfbbfcef",
       "scripts": {
-        "prebuild": "npm run -s clean",
+        "lint": "run-p lint:*",
+        "test": "mocha --reporter dot \"test/*.mjs\"",
         "build": "npm run build:dts && npm run build:rollup",
-        "build:dts": "tsc -p tsconfig.build.json",
-        "build:rollup": "rollup -c",
         "clean": "rimraf .nyc_output coverage index.* dist",
+        "watch": "warun \"{src,test}/**/*.mjs\" -- npm run -s test:mocha",
+        "format": "npm run -s format:prettier -- --write",
         "coverage": "opener ./coverage/lcov-report/index.html",
+        "prebuild": "npm run -s clean",
+        "prewatch": "npm run -s clean",
+        "build:dts": "tsc -p tsconfig.build.json",
+        "lint:knip": "knip",
         "docs:build": "vitepress build docs",
         "docs:watch": "vitepress dev docs",
-        "format": "npm run -s format:prettier -- --write",
-        "format:prettier": "prettier .",
-        "format:check": "npm run -s format:prettier -- --check",
+        "preversion": "npm run test-coverage && npm run -s build",
         "lint:eslint": "eslint .",
         "lint:format": "npm run -s format:check",
-        "lint:installed-check": "installed-check -v -i installed-check -i npm-run-all2 -i knip -i rollup-plugin-dts",
-        "lint:knip": "knip",
-        "lint": "run-p lint:*",
-        "test-coverage": "c8 mocha --reporter dot \"test/*.mjs\"",
-        "test": "mocha --reporter dot \"test/*.mjs\"",
-        "preversion": "npm run test-coverage && npm run -s build",
         "postversion": "git push && git push --tags",
-        "prewatch": "npm run -s clean",
-        "watch": "warun \"{src,test}/**/*.mjs\" -- npm run -s test:mocha"
+        "build:rollup": "rollup -c",
+        "format:check": "npm run -s format:prettier -- --check",
+        "test-coverage": "c8 mocha --reporter dot \"test/*.mjs\"",
+        "format:prettier": "prettier .",
+        "lint:installed-check": "installed-check -v -i installed-check -i npm-run-all2 -i knip -i rollup-plugin-dts"
       },
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "sideEffects": false,
+      "_nodeVersion": "20.19.0",
       "dependencies": {
         "eslint-visitor-keys": "^3.4.3"
       },
+      "_hasShrinkwrap": false,
       "devDependencies": {
-        "@eslint-community/eslint-plugin-mysticatea": "^15.6.1",
-        "@types/eslint": "^9.6.1",
-        "@types/estree": "^1.0.7",
-        "@typescript-eslint/parser": "^5.62.0",
-        "@typescript-eslint/types": "^5.62.0",
         "c8": "^8.0.1",
-        "dot-prop": "^7.2.0",
-        "eslint": "^8.57.1",
-        "installed-check": "^8.0.1",
         "knip": "^5.33.3",
         "mocha": "^9.2.2",
-        "npm-run-all2": "^6.2.3",
+        "warun": "^1.0.0",
+        "eslint": "^8.57.1",
         "opener": "^1.5.2",
-        "prettier": "2.8.8",
         "rimraf": "^3.0.2",
         "rollup": "^2.79.2",
-        "rollup-plugin-dts": "^4.2.3",
-        "rollup-plugin-sourcemaps": "^0.6.3",
         "semver": "^7.6.3",
-        "typescript": "^4.9.5",
+        "dot-prop": "^7.2.0",
+        "prettier": "2.8.8",
         "vitepress": "^1.4.1",
-        "warun": "^1.0.0"
+        "typescript": "^4.9.5",
+        "npm-run-all2": "^6.2.3",
+        "@types/eslint": "^9.6.1",
+        "@types/estree": "^1.0.7",
+        "installed-check": "^8.0.1",
+        "rollup-plugin-dts": "^4.2.3",
+        "@typescript-eslint/types": "^5.62.0",
+        "rollup-plugin-sourcemaps": "^0.6.3",
+        "@typescript-eslint/parser": "^5.62.0",
+        "@eslint-community/eslint-plugin-mysticatea": "^15.6.1"
       },
       "peerDependencies": {
         "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0"
-      },
-      "engines": {
-        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
-      },
-      "funding": "https://opencollective.com/eslint",
-      "_id": "@eslint-community/eslint-utils@4.7.0",
-      "gitHead": "38c229b5ceccfedad80a6ec539b621dacfbbfcef",
-      "types": "./index.d.ts",
-      "_nodeVersion": "20.19.0",
-      "_npmVersion": "10.8.2",
-      "dist": {
-        "integrity": "sha512-dyybb3AcajC7uha6CvhdVRJqaKyn7w2YKqKyAN37NKYgZT36w+iRb0Dymmc5qEJ549c/S31cMMSFd75bteCpCw==",
-        "shasum": "607084630c6c033992a082de6e6fbc1a8b52175a",
-        "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-4.7.0.tgz",
-        "fileCount": 9,
-        "unpackedSize": 482928,
-        "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint-community%2feslint-utils@4.7.0",
-          "provenance": {
-            "predicateType": "https://slsa.dev/provenance/v1"
-          }
-        },
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEYCIQDXUIhUxEcV5rngL8p80A2Tm03WZZdc6prW6gEiEiKtVQIhANHu+CLlWF6bwgjCU49qrN7yz5KesKixdSP6AAS+Z4YD"
-          }
-        ]
-      },
-      "directories": {},
-      "_hasShrinkwrap": false
+      }
     }
   },
   "time": {
     "created": "2022-11-20T18:57:08.771Z",
-    "modified": "2025-05-02T07:52:14.764Z",
+    "modified": "2025-09-03T06:20:59.909Z",
     "4.7.0": "2025-05-02T07:52:14.328Z"
   },
   "license": "MIT"
