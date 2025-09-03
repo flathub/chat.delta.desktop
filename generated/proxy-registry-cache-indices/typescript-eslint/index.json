@@ -1,18 +1,18 @@
 {
   "_id": "typescript-eslint",
-  "_rev": "1028-0a4a8ea173db82d0be420fec95950718",
+  "_rev": "1049-c8ae06072dbecf5441709f11dad7af04",
   "name": "typescript-eslint",
   "dist-tags": {
     "rc-v8": "8.0.0-alpha.62",
-    "latest": "8.40.0",
-    "canary": "8.40.1-alpha.17"
+    "latest": "8.42.0",
+    "canary": "8.42.1-alpha.2"
   },
   "versions": {
-    "8.38.0": {
+    "8.41.0": {
       "name": "typescript-eslint",
-      "version": "8.38.0",
+      "version": "8.41.0",
       "license": "MIT",
-      "_id": "typescript-eslint@8.38.0",
+      "_id": "typescript-eslint@8.41.0",
       "bugs": {
         "url": "https://github.com/typescript-eslint/typescript-eslint/issues"
       },
@@ -21,6 +21,18 @@
         "targets": {
           "lint": {
             "command": "eslint"
+          },
+          "test": {
+            "dependsOn": [
+              "^build",
+              "typecheck"
+            ]
+          },
+          "typecheck": {
+            "outputs": [
+              "{workspaceRoot}/dist",
+              "{projectRoot}/dist"
+            ]
           }
         },
         "includedScripts": [
@@ -28,17 +40,17 @@
         ]
       },
       "dist": {
-        "shasum": "e73af7618139f07b16e2fae715eedaabb41ee8b0",
-        "tarball": "http://localhost:3000/typescript-eslint/-/typescript-eslint-8.38.0.tgz",
-        "fileCount": 12,
-        "integrity": "sha512-FsZlrYK6bPDGoLeZRuvx2v6qrM03I0U0SnfCLPs/XCCPCFD80xU9Pg09H/K+XFa68uJuZo7l/Xhs+eDRg2l3hg==",
+        "shasum": "a13879a5998717140fefb0d808c8c2fbde1cb769",
+        "tarball": "http://localhost:3000/typescript-eslint/-/typescript-eslint-8.41.0.tgz",
+        "fileCount": 15,
+        "integrity": "sha512-n66rzs5OBXW3SFSnZHr2T685q1i4ODm2nulFJhMZBotaTavsS8TrI3d7bDlRSs9yWo7HmyWrN9qDu14Qv7Y0Dw==",
         "signatures": [
           {
-            "sig": "MEUCIQCHAtEHcy2Jd5C23EcrlcEri0tDF2f2cS3dmP0Bb+XZ8QIgAqxBdGwFWsypVtV2GcT8r20bNz4Ld2e3IhFj0/3e/Lk=",
+            "sig": "MEYCIQCIEYk5y/1/Vrf7tPORqira546XXuxlFihCpbXozf4BVAIhANz1pTWJdm1ZLXXESjdc3mhPs/FRm3JpwyJRu8nqkL8s",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 30896
+        "unpackedSize": 33001
       },
       "type": "commonjs",
       "types": "./dist/index.d.ts",
@@ -56,7 +68,7 @@
         "url": "https://opencollective.com/typescript-eslint",
         "type": "opencollective"
       },
-      "gitHead": "d11e79e9c9edc9f6f5e66306e3b3d65f3149a760",
+      "gitHead": "31a73361bd6449974c89b78ef77be0d04e77510b",
       "scripts": {
         "lint": "yarn run -BT nx lint",
         "test": "yarn run -BT nx test",
@@ -67,12 +79,12 @@
       },
       "_npmVersion": "10.8.2",
       "directories": {},
-      "_nodeVersion": "20.19.3",
+      "_nodeVersion": "20.19.4",
       "dependencies": {
-        "@typescript-eslint/utils": "8.38.0",
-        "@typescript-eslint/parser": "8.38.0",
-        "@typescript-eslint/eslint-plugin": "8.38.0",
-        "@typescript-eslint/typescript-estree": "8.38.0"
+        "@typescript-eslint/utils": "8.41.0",
+        "@typescript-eslint/parser": "8.41.0",
+        "@typescript-eslint/eslint-plugin": "8.41.0",
+        "@typescript-eslint/typescript-estree": "8.41.0"
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
@@ -84,14 +96,14 @@
       },
       "peerDependencies": {
         "eslint": "^8.57.0 || ^9.0.0",
-        "typescript": ">=4.8.4 <5.9.0"
+        "typescript": ">=4.8.4 <6.0.0"
       }
     }
   },
   "time": {
     "created": "2019-08-13T12:11:42.126Z",
-    "modified": "2025-08-22T23:01:41.467Z",
-    "8.38.0": "2025-07-21T17:22:27.425Z"
+    "modified": "2025-09-02T12:35:18.424Z",
+    "8.41.0": "2025-08-25T17:17:54.601Z"
   },
   "license": "MIT"
 }

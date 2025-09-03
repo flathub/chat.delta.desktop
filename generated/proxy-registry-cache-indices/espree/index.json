@@ -7,89 +7,6 @@
     "latest": "10.4.0"
   },
   "versions": {
-    "10.3.0": {
-      "name": "espree",
-      "version": "10.3.0",
-      "license": "BSD-2-Clause",
-      "_id": "espree@10.3.0",
-      "bugs": {
-        "url": "https://github.com/eslint/js/issues"
-      },
-      "dist": {
-        "shasum": "29267cf5b0cb98735b65e64ba07e0ed49d1eed8a",
-        "tarball": "http://localhost:3000/espree/-/espree-10.3.0.tgz",
-        "fileCount": 10,
-        "integrity": "sha512-0QYC8b24HWY8zjRnDTL6RiHfDbAWn63qb4LMj1Z4b076A4une81+z03Kg7l7mn/48PUTqoLptSXez8oknU8Clg==",
-        "signatures": [
-          {
-            "sig": "MEUCIQDF/BhD1H5PJYtwo3rDN239Slh3NsU/1nvfITZQGKZWpAIgVZVgVNfAgF4e3/6DFsFZkNpeXZ80I4av0s9ZPk5s8ws=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/espree@10.3.0",
-          "provenance": {
-            "predicateType": "https://slsa.dev/provenance/v1"
-          }
-        },
-        "unpackedSize": 79348
-      },
-      "main": "dist/espree.cjs",
-      "type": "module",
-      "engines": {
-        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-      },
-      "exports": {
-        ".": [
-          {
-            "import": "./espree.js",
-            "default": "./dist/espree.cjs",
-            "require": "./dist/espree.cjs"
-          },
-          "./dist/espree.cjs"
-        ],
-        "./package.json": "./package.json"
-      },
-      "funding": "https://opencollective.com/eslint",
-      "gitHead": "844078a1df7736019eee52665b67393ffcfd4c18",
-      "scripts": {
-        "test": "npm-run-all -s test:*",
-        "build": "rollup -c rollup.config.js",
-        "pretest": "npm run build",
-        "test:cjs": "mocha --color --reporter progress --timeout 30000 tests/lib/commonjs.cjs",
-        "test:esm": "c8 mocha --color --reporter progress --timeout 30000 'tests/lib/**/*.js'",
-        "build:docs": "node tools/sync-docs.js",
-        "build:debug": "npm run build -- -m",
-        "prepublishOnly": "npm run build:update-version && npm run build",
-        "release:publish": "eslint-publish-release",
-        "release:generate:rc": "eslint-generate-prerelease rc",
-        "build:update-version": "node tools/update-version.js",
-        "release:generate:beta": "eslint-generate-prerelease beta",
-        "release:generate:alpha": "eslint-generate-prerelease alpha",
-        "release:generate:latest": "eslint-generate-release"
-      },
-      "_npmVersion": "10.8.2",
-      "directories": {},
-      "_nodeVersion": "20.18.0",
-      "dependencies": {
-        "acorn": "^8.14.0",
-        "acorn-jsx": "^5.3.2",
-        "eslint-visitor-keys": "^4.2.0"
-      },
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "c8": "^7.11.0",
-        "mocha": "^9.2.2",
-        "rollup": "^2.79.1",
-        "shelljs": "^0.8.5",
-        "esprima-fb": "^8001.2001.0-dev-harmony-fb",
-        "npm-run-all2": "^6.2.2",
-        "eslint-release": "^3.2.0",
-        "@rollup/plugin-json": "^6.1.0",
-        "@rollup/plugin-commonjs": "^28.0.0",
-        "@rollup/plugin-node-resolve": "^15.3.0"
-      }
-    },
     "10.4.0": {
       "name": "espree",
       "main": "dist/espree.cjs",
@@ -175,7 +92,6 @@
   "time": {
     "created": "2014-12-06T03:10:12.402Z",
     "modified": "2025-06-09T15:46:04.281Z",
-    "10.3.0": "2024-10-29T19:25:10.561Z",
     "10.4.0": "2025-06-09T15:46:03.805Z"
   },
   "license": "BSD-2-Clause"

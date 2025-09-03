@@ -7,6 +7,49 @@
     "next": "3.0.1"
   },
   "versions": {
+    "3.0.7": {
+      "name": "signal-exit",
+      "version": "3.0.7",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "license": "ISC",
+      "bugs": {
+        "url": "https://github.com/tapjs/signal-exit/issues"
+      },
+      "devDependencies": {
+        "chai": "^3.5.0",
+        "coveralls": "^3.1.1",
+        "nyc": "^15.1.0",
+        "standard-version": "^9.3.1",
+        "tap": "^15.1.1"
+      },
+      "gitHead": "03dd77a96caa309c6a02c59274d58c812a2dce45",
+      "_id": "signal-exit@3.0.7",
+      "_nodeVersion": "17.4.0",
+      "_npmVersion": "8.4.0",
+      "dist": {
+        "integrity": "sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==",
+        "shasum": "a9a1767f8af84155114eaabd73f99273c8f59ad9",
+        "tarball": "http://localhost:3000/signal-exit/-/signal-exit-3.0.7.tgz",
+        "fileCount": 5,
+        "unpackedSize": 9958,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJh/EOeCRA9TVsSAnZWagAAX3AP/2P+1N10ku3PdJf0ldO6\npwxiTPHMWvDzPdr5eqaQCygilmRFPEO3pTza6jDS7gUcmvL6I8KpqPlxXpwP\nOX2DNCQtAvX5m1hOA+HOXfCFBX1byvBjhOGx6vbQ45ZPJke6N9Csp4SAuG9D\nJYycXaym80r4MnQtPV4V9mxxQy3AE32O0gbTWKCJnkMge19OvSt5W+fXMbyd\n7OvlVAxQ1MPJFOSGGk1hyxSbJRndx4s6ud1jcP6pD+/p0eWPj59EVl+g1zj8\n2yvTRJW73UKkpsBtUb2zRr4Mg2ya1BvWYofII8NHEU6wtM79AQGGD6YI9XMm\n8WPvk/XAyQ9UESl2bl5SKenjrDgKfzkhwge8Z1tOMoKDLzblsYJ8Z8Xk8YeX\nUaNO2alrM7wO8YHYloI9HSoRhcCBRfr2TknZpBzP6oS7GneiHpdOC+Jo9EMS\nzztVeGkZJGYhsozZ+v/abF+79mERVU5JOfkSupUv1a3Y15ncJDtlA+D4blhl\na/9HZGVtrwbxefKXQJcZobG9/cM3B9tjdbO2TZr3rlzCfyDLSidUoOmvxY1m\nINnVxPx3kOTsqhWfNYZ66p4U86vxIi2BNIDe4De9wAIlVvzMrD0cTzPFYmdw\nqO/bMgGJjcSYCa+j4pruHT34x4kTpNLCWtmFQtIgU/Sqjo0qoywepGNDIgYB\nLt2r\r\n=bZwh\r\n-----END PGP SIGNATURE-----\r\n",
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEQCIGMw1a9f8gm5z+7yikxpq3ovrsrx+7ikm9spN0f62ae9AiBE3w4KuzVfO0Wdp33+1FEwQyDku0rjSYHeejqaAEgeLA=="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    },
     "4.1.0": {
       "name": "signal-exit",
       "version": "4.1.0",
@@ -126,6 +169,7 @@
   "time": {
     "modified": "2023-07-29T05:44:56.838Z",
     "created": "2015-05-16T06:45:54.221Z",
+    "3.0.7": "2022-02-03T21:05:34.544Z",
     "4.1.0": "2023-07-29T05:44:56.721Z"
   },
   "license": "ISC"
