@@ -6,45 +6,52 @@
     "latest": "1.0.0"
   },
   "versions": {
-    "0.1.0": {
+    "1.0.0": {
       "name": "application-config-path",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "license": "MIT",
-      "main": "index.js",
-      "devDependencies": {
-        "mocha": "^2.2.5",
-        "standard": "^5.0.1-0"
-      },
+      "type": "module",
+      "exports": "./index.js",
       "scripts": {
         "test": "standard && mocha"
       },
-      "gitHead": "59cc173095a58b90cc79efaa760f933f8900fb93",
+      "devDependencies": {
+        "mocha": "^10.2.0",
+        "standard": "^17.0.0"
+      },
+      "engines": {
+        "node": "^14.18.0 || ^16.14.0 || >=18.0.0"
+      },
+      "types": "./index.d.ts",
+      "gitHead": "164eaa0f6fd515558910e2d3e8e5f28fb845121f",
       "bugs": {
         "url": "https://github.com/LinusU/node-application-config-path/issues"
       },
-      "_id": "application-config-path@0.1.0",
-      "_shasum": "193c5f0a86541a4c66fba1e2dc38583362ea5e8f",
-      "_from": ".",
-      "_npmVersion": "2.10.1",
-      "_nodeVersion": "0.12.4",
+      "_id": "application-config-path@1.0.0",
+      "_nodeVersion": "18.12.1",
+      "_npmVersion": "8.19.2",
       "dist": {
-        "shasum": "193c5f0a86541a4c66fba1e2dc38583362ea5e8f",
-        "tarball": "http://localhost:3000/application-config-path/-/application-config-path-0.1.0.tgz",
-        "integrity": "sha512-lljTpVvFteShrHuKRvweZfa9o/Nc34Y8r5/1Lqh/yyKaspRT2J3fkEiSSk1YLG8ZSVyU7yHysRy9zcDDS2aH1Q==",
+        "integrity": "sha512-6ZDlLTlfqrTybVzZJDpX2K2ZufqyMyiTbOG06GpxmkmczFgTN+YYRGcTcMCXv/F5P5SrZijVjzzpPUE9BvheLg==",
+        "shasum": "9c25b8c00ac9a342db27275abd3f38c67bbe5a05",
+        "tarball": "http://localhost:3000/application-config-path/-/application-config-path-1.0.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 3665,
         "signatures": [
           {
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-            "sig": "MEQCIEDrgD5uLeM/N/nLwB8gJVFmWbDQxCvpD1TCs5IDhtFPAiBjIv7XlfGweqb8g4eeeg01MFcenSt94fQU5+4xFfK4CA=="
+            "sig": "MEUCIGsfTMi338fz2ZuowX3zT4bfVtk69HWCHkfhBpBHVH8QAiEA0tUu2Qz4/TMBhBUNkj5LDbBWpoMf9wmQQzMJZFs/HHM="
           }
-        ]
+        ],
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjuCtzACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmq34Q/+ITAXY0lk+xVWaqGyvM3YNJCF0SwPHz0UvTmWmMVqubAdJHWQ\r\nqG+aUyAeZfaJZr4bommVtk2f0ZIdgYHq9o7HpB2iZxjFutPyUzP8uCVcdePI\r\nANCgc/TBeA1T8k/SM+L43IPYCmlT5aiogB2AtVW8Dp/jfNpvFKApkNLy+UwL\r\nqK2HhFgqI/URWjejZblHk1CDOpKk3zSlvTnm5TDCFoQpYl2MXb6cm/dW4wHT\r\nD07MUN0gNlTFQZ5tfuJLZCQgZGEyPQ3iVzU5fhQ5dBrwohHssjihxND/6QHU\r\n1gd59p+M4xKCg65et8A26N2NI1a5aM2NfoS43CEGc82ItmFHxjzO5KE5l+6N\r\nYtWrCs8dhxcLXIlN6d3ycTBPK8i0RWCZRIicRc3NHNRqKMvYcj00ruQFGQM2\r\na0E4gXg3m32QjcblXa5J+8BtI6zA2cGdU1oXe4L0tcXO1d6obxN8AeyxfZca\r\nWxqfp03PU8xvl21HVjqkGTT/to87Wqn6bQm1NDGZ8OxeaOsDqZQqbzZ+G3YP\r\ndesVvL/9UtkMZDpkFFK3jG8FaPtqy7/Wtqe6QAzToYKPwg04A6Di7kcqgKIS\r\nW+xq3BzvoVrSS08HgGy7S+udS9emJjXIlLmMThOMwtvAKhculeuFTzt8Gzkx\r\ng+kwkKzEJzT8tcQf6cgH4kWZcSqryqC7vOM=\r\n=OgeK\r\n-----END PGP SIGNATURE-----\r\n"
       },
-      "directories": {}
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "modified": "2023-01-06T14:08:51.074Z",
     "created": "2015-07-17T18:25:36.278Z",
-    "0.1.0": "2015-07-17T18:25:36.278Z"
+    "1.0.0": "2023-01-06T14:08:50.989Z"
   },
   "license": "MIT"
 }

@@ -1,10 +1,10 @@
 {
   "_id": "dotenv",
-  "_rev": "659-5044aa866c087026000b624f8dbc0d62",
+  "_rev": "660-2aa410facc1ab68cd3a5d7ffc924f79b",
   "name": "dotenv",
   "dist-tags": {
     "next": "16.1.0-rc2",
-    "latest": "17.2.1"
+    "latest": "17.2.2"
   },
   "versions": {
     "9.0.2": {
@@ -69,74 +69,6 @@
         "standard": "^13.1.0",
         "standard-version": "^7.0.0",
         "standard-markdown": "^5.1.0"
-      }
-    },
-    "16.5.0": {
-      "name": "dotenv",
-      "version": "16.5.0",
-      "license": "BSD-2-Clause",
-      "_id": "dotenv@16.5.0",
-      "bugs": {
-        "url": "https://github.com/motdotla/dotenv/issues"
-      },
-      "dist": {
-        "shasum": "092b49f25f808f020050051d1ff258e404c78692",
-        "tarball": "http://localhost:3000/dotenv/-/dotenv-16.5.0.tgz",
-        "fileCount": 11,
-        "integrity": "sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==",
-        "signatures": [
-          {
-            "sig": "MEUCIBHv79KOrC9DPwjXnu/l8rUbw9wQiKjw4MHYBiLOgfOwAiEA1BqKBw4FL4vdpmwpPaBzwwQYpjCWSqkGAC9p5JTPbBk=",
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
-          }
-        ],
-        "unpackedSize": 75565
-      },
-      "main": "lib/main.js",
-      "types": "lib/main.d.ts",
-      "browser": {
-        "fs": false
-      },
-      "engines": {
-        "node": ">=12"
-      },
-      "exports": {
-        ".": {
-          "types": "./lib/main.d.ts",
-          "default": "./lib/main.js",
-          "require": "./lib/main.js"
-        },
-        "./config": "./config.js",
-        "./config.js": "./config.js",
-        "./package.json": "./package.json",
-        "./lib/cli-options": "./lib/cli-options.js",
-        "./lib/env-options": "./lib/env-options.js",
-        "./lib/cli-options.js": "./lib/cli-options.js",
-        "./lib/env-options.js": "./lib/env-options.js"
-      },
-      "funding": "https://dotenvx.com",
-      "gitHead": "d39cc9a94ef80b534d02401ab99d17463e902385",
-      "scripts": {
-        "lint": "standard",
-        "test": "tap run --allow-empty-coverage --disable-coverage --timeout=60000",
-        "pretest": "npm run lint && npm run dts-check",
-        "release": "standard-version",
-        "dts-check": "tsc --project tests/types/tsconfig.json",
-        "prerelease": "npm test",
-        "test:coverage": "tap run --show-full-coverage --timeout=60000 --coverage-report=lcov"
-      },
-      "_npmVersion": "10.9.2",
-      "directories": {},
-      "_nodeVersion": "23.4.0",
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "tap": "^19.2.0",
-        "sinon": "^14.0.1",
-        "decache": "^4.6.2",
-        "standard": "^17.0.0",
-        "typescript": "^4.8.4",
-        "@types/node": "^18.11.3",
-        "standard-version": "^9.5.0"
       }
     },
     "16.6.1": {
@@ -206,14 +138,82 @@
         "@types/node": "^18.11.3",
         "standard-version": "^9.5.0"
       }
+    },
+    "17.2.1": {
+      "name": "dotenv",
+      "version": "17.2.1",
+      "license": "BSD-2-Clause",
+      "_id": "dotenv@17.2.1",
+      "bugs": {
+        "url": "https://github.com/motdotla/dotenv/issues"
+      },
+      "dist": {
+        "shasum": "6f32e10faf014883515538dc922a0fb8765d9b32",
+        "tarball": "http://localhost:3000/dotenv/-/dotenv-17.2.1.tgz",
+        "fileCount": 12,
+        "integrity": "sha512-kQhDYKZecqnM0fCnzI5eIv5L4cAe/iRI+HqMbO/hbRdTAeXDG+M9FjipUxNfbARuEg4iHIbhnhs78BCHNbSxEQ==",
+        "signatures": [
+          {
+            "sig": "MEUCID0+GQsmkBdSYc5eH77ABvNm+LGsB5KJLO35ZPBUFUznAiEAtDdsBZlmlFHJ+BW/wBZjlLSiqhAdd+AaYgI5eE0hCcA=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 80536
+      },
+      "main": "lib/main.js",
+      "types": "lib/main.d.ts",
+      "browser": {
+        "fs": false
+      },
+      "engines": {
+        "node": ">=12"
+      },
+      "exports": {
+        ".": {
+          "types": "./lib/main.d.ts",
+          "default": "./lib/main.js",
+          "require": "./lib/main.js"
+        },
+        "./config": "./config.js",
+        "./config.js": "./config.js",
+        "./package.json": "./package.json",
+        "./lib/cli-options": "./lib/cli-options.js",
+        "./lib/env-options": "./lib/env-options.js",
+        "./lib/cli-options.js": "./lib/cli-options.js",
+        "./lib/env-options.js": "./lib/env-options.js"
+      },
+      "funding": "https://dotenvx.com",
+      "gitHead": "37cf55a092036ba23d9435a682e8b1ceb4f329e8",
+      "scripts": {
+        "lint": "standard",
+        "test": "tap run --allow-empty-coverage --disable-coverage --timeout=60000",
+        "pretest": "npm run lint && npm run dts-check",
+        "release": "standard-version",
+        "dts-check": "tsc --project tests/types/tsconfig.json",
+        "prerelease": "npm test",
+        "test:coverage": "tap run --show-full-coverage --timeout=60000 --coverage-report=text --coverage-report=lcov"
+      },
+      "_npmVersion": "10.9.2",
+      "directories": {},
+      "_nodeVersion": "23.4.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^19.2.0",
+        "sinon": "^14.0.1",
+        "decache": "^4.6.2",
+        "standard": "^17.0.0",
+        "typescript": "^4.8.4",
+        "@types/node": "^18.11.3",
+        "standard-version": "^9.5.0"
+      }
     }
   },
   "time": {
     "created": "2013-07-05T18:29:15.210Z",
-    "modified": "2025-07-26T14:18:32.521Z",
+    "modified": "2025-09-02T21:09:37.224Z",
     "9.0.2": "2021-05-10T18:27:11.556Z",
-    "16.5.0": "2025-04-10T22:14:40.154Z",
-    "16.6.1": "2025-06-27T16:45:01.088Z"
+    "16.6.1": "2025-06-27T16:45:01.088Z",
+    "17.2.1": "2025-07-24T20:45:26.391Z"
   },
   "license": "BSD-2-Clause"
 }

@@ -4,7 +4,7 @@ set -e
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
 CORE_CHECKOUT=v2.11.0
-DESKTOP_CHECKOUT=v2.11.0
+DESKTOP_CHECKOUT=v2.11.1
 
 # this script needs:
 # environment:

@@ -1,0 +1,102 @@
+{
+  "_id": "@isaacs/balanced-match",
+  "_rev": "2-561b29418a093a2c00ff5ede055faea1",
+  "name": "@isaacs/balanced-match",
+  "dist-tags": {
+    "latest": "4.0.1"
+  },
+  "versions": {
+    "4.0.1": {
+      "name": "@isaacs/balanced-match",
+      "version": "4.0.1",
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
+          }
+        }
+      },
+      "type": "module",
+      "scripts": {
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags",
+        "prepare": "tshy",
+        "pretest": "npm run prepare",
+        "presnap": "npm run prepare",
+        "test": "tap",
+        "snap": "tap",
+        "format": "prettier --write . --loglevel warn",
+        "benchmark": "node benchmark/index.js",
+        "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts"
+      },
+      "prettier": {
+        "semi": false,
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true,
+        "jsxSingleQuote": false,
+        "bracketSameLine": true,
+        "arrowParens": "avoid",
+        "endOfLine": "lf"
+      },
+      "devDependencies": {
+        "@types/brace-expansion": "^1.1.2",
+        "@types/node": "^24.0.0",
+        "mkdirp": "^3.0.1",
+        "prettier": "^3.3.2",
+        "tap": "^21.1.0",
+        "tshy": "^3.0.2",
+        "typedoc": "^0.28.5"
+      },
+      "license": "MIT",
+      "engines": {
+        "node": "20 || >=22"
+      },
+      "tshy": {
+        "exports": {
+          "./package.json": "./package.json",
+          ".": "./src/index.ts"
+        }
+      },
+      "main": "./dist/commonjs/index.js",
+      "types": "./dist/commonjs/index.d.ts",
+      "module": "./dist/esm/index.js",
+      "_id": "@isaacs/balanced-match@4.0.1",
+      "gitHead": "b99b03c567c1e8b7e0b0e27d22e0a1f128c978dd",
+      "bugs": {
+        "url": "https://github.com/isaacs/balanced-match/issues"
+      },
+      "_nodeVersion": "22.14.0",
+      "_npmVersion": "11.3.0",
+      "dist": {
+        "integrity": "sha512-yzMTt9lEb8Gv7zRioUilSglI0c0smZ9k5D65677DLWLtWJaXIS3CqcGyUFByYKlnUj6TkjLVs54fBl6+TiGQDQ==",
+        "shasum": "3081dadbc3460661b751e7591d7faea5df39dd29",
+        "tarball": "http://localhost:3000/@isaacs/balanced-match/-/balanced-match-4.0.1.tgz",
+        "fileCount": 13,
+        "unpackedSize": 18204,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQC3e2Fcqz1RxwCaM5Q7y8ar47C4JTkTLUJL9/bAt44bjwIhAJHqs0/6nLWovtTzgvEjHHG4Ft82B2mJHyE1+JW1UTxz"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2025-06-12T17:59:55.245Z",
+    "modified": "2025-06-12T20:05:53.062Z",
+    "4.0.1": "2025-06-12T20:05:52.863Z"
+  },
+  "license": "MIT"
+}

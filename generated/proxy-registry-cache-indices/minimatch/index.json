@@ -202,6 +202,98 @@
         "@types/brace-expansion": "^1.1.0",
         "eslint-config-prettier": "^8.6.0"
       }
+    },
+    "10.0.3": {
+      "name": "minimatch",
+      "version": "10.0.3",
+      "main": "./dist/commonjs/index.js",
+      "types": "./dist/commonjs/index.d.ts",
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
+          }
+        }
+      },
+      "scripts": {
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags",
+        "prepare": "tshy",
+        "pretest": "npm run prepare",
+        "presnap": "npm run prepare",
+        "test": "tap",
+        "snap": "tap",
+        "format": "prettier --write . --loglevel warn",
+        "benchmark": "node benchmark/index.js",
+        "typedoc": "typedoc --tsconfig tsconfig-esm.json ./src/*.ts"
+      },
+      "prettier": {
+        "semi": false,
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true,
+        "jsxSingleQuote": false,
+        "bracketSameLine": true,
+        "arrowParens": "avoid",
+        "endOfLine": "lf"
+      },
+      "engines": {
+        "node": "20 || >=22"
+      },
+      "devDependencies": {
+        "@types/brace-expansion": "^1.1.2",
+        "@types/node": "^24.0.0",
+        "mkdirp": "^3.0.1",
+        "prettier": "^3.3.2",
+        "tap": "^21.1.0",
+        "tshy": "^3.0.2",
+        "typedoc": "^0.28.5"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/isaacs"
+      },
+      "license": "ISC",
+      "tshy": {
+        "exports": {
+          "./package.json": "./package.json",
+          ".": "./src/index.ts"
+        }
+      },
+      "type": "module",
+      "module": "./dist/esm/index.js",
+      "dependencies": {
+        "@isaacs/brace-expansion": "^5.0.0"
+      },
+      "_id": "minimatch@10.0.3",
+      "gitHead": "2c65ee2c57964cae0ad55a612e2c76dfff7cb16a",
+      "bugs": {
+        "url": "https://github.com/isaacs/minimatch/issues"
+      },
+      "_nodeVersion": "22.14.0",
+      "_npmVersion": "11.3.0",
+      "dist": {
+        "integrity": "sha512-IPZ167aShDZZUMdRk66cyQAW3qr0WzbHkPdMYa8bzZhlHhO3jALbKdxcaak7W9FfT2rZNpQuUu4Od7ILEpXSaw==",
+        "shasum": "cf7a0314a16c4d9ab73a7730a0e8e3c3502d47aa",
+        "tarball": "http://localhost:3000/minimatch/-/minimatch-10.0.3.tgz",
+        "fileCount": 53,
+        "unpackedSize": 438647,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQDG/hNo3JS+apEeN+YR9mnu8n7h1CKe3xAS9xCYfnkL3AIgOAPEl7soTOCXtsUxkvxM6tSar6wu+Cd1H3LW5VPLbZ8="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
@@ -209,7 +301,8 @@
     "modified": "2025-06-12T20:19:28.018Z",
     "3.1.2": "2022-02-15T20:32:43.510Z",
     "5.1.6": "2023-01-17T19:46:37.483Z",
-    "9.0.5": "2024-06-25T22:41:02.824Z"
+    "9.0.5": "2024-06-25T22:41:02.824Z",
+    "10.0.3": "2025-06-12T20:19:27.846Z"
   },
   "license": "ISC"
 }
