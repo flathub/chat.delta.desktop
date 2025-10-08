@@ -65,7 +65,7 @@ modules:
         RUSTC_WRAPPER: /app/bin/sccache
         SCCACHE_DIR: /run/ccache/sccache/
 
-      append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/node20/bin
+      append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/node22/bin
 
     build-commands:
       - ls /run/build
@@ -113,7 +113,7 @@ modules:
   - name: delta
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node20/bin:/run/build/delta/pnpm/bin
+      append-path: /usr/lib/sdk/node22/bin:/run/build/delta/pnpm/bin
       env:      
         NPM_CONFIG_LOGLEVEL: info
 
