@@ -5,7 +5,7 @@ runtime: org.freedesktop.Platform
 runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node20
+  - org.freedesktop.Sdk.Extension.node22
   - org.freedesktop.Sdk.Extension.rust-stable
 command: run.sh
 finish-args:
@@ -65,7 +65,7 @@ modules:
         RUSTC_WRAPPER: /app/bin/sccache
         SCCACHE_DIR: /run/ccache/sccache/
 
-      append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/node20/bin
+      append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/node22/bin
 
     build-commands:
       - ls /run/build

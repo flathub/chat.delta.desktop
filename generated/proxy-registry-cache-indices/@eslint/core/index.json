@@ -1,74 +1,74 @@
 {
   "_id": "@eslint/core",
-  "_rev": "18-00dd5364cfca5b02bab6472135d3e998",
+  "_rev": "19-df289e33827045271c6c25873ecc1a72",
   "name": "@eslint/core",
   "dist-tags": {
-    "latest": "0.15.2"
+    "latest": "0.16.0"
   },
   "versions": {
     "0.15.2": {
       "name": "@eslint/core",
       "version": "0.15.2",
-      "type": "module",
-      "types": "./dist/esm/types.d.ts",
-      "exports": {
-        "types": {
-          "import": "./dist/esm/types.d.ts",
-          "require": "./dist/cjs/types.d.cts"
-        }
-      },
-      "publishConfig": {
-        "access": "public"
-      },
-      "scripts": {
-        "build:cts": "node -e \"fs.cpSync('dist/esm/types.d.ts', 'dist/cjs/types.d.cts')\"",
-        "build": "tsc && npm run build:cts",
-        "test:jsr": "npx jsr@latest publish --dry-run",
-        "test:types": "tsc -p tests/types/tsconfig.json"
-      },
       "license": "Apache-2.0",
+      "_id": "@eslint/core@0.15.2",
       "bugs": {
         "url": "https://github.com/eslint/rewrite/issues"
       },
-      "dependencies": {
-        "@types/json-schema": "^7.0.15"
-      },
-      "devDependencies": {
-        "json-schema": "^0.4.0"
-      },
-      "engines": {
-        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-      },
-      "_id": "@eslint/core@0.15.2",
-      "gitHead": "9e68ab61df9c4ebc082b603fb5e3dfe2dcf98666",
-      "_nodeVersion": "22.17.1",
-      "_npmVersion": "10.9.2",
       "dist": {
-        "integrity": "sha512-78Md3/Rrxh83gCxoUc0EiciuOHsIITzLy53m3d9UyiW8y9Dj2D29FeETqyKA+BRK76tnTp6RXWb3pCay8Oyomg==",
         "shasum": "59386327d7862cc3603ebc7c78159d2dcc4a868f",
         "tarball": "http://localhost:3000/@eslint/core/-/core-0.15.2.tgz",
         "fileCount": 5,
-        "unpackedSize": 67584,
+        "integrity": "sha512-78Md3/Rrxh83gCxoUc0EiciuOHsIITzLy53m3d9UyiW8y9Dj2D29FeETqyKA+BRK76tnTp6RXWb3pCay8Oyomg==",
+        "signatures": [
+          {
+            "sig": "MEUCIDzZT617eS0Dy2BHUE8geiexJ9lh/PhR1nfZgyswopJZAiEAnszRDVLSXrnS52QUxcIce/BIrvyJS5n8mcgXXq7oHDU=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
         "attestations": {
           "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2fcore@0.15.2",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIDzZT617eS0Dy2BHUE8geiexJ9lh/PhR1nfZgyswopJZAiEAnszRDVLSXrnS52QUxcIce/BIrvyJS5n8mcgXXq7oHDU="
-          }
-        ]
+        "unpackedSize": 67584
       },
+      "type": "module",
+      "types": "./dist/esm/types.d.ts",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "exports": {
+        "types": {
+          "import": "./dist/esm/types.d.ts",
+          "require": "./dist/cjs/types.d.cts"
+        }
+      },
+      "gitHead": "9e68ab61df9c4ebc082b603fb5e3dfe2dcf98666",
+      "scripts": {
+        "build": "tsc && npm run build:cts",
+        "test:jsr": "npx jsr@latest publish --dry-run",
+        "build:cts": "node -e \"fs.cpSync('dist/esm/types.d.ts', 'dist/cjs/types.d.cts')\"",
+        "test:types": "tsc -p tests/types/tsconfig.json"
+      },
+      "_npmVersion": "10.9.2",
       "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "22.17.1",
+      "dependencies": {
+        "@types/json-schema": "^7.0.15"
+      },
+      "publishConfig": {
+        "access": "public"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "json-schema": "^0.4.0"
+      }
     }
   },
   "time": {
     "created": "2024-06-26T16:13:30.730Z",
-    "modified": "2025-08-08T10:21:25.201Z",
+    "modified": "2025-09-22T17:52:52.042Z",
     "0.15.2": "2025-08-08T10:21:24.592Z"
   },
   "license": "Apache-2.0"
