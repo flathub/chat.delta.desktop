@@ -1,0 +1,66 @@
+{
+  "_id": "@deltachat/calls-webapp",
+  "name": "@deltachat/calls-webapp",
+  "dist-tags": {
+    "latest": "0.10.0-beta-debug"
+  },
+  "versions": {
+    "0.10.0-beta-debug": {
+      "name": "@deltachat/calls-webapp",
+      "version": "0.10.0-beta-debug",
+      "type": "module",
+      "devDependencies": {
+        "@iconify/json": "^2.2.350",
+        "@preact/preset-vite": "^2.10.1",
+        "@svgr/core": "^8.1.0",
+        "@svgr/plugin-jsx": "^8.1.0",
+        "@types/react": "^19.1.8",
+        "@webxdc/vite-plugins": "latest",
+        "@webxdc/webxdc-dev": "latest",
+        "concurrently": "^9.1.2",
+        "prettier": "latest",
+        "typescript": "latest",
+        "unplugin-icons": "^22.1.0",
+        "vite": "latest",
+        "vite-plugin-singlefile": "^2.2.0"
+      },
+      "dependencies": {
+        "preact": "^10.26.9"
+      },
+      "scripts": {
+        "vite": "vite --port 3000",
+        "start": "concurrently \"npm run vite\" \"webxdc-dev run http://localhost:3000\"",
+        "fix": "prettier --write .",
+        "check": "tsc && prettier --check .",
+        "build": "tsc && vite build"
+      },
+      "_id": "@deltachat/calls-webapp@0.10.0-beta-debug",
+      "_integrity": "sha512-eErbULxmTN3YPCtjW+xXZzCFahtnblNM9gIohdwO837k2HbtkK6YbGw3G7rrkFenfTx4WBCxL636b/105TJmcg==",
+      "_resolved": "/tmp/a535d08e75341be945a508bb463017aa/deltachat-calls-webapp-0.10.0-beta-debug.tgz",
+      "_from": "file:deltachat-calls-webapp-0.10.0-beta-debug.tgz",
+      "_nodeVersion": "20.18.2",
+      "_npmVersion": "10.8.2",
+      "dist": {
+        "integrity": "sha512-eErbULxmTN3YPCtjW+xXZzCFahtnblNM9gIohdwO837k2HbtkK6YbGw3G7rrkFenfTx4WBCxL636b/105TJmcg==",
+        "shasum": "80ff68a2e5873d8c6c6c9f8dbce5edb75a09fe74",
+        "tarball": "http://localhost:3000/@deltachat/calls-webapp/-/calls-webapp-0.10.0-beta-debug.tgz",
+        "fileCount": 4,
+        "unpackedSize": 593806,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQCEp4qRPKxIkfX2XoZgZdyp2HZKp0mrKx4SGg1+8Ccy/AIhAOqZHzOZq1jvJjISzgjkAi12WroCJx+QePNFPb29uqHA"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2025-10-13T15:38:10.452Z",
+    "0.10.0-beta-debug": "2025-10-13T15:38:10.762Z",
+    "modified": "2025-10-13T15:38:11.374Z"
+  },
+  "_rev": "1-8a45ed077181bf1944fb85be35f37411"
+}
