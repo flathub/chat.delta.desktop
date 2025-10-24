@@ -1,10 +1,10 @@
 {
   "_id": "debug",
-  "_rev": "960-4cdf626858b30d308cc71aaeb189ff89",
+  "_rev": "963-18d69a087b64cc2802b8c075428ee865",
   "name": "debug",
   "dist-tags": {
     "beta": "4.3.3",
-    "latest": "4.4.1"
+    "latest": "4.4.3"
   },
   "versions": {
     "2.6.9": {
@@ -64,6 +64,34 @@
       "name": "debug",
       "version": "4.4.1",
       "license": "MIT",
+      "_id": "debug@4.4.1",
+      "bugs": {
+        "url": "https://github.com/debug-js/debug/issues"
+      },
+      "xo": {
+        "rules": {
+          "import/extensions": "off"
+        }
+      },
+      "dist": {
+        "shasum": "e5a8bc6cbc4c6cd3e64308b0693a3d4fa550189b",
+        "tarball": "http://localhost:3000/debug/-/debug-4.4.1.tgz",
+        "fileCount": 7,
+        "integrity": "sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIFYe34T3MTMz7GUYtvascO8kejy1IQelEEiXvtCY7ZJzAiEA65tNrHJkzI1TkrE1u4sq8InCFcWUG4iblPW3GCW5Ni8=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 42793
+      },
+      "main": "./src/index.js",
+      "browser": "./src/browser.js",
+      "engines": {
+        "node": ">=6.0"
+      },
+      "gitHead": "33330fa8616b9b33f29f7674747be77266878ba6",
       "scripts": {
         "lint": "xo",
         "test": "npm run test:node && npm run test:browser && npm run lint",
@@ -71,66 +99,39 @@
         "test:browser": "karma start --single-run",
         "test:coverage": "cat ./coverage/lcov.info | coveralls"
       },
+      "_npmVersion": "10.9.2",
+      "directories": {},
+      "_nodeVersion": "22.15.0",
       "dependencies": {
         "ms": "^2.1.3"
       },
+      "_hasShrinkwrap": false,
       "devDependencies": {
+        "xo": "^0.23.0",
         "brfs": "^2.0.1",
-        "browserify": "^16.2.3",
-        "coveralls": "^3.0.2",
         "karma": "^3.1.4",
-        "karma-browserify": "^6.0.0",
-        "karma-chrome-launcher": "^2.2.0",
-        "karma-mocha": "^1.3.0",
         "mocha": "^5.2.0",
-        "mocha-lcov-reporter": "^1.2.0",
         "sinon": "^14.0.0",
-        "xo": "^0.23.0"
+        "coveralls": "^3.0.2",
+        "browserify": "^16.2.3",
+        "karma-mocha": "^1.3.0",
+        "karma-browserify": "^6.0.0",
+        "mocha-lcov-reporter": "^1.2.0",
+        "karma-chrome-launcher": "^2.2.0"
       },
       "peerDependenciesMeta": {
         "supports-color": {
           "optional": true
         }
-      },
-      "main": "./src/index.js",
-      "browser": "./src/browser.js",
-      "engines": {
-        "node": ">=6.0"
-      },
-      "xo": {
-        "rules": {
-          "import/extensions": "off"
-        }
-      },
-      "_id": "debug@4.4.1",
-      "gitHead": "33330fa8616b9b33f29f7674747be77266878ba6",
-      "bugs": {
-        "url": "https://github.com/debug-js/debug/issues"
-      },
-      "_nodeVersion": "22.15.0",
-      "_npmVersion": "10.9.2",
-      "dist": {
-        "integrity": "sha512-KcKCqiftBJcZr++7ykoDIEwSa3XWowTfNPo92BYxjXiyYEVrUQh2aLyhxBCwww+heortUFxEJYcRzosstTEBYQ==",
-        "shasum": "e5a8bc6cbc4c6cd3e64308b0693a3d4fa550189b",
-        "tarball": "http://localhost:3000/debug/-/debug-4.4.1.tgz",
-        "fileCount": 7,
-        "unpackedSize": 42793,
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIFYe34T3MTMz7GUYtvascO8kejy1IQelEEiXvtCY7ZJzAiEA65tNrHJkzI1TkrE1u4sq8InCFcWUG4iblPW3GCW5Ni8="
-          }
-        ]
-      },
-      "directories": {},
-      "_hasShrinkwrap": false
+      }
     }
   },
   "time": {
     "created": "2011-11-29T01:11:23.618Z",
-    "modified": "2025-05-13T20:56:36.586Z",
+    "modified": "2025-09-13T17:25:19.913Z",
     "2.6.9": "2017-09-22T13:32:35.541Z",
-    "4.4.1": "2025-05-13T20:56:36.431Z"
+    "4.4.1": "2025-05-13T20:56:36.431Z",
+    "4.4.2": "2025-09-08T13:12:39.973Z"
   },
   "license": "MIT"
 }
