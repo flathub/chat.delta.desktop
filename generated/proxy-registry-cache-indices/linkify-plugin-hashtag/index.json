@@ -1,0 +1,57 @@
+{
+  "_id": "linkify-plugin-hashtag",
+  "_rev": "30-d6d6a7dc4e003b7c28ef6032a5ebcecc",
+  "name": "linkify-plugin-hashtag",
+  "dist-tags": {
+    "beta": "4.0.0-beta.6",
+    "latest": "4.3.2"
+  },
+  "versions": {
+    "4.3.2": {
+      "name": "linkify-plugin-hashtag",
+      "type": "module",
+      "version": "4.3.2",
+      "main": "dist/linkify-plugin-hashtag.cjs",
+      "module": "dist/linkify-plugin-hashtag.mjs",
+      "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "clean": "rm -rf lib dist *.tgz *.d.ts",
+        "prepack": "run-s clean build tsc",
+        "tsc": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/nfrasser/linkifyjs/issues"
+      },
+      "peerDependencies": {
+        "linkifyjs": "^4.0.0"
+      },
+      "_id": "linkify-plugin-hashtag@4.3.2",
+      "gitHead": "3abe9abbcb4e069aeadde2f42de7dfcc2371c0f0",
+      "_nodeVersion": "22.17.1",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-04geGSNuWTeMUJZdje0HvjZqN+cKbyKu1fV3R51TCNIjqnR+vXza5M5G/sBfL5WzOppVoas4XGoFCfv63oGglw==",
+        "shasum": "1e290e3e31b156d995beb46346089bdb94a202e3",
+        "tarball": "http://localhost:3000/linkify-plugin-hashtag/-/linkify-plugin-hashtag-4.3.2.tgz",
+        "fileCount": 9,
+        "unpackedSize": 8122,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIEMDyu4D4LMKXGkzSWP9k3ReiXFDUYFg/lGP9uu+WX23AiEA+4yLkz6yqMmtDqbbpt9KPVDSBZI5GyqIffligSKWlWU="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2021-09-15T02:57:57.413Z",
+    "modified": "2025-07-25T18:10:33.449Z",
+    "4.3.2": "2025-07-25T18:10:33.286Z"
+  },
+  "license": "MIT"
+}

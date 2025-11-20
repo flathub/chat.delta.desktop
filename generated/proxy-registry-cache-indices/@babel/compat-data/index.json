@@ -1,0 +1,62 @@
+{
+  "_id": "@babel/compat-data",
+  "_rev": "122-065679450aff415a96e63445aea92cea",
+  "name": "@babel/compat-data",
+  "dist-tags": {
+    "esm": "7.21.4-esm.4",
+    "latest": "7.28.5",
+    "next": "8.0.0-beta.3"
+  },
+  "versions": {
+    "7.28.4": {
+      "name": "@babel/compat-data",
+      "version": "7.28.4",
+      "license": "MIT",
+      "_id": "@babel/compat-data@7.28.4",
+      "dist": {
+        "shasum": "96fdf1af1b8859c8474ab39c295312bfb7c24b04",
+        "tarball": "http://localhost:3000/@babel/compat-data/-/compat-data-7.28.4.tgz",
+        "fileCount": 15,
+        "integrity": "sha512-YsmSKC29MJwf0gF8Rjjrg5LQCmyh+j/nD8/eP7f+BeoQTKYqs9RoWbjGOdy0+1Ekr68RJZMUOPVQaQisnIo4Rw==",
+        "signatures": [
+          {
+            "sig": "MEUCIDT4QFkzWRupWxAjEiqtZvzJJYpympMP+JoKpEWi9ZC8AiEAtFFMSi72an9bOHlS2OXY+KVviBgdhnu1OlR+JhGsN2I=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 67149
+      },
+      "type": "commonjs",
+      "engines": {
+        "node": ">=6.9.0"
+      },
+      "exports": {
+        "./plugins": "./plugins.js",
+        "./native-modules": "./native-modules.js",
+        "./plugin-bugfixes": "./plugin-bugfixes.js",
+        "./corejs2-built-ins": "./corejs2-built-ins.js",
+        "./overlapping-plugins": "./overlapping-plugins.js",
+        "./corejs3-shipped-proposals": "./corejs3-shipped-proposals.js"
+      },
+      "scripts": {
+        "build-data": "./scripts/download-compat-table.sh && node ./scripts/build-data.mjs && node ./scripts/build-modules-support.mjs && node ./scripts/build-bugfixes-targets.mjs"
+      },
+      "directories": {},
+      "publishConfig": {
+        "access": "public"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "core-js-compat": "^3.43.0",
+        "electron-to-chromium": "^1.5.140",
+        "@mdn/browser-compat-data": "^6.0.8"
+      }
+    }
+  },
+  "time": {
+    "created": "2020-01-12T00:15:55.066Z",
+    "modified": "2025-10-23T15:17:38.664Z",
+    "7.28.4": "2025-09-05T14:53:07.291Z"
+  },
+  "license": "MIT"
+}

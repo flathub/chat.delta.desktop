@@ -50,12 +50,68 @@
       },
       "directories": {},
       "_hasShrinkwrap": false
+    },
+    "9.0.1": {
+      "name": "get-stream",
+      "version": "9.0.1",
+      "license": "MIT",
+      "funding": "https://github.com/sponsors/sindresorhus",
+      "type": "module",
+      "exports": {
+        "types": "./source/index.d.ts",
+        "browser": "./source/exports.js",
+        "default": "./source/index.js"
+      },
+      "sideEffects": false,
+      "engines": {
+        "node": ">=18"
+      },
+      "scripts": {
+        "benchmark": "node benchmarks/index.js",
+        "test": "xo && ava && tsd --typings=source/index.d.ts --files=source/index.test-d.ts"
+      },
+      "dependencies": {
+        "@sec-ant/readable-stream": "^0.4.1",
+        "is-stream": "^4.0.1"
+      },
+      "devDependencies": {
+        "@types/node": "^20.8.9",
+        "ava": "^6.1.2",
+        "onetime": "^7.0.0",
+        "precise-now": "^3.0.0",
+        "stream-json": "^1.8.0",
+        "tsd": "^0.29.0",
+        "xo": "^0.58.0"
+      },
+      "gitHead": "83a78c0e4ff54e9b92ab73fc7008e99237a3e9d5",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/get-stream/issues"
+      },
+      "_id": "get-stream@9.0.1",
+      "_nodeVersion": "20.11.1",
+      "_npmVersion": "9.2.0",
+      "dist": {
+        "integrity": "sha512-kVCxPF3vQM/N0B1PmoqVUqgHP+EeVjmZSQn+1oCRPxd2P21P2F19lIgbR3HBosbB1PUhOAoctJnfEn2GbN2eZA==",
+        "shasum": "95157d21df8eb90d1647102b63039b1df60ebd27",
+        "tarball": "http://localhost:3000/get-stream/-/get-stream-9.0.1.tgz",
+        "fileCount": 13,
+        "unpackedSize": 28353,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCICtmALRCV8VTps6MN1oc/E64V8w1O7+HDihZAh8/DESzAiEAuUlHGoFJKO6eQ4NtZ9ISVYIMsA/wIoo7BnmMauNp1oE="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "modified": "2024-03-16T18:05:50.719Z",
     "created": "2015-10-14T17:28:21.024Z",
-    "5.2.0": "2020-08-09T21:06:37.591Z"
+    "5.2.0": "2020-08-09T21:06:37.591Z",
+    "9.0.1": "2024-03-16T18:05:50.308Z"
   },
   "license": "MIT"
 }

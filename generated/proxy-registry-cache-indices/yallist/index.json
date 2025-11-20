@@ -6,6 +6,47 @@
     "latest": "5.0.0"
   },
   "versions": {
+    "3.1.1": {
+      "name": "yallist",
+      "version": "3.1.1",
+      "main": "yallist.js",
+      "directories": {
+        "test": "test"
+      },
+      "dependencies": {},
+      "devDependencies": {
+        "tap": "^12.1.0"
+      },
+      "scripts": {
+        "test": "tap test/*.js --100",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "postpublish": "git push origin --all; git push origin --tags"
+      },
+      "license": "ISC",
+      "gitHead": "ab350a79eb94c80f7146662748a12b6fcd63729c",
+      "bugs": {
+        "url": "https://github.com/isaacs/yallist/issues"
+      },
+      "_id": "yallist@3.1.1",
+      "_nodeVersion": "12.8.1",
+      "_npmVersion": "6.12.0-next.0",
+      "dist": {
+        "integrity": "sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==",
+        "shasum": "dbb7daf9bfd8bac9ab45ebf602b8cbad0d5d08fd",
+        "tarball": "http://localhost:3000/yallist/-/yallist-3.1.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 14766,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdkmB2CRA9TVsSAnZWagAAWgoP/0j+iDVcsa3byazx3CgE\nm/aBzB3GflrXZAtMZ11Q/VfAa+gNDWDSJ2NOFmX/GxhKTm1zeyhl14WgDAZN\nE/DIF6bZkAbr01gz0k9Xa7/sMprHei90zQ6oNxmAONiiR0N1E7HRwN7Qu32C\nKMYGky23RxnXOmcX3Ij+dITQPNT/3525ehO0F7otC1b6AUwHybawJYSv7ILq\nR2x6w7X9RE9cizxLADzFM7PwXHic/20b8lgCnaA7P7qqSauVrlmdiaejmvAW\n+F6/S2QCfWGsXfLMkvJbBAjcX4+mWE90/gz/qC4+DXlDjRAJ2LCVKCcXsszk\nsz1mzU7FDfN3tp60kd0XtEQ6xuagICLxy+lit2maTcwVQSYiKko4T7aFAFr+\nYKwEsFl1+PcnSDqnuc9+6K9K7dYYqAL2/4L509joWusG6cGWdWGd0j5IGosG\naXKFW0zB54WRRbZTsNrfpy7f8wSlXZSMZyeC/n84rUKAx/HtPycBkoJTvFdD\nkIaCnm5orykEaT8JSAqqG9o5ndF4Cwba79DUzHPWZscSR43A34iWJGKb83QU\nRlNLkxo8mgAFMNdA808wr0tyh/bbm2d5q6ZCKnTmrlktPCBcsbi854ol9WAH\nir/yNg3bKNVGgvMLKm/qngACxszUnIOy0Fsi0I5eUGg392CNbgAf7myATWlY\nWXcr\r\n=gXWc\r\n-----END PGP SIGNATURE-----\r\n",
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCIQD4S0jeQXl5F21QIAwOE5yjXumczmgvEYzxql0ZH3+R2wIgNuJW5JkGMAXm598C9Bi+MvGe319f3bz2D1eR6wgDDpg="
+          }
+        ]
+      },
+      "_hasShrinkwrap": false
+    },
     "4.0.0": {
       "name": "yallist",
       "version": "4.0.0",
@@ -51,6 +92,7 @@
   "time": {
     "modified": "2024-04-09T19:21:45.008Z",
     "created": "2015-12-18T08:02:25.789Z",
+    "3.1.1": "2019-09-30T20:07:18.343Z",
     "4.0.0": "2019-09-30T20:08:08.970Z"
   },
   "license": "BlueOak-1.0.0"

@@ -1,37 +1,37 @@
 {
   "_id": "@eslint/object-schema",
-  "_rev": "5-2d5c0787367cc70679585a858c1f16d9",
+  "_rev": "6-52caa88d7818be4cb52f81d1154bb1d3",
   "name": "@eslint/object-schema",
   "dist-tags": {
-    "latest": "2.1.7"
+    "latest": "3.0.0"
   },
   "versions": {
-    "2.1.6": {
+    "2.1.7": {
       "name": "@eslint/object-schema",
-      "version": "2.1.6",
+      "version": "2.1.7",
       "license": "Apache-2.0",
-      "_id": "@eslint/object-schema@2.1.6",
+      "_id": "@eslint/object-schema@2.1.7",
       "bugs": {
         "url": "https://github.com/eslint/rewrite/issues"
       },
       "dist": {
-        "shasum": "58369ab5b5b3ca117880c0f6c0b0f32f6950f24f",
-        "tarball": "http://localhost:3000/@eslint/object-schema/-/object-schema-2.1.6.tgz",
+        "shasum": "6e2126a1347e86a4dedf8706ec67ff8e107ebbad",
+        "tarball": "http://localhost:3000/@eslint/object-schema/-/object-schema-2.1.7.tgz",
         "fileCount": 10,
-        "integrity": "sha512-RBMg5FRL0I0gs51M/guSAj5/e14VQ4tpZnQNWwuDT66P14I43ItmPfIZRhO9fUVIPOAQXU47atlywZ/czoqFPA==",
+        "integrity": "sha512-VtAOaymWVfZcmZbp6E2mympDIHvyjXs/12LqWYjVw6qjrfF+VK+fyG33kChz3nnK+SU5/NeHOqrTEHS8sXO3OA==",
         "signatures": [
           {
-            "sig": "MEUCIQDDMEh/N3HSCxrAbPFSoR+5b4AiJV0i+ekupaMB70CpMAIgHUnHk9TpbvgxmZMl9XVz8UxJTBtVNLKTewhnONDeCCk=",
+            "sig": "MEUCIQC9MSGz+rqqcZ8Jt+X0YYTypFSsIpolxO0taVnB0EFATgIgPgovImvpv96OpkgdFv32NaptCh02BEXFNuuLu01yzBg=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
         "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2fobject-schema@2.1.6",
+          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2fobject-schema@2.1.7",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "unpackedSize": 56960
+        "unpackedSize": 57521
       },
       "main": "dist/esm/index.js",
       "type": "module",
@@ -49,36 +49,34 @@
           "default": "./dist/cjs/index.cjs"
         }
       },
-      "gitHead": "e1cb6037bc237313dbf3f6a7b9f5cd3c3105b668",
+      "gitHead": "df12d9a67c9fdf7959ae79bd2f49462656d474f5",
       "scripts": {
-        "test": "mocha tests/",
-        "build": "rollup -c && tsc -p tsconfig.esm.json && npm run build:cts",
+        "test": "mocha \"tests/**/*.test.js\"",
+        "build": "rollup -c && npm run build:dedupe-types && tsc -p tsconfig.esm.json && npm run build:cts",
         "test:jsr": "npx jsr@latest publish --dry-run",
         "build:cts": "node ../../tools/build-cts.js dist/esm/index.d.ts dist/cjs/index.d.cts",
-        "test:coverage": "c8 npm test"
+        "test:types": "tsc -p tests/types/tsconfig.json",
+        "test:coverage": "c8 npm test",
+        "build:dedupe-types": "node ../../tools/dedupe-types.js dist/cjs/index.cjs dist/esm/index.js"
       },
-      "_npmVersion": "10.9.2",
+      "_npmVersion": "11.6.2",
       "directories": {
         "test": "tests"
       },
-      "_nodeVersion": "22.13.1",
+      "_nodeVersion": "22.20.0",
       "publishConfig": {
         "access": "public"
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "c8": "^9.1.0",
-        "mocha": "^10.4.0",
-        "rollup": "^4.16.2",
-        "typescript": "^5.4.5",
         "rollup-plugin-copy": "^3.5.0"
       }
     }
   },
   "time": {
     "created": "2024-05-30T20:40:22.953Z",
-    "modified": "2025-10-17T17:58:13.013Z",
-    "2.1.6": "2025-01-31T17:22:46.772Z"
+    "modified": "2025-11-14T16:30:15.550Z",
+    "2.1.7": "2025-10-17T17:58:12.617Z"
   },
   "license": "Apache-2.0"
 }

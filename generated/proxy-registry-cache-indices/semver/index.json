@@ -196,6 +196,95 @@
         "@npmcli/template-oss": "4.24.3",
         "@npmcli/eslint-config": "^5.0.0"
       }
+    },
+    "7.7.3": {
+      "name": "semver",
+      "version": "7.7.3",
+      "main": "index.js",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "lint": "npm run eslint",
+        "postlint": "template-oss-check",
+        "lintfix": "npm run eslint -- --fix",
+        "posttest": "npm run lint",
+        "template-oss-apply": "template-oss-apply --force",
+        "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\""
+      },
+      "devDependencies": {
+        "@npmcli/eslint-config": "^5.0.0",
+        "@npmcli/template-oss": "4.25.1",
+        "benchmark": "^2.1.4",
+        "tap": "^16.0.0"
+      },
+      "license": "ISC",
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "tap": {
+        "timeout": 30,
+        "coverage-map": "map.js",
+        "nyc-arg": [
+          "--exclude",
+          "tap-snapshots/**"
+        ]
+      },
+      "engines": {
+        "node": ">=10"
+      },
+      "templateOSS": {
+        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten.",
+        "version": "4.25.1",
+        "engines": ">=10",
+        "distPaths": [
+          "classes/",
+          "functions/",
+          "internal/",
+          "ranges/",
+          "index.js",
+          "preload.js",
+          "range.bnf"
+        ],
+        "allowPaths": [
+          "/classes/",
+          "/functions/",
+          "/internal/",
+          "/ranges/",
+          "/index.js",
+          "/preload.js",
+          "/range.bnf",
+          "/benchmarks"
+        ],
+        "publish": "true"
+      },
+      "gitHead": "a25789b09b1192fa8414c35f2cd679ae2e1d5192",
+      "_id": "semver@7.7.3",
+      "bugs": {
+        "url": "https://github.com/npm/node-semver/issues"
+      },
+      "_nodeVersion": "22.20.0",
+      "_npmVersion": "11.6.1",
+      "dist": {
+        "integrity": "sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==",
+        "shasum": "4b5f4143d007633a8dc671cd0a6ef9147b8bb946",
+        "tarball": "http://localhost:3000/semver/-/semver-7.7.3.tgz",
+        "fileCount": 52,
+        "unpackedSize": 97743,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/semver@7.7.3",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQC2oa88J/9uGfBIY98gMy/EdY2832VsrpR/G7EknFnwsgIhAPWQz6wJ57f6RBFzwoXuBpigVjXf8aXBttN4AVZPdBNe"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
@@ -203,7 +292,8 @@
     "modified": "2025-10-07T18:00:52.105Z",
     "5.7.2": "2023-07-10T19:57:47.111Z",
     "6.3.1": "2023-07-10T22:38:41.428Z",
-    "7.7.2": "2025-05-12T17:02:28.372Z"
+    "7.7.2": "2025-05-12T17:02:28.372Z",
+    "7.7.3": "2025-10-07T18:00:51.643Z"
   },
   "license": "ISC"
 }

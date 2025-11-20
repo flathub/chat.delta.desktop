@@ -1,0 +1,112 @@
+{
+  "_id": "zod-validation-error",
+  "_rev": "51-c0bb9cdf93d43944654837bee86eb1b6",
+  "name": "zod-validation-error",
+  "dist-tags": {
+    "beta": "4.0.0-beta.2",
+    "latest": "5.0.0"
+  },
+  "versions": {
+    "4.0.2": {
+      "name": "zod-validation-error",
+      "version": "4.0.2",
+      "license": "MIT",
+      "_id": "zod-validation-error@4.0.2",
+      "bugs": {
+        "url": "https://github.com/causaly/zod-validation-error/issues"
+      },
+      "dist": {
+        "shasum": "bc605eba49ce0fcd598c127fee1c236be3f22918",
+        "tarball": "http://localhost:3000/zod-validation-error/-/zod-validation-error-4.0.2.tgz",
+        "fileCount": 16,
+        "integrity": "sha512-Q6/nZLe6jxuU80qb/4uJ4t5v2VEZ44lzQjPDhYJNztRQ4wyWc6VF3D3Kb/fAuPetZQnhS3hnajCf9CsWesghLQ==",
+        "signatures": [
+          {
+            "sig": "MEYCIQDlckdwFl/3STRqTk96l/2+w88L1KWeXUbV4tP6Bm8JOgIhAP6qezB7KXQE6vpAM1+usMKZgZYNLWigWFItOHyxlYph",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 229522
+      },
+      "main": "./v4/index.js",
+      "types": "./v4/index.d.ts",
+      "module": "./v4/index.mjs",
+      "engines": {
+        "node": ">=18.0.0"
+      },
+      "exports": {
+        ".": {
+          "types": "./v4/index.d.ts",
+          "import": "./v4/index.mjs",
+          "require": "./v4/index.js"
+        },
+        "./v3": {
+          "types": "./v3/index.d.ts",
+          "import": "./v3/index.mjs",
+          "require": "./v3/index.js"
+        },
+        "./v4": {
+          "types": "./v4/index.d.ts",
+          "import": "./v4/index.mjs",
+          "require": "./v4/index.js"
+        }
+      },
+      "gitHead": "734ae0cf7300ff2ed18c80ebff324635c4cfdca2",
+      "scripts": {
+        "lint": "eslint lib --ext .ts",
+        "test": "vitest run",
+        "build": "tsup --config ./tsup.config.ts",
+        "format": "prettier --config ./.prettierrc --ignore-path .gitignore -w .",
+        "prepare": "husky",
+        "release": "changeset publish",
+        "changeset": "changeset",
+        "typecheck": "tsc --noEmit",
+        "prerelease": "npm run build && npm run test"
+      },
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+          "eslint --fix",
+          "prettier --config ./.prettierrc.json --write"
+        ]
+      },
+      "sideEffects": false,
+      "_nodeVersion": "20.19.5",
+      "publishConfig": {
+        "access": "public"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "zod": "^4.0.2",
+        "tsup": "^8.0.2",
+        "husky": "^9.1.7",
+        "eslint": "^8.4.1",
+        "vitest": "^3.1.2",
+        "prettier": "^2.8.8",
+        "typescript": "^5.1.6",
+        "@types/node": "^20.5.0",
+        "lint-staged": "^15.0.1",
+        "concurrently": "^8.2.0",
+        "@changesets/cli": "^2.27.7",
+        "@commitlint/cli": "^18.0.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "@typescript-eslint/parser": "^6.4.1",
+        "@changesets/changelog-github": "^0.5.0",
+        "@commitlint/config-conventional": "^18.0.0",
+        "@typescript-eslint/eslint-plugin": "^6.4.1"
+      },
+      "peerDependencies": {
+        "zod": "^3.25.0 || ^4.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2022-08-30T12:57:41.760Z",
+    "modified": "2025-11-03T11:11:53.865Z",
+    "4.0.2": "2025-09-19T07:40:57.236Z"
+  },
+  "license": "MIT"
+}
