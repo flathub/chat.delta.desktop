@@ -1,0 +1,58 @@
+{
+  "_id": "electron-to-chromium",
+  "_rev": "2016-8a410497b8740822cc540929fef7179b",
+  "name": "electron-to-chromium",
+  "dist-tags": {
+    "latest": "1.5.259"
+  },
+  "versions": {
+    "1.5.237": {
+      "name": "electron-to-chromium",
+      "version": "1.5.237",
+      "license": "ISC",
+      "_id": "electron-to-chromium@1.5.237",
+      "bugs": {
+        "url": "https://github.com/kilian/electron-to-chromium/issues"
+      },
+      "dist": {
+        "shasum": "eacf61cef3f6345d0069ab427585c5a04d7084f0",
+        "tarball": "http://localhost:3000/electron-to-chromium/-/electron-to-chromium-1.5.237.tgz",
+        "fileCount": 12,
+        "integrity": "sha512-icUt1NvfhGLar5lSWH3tHNzablaA5js3HVHacQimfP8ViEBOQv+L7DKEuHdbTZ0SKCO1ogTJTIL1Gwk9S6Qvcg==",
+        "signatures": [
+          {
+            "sig": "MEUCIQC9dd4JsWT95Ac01xD0kZFuoMTSJ5yXEin5sx+RLAJdmgIgXV5+1c3rpn7RUYYcA5TvRlc9t9OGwEHmwS4PmeegKV4=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 175252
+      },
+      "main": "index.js",
+      "gitHead": "63e9b8dbfde1ac756ff5b3b78cdfa0fb4ccb45c1",
+      "scripts": {
+        "test": "nyc ava --verbose",
+        "build": "node build.mjs",
+        "report": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+        "update": "node automated-update.js"
+      },
+      "_npmVersion": "8.19.4",
+      "directories": {},
+      "_nodeVersion": "16.20.2",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "ava": "^5.1.1",
+        "nyc": "^15.1.0",
+        "codecov": "^3.8.2",
+        "shelljs": "^0.8.5",
+        "node-fetch": "^3.3.0",
+        "compare-versions": "^6.0.0-rc.1"
+      }
+    }
+  },
+  "time": {
+    "created": "2017-01-15T16:40:50.100Z",
+    "modified": "2025-11-20T23:02:27.299Z",
+    "1.5.237": "2025-10-15T06:02:24.631Z"
+  },
+  "license": "ISC"
+}

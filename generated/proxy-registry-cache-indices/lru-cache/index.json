@@ -16,6 +16,50 @@
     "latest": "11.2.2"
   },
   "versions": {
+    "5.1.1": {
+      "name": "lru-cache",
+      "version": "5.1.1",
+      "license": "ISC",
+      "_id": "lru-cache@5.1.1",
+      "bugs": {
+        "url": "https://github.com/isaacs/node-lru-cache/issues"
+      },
+      "dist": {
+        "shasum": "1da27e6710271947695daf6848e847f01d84b920",
+        "tarball": "http://localhost:3000/lru-cache/-/lru-cache-5.1.1.tgz",
+        "fileCount": 4,
+        "integrity": "sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==",
+        "signatures": [
+          {
+            "sig": "MEUCIBILagLs1MuDQ/Y7qp8O9PXXdLhCeOk8J5ujwiwVsYLkAiEA5cMZ+LEnDglkeaNzSKY8MvrgqE/zh7RfVclS6y/+0dE=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 15714,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJb9LiOCRA9TVsSAnZWagAANvIP/iNd0BQp0dzx3440jk/D\nQK4yzdNKtv688NqB4JXeoMaA7945hmh96AvrDqeVYd74kp28R8KZ+yln3TCA\nlOqzraf2kwT2giu63CMfACQMBH8u5BjRThEuHdY+S3exJsnkRisoDhyS/7DJ\n0I4gVdRy8LMfwO+UiTkSysmOTb9Kz4BbNvCCUyyB9824oXuqECKibJoaEeTn\nn6O0JuFfQUygt9di18iozjq3CmO31pq3Dht90sTb0pLmChCMgg4m3dcg6g2H\n8CCO7/bHg76TtrC8eb1lkJlb2im0PjZN3OYJ0vY0aKQW6P79V18Rp0UGgK3x\noO7hZ2xiPlgug40kBGziPeYsPwpwjiMMDhnExkkSQarxf6NtuJ/Sj0+tTWza\nOXreTmMwt9MmWvbhVDD81svZ2YgZb5VfQzsRyE2WRVIJZwxhaQ4x8dlJSq+p\n3JL4K9qkcPPPWV+JJNDdcSTQVuw0deiUOsqSRMZD8nXvvN98/ugTf9rCvaev\nF+YyxIi+5hYqNYO37tG6WXTU5ADFqb1lf/7agpIAzF0pyuHkUEilk707+f/a\n0vZ+sCp9o7hHRpelJjHl6Cy6DrxE92SyHHHZ8rZmwupPkAS13lyWIRuqqBel\nJKtTxc9SxgxgwWJnLz1uW99gjzLMcXA/wN28oamaKtFpuwlt608NY9CES/Hq\n30nI\r\n=Zq/B\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "main": "index.js",
+      "gitHead": "a71be6cd547d28b24d28957a15b10cd3eb34555a",
+      "scripts": {
+        "snap": "TAP_SNAPSHOT=1 tap test/*.js -J",
+        "test": "tap test/*.js --100 -J",
+        "preversion": "npm test",
+        "postpublish": "git push origin --all; git push origin --tags",
+        "postversion": "npm publish",
+        "coveragerport": "tap --coverage-report=html"
+      },
+      "_npmVersion": "6.4.1",
+      "directories": {},
+      "_nodeVersion": "10.12.0",
+      "dependencies": {
+        "yallist": "^3.0.2"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^12.1.0",
+        "benchmark": "^2.1.4"
+      }
+    },
     "6.0.0": {
       "name": "lru-cache",
       "version": "6.0.0",
@@ -62,11 +106,11 @@
         "benchmark": "^2.1.4"
       }
     },
-    "10.2.2": {
+    "10.4.3": {
       "name": "lru-cache",
-      "version": "10.2.2",
+      "version": "10.4.3",
       "license": "ISC",
-      "_id": "lru-cache@10.2.2",
+      "_id": "lru-cache@10.4.3",
       "bugs": {
         "url": "https://github.com/isaacs/node-lru-cache/issues"
       },
@@ -79,17 +123,17 @@
         ]
       },
       "dist": {
-        "shasum": "48206bc114c1252940c41b25b41af5b545aca878",
-        "tarball": "http://localhost:3000/lru-cache/-/lru-cache-10.2.2.tgz",
+        "shasum": "410fc8a17b70e598013df257c2446b7f3383f119",
+        "tarball": "http://localhost:3000/lru-cache/-/lru-cache-10.4.3.tgz",
         "fileCount": 17,
-        "integrity": "sha512-9hp3Vp2/hFQUiIwKo8XCeFVnrg8Pk3TYNPIR7tJADKi5YfcF7vEaK7avFHTlSy3kOKYaJQaalfEo6YuXdceBOQ==",
+        "integrity": "sha512-JNAzZcXrCt42VGLuYz0zfAzDfAvJWW6AfYlDBQyDV5DClI2m5sAmK+OIO7s59XfsRsWHp02jAJrRadPRGTt6SQ==",
         "signatures": [
           {
-            "sig": "MEUCIQDCOKdVYZDOWLh8ED6nh26KEkI9MidI4WnRCkwWgX/lKgIgd0af8I+SONpDVFSncky5FNSmFrArIqVs6rI8TckNPiA=",
+            "sig": "MEUCIQDE9j3XqgM58+QJC4D3liZT4PFtynHR8pJJQEU7KGW1kAIgWdnTxB1ZZ9Omsiz583CKbQddaJjNP9Tdg9ZkvJ/5Ttg=",
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
         ],
-        "unpackedSize": 680860
+        "unpackedSize": 804301
       },
       "main": "./dist/commonjs/index.js",
       "tshy": {
@@ -109,9 +153,7 @@
       },
       "type": "module",
       "types": "./dist/commonjs/index.d.ts",
-      "engines": {
-        "node": "14 || >=16.14"
-      },
+      "module": "./dist/esm/index.js",
       "exports": {
         ".": {
           "import": {
@@ -134,7 +176,7 @@
           }
         }
       },
-      "gitHead": "150764920a2798df362811ced8dc20041e35b7ee",
+      "gitHead": "228d71964978ad71a7dcea664c494468c780b956",
       "scripts": {
         "snap": "tap",
         "test": "tap",
@@ -164,14 +206,18 @@
         "jsxSingleQuote": false,
         "bracketSameLine": true
       },
-      "_npmVersion": "10.5.1",
+      "_npmVersion": "10.7.0",
       "directories": {},
       "sideEffects": false,
-      "_nodeVersion": "20.11.0",
+      "_nodeVersion": "20.13.1",
+      "publishConfig": {
+        "tag": "legacy-v10"
+      },
       "_hasShrinkwrap": false,
+      "readmeFilename": "README.md",
       "devDependencies": {
-        "tap": "^18.5.7",
-        "tshy": "^1.8.0",
+        "tap": "^20.0.3",
+        "tshy": "^2.0.0",
         "tslib": "^2.4.0",
         "marked": "^4.2.12",
         "mkdirp": "^2.1.5",
@@ -180,10 +226,8 @@
         "prettier": "^2.6.2",
         "benchmark": "^2.1.4",
         "@types/tap": "^15.0.6",
-        "clock-mock": "^2.0.2",
         "typescript": "^5.2.2",
         "@types/node": "^20.2.5",
-        "@tapjs/clock": "^1.1.16",
         "eslint-config-prettier": "^8.5.0"
       }
     }
@@ -191,8 +235,9 @@
   "time": {
     "created": "2011-07-16T09:09:00.041Z",
     "modified": "2025-09-23T17:02:13.772Z",
+    "5.1.1": "2018-11-21T01:44:45.407Z",
     "6.0.0": "2020-07-11T00:59:07.352Z",
-    "10.2.2": "2024-04-28T22:19:27.837Z"
+    "10.4.3": "2024-07-09T17:20:52.211Z"
   },
   "license": "ISC"
 }

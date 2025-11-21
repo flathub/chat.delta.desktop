@@ -1,19 +1,19 @@
 {
   "_id": "eslint",
-  "_rev": "924-2baccfa70debef1469b1fb4dfd4e167b",
+  "_rev": "927-41af6acfb772250dc6df178c9b7f48f3",
   "name": "eslint",
   "dist-tags": {
     "es6jsx": "0.11.0-alpha.0",
-    "next": "9.0.0-rc.0",
+    "next": "10.0.0-alpha.0",
     "maintenance": "8.57.1",
-    "latest": "9.38.0"
+    "latest": "9.39.1"
   },
   "versions": {
-    "9.34.0": {
+    "9.39.0": {
       "name": "eslint",
-      "version": "9.34.0",
+      "version": "9.39.0",
       "license": "MIT",
-      "_id": "eslint@9.34.0",
+      "_id": "eslint@9.39.0",
       "bugs": {
         "url": "https://github.com/eslint/eslint/issues/"
       },
@@ -21,17 +21,17 @@
         "eslint": "bin/eslint.js"
       },
       "dist": {
-        "shasum": "0ea1f2c1b5d1671db8f01aa6b8ce722302016f7b",
-        "tarball": "http://localhost:3000/eslint/-/eslint-9.34.0.tgz",
-        "fileCount": 425,
-        "integrity": "sha512-RNCHRX5EwdrESy3Jc9o8ie8Bog+PeYvvSR8sDGoZxNFTvZ4dlxUB3WzQ3bQMztFrSRODGrLLj8g6OFuGY/aiQg==",
+        "shasum": "33c90ddf62b64e1e3f83b689934b336f21b5f0e5",
+        "tarball": "http://localhost:3000/eslint/-/eslint-9.39.0.tgz",
+        "fileCount": 426,
+        "integrity": "sha512-iy2GE3MHrYTL5lrCtMZ0X1KLEKKUjmK0kzwcnefhR66txcEmXZD2YWgR5GNdcEwkNx3a0siYkSvl0vIC+Svjmg==",
         "signatures": [
           {
-            "sig": "MEQCIHghEvqtGAQlbq+PBnUsufvDesxvUxLtfVI1YJ7hmSyWAiABO2lvllGktFSXXzwiJap7GzoAj+6FPe8C1+PO5VHx+A==",
+            "sig": "MEUCIQDJfkWHu9/eQiDgVbCKcUFeI40XKqeEU5+RQvAdn+WAuQIgCgHToUguo92yfx710vkBV8S5r3mdM+2SBmKkcLSugCQ=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 2985600
+        "unpackedSize": 2993043
       },
       "main": "./lib/api.js",
       "type": "commonjs",
@@ -62,13 +62,14 @@
         }
       },
       "funding": "https://eslint.org/donate",
-      "gitHead": "b8875f67a7bc99824f19147f4a669be7e98f3eee",
+      "gitHead": "ac3a60dffc29d8d4d5031621bc062e77f891532a",
       "scripts": {
         "lint": "trunk check --no-fix --ignore=docs/**/*.js -a --filter=eslint && trunk check --no-fix --ignore=docs/**/*.js",
         "test": "node Makefile.js test",
         "lint:fix": "trunk check -y --ignore=docs/**/*.js -a --filter=eslint && trunk check -y --ignore=docs/**/*.js",
         "test:cli": "mocha",
         "test:fuzz": "node Makefile.js fuzz",
+        "test:pnpm": "cd tests/pnpm && node check.js && pnpm install && pnpm exec tsc",
         "build:site": "node Makefile.js gensite",
         "lint:types": "attw --pack",
         "test:types": "tsc -p tests/lib/types/tsconfig.json",
@@ -100,8 +101,9 @@
         "*": "trunk check --fix",
         "lib/rules/*.js": [
           "node tools/update-eslint-all.js",
+          "node tools/update-eslint-recommended.js",
           "node tools/update-rule-type-headers.js",
-          "git add packages/js/src/configs/eslint-all.js lib/types/rules.d.ts"
+          "git add packages/js/src/configs/*.js lib/types/rules.d.ts"
         ],
         "docs/src/rules/*.md": [
           "node tools/check-rule-examples.js",
@@ -121,12 +123,12 @@
         "find-up": "^5.0.0",
         "is-glob": "^4.0.0",
         "minimatch": "^3.1.2",
-        "@eslint/js": "9.34.0",
+        "@eslint/js": "9.39.0",
         "optionator": "^0.9.3",
         "cross-spawn": "^7.0.6",
         "glob-parent": "^6.0.2",
         "imurmurhash": "^0.1.4",
-        "@eslint/core": "^0.15.2",
+        "@eslint/core": "^0.17.0",
         "eslint-scope": "^8.4.0",
         "lodash.merge": "^4.6.2",
         "@humanfs/node": "^0.16.6",
@@ -135,15 +137,14 @@
         "natural-compare": "^1.4.0",
         "@eslint/eslintrc": "^3.3.1",
         "file-entry-cache": "^8.0.0",
-        "@eslint/plugin-kit": "^0.3.5",
-        "@types/json-schema": "^7.0.15",
+        "@eslint/plugin-kit": "^0.4.1",
         "eslint-visitor-keys": "^4.2.1",
-        "@eslint/config-array": "^0.21.0",
+        "@eslint/config-array": "^0.21.1",
         "@humanwhocodes/retry": "^0.4.2",
         "escape-string-regexp": "^4.0.0",
-        "@eslint/config-helpers": "^0.3.1",
+        "@eslint/config-helpers": "^0.4.2",
         "@eslint-community/regexpp": "^4.12.1",
-        "@eslint-community/eslint-utils": "^4.2.0",
+        "@eslint-community/eslint-utils": "^4.8.0",
         "@humanwhocodes/module-importer": "^1.0.1",
         "json-stable-stringify-without-jsonify": "^1.0.1"
       },
@@ -170,7 +171,7 @@
         "got": "^11.8.3",
         "chai": "^4.0.1",
         "glob": "^10.0.0",
-        "jiti": "^2.5.1",
+        "jiti": "^2.6.1",
         "knip": "^5.60.2",
         "mocha": "^11.7.1",
         "sinon": "^11.0.0",
@@ -204,7 +205,7 @@
         "metascraper": "^5.25.7",
         "npm-license": "^0.3.3",
         "webpack-cli": "^4.5.0",
-        "@eslint/json": "^0.13.0",
+        "@eslint/json": "^0.13.2",
         "babel-loader": "^8.0.5",
         "@types/esquery": "^1.5.4",
         "eslint-release": "^3.3.0",
@@ -239,9 +240,9 @@
   },
   "time": {
     "created": "2013-07-04T17:01:29.347Z",
-    "modified": "2025-10-17T18:49:42.748Z",
+    "modified": "2025-11-14T20:08:14.304Z",
     "0.7.0": "2014-05-23T21:21:04.170Z",
-    "9.34.0": "2025-08-22T20:39:49.318Z"
+    "9.39.0": "2025-10-31T20:30:15.827Z"
   },
   "license": "MIT"
 }

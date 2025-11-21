@@ -1,60 +1,60 @@
 {
   "_id": "sax",
-  "_rev": "152-252c67c730c62e92ac81d30d71fe3e9b",
+  "_rev": "155-60b2f601b2df865537f9750718c8b7a2",
   "name": "sax",
   "dist-tags": {
-    "latest": "1.4.1",
-    "false": "0.4.0"
+    "false": "0.4.0",
+    "latest": "1.4.3"
   },
   "versions": {
     "1.4.1": {
       "name": "sax",
       "version": "1.4.1",
-      "main": "lib/sax.js",
       "license": "ISC",
-      "scripts": {
-        "test": "tap test/*.js --cov -j4",
-        "preversion": "npm test",
-        "postversion": "npm publish",
-        "postpublish": "git push origin --all; git push origin --tags"
-      },
-      "devDependencies": {
-        "tap": "^15.1.6"
-      },
-      "tap": {
-        "statements": 79,
-        "branches": 75,
-        "functions": 80,
-        "lines": 79
-      },
       "_id": "sax@1.4.1",
-      "gitHead": "25ab118a3184d2070495e7eecf2e762f9044442c",
       "bugs": {
         "url": "https://github.com/isaacs/sax-js/issues"
       },
-      "_nodeVersion": "20.13.1",
-      "_npmVersion": "10.7.0",
+      "tap": {
+        "lines": 79,
+        "branches": 75,
+        "functions": 80,
+        "statements": 79
+      },
       "dist": {
-        "integrity": "sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==",
         "shasum": "44cc8988377f126304d3b3fc1010c733b929ef0f",
         "tarball": "http://localhost:3000/sax/-/sax-1.4.1.tgz",
         "fileCount": 4,
-        "unpackedSize": 56017,
+        "integrity": "sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==",
         "signatures": [
           {
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-            "sig": "MEQCIF6wMIS1WmHqWNHm1XzUplDOkDjhFLBfYMSdoODtCREwAiAa+iWClIL0cds4JQEYXxkQvtN3UBm15tAuad7xmLt+CA=="
+            "sig": "MEQCIF6wMIS1WmHqWNHm1XzUplDOkDjhFLBfYMSdoODtCREwAiAa+iWClIL0cds4JQEYXxkQvtN3UBm15tAuad7xmLt+CA==",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
-        ]
+        ],
+        "unpackedSize": 56017
       },
+      "main": "lib/sax.js",
+      "gitHead": "25ab118a3184d2070495e7eecf2e762f9044442c",
+      "scripts": {
+        "test": "tap test/*.js --cov -j4",
+        "preversion": "npm test",
+        "postpublish": "git push origin --all; git push origin --tags",
+        "postversion": "npm publish"
+      },
+      "_npmVersion": "10.7.0",
       "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "20.13.1",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^15.1.6"
+      }
     }
   },
   "time": {
-    "modified": "2024-05-27T23:46:17.599Z",
     "created": "2011-02-09T19:13:51.969Z",
+    "modified": "2025-11-04T16:34:34.200Z",
     "1.4.1": "2024-05-27T23:46:17.431Z"
   },
-  "license": "ISC"
+  "license": "BlueOak-1.0.0"
 }

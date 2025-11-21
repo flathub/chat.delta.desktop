@@ -1,0 +1,98 @@
+{
+  "_id": "baseline-browser-mapping",
+  "_rev": "99-31e8e86575cef2b89fd34acf81839f66",
+  "name": "baseline-browser-mapping",
+  "dist-tags": {
+    "beta": "2.8.4-beta5",
+    "latest": "2.8.30"
+  },
+  "versions": {
+    "2.8.17": {
+      "name": "baseline-browser-mapping",
+      "version": "2.8.17",
+      "license": "Apache-2.0",
+      "_id": "baseline-browser-mapping@2.8.17",
+      "bugs": {
+        "url": "https://github.com/web-platform-dx/baseline-browser-mapping/issues"
+      },
+      "bin": {
+        "baseline-browser-mapping": "dist/cli.js"
+      },
+      "dist": {
+        "shasum": "85aff3f7dd6326ea25b77ce834b96bb698545dc6",
+        "tarball": "http://localhost:3000/baseline-browser-mapping/-/baseline-browser-mapping-2.8.17.tgz",
+        "fileCount": 7,
+        "integrity": "sha512-j5zJcx6golJYTG6c05LUZ3Z8Gi+M62zRT/ycz4Xq4iCOdpcxwg7ngEYD4KA0eWZC7U17qh/Smq8bYbACJ0ipBA==",
+        "signatures": [
+          {
+            "sig": "MEUCIHwC2zNd+WWrLz0400SMtTICwlYYfEXInx4GYRDkt2ZGAiEAjkYfosZf/vj2rWoHbKjDUQrk2gZSdak2fVf4NpDXxD4=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/baseline-browser-mapping@2.8.17",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 266582
+      },
+      "main": "./dist/index.cjs",
+      "type": "module",
+      "types": "./dist/index.d.ts",
+      "exports": {
+        ".": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js",
+          "require": "./dist/index.cjs"
+        },
+        "./legacy": {
+          "types": "./dist/index.d.ts",
+          "require": "./dist/index.cjs"
+        }
+      },
+      "gitHead": "ddb30402727f7facbd0a717c2e38caddc87cf24e",
+      "scripts": {
+        "test": "npm run build && npm run fix-cli-permissions && rm -rf test-browserslist test-bcb && npm run test:format && npm run test:lint && npx jasmine && npm run test:browserslist && npm run test:bcb",
+        "build": "rm -rf dist; npx prettier . --write; rollup -c; rm -rf ./dist/scripts/expose-data.d.ts ./dist/cli.d.ts",
+        "test:bcb": "mkdir test-bcb && cd test-bcb && npm init -y && npm i ../../baseline-browser-mapping browserslist browserslist-config-baseline &&jq '. += {\"browserslist\":[\"extends browserslist-config-baseline\"]}' package.json >p && mv p package.json && npx browserslist && cd ../ && rm -rf test-bcb",
+        "test:lint": "npx eslint .",
+        "test:format": "npx prettier --check .",
+        "test:jasmine": "npx jasmine",
+        "refresh-static": "npx tsx scripts/refresh-static.ts",
+        "update-data-file": "npx tsx scripts/update-data-file.ts; npx prettier ./src/data/data.js --write",
+        "test:browserslist": "mkdir test-browserslist && cd test-browserslist && npm init -y && npm i ../../baseline-browser-mapping browserslist &&jq '. += {\"browserslist\":[\"baseline widely available with downstream\"]}' package.json >p && mv p package.json && npx browserslist && cd ../ && rm -rf test-browserslist",
+        "check-data-changes": "git diff --name-only | grep -q '^src/data/data.js$' && echo 'changes-available=TRUE' || echo 'changes-available=FALSE'",
+        "refresh-downstream": "npx tsx scripts/refresh-downstream.ts",
+        "fix-cli-permissions": "output=$(npx baseline-browser-mapping 2>&1); path=$(printf '%s\n' \"$output\" | sed -n 's/^sh: \\(.*\\): Permission denied$/\\1/p'); if [ -n \"$path\" ]; then echo \"Permission denied for: $path\"; echo \"Removing $path ...\"; rm -rf \"$path\"; else echo \"$output\"; fi",
+        "update-data-dependencies": "npm i @mdn/browser-compat-data@latest web-features@latest -D"
+      },
+      "jsdelivr": "./dist/index.js",
+      "_npmVersion": "10.9.3",
+      "directories": {},
+      "_nodeVersion": "22.20.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tslib": "^2.8.1",
+        "rollup": "^4.44.0",
+        "jasmine": "^5.8.0",
+        "prettier": "^3.5.3",
+        "typescript": "^5.7.2",
+        "@types/node": "^22.15.17",
+        "web-features": "^3.5.0",
+        "typescript-eslint": "^8.35.0",
+        "@rollup/plugin-terser": "^0.4.4",
+        "jasmine-spec-reporter": "^7.0.0",
+        "@mdn/browser-compat-data": "^7.1.13",
+        "@rollup/plugin-typescript": "^12.1.3",
+        "eslint-plugin-new-with-error": "^5.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2024-11-29T10:34:28.533Z",
+    "modified": "2025-11-20T14:10:35.637Z",
+    "2.8.17": "2025-10-16T14:10:50.285Z"
+  },
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,156 @@
+{
+  "_id": "zod",
+  "_rev": "812-cfe7e58dd8632247bd1e2c887cc11266",
+  "name": "zod",
+  "dist-tags": {
+    "next": "3.25.0-beta.20250519T094321",
+    "alpha": "3.25.68-alpha.11",
+    "latest": "4.1.12",
+    "beta": "4.1.13-beta.0",
+    "canary": "4.2.0-canary.20251118T192410"
+  },
+  "versions": {
+    "4.1.12": {
+      "name": "zod",
+      "version": "4.1.12",
+      "license": "MIT",
+      "_id": "zod@4.1.12",
+      "bugs": {
+        "url": "https://github.com/colinhacks/zod/issues"
+      },
+      "dist": {
+        "shasum": "64f1ea53d00eab91853195653b5af9eee68970f0",
+        "tarball": "http://localhost:3000/zod/-/zod-4.1.12.tgz",
+        "fileCount": 656,
+        "integrity": "sha512-JInaHOamG8pt5+Ey8kGmdcAcg3OL9reK8ltczgHTAwNhMys/6ThXHityHxVV2p3fkw/c+MAvBHFVYHFZDmjMCQ==",
+        "signatures": [
+          {
+            "sig": "MEYCIQDUIPNNplTET0JM8r5WqeDaLidvoIAqDM09PpoqPifltwIhAITCScJPZS1shb3bmuhz6A9TuT9rroLQhgdiKOHIAvIO",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/zod@4.1.12",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 3957745
+      },
+      "llms": "https://zod.dev/llms.txt",
+      "main": "./index.cjs",
+      "type": "module",
+      "zshy": {
+        "exports": {
+          ".": "./src/index.ts",
+          "./v3": "./src/v3/index.ts",
+          "./v4": "./src/v4/index.ts",
+          "./mini": "./src/mini/index.ts",
+          "./locales": "./src/locales/index.ts",
+          "./v4-mini": "./src/v4-mini/index.ts",
+          "./v4/core": "./src/v4/core/index.ts",
+          "./v4/mini": "./src/v4/mini/index.ts",
+          "./v4/locales": "./src/v4/locales/index.ts",
+          "./package.json": "./package.json",
+          "./v4/locales/*": "./src/v4/locales/*"
+        },
+        "conditions": {
+          "@zod/source": "src"
+        }
+      },
+      "types": "./index.d.cts",
+      "module": "./index.js",
+      "exports": {
+        ".": {
+          "types": "./index.d.cts",
+          "import": "./index.js",
+          "require": "./index.cjs",
+          "@zod/source": "./src/index.ts"
+        },
+        "./v3": {
+          "types": "./v3/index.d.cts",
+          "import": "./v3/index.js",
+          "require": "./v3/index.cjs",
+          "@zod/source": "./src/v3/index.ts"
+        },
+        "./v4": {
+          "types": "./v4/index.d.cts",
+          "import": "./v4/index.js",
+          "require": "./v4/index.cjs",
+          "@zod/source": "./src/v4/index.ts"
+        },
+        "./mini": {
+          "types": "./mini/index.d.cts",
+          "import": "./mini/index.js",
+          "require": "./mini/index.cjs",
+          "@zod/source": "./src/mini/index.ts"
+        },
+        "./locales": {
+          "types": "./locales/index.d.cts",
+          "import": "./locales/index.js",
+          "require": "./locales/index.cjs",
+          "@zod/source": "./src/locales/index.ts"
+        },
+        "./v4-mini": {
+          "types": "./v4-mini/index.d.cts",
+          "import": "./v4-mini/index.js",
+          "require": "./v4-mini/index.cjs",
+          "@zod/source": "./src/v4-mini/index.ts"
+        },
+        "./v4/core": {
+          "types": "./v4/core/index.d.cts",
+          "import": "./v4/core/index.js",
+          "require": "./v4/core/index.cjs",
+          "@zod/source": "./src/v4/core/index.ts"
+        },
+        "./v4/mini": {
+          "types": "./v4/mini/index.d.cts",
+          "import": "./v4/mini/index.js",
+          "require": "./v4/mini/index.cjs",
+          "@zod/source": "./src/v4/mini/index.ts"
+        },
+        "./v4/locales": {
+          "types": "./v4/locales/index.d.cts",
+          "import": "./v4/locales/index.js",
+          "require": "./v4/locales/index.cjs",
+          "@zod/source": "./src/v4/locales/index.ts"
+        },
+        "./package.json": "./package.json",
+        "./v4/locales/*": {
+          "types": "./v4/locales/*",
+          "import": "./v4/locales/*",
+          "require": "./v4/locales/*",
+          "@zod/source": "./src/v4/locales/*"
+        }
+      },
+      "funding": "https://github.com/sponsors/colinhacks",
+      "gitHead": "3b946107b6c94b2ac8ff9fb451160c34dc4dd794",
+      "scripts": {
+        "test": "pnpm vitest run",
+        "build": "zshy --project tsconfig.build.json",
+        "clean": "git clean -xdf . -e node_modules",
+        "postbuild": "tsx ../../scripts/write-stub-package-jsons.ts && pnpm biome check --write .",
+        "test:watch": "pnpm vitest",
+        "prepublishOnly": "tsx ../../scripts/check-versions.ts"
+      },
+      "support": {
+        "backing": {
+          "npm-funding": true
+        }
+      },
+      "llmsFull": "https://zod.dev/llms-full.txt",
+      "mcpServer": "https://mcp.inkeep.com/zod/mcp",
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "sideEffects": false,
+      "_nodeVersion": "20.19.5",
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2020-03-07T21:19:15.387Z",
+    "modified": "2025-11-18T19:24:14.532Z",
+    "4.1.12": "2025-10-06T16:30:25.760Z"
+  },
+  "license": "MIT"
+}

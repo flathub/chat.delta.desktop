@@ -1,33 +1,33 @@
 {
   "_id": "@eslint/js",
-  "_rev": "81-6a1a5a60feab3d6b73335948470c6e47",
+  "_rev": "84-5abef7f5ab0952cd5d91a24bb7527cea",
   "name": "@eslint/js",
   "dist-tags": {
-    "next": "9.0.0-rc.0",
+    "next": "10.0.0-alpha.0",
     "maintenance": "8.57.1",
-    "latest": "9.38.0"
+    "latest": "9.39.1"
   },
   "versions": {
-    "9.34.0": {
+    "9.38.0": {
       "name": "@eslint/js",
-      "version": "9.34.0",
+      "version": "9.38.0",
       "license": "MIT",
-      "_id": "@eslint/js@9.34.0",
+      "_id": "@eslint/js@9.38.0",
       "bugs": {
         "url": "https://github.com/eslint/eslint/issues/"
       },
       "dist": {
-        "shasum": "fc423168b9d10e08dea9088d083788ec6442996b",
-        "tarball": "http://localhost:3000/@eslint/js/-/js-9.34.0.tgz",
+        "shasum": "f7aa9c7577577f53302c1d795643589d7709ebd1",
+        "tarball": "http://localhost:3000/@eslint/js/-/js-9.38.0.tgz",
         "fileCount": 7,
-        "integrity": "sha512-EoyvqQnBNsV1CWaEJ559rxXL4c8V92gxirbawSmVUOWXlsRxxQXl6LmCpdUblgxgSkDIqKnhzba2SjRTI/A5Rw==",
+        "integrity": "sha512-UZ1VpFvXf9J06YG9xQBdnzU+kthors6KjhMAl6f4gH4usHyh31rUf2DLGInT8RFYIReYXNSydgPY0V2LuWgl7A==",
         "signatures": [
           {
-            "sig": "MEUCIE/3kwl1bIJNnZ5VxeOMpIVY8aPps7/A3Cw+/jo50dajAiEAjP6bIC6YU5o2siVHhXOitEt2XNWtXaR1Bx5mKa3LIwI=",
+            "sig": "MEQCIEL/VZz2ocpVFSllg0kYDIzReVGJM3QAYNzK1q/diGOPAiBliUkEHkTyfgypZWl4AsKFD1QvjIgc5bv5PwiFxTIlUg==",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 14504
+        "unpackedSize": 15515
       },
       "main": "./src/index.js",
       "types": "./types/index.d.ts",
@@ -35,7 +35,46 @@
         "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
       },
       "funding": "https://eslint.org/donate",
-      "gitHead": "b48fa20034e53bc65d1a58f3d834705e3087b00c",
+      "gitHead": "25d0e33270e08baed09dbee2cdd56a8e5cd9da0f",
+      "scripts": {
+        "test:types": "tsc -p tests/types/tsconfig.json"
+      },
+      "_npmVersion": "10.1.0",
+      "directories": {},
+      "_nodeVersion": "20.9.0",
+      "publishConfig": {
+        "access": "public"
+      },
+      "_hasShrinkwrap": false
+    },
+    "9.39.0": {
+      "name": "@eslint/js",
+      "version": "9.39.0",
+      "license": "MIT",
+      "_id": "@eslint/js@9.39.0",
+      "bugs": {
+        "url": "https://github.com/eslint/eslint/issues/"
+      },
+      "dist": {
+        "shasum": "e1955cefd1d79e80a9557274e9aa9bd3f641be01",
+        "tarball": "http://localhost:3000/@eslint/js/-/js-9.39.0.tgz",
+        "fileCount": 7,
+        "integrity": "sha512-BIhe0sW91JGPiaF1mOuPy5v8NflqfjIcDNpC+LbW9f609WVRX1rArrhi6Z2ymvrAry9jw+5POTj4t2t62o8Bmw==",
+        "signatures": [
+          {
+            "sig": "MEUCIEUc/eM9KAGhaHzP2MvXoTHMhAHh5PdcuDpNqloDvzagAiEAvZzuUW1RlAuIgoLNTuKUWCR/hx2qa95yBaG24m3h+Uw=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 15798
+      },
+      "main": "./src/index.js",
+      "types": "./types/index.d.ts",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "funding": "https://eslint.org/donate",
+      "gitHead": "2375a6de8263393c129d41cac1b407b40111a73c",
       "scripts": {
         "test:types": "tsc -p tests/types/tsconfig.json"
       },
@@ -50,8 +89,9 @@
   },
   "time": {
     "created": "2023-01-31T18:07:13.747Z",
-    "modified": "2025-10-17T18:25:47.159Z",
-    "9.34.0": "2025-08-22T20:15:46.012Z"
+    "modified": "2025-11-14T19:20:12.646Z",
+    "9.38.0": "2025-10-17T18:25:46.923Z",
+    "9.39.0": "2025-10-31T20:10:50.834Z"
   },
   "license": "MIT"
 }

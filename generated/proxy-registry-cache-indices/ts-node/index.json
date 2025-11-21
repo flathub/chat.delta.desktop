@@ -7,11 +7,11 @@
     "latest": "10.9.2"
   },
   "versions": {
-    "10.9.1": {
+    "10.9.2": {
       "name": "ts-node",
-      "version": "10.9.1",
+      "version": "10.9.2",
       "license": "MIT",
-      "_id": "ts-node@10.9.1",
+      "_id": "ts-node@10.9.2",
       "bugs": {
         "url": "https://github.com/TypeStrong/ts-node/issues"
       },
@@ -24,18 +24,17 @@
         "ts-node-transpile-only": "dist/bin-transpile.js"
       },
       "dist": {
-        "shasum": "e73de9102958af9e1f0b168a6ff320e25adcff4b",
-        "tarball": "http://localhost:3000/ts-node/-/ts-node-10.9.1.tgz",
+        "shasum": "70f021c9e185bccdca820e26dc413805c101c71f",
+        "tarball": "http://localhost:3000/ts-node/-/ts-node-10.9.2.tgz",
         "fileCount": 117,
-        "integrity": "sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==",
+        "integrity": "sha512-f0FFpIdcHgn8zcPSbf1dRevwt047YMnaiJM3u2w2RewrB+fob/zePZcrOyQoLMMO7aBIddLcQIEK5dYjkLnGrQ==",
         "signatures": [
           {
-            "sig": "MEYCIQCMzndaAoLM0t2sCwOlXHnEu3+O82vWA8ruRaFU/raaHgIhAOj5bfTrrkJ7UtKH2EaWfh/M45f6Fg5g4pkhbOfXS0vi",
+            "sig": "MEUCIQD/bCHKwyT+2Aon+Aw+FYm9nDf/PJcLkSgSzrx8zTux8gIgVLpIXBKXVYNkbE1EF03N05Io7L6x8B7XpjqU4REeeXg=",
             "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
           }
         ],
-        "unpackedSize": 746842,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiz4CIACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmqG1g//cpaFnRU9PCABNZ9BgXNG/fTOe7AdJCAKEW+jUxz99m0Wvf/O\r\nqFzvn46NBoe1FP5mjodA19q9Azl7CWtLu6J8/Aq8Yp26iqyYIwlcAubKC+Cq\r\nhXyQkVS2kolJaVVZgaUaqYUqim8WRpfhta9cuswPBzpqdOjNW9eUuGZlQ79V\r\nI7ImZgMRPM+daxN1P//OrzIn+1P8ONvkbXITx8bgKaefnJEPPAyHNxQ5KEmA\r\nr5omBL4P42HHMO1vW7tNc79yCHTyiSK4qsUxjFOT1U7O84rAWVMRrZnjBsuW\r\nM/ISLYO6a0HYjKm4UEX2podOUrFL+MKla6qh+oKUZ4t5fkHCzA9cbheGYL/l\r\n2CD8aZoP3wxkS6STVX9nXSKdo2gsXy9gP7wVZvkT1IoaIesY/l8+XpEQDQ0U\r\njRm5qU3uTCoEeRIkV9vwraOQpyIobMWd2nHyc2bgu/Ui/8EeTX7APPEaWvt5\r\nd7zscBLlu70Q0+e/FQP/wrMm0pL7yCdME0zZuU/NfHFB8H0oR/vNxrH5RSkC\r\nbjafhEwPNSSo0mDYX87mXvrBLv7F1sQ14Qol5coCNYeIGEFh9wtDS+B1uWzt\r\nLuxCXC3D+E7eEG6BJeJofpgKs9Ei88DPHYHog6YtD8ejZvGlVY4YmJJTOFsf\r\nHlQbUIi3arbXEKyw2WTOz7ziO0YBWtrXctY=\r\n=EXyR\r\n-----END PGP SIGNATURE-----\r\n"
+        "unpackedSize": 757333
       },
       "main": "dist/index.js",
       "types": "dist/index.d.ts",
@@ -73,6 +72,7 @@
         "./register/transpile-only": "./register/transpile-only.js",
         "./transpilers/swc-experimental": "./transpilers/swc-experimental.js"
       },
+      "gitHead": "057ac1beb118f9c42d21e876a17320ad73ea6be2",
       "scripts": {
         "lint": "dprint check",
         "test": "npm run build && npm run lint && npm run test-cov --",
@@ -97,9 +97,9 @@
       "prettier": {
         "singleQuote": true
       },
-      "_npmVersion": "6.14.15",
+      "_npmVersion": "10.2.0",
       "directories": {},
-      "_nodeVersion": "17.3.1",
+      "_nodeVersion": "21.0.0",
       "dependencies": {
         "yn": "3.1.1",
         "arg": "^4.1.0",
@@ -129,8 +129,8 @@
         "throat": "^6.0.1",
         "outdent": "^0.8.0",
         "typedoc": "^0.22.10",
-        "@swc/core": ">=1.2.205",
-        "@swc/wasm": ">=1.2.205",
+        "@swc/core": "^1.3.100",
+        "@swc/wasm": "^1.3.100",
         "get-stream": "^6.0.0",
         "proxyquire": "^2.0.0",
         "typescript": "4.7.4",
@@ -169,7 +169,7 @@
     "created": "2015-09-18T00:55:54.153Z",
     "modified": "2025-10-13T23:43:21.909Z",
     "8.5.1": "2019-11-15T02:53:59.303Z",
-    "10.9.1": "2022-07-14T02:33:44.792Z"
+    "10.9.2": "2023-12-08T12:04:46.154Z"
   },
   "license": "MIT"
 }

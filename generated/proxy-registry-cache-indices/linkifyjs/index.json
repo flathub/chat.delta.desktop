@@ -1,0 +1,54 @@
+{
+  "_id": "linkifyjs",
+  "_rev": "73-d1e0b2ba777e0d10ab78a91fc1132a41",
+  "name": "linkifyjs",
+  "dist-tags": {
+    "beta": "4.0.0-beta.6",
+    "latest": "4.3.2"
+  },
+  "versions": {
+    "4.3.2": {
+      "name": "linkifyjs",
+      "type": "module",
+      "version": "4.3.2",
+      "main": "dist/linkify.cjs",
+      "module": "dist/linkify.mjs",
+      "scripts": {
+        "build": "rollup -c rollup.config.js",
+        "clean": "rm -rf lib dist *.tgz *.d.ts",
+        "prepack": "run-s clean build tsc",
+        "tsc": "tsc",
+        "test": "echo \"Error: no test specified\" && exit 1"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/nfrasser/linkifyjs/issues"
+      },
+      "_id": "linkifyjs@4.3.2",
+      "gitHead": "3abe9abbcb4e069aeadde2f42de7dfcc2371c0f0",
+      "_nodeVersion": "22.17.1",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-NT1CJtq3hHIreOianA8aSXn6Cw0JzYOuDQbOrSPe7gqFnCpKP++MQe3ODgO3oh2GJFORkAAdqredOa60z63GbA==",
+        "shasum": "d97eb45419aabf97ceb4b05a7adeb7b8c8ade2b1",
+        "tarball": "http://localhost:3000/linkifyjs/-/linkifyjs-4.3.2.tgz",
+        "fileCount": 9,
+        "unpackedSize": 259635,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQCtDoeYnB83JTkH3W4e0+PuMepO04Pbu9eAGXGzL1JEegIhAOHB1i/N4k/nnl2987agFll7gi4eDAZWaINAVrz3Rgtp"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2015-03-16T01:46:50.691Z",
+    "modified": "2025-07-25T18:10:28.010Z",
+    "4.3.2": "2025-07-25T18:10:27.814Z"
+  },
+  "license": "MIT"
+}

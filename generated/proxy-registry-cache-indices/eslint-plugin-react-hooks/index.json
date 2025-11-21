@@ -1,59 +1,69 @@
 {
   "_id": "eslint-plugin-react-hooks",
-  "_rev": "3382-a53587d4d540ee52c3d15eb2be73b03f",
+  "_rev": "3456-2e71af7b5dd50ed9579b89c97f4ae593",
   "name": "eslint-plugin-react-hooks",
   "dist-tags": {
     "beta": "5.1.0-beta-26f2496093-20240514",
     "rc": "6.0.0-rc.2",
-    "latest": "7.0.0",
-    "experimental": "0.0.0-experimental-2bcbf254-20251020",
-    "canary": "7.0.0-canary-2bcbf254-20251020",
-    "next": "7.0.0-canary-2bcbf254-20251020"
+    "latest": "7.0.1",
+    "experimental": "0.0.0-experimental-8ac5f4eb-20251119",
+    "canary": "7.1.0-canary-8ac5f4eb-20251119",
+    "next": "7.1.0-canary-8ac5f4eb-20251119"
   },
   "versions": {
-    "5.2.0": {
+    "7.0.1": {
       "name": "eslint-plugin-react-hooks",
-      "version": "5.2.0",
+      "version": "7.0.1",
       "license": "MIT",
-      "_id": "eslint-plugin-react-hooks@5.2.0",
+      "_id": "eslint-plugin-react-hooks@7.0.1",
       "bugs": {
         "url": "https://github.com/facebook/react/issues"
       },
       "dist": {
-        "shasum": "1be0080901e6ac31ce7971beed3d3ec0a423d9e3",
-        "tarball": "http://localhost:3000/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-5.2.0.tgz",
+        "shasum": "66e258db58ece50723ef20cc159f8aa908219169",
+        "tarball": "http://localhost:3000/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-7.0.1.tgz",
         "fileCount": 8,
-        "integrity": "sha512-+f15FfK64YQwZdJNELETdn5ibXEUQmW1DZL6KXhNnc2heoy/sg9VJJeT7n8TlMWouzWqSWavFkIhHyIbIAEapg==",
+        "integrity": "sha512-O0d0m04evaNzEPoSW+59Mezf8Qt0InfgGIBJnpC0h3NH/WjUAR7BIKUfysC6todmtiZ/A0oUVS8Gce0WhBrHsA==",
         "signatures": [
           {
-            "sig": "MEUCIFHVMEDnd2hu7+6WYVykUBExXcFucpXqmxnCA5GezD3rAiEA5AvhXsQV5ZVTL72mfAV3+ddCymr8Tld/S7XstwxYoPU=",
+            "sig": "MEQCIGbzSok08XhvIf1CE/K3U1J24ywCLTzg/ZYdFNhkMF+nAiALhf8kbWX5/+yF+ZWgEWhUKXYrR4eQEljf7SSjRC2vtA==",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 277861
+        "unpackedSize": 4293597
       },
       "main": "./index.js",
       "types": "./index.d.ts",
       "engines": {
-        "node": ">=10"
+        "node": ">=18"
       },
-      "gitHead": "3607f4838a8f4a87160da36aa26bb1432d7a5f11",
+      "gitHead": "408b38ef7304faf022d2a37110c57efce12c6bad",
       "scripts": {
-        "test": "jest",
-        "typecheck": "tsc --noEmit"
+        "test": "yarn build:compiler && jest",
+        "typecheck": "tsc --noEmit",
+        "build:compiler": "cd ../../compiler && yarn workspace babel-plugin-react-compiler build"
       },
-      "_npmVersion": "10.5.0",
+      "_npmVersion": "10.8.2",
       "directories": {},
-      "_nodeVersion": "18.20.1",
+      "_nodeVersion": "20.19.0",
+      "dependencies": {
+        "zod": "^3.25.0 || ^4.0.0",
+        "@babel/core": "^7.24.4",
+        "@babel/parser": "^7.24.4",
+        "hermes-parser": "^0.25.1",
+        "zod-validation-error": "^3.5.0 || ^4.0.0"
+      },
       "_hasShrinkwrap": false,
       "devDependencies": {
         "jest": "^29.5.0",
         "eslint-v7": "npm:eslint@^7.7.0",
+        "eslint-v8": "npm:eslint@^8.57.1",
         "eslint-v9": "npm:eslint@^9.0.0",
         "typescript": "^5.4.3",
         "@types/node": "^20.2.5",
+        "@babel/types": "^7.19.0",
         "babel-eslint": "^10.0.3",
-        "@types/eslint": "^8.56.12",
+        "@types/eslint": "^9.6.1",
         "@types/estree": "^1.0.6",
         "@types/estree-jsx": "^1.0.5",
         "@tsconfig/strictest": "^2.0.5",
@@ -71,8 +81,8 @@
   },
   "time": {
     "created": "2018-10-25T16:13:37.192Z",
-    "modified": "2025-10-20T16:20:59.263Z",
-    "5.2.0": "2025-02-28T15:30:44.852Z"
+    "modified": "2025-11-20T16:20:57.675Z",
+    "7.0.1": "2025-10-24T16:55:06.287Z"
   },
   "license": "MIT"
 }
