@@ -1,9 +1,9 @@
 {
   "_id": "readdirp",
-  "_rev": "118-af96f8526720c678b4d34ada388e8c9b",
+  "_rev": "120-4c31a51b2271aadf56984f7d13d110a7",
   "name": "readdirp",
   "dist-tags": {
-    "latest": "4.1.2"
+    "latest": "5.0.0"
   },
   "versions": {
     "3.6.0": {
@@ -127,73 +127,73 @@
       "name": "readdirp",
       "version": "4.1.2",
       "license": "MIT",
+      "_id": "readdirp@4.1.2",
       "bugs": {
         "url": "https://github.com/paulmillr/readdirp/issues"
       },
-      "engines": {
-        "node": ">= 14.18.0"
-      },
-      "main": "./index.js",
-      "module": "./esm/index.js",
-      "types": "./index.d.ts",
-      "exports": {
-        ".": {
-          "import": "./esm/index.js",
-          "require": "./index.js"
-        }
-      },
-      "sideEffects": false,
-      "scripts": {
-        "build": "tsc && tsc -p tsconfig.cjs.json",
-        "lint": "prettier --check index.ts test/index.test.js",
-        "format": "prettier --write index.ts test/index.test.js",
-        "test": "node test/index.test.js",
-        "test:coverage": "c8 node test/index.test.js"
-      },
-      "devDependencies": {
-        "@paulmillr/jsbt": "0.3.1",
-        "@types/node": "20.14.8",
-        "c8": "10.1.3",
-        "chai": "4.3.4",
-        "chai-subset": "1.6.0",
-        "micro-should": "0.5.0",
-        "prettier": "3.1.1",
-        "typescript": "5.5.2"
-      },
-      "funding": {
-        "type": "individual",
-        "url": "https://paulmillr.com/funding/"
-      },
-      "_id": "readdirp@4.1.2",
-      "gitHead": "a124cce86eff988cec15215994b33bb79b5e7443",
-      "_nodeVersion": "22.13.0",
-      "_npmVersion": "10.9.2",
       "dist": {
-        "integrity": "sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==",
         "shasum": "eb85801435fbf2a7ee58f19e0921b068fc69948d",
         "tarball": "http://localhost:3000/readdirp/-/readdirp-4.1.2.tgz",
         "fileCount": 8,
-        "unpackedSize": 36127,
+        "integrity": "sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==",
+        "signatures": [
+          {
+            "sig": "MEQCIGjf5FoFuZxfJj6XC2bxY6tndvl8QUc99XNovpnGRE+9AiACxQyKUU0lPvL049n5J5BBw0BehmSci/LuWdQ8GT35uA==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
         "attestations": {
           "url": "http://localhost:3000/-/npm/v1/attestations/readdirp@4.1.2",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEQCIGjf5FoFuZxfJj6XC2bxY6tndvl8QUc99XNovpnGRE+9AiACxQyKUU0lPvL049n5J5BBw0BehmSci/LuWdQ8GT35uA=="
-          }
-        ]
+        "unpackedSize": 36127
       },
+      "main": "./index.js",
+      "types": "./index.d.ts",
+      "module": "./esm/index.js",
+      "engines": {
+        "node": ">= 14.18.0"
+      },
+      "exports": {
+        ".": {
+          "import": "./esm/index.js",
+          "require": "./index.js"
+        }
+      },
+      "funding": {
+        "url": "https://paulmillr.com/funding/",
+        "type": "individual"
+      },
+      "gitHead": "a124cce86eff988cec15215994b33bb79b5e7443",
+      "scripts": {
+        "lint": "prettier --check index.ts test/index.test.js",
+        "test": "node test/index.test.js",
+        "build": "tsc && tsc -p tsconfig.cjs.json",
+        "format": "prettier --write index.ts test/index.test.js",
+        "test:coverage": "c8 node test/index.test.js"
+      },
+      "_npmVersion": "10.9.2",
       "directories": {},
-      "_hasShrinkwrap": false
+      "sideEffects": false,
+      "_nodeVersion": "22.13.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "c8": "10.1.3",
+        "chai": "4.3.4",
+        "prettier": "3.1.1",
+        "typescript": "5.5.2",
+        "@types/node": "20.14.8",
+        "chai-subset": "1.6.0",
+        "micro-should": "0.5.0",
+        "@paulmillr/jsbt": "0.3.1"
+      }
     }
   },
   "time": {
     "created": "2012-07-18T11:44:10.802Z",
-    "modified": "2025-02-14T17:27:22.424Z",
+    "modified": "2025-11-25T23:11:27.885Z",
     "3.6.0": "2021-03-14T10:22:31.129Z",
     "4.1.2": "2025-02-14T17:27:21.994Z"
   },

@@ -1,108 +1,108 @@
 {
   "_id": "@eslint/eslintrc",
-  "_rev": "50-70fc32b72436167b072893e5229f66b7",
+  "_rev": "51-595ed1b93b2644803967dfa77ddee1d4",
   "name": "@eslint/eslintrc",
   "dist-tags": {
-    "latest": "3.3.1"
+    "latest": "3.3.3"
   },
   "versions": {
     "3.3.1": {
       "name": "@eslint/eslintrc",
       "version": "3.3.1",
-      "type": "module",
-      "main": "./dist/eslintrc.cjs",
-      "types": "./dist/eslintrc.d.cts",
-      "exports": {
-        ".": {
-          "import": "./lib/index.js",
-          "require": "./dist/eslintrc.cjs",
-          "types": "./lib/types/index.d.ts"
-        },
-        "./package.json": "./package.json",
-        "./universal": {
-          "import": "./lib/index-universal.js",
-          "require": "./dist/eslintrc-universal.cjs"
-        }
-      },
-      "publishConfig": {
-        "access": "public"
-      },
-      "scripts": {
-        "build": "rollup -c && node -e \"fs.copyFileSync('./lib/types/index.d.ts', './dist/eslintrc.d.cts')\"",
-        "lint": "eslint . --report-unused-disable-directives",
-        "lint:fix": "npm run lint -- --fix",
-        "prepare": "npm run build",
-        "release:generate:latest": "eslint-generate-release",
-        "release:generate:alpha": "eslint-generate-prerelease alpha",
-        "release:generate:beta": "eslint-generate-prerelease beta",
-        "release:generate:rc": "eslint-generate-prerelease rc",
-        "release:publish": "eslint-publish-release",
-        "test": "mocha -R progress -c 'tests/lib/*.cjs' && c8 mocha -R progress -c 'tests/lib/**/*.js'",
-        "test:types": "tsc -p tests/lib/types/tsconfig.json"
-      },
-      "funding": "https://opencollective.com/eslint",
       "license": "MIT",
+      "_id": "@eslint/eslintrc@3.3.1",
       "bugs": {
         "url": "https://github.com/eslint/eslintrc/issues"
       },
-      "devDependencies": {
-        "c8": "^7.7.3",
-        "chai": "^4.3.4",
-        "eslint": "^9.20.1",
-        "eslint-config-eslint": "^11.0.0",
-        "eslint-release": "^3.2.0",
-        "fs-teardown": "^0.1.3",
-        "mocha": "^9.0.3",
-        "rollup": "^2.70.1",
-        "shelljs": "^0.8.5",
-        "sinon": "^11.1.2",
-        "temp-dir": "^2.0.0",
-        "typescript": "^5.7.3"
-      },
-      "dependencies": {
-        "ajv": "^6.12.4",
-        "debug": "^4.3.2",
-        "espree": "^10.0.1",
-        "globals": "^14.0.0",
-        "ignore": "^5.2.0",
-        "import-fresh": "^3.2.1",
-        "js-yaml": "^4.1.0",
-        "minimatch": "^3.1.2",
-        "strip-json-comments": "^3.1.1"
-      },
-      "engines": {
-        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
-      },
-      "_id": "@eslint/eslintrc@3.3.1",
-      "gitHead": "556e80029f01d07758ab1f5801bc9421bca4b072",
-      "_nodeVersion": "22.14.0",
-      "_npmVersion": "10.9.2",
       "dist": {
-        "integrity": "sha512-gtF186CXhIl1p4pJNGZw8Yc6RlshoePRvE0X91oPGb3vZ8pM3qOS9W9NGPat9LziaBV7XrJWGylNQXkGcnM3IQ==",
         "shasum": "e55f7f1dd400600dd066dbba349c4c0bac916964",
         "tarball": "http://localhost:3000/@eslint/eslintrc/-/eslintrc-3.3.1.tgz",
         "fileCount": 31,
-        "unpackedSize": 690806,
+        "integrity": "sha512-gtF186CXhIl1p4pJNGZw8Yc6RlshoePRvE0X91oPGb3vZ8pM3qOS9W9NGPat9LziaBV7XrJWGylNQXkGcnM3IQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCu1TP/w3ic5X9YSQnYuSfN2gcyHe7CKm4jgPfbQAbExgIgR9FPxJm8w3zT+XqHLvWTNMmvz5Pt72L5w4jPspVXZoc=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
         "attestations": {
           "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2feslintrc@3.3.1",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIQCu1TP/w3ic5X9YSQnYuSfN2gcyHe7CKm4jgPfbQAbExgIgR9FPxJm8w3zT+XqHLvWTNMmvz5Pt72L5w4jPspVXZoc="
-          }
-        ]
+        "unpackedSize": 690806
       },
+      "main": "./dist/eslintrc.cjs",
+      "type": "module",
+      "types": "./dist/eslintrc.d.cts",
+      "engines": {
+        "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
+      },
+      "exports": {
+        ".": {
+          "types": "./lib/types/index.d.ts",
+          "import": "./lib/index.js",
+          "require": "./dist/eslintrc.cjs"
+        },
+        "./universal": {
+          "import": "./lib/index-universal.js",
+          "require": "./dist/eslintrc-universal.cjs"
+        },
+        "./package.json": "./package.json"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "gitHead": "556e80029f01d07758ab1f5801bc9421bca4b072",
+      "scripts": {
+        "lint": "eslint . --report-unused-disable-directives",
+        "test": "mocha -R progress -c 'tests/lib/*.cjs' && c8 mocha -R progress -c 'tests/lib/**/*.js'",
+        "build": "rollup -c && node -e \"fs.copyFileSync('./lib/types/index.d.ts', './dist/eslintrc.d.cts')\"",
+        "prepare": "npm run build",
+        "lint:fix": "npm run lint -- --fix",
+        "test:types": "tsc -p tests/lib/types/tsconfig.json",
+        "release:publish": "eslint-publish-release",
+        "release:generate:rc": "eslint-generate-prerelease rc",
+        "release:generate:beta": "eslint-generate-prerelease beta",
+        "release:generate:alpha": "eslint-generate-prerelease alpha",
+        "release:generate:latest": "eslint-generate-release"
+      },
+      "_npmVersion": "10.9.2",
       "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "22.14.0",
+      "dependencies": {
+        "ajv": "^6.12.4",
+        "debug": "^4.3.2",
+        "espree": "^10.0.1",
+        "ignore": "^5.2.0",
+        "globals": "^14.0.0",
+        "js-yaml": "^4.1.0",
+        "minimatch": "^3.1.2",
+        "import-fresh": "^3.2.1",
+        "strip-json-comments": "^3.1.1"
+      },
+      "publishConfig": {
+        "access": "public"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "c8": "^7.7.3",
+        "chai": "^4.3.4",
+        "mocha": "^9.0.3",
+        "sinon": "^11.1.2",
+        "eslint": "^9.20.1",
+        "rollup": "^2.70.1",
+        "shelljs": "^0.8.5",
+        "temp-dir": "^2.0.0",
+        "typescript": "^5.7.3",
+        "fs-teardown": "^0.1.3",
+        "eslint-release": "^3.2.0",
+        "eslint-config-eslint": "^11.0.0"
+      }
     }
   },
   "time": {
     "created": "2020-08-24T19:00:15.734Z",
-    "modified": "2025-03-21T20:07:55.125Z",
+    "modified": "2025-11-28T15:45:49.696Z",
     "3.3.1": "2025-03-21T20:07:54.663Z"
   },
   "license": "MIT"

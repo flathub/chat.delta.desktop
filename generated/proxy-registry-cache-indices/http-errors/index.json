@@ -122,13 +122,73 @@
         "eslint-plugin-markdown": "2.2.1",
         "eslint-plugin-standard": "4.1.0"
       }
+    },
+    "2.0.1": {
+      "name": "http-errors",
+      "version": "2.0.1",
+      "license": "MIT",
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/express"
+      },
+      "dependencies": {
+        "depd": "~2.0.0",
+        "inherits": "~2.0.4",
+        "setprototypeof": "~1.2.0",
+        "statuses": "~2.0.2",
+        "toidentifier": "~1.0.1"
+      },
+      "devDependencies": {
+        "eslint": "7.32.0",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-import": "2.32.0",
+        "eslint-plugin-markdown": "2.2.1",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-promise": "5.2.0",
+        "eslint-plugin-standard": "4.1.0",
+        "mocha": "9.1.3",
+        "nyc": "15.1.0"
+      },
+      "engines": {
+        "node": ">= 0.8"
+      },
+      "scripts": {
+        "lint": "eslint . && node ./scripts/lint-readme-list.js",
+        "test": "mocha --reporter spec",
+        "test-ci": "nyc --reporter=lcov --reporter=text npm test",
+        "test-cov": "nyc --reporter=html --reporter=text npm test",
+        "version": "node scripts/version-history.js && git add HISTORY.md"
+      },
+      "_id": "http-errors@2.0.1",
+      "gitHead": "61aee5769e92678ff25a2da8e3a2dd1504762432",
+      "bugs": {
+        "url": "https://github.com/jshttp/http-errors/issues"
+      },
+      "_nodeVersion": "22.10.0",
+      "_npmVersion": "10.9.0",
+      "dist": {
+        "integrity": "sha512-4FbRdAX+bSdmo4AUFuS0WNiPz8NgFt+r8ThgNWmlrjQjt1Q7ZR9+zTlce2859x4KSXrwIsaeTqDoKQmtP8pLmQ==",
+        "shasum": "36d2f65bc909c8790018dd36fb4d93da6caae06b",
+        "tarball": "http://localhost:3000/http-errors/-/http-errors-2.0.1.tgz",
+        "fileCount": 5,
+        "unpackedSize": 19064,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEQCIHDWg6+zM0Rn7rorMA9QW7/b4whaOu5X97/Zl/1ua2NjAiBEAMpiOh/hT1WFiJYKYJrB6j7QdyJyFc0+8XhyBWJ4aw=="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2012-11-18T05:58:21.693Z",
     "modified": "2025-11-20T19:12:22.971Z",
     "1.6.3": "2018-03-29T20:29:06.751Z",
-    "2.0.0": "2021-12-18T03:30:42.140Z"
+    "2.0.0": "2021-12-18T03:30:42.140Z",
+    "2.0.1": "2025-11-20T19:12:22.755Z"
   },
   "license": "MIT"
 }
