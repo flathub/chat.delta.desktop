@@ -1,36 +1,37 @@
 {
   "_id": "finalhandler",
-  "_rev": "91-62de987e312cbae8596a16e86bfa2949",
+  "_rev": "94-4a4fdbdeb7646dd4152dc26d646a530c",
   "name": "finalhandler",
   "dist-tags": {
-    "latest": "2.1.0"
+    "latest": "2.1.1",
+    "latest-1.x": "1.3.2"
   },
   "versions": {
-    "1.3.1": {
+    "1.3.2": {
       "name": "finalhandler",
-      "version": "1.3.1",
+      "version": "1.3.2",
       "license": "MIT",
-      "_id": "finalhandler@1.3.1",
+      "_id": "finalhandler@1.3.2",
       "bugs": {
         "url": "https://github.com/pillarjs/finalhandler/issues"
       },
       "dist": {
-        "shasum": "0c575f1d1d324ddd1da35ad7ece3df7d19088019",
-        "tarball": "http://localhost:3000/finalhandler/-/finalhandler-1.3.1.tgz",
+        "shasum": "1ebc2228fc7673aac4a472c310cc05b77d852b88",
+        "tarball": "http://localhost:3000/finalhandler/-/finalhandler-1.3.2.tgz",
         "fileCount": 6,
-        "integrity": "sha512-6BN9trH7bp3qvnrRyzsBz+g3lZxTNZTbVO2EV1CS0WIcDbawYVdYvGflME/9QP0h0pYlCDBCTjYa9nZzMDpyxQ==",
+        "integrity": "sha512-aA4RyPcd3badbdABGDuTXCMTtOneUCAYH/gxoYRTZlIJdF0YPWuGqiAsIrhNnnqdXGswYk6dGujem4w80UJFhg==",
         "signatures": [
           {
-            "sig": "MEQCIE+EO/mk2fLe3N7K3OOcWPOFd6nwxaSD8Of20x9DmgJTAiAiaTR92i7LmC4vR59PUGWFDc7zfYEG//Cx25uyMLsuFQ==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEQCIBdHAZGUXPc/wONoBAQDue96IGPFaORkzvmq4CYomTBpAiBLm5kCtbt81BLBW6n7/UoFD4dbHj4nly2G2bN3Ny4wxw==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 19034
+        "unpackedSize": 19149
       },
       "engines": {
         "node": ">= 0.8"
       },
-      "gitHead": "fbbe1da05b22331a24e7eb8d891b447dfd8f7cf1",
+      "gitHead": "1578b155794f470556f57bb17761abe74a5ebd21",
       "scripts": {
         "lint": "eslint .",
         "test": "mocha --reporter spec --check-leaks test/",
@@ -38,19 +39,20 @@
         "test-cov": "nyc --reporter=html --reporter=text npm test",
         "test-inspect": "mocha --reporter spec --inspect --inspect-brk test/"
       },
-      "_npmVersion": "10.7.0",
+      "_npmVersion": "10.9.0",
       "directories": {},
-      "_nodeVersion": "22.2.0",
+      "_nodeVersion": "22.10.0",
       "dependencies": {
         "debug": "2.6.9",
         "unpipe": "~1.0.0",
         "parseurl": "~1.3.3",
-        "statuses": "2.0.1",
+        "statuses": "~2.0.2",
         "encodeurl": "~2.0.0",
         "escape-html": "~1.0.3",
-        "on-finished": "2.4.1"
+        "on-finished": "~2.4.1"
       },
       "_hasShrinkwrap": false,
+      "readmeFilename": "README.md",
       "devDependencies": {
         "nyc": "15.1.0",
         "mocha": "10.0.0",
@@ -69,8 +71,8 @@
   },
   "time": {
     "created": "2014-06-06T02:46:23.972Z",
-    "modified": "2025-03-05T14:51:07.880Z",
-    "1.3.1": "2024-09-11T19:51:42.759Z"
+    "modified": "2025-12-01T16:05:02.365Z",
+    "1.3.2": "2025-12-01T15:59:50.313Z"
   },
   "license": "MIT"
 }

@@ -121,13 +121,68 @@
         "eslint-plugin-markdown": "1.0.2",
         "eslint-plugin-standard": "4.1.0"
       }
+    },
+    "2.0.2": {
+      "name": "statuses",
+      "version": "2.0.2",
+      "license": "MIT",
+      "devDependencies": {
+        "csv-parse": "4.16.3",
+        "eslint": "7.19.0",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-import": "2.31.0",
+        "eslint-plugin-markdown": "1.0.2",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-promise": "4.3.1",
+        "eslint-plugin-standard": "4.1.0",
+        "mocha": "8.4.0",
+        "nyc": "15.1.0",
+        "raw-body": "2.5.2",
+        "stream-to-array": "2.3.0"
+      },
+      "engines": {
+        "node": ">= 0.8"
+      },
+      "scripts": {
+        "build": "node scripts/build.js",
+        "fetch": "node scripts/fetch-apache.js && node scripts/fetch-iana.js && node scripts/fetch-nginx.js && node scripts/fetch-node.js",
+        "lint": "eslint --plugin markdown --ext js,md .",
+        "test": "mocha --reporter spec --check-leaks --bail test/",
+        "test-ci": "nyc --reporter=lcov --reporter=text npm test",
+        "test-cov": "nyc --reporter=html --reporter=text npm test",
+        "update": "npm run fetch && npm run build",
+        "version": "node scripts/version-history.js && git add HISTORY.md"
+      },
+      "_id": "statuses@2.0.2",
+      "gitHead": "33ec007ae094c35edb35d9edd293b9524b3adcb9",
+      "bugs": {
+        "url": "https://github.com/jshttp/statuses/issues"
+      },
+      "_nodeVersion": "22.10.0",
+      "_npmVersion": "10.9.0",
+      "dist": {
+        "integrity": "sha512-DvEy55V3DB7uknRo+4iOGT5fP1slR8wQohVdknigZPMpMstaKJQWhwiYBACJE3Ul2pTnATihhBYnRhZQHGBiRw==",
+        "shasum": "8f75eecef765b5e1cfcdc080da59409ed424e382",
+        "tarball": "http://localhost:3000/statuses/-/statuses-2.0.2.tgz",
+        "fileCount": 6,
+        "unpackedSize": 12505,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIGdlp4os1/qU9ULEMhLjHpQiZGr8yEkpurzU9ZmelTFXAiEAiCEy/wZhVF5XVkdLMBpc1sD46S2fBzFbjmXGFOdFVqk="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2014-03-13T01:21:33.978Z",
     "modified": "2025-06-06T19:56:01.588Z",
     "1.5.0": "2018-03-28T01:43:17.941Z",
-    "2.0.1": "2021-01-03T06:37:47.488Z"
+    "2.0.1": "2021-01-03T06:37:47.488Z",
+    "2.0.2": "2025-06-06T19:56:01.385Z"
   },
   "license": "MIT"
 }
