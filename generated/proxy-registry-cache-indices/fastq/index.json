@@ -1,74 +1,74 @@
 {
   "_id": "fastq",
-  "_rev": "37-08b22bf77ff7f88f9f1c66dfef1cedf0",
+  "_rev": "40-9340aee497a555bfadb7a53e5c4bd4dc",
   "name": "fastq",
   "dist-tags": {
-    "latest": "1.19.1"
+    "latest": "1.20.1"
   },
   "versions": {
     "1.19.1": {
       "name": "fastq",
       "version": "1.19.1",
-      "main": "queue.js",
-      "scripts": {
-        "lint": "standard --verbose | snazzy",
-        "unit": "nyc --lines 100 --branches 100 --functions 100 --check-coverage --reporter=text tape test/test.js test/promise.js",
-        "coverage": "nyc --reporter=html --reporter=cobertura --reporter=text tape test/test.js test/promise.js",
-        "test:report": "npm run lint && npm run unit:report",
-        "test": "npm run lint && npm run unit",
-        "typescript": "tsc --project ./test/tsconfig.json",
-        "legacy": "tape test/test.js"
-      },
-      "pre-commit": [
-        "test",
-        "typescript"
-      ],
       "license": "ISC",
+      "_id": "fastq@1.19.1",
       "bugs": {
         "url": "https://github.com/mcollina/fastq/issues"
       },
-      "devDependencies": {
-        "async": "^3.1.0",
-        "neo-async": "^2.6.1",
-        "nyc": "^17.0.0",
-        "pre-commit": "^1.2.2",
-        "snazzy": "^9.0.0",
-        "standard": "^16.0.0",
-        "tape": "^5.0.0",
-        "typescript": "^5.0.4"
+      "dist": {
+        "shasum": "d50eaba803c8846a883c16492821ebcd2cda55f5",
+        "tarball": "http://localhost:3000/fastq/-/fastq-1.19.1.tgz",
+        "fileCount": 15,
+        "integrity": "sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIA6FghASVb6zj5B2h0OQKUlx5GAzAz/ZtEYdxSoB9TJAAiEAm9x7r3ktzXhHZdLAyos1gMb4zrczP822dEY5OyHaerE=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 45922
       },
-      "dependencies": {
-        "reusify": "^1.0.4"
+      "main": "queue.js",
+      "gitHead": "5a7e5668c9d20535945a5a406775609fd9f07352",
+      "scripts": {
+        "lint": "standard --verbose | snazzy",
+        "test": "npm run lint && npm run unit",
+        "unit": "nyc --lines 100 --branches 100 --functions 100 --check-coverage --reporter=text tape test/test.js test/promise.js",
+        "legacy": "tape test/test.js",
+        "coverage": "nyc --reporter=html --reporter=cobertura --reporter=text tape test/test.js test/promise.js",
+        "typescript": "tsc --project ./test/tsconfig.json",
+        "test:report": "npm run lint && npm run unit:report"
       },
       "standard": {
         "ignore": [
           "example.mjs"
         ]
       },
-      "_id": "fastq@1.19.1",
-      "gitHead": "5a7e5668c9d20535945a5a406775609fd9f07352",
-      "_nodeVersion": "22.14.0",
+      "pre-commit": [
+        "test",
+        "typescript"
+      ],
       "_npmVersion": "10.9.2",
-      "dist": {
-        "integrity": "sha512-GwLTyxkCXjXbxqIhTsMI2Nui8huMPtnxg7krajPJAjnEG/iiOS7i+zCtWGZR9G0NBKbXKh6X9m9UIsYX/N6vvQ==",
-        "shasum": "d50eaba803c8846a883c16492821ebcd2cda55f5",
-        "tarball": "http://localhost:3000/fastq/-/fastq-1.19.1.tgz",
-        "fileCount": 15,
-        "unpackedSize": 45922,
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIA6FghASVb6zj5B2h0OQKUlx5GAzAz/ZtEYdxSoB9TJAAiEAm9x7r3ktzXhHZdLAyos1gMb4zrczP822dEY5OyHaerE="
-          }
-        ]
-      },
       "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "22.14.0",
+      "dependencies": {
+        "reusify": "^1.0.4"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "nyc": "^17.0.0",
+        "tape": "^5.0.0",
+        "async": "^3.1.0",
+        "snazzy": "^9.0.0",
+        "standard": "^16.0.0",
+        "neo-async": "^2.6.1",
+        "pre-commit": "^1.2.2",
+        "typescript": "^5.0.4"
+      }
     }
   },
   "time": {
     "created": "2015-06-14T18:25:18.741Z",
-    "modified": "2025-02-26T09:17:10.722Z",
+    "modified": "2025-12-23T07:58:59.348Z",
     "1.19.1": "2025-02-26T09:17:10.544Z"
   },
   "license": "ISC"
