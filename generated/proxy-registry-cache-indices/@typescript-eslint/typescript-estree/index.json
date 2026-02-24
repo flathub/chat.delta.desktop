@@ -1,6 +1,6 @@
 {
   "_id": "@typescript-eslint/typescript-estree",
-  "_rev": "4487-b1da289a2d0f501f96045f9ea802531b",
+  "_rev": "4572-7f9654e1f2c62f151639ae7bbc42d641",
   "name": "@typescript-eslint/typescript-estree",
   "dist-tags": {
     "rc-v3": "3.0.0-alpha.27",
@@ -9,15 +9,15 @@
     "rc-v": "6.0.0-alpha.58",
     "rc-v6": "7.0.0-alpha.0",
     "rc-v8": "8.0.0-alpha.62",
-    "latest": "8.50.1",
-    "canary": "8.50.2-alpha.2"
+    "canary": "8.56.2-alpha.0",
+    "latest": "8.56.1"
   },
   "versions": {
-    "8.46.2": {
+    "8.51.0": {
       "name": "@typescript-eslint/typescript-estree",
-      "version": "8.46.2",
+      "version": "8.51.0",
       "license": "MIT",
-      "_id": "@typescript-eslint/typescript-estree@8.46.2",
+      "_id": "@typescript-eslint/typescript-estree@8.51.0",
       "bugs": {
         "url": "https://github.com/typescript-eslint/typescript-eslint/issues"
       },
@@ -33,23 +33,23 @@
         ]
       },
       "dist": {
-        "shasum": "ab547a27e4222bb6a3281cb7e98705272e2c7d08",
-        "tarball": "http://localhost:3000/@typescript-eslint/typescript-estree/-/typescript-estree-8.46.2.tgz",
+        "shasum": "b57f5157d1ac2127bd7c2c9ad8060fa017df4a1a",
+        "tarball": "http://localhost:3000/@typescript-eslint/typescript-estree/-/typescript-estree-8.51.0.tgz",
         "fileCount": 87,
-        "integrity": "sha512-f7rW7LJ2b7Uh2EiQ+7sza6RDZnajbNbemn54Ob6fRwQbgcIn+GWfyuHDHRYgRoZu1P4AayVScrRW+YfbTvPQoQ==",
+        "integrity": "sha512-1qNjGqFRmlq0VW5iVlcyHBbCjPB7y6SxpBkrbhNWMy/65ZoncXCEPJxkRZL8McrseNH6lFhaxCIaX+vBuFnRng==",
         "signatures": [
           {
-            "sig": "MEQCIGeFok7AO5JiYunVxW0O+OYp17Lw0HNbde9Lr7JXIjpsAiA2zxRIqejZgieYgNyg+/VeNI2s3O4QVZ83rL/1k3L58w==",
+            "sig": "MEUCIE3oZFFkyrZ9OBjLTKupP/vXu0DUKjEx3Aa1MGHLk39iAiEA3QFj0F/gc+ZzTGD0J9l7y5v422ZHRYnVS5LwdIDPHBQ=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
         "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/@typescript-eslint%2ftypescript-estree@8.46.2",
+          "url": "http://localhost:3000/-/npm/v1/attestations/@typescript-eslint%2ftypescript-estree@8.51.0",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "unpackedSize": 363829
+        "unpackedSize": 364530
       },
       "type": "commonjs",
       "types": "./dist/index.d.ts",
@@ -71,7 +71,7 @@
         "url": "https://opencollective.com/typescript-eslint",
         "type": "opencollective"
       },
-      "gitHead": "55ca033ee88cc95cfac4ad6dea2257fbeb1d4657",
+      "gitHead": "e4c57f5996a9a3aed8a8c2b02712a9ce37db4928",
       "scripts": {
         "lint": "yarn run -BT nx lint",
         "test": "yarn run -BT nx test",
@@ -82,18 +82,17 @@
       },
       "_npmVersion": "11.5.2",
       "directories": {},
-      "_nodeVersion": "20.19.5",
+      "_nodeVersion": "20.19.6",
       "dependencies": {
         "debug": "^4.3.4",
         "semver": "^7.6.0",
-        "is-glob": "^4.0.3",
-        "fast-glob": "^3.3.2",
         "minimatch": "^9.0.4",
-        "ts-api-utils": "^2.1.0",
-        "@typescript-eslint/types": "8.46.2",
-        "@typescript-eslint/visitor-keys": "8.46.2",
-        "@typescript-eslint/tsconfig-utils": "8.46.2",
-        "@typescript-eslint/project-service": "8.46.2"
+        "tinyglobby": "^0.2.15",
+        "ts-api-utils": "^2.2.0",
+        "@typescript-eslint/types": "8.51.0",
+        "@typescript-eslint/visitor-keys": "8.51.0",
+        "@typescript-eslint/tsconfig-utils": "8.51.0",
+        "@typescript-eslint/project-service": "8.51.0"
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
@@ -102,7 +101,6 @@
         "rimraf": "*",
         "vitest": "^3.1.3",
         "typescript": "*",
-        "@types/is-glob": "^4.0.4",
         "@vitest/coverage-v8": "^3.1.3"
       },
       "peerDependencies": {
@@ -112,12 +110,12 @@
   },
   "time": {
     "created": "2019-01-19T17:13:21.441Z",
-    "modified": "2025-12-23T17:50:19.799Z",
+    "modified": "2026-02-23T17:33:36.695Z",
     "1.10.0": "2019-06-09T20:30:17.746Z",
     "2.0.0-alpha.0": "2019-07-21T18:09:02.903Z",
     "1.13.1-alpha.1": "2019-07-21T19:03:44.438Z",
     "1.13.1-alpha.2": "2019-07-21T23:06:14.358Z",
-    "8.46.2": "2025-10-20T17:05:00.033Z"
+    "8.51.0": "2025-12-29T17:05:13.049Z"
   },
   "license": "MIT"
 }

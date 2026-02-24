@@ -87,13 +87,95 @@
         ]
       },
       "_hasShrinkwrap": false
+    },
+    "5.0.0": {
+      "name": "yallist",
+      "version": "5.0.0",
+      "devDependencies": {
+        "prettier": "^3.2.5",
+        "tap": "^18.7.2",
+        "tshy": "^1.13.1",
+        "typedoc": "^0.25.13"
+      },
+      "scripts": {
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags",
+        "prepare": "tshy",
+        "pretest": "npm run prepare",
+        "presnap": "npm run prepare",
+        "test": "tap",
+        "snap": "tap",
+        "format": "prettier --write . --loglevel warn --ignore-path ../../.prettierignore --cache",
+        "typedoc": "typedoc"
+      },
+      "license": "BlueOak-1.0.0",
+      "tshy": {
+        "exports": {
+          "./package.json": "./package.json",
+          ".": "./src/index.ts"
+        }
+      },
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
+          }
+        }
+      },
+      "main": "./dist/commonjs/index.js",
+      "types": "./dist/commonjs/index.d.ts",
+      "type": "module",
+      "prettier": {
+        "semi": false,
+        "printWidth": 70,
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true,
+        "jsxSingleQuote": false,
+        "bracketSameLine": true,
+        "arrowParens": "avoid",
+        "endOfLine": "lf"
+      },
+      "engines": {
+        "node": ">=18"
+      },
+      "_id": "yallist@5.0.0",
+      "gitHead": "a082c2dd872bb3cd8fb92359ed66605064957cd4",
+      "bugs": {
+        "url": "https://github.com/isaacs/yallist/issues"
+      },
+      "_nodeVersion": "20.11.0",
+      "_npmVersion": "10.5.0",
+      "dist": {
+        "integrity": "sha512-YgvUTfwqyc7UXVMrB+SImsVYSmTS8X/tSrtdNZMImM+n7+QTriRXyXim0mBrTXNeqzVF0KWGgHPeiyViFFrNDw==",
+        "shasum": "00e2de443639ed0d78fd87de0d27469fbcffb533",
+        "tarball": "http://localhost:3000/yallist/-/yallist-5.0.0.tgz",
+        "fileCount": 13,
+        "unpackedSize": 80297,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCIQD6e4G4ytvhoms+0w0K9/h69xTaFaNhKrrQtsadvn51egIgFDoo7A3fA8NgnwexxWK9dLURqTrJhW0gluarpuWEJhI="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "modified": "2024-04-09T19:21:45.008Z",
     "created": "2015-12-18T08:02:25.789Z",
     "3.1.1": "2019-09-30T20:07:18.343Z",
-    "4.0.0": "2019-09-30T20:08:08.970Z"
+    "4.0.0": "2019-09-30T20:08:08.970Z",
+    "5.0.0": "2024-04-09T19:21:44.844Z"
   },
   "license": "BlueOak-1.0.0"
 }

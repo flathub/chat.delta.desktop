@@ -1,9 +1,9 @@
 {
   "_id": "ci-info",
-  "_rev": "43-6a9f3608b96c364701bd043c8f72563d",
+  "_rev": "44-98ee2b7c4729c488c0d7c65109e95282",
   "name": "ci-info",
   "dist-tags": {
-    "latest": "4.3.1"
+    "latest": "4.4.0"
   },
   "versions": {
     "3.9.0": {
@@ -54,12 +54,130 @@
         "standard": "^17.1.0",
         "clear-module": "^4.1.2"
       }
+    },
+    "4.3.1": {
+      "name": "ci-info",
+      "version": "4.3.1",
+      "license": "MIT",
+      "_id": "ci-info@4.3.1",
+      "bugs": {
+        "url": "https://github.com/watson/ci-info/issues"
+      },
+      "dist": {
+        "shasum": "355ad571920810b5623e11d40232f443f16f1daa",
+        "tarball": "http://localhost:3000/ci-info/-/ci-info-4.3.1.tgz",
+        "fileCount": 7,
+        "integrity": "sha512-Wdy2Igu8OcBpI2pZePZ5oWjPC38tmDVx5WKUXKwlLYkA0ozo85sLsLvkBbBn/sZaSCMFOGZJ14fvW9t5/d7kdA==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCrvmttoRyAJyCnLEZGjIQhOu5IMbAyAVQ6OgvIXFbPSAIhAL6QYGsROrjNd9rET8NNRQA2dBKfCUnzivRzofeTvciB",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/ci-info@4.3.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 29523
+      },
+      "main": "index.js",
+      "type": "commonjs",
+      "engines": {
+        "node": ">=8"
+      },
+      "funding": [
+        {
+          "url": "https://github.com/sponsors/sibiraj-s",
+          "type": "github"
+        }
+      ],
+      "gitHead": "fba6e3d71c94ffc9129a30b970ebb3f27656376d",
+      "scripts": {
+        "test": "standard && node test.js",
+        "build": "node sort-vendors.js && node create-typings.js",
+        "prepare": "husky install || true",
+        "lint:fix": "standard --fix"
+      },
+      "typings": "index.d.ts",
+      "_npmVersion": "11.6.1",
+      "directories": {},
+      "_nodeVersion": "22.20.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tape": "^5.9.0",
+        "husky": "^9.1.7",
+        "publint": "^0.3.12",
+        "standard": "^17.1.2",
+        "clear-module": "^4.1.2"
+      }
+    },
+    "4.4.0": {
+      "name": "ci-info",
+      "version": "4.4.0",
+      "main": "index.js",
+      "typings": "index.d.ts",
+      "type": "commonjs",
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/watson/ci-info/issues"
+      },
+      "funding": [
+        {
+          "type": "github",
+          "url": "https://github.com/sponsors/sibiraj-s"
+        }
+      ],
+      "scripts": {
+        "build": "node sort-vendors.js && node create-typings.js",
+        "lint:fix": "standard --fix",
+        "test": "standard && node test.js",
+        "prepare": "husky install || true"
+      },
+      "devDependencies": {
+        "clear-module": "^4.1.2",
+        "husky": "^9.1.7",
+        "publint": "^0.3.12",
+        "standard": "^17.1.2",
+        "tape": "^5.9.0"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "gitHead": "c4e1d0565552fb20ea3c133db2e056a574e78e6b",
+      "_id": "ci-info@4.4.0",
+      "_nodeVersion": "22.22.0",
+      "_npmVersion": "11.8.0",
+      "dist": {
+        "integrity": "sha512-77PSwercCZU2Fc4sX94eF8k8Pxte6JAwL4/ICZLFjJLqegs7kCuAsqqj/70NQF6TvDpgFjkubQB2FW2ZZddvQg==",
+        "shasum": "7d54eff9f54b45b62401c26032696eb59c8bd18c",
+        "tarball": "http://localhost:3000/ci-info/-/ci-info-4.4.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 29955,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/ci-info@4.4.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQD5n/+Y1cjQJJKIrAXUvVgplKmYeQnmUoZDzi+gawrYswIgHEa6kApFuXN8QHGzUYpXTB8t1MQMajyV41MgF1H+KAw="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2016-10-20T16:01:20.750Z",
-    "modified": "2025-10-05T11:52:59.684Z",
-    "3.9.0": "2023-10-04T04:56:10.209Z"
+    "modified": "2026-01-29T16:23:16.638Z",
+    "3.9.0": "2023-10-04T04:56:10.209Z",
+    "4.3.1": "2025-10-05T11:52:59.269Z",
+    "4.4.0": "2026-01-29T16:23:16.342Z"
   },
   "license": "MIT"
 }

@@ -1,0 +1,89 @@
+{
+  "_id": "exponential-backoff",
+  "_rev": "76-373a479ce42c66bf80ac3eebfa41bb17",
+  "name": "exponential-backoff",
+  "dist-tags": {
+    "latest": "3.1.3"
+  },
+  "versions": {
+    "3.1.3": {
+      "name": "exponential-backoff",
+      "version": "3.1.3",
+      "license": "Apache-2.0",
+      "_id": "exponential-backoff@3.1.3",
+      "bugs": {
+        "url": "https://github.com/coveooss/exponential-backoff/issues"
+      },
+      "dist": {
+        "shasum": "51cf92c1c0493c766053f9d3abee4434c244d2f6",
+        "tarball": "http://localhost:3000/exponential-backoff/-/exponential-backoff-3.1.3.tgz",
+        "fileCount": 47,
+        "integrity": "sha512-ZgEeZXj30q+I0EN+CbSSpIyPaJ5HVQD18Z1m+u1FXbAeT94mr1zw50q4q6jiiC447Nl/YTcIYSAftiGqetwXCA==",
+        "signatures": [
+          {
+            "sig": "MEUCIGlZUN4/E+mDno0FIRedAEDXF+iqFtmgLHjKSsO6VynJAiEAglIqH945AsbNiGEUU8MzzNZbdjLAKZKe4vLdahiuT84=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/exponential-backoff@3.1.3",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 55183
+      },
+      "jest": {
+        "testRegex": "\\.spec\\.ts$",
+        "transform": {
+          "^.+\\.ts$": "ts-jest"
+        },
+        "moduleFileExtensions": [
+          "ts",
+          "js"
+        ]
+      },
+      "main": "dist/backoff.js",
+      "husky": {
+        "hooks": {
+          "pre-commit": "lint-staged"
+        }
+      },
+      "types": "dist/backoff.d.ts",
+      "gitHead": "5622170828bd91dc149585bfa3d82c8972a75ac5",
+      "scripts": {
+        "test": "jest",
+        "build": "tsc",
+        "test:watch": "jest --watch"
+      },
+      "_npmVersion": "11.6.0",
+      "directories": {},
+      "lint-staged": {
+        "*.{ts,json,md}": [
+          "prettier --write",
+          "git add"
+        ]
+      },
+      "_nodeVersion": "24.9.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "jest": "^24.9.0",
+        "husky": "^3.0.9",
+        "ts-jest": "^24.1.0",
+        "prettier": "^1.18.2",
+        "typescript": "^3.6.4",
+        "@types/jest": "^24.0.18",
+        "@types/node": "^10.14.21",
+        "lint-staged": "^9.4.2"
+      }
+    }
+  },
+  "time": {
+    "created": "2018-07-06T19:14:56.493Z",
+    "modified": "2025-11-19T18:26:55.520Z",
+    "1.0.1": "2015-08-04T08:05:36.562Z",
+    "1.0.0": "2015-08-04T08:05:36.562Z",
+    "3.1.3": "2025-10-10T23:10:07.816Z"
+  },
+  "license": "Apache-2.0"
+}

@@ -1,0 +1,98 @@
+{
+  "_id": "minipass-fetch",
+  "_rev": "52-c7d6b656c1c8f149e47d460bc641d18a",
+  "name": "minipass-fetch",
+  "dist-tags": {
+    "latest": "5.0.2"
+  },
+  "versions": {
+    "4.0.1": {
+      "name": "minipass-fetch",
+      "version": "4.0.1",
+      "license": "MIT",
+      "_id": "minipass-fetch@4.0.1",
+      "bugs": {
+        "url": "https://github.com/npm/minipass-fetch/issues"
+      },
+      "tap": {
+        "nyc-arg": [
+          "--exclude",
+          "tap-snapshots/**"
+        ],
+        "coverage-map": "map.js",
+        "check-coverage": true
+      },
+      "dist": {
+        "shasum": "f2d717d5a418ad0b1a7274f9b913515d3e78f9e5",
+        "tarball": "http://localhost:3000/minipass-fetch/-/minipass-fetch-4.0.1.tgz",
+        "fileCount": 11,
+        "integrity": "sha512-j7U11C5HXigVuutxebFadoYBbd7VSdZWggSe64NVdvWNBqGAiXPL2QVCehjmw7lY1oF9gOllYbORh+hiNgfPgQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIHIEwu+3uIyL5vDHeeNzhKzAGQ8tuY4focen8Ejmh+G/AiEAmE7hGXa1749GbGibUJV5DObj87mOaY01eld+0Yxjois=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/minipass-fetch@4.0.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 46826
+      },
+      "main": "lib/index.js",
+      "engines": {
+        "node": "^18.17.0 || >=20.5.0"
+      },
+      "gitHead": "399b7a54a5402b94eed65e3906c031bd790de0cc",
+      "scripts": {
+        "lint": "npm run eslint",
+        "snap": "tap",
+        "test": "tap",
+        "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+        "lintfix": "npm run eslint -- --fix",
+        "postlint": "template-oss-check",
+        "posttest": "npm run lint",
+        "test:tls-fixtures": "./test/fixtures/tls/setup.sh",
+        "template-oss-apply": "template-oss-apply --force"
+      },
+      "_npmVersion": "11.1.0",
+      "directories": {},
+      "templateOSS": {
+        "publish": "true",
+        "version": "4.23.3",
+        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+      },
+      "_nodeVersion": "22.14.0",
+      "dependencies": {
+        "minipass": "^7.0.3",
+        "minizlib": "^3.0.1",
+        "minipass-sized": "^1.0.3"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.0.0",
+        "nock": "^13.2.4",
+        "parted": "^0.1.1",
+        "encoding": "^0.1.13",
+        "form-data": "^4.0.0",
+        "abort-controller": "^3.0.0",
+        "@npmcli/template-oss": "4.23.3",
+        "@npmcli/eslint-config": "^5.0.0",
+        "string-to-arraybuffer": "^1.0.2",
+        "@ungap/url-search-params": "^0.2.2",
+        "abortcontroller-polyfill": "~1.7.3"
+      },
+      "optionalDependencies": {
+        "encoding": "^0.1.13"
+      }
+    }
+  },
+  "time": {
+    "created": "2019-09-24T07:02:47.975Z",
+    "modified": "2026-02-23T18:35:09.403Z",
+    "4.0.1": "2025-02-26T23:15:44.323Z"
+  },
+  "license": "MIT"
+}

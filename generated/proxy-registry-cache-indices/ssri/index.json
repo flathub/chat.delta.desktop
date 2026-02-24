@@ -1,0 +1,86 @@
+{
+  "_id": "ssri",
+  "_rev": "88-63780582160bc51a1b3ae57e44e5e652",
+  "name": "ssri",
+  "dist-tags": {
+    "latest": "13.0.1"
+  },
+  "versions": {
+    "12.0.0": {
+      "name": "ssri",
+      "version": "12.0.0",
+      "license": "ISC",
+      "_id": "ssri@12.0.0",
+      "bugs": {
+        "url": "https://github.com/npm/ssri/issues"
+      },
+      "tap": {
+        "nyc-arg": [
+          "--exclude",
+          "tap-snapshots/**"
+        ],
+        "check-coverage": true
+      },
+      "dist": {
+        "shasum": "bcb4258417c702472f8191981d3c8a771fee6832",
+        "tarball": "http://localhost:3000/ssri/-/ssri-12.0.0.tgz",
+        "fileCount": 4,
+        "integrity": "sha512-S7iGNosepx9RadX82oimUkvr0Ct7IjJbEbs4mJcTxst8um95J3sDYU1RBEOvdu6oL1Wek2ODI5i4MAw+dZ6cAQ==",
+        "signatures": [
+          {
+            "sig": "MEQCIEb5mJKpOkuz9iS0xmaWmGpvJ3m8TgPIIAZ7Og2co+VeAiBeFqE8xqOr0KxYiHJi3B58EH3vfHcLd/GBuPnMn6h0RQ==",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/ssri@12.0.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 38760
+      },
+      "main": "lib/index.js",
+      "engines": {
+        "node": "^18.17.0 || >=20.5.0"
+      },
+      "gitHead": "35c1f962f76ea3e198efe42408249c9738369a35",
+      "scripts": {
+        "lint": "npm run eslint",
+        "snap": "tap",
+        "test": "tap",
+        "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+        "lintfix": "npm run eslint -- --fix",
+        "coverage": "tap",
+        "postlint": "template-oss-check",
+        "posttest": "npm run lint",
+        "prerelease": "npm t",
+        "postrelease": "npm publish",
+        "template-oss-apply": "template-oss-apply --force"
+      },
+      "_npmVersion": "10.8.3",
+      "directories": {},
+      "templateOSS": {
+        "publish": "true",
+        "version": "4.23.3",
+        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+      },
+      "_nodeVersion": "22.9.0",
+      "dependencies": {
+        "minipass": "^7.0.3"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.0.1",
+        "@npmcli/template-oss": "4.23.3",
+        "@npmcli/eslint-config": "^5.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2017-03-23T04:56:05.227Z",
+    "modified": "2026-02-09T21:46:22.749Z",
+    "12.0.0": "2024-09-25T17:31:17.139Z"
+  },
+  "license": "ISC"
+}

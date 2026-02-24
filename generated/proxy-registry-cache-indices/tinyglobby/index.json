@@ -1,0 +1,100 @@
+{
+  "_id": "tinyglobby",
+  "_rev": "20-85982807a47bf6c3b188ff25c1ad76bc",
+  "name": "tinyglobby",
+  "dist-tags": {
+    "latest": "0.2.15"
+  },
+  "versions": {
+    "0.2.15": {
+      "name": "tinyglobby",
+      "version": "0.2.15",
+      "type": "module",
+      "main": "./dist/index.cjs",
+      "module": "./dist/index.mjs",
+      "types": "./dist/index.d.cts",
+      "exports": {
+        ".": {
+          "import": "./dist/index.mjs",
+          "require": "./dist/index.cjs"
+        },
+        "./package.json": "./package.json"
+      },
+      "sideEffects": false,
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/SuperchupuDev/tinyglobby/issues"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/SuperchupuDev"
+      },
+      "dependencies": {
+        "fdir": "^6.5.0",
+        "picomatch": "^4.0.3"
+      },
+      "devDependencies": {
+        "@biomejs/biome": "^2.2.3",
+        "@types/node": "^24.3.1",
+        "@types/picomatch": "^4.0.2",
+        "fast-glob": "^3.3.3",
+        "fs-fixture": "^2.8.1",
+        "glob": "^11.0.3",
+        "tinybench": "^5.0.1",
+        "tsdown": "^0.14.2",
+        "typescript": "^5.9.2"
+      },
+      "engines": {
+        "node": ">=12.0.0"
+      },
+      "publishConfig": {
+        "provenance": true
+      },
+      "scripts": {
+        "bench": "node benchmark/bench.ts",
+        "bench:setup": "node benchmark/setup.ts",
+        "build": "tsdown",
+        "check": "biome check",
+        "check:fix": "biome check --write --unsafe",
+        "format": "biome format --write",
+        "lint": "biome lint",
+        "test": "node --test \"test/**/*.ts\"",
+        "test:coverage": "node --test --experimental-test-coverage \"test/**/*.ts\"",
+        "test:only": "node --test --test-only \"test/**/*.ts\"",
+        "typecheck": "tsc --noEmit"
+      },
+      "_id": "tinyglobby@0.2.15",
+      "_integrity": "sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==",
+      "_resolved": "/tmp/6207be2663554fe1e8a4d68ef57a033c/tinyglobby-0.2.15.tgz",
+      "_from": "file:tinyglobby-0.2.15.tgz",
+      "_nodeVersion": "24.7.0",
+      "_npmVersion": "11.5.1",
+      "dist": {
+        "integrity": "sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==",
+        "shasum": "e228dd1e638cea993d2fdb4fcd2d4602a79951c2",
+        "tarball": "http://localhost:3000/tinyglobby/-/tinyglobby-0.2.15.tgz",
+        "fileCount": 7,
+        "unpackedSize": 40175,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/tinyglobby@0.2.15",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQC8HF4ee+yQVwNecc4j22BthJkd5FpRgG2NOCajpq9UFgIgCMmZC9ueg34V6HdIsnRttutZQ80Iu4DGCsVvdeATDsY="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2024-07-22T18:19:33.107Z",
+    "modified": "2025-09-06T18:52:04.513Z",
+    "0.2.15": "2025-09-06T18:52:04.151Z"
+  },
+  "license": "MIT"
+}

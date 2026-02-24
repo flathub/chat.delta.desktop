@@ -1,10 +1,10 @@
 {
   "_id": "electron-publish",
-  "_rev": "315-63f17fb4b8ad6e3629f7da9df5067220",
+  "_rev": "322-761e463b7407b12bdcd078834fda87fa",
   "name": "electron-publish",
   "dist-tags": {
-    "latest": "26.0.11",
-    "next": "26.3.4"
+    "latest": "26.8.1",
+    "next": "26.8.1"
   },
   "versions": {
     "24.13.1": {
@@ -49,12 +49,64 @@
       "devDependencies": {
         "@types/mime": "2.0.3"
       }
+    },
+    "26.6.0": {
+      "name": "electron-publish",
+      "version": "26.6.0",
+      "license": "MIT",
+      "_id": "electron-publish@26.6.0",
+      "bugs": {
+        "url": "https://github.com/electron-userland/electron-builder/issues"
+      },
+      "dist": {
+        "shasum": "94e8f00c163376ebb6b296544c11b61d3afc027d",
+        "tarball": "http://localhost:3000/electron-publish/-/electron-publish-26.6.0.tgz",
+        "fileCount": 42,
+        "integrity": "sha512-LsyHMMqbvJ2vsOvuWJ19OezgF2ANdCiHpIucDHNiLhuI+/F3eW98ouzWSRmXXi82ZOPZXC07jnIravY4YYwCLQ==",
+        "signatures": [
+          {
+            "sig": "MEYCIQC1I+3wAQfxORFEu+qEDvJVK7Ecg8NfEF/HdujHnUnP5wIhAOLmKu7tRtKO03Ji7sIKOvz64tzZCassKfupqcscNPcv",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/electron-publish@26.6.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 179138
+      },
+      "main": "out/index.js",
+      "_from": "file:electron-publish-26.6.0.tgz",
+      "typings": "./out/index.d.ts",
+      "_resolved": "/tmp/ad416c89d5904e1de22be837b7ff1bcf/electron-publish-26.6.0.tgz",
+      "_integrity": "sha512-LsyHMMqbvJ2vsOvuWJ19OezgF2ANdCiHpIucDHNiLhuI+/F3eW98ouzWSRmXXi82ZOPZXC07jnIravY4YYwCLQ==",
+      "_npmVersion": "11.6.2",
+      "directories": {},
+      "_nodeVersion": "22.22.0",
+      "dependencies": {
+        "mime": "^2.5.2",
+        "chalk": "^4.1.2",
+        "fs-extra": "^10.1.0",
+        "lazy-val": "^1.0.5",
+        "form-data": "^4.0.5",
+        "builder-util": "26.4.1",
+        "@types/fs-extra": "^9.0.11",
+        "builder-util-runtime": "9.5.1"
+      },
+      "_hasShrinkwrap": false,
+      "readmeFilename": "readme.md",
+      "devDependencies": {
+        "@types/mime": "2.0.3"
+      }
     }
   },
   "time": {
     "created": "2017-02-17T20:16:24.865Z",
-    "modified": "2025-12-04T14:48:04.511Z",
-    "24.13.1": "2024-02-17T20:48:24.740Z"
+    "modified": "2026-02-18T13:40:49.727Z",
+    "24.13.1": "2024-02-17T20:48:24.740Z",
+    "26.6.0": "2026-01-27T23:45:24.546Z"
   },
   "license": "MIT"
 }

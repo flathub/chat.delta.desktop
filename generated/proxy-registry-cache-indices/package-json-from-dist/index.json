@@ -1,0 +1,97 @@
+{
+  "_id": "package-json-from-dist",
+  "_rev": "1-8b91eea7ec0c434a9b354c36d9472aa4",
+  "name": "package-json-from-dist",
+  "dist-tags": {
+    "latest": "1.0.1"
+  },
+  "versions": {
+    "1.0.1": {
+      "name": "package-json-from-dist",
+      "version": "1.0.1",
+      "main": "./dist/commonjs/index.js",
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
+          }
+        }
+      },
+      "scripts": {
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags",
+        "prepare": "tshy",
+        "pretest": "npm run prepare",
+        "presnap": "npm run prepare",
+        "test": "tap",
+        "snap": "tap",
+        "format": "prettier --write . --log-level warn",
+        "typedoc": "typedoc"
+      },
+      "license": "BlueOak-1.0.0",
+      "devDependencies": {
+        "@types/node": "^20.12.12",
+        "prettier": "^3.2.5",
+        "tap": "^18.5.3",
+        "typedoc": "^0.24.8",
+        "typescript": "^5.1.6",
+        "tshy": "^1.14.0"
+      },
+      "prettier": {
+        "semi": false,
+        "printWidth": 70,
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true,
+        "jsxSingleQuote": false,
+        "bracketSameLine": true,
+        "arrowParens": "avoid",
+        "endOfLine": "lf",
+        "experimentalTernaries": true
+      },
+      "tshy": {
+        "exports": {
+          "./package.json": "./package.json",
+          ".": "./src/index.ts"
+        }
+      },
+      "types": "./dist/commonjs/index.d.ts",
+      "type": "module",
+      "_id": "package-json-from-dist@1.0.1",
+      "gitHead": "5a84db04548091c086c514d3bac5c3141e790b6f",
+      "bugs": {
+        "url": "https://github.com/isaacs/package-json-from-dist/issues"
+      },
+      "_nodeVersion": "20.13.1",
+      "_npmVersion": "10.7.0",
+      "dist": {
+        "integrity": "sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==",
+        "shasum": "4f1471a010827a86f94cfd9b0727e36d267de505",
+        "tarball": "http://localhost:3000/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz",
+        "fileCount": 13,
+        "unpackedSize": 36453,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCIGbKVHGyBGz61GU2Px13p2c13NJwjH7LUUdW70YfTvmRAiEAr+V9CghSH/9MpoBpC/gPqTi8oz5cOwncep7a/Vadbvw="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2024-05-14T17:57:54.958Z",
+    "modified": "2024-09-26T18:59:09.137Z",
+    "1.0.1": "2024-09-26T18:59:08.941Z"
+  },
+  "license": "BlueOak-1.0.0"
+}

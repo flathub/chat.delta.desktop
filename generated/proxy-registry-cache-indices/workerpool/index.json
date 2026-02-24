@@ -57,12 +57,71 @@
         "find-process": "1.4.7",
         "@babel/preset-env": "7.22.20"
       }
+    },
+    "9.3.4": {
+      "name": "workerpool",
+      "version": "9.3.4",
+      "license": "Apache-2.0",
+      "_id": "workerpool@9.3.4",
+      "bugs": {
+        "url": "https://github.com/josdejong/workerpool/issues"
+      },
+      "dist": {
+        "shasum": "f6c92395b2141afd78e2a889e80cb338fe9fca41",
+        "tarball": "http://localhost:3000/workerpool/-/workerpool-9.3.4.tgz",
+        "fileCount": 38,
+        "integrity": "sha512-TmPRQYYSAnnDiEB0P/Ytip7bFGvqnSU6I2BcuSw7Hx+JSg/DsUi5ebYfc8GYaSdpuvOcEs6dXxPurOYpe9QFwg==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCiqSBbwSzxC1G3ko5/9LPg02G2iN1U11rcnKz85B/nzwIgfUxDhKkekOToDWWh8wqBngn7k9fv1InzwXPd/VwV5HI=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 557793
+      },
+      "main": "src/index.js",
+      "types": "types/index.d.ts",
+      "browser": "dist/workerpool.js",
+      "gitHead": "c15cebc11625f8a91abc442e876cb459b57297a3",
+      "scripts": {
+        "test": "npm run build && mocha test && npm run test:types",
+        "build": "rollup -c rollup.config.mjs && npm run build:types",
+        "watch": "rollup -c rollup.config.mjs -w",
+        "coverage": "npm run build && c8 mocha && c8 report --reporter=html && echo Coverage report is available at ./coverage/index.html",
+        "test:debug": "npm run build && mocha debug test",
+        "test:types": "tsc -p test/types",
+        "build:types": "tsc -p .",
+        "prepublishOnly": "npm run test && npm run build"
+      },
+      "_npmVersion": "11.4.2",
+      "directories": {},
+      "_nodeVersion": "24.1.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "c8": "10.1.3",
+        "mocha": "11.7.2",
+        "rollup": "4.50.1",
+        "core-js": "3.45.1",
+        "fs-extra": "11.3.1",
+        "typescript": "5.9.2",
+        "@babel/core": "7.28.4",
+        "@types/node": "24.3.1",
+        "date-format": "4.0.14",
+        "find-process": "2.0.0",
+        "@babel/preset-env": "7.28.3",
+        "@rollup/plugin-json": "6.1.0",
+        "@rollup/plugin-babel": "6.0.4",
+        "@rollup/plugin-terser": "0.4.4",
+        "@rollup/plugin-commonjs": "28.0.6",
+        "@rollup/plugin-node-resolve": "16.0.1"
+      }
     }
   },
   "time": {
     "created": "2014-05-02T18:38:48.074Z",
     "modified": "2025-11-19T15:03:33.868Z",
-    "6.5.1": "2023-10-11T09:00:08.734Z"
+    "6.5.1": "2023-10-11T09:00:08.734Z",
+    "9.3.4": "2025-09-10T08:56:08.990Z"
   },
   "license": "Apache-2.0"
 }

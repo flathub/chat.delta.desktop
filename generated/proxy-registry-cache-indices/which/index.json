@@ -1,9 +1,9 @@
 {
   "_id": "which",
-  "_rev": "94-5b3a1070992ae18ceec434bf9c6ee973",
+  "_rev": "95-2757a73e0bd50596a4190ce2e7b945bb",
   "name": "which",
   "dist-tags": {
-    "latest": "6.0.0"
+    "latest": "6.0.1"
   },
   "versions": {
     "2.0.2": {
@@ -61,15 +61,86 @@
         "mkdirp": "^0.5.0",
         "rimraf": "^2.6.2"
       }
+    },
+    "5.0.0": {
+      "name": "which",
+      "version": "5.0.0",
+      "license": "ISC",
+      "_id": "which@5.0.0",
+      "bugs": {
+        "url": "https://github.com/npm/node-which/issues"
+      },
+      "bin": {
+        "node-which": "bin/which.js"
+      },
+      "tap": {
+        "nyc-arg": [
+          "--exclude",
+          "tap-snapshots/**"
+        ],
+        "check-coverage": true
+      },
+      "dist": {
+        "shasum": "d93f2d93f79834d4363c7d0c23e00d07c466c8d6",
+        "tarball": "http://localhost:3000/which/-/which-5.0.0.tgz",
+        "fileCount": 5,
+        "integrity": "sha512-JEdGzHwwkrbWoGOlIHqQ5gtprKGOenpDHpxE9zVR1bWbOtYRyPPHMe9FaP6x61CmNaTThSkb0DAJte5jD+DmzQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCS2eteVPSvsL5TUrOB/UoA4c/f04/wnyN/KL/bv1v6QAIgYxhqQX6hbluit1v/hKWZQpEdfSggGwQzlcOnhwbnLbs=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/which@5.0.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 7477
+      },
+      "main": "lib/index.js",
+      "engines": {
+        "node": "^18.17.0 || >=20.5.0"
+      },
+      "gitHead": "b8d11c791296a3baf44703352619621215189b0e",
+      "scripts": {
+        "lint": "npm run eslint",
+        "snap": "tap",
+        "test": "tap",
+        "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+        "lintfix": "npm run eslint -- --fix",
+        "postlint": "template-oss-check",
+        "posttest": "npm run lint",
+        "template-oss-apply": "template-oss-apply --force"
+      },
+      "_npmVersion": "10.8.3",
+      "directories": {},
+      "templateOSS": {
+        "publish": "true",
+        "version": "4.23.3",
+        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+      },
+      "_nodeVersion": "22.9.0",
+      "dependencies": {
+        "isexe": "^3.1.1"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.3.0",
+        "@npmcli/template-oss": "4.23.3",
+        "@npmcli/eslint-config": "^5.0.0"
+      }
     }
   },
   "time": {
     "created": "2011-08-07T18:36:12.410Z",
-    "modified": "2025-11-10T17:25:40.335Z",
+    "modified": "2026-02-10T15:41:44.206Z",
     "1.0.4": "2012-03-01T16:26:45.298Z",
     "1.2.2": "2016-01-22T02:06:39.513Z",
     "1.2.3": "2016-01-26T02:15:06.654Z",
-    "2.0.2": "2019-11-18T22:26:15.325Z"
+    "2.0.2": "2019-11-18T22:26:15.325Z",
+    "5.0.0": "2024-10-01T18:02:58.779Z"
   },
   "license": "ISC"
 }

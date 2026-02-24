@@ -1,13 +1,13 @@
 {
   "_id": "glob",
-  "_rev": "885-05764fa37fc3f4004149d070644d1033",
+  "_rev": "892-640c45c865a78faa93cee840ac240f5d",
   "name": "glob",
   "dist-tags": {
     "legacy": "4.5.3",
     "v7-legacy": "7.2.0",
+    "legacy-v9": "9.3.5",
     "legacy-v10": "10.5.0",
-    "latest": "13.0.0",
-    "legacy-v9": "9.3.5"
+    "latest": "13.0.6"
   },
   "versions": {
     "7.2.3": {
@@ -54,7 +54,7 @@
         "prepublish": "npm run benchclean",
         "test-regen": "npm run profclean && TEST_REGEN=1 node test/00-setup.js"
       },
-      "deprecated": "Glob versions prior to v9 are no longer supported",
+      "deprecated": "Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
       "_npmVersion": "8.8.0",
       "directories": {},
       "_nodeVersion": "18.1.0",
@@ -127,7 +127,7 @@
         "prepublish": "npm run benchclean",
         "test-regen": "npm run profclean && TEST_REGEN=1 node test/00-setup.js"
       },
-      "deprecated": "Glob versions prior to v9 are no longer supported",
+      "deprecated": "Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
       "_npmVersion": "9.2.0",
       "directories": {},
       "_nodeVersion": "19.4.0",
@@ -147,11 +147,11 @@
         "rimraf": "^2.2.8"
       }
     },
-    "10.3.15": {
+    "10.5.0": {
       "name": "glob",
-      "version": "10.3.15",
+      "version": "10.5.0",
       "license": "ISC",
-      "_id": "glob@10.3.15",
+      "_id": "glob@10.5.0",
       "bugs": {
         "url": "https://github.com/isaacs/node-glob/issues"
       },
@@ -162,17 +162,17 @@
         "before": "test/00-setup.ts"
       },
       "dist": {
-        "shasum": "e72bc61bc3038c90605f5dd48543dc67aaf3b50d",
-        "tarball": "http://localhost:3000/glob/-/glob-10.3.15.tgz",
+        "shasum": "8ec0355919cd3338c28428a23d4f24ecc5fe738c",
+        "tarball": "http://localhost:3000/glob/-/glob-10.5.0.tgz",
         "fileCount": 65,
-        "integrity": "sha512-0c6RlJt1TICLyvJYIApxb8GsXoai0KUP7AxKKAtsYXdgJR1mGEUa7DgwShbdk1nly0PYoZj01xd4hzbq3fsjpw==",
+        "integrity": "sha512-DfXN8DfhJ7NH3Oe7cFmu3NCu1wKbkReJ8TorzSAFbSKrlNaQSKfIzqYqVY8zlbs2NLBbWpRiU52GX2PbaBVNkg==",
         "signatures": [
           {
-            "sig": "MEQCIHnLr5bfuu//yukpO/4PVSAN8UbQ1K6zTQuF+JS+Sle6AiBK99Yr4fBawMxWLQYTWS4r57yPAro5RdtGou1UrWKEBw==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEYCIQCF7HApwpdWhmtU8stDTX2XBLz5uDuTEHpWY7iTZY7TBQIhAPrQ4zaeCakAntKyu79uKJwsP+nVIr80HWP576yKVXU6",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 460433
+        "unpackedSize": 482422
       },
       "main": "./dist/commonjs/index.js",
       "tshy": {
@@ -184,9 +184,7 @@
       },
       "type": "module",
       "types": "./dist/commonjs/index.d.ts",
-      "engines": {
-        "node": ">=16 || 14 >=14.18"
-      },
+      "module": "./dist/esm/index.js",
       "exports": {
         ".": {
           "import": {
@@ -203,13 +201,13 @@
       "funding": {
         "url": "https://github.com/sponsors/isaacs"
       },
-      "gitHead": "921c4b91d49a8b38c48087279bad42785503cfbb",
+      "gitHead": "56774ef73b495eb0b17cdd0f42921f5ef62297c1",
       "scripts": {
         "prof": "bash prof.sh",
         "snap": "tap",
         "test": "tap",
         "bench": "bash benchmark.sh",
-        "format": "prettier --write . --loglevel warn",
+        "format": "prettier --write . --log-level warn",
         "prepare": "tshy",
         "preprof": "npm run prepare",
         "presnap": "npm run prepare",
@@ -233,29 +231,34 @@
         "arrowParens": "avoid",
         "singleQuote": true,
         "jsxSingleQuote": false,
-        "bracketSameLine": true
+        "bracketSameLine": true,
+        "experimentalTernaries": true
       },
-      "_npmVersion": "10.7.0",
+      "deprecated": "Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
+      "_npmVersion": "11.4.2",
       "directories": {},
-      "_nodeVersion": "20.11.0",
+      "_nodeVersion": "24.4.1",
       "dependencies": {
-        "minipass": "^7.0.4",
-        "jackspeak": "^2.3.6",
-        "minimatch": "^9.0.1",
-        "path-scurry": "^1.11.0",
-        "foreground-child": "^3.1.0"
+        "minipass": "^7.1.2",
+        "jackspeak": "^3.1.2",
+        "minimatch": "^9.0.4",
+        "path-scurry": "^1.11.1",
+        "foreground-child": "^3.1.0",
+        "package-json-from-dist": "^1.0.0"
+      },
+      "publishConfig": {
+        "tag": "legacy-v10"
       },
       "_hasShrinkwrap": false,
+      "readmeFilename": "README.md",
       "devDependencies": {
-        "tap": "^18.7.2",
-        "tshy": "^1.12.0",
+        "tap": "^19.0.0",
+        "tshy": "^1.14.0",
         "memfs": "^3.4.13",
         "mkdirp": "^3.0.1",
-        "rimraf": "^5.0.1",
-        "ts-node": "^10.9.2",
+        "rimraf": "^5.0.7",
         "typedoc": "^0.25.12",
-        "prettier": "^2.8.3",
-        "typescript": "^5.2.2",
+        "prettier": "^3.2.5",
         "@types/node": "^20.11.30",
         "sync-content": "^1.0.2"
       }
@@ -263,11 +266,11 @@
   },
   "time": {
     "created": "2011-01-02T22:10:36.356Z",
-    "modified": "2025-11-24T23:15:06.669Z",
-    "1.0.3": "2011-01-02T22:10:36.356Z",
+    "modified": "2026-02-19T17:26:33.383Z",
     "1.0.2": "2011-01-02T22:10:36.356Z",
-    "1.0.0": "2011-01-02T22:10:36.356Z",
     "1.0.1": "2011-01-02T22:10:36.356Z",
+    "1.0.0": "2011-01-02T22:10:36.356Z",
+    "1.0.3": "2011-01-02T22:10:36.356Z",
     "2.0.0": "2011-02-19T21:35:22.467Z",
     "2.0.1": "2011-02-20T20:02:51.964Z",
     "2.0.2": "2011-02-20T20:30:44.507Z",
@@ -282,7 +285,7 @@
     "6.0.0": "2015-11-11T19:26:32.966Z",
     "7.2.3": "2022-05-15T14:44:04.854Z",
     "8.1.0": "2023-01-14T22:35:33.626Z",
-    "10.3.15": "2024-05-12T02:47:48.091Z"
+    "10.5.0": "2025-11-18T01:34:51.120Z"
   },
   "license": "BlueOak-1.0.0"
 }

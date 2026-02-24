@@ -1,0 +1,62 @@
+{
+  "_id": "minipass-collect",
+  "_rev": "5-a0713db37a46904b71776ef9702a0de8",
+  "name": "minipass-collect",
+  "dist-tags": {
+    "latest": "2.0.1"
+  },
+  "versions": {
+    "2.0.1": {
+      "name": "minipass-collect",
+      "version": "2.0.1",
+      "license": "ISC",
+      "scripts": {
+        "test": "tap",
+        "snap": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "tap": {
+        "check-coverage": true
+      },
+      "devDependencies": {
+        "tap": "^16.3.8"
+      },
+      "dependencies": {
+        "minipass": "^7.0.3"
+      },
+      "engines": {
+        "node": ">=16 || 14 >=14.17"
+      },
+      "_id": "minipass-collect@2.0.1",
+      "gitHead": "a0a97f9e714fd60a3a14373c09f486309b5cc371",
+      "bugs": {
+        "url": "https://github.com/isaacs/minipass-collect/issues"
+      },
+      "_nodeVersion": "18.16.0",
+      "_npmVersion": "9.8.1",
+      "dist": {
+        "integrity": "sha512-D7V8PO9oaz7PWGLbCACuI1qEOsq7UKfLotx/C0Aet43fCUB/wfQ7DYeq2oR/svFJGYDHPr38SHATeaj/ZoKHKw==",
+        "shasum": "1621bc77e12258a12c60d34e2276ec5c20680863",
+        "tarball": "http://localhost:3000/minipass-collect/-/minipass-collect-2.0.1.tgz",
+        "fileCount": 4,
+        "unpackedSize": 4963,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCIGHm7nziWUCc9523LXf4MAFCd60uXbf2OoL2HVQAfgfnAiEAoWPujoOaz1kdIW34UYkfRWW0c500oT2p2EStSmrRRFI="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2019-09-15T22:24:54.265Z",
+    "modified": "2023-08-20T19:38:32.235Z",
+    "2.0.1": "2023-08-20T19:38:32.048Z"
+  },
+  "license": "ISC"
+}

@@ -1,0 +1,86 @@
+{
+  "_id": "nopt",
+  "_rev": "160-c4240da9714fda60ab69a185446f195b",
+  "name": "nopt",
+  "dist-tags": {
+    "latest": "9.0.0"
+  },
+  "versions": {
+    "8.1.0": {
+      "name": "nopt",
+      "version": "8.1.0",
+      "license": "ISC",
+      "_id": "nopt@8.1.0",
+      "bugs": {
+        "url": "https://github.com/npm/nopt/issues"
+      },
+      "bin": {
+        "nopt": "bin/nopt.js"
+      },
+      "tap": {
+        "nyc-arg": [
+          "--exclude",
+          "tap-snapshots/**"
+        ]
+      },
+      "dist": {
+        "shasum": "b11d38caf0f8643ce885818518064127f602eae3",
+        "tarball": "http://localhost:3000/nopt/-/nopt-8.1.0.tgz",
+        "fileCount": 8,
+        "integrity": "sha512-ieGu42u/Qsa4TFktmaKEwM6MQH0pOWnaB3htzh0JRtx84+Mebc0cbZYN5bC+6WTZ4+77xrL9Pn5m7CV6VIkV7A==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCZL81e8uR+danfKFoFUHkO//R1eMRbfTZ0ROPeVoh7LAIgLoH5iRBtSGeZjMiid2sDN4WSnBEXqAnnOqUxDDnRRFg=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/nopt@8.1.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 28128
+      },
+      "main": "lib/nopt.js",
+      "engines": {
+        "node": "^18.17.0 || >=20.5.0"
+      },
+      "gitHead": "e8cc07120b4acb938a182fa7a1cc7453d0c4cbfa",
+      "scripts": {
+        "lint": "npm run eslint",
+        "snap": "tap",
+        "test": "tap",
+        "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+        "lintfix": "npm run eslint -- --fix",
+        "postlint": "template-oss-check",
+        "posttest": "npm run lint",
+        "template-oss-apply": "template-oss-apply --force"
+      },
+      "_npmVersion": "11.0.0",
+      "directories": {},
+      "templateOSS": {
+        "publish": true,
+        "version": "4.23.6",
+        "windowsCI": false,
+        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+      },
+      "_nodeVersion": "22.12.0",
+      "dependencies": {
+        "abbrev": "^3.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.3.0",
+        "@npmcli/template-oss": "4.23.6",
+        "@npmcli/eslint-config": "^5.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2011-03-30T03:23:55.464Z",
+    "modified": "2025-10-22T15:27:15.961Z",
+    "8.1.0": "2025-01-21T17:15:45.225Z"
+  },
+  "license": "ISC"
+}

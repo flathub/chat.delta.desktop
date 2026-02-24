@@ -66,12 +66,71 @@
         "@typescript-eslint/eslint-plugin": "1.6.0",
         "eslint-import-resolver-typescript": "1.1.1"
       }
+    },
+    "7.0.6": {
+      "name": "https-proxy-agent",
+      "version": "7.0.6",
+      "license": "MIT",
+      "_id": "https-proxy-agent@7.0.6",
+      "bugs": {
+        "url": "https://github.com/TooTallNate/proxy-agents/issues"
+      },
+      "dist": {
+        "shasum": "da8dfeac7da130b05c2ba4b59c9b6cd66611a6b9",
+        "tarball": "http://localhost:3000/https-proxy-agent/-/https-proxy-agent-7.0.6.tgz",
+        "fileCount": 12,
+        "integrity": "sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==",
+        "signatures": [
+          {
+            "sig": "MEQCIGQmE/GtFh47FHNYydO0kHVKVPJ3xHC8374L5yFaZwr7AiBPZDC76EJqXcrgPjMTGm9K5WZjFnK9aQJZh1/K2XXGXQ==",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 35157
+      },
+      "main": "./dist/index.js",
+      "_from": "file:https-proxy-agent-7.0.6.tgz",
+      "types": "./dist/index.d.ts",
+      "engines": {
+        "node": ">= 14"
+      },
+      "scripts": {
+        "lint": "eslint --ext .ts",
+        "pack": "node ../../scripts/pack.mjs",
+        "test": "jest --env node --verbose --bail test/test.ts",
+        "build": "tsc",
+        "test-e2e": "jest --env node --verbose --bail test/e2e.test.ts"
+      },
+      "_resolved": "/tmp/6eec5581e8f502f3b759131ee0e89546/https-proxy-agent-7.0.6.tgz",
+      "_integrity": "sha512-vK9P5/iUfdl95AI+JVyUuIcVtd4ofvtrOr3HNtM2yxC9bnMbEdp3x01OhQNnjb8IJYi38VlTE3mBXwcfvywuSw==",
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "_nodeVersion": "20.18.1",
+      "dependencies": {
+        "debug": "4",
+        "agent-base": "^7.1.2"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "jest": "^29.5.0",
+        "proxy": "2.2.0",
+        "ts-jest": "^29.1.0",
+        "tsconfig": "0.0.0",
+        "typescript": "^5.0.4",
+        "@types/jest": "^29.5.1",
+        "@types/node": "^14.18.45",
+        "async-retry": "^1.3.3",
+        "@types/debug": "4",
+        "async-listen": "^3.0.0",
+        "@types/async-retry": "^1.4.5"
+      }
     }
   },
   "time": {
     "created": "2013-07-09T20:44:51.282Z",
     "modified": "2025-10-15T03:28:08.551Z",
-    "5.0.1": "2022-04-14T18:42:00.761Z"
+    "5.0.1": "2022-04-14T18:42:00.761Z",
+    "7.0.6": "2024-12-07T03:32:09.302Z"
   },
   "license": "MIT"
 }

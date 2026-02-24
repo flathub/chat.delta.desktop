@@ -43,12 +43,75 @@
         "should": "^11.2.1",
         "standard": "^9.0.2"
       }
+    },
+    "11.0.7": {
+      "name": "dotenv-expand",
+      "version": "11.0.7",
+      "license": "BSD-2-Clause",
+      "_id": "dotenv-expand@11.0.7",
+      "bugs": {
+        "url": "https://github.com/motdotla/dotenv-expand/issues"
+      },
+      "dist": {
+        "shasum": "af695aea007d6fdc84c86cd8d0ad7beb40a0bd08",
+        "tarball": "http://localhost:3000/dotenv-expand/-/dotenv-expand-11.0.7.tgz",
+        "fileCount": 9,
+        "integrity": "sha512-zIHwmZPRshsCdpMDyVsqGmgyP0yT8GAgXUnkdAoJisxvf33k7yO6OuoKmcTGuXPWSsm8Oh88nZicRLA9Y0rUeA==",
+        "signatures": [
+          {
+            "sig": "MEUCICPV2Ya7oYEi3KMRiJ6qekyEZFjj1wi6stFKTf91KkxrAiEA0sMZRL7PrP69uKpHtFEe7KYnvsPRhiq7B3yFg9+JBQM=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 18085
+      },
+      "main": "lib/main.js",
+      "types": "lib/main.d.ts",
+      "engines": {
+        "node": ">=12"
+      },
+      "exports": {
+        ".": {
+          "types": "./lib/main.d.ts",
+          "default": "./lib/main.js",
+          "require": "./lib/main.js"
+        },
+        "./config": "./config.js",
+        "./config.js": "./config.js",
+        "./package.json": "./package.json"
+      },
+      "funding": "https://dotenvx.com",
+      "gitHead": "c5d68fef160d126d3c42ba321dbe584543d5f194",
+      "scripts": {
+        "lint": "standard",
+        "test": "tap tests/*.js --100 -Rspec",
+        "pretest": "npm run lint && npm run dts-check",
+        "release": "standard-version",
+        "dts-check": "tsc --project tests/types/tsconfig.json",
+        "prerelease": "npm test",
+        "test:coverage": "tap --coverage-report=lcov"
+      },
+      "_npmVersion": "10.8.1",
+      "directories": {},
+      "_nodeVersion": "22.4.1",
+      "dependencies": {
+        "dotenv": "^16.4.5"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.3.0",
+        "standard": "^16.0.4",
+        "typescript": "^4.5.4",
+        "@types/node": "^18.11.3",
+        "standard-version": "^9.5.0"
+      }
     }
   },
   "time": {
     "created": "2016-01-21T00:52:31.869Z",
     "modified": "2025-09-02T21:24:32.286Z",
-    "5.1.0": "2019-03-18T15:42:41.343Z"
+    "5.1.0": "2019-03-18T15:42:41.343Z",
+    "11.0.7": "2024-11-13T23:46:24.544Z"
   },
   "license": "BSD-2-Clause"
 }

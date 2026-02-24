@@ -1,0 +1,101 @@
+{
+  "_id": "ip-address",
+  "_rev": "63-8657974246d93ee45f8bc7ee26bdb471",
+  "name": "ip-address",
+  "dist-tags": {
+    "beta": "9.1.0-0",
+    "latest": "10.1.0"
+  },
+  "versions": {
+    "10.1.0": {
+      "name": "ip-address",
+      "version": "10.1.0",
+      "license": "MIT",
+      "main": "dist/ip-address.js",
+      "types": "dist/ip-address.d.ts",
+      "scripts": {
+        "docs": "documentation build --github --output docs --format html ./ip-address.js",
+        "build": "rm -rf dist; mkdir dist; tsc",
+        "prepack": "npm run build",
+        "release": "release-it",
+        "test-ci": "nyc mocha",
+        "test": "mocha",
+        "watch": "mocha --watch"
+      },
+      "nyc": {
+        "extension": [
+          ".ts"
+        ],
+        "exclude": [
+          "**/*.d.ts",
+          ".eslintrc.js",
+          "coverage/",
+          "dist/",
+          "test/",
+          "tmp/"
+        ],
+        "reporter": [
+          "html",
+          "lcov",
+          "text"
+        ],
+        "all": true
+      },
+      "engines": {
+        "node": ">= 12"
+      },
+      "devDependencies": {
+        "@types/chai": "^5.0.0",
+        "@types/mocha": "^10.0.8",
+        "@typescript-eslint/eslint-plugin": "^8.8.0",
+        "@typescript-eslint/parser": "^8.8.0",
+        "chai": "^5.1.1",
+        "documentation": "^14.0.3",
+        "eslint": "^8.50.0",
+        "eslint_d": "^14.0.4",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-filenames": "^1.3.2",
+        "eslint-plugin-import": "^2.30.0",
+        "eslint-plugin-jsx-a11y": "^6.10.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+        "mocha": "^10.7.3",
+        "nyc": "^17.1.0",
+        "prettier": "^3.3.3",
+        "release-it": "^17.6.0",
+        "source-map-support": "^0.5.21",
+        "tsx": "^4.19.1",
+        "typescript": "<5.6.0"
+      },
+      "_id": "ip-address@10.1.0",
+      "gitHead": "7c49446ebe28718676dfe04495347ecafb0c494a",
+      "bugs": {
+        "url": "https://github.com/beaugunderson/ip-address/issues"
+      },
+      "_nodeVersion": "22.21.0",
+      "_npmVersion": "10.9.4",
+      "dist": {
+        "integrity": "sha512-XXADHxXmvT9+CRxhXg56LJovE+bmWnEWB78LB83VZTprKTmaC5QfruXocxzTZ2Kl0DNwKuBdlIhjL8LeY8Sf8Q==",
+        "shasum": "d8dcffb34d0e02eb241427444a6e23f5b0595aa4",
+        "tarball": "http://localhost:3000/ip-address/-/ip-address-10.1.0.tgz",
+        "fileCount": 48,
+        "unpackedSize": 180364,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIEHf5LrSWVqQaU9MLDUR1CrupYTRNa0dTFFChCyRXrnRAiEA26kkpV+2U1lkPRbC6z3iHpJvTwt7DJn9eK7nE8E+VKI="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2015-05-05T00:32:26.395Z",
+    "modified": "2025-11-08T19:50:46.098Z",
+    "10.1.0": "2025-11-08T19:50:45.900Z"
+  },
+  "license": "MIT"
+}

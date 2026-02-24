@@ -1,0 +1,82 @@
+{
+  "_id": "unique-filename",
+  "_rev": "47-a259ea6520a176cd86c4469700a56e1e",
+  "name": "unique-filename",
+  "dist-tags": {
+    "latest": "5.0.0"
+  },
+  "versions": {
+    "4.0.0": {
+      "name": "unique-filename",
+      "version": "4.0.0",
+      "license": "ISC",
+      "_id": "unique-filename@4.0.0",
+      "bugs": {
+        "url": "https://github.com/iarna/unique-filename/issues"
+      },
+      "tap": {
+        "nyc-arg": [
+          "--exclude",
+          "tap-snapshots/**"
+        ]
+      },
+      "dist": {
+        "shasum": "a06534d370e7c977a939cd1d11f7f0ab8f1fed13",
+        "tarball": "http://localhost:3000/unique-filename/-/unique-filename-4.0.0.tgz",
+        "fileCount": 4,
+        "integrity": "sha512-XSnEewXmQ+veP7xX2dS5Q4yZAvO40cBN2MWkJ7D/6sW4Dg6wYBNwM1Vrnz1FhH5AdeLIlUXRI9e28z1YZi71NQ==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCs4HToBPe7JF6QuEG0H9jHLZj/AP/NeAC2dO47WjOsUQIhAKdV4osqtsaVI2YRdJDIqbw/qJ8eZUsi5h9qYK5cVmtj",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/unique-filename@4.0.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 3484
+      },
+      "main": "lib/index.js",
+      "engines": {
+        "node": "^18.17.0 || >=20.5.0"
+      },
+      "gitHead": "938ae3b0b32b97f4903acdb0398688cdf4772a57",
+      "scripts": {
+        "lint": "npm run eslint",
+        "snap": "tap",
+        "test": "tap",
+        "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+        "lintfix": "npm run eslint -- --fix",
+        "postlint": "template-oss-check",
+        "posttest": "npm run lint",
+        "template-oss-apply": "template-oss-apply --force"
+      },
+      "_npmVersion": "10.8.3",
+      "directories": {},
+      "templateOSS": {
+        "publish": true,
+        "version": "4.23.3",
+        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+      },
+      "_nodeVersion": "22.9.0",
+      "dependencies": {
+        "unique-slug": "^5.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.3.0",
+        "@npmcli/template-oss": "4.23.3",
+        "@npmcli/eslint-config": "^5.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2015-05-07T23:12:09.667Z",
+    "modified": "2025-10-22T20:33:44.356Z",
+    "4.0.0": "2024-09-26T15:20:26.217Z"
+  },
+  "license": "ISC"
+}
