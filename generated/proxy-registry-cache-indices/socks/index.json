@@ -1,0 +1,73 @@
+{
+  "_id": "socks",
+  "_rev": "81-806c9690f86ce1718b4999a7843216a8",
+  "name": "socks",
+  "dist-tags": {
+    "latest": "2.8.7"
+  },
+  "versions": {
+    "2.8.7": {
+      "name": "socks",
+      "private": false,
+      "version": "2.8.7",
+      "main": "build/index.js",
+      "typings": "typings/index.d.ts",
+      "bugs": {
+        "url": "https://github.com/JoshGlazebrook/socks/issues"
+      },
+      "engines": {
+        "node": ">= 10.0.0",
+        "npm": ">= 3.0.0"
+      },
+      "license": "MIT",
+      "devDependencies": {
+        "@types/mocha": "^10.0.6",
+        "@types/node": "^20.11.17",
+        "@typescript-eslint/eslint-plugin": "^6.21.0",
+        "@typescript-eslint/parser": "^6.21.0",
+        "eslint": "^8.20.0",
+        "mocha": "^10.0.0",
+        "prettier": "^3.2.5",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.3.3"
+      },
+      "dependencies": {
+        "ip-address": "^10.0.1",
+        "smart-buffer": "^4.2.0"
+      },
+      "scripts": {
+        "prepublish": "npm install -g typescript && npm run build",
+        "test": "NODE_ENV=test mocha --recursive --require ts-node/register test/**/*.ts",
+        "prettier": "prettier --write ./src/**/*.ts --config .prettierrc.yaml",
+        "lint": "eslint 'src/**/*.ts'",
+        "build": "rm -rf build typings && prettier --write ./src/**/*.ts --config .prettierrc.yaml && tsc -p .",
+        "build-raw": "rm -rf build typings && tsc -p ."
+      },
+      "_id": "socks@2.8.7",
+      "gitHead": "83435e05530c731ddffb7695b8a14d75925dc86a",
+      "_nodeVersion": "20.11.1",
+      "_npmVersion": "10.2.4",
+      "dist": {
+        "integrity": "sha512-HLpt+uLy/pxB+bum/9DzAgiKS8CX1EvbWxI4zlmgGCExImLdiad2iCwXT5Z4c9c3Eq8rP2318mPW2c+QbtjK8A==",
+        "shasum": "e2fb1d9a603add75050a2067db8c381a0b5669ea",
+        "tarball": "http://localhost:3000/socks/-/socks-2.8.7.tgz",
+        "fileCount": 32,
+        "unpackedSize": 156421,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEQCIC76Qd22D6bQKw/rMHfNfwK9c5EjOgA24JJmkpUlis55AiA0TrEMRt6Uca0Sd41SciOefvlz4N9LfgeDhcl4PJZqoQ=="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2013-02-15T12:58:54.652Z",
+    "modified": "2025-08-12T05:20:25.160Z",
+    "2.8.7": "2025-08-12T05:20:24.955Z"
+  },
+  "license": "MIT"
+}

@@ -1,10 +1,10 @@
 {
   "_id": "body-parser",
-  "_rev": "844-e72c83f7728d7ff4e2bdee3a8034a97d",
+  "_rev": "845-f9914d0b95a83538f5b31cc200f6576e",
   "name": "body-parser",
   "dist-tags": {
     "next": "2.1.0",
-    "latest": "2.2.1",
+    "latest": "2.2.2",
     "latest-1.x": "1.20.4"
   },
   "versions": {
@@ -12,72 +12,72 @@
       "name": "body-parser",
       "version": "1.20.4",
       "license": "MIT",
-      "dependencies": {
-        "bytes": "~3.1.2",
-        "content-type": "~1.0.5",
-        "debug": "2.6.9",
-        "depd": "2.0.0",
-        "destroy": "~1.2.0",
-        "http-errors": "~2.0.1",
-        "iconv-lite": "~0.4.24",
-        "on-finished": "~2.4.1",
-        "qs": "~6.14.0",
-        "raw-body": "~2.5.3",
-        "type-is": "~1.6.18",
-        "unpipe": "~1.0.0"
+      "_id": "body-parser@1.20.4",
+      "bugs": {
+        "url": "https://github.com/expressjs/body-parser/issues"
       },
-      "devDependencies": {
-        "eslint": "8.34.0",
-        "eslint-config-standard": "14.1.1",
-        "eslint-plugin-import": "2.27.5",
-        "eslint-plugin-markdown": "3.0.0",
-        "eslint-plugin-node": "11.1.0",
-        "eslint-plugin-promise": "6.1.1",
-        "eslint-plugin-standard": "4.1.0",
-        "methods": "1.1.2",
-        "mocha": "10.2.0",
-        "nyc": "15.1.0",
-        "safe-buffer": "5.2.1",
-        "supertest": "6.3.3"
+      "dist": {
+        "shasum": "f8e20f4d06ca8a50a71ed329c15dccad1cdc547f",
+        "tarball": "http://localhost:3000/body-parser/-/body-parser-1.20.4.tgz",
+        "fileCount": 10,
+        "integrity": "sha512-ZTgYYLMOXY9qKU/57FAo8F+HA2dGX7bqGc71txDRC1rS4frdFI5R7NhluHxH6M0YItAP0sHB4uqAOcYKxO6uGA==",
+        "signatures": [
+          {
+            "sig": "MEUCIHF/n/6Vkiwu0YS9T5dL8BX6rr63WF2eGtiSnjSVedgVAiEA/ZuSxQHzgL5SzrpUv4H7Pk4Mg+KTgY5Gqv9PKQN4R2k=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 61431
       },
       "engines": {
-        "node": ">= 0.8",
-        "npm": "1.2.8000 || >= 1.4.16"
+        "npm": "1.2.8000 || >= 1.4.16",
+        "node": ">= 0.8"
       },
+      "gitHead": "7db202cac84a001e6566c2dc6516b44db98beff3",
       "scripts": {
         "lint": "eslint .",
         "test": "mocha --require test/support/env --reporter spec --check-leaks --bail test/",
         "test-ci": "nyc --reporter=lcov --reporter=text npm test",
         "test-cov": "nyc --reporter=html --reporter=text npm test"
       },
-      "_id": "body-parser@1.20.4",
-      "readmeFilename": "README.md",
-      "gitHead": "7db202cac84a001e6566c2dc6516b44db98beff3",
-      "bugs": {
-        "url": "https://github.com/expressjs/body-parser/issues"
-      },
-      "_nodeVersion": "22.10.0",
       "_npmVersion": "10.9.0",
-      "dist": {
-        "integrity": "sha512-ZTgYYLMOXY9qKU/57FAo8F+HA2dGX7bqGc71txDRC1rS4frdFI5R7NhluHxH6M0YItAP0sHB4uqAOcYKxO6uGA==",
-        "shasum": "f8e20f4d06ca8a50a71ed329c15dccad1cdc547f",
-        "tarball": "http://localhost:3000/body-parser/-/body-parser-1.20.4.tgz",
-        "fileCount": 10,
-        "unpackedSize": 61431,
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIHF/n/6Vkiwu0YS9T5dL8BX6rr63WF2eGtiSnjSVedgVAiEA/ZuSxQHzgL5SzrpUv4H7Pk4Mg+KTgY5Gqv9PKQN4R2k="
-          }
-        ]
-      },
       "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "22.10.0",
+      "dependencies": {
+        "qs": "~6.14.0",
+        "depd": "2.0.0",
+        "bytes": "~3.1.2",
+        "debug": "2.6.9",
+        "unpipe": "~1.0.0",
+        "destroy": "~1.2.0",
+        "type-is": "~1.6.18",
+        "raw-body": "~2.5.3",
+        "iconv-lite": "~0.4.24",
+        "http-errors": "~2.0.1",
+        "on-finished": "~2.4.1",
+        "content-type": "~1.0.5"
+      },
+      "_hasShrinkwrap": false,
+      "readmeFilename": "README.md",
+      "devDependencies": {
+        "nyc": "15.1.0",
+        "mocha": "10.2.0",
+        "eslint": "8.34.0",
+        "methods": "1.1.2",
+        "supertest": "6.3.3",
+        "safe-buffer": "5.2.1",
+        "eslint-plugin-node": "11.1.0",
+        "eslint-plugin-import": "2.27.5",
+        "eslint-plugin-promise": "6.1.1",
+        "eslint-config-standard": "14.1.1",
+        "eslint-plugin-markdown": "3.0.0",
+        "eslint-plugin-standard": "4.1.0"
+      }
     }
   },
   "time": {
     "created": "2014-01-06T08:25:15.060Z",
-    "modified": "2025-12-01T15:53:41.173Z",
+    "modified": "2026-01-07T09:38:34.823Z",
     "1.20.4": "2025-12-01T15:53:40.942Z"
   },
   "license": "MIT"

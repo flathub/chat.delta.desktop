@@ -1,0 +1,80 @@
+{
+  "_id": "socks-proxy-agent",
+  "_rev": "49-9a4c96899b6c9c5e06ba202ed863fd2f",
+  "name": "socks-proxy-agent",
+  "dist-tags": {
+    "beta": "6.2.0-beta.1",
+    "latest": "8.0.5"
+  },
+  "versions": {
+    "8.0.5": {
+      "name": "socks-proxy-agent",
+      "version": "8.0.5",
+      "main": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "dependencies": {
+        "agent-base": "^7.1.2",
+        "debug": "^4.3.4",
+        "socks": "^2.8.3"
+      },
+      "devDependencies": {
+        "@types/async-retry": "^1.4.5",
+        "@types/debug": "^4.1.7",
+        "@types/dns2": "^2.0.3",
+        "@types/jest": "^29.5.1",
+        "@types/node": "^14.18.45",
+        "async-listen": "^3.0.0",
+        "async-retry": "^1.3.3",
+        "cacheable-lookup": "^6.1.0",
+        "dns2": "^2.1.0",
+        "jest": "^29.5.0",
+        "socksv5": "github:TooTallNate/socksv5#fix/dstSock-close-event",
+        "ts-jest": "^29.1.0",
+        "typescript": "^5.0.4",
+        "proxy": "2.2.0",
+        "tsconfig": "0.0.0"
+      },
+      "engines": {
+        "node": ">= 14"
+      },
+      "license": "MIT",
+      "scripts": {
+        "build": "tsc",
+        "test": "jest --env node --verbose --bail test/test.ts",
+        "test-e2e": "jest --env node --verbose --bail test/e2e.test.ts",
+        "lint": "eslint . --ext .ts",
+        "pack": "node ../../scripts/pack.mjs"
+      },
+      "_id": "socks-proxy-agent@8.0.5",
+      "bugs": {
+        "url": "https://github.com/TooTallNate/proxy-agents/issues"
+      },
+      "_integrity": "sha512-HehCEsotFqbPW9sJ8WVYB6UbmIMv7kUUORIF2Nncq4VQvBfNBLibW9YZR5dlYCSUhwcD628pRllm7n+E+YTzJw==",
+      "_resolved": "/tmp/194f1676afcc1969e5abc1427b4edd77/socks-proxy-agent-8.0.5.tgz",
+      "_from": "file:socks-proxy-agent-8.0.5.tgz",
+      "_nodeVersion": "20.18.1",
+      "_npmVersion": "10.8.2",
+      "dist": {
+        "integrity": "sha512-HehCEsotFqbPW9sJ8WVYB6UbmIMv7kUUORIF2Nncq4VQvBfNBLibW9YZR5dlYCSUhwcD628pRllm7n+E+YTzJw==",
+        "shasum": "b9cdb4e7e998509d7659d689ce7697ac21645bee",
+        "tarball": "http://localhost:3000/socks-proxy-agent/-/socks-proxy-agent-8.0.5.tgz",
+        "fileCount": 8,
+        "unpackedSize": 25533,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCID7UqPoFGr0msS0TXWbWJkZncREjzHi8Ta62uR8lvZcQAiEAyoc2dOi7QXzcFXMNBR65CTaFB1t4ZHXi7mHqkg0cO60="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2013-07-11T23:28:25.950Z",
+    "modified": "2024-12-07T03:32:11.779Z",
+    "8.0.5": "2024-12-07T03:32:11.601Z"
+  },
+  "license": "MIT"
+}

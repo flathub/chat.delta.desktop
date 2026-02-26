@@ -72,12 +72,99 @@
         "@types/minimatch": "^3.0.5",
         "@continuous-auth/semantic-release-npm": "^3.0.0"
       }
+    },
+    "2.0.3": {
+      "name": "@electron/universal",
+      "version": "2.0.3",
+      "license": "MIT",
+      "_id": "@electron/universal@2.0.3",
+      "bugs": {
+        "url": "https://github.com/electron/universal/issues"
+      },
+      "dist": {
+        "shasum": "1680df6ced8f128ca0ff24e29c2165d41d78b3ce",
+        "tarball": "http://localhost:3000/@electron/universal/-/universal-2.0.3.tgz",
+        "fileCount": 43,
+        "integrity": "sha512-Wn9sPYIVFRFl5HmwMJkARCCf7rqK/EurkfQ/rJZ14mHP3iYTjZSIOSVonEAnhWeAXwtw7zOekGRlc6yTtZ0t+g==",
+        "signatures": [
+          {
+            "sig": "MEQCIHY7bj8yIloONf4NKyLPkpcUEmVLiDIxRm5KJLSFt3uqAiA2XLcMQVtJzXMl58BI0QE97trvgUqCiZK8n+SkmZPOtg==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2funiversal@2.0.3",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 126449
+      },
+      "main": "dist/cjs/index.js",
+      "types": "./dist/cjs/index.d.ts",
+      "module": "dist/esm/index.js",
+      "engines": {
+        "node": ">=16.4"
+      },
+      "gitHead": "64be29d2f7fc64f8b93b9c87cd5460a5d422f72c",
+      "scripts": {
+        "lint": "prettier --check \"{src,entry-asar,test}/**/*.ts\" \"*.ts\"",
+        "test": "jest",
+        "build": "tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json && tsc -p tsconfig.entry-asar.json",
+        "prepare": "husky install",
+        "build:docs": "npx typedoc",
+        "prepublishOnly": "npm run build",
+        "prettier:write": "prettier --write \"{src,entry-asar,test}/**/*.ts\" \"*.ts\""
+      },
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "lint-staged": {
+        "*.ts": [
+          "prettier --write"
+        ]
+      },
+      "resolutions": {
+        "jackspeak": "2.1.1"
+      },
+      "_nodeVersion": "20.19.1",
+      "dependencies": {
+        "debug": "^4.3.1",
+        "plist": "^3.1.0",
+        "fs-extra": "^11.1.1",
+        "minimatch": "^9.0.3",
+        "dir-compare": "^4.2.0",
+        "@electron/asar": "^3.3.1",
+        "@malept/cross-spawn-promise": "^2.0.0"
+      },
+      "publishConfig": {
+        "provenance": true
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "jest": "^29.7.0",
+        "husky": "^8.0.3",
+        "ts-jest": "^29.1.1",
+        "typedoc": "~0.25.13",
+        "prettier": "^3.0.3",
+        "cross-zip": "^4.0.0",
+        "typescript": "^5.2.2",
+        "@types/jest": "^29.5.7",
+        "@types/node": "^20.8.10",
+        "lint-staged": "^15.2.10",
+        "@types/debug": "^4.1.10",
+        "@types/plist": "^3.0.4",
+        "@electron/get": "^3.0.0",
+        "@types/fs-extra": "^11.0.3",
+        "@types/cross-zip": "^4.0.1",
+        "@types/minimatch": "^5.1.2"
+      }
     }
   },
   "time": {
     "created": "2020-11-13T22:27:35.935Z",
     "modified": "2025-10-29T17:07:02.349Z",
-    "1.5.1": "2023-11-09T19:10:09.576Z"
+    "1.5.1": "2023-11-09T19:10:09.576Z",
+    "2.0.3": "2025-05-02T16:37:06.158Z"
   },
   "license": "MIT"
 }

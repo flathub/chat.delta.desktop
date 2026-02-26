@@ -140,6 +140,73 @@
         "@types/node": "20.14.8",
         "@paulmillr/jsbt": "0.2.1"
       }
+    },
+    "5.0.0": {
+      "name": "chokidar",
+      "version": "5.0.0",
+      "type": "module",
+      "main": "./index.js",
+      "exports": {
+        ".": {
+          "default": "./index.js"
+        },
+        "./handler.js": {
+          "default": "./handler.js"
+        }
+      },
+      "dependencies": {
+        "readdirp": "^5.0.0"
+      },
+      "devDependencies": {
+        "@paulmillr/jsbt": "0.4.5",
+        "@types/node": "24.10.1",
+        "prettier": "3.5.2",
+        "tinyspy": "3.0.2",
+        "typescript": "5.9.2",
+        "upath": "2.0.1"
+      },
+      "sideEffects": false,
+      "engines": {
+        "node": ">= 20.19.0"
+      },
+      "bugs": {
+        "url": "https://github.com/paulmillr/chokidar/issues"
+      },
+      "license": "MIT",
+      "scripts": {
+        "build": "tsc",
+        "lint": "prettier --check src",
+        "format": "prettier --write src",
+        "test": "node index.test.js",
+        "test:bun1": "bun index.test.js"
+      },
+      "funding": "https://paulmillr.com/funding/",
+      "gitHead": "c0c8d20e49d337491891078d1081bf91bd178de6",
+      "types": "./index.d.ts",
+      "_id": "chokidar@5.0.0",
+      "_nodeVersion": "24.11.0",
+      "_npmVersion": "11.6.1",
+      "dist": {
+        "integrity": "sha512-TQMmc3w+5AxjpL8iIiwebF73dRDF4fBIieAqGn9RGCWaEVwQ6Fb2cGe31Yns0RRIzii5goJ1Y7xbMwo1TxMplw==",
+        "shasum": "949c126a9238a80792be9a0265934f098af369a5",
+        "tarball": "http://localhost:3000/chokidar/-/chokidar-5.0.0.tgz",
+        "fileCount": 7,
+        "unpackedSize": 82062,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/chokidar@5.0.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEQCIH74rOiiziclwrLX6s65GCA0niBGM+7WTT4411bAISnOAiBka4apBLoKCiLn5IiGF20Efss/F11aLMaC5NHBfByR5w=="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
@@ -148,7 +215,8 @@
     "1.0.0-rc6": "2015-04-01T18:49:05.263Z",
     "2.1.7": "2019-08-21T17:38:26.838Z",
     "3.6.0": "2024-02-06T22:57:34.159Z",
-    "4.0.3": "2024-12-18T22:21:34.451Z"
+    "4.0.3": "2024-12-18T22:21:34.451Z",
+    "5.0.0": "2025-11-25T23:28:06.854Z"
   },
   "license": "MIT"
 }

@@ -1,17 +1,17 @@
 {
   "_id": "electron-builder",
-  "_rev": "1497-80cfcc8194ebc6f94ba586056f4300fd",
+  "_rev": "1506-59c64d52e506cd748c1568db7f0f7db9",
   "name": "electron-builder",
   "dist-tags": {
-    "latest": "26.0.12",
-    "next": "26.4.0"
+    "latest": "26.8.1",
+    "next": "26.8.1"
   },
   "versions": {
-    "24.13.3": {
+    "26.7.0": {
       "name": "electron-builder",
-      "version": "24.13.3",
+      "version": "26.7.0",
       "license": "MIT",
-      "_id": "electron-builder@24.13.3",
+      "_id": "electron-builder@26.7.0",
       "bugs": {
         "url": "https://github.com/electron-userland/electron-builder/issues"
       },
@@ -20,40 +20,45 @@
         "install-app-deps": "install-app-deps.js"
       },
       "dist": {
-        "shasum": "c506dfebd36d9a50a83ee8aa32d803d83dbe4616",
-        "tarball": "http://localhost:3000/electron-builder/-/electron-builder-24.13.3.tgz",
-        "fileCount": 22,
-        "integrity": "sha512-yZSgVHft5dNVlo31qmJAe4BVKQfFdwpRw7sFp1iQglDRCDD6r22zfRJuZlhtB5gp9FHUxCMEoWGq10SkCnMAIg==",
+        "shasum": "e1f5b4434b453c19bceb0ccac859c3104e3c26d8",
+        "tarball": "http://localhost:3000/electron-builder/-/electron-builder-26.7.0.tgz",
+        "fileCount": 25,
+        "integrity": "sha512-LoXbCvSFxLesPneQ/fM7FB4OheIDA2tjqCdUkKlObV5ZKGhYgi5VHPHO/6UUOUodAlg7SrkPx7BZJPby+Vrtbg==",
         "signatures": [
           {
-            "sig": "MEYCIQCSdO6mUm2aJBj171nwERJA6f4ry3t9ZDqchBk8ZxBSpAIhAJkH07WkSTdviDEtSxsf/BcM5cXDGZDdJBrECMyWurOZ",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEUCIB06DZ7GCuXuA3rXOwHXJZPoKC0LNZBx+asGb2B9zRjWAiEA7tQahP7t4k7iQX80mbvlterM0prFcPsotCcxAlnWjeA=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 61569
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/electron-builder@26.7.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 78354
       },
       "main": "out/index.js",
-      "_from": "file:electron-builder-24.13.3.tgz",
+      "_from": "file:electron-builder-26.7.0.tgz",
       "engines": {
         "node": ">=14.0.0"
       },
       "typings": "./out/index.d.ts",
-      "_resolved": "/tmp/3678babade6276f7a942ca45275214a0/electron-builder-24.13.3.tgz",
-      "_integrity": "sha512-yZSgVHft5dNVlo31qmJAe4BVKQfFdwpRw7sFp1iQglDRCDD6r22zfRJuZlhtB5gp9FHUxCMEoWGq10SkCnMAIg==",
-      "_npmVersion": "10.2.4",
+      "_resolved": "/tmp/5b07cf4adae36f6ec92540abfbacce1b/electron-builder-26.7.0.tgz",
+      "_integrity": "sha512-LoXbCvSFxLesPneQ/fM7FB4OheIDA2tjqCdUkKlObV5ZKGhYgi5VHPHO/6UUOUodAlg7SrkPx7BZJPby+Vrtbg==",
+      "_npmVersion": "11.6.2",
       "directories": {},
-      "_nodeVersion": "18.19.1",
+      "_nodeVersion": "22.22.0",
       "dependencies": {
         "chalk": "^4.1.2",
-        "is-ci": "^3.0.0",
         "yargs": "^17.6.2",
+        "ci-info": "^4.2.0",
         "fs-extra": "^10.1.0",
         "lazy-val": "^1.0.5",
-        "dmg-builder": "24.13.3",
-        "builder-util": "24.13.1",
-        "app-builder-lib": "24.13.3",
-        "read-config-file": "6.3.2",
-        "builder-util-runtime": "9.2.4",
+        "dmg-builder": "26.7.0",
+        "builder-util": "26.4.1",
+        "app-builder-lib": "26.7.0",
+        "builder-util-runtime": "9.5.1",
         "simple-update-notifier": "2.0.0"
       },
       "publishConfig": {
@@ -61,7 +66,6 @@
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "@types/is-ci": "3.0.0",
         "@types/yargs": "^17.0.16",
         "@types/fs-extra": "9.0.13"
       }
@@ -69,10 +73,10 @@
   },
   "time": {
     "created": "2015-05-26T13:08:36.993Z",
-    "modified": "2025-12-20T04:11:12.189Z",
+    "modified": "2026-02-18T13:40:36.015Z",
     "5.6.0": "2016-06-21T19:52:08.000Z",
     "0.0.0-semantic-release": "2016-07-31T11:56:50.973Z",
-    "24.13.3": "2024-03-02T16:01:46.654Z"
+    "26.7.0": "2026-01-31T22:55:43.598Z"
   },
   "license": "MIT"
 }

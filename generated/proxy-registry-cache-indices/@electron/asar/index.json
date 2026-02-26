@@ -6,79 +6,86 @@
     "latest": "4.0.1"
   },
   "versions": {
-    "3.2.10": {
+    "3.4.1": {
       "name": "@electron/asar",
-      "version": "3.2.10",
+      "version": "3.4.1",
       "license": "MIT",
-      "_id": "@electron/asar@3.2.10",
+      "_id": "@electron/asar@3.4.1",
       "bugs": {
         "url": "https://github.com/electron/asar/issues"
       },
       "bin": {
         "asar": "bin/asar.js"
       },
-      "tsd": {
-        "directory": "test"
-      },
       "dist": {
-        "shasum": "615cf346b734b23cafa4e0603551010bd0e50aa8",
-        "tarball": "http://localhost:3000/@electron/asar/-/asar-3.2.10.tgz",
-        "fileCount": 12,
-        "integrity": "sha512-mvBSwIBUeiRscrCeJE1LwctAriBj65eUDm0Pc11iE5gRwzkmsdbS7FnZ1XUWjpSeQWL1L5g12Fc/SchPM9DUOw==",
+        "shasum": "4e9196a4b54fba18c56cd8d5cac67c5bdc588065",
+        "tarball": "http://localhost:3000/@electron/asar/-/asar-3.4.1.tgz",
+        "fileCount": 28,
+        "integrity": "sha512-i4/rNPRS84t0vSRa2HorerGRXWyF4vThfHesw0dmcWHp+cspK743UanA0suA5Q5y8kzY2y6YKrvbIUn69BCAiA==",
         "signatures": [
           {
-            "sig": "MEQCIDrAITd8aQG6xf4jyeK9Vn5KRhbdKL3BHuUXVL1Z9rDDAiA8khb2eEWKdBzBUwx9co3OipLJZrqM0jgLf/nZN487Yg==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEQCIEQ+uugZfH9RjaFc8VwJFq1nUR7Y6EQBaDN90iRzk2bZAiByKv9eSJrJZok01zGe1hVZdQwoSNBZeBsH48Tsg5XMug==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 43907
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fasar@3.4.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 106353
       },
       "main": "./lib/asar.js",
-      "types": "./lib/index.d.ts",
+      "types": "./lib/asar.d.ts",
       "engines": {
         "node": ">=10.12.0"
       },
-      "gitHead": "d8111fc75624630cb9e6995139eb8a632e8a0084",
+      "gitHead": "e4fb057678562b7b6170699a046d983ae6d31cb8",
       "scripts": {
-        "tsd": "tsd",
-        "lint": "tsd && standard",
-        "test": "npm run lint && npm run mocha",
-        "mocha": "xvfb-maybe electron-mocha --reporter spec && mocha --reporter spec",
-        "standard": "standard"
+        "lint": "yarn prettier:check",
+        "test": "yarn lint && yarn mocha",
+        "build": "tsc",
+        "mocha": "xvfb-maybe electron-mocha && mocha",
+        "prepare": "tsc",
+        "prettier": "prettier \"src/**/*.ts\" \"test/**/*.js\" \"*.js\"",
+        "mocha:watch": "mocha --watch",
+        "mocha:update": "mocha --update",
+        "prettier:check": "yarn prettier --check",
+        "prettier:write": "yarn prettier --write"
       },
-      "standard": {
-        "env": {
-          "mocha": true
-        },
-        "globals": [
-          "BigInt"
-        ]
-      },
-      "_npmVersion": "10.5.0",
+      "_npmVersion": "10.8.2",
       "directories": {},
-      "_nodeVersion": "20.12.2",
+      "_nodeVersion": "20.19.0",
       "dependencies": {
         "glob": "^7.1.6",
         "commander": "^5.0.0",
         "minimatch": "^3.0.4"
       },
+      "publishConfig": {
+        "provenance": true
+      },
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "tsd": "^0.25.0",
+        "chai": "^4.5.0",
         "mocha": "^10.1.0",
         "lodash": "^4.17.15",
         "rimraf": "^3.0.2",
         "electron": "^22.0.0",
-        "standard": "^14.3.3",
+        "prettier": "^3.3.3",
+        "typescript": "^5.5.4",
         "xvfb-maybe": "^0.2.1",
-        "electron-mocha": "^11.0.2"
+        "@types/node": "^12.0.0",
+        "electron-mocha": "^13.0.1",
+        "@types/minimatch": "^3.0.5",
+        "mocha-chai-jest-snapshot": "^1.1.6"
       }
     }
   },
   "time": {
     "created": "2022-10-18T22:53:35.785Z",
     "modified": "2025-08-02T03:28:14.250Z",
-    "3.2.10": "2024-05-02T22:10:51.775Z"
+    "3.4.1": "2025-04-07T02:55:54.916Z"
   },
   "license": "MIT"
 }

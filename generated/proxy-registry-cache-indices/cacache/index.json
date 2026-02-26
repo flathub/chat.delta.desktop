@@ -1,0 +1,103 @@
+{
+  "_id": "cacache",
+  "_rev": "164-338c313bb6e77f2de1bacb68084b96ed",
+  "name": "cacache",
+  "dist-tags": {
+    "legacy": "12.0.4",
+    "latest": "20.0.3"
+  },
+  "versions": {
+    "19.0.1": {
+      "name": "cacache",
+      "version": "19.0.1",
+      "license": "ISC",
+      "_id": "cacache@19.0.1",
+      "bugs": {
+        "url": "https://github.com/npm/cacache/issues"
+      },
+      "tap": {
+        "nyc-arg": [
+          "--exclude",
+          "tap-snapshots/**"
+        ]
+      },
+      "dist": {
+        "shasum": "3370cc28a758434c85c2585008bd5bdcff17d6cd",
+        "tarball": "http://localhost:3000/cacache/-/cacache-19.0.1.tgz",
+        "fileCount": 17,
+        "integrity": "sha512-hdsUxulXCi5STId78vRVYEtDAjq99ICAUktLTeTYsLoTE6Z8dS0c8pWNCxwdrk9YfJeobDZc2Y186hD/5ZQgFQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIQDxQBJgqHGgaPCxOIHeunUVtLWrsfsPWRyVj7FzQZxg6QIgWu3Mt+dJEJE/+EWSPUZtrdpJ0Mpfq669voSdHeJ6YfM=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/cacache@19.0.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 63801
+      },
+      "main": "lib/index.js",
+      "engines": {
+        "node": "^18.17.0 || >=20.5.0"
+      },
+      "gitHead": "718216c2200ec7c51bdf4bb282fac2fd0ddc36c6",
+      "scripts": {
+        "lint": "npm run eslint",
+        "snap": "tap",
+        "test": "tap",
+        "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+        "lintfix": "npm run eslint -- --fix",
+        "coverage": "tap",
+        "postlint": "template-oss-check",
+        "postsnap": "npm run lintfix --",
+        "posttest": "npm run lint",
+        "npmclilint": "npmcli-lint",
+        "test-docker": "docker run -it --rm --name pacotest -v \"$PWD\":/tmp -w /tmp node:latest npm test",
+        "template-oss-apply": "template-oss-apply --force"
+      },
+      "_npmVersion": "10.8.3",
+      "directories": {},
+      "templateOSS": {
+        "publish": "true",
+        "version": "4.23.3",
+        "windowsCI": false,
+        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+      },
+      "_nodeVersion": "22.9.0",
+      "dependencies": {
+        "tar": "^7.4.3",
+        "glob": "^10.2.2",
+        "ssri": "^12.0.0",
+        "p-map": "^7.0.2",
+        "minipass": "^7.0.3",
+        "lru-cache": "^10.0.1",
+        "@npmcli/fs": "^4.0.0",
+        "fs-minipass": "^3.0.0",
+        "minipass-flush": "^1.0.5",
+        "unique-filename": "^4.0.0",
+        "minipass-collect": "^2.0.1",
+        "minipass-pipeline": "^1.2.4"
+      },
+      "cache-version": {
+        "index": "5",
+        "content": "2"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.0.0",
+        "@npmcli/template-oss": "4.23.3",
+        "@npmcli/eslint-config": "^5.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2016-11-18T10:01:40.775Z",
+    "modified": "2025-11-21T17:48:54.476Z",
+    "19.0.1": "2024-09-27T18:28:27.715Z"
+  },
+  "license": "ISC"
+}

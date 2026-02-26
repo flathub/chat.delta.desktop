@@ -7,24 +7,71 @@
     "latest": "9.6.1"
   },
   "versions": {
-    "9.6.0": {
+    "9.6.1": {
       "name": "execa",
-      "version": "9.6.0",
+      "version": "9.6.1",
       "license": "MIT",
-      "_id": "execa@9.6.0",
-      "bugs": {
-        "url": "https://github.com/sindresorhus/execa/issues"
+      "funding": "https://github.com/sindresorhus/execa?sponsor=1",
+      "type": "module",
+      "exports": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "sideEffects": false,
+      "engines": {
+        "node": "^18.19.0 || >=20.5.0"
+      },
+      "scripts": {
+        "test": "npm run lint && npm run unit && npm run type",
+        "lint": "xo",
+        "unit": "c8 --merge-async ava",
+        "type": "tsd && tsc && npx --yes tsd@0.29.0 && npx --yes --package typescript@5.1 tsc"
+      },
+      "dependencies": {
+        "@sindresorhus/merge-streams": "^4.0.0",
+        "cross-spawn": "^7.0.6",
+        "figures": "^6.1.0",
+        "get-stream": "^9.0.0",
+        "human-signals": "^8.0.1",
+        "is-plain-obj": "^4.1.0",
+        "is-stream": "^4.0.1",
+        "npm-run-path": "^6.0.0",
+        "pretty-ms": "^9.2.0",
+        "signal-exit": "^4.1.0",
+        "strip-final-newline": "^4.0.0",
+        "yoctocolors": "^2.1.1"
+      },
+      "devDependencies": {
+        "@types/node": "^22.15.21",
+        "ava": "^6.3.0",
+        "c8": "^10.1.3",
+        "get-node": "^15.0.3",
+        "is-in-ci": "^1.0.0",
+        "is-running": "^2.1.0",
+        "log-process-errors": "^12.0.1",
+        "path-exists": "^5.0.0",
+        "path-key": "^4.0.0",
+        "tempfile": "^5.0.0",
+        "tsd": "^0.32.0",
+        "typescript": "^5.8.3",
+        "which": "^5.0.0",
+        "xo": "^0.60.0"
       },
       "c8": {
+        "reporter": [
+          "text",
+          "lcov"
+        ],
         "exclude": [
           "**/fixtures/**",
           "**/test.js",
           "**/test/**"
-        ],
-        "reporter": [
-          "text",
-          "lcov"
         ]
+      },
+      "ava": {
+        "workerThreads": false,
+        "concurrency": 1,
+        "timeout": "240s"
       },
       "xo": {
         "rules": {
@@ -32,82 +79,35 @@
           "@typescript-eslint/ban-types": "off"
         }
       },
-      "ava": {
-        "timeout": "240s",
-        "concurrency": 1,
-        "workerThreads": false
+      "gitHead": "84e1f36b2c31a463e3efbd37c7505da9438a05c9",
+      "types": "./index.d.ts",
+      "_id": "execa@9.6.1",
+      "bugs": {
+        "url": "https://github.com/sindresorhus/execa/issues"
       },
+      "_nodeVersion": "20.19.5",
+      "_npmVersion": "11.6.1",
       "dist": {
-        "shasum": "38665530e54e2e018384108322f37f35ae74f3bc",
-        "tarball": "http://localhost:3000/execa/-/execa-9.6.0.tgz",
+        "integrity": "sha512-9Be3ZoN4LmYR90tUoVu2te2BsbzHfhJyfEiAVfz7N5/zv+jduIfLrV2xdQXOHbaD6KgpGdO9PRPM1Y4Q9QkPkA==",
+        "shasum": "5b90acedc6bdc0fa9b9a6ddf8f9cbb0c75a7c471",
+        "tarball": "http://localhost:3000/execa/-/execa-9.6.1.tgz",
         "fileCount": 142,
-        "integrity": "sha512-jpWzZ1ZhwUmeWRhS7Qv3mhpOhLfwI+uAX4e5fOcXqwMR7EcJ0pj2kV1CVzHVMX/LphnKWD3LObjZCoJ71lKpHw==",
+        "unpackedSize": 325374,
         "signatures": [
           {
-            "sig": "MEYCIQC8RivxXFB+oyg4qzLgptkowdR0W2p8q7NV8mXOGr9skwIhALBWYZqeNkUSeH4u7HHQODGTNRZWSRubgJ5YFKaH2vcQ",
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEQCIFrsSrk+xWZFtlj8WeSdq7FbctcOQ+DK1307vhePdJ25AiBksz87OFXFQMC/S3nmeYi0iHn54gPCu90IqpYxhJE/0w=="
           }
-        ],
-        "unpackedSize": 324314
+        ]
       },
-      "type": "module",
-      "types": "./index.d.ts",
-      "engines": {
-        "node": "^18.19.0 || >=20.5.0"
-      },
-      "exports": {
-        "types": "./index.d.ts",
-        "default": "./index.js"
-      },
-      "funding": "https://github.com/sindresorhus/execa?sponsor=1",
-      "gitHead": "a31fe55782993f2483d30955a8799ab88e20687c",
-      "scripts": {
-        "lint": "xo",
-        "test": "npm run lint && npm run unit && npm run type",
-        "type": "tsd && tsc && npx --yes tsd@0.29.0 && npx --yes --package typescript@5.1 tsc",
-        "unit": "c8 --merge-async ava"
-      },
-      "_npmVersion": "10.9.2",
       "directories": {},
-      "sideEffects": false,
-      "_nodeVersion": "20.19.1",
-      "dependencies": {
-        "figures": "^6.1.0",
-        "is-stream": "^4.0.1",
-        "pretty-ms": "^9.2.0",
-        "get-stream": "^9.0.0",
-        "cross-spawn": "^7.0.6",
-        "signal-exit": "^4.1.0",
-        "yoctocolors": "^2.1.1",
-        "is-plain-obj": "^4.1.0",
-        "npm-run-path": "^6.0.0",
-        "human-signals": "^8.0.1",
-        "strip-final-newline": "^4.0.0",
-        "@sindresorhus/merge-streams": "^4.0.0"
-      },
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "c8": "^10.1.3",
-        "xo": "^0.60.0",
-        "ava": "^6.3.0",
-        "tsd": "^0.32.0",
-        "which": "^5.0.0",
-        "get-node": "^15.0.3",
-        "is-in-ci": "^1.0.0",
-        "path-key": "^4.0.0",
-        "tempfile": "^5.0.0",
-        "is-running": "^2.1.0",
-        "typescript": "^5.8.3",
-        "@types/node": "^22.15.21",
-        "path-exists": "^5.0.0",
-        "log-process-errors": "^12.0.1"
-      }
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2015-12-05T23:03:32.752Z",
     "modified": "2025-11-29T20:53:47.095Z",
-    "9.6.0": "2025-05-26T21:59:25.151Z"
+    "9.6.1": "2025-11-29T20:53:46.888Z"
   },
   "license": "MIT"
 }

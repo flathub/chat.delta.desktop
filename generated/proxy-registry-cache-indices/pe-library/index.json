@@ -1,0 +1,94 @@
+{
+  "_id": "pe-library",
+  "_rev": "15-346965a6519e767a70084494cbf01ea6",
+  "name": "pe-library",
+  "dist-tags": {
+    "latest": "2.0.1"
+  },
+  "versions": {
+    "0.4.1": {
+      "name": "pe-library",
+      "version": "0.4.1",
+      "license": "MIT",
+      "_id": "pe-library@0.4.1",
+      "bugs": {
+        "url": "https://github.com/jet2jet/pe-library-js/issues"
+      },
+      "dist": {
+        "shasum": "e269be0340dcb13aa6949d743da7d658c3e2fbea",
+        "tarball": "http://localhost:3000/pe-library/-/pe-library-0.4.1.tgz",
+        "fileCount": 81,
+        "integrity": "sha512-eRWB5LBz7PpDu4PUlwT0PhnQfTQJlDDdPa35urV4Osrm0t0AqQFGn+UIkU3klZvwJ8KPO3VbBFsXquA6p6kqZw==",
+        "signatures": [
+          {
+            "sig": "MEUCIAXd1WXTNlEtzIx//RCNWfSPJZi9zlle7xOSZsbjpcx5AiEAyzsn2sHdA9/6bIxI3d3iKhqxZ5cQVqZFSlAMPvJN4xg=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 279521
+      },
+      "main": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "module": "./dist/_esm/index.js",
+      "engines": {
+        "npm": ">=6",
+        "node": ">=12"
+      },
+      "exports": {
+        "node": {
+          "import": "./dist/index.mjs",
+          "require": "./dist/index.js"
+        },
+        "import": "./dist/_esm/index.js",
+        "require": "./dist/index.js"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/jet2jet",
+        "type": "github"
+      },
+      "gitHead": "94974834fc131c99963fd1635e5bfbc135b160bd",
+      "scripts": {
+        "lint": "npm run lint:prettier && npm run lint:eslint",
+        "test": "jest --config ./jest.config.basic.js",
+        "build": "npm run build:cjs && npm run build:esm",
+        "version": "node ./tools/updateVersion.js ./src/main/version.ts && git add -A ./src/main/version.ts",
+        "lint:fix": "npm run lint:prettier:fix && npm run lint:eslint:fix",
+        "build:cjs": "tsc -p ./tsconfig.app.json",
+        "build:esm": "tsc -p ./tsconfig.app.esm.json && node ./tools/copyEsmFile.js",
+        "lint:eslint": "eslint -c .eslintrc.yml --ext .js,.jsx,.ts,.tsx .",
+        "lint:prettier": "prettier --config ./.prettierrc.yml --check \"**/*.{js,jsx,ts,tsx,yml,json,md}\"",
+        "lint:eslint:fix": "eslint -c .eslintrc.yml --fix --ext .js,.jsx,.ts,.tsx .",
+        "lint:prettier:fix": "prettier --config ./.prettierrc.yml --write \"**/*.{js,jsx,ts,tsx,yml,json,md}\""
+      },
+      "_npmVersion": "6.14.15",
+      "directories": {},
+      "_nodeVersion": "12.22.9",
+      "dependencies": {},
+      "engineStrict": true,
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "jest": "^28.1.3",
+        "eslint": "^8.31.0",
+        "ts-jest": "^28.0.8",
+        "prettier": "^2.8.2",
+        "typescript": "~4.2.4",
+        "@types/jest": "^28.1.8",
+        "@types/node": "^12.20.37",
+        "eslint-plugin-n": "^15.6.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-promise": "^6.1.1",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-config-standard": "^17.0.0",
+        "@typescript-eslint/parser": "^5.48.0",
+        "@typescript-eslint/eslint-plugin": "^5.48.0",
+        "eslint-config-standard-with-typescript": "^26.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2021-12-10T11:38:55.353Z",
+    "modified": "2025-11-03T00:57:40.307Z",
+    "0.4.1": "2024-08-10T10:54:11.655Z"
+  },
+  "license": "MIT"
+}

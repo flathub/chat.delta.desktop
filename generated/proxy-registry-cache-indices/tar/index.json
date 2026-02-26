@@ -1,12 +1,12 @@
 {
   "_id": "tar",
-  "_rev": "312-f281a0cbbeb892750fb0f000ca6a16dd",
+  "_rev": "324-70eae9b351d97d51ad3d50cf10cf00d3",
   "name": "tar",
   "dist-tags": {
     "v3-legacy": "3.2.3",
     "v5-legacy": "5.0.11",
     "v4-legacy": "4.4.19",
-    "latest": "7.5.2"
+    "latest": "7.5.9"
   },
   "versions": {
     "6.2.1": {
@@ -47,6 +47,7 @@
         "test": "tap",
         "genparse": "node scripts/generate-parse-fixtures.js"
       },
+      "deprecated": "Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
       "_npmVersion": "10.5.0",
       "directories": {},
       "templateOSS": {
@@ -89,13 +90,299 @@
         "@npmcli/template-oss": "4.11.0",
         "@npmcli/eslint-config": "^4.0.0"
       }
+    },
+    "7.5.7": {
+      "name": "tar",
+      "version": "7.5.7",
+      "license": "BlueOak-1.0.0",
+      "_id": "tar@7.5.7",
+      "bugs": {
+        "url": "https://github.com/isaacs/node-tar/issues"
+      },
+      "dist": {
+        "shasum": "adf99774008ba1c89819f15dbd6019c630539405",
+        "tarball": "http://localhost:3000/tar/-/tar-7.5.7.tgz",
+        "fileCount": 237,
+        "integrity": "sha512-fov56fJiRuThVFXD6o6/Q354S7pnWMJIVlDBYijsTNx6jKSE4pvrDTs6lUnmGvNyfJwFQQwWy3owKz1ucIhveQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIHCsjR9BB/0sLz+7K0ARiFWQ3CMJ8DRJCZ+xX+SvBVPzAiEA+hd6u5Lf1+i/kpKxUcZWQjchisBHeY5AiWUq89P+gPE=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 1256289
+      },
+      "main": "./dist/commonjs/index.js",
+      "tshy": {
+        "exports": {
+          ".": "./src/index.ts",
+          "./c": "./src/create.ts",
+          "./r": "./src/create.ts",
+          "./t": "./src/list.ts",
+          "./u": "./src/update.ts",
+          "./x": "./src/extract.ts",
+          "./pax": "./src/pax.ts",
+          "./list": "./src/list.ts",
+          "./pack": "./src/pack.ts",
+          "./parse": "./src/parse.ts",
+          "./types": "./src/types.ts",
+          "./create": "./src/create.ts",
+          "./header": "./src/header.ts",
+          "./unpack": "./src/unpack.ts",
+          "./update": "./src/update.ts",
+          "./extract": "./src/extract.ts",
+          "./replace": "./src/create.ts",
+          "./read-entry": "./src/read-entry.ts",
+          "./write-entry": "./src/write-entry.ts",
+          "./package.json": "./package.json"
+        }
+      },
+      "type": "module",
+      "types": "./dist/commonjs/index.d.ts",
+      "module": "./dist/esm/index.js",
+      "engines": {
+        "node": ">=18"
+      },
+      "exports": {
+        ".": {
+          "import": {
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
+          }
+        },
+        "./c": {
+          "import": {
+            "types": "./dist/esm/create.d.ts",
+            "default": "./dist/esm/create.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/create.d.ts",
+            "default": "./dist/commonjs/create.js"
+          }
+        },
+        "./r": {
+          "import": {
+            "types": "./dist/esm/create.d.ts",
+            "default": "./dist/esm/create.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/create.d.ts",
+            "default": "./dist/commonjs/create.js"
+          }
+        },
+        "./t": {
+          "import": {
+            "types": "./dist/esm/list.d.ts",
+            "default": "./dist/esm/list.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/list.d.ts",
+            "default": "./dist/commonjs/list.js"
+          }
+        },
+        "./u": {
+          "import": {
+            "types": "./dist/esm/update.d.ts",
+            "default": "./dist/esm/update.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/update.d.ts",
+            "default": "./dist/commonjs/update.js"
+          }
+        },
+        "./x": {
+          "import": {
+            "types": "./dist/esm/extract.d.ts",
+            "default": "./dist/esm/extract.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/extract.d.ts",
+            "default": "./dist/commonjs/extract.js"
+          }
+        },
+        "./pax": {
+          "import": {
+            "types": "./dist/esm/pax.d.ts",
+            "default": "./dist/esm/pax.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/pax.d.ts",
+            "default": "./dist/commonjs/pax.js"
+          }
+        },
+        "./list": {
+          "import": {
+            "types": "./dist/esm/list.d.ts",
+            "default": "./dist/esm/list.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/list.d.ts",
+            "default": "./dist/commonjs/list.js"
+          }
+        },
+        "./pack": {
+          "import": {
+            "types": "./dist/esm/pack.d.ts",
+            "default": "./dist/esm/pack.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/pack.d.ts",
+            "default": "./dist/commonjs/pack.js"
+          }
+        },
+        "./parse": {
+          "import": {
+            "types": "./dist/esm/parse.d.ts",
+            "default": "./dist/esm/parse.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/parse.d.ts",
+            "default": "./dist/commonjs/parse.js"
+          }
+        },
+        "./types": {
+          "import": {
+            "types": "./dist/esm/types.d.ts",
+            "default": "./dist/esm/types.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/types.d.ts",
+            "default": "./dist/commonjs/types.js"
+          }
+        },
+        "./create": {
+          "import": {
+            "types": "./dist/esm/create.d.ts",
+            "default": "./dist/esm/create.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/create.d.ts",
+            "default": "./dist/commonjs/create.js"
+          }
+        },
+        "./header": {
+          "import": {
+            "types": "./dist/esm/header.d.ts",
+            "default": "./dist/esm/header.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/header.d.ts",
+            "default": "./dist/commonjs/header.js"
+          }
+        },
+        "./unpack": {
+          "import": {
+            "types": "./dist/esm/unpack.d.ts",
+            "default": "./dist/esm/unpack.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/unpack.d.ts",
+            "default": "./dist/commonjs/unpack.js"
+          }
+        },
+        "./update": {
+          "import": {
+            "types": "./dist/esm/update.d.ts",
+            "default": "./dist/esm/update.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/update.d.ts",
+            "default": "./dist/commonjs/update.js"
+          }
+        },
+        "./extract": {
+          "import": {
+            "types": "./dist/esm/extract.d.ts",
+            "default": "./dist/esm/extract.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/extract.d.ts",
+            "default": "./dist/commonjs/extract.js"
+          }
+        },
+        "./replace": {
+          "import": {
+            "types": "./dist/esm/create.d.ts",
+            "default": "./dist/esm/create.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/create.d.ts",
+            "default": "./dist/commonjs/create.js"
+          }
+        },
+        "./read-entry": {
+          "import": {
+            "types": "./dist/esm/read-entry.d.ts",
+            "default": "./dist/esm/read-entry.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/read-entry.d.ts",
+            "default": "./dist/commonjs/read-entry.js"
+          }
+        },
+        "./write-entry": {
+          "import": {
+            "types": "./dist/esm/write-entry.d.ts",
+            "default": "./dist/esm/write-entry.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/write-entry.d.ts",
+            "default": "./dist/commonjs/write-entry.js"
+          }
+        },
+        "./package.json": "./package.json"
+      },
+      "gitHead": "4a37eb9a1cf1137df4eb70c5c7f849f412ff3cdb",
+      "scripts": {
+        "snap": "tap",
+        "test": "tap",
+        "format": "prettier --write . --log-level warn",
+        "prepare": "tshy",
+        "presnap": "npm run prepare",
+        "pretest": "npm run prepare",
+        "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts",
+        "genparse": "node scripts/generate-parse-fixtures.js",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "deprecated": "Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
+      "_npmVersion": "11.7.0",
+      "directories": {},
+      "_nodeVersion": "24.4.1",
+      "dependencies": {
+        "chownr": "^3.0.0",
+        "yallist": "^5.0.0",
+        "minipass": "^7.1.2",
+        "minizlib": "^3.1.0",
+        "@isaacs/fs-minipass": "^4.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^21.5.0",
+        "nock": "^13.5.4",
+        "tshy": "^3.1.0",
+        "chmodr": "^2.0.2",
+        "rimraf": "^6.1.2",
+        "typedoc": "^0.28.16",
+        "prettier": "^3.8.0",
+        "mutate-fs": "^2.1.1",
+        "@types/node": "^25.0.9",
+        "end-of-stream": "^1.4.3",
+        "events-to-array": "^2.0.3"
+      }
     }
   },
   "time": {
     "created": "2011-11-20T07:11:18.109Z",
-    "modified": "2025-10-30T16:17:18.384Z",
+    "modified": "2026-02-16T01:08:58.600Z",
     "5.0.3": "2019-10-05T02:05:48.604Z",
-    "6.2.1": "2024-03-21T21:13:04.779Z"
+    "6.2.1": "2024-03-21T21:13:04.779Z",
+    "7.5.7": "2026-01-27T20:49:56.523Z"
   },
   "license": "BlueOak-1.0.0"
 }

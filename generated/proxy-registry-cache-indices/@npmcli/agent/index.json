@@ -1,0 +1,90 @@
+{
+  "_id": "@npmcli/agent",
+  "_rev": "18-3b4559ee87db3410b05c1ff7ee3b207f",
+  "name": "@npmcli/agent",
+  "dist-tags": {
+    "latest": "4.0.0"
+  },
+  "versions": {
+    "3.0.0": {
+      "name": "@npmcli/agent",
+      "version": "3.0.0",
+      "license": "ISC",
+      "_id": "@npmcli/agent@3.0.0",
+      "bugs": {
+        "url": "https://github.com/npm/agent/issues"
+      },
+      "tap": {
+        "nyc-arg": [
+          "--exclude",
+          "tap-snapshots/**"
+        ]
+      },
+      "dist": {
+        "shasum": "1685b1fbd4a1b7bb4f930cbb68ce801edfe7aa44",
+        "tarball": "http://localhost:3000/@npmcli/agent/-/agent-3.0.0.tgz",
+        "fileCount": 8,
+        "integrity": "sha512-S79NdEgDQd/NGCay6TCoVzXSj74skRZIKJcpJjC5lOq34SZzyI6MqtiiWoiVWoVrTcGjNeC4ipbh1VIHlpfF5Q==",
+        "signatures": [
+          {
+            "sig": "MEQCICpkjG67uQgAng68ISY3Qa7DY7ygKj421oof28Z4U7btAiAvLFWuWD4g+Gv0kq8lUGuiZiYDSrkpyKoUbIWWmLMfCQ==",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@npmcli%2fagent@3.0.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 17748
+      },
+      "main": "lib/index.js",
+      "engines": {
+        "node": "^18.17.0 || >=20.5.0"
+      },
+      "gitHead": "94f346d882458ac9481d015c55057d15f5899bf1",
+      "scripts": {
+        "lint": "npm run eslint",
+        "snap": "tap",
+        "test": "tap",
+        "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+        "lintfix": "npm run eslint -- --fix",
+        "gencerts": "bash scripts/create-cert.sh",
+        "postlint": "template-oss-check",
+        "posttest": "npm run lint",
+        "template-oss-apply": "template-oss-apply --force"
+      },
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "templateOSS": {
+        "publish": "true",
+        "version": "4.23.1",
+        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+      },
+      "_nodeVersion": "22.7.0",
+      "dependencies": {
+        "lru-cache": "^10.0.1",
+        "agent-base": "^7.1.0",
+        "http-proxy-agent": "^7.0.0",
+        "https-proxy-agent": "^7.0.1",
+        "socks-proxy-agent": "^8.0.3"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.3.0",
+        "nock": "^13.2.7",
+        "socksv5": "^0.0.6",
+        "minipass-fetch": "^3.0.3",
+        "@npmcli/template-oss": "4.23.1",
+        "@npmcli/eslint-config": "^5.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2022-12-08T18:12:34.197Z",
+    "modified": "2025-09-18T16:21:44.857Z",
+    "3.0.0": "2024-08-26T22:23:53.754Z"
+  },
+  "license": "ISC"
+}

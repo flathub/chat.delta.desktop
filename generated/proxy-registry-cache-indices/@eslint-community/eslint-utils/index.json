@@ -1,39 +1,39 @@
 {
   "_id": "@eslint-community/eslint-utils",
-  "_rev": "23-086f9d2272f4f19f30a4351192475f45",
+  "_rev": "26-8adf2908c1d7a5f5b4c0eee1786d18f9",
   "name": "@eslint-community/eslint-utils",
   "dist-tags": {
     "beta": "4.0.0-beta.1",
-    "alpha": "5.0.0-alpha.1",
-    "latest": "4.9.0"
+    "latest": "4.9.1",
+    "alpha": "5.0.0-alpha.3"
   },
   "versions": {
-    "4.7.0": {
+    "4.9.1": {
       "name": "@eslint-community/eslint-utils",
-      "version": "4.7.0",
+      "version": "4.9.1",
       "license": "MIT",
-      "_id": "@eslint-community/eslint-utils@4.7.0",
+      "_id": "@eslint-community/eslint-utils@4.9.1",
       "bugs": {
         "url": "https://github.com/eslint-community/eslint-utils/issues"
       },
       "dist": {
-        "shasum": "607084630c6c033992a082de6e6fbc1a8b52175a",
-        "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-4.7.0.tgz",
+        "shasum": "4e90af67bc51ddee6cdef5284edf572ec376b595",
+        "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-4.9.1.tgz",
         "fileCount": 9,
-        "integrity": "sha512-dyybb3AcajC7uha6CvhdVRJqaKyn7w2YKqKyAN37NKYgZT36w+iRb0Dymmc5qEJ549c/S31cMMSFd75bteCpCw==",
+        "integrity": "sha512-phrYmNiYppR7znFEdqgfWHXR6NCkZEK7hwWDHZUjit/2/U0r6XvkDl0SYnoM51Hq7FhCGdLDT6zxCCOY1hexsQ==",
         "signatures": [
           {
-            "sig": "MEYCIQDXUIhUxEcV5rngL8p80A2Tm03WZZdc6prW6gEiEiKtVQIhANHu+CLlWF6bwgjCU49qrN7yz5KesKixdSP6AAS+Z4YD",
+            "sig": "MEYCIQD61UOWN+ZCws2cazW3d6/66fLFEdz/v5lJU01OrfAcUgIhAKsfO/RXgoud6aWOkmrEVJlDkM/5ipWgPn9ZNmMWhBX1",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
         "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint-community%2feslint-utils@4.7.0",
+          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint-community%2feslint-utils@4.9.1",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "unpackedSize": 482928
+        "unpackedSize": 506000
       },
       "main": "index",
       "types": "./index.d.ts",
@@ -49,7 +49,7 @@
         "./package.json": "./package.json"
       },
       "funding": "https://opencollective.com/eslint",
-      "gitHead": "38c229b5ceccfedad80a6ec539b621dacfbbfcef",
+      "gitHead": "3123493c280e49cb76456a24c803af3302eaa2d6",
       "scripts": {
         "lint": "run-p lint:*",
         "test": "mocha --reporter dot \"test/*.mjs\"",
@@ -74,10 +74,10 @@
         "format:prettier": "prettier .",
         "lint:installed-check": "installed-check -v -i installed-check -i npm-run-all2 -i knip -i rollup-plugin-dts"
       },
-      "_npmVersion": "10.8.2",
+      "_npmVersion": "11.7.0",
       "directories": {},
       "sideEffects": false,
-      "_nodeVersion": "20.19.0",
+      "_nodeVersion": "24.12.0",
       "dependencies": {
         "eslint-visitor-keys": "^3.4.3"
       },
@@ -109,115 +109,12 @@
       "peerDependencies": {
         "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0"
       }
-    },
-    "4.9.0": {
-      "name": "@eslint-community/eslint-utils",
-      "version": "4.9.0",
-      "bugs": {
-        "url": "https://github.com/eslint-community/eslint-utils/issues"
-      },
-      "license": "MIT",
-      "sideEffects": false,
-      "exports": {
-        ".": {
-          "import": "./index.mjs",
-          "require": "./index.js"
-        },
-        "./package.json": "./package.json"
-      },
-      "main": "index",
-      "module": "index.mjs",
-      "scripts": {
-        "prebuild": "npm run -s clean",
-        "build": "npm run build:dts && npm run build:rollup",
-        "build:dts": "tsc -p tsconfig.build.json",
-        "build:rollup": "rollup -c",
-        "clean": "rimraf .nyc_output coverage index.* dist",
-        "coverage": "opener ./coverage/lcov-report/index.html",
-        "docs:build": "vitepress build docs",
-        "docs:watch": "vitepress dev docs",
-        "format": "npm run -s format:prettier -- --write",
-        "format:prettier": "prettier .",
-        "format:check": "npm run -s format:prettier -- --check",
-        "lint:eslint": "eslint .",
-        "lint:format": "npm run -s format:check",
-        "lint:installed-check": "installed-check -v -i installed-check -i npm-run-all2 -i knip -i rollup-plugin-dts",
-        "lint:knip": "knip",
-        "lint": "run-p lint:*",
-        "test-coverage": "c8 mocha --reporter dot \"test/*.mjs\"",
-        "test": "mocha --reporter dot \"test/*.mjs\"",
-        "preversion": "npm run test-coverage && npm run -s build",
-        "postversion": "git push && git push --tags",
-        "prewatch": "npm run -s clean",
-        "watch": "warun \"{src,test}/**/*.mjs\" -- npm run -s test:mocha"
-      },
-      "dependencies": {
-        "eslint-visitor-keys": "^3.4.3"
-      },
-      "devDependencies": {
-        "@eslint-community/eslint-plugin-mysticatea": "^15.6.1",
-        "@types/eslint": "^9.6.1",
-        "@types/estree": "^1.0.7",
-        "@typescript-eslint/parser": "^5.62.0",
-        "@typescript-eslint/types": "^5.62.0",
-        "c8": "^8.0.1",
-        "dot-prop": "^7.2.0",
-        "eslint": "^8.57.1",
-        "installed-check": "^8.0.1",
-        "knip": "^5.33.3",
-        "mocha": "^9.2.2",
-        "npm-run-all2": "^6.2.3",
-        "opener": "^1.5.2",
-        "prettier": "2.8.8",
-        "rimraf": "^3.0.2",
-        "rollup": "^2.79.2",
-        "rollup-plugin-dts": "^4.2.3",
-        "rollup-plugin-sourcemaps": "^0.6.3",
-        "semver": "^7.6.3",
-        "typescript": "^4.9.5",
-        "vitepress": "^1.4.1",
-        "warun": "^1.0.0"
-      },
-      "peerDependencies": {
-        "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0"
-      },
-      "engines": {
-        "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
-      },
-      "funding": "https://opencollective.com/eslint",
-      "_id": "@eslint-community/eslint-utils@4.9.0",
-      "gitHead": "e872dbdea1122a14f14782f00cc392b76e4c6242",
-      "types": "./index.d.ts",
-      "_nodeVersion": "20.19.4",
-      "_npmVersion": "10.8.2",
-      "dist": {
-        "integrity": "sha512-ayVFHdtZ+hsq1t2Dy24wCmGXGe4q9Gu3smhLYALJrr473ZH27MsnSL+LKUlimp4BWJqMDMLmPpx/Q9R3OAlL4g==",
-        "shasum": "7308df158e064f0dd8b8fdb58aa14fa2a7f913b3",
-        "tarball": "http://localhost:3000/@eslint-community/eslint-utils/-/eslint-utils-4.9.0.tgz",
-        "fileCount": 9,
-        "unpackedSize": 504854,
-        "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint-community%2feslint-utils@4.9.0",
-          "provenance": {
-            "predicateType": "https://slsa.dev/provenance/v1"
-          }
-        },
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIBax7+Lbj2vULxhnkaX3un5vXnuXajDxclSGdl1/afkLAiEA7eIAsD8WPktvUs5WHmm/G69s+9lCNKT3Yfd5oTwMGMM="
-          }
-        ]
-      },
-      "directories": {},
-      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2022-11-20T18:57:08.771Z",
-    "modified": "2025-09-08T04:23:36.835Z",
-    "4.7.0": "2025-05-02T07:52:14.328Z",
-    "4.9.0": "2025-09-08T04:23:36.441Z"
+    "modified": "2026-01-11T20:20:31.260Z",
+    "4.9.1": "2025-12-31T14:49:52.066Z"
   },
   "license": "MIT"
 }

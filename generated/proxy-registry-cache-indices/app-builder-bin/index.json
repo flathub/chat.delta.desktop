@@ -33,6 +33,66 @@
       "directories": {},
       "_nodeVersion": "16.8.0",
       "_hasShrinkwrap": false
+    },
+    "5.0.0-alpha.12": {
+      "name": "app-builder-bin",
+      "version": "5.0.0-alpha.12",
+      "license": "MIT",
+      "_id": "app-builder-bin@5.0.0-alpha.12",
+      "bugs": {
+        "url": "https://github.com/develar/app-builder/issues"
+      },
+      "dist": {
+        "shasum": "2daf82f8badc698e0adcc95ba36af4ff0650dc80",
+        "tarball": "http://localhost:3000/app-builder-bin/-/app-builder-bin-5.0.0-alpha.12.tgz",
+        "fileCount": 16,
+        "integrity": "sha512-j87o0j6LqPL3QRr8yid6c+Tt5gC7xNfYo6uQIQkorAC6MpeayVMZrEDzKmJJ/Hlv7EnOQpaRm53k6ktDYZyB6w==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCr+zAqVJcgA3Wb7odt5xBSidIDGEbG+awg7dXMOOQFKAIhAKxgKNlSxsN4tCvxaq8m/3h7oQw16r8MZJqXgwz46Y3y",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 216850769
+      },
+      "_from": "file:app-builder-bin-5.0.0-alpha.12.tgz",
+      "types": "./index.d.ts",
+      "scripts": {
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+        "changeset": "changeset",
+        "ci:publish": "make build-all && pnpm publish --no-git-checks --tag next && changeset tag",
+        "ci:version": "pnpm changelog && changeset version && make assets && git add ."
+      },
+      "_resolved": "/private/var/folders/0w/4z5l9vds32nbkz7l22n8j6s80000gn/T/2c9e4d3cc1520dffa07b55b4917736ae/app-builder-bin-5.0.0-alpha.12.tgz",
+      "_integrity": "sha512-j87o0j6LqPL3QRr8yid6c+Tt5gC7xNfYo6uQIQkorAC6MpeayVMZrEDzKmJJ/Hlv7EnOQpaRm53k6ktDYZyB6w==",
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "_nodeVersion": "18.20.5",
+      "publishConfig": {
+        "tag": "next",
+        "git-checks": false,
+        "executableFiles": [
+          "linux/arm/app-builder",
+          "linux/arm64/app-builder",
+          "linux/ia32/app-builder",
+          "linux/loong64/app-builder",
+          "linux/riscv64/app-builder",
+          "linux/x64/app-builder",
+          "mac/app-builder",
+          "mac/app-builder_amd64",
+          "mac/app-builder_arm64",
+          "win/arm64/app-builder.exe",
+          "win/ia32/app-builder.exe",
+          "win/x64/app-builder.exe"
+        ]
+      },
+      "_hasShrinkwrap": false,
+      "readmeFilename": "readme.md",
+      "devDependencies": {
+        "@changesets/cli": "^2.27.1",
+        "conventional-changelog-cli": "^4.1.0",
+        "@changesets/changelog-github": "^0.5.0"
+      }
     }
   },
   "time": {
@@ -52,7 +112,8 @@
     "2.6.15": "2019-06-18T09:45:03.400Z",
     "3.1.0": "2019-07-01T06:23:26.516Z",
     "3.1.1": "2019-07-01T06:43:23.451Z",
-    "4.0.0": "2021-08-29T15:27:21.161Z"
+    "4.0.0": "2021-08-29T15:27:21.161Z",
+    "5.0.0-alpha.12": "2024-12-12T19:38:49.624Z"
   },
   "license": "MIT"
 }

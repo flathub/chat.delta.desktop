@@ -1,16 +1,16 @@
 {
   "_id": "@types/node",
-  "_rev": "13359-730f7b6e5cf3ca2c7635173f28f8d054",
+  "_rev": "13527-e2855ea3690525159d7eaba1d4d01cef",
   "name": "@types/node",
   "dist-tags": {
+    "ts2.5": "12.12.6",
+    "ts2.7": "12.12.6",
+    "ts2.3": "12.12.6",
     "ts2.6": "12.12.6",
     "ts2.2": "12.12.6",
     "ts2.4": "12.12.6",
-    "ts2.3": "12.12.6",
-    "ts2.7": "12.12.6",
-    "ts2.5": "12.12.6",
-    "ts2.1": "12.12.6",
     "ts2.0": "12.12.6",
+    "ts2.1": "12.12.6",
     "ts2.8": "13.13.4",
     "ts2.9": "14.0.1",
     "ts3.0": "14.6.0",
@@ -35,16 +35,17 @@
     "ts4.9": "22.9.3",
     "ts5.0": "22.13.14",
     "ts5.1": "24.1.0",
-    "ts6.0": "25.0.3",
-    "ts5.9": "25.0.3",
-    "ts5.5": "25.0.3",
-    "ts5.6": "25.0.3",
-    "ts5.3": "25.0.3",
-    "ts5.4": "25.0.3",
-    "ts5.2": "25.0.3",
-    "latest": "25.0.3",
-    "ts5.7": "25.0.3",
-    "ts5.8": "25.0.3"
+    "ts6.0": "25.3.0",
+    "undefined": "22.19.11",
+    "ts5.8": "25.3.0",
+    "ts5.9": "25.3.0",
+    "ts5.7": "25.3.0",
+    "latest": "25.3.0",
+    "ts5.4": "25.3.0",
+    "ts5.3": "25.3.0",
+    "ts5.2": "25.3.0",
+    "ts5.6": "25.3.0",
+    "ts5.5": "25.3.0"
   },
   "versions": {
     "20.17.50": {
@@ -121,30 +122,67 @@
       "typeScriptVersion": "5.1",
       "typesPublisherContentHash": "ec7d5c92435a8b94feeea3ed5a038a05e2b42d1f6228e6e6e4eca430ed93fd94"
     },
-    "24.7.2": {
+    "22.19.3": {
       "name": "@types/node",
-      "version": "24.7.2",
+      "version": "22.19.3",
       "license": "MIT",
-      "_id": "@types/node@24.7.2",
+      "_id": "@types/node@22.19.3",
       "dist": {
-        "shasum": "5adf66b6e2ac5cab1d10a2ad3682e359cb652f4a",
-        "tarball": "http://localhost:3000/@types/node/-/node-24.7.2.tgz",
-        "fileCount": 88,
-        "integrity": "sha512-/NbVmcGTP+lj5oa4yiYxxeBjRivKQ5Ns1eSZeB99ExsEQ6rX5XYU1Zy/gGxY/ilqtD4Etx9mKyrPxZRetiahhA==",
+        "shasum": "8dfde7630d7a8528dc9b34db23d34f764467c02c",
+        "tarball": "http://localhost:3000/@types/node/-/node-22.19.3.tgz",
+        "fileCount": 83,
+        "integrity": "sha512-1N9SBnWYOJTrNZCdh/yJE+t910Y128BoyY+zBLWhL3r0TYzlTmFdXrPwHL9DyFZmlEXNQQolTZh3KHV31QDhyA==",
         "signatures": [
           {
-            "sig": "MEUCIFVkhsAmOhZuNJrR2tk9RzV3MJWK597zKPu1hPwc/hLeAiEAxZaKJN6yTGnQbFNfAC649sNDhiKoFj0V8DAYJSkso2E=",
+            "sig": "MEYCIQC/g98TR/3BbX1ycR9yG6EbVHK9j1LBbi/5nAAI63atbQIhAMyYD/BF9P071nR8v6cQIOON9OB/XXSg/ahA5toBCqz+",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 2471348
+        "unpackedSize": 2420001
       },
       "main": "",
       "types": "index.d.ts",
       "scripts": {},
       "directories": {},
       "dependencies": {
-        "undici-types": "~7.14.0"
+        "undici-types": "~6.21.0"
+      },
+      "typesVersions": {
+        "<=5.6": {
+          "*": [
+            "ts5.6/*"
+          ]
+        }
+      },
+      "_hasShrinkwrap": false,
+      "peerDependencies": {},
+      "typeScriptVersion": "5.2",
+      "typesPublisherContentHash": "a128cc757108a9d18e8f7bd67ff4be34845d5b687153f297e3a25073b6ed8d4b"
+    },
+    "24.10.9": {
+      "name": "@types/node",
+      "version": "24.10.9",
+      "license": "MIT",
+      "_id": "@types/node@24.10.9",
+      "dist": {
+        "shasum": "1aeb5142e4a92957489cac12b07f9c7fe26057d0",
+        "tarball": "http://localhost:3000/@types/node/-/node-24.10.9.tgz",
+        "fileCount": 88,
+        "integrity": "sha512-ne4A0IpG3+2ETuREInjPNhUGis1SFjv1d5asp8MzEAGtOZeTeHVDOYqOgqfhvseqg/iXty2hjBf1zAOb7RNiNw==",
+        "signatures": [
+          {
+            "sig": "MEUCIGZGmANKUX2jsymcCFhI9PWxPDGzs/prb8obM6Ls0W22AiEA7b79ua+E3eiYcG/DpYd/1ed61+7jq2FBbK7pCZVn6mw=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 2520650
+      },
+      "main": "",
+      "types": "index.d.ts",
+      "scripts": {},
+      "directories": {},
+      "dependencies": {
+        "undici-types": "~7.16.0"
       },
       "typesVersions": {
         "<=5.6": {
@@ -161,15 +199,16 @@
       "_hasShrinkwrap": false,
       "peerDependencies": {},
       "typeScriptVersion": "5.2",
-      "typesPublisherContentHash": "4bf36d2d52de2aa8898ee24d026198a784567fa5a42adcae5e37b826951ff66d"
+      "typesPublisherContentHash": "954a409903f39d045c638dd3e8f4973e9d11ba4e21d517cd13a5b104a47e1c47"
     }
   },
   "time": {
     "created": "2016-05-17T18:26:38.670Z",
-    "modified": "2025-12-16T21:35:39.292Z",
+    "modified": "2026-02-19T00:56:31.003Z",
     "20.17.50": "2025-05-20T23:02:44.857Z",
     "22.15.33": "2025-06-24T16:39:50.495Z",
-    "24.7.2": "2025-10-11T14:02:20.396Z"
+    "22.19.3": "2025-12-14T00:04:58.536Z",
+    "24.10.9": "2026-01-15T17:09:33.778Z"
   },
   "license": "MIT"
 }

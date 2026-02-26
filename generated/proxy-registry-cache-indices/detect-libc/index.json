@@ -48,12 +48,66 @@
         "proxyquire": "^1.8.0",
         "semistandard": "^11.0.0"
       }
+    },
+    "2.1.2": {
+      "name": "detect-libc",
+      "version": "2.1.2",
+      "main": "lib/detect-libc.js",
+      "scripts": {
+        "test": "semistandard && nyc --reporter=text --check-coverage --branches=100 ava test/unit.js",
+        "changelog": "conventional-changelog -i CHANGELOG.md -s",
+        "bench": "node benchmark/detect-libc",
+        "bench:calls": "node benchmark/call-familySync.js && sleep 1 && node benchmark/call-isNonGlibcLinuxSync.js && sleep 1 && node benchmark/call-versionSync.js"
+      },
+      "license": "Apache-2.0",
+      "devDependencies": {
+        "ava": "^2.4.0",
+        "benchmark": "^2.1.4",
+        "conventional-changelog-cli": "^5.0.0",
+        "eslint-config-standard": "^13.0.1",
+        "nyc": "^15.1.0",
+        "proxyquire": "^2.1.3",
+        "semistandard": "^14.2.3"
+      },
+      "engines": {
+        "node": ">=8"
+      },
+      "types": "index.d.ts",
+      "_id": "detect-libc@2.1.2",
+      "gitHead": "98928b7d26bd5c50dee12af0e433b47825d84df0",
+      "bugs": {
+        "url": "https://github.com/lovell/detect-libc/issues"
+      },
+      "_nodeVersion": "24.9.0",
+      "_npmVersion": "11.6.0",
+      "dist": {
+        "integrity": "sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==",
+        "shasum": "689c5dcdc1900ef5583a4cb9f6d7b473742074ad",
+        "tarball": "http://localhost:3000/detect-libc/-/detect-libc-2.1.2.tgz",
+        "fileCount": 8,
+        "unpackedSize": 26437,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/detect-libc@2.1.2",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEQCIF1K2xLAn5hsm9ciKDdCTYG8t/RLfRhgxAP141A5a3u7AiBqAwFNw0gO55d7HBGPBEywWb+lelLcAZWszH90TSkiiw=="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2017-07-03T20:58:20.378Z",
     "modified": "2025-10-05T12:46:33.558Z",
-    "1.0.3": "2017-11-22T19:07:36.743Z"
+    "1.0.3": "2017-11-22T19:07:36.743Z",
+    "2.1.2": "2025-10-05T12:46:33.077Z"
   },
   "license": "Apache-2.0"
 }

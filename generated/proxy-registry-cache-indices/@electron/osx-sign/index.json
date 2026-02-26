@@ -87,12 +87,105 @@
         "@typescript-eslint/eslint-plugin": "^5.45.0",
         "@continuous-auth/semantic-release-npm": "^3.0.0"
       }
+    },
+    "1.3.3": {
+      "name": "@electron/osx-sign",
+      "version": "1.3.3",
+      "license": "BSD-2-Clause",
+      "_id": "@electron/osx-sign@1.3.3",
+      "bugs": {
+        "url": "https://github.com/electron/osx-sign/issues"
+      },
+      "bin": {
+        "electron-osx-flat": "bin/electron-osx-flat.js",
+        "electron-osx-sign": "bin/electron-osx-sign.js"
+      },
+      "dist": {
+        "shasum": "af751510488318d9f7663694af85819690d75583",
+        "tarball": "http://localhost:3000/@electron/osx-sign/-/osx-sign-1.3.3.tgz",
+        "fileCount": 61,
+        "integrity": "sha512-KZ8mhXvWv2rIEgMbWZ4y33bDHyUKMXnx4M0sTyPNK/vcB81ImdeY9Ggdqy0SWbMDgmbqyQ+phgejh6V3R2QuSg==",
+        "signatures": [
+          {
+            "sig": "MEUCIQD6833B+0eBGlP6FM0myVv9s4CHk9LEl6jgJnggUHAMjwIgeputT6C+OPbevZqXaB5yVyevrYz/MV6KUt5QOTqtV8Q=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fosx-sign@1.3.3",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 196472
+      },
+      "main": "dist/cjs/index.js",
+      "types": "./dist/cjs/index.d.ts",
+      "module": "dist/esm/index.js",
+      "engines": {
+        "node": ">=12.0.0"
+      },
+      "gitHead": "087ddb68ac73c223837bfe456c38078b395769a6",
+      "scripts": {
+        "lint": "eslint --ext .ts,.js src bin test",
+        "test": "yarn lint && tape test",
+        "build": "tsc && tsc -p tsconfig.esm.json",
+        "pretest": "rimraf test/work",
+        "docs:build": "npx typedoc",
+        "prepublishOnly": "yarn build"
+      },
+      "standard": {
+        "ignore": [
+          "test/work"
+        ]
+      },
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "_nodeVersion": "20.18.3",
+      "dependencies": {
+        "debug": "^4.3.4",
+        "plist": "^3.0.5",
+        "fs-extra": "^10.0.0",
+        "minimist": "^1.2.6",
+        "isbinaryfile": "^4.0.8",
+        "compare-version": "^0.1.2"
+      },
+      "publishConfig": {
+        "provenance": true
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tape": "^4.7.1",
+        "eslint": "^8.29.0",
+        "mkdirp": "^1.0.4",
+        "rimraf": "^3.0.2",
+        "typedoc": "~0.25.13",
+        "standard": "^17.0.0",
+        "run-series": "^1.1.9",
+        "typescript": "^4.9.3",
+        "@types/node": "^16.11.6",
+        "extract-zip": "^2.0.1",
+        "@types/debug": "^4.1.7",
+        "@types/plist": "^3.0.2",
+        "@electron/get": "^2.0.2",
+        "run-waterfall": "^1.1.7",
+        "@types/fs-extra": "^9.0.13",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-config-eslint": "^7.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-promise": "^6.1.1",
+        "@types/compare-version": "^0.1.31",
+        "eslint-config-standard": "^17.0.0",
+        "@typescript-eslint/parser": "^5.45.0",
+        "@typescript-eslint/eslint-plugin": "^5.45.0"
+      }
     }
   },
   "time": {
     "created": "2022-03-24T07:39:04.390Z",
     "modified": "2025-11-03T20:31:19.132Z",
-    "1.0.5": "2023-08-18T19:59:17.546Z"
+    "1.0.5": "2023-08-18T19:59:17.546Z",
+    "1.3.3": "2025-03-05T01:36:02.768Z"
   },
   "license": "BSD-2-Clause"
 }

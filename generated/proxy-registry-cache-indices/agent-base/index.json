@@ -72,12 +72,66 @@
         "@typescript-eslint/eslint-plugin": "1.6.0",
         "eslint-import-resolver-typescript": "1.1.1"
       }
+    },
+    "7.1.4": {
+      "name": "agent-base",
+      "version": "7.1.4",
+      "main": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "license": "MIT",
+      "devDependencies": {
+        "@types/debug": "^4.1.7",
+        "@types/jest": "^29.5.1",
+        "@types/node": "^14.18.45",
+        "@types/semver": "^7.3.13",
+        "@types/ws": "^6.0.4",
+        "async-listen": "^3.0.0",
+        "jest": "^29.5.0",
+        "ts-jest": "^29.1.0",
+        "typescript": "^5.0.4",
+        "ws": "^5.2.4",
+        "tsconfig": "0.0.0"
+      },
+      "engines": {
+        "node": ">= 14"
+      },
+      "scripts": {
+        "build": "tsc",
+        "test": "jest --env node --verbose --bail",
+        "lint": "eslint . --ext .ts",
+        "pack": "node ../../scripts/pack.mjs"
+      },
+      "_id": "agent-base@7.1.4",
+      "bugs": {
+        "url": "https://github.com/TooTallNate/proxy-agents/issues"
+      },
+      "_integrity": "sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==",
+      "_resolved": "/tmp/6a929ebe37bbd2f9d02ce2de1a72f2a7/agent-base-7.1.4.tgz",
+      "_from": "file:agent-base-7.1.4.tgz",
+      "_nodeVersion": "20.19.2",
+      "_npmVersion": "10.8.2",
+      "dist": {
+        "integrity": "sha512-MnA+YT8fwfJPgBx3m60MNqakm30XOkyIoH1y6huTQvC0PwZG7ki8NacLBcrPbNoo8vEZy7Jpuk7+jMO+CUovTQ==",
+        "shasum": "e3cd76d4c548ee895d3c3fd8dc1f6c5b9032e7a8",
+        "tarball": "http://localhost:3000/agent-base/-/agent-base-7.1.4.tgz",
+        "fileCount": 12,
+        "unpackedSize": 31286,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQCryPXT4Bh1HMfaPyzZ2zOs4VS+D695o5R3xI6DRBrp3QIgVka0YoK/gflyRjfhqwJ6sNrhwcUY6lQj0xrRBTV1j0A="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2013-07-09T20:14:39.860Z",
     "modified": "2025-07-07T17:44:01.523Z",
-    "6.0.2": "2020-10-23T19:33:15.354Z"
+    "6.0.2": "2020-10-23T19:33:15.354Z",
+    "7.1.4": "2025-07-07T17:44:01.356Z"
   },
   "license": "MIT"
 }
