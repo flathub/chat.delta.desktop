@@ -114,12 +114,119 @@
       "optionalDependencies": {
         "global-agent": "^3.0.0"
       }
+    },
+    "3.1.0": {
+      "name": "@electron/get",
+      "version": "3.1.0",
+      "license": "MIT",
+      "_id": "@electron/get@3.1.0",
+      "bugs": {
+        "url": "https://github.com/electron/get/issues"
+      },
+      "dist": {
+        "shasum": "22c5a0bd917ab201badeb77bc4ad18cba54cb4ec",
+        "tarball": "http://localhost:3000/@electron/get/-/get-3.1.0.tgz",
+        "fileCount": 57,
+        "integrity": "sha512-F+nKc0xW+kVbBRhFzaMgPy3KwmuNTYX1fx6+FxxoSnNgwYX6LD7AKBTWkU0MQ6IBoe7dz069CNkR673sPAgkCQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIENOe9dvYvEHMG+pWgzlGxRklRUGZusxEQfXExfus2HSAiEA4EiCX2jbr8xpMTujjk0uWoHb2OEeiRQxQmd+2NbPbao=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 125656
+      },
+      "main": "dist/cjs/index.js",
+      "husky": {
+        "hooks": {
+          "pre-commit": "lint-staged"
+        }
+      },
+      "types": "./dist/cjs/index.d.ts",
+      "module": "dist/esm/index.js",
+      "engines": {
+        "node": ">=14"
+      },
+      "gitHead": "0adc5b9425aaf92a3039297b767bf6b40443a986",
+      "scripts": {
+        "jest": "jest --coverage",
+        "lint": "npm run prettier && npm run eslint",
+        "test": "npm run lint && npm run jest",
+        "build": "tsc && tsc -p tsconfig.esm.json",
+        "eslint": "eslint --ext .ts src test",
+        "prettier": "prettier --check \"src/**/*.ts\" \"test/**/*.ts\"",
+        "build:docs": "npx typedoc",
+        "prepublishOnly": "npm run build",
+        "test:nonetwork": "npm run lint && npm run jest -- --testPathIgnorePatterns network.spec"
+      },
+      "_npmVersion": "10.7.0",
+      "directories": {},
+      "lint-staged": {
+        "*.ts": [
+          "eslint --fix",
+          "prettier --write"
+        ]
+      },
+      "resolutions": {
+        "eslint/inquirer": "< 7.3.0",
+        "**/@typescript-eslint/typescript-estree/semver": "^6.3.0"
+      },
+      "_nodeVersion": "20.15.1",
+      "dependencies": {
+        "got": "^11.8.5",
+        "debug": "^4.1.1",
+        "semver": "^6.2.0",
+        "fs-extra": "^8.1.0",
+        "progress": "^2.0.3",
+        "env-paths": "^2.2.0",
+        "sumchecker": "^3.0.1"
+      },
+      "eslintConfig": {
+        "parser": "@typescript-eslint/parser",
+        "extends": [
+          "eslint:recommended",
+          "plugin:@typescript-eslint/eslint-recommended",
+          "plugin:@typescript-eslint/recommended",
+          "plugin:jest/recommended",
+          "plugin:import/errors",
+          "plugin:import/warnings",
+          "plugin:import/typescript",
+          "prettier",
+          "prettier/@typescript-eslint"
+        ]
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "jest": "^29.3.1",
+        "husky": "^2.3.0",
+        "eslint": "^6.8.0",
+        "ts-jest": "^29.0.0",
+        "typedoc": "~0.24.8",
+        "prettier": "^1.17.1",
+        "typescript": "^4.9.3",
+        "@types/jest": "^29.0.0",
+        "@types/node": "^12.20.55",
+        "lint-staged": "^13.0.4",
+        "@types/debug": "^4.1.4",
+        "@types/semver": "^6.2.0",
+        "@types/fs-extra": "^8.0.0",
+        "@types/progress": "^2.0.3",
+        "eslint-plugin-jest": "< 24.0.0",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-config-prettier": "^6.15.0",
+        "@typescript-eslint/parser": "^2.34.0",
+        "@typescript-eslint/eslint-plugin": "^2.34.0"
+      },
+      "optionalDependencies": {
+        "global-agent": "^3.0.0"
+      }
     }
   },
   "time": {
     "created": "2019-05-22T22:47:49.762Z",
     "modified": "2025-07-17T19:00:19.748Z",
-    "2.0.3": "2023-09-05T07:39:40.510Z"
+    "2.0.3": "2023-09-05T07:39:40.510Z",
+    "3.1.0": "2024-07-15T21:40:57.058Z"
   },
   "license": "MIT"
 }

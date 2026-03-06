@@ -1,0 +1,92 @@
+{
+  "_id": "proper-lockfile",
+  "_rev": "55-e3157a977c3bbdcadaefb571a21dcfa2",
+  "name": "proper-lockfile",
+  "dist-tags": {
+    "latest": "4.1.2"
+  },
+  "versions": {
+    "4.1.2": {
+      "name": "proper-lockfile",
+      "version": "4.1.2",
+      "license": "MIT",
+      "main": "index.js",
+      "scripts": {
+        "lint": "eslint .",
+        "test": "jest --env node --coverage --runInBand",
+        "prerelease": "npm t && npm run lint",
+        "release": "standard-version",
+        "postrelease": "git push --follow-tags origin HEAD && npm publish"
+      },
+      "husky": {
+        "hooks": {
+          "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+          "pre-commit": "lint-staged"
+        }
+      },
+      "lint-staged": {
+        "*.js": [
+          "eslint --fix",
+          "git add"
+        ]
+      },
+      "commitlint": {
+        "extends": [
+          "@commitlint/config-conventional"
+        ]
+      },
+      "dependencies": {
+        "graceful-fs": "^4.2.4",
+        "retry": "^0.12.0",
+        "signal-exit": "^3.0.2"
+      },
+      "devDependencies": {
+        "@commitlint/cli": "^7.0.0",
+        "@commitlint/config-conventional": "^7.0.1",
+        "@segment/clear-timeouts": "^2.0.0",
+        "delay": "^4.1.0",
+        "eslint": "^5.3.0",
+        "eslint-config-moxy": "^7.1.0",
+        "execa": "^1.0.0",
+        "husky": "^1.1.4",
+        "jest": "^24.5.0",
+        "lint-staged": "^8.0.4",
+        "mkdirp": "^0.5.1",
+        "p-defer": "^2.1.0",
+        "rimraf": "^2.6.2",
+        "stable": "^0.1.8",
+        "standard-version": "^5.0.0",
+        "thread-sleep": "^2.1.0"
+      },
+      "gitHead": "9f8c303c91998e8404a911dc11c54029812bca69",
+      "bugs": {
+        "url": "https://github.com/moxystudio/node-proper-lockfile/issues"
+      },
+      "_id": "proper-lockfile@4.1.2",
+      "_nodeVersion": "14.15.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-TjNPblN4BwAWMXU8s9AEz4JmQxnD1NNL7bNOY/AKUzyamc379FWASUhc/K1pL2noVb+XmZKLL68cjzLsiOAMaA==",
+        "shasum": "c8b9de2af6b2f1601067f98e01ac66baa223141f",
+        "tarball": "http://localhost:3000/proper-lockfile/-/proper-lockfile-4.1.2.tgz",
+        "fileCount": 8,
+        "unpackedSize": 29875,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgDxQXCRA9TVsSAnZWagAAz2QP/2KzFoNRq1PtCyuIfQa1\nXyiwIShUbuwwrkCLDFLPyM//8UQMt1sl16iChItS12nd/nKDretVcqh+Sbtm\nI8lAz9PfdqG+oRzgFcOpmhmnkbON4aLOljTR2cipGJIcEi+AoZdIpJBD6UFU\n4bUWChsL11gyCzoMOaOrv2s1fZB2x/VJW5VUKJPEYSPEMYoGBevyG1WMUBH5\n5UaVSFQxxyT/nDyxBAqMEaNg+ZOwn9nSobvhyZ0oGU1ed9GZzlPpjTtIXWKL\nUidBS+rZ8toxQ0tXU6Lltw7TDvvpwkRZMs4yRhVE51I8VpS0EMhTiBc9aMmm\n6Z6K8rFjO0yq9Raq8TEIKeYkUXA5LXU2i78tKwEke8+HYrLGvPyvTfYFOAKt\nnhFU/ubWMAR4DI0Iow768wg/LPGky32txly1YSXmM64LnR2DpQYQPSnQBArs\nkj5weJNWQCscNYH/Rl1FQ9qLc1UiRzWnT+lqqB/ucO5m+YWM07SrIFtLspnX\nuPlnoQ/BgRDKNxOyWCJsSd4KfWiuVZf03FsaYzeQ3Ejy93RSE7g+e6UZgMXK\nldPG74SEOAxVZHn4J+nrmVhRZfIPMCemk32G8PnHUp4l3pr73ITiaOb5tPS9\n1/9j9eUIZdJq3Tsdk5Z//uybyELRi9bzLkhqdrr/UL0k89xw90Twp6e7JAEG\n+5Pb\r\n=lTWd\r\n-----END PGP SIGNATURE-----\r\n",
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEQCIBgicT64UHqjMiIav78Dl4lDKQQaoibgZMFCFWkfbfqRAiBQfv3jh9QMhjmoWuFj0ro/wnVlXaebtyUFsh8AXjqQ0A=="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "modified": "2022-06-24T20:09:46.485Z",
+    "created": "2014-07-13T10:11:31.739Z",
+    "4.1.2": "2021-01-25T18:55:18.544Z"
+  },
+  "license": "MIT"
+}

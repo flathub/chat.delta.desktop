@@ -74,13 +74,82 @@
         "@rollup/plugin-node-resolve": "^11.0.0",
         "rollup-plugin-node-polyfills": "^0.2.1"
       }
+    },
+    "4.1.1": {
+      "name": "js-yaml",
+      "version": "4.1.1",
+      "license": "MIT",
+      "_id": "js-yaml@4.1.1",
+      "bugs": {
+        "url": "https://github.com/nodeca/js-yaml/issues"
+      },
+      "bin": {
+        "js-yaml": "bin/js-yaml.js"
+      },
+      "dist": {
+        "shasum": "854c292467705b699476e1a2decc0c8a3458806b",
+        "tarball": "http://localhost:3000/js-yaml/-/js-yaml-4.1.1.tgz",
+        "fileCount": 32,
+        "integrity": "sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCCes6PRL5wFcFmbO7FJ3GoaKp2TlKz73vqiGxbWGGX7gIgRR3ETViKIxwoCo+2ka4OUOc23wRZPR8p1NN/pU+Mf5g=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 386271
+      },
+      "unpkg": "dist/js-yaml.min.js",
+      "module": "./dist/js-yaml.mjs",
+      "exports": {
+        ".": {
+          "import": "./dist/js-yaml.mjs",
+          "require": "./index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "gitHead": "cc482e775913e6625137572a3712d2826170e53a",
+      "scripts": {
+        "demo": "npm run lint && node support/build_demo.js",
+        "lint": "eslint .",
+        "test": "npm run lint && mocha",
+        "gh-demo": "npm run demo && gh-pages -d demo -f",
+        "coverage": "npm run lint && nyc mocha && nyc report --reporter html",
+        "browserify": "rollup -c support/rollup.config.js",
+        "prepublishOnly": "npm run gh-demo"
+      },
+      "jsdelivr": "dist/js-yaml.min.js",
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "_nodeVersion": "22.7.0",
+      "dependencies": {
+        "argparse": "^2.0.1"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "nyc": "^15.1.0",
+        "ansi": "^0.3.1",
+        "mocha": "^8.2.1",
+        "eslint": "^7.0.0",
+        "rollup": "^2.34.1",
+        "shelljs": "^0.8.4",
+        "gh-pages": "^3.1.0",
+        "benchmark": "^2.1.4",
+        "codemirror": "^5.13.4",
+        "fast-check": "^2.8.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "@rollup/plugin-commonjs": "^17.0.0",
+        "@rollup/plugin-node-resolve": "^11.0.0",
+        "rollup-plugin-node-polyfills": "^0.2.1"
+      }
     }
   },
   "time": {
     "created": "2011-11-02T01:56:02.870Z",
     "modified": "2025-11-14T23:41:12.110Z",
     "3.2.0": "2014-08-24T07:50:32.612Z",
-    "4.1.0": "2021-04-14T21:07:09.057Z"
+    "4.1.0": "2021-04-14T21:07:09.057Z",
+    "4.1.1": "2025-11-12T15:18:03.524Z"
   },
   "license": "MIT"
 }

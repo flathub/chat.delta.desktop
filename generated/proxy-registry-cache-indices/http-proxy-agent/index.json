@@ -67,12 +67,68 @@
       },
       "directories": {},
       "_hasShrinkwrap": false
+    },
+    "7.0.2": {
+      "name": "http-proxy-agent",
+      "version": "7.0.2",
+      "main": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "license": "MIT",
+      "dependencies": {
+        "agent-base": "^7.1.0",
+        "debug": "^4.3.4"
+      },
+      "devDependencies": {
+        "@types/debug": "^4.1.7",
+        "@types/jest": "^29.5.1",
+        "@types/node": "^14.18.45",
+        "async-listen": "^3.0.0",
+        "jest": "^29.5.0",
+        "ts-jest": "^29.1.0",
+        "typescript": "^5.0.4",
+        "proxy": "2.1.1",
+        "tsconfig": "0.0.0"
+      },
+      "engines": {
+        "node": ">= 14"
+      },
+      "scripts": {
+        "build": "tsc",
+        "test": "jest --env node --verbose --bail",
+        "lint": "eslint . --ext .ts",
+        "pack": "node ../../scripts/pack.mjs"
+      },
+      "bugs": {
+        "url": "https://github.com/TooTallNate/proxy-agents/issues"
+      },
+      "_id": "http-proxy-agent@7.0.2",
+      "_integrity": "sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==",
+      "_resolved": "/tmp/42ba4e26e53ed178ce9214ff542db94a/http-proxy-agent-7.0.2.tgz",
+      "_from": "file:http-proxy-agent-7.0.2.tgz",
+      "_nodeVersion": "20.11.0",
+      "_npmVersion": "10.2.4",
+      "dist": {
+        "integrity": "sha512-T1gkAiYYDWYx3V5Bmyu7HcfcvL7mUrTWiM6yOfa3PIphViJ/gFPbvidQ+veqSOHci/PxBcDabeUNCzpOODJZig==",
+        "shasum": "9a8b1f246866c028509486585f62b8f2c18c270e",
+        "tarball": "http://localhost:3000/http-proxy-agent/-/http-proxy-agent-7.0.2.tgz",
+        "fileCount": 8,
+        "unpackedSize": 23348,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCIBi+r32oZ7TAb8M+r8gRNyTMLi4SMGeNoZOcOaBcXWBJAiEAgEJSlR5tDp/tFXfa6gKR+uqSbvjxJ3CwHII/T6GqKuk="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "modified": "2024-02-15T19:14:21.149Z",
     "created": "2013-07-09T20:36:57.810Z",
-    "5.0.0": "2021-09-23T00:35:50.066Z"
+    "5.0.0": "2021-09-23T00:35:50.066Z",
+    "7.0.2": "2024-02-15T19:14:20.532Z"
   },
   "license": "MIT"
 }

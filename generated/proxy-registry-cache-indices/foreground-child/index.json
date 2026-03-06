@@ -1,73 +1,95 @@
 {
   "_id": "foreground-child",
-  "_rev": "39-3e5000c660eb6770884a8d95d44f51f6",
+  "_rev": "44-33384805b666efe76f82e9d34ba87a5f",
   "name": "foreground-child",
   "dist-tags": {
-    "latest": "3.3.1"
+    "latest": "4.0.3"
   },
   "versions": {
-    "3.1.1": {
+    "3.3.1": {
       "name": "foreground-child",
-      "version": "3.1.1",
+      "version": "3.3.1",
       "license": "ISC",
-      "_id": "foreground-child@3.1.1",
+      "_id": "foreground-child@3.3.1",
       "bugs": {
         "url": "https://github.com/tapjs/foreground-child/issues"
       },
       "tap": {
-        "ts": false,
-        "jobs": 1,
-        "coverage": false,
-        "node-arg": [
-          "--no-warnings",
-          "--loader",
-          "ts-node/esm"
-        ]
+        "typecheck": true
       },
       "dist": {
-        "shasum": "1d173e776d75d2772fed08efe4a0de1ea1b12d0d",
-        "tarball": "http://localhost:3000/foreground-child/-/foreground-child-3.1.1.tgz",
-        "fileCount": 29,
-        "integrity": "sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==",
+        "shasum": "32e8e9ed1b68a3497befb9ac2b6adf92a638576f",
+        "tarball": "http://localhost:3000/foreground-child/-/foreground-child-3.3.1.tgz",
+        "fileCount": 37,
+        "integrity": "sha512-gIXjKqtFuWEgzFRJA9WCQeSJLZDjgJUOMCMzxtvFq/37KojM1BFGufqsCy0r4qSQmYLsZYMeyRqzIWOMup03sw==",
         "signatures": [
           {
-            "sig": "MEYCIQDu0rfmDE2X8JcbxGl1oMiUorCOflTxuQf34AiE+BrGYAIhAN1oTlG+geZZKyeSB7kkGlQ6ZFNQlMcHZfWbFrEJNXe+",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEYCIQCVUDfy0L4zYxWzaolkgh7QfaTDuGG1By/eCa1kCS9L0gIhAP45zuaUlA+rAJ/yqyIhcpgBDI2n9e+P1knTM6qabrG/",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 60378,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkPePjACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrtHQ//fPRhpbQIsMuk60yAACNQDrlO71Qc6V/WiFm8k3eEx43HiW/V\r\nQNmixnflZvaKgjEqQL6GVnJqcVEgvsWTrOdGkWPxhbzhqGr876rCLQ4PzbgY\r\n3/t3Xws5GFY/devSSbQyoJAaVQFEG/I+x9GiGLxat/ieLG5t0/kC1PamaYw3\r\nac7n62jLYA9pXZkgjyf0YDFgVaecq7S+6vsfmsMlTzLS62evYT4G9q6dXWZR\r\nfc0bix3NbYK2GzMz7rOSt3BAxS3QpxzGnF4dg+o5Bo6+biKAsdF0ehxKuUId\r\nbTy/T0Yxr43rsVTCBbQLWv6dFIZ2PL5telb2cw/ZinP5iur2KHcvhiQuWL8D\r\np5aRfGcnmtIbCu2RTOuiC4krle92XNJgutYbJrJ4NrSH2JeMsQoMcPdeYJnq\r\nG5GaZ+Pfhru/Zh+r9t0EByUeF2uZqRV8ce/Hb/4k0PMhBWeCaqbhMKCMJbXo\r\nKsAfjPediPCKRHOaGZ73zze6DiOJYEpoqcPKR4hsvIQnyV7tV+VgMdrGyCJM\r\nvZj5T0seTbtOxJal6Slp6jEipIp/EVyW9+ZhnwmslHs5THnySmTljCNRZ5RQ\r\nq26/q6zuWXEGOfruaSCN4q4lfeZhY75vQjlGx2PIi5Uxu12gBLWKlLL7b5Nc\r\n/hb98mq7rJ76MtaC5SajfBuPImLhWG4JUOo=\r\n=rWsL\r\n-----END PGP SIGNATURE-----\r\n"
+        "unpackedSize": 68302
       },
-      "main": "./dist/cjs/index.js",
-      "types": "./dist/mjs/index.d.ts",
-      "module": "./dist/mjs/index.js",
+      "main": "./dist/commonjs/index.js",
+      "tshy": {
+        "exports": {
+          ".": "./src/index.ts",
+          "./watchdog": "./src/watchdog.ts",
+          "./package.json": "./package.json",
+          "./proxy-signals": "./src/proxy-signals.ts"
+        }
+      },
+      "type": "module",
+      "types": "./dist/commonjs/index.d.ts",
+      "module": "./dist/esm/index.js",
       "engines": {
         "node": ">=14"
       },
       "exports": {
         ".": {
           "import": {
-            "types": "./dist/mjs/index.d.ts",
-            "default": "./dist/mjs/index.js"
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
           },
           "require": {
-            "types": "./dist/cjs/index.d.ts",
-            "default": "./dist/cjs/index.js"
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
+          }
+        },
+        "./watchdog": {
+          "import": {
+            "types": "./dist/esm/watchdog.d.ts",
+            "default": "./dist/esm/watchdog.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/watchdog.d.ts",
+            "default": "./dist/commonjs/watchdog.js"
+          }
+        },
+        "./package.json": "./package.json",
+        "./proxy-signals": {
+          "import": {
+            "types": "./dist/esm/proxy-signals.d.ts",
+            "default": "./dist/esm/proxy-signals.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/proxy-signals.d.ts",
+            "default": "./dist/commonjs/proxy-signals.js"
           }
         }
       },
       "funding": {
         "url": "https://github.com/sponsors/isaacs"
       },
-      "gitHead": "b375faa093d34fed38baaaedd166c871ff160a9f",
+      "gitHead": "e0e54390679d5d955a5d26ce26ee52813c561e6e",
       "scripts": {
-        "snap": "c8 tap",
-        "test": "c8 tap",
-        "format": "prettier --write . --loglevel warn",
-        "prepare": "tsc -p tsconfig.json && tsc -p tsconfig-esm.json && bash ./scripts/fixup.sh",
+        "snap": "tap",
+        "test": "tap",
+        "format": "prettier --write . --log-level warn",
+        "prepare": "tshy",
         "presnap": "npm run prepare",
         "pretest": "npm run prepare",
-        "typedoc": "typedoc --tsconfig tsconfig-esm.json ./src/*.ts",
+        "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts",
         "preversion": "npm test",
         "postversion": "npm publish",
         "prepublishOnly": "git push origin --follow-tags"
@@ -81,22 +103,22 @@
         "arrowParens": "avoid",
         "singleQuote": true,
         "jsxSingleQuote": false,
-        "bracketSameLine": true
+        "bracketSameLine": true,
+        "experimentalTernaries": true
       },
-      "_npmVersion": "9.6.4",
+      "_npmVersion": "10.9.2",
       "directories": {},
-      "_nodeVersion": "18.14.0",
+      "_nodeVersion": "22.14.0",
       "dependencies": {
-        "cross-spawn": "^7.0.0",
+        "cross-spawn": "^7.0.6",
         "signal-exit": "^4.0.1"
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "c8": "^7.13.0",
-        "tap": "^16.3.4",
-        "ts-node": "^10.9.1",
+        "tap": "^21.1.0",
+        "tshy": "^3.0.2",
         "typedoc": "^0.24.2",
-        "prettier": "^2.8.6",
+        "prettier": "^3.3.2",
         "@types/tap": "^15.0.8",
         "typescript": "^5.0.2",
         "@types/node": "^18.15.11",
@@ -106,9 +128,9 @@
   },
   "time": {
     "created": "2015-05-15T06:23:22.908Z",
-    "modified": "2025-02-24T16:47:52.609Z",
+    "modified": "2026-02-06T18:01:11.729Z",
     "1.3.2": "2016-01-02T02:04:57.354Z",
-    "3.1.1": "2023-04-18T00:27:14.995Z"
+    "3.3.1": "2025-02-24T16:47:52.413Z"
   },
-  "license": "ISC"
+  "license": "BlueOak-1.0.0"
 }

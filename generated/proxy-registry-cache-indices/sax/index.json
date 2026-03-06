@@ -1,60 +1,59 @@
 {
   "_id": "sax",
-  "_rev": "155-60b2f601b2df865537f9750718c8b7a2",
+  "_rev": "156-651c932bfe9e0abb0bcb92c7f87d45d9",
   "name": "sax",
   "dist-tags": {
     "false": "0.4.0",
-    "latest": "1.4.3"
+    "latest": "1.4.4"
   },
   "versions": {
-    "1.4.1": {
+    "1.4.3": {
       "name": "sax",
-      "version": "1.4.1",
-      "license": "ISC",
-      "_id": "sax@1.4.1",
+      "version": "1.4.3",
+      "license": "BlueOak-1.0.0",
+      "_id": "sax@1.4.3",
       "bugs": {
         "url": "https://github.com/isaacs/sax-js/issues"
       },
       "tap": {
-        "lines": 79,
-        "branches": 75,
-        "functions": 80,
-        "statements": 79
+        "allow-incomplete-coverage": true
       },
       "dist": {
-        "shasum": "44cc8988377f126304d3b3fc1010c733b929ef0f",
-        "tarball": "http://localhost:3000/sax/-/sax-1.4.1.tgz",
+        "shasum": "fcebae3b756cdc8428321805f4b70f16ec0ab5db",
+        "tarball": "http://localhost:3000/sax/-/sax-1.4.3.tgz",
         "fileCount": 4,
-        "integrity": "sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==",
+        "integrity": "sha512-yqYn1JhPczigF94DMS+shiDMjDowYO6y9+wB/4WgO0Y19jWYk0lQ4tuG5KI7kj4FTp1wxPj5IFfcrz/s1c3jjQ==",
         "signatures": [
           {
-            "sig": "MEQCIF6wMIS1WmHqWNHm1XzUplDOkDjhFLBfYMSdoODtCREwAiAa+iWClIL0cds4JQEYXxkQvtN3UBm15tAuad7xmLt+CA==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEYCIQD2tQvwicAe+bJRzYdVdgqizO5AUZBcrPhFl9LNrTguxQIhANtppLovr3nNWe9hog1CwJVJYxuk42iQ09Yi1UPIbzSR",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 56017
+        "unpackedSize": 56195
       },
       "main": "lib/sax.js",
-      "gitHead": "25ab118a3184d2070495e7eecf2e762f9044442c",
+      "gitHead": "0485f4ed985517207bb368d36704c944fcb1c41a",
       "scripts": {
-        "test": "tap test/*.js --cov -j4",
+        "test": "tap",
+        "format": "prettier --write . --log-level warn",
         "preversion": "npm test",
         "postpublish": "git push origin --all; git push origin --tags",
         "postversion": "npm publish"
       },
-      "_npmVersion": "10.7.0",
+      "_npmVersion": "11.4.2",
       "directories": {},
-      "_nodeVersion": "20.13.1",
+      "_nodeVersion": "24.4.1",
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "tap": "^15.1.6"
+        "tap": "^21.1.3",
+        "prettier": "^3.6.2"
       }
     }
   },
   "time": {
     "created": "2011-02-09T19:13:51.969Z",
-    "modified": "2025-11-04T16:34:34.200Z",
-    "1.4.1": "2024-05-27T23:46:17.431Z"
+    "modified": "2026-01-08T18:17:36.397Z",
+    "1.4.3": "2025-11-04T16:34:34.013Z"
   },
   "license": "BlueOak-1.0.0"
 }

@@ -1,8 +1,8 @@
 app-id: chat.delta.desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: '24.08'
+base-version: '25.08'
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node22
@@ -25,6 +25,7 @@ finish-args:
   - --talk-name=com.canonical.AppMenu.Registrar # fix https://github.com/flathub/chat.delta.desktop/issues/118
   - --talk-name=org.kde.StatusNotifierWatcher # fix https://github.com/flathub/chat.delta.desktop/issues/143
   - --talk-name=com.canonical.Unity # D-Bus talk for Unity desktop
+  - --system-talk-name=dummy.permission.to-suppress-chromium-error # see https://github.com/deltachat/deltachat-desktop/issues/5879
   - --env=NOTIFY_IGNORE_PORTAL=1 # fix https://github.com/deltachat/deltachat-desktop/issues/3590
 
 cleanup:

@@ -1,62 +1,64 @@
 {
   "_id": "body-parser",
-  "_rev": "842-6f92055fe1b750ae98086e75114c94d2",
+  "_rev": "845-f9914d0b95a83538f5b31cc200f6576e",
   "name": "body-parser",
   "dist-tags": {
     "next": "2.1.0",
-    "latest": "2.2.0"
+    "latest": "2.2.2",
+    "latest-1.x": "1.20.4"
   },
   "versions": {
-    "1.20.3": {
+    "1.20.4": {
       "name": "body-parser",
-      "version": "1.20.3",
+      "version": "1.20.4",
       "license": "MIT",
-      "_id": "body-parser@1.20.3",
+      "_id": "body-parser@1.20.4",
       "bugs": {
         "url": "https://github.com/expressjs/body-parser/issues"
       },
       "dist": {
-        "shasum": "1953431221c6fb5cd63c4b36d53fab0928e548c6",
-        "tarball": "http://localhost:3000/body-parser/-/body-parser-1.20.3.tgz",
-        "fileCount": 11,
-        "integrity": "sha512-7rAxByjUMqQ3/bHJy7D6OGXvx/MMc4IqBn/X0fcM1QUcAItpZrBEYhWGem+tzXH90c+G01ypMcYJBO9Y30203g==",
+        "shasum": "f8e20f4d06ca8a50a71ed329c15dccad1cdc547f",
+        "tarball": "http://localhost:3000/body-parser/-/body-parser-1.20.4.tgz",
+        "fileCount": 10,
+        "integrity": "sha512-ZTgYYLMOXY9qKU/57FAo8F+HA2dGX7bqGc71txDRC1rS4frdFI5R7NhluHxH6M0YItAP0sHB4uqAOcYKxO6uGA==",
         "signatures": [
           {
-            "sig": "MEUCIB0vgxyEUJdgVza3GVKw7TdT/emSwJAP5yMHGliV5V3rAiEA8gku++m3YMFhAQlz5DO6MA+ATWJVJZ0qxXmdFxrr+fA=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEUCIHF/n/6Vkiwu0YS9T5dL8BX6rr63WF2eGtiSnjSVedgVAiEA/ZuSxQHzgL5SzrpUv4H7Pk4Mg+KTgY5Gqv9PKQN4R2k=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 62624
+        "unpackedSize": 61431
       },
       "engines": {
         "npm": "1.2.8000 || >= 1.4.16",
         "node": ">= 0.8"
       },
-      "gitHead": "17529513673e39ba79886a7ce3363320cf1c0c50",
+      "gitHead": "7db202cac84a001e6566c2dc6516b44db98beff3",
       "scripts": {
         "lint": "eslint .",
         "test": "mocha --require test/support/env --reporter spec --check-leaks --bail test/",
         "test-ci": "nyc --reporter=lcov --reporter=text npm test",
         "test-cov": "nyc --reporter=html --reporter=text npm test"
       },
-      "_npmVersion": "10.8.2",
+      "_npmVersion": "10.9.0",
       "directories": {},
-      "_nodeVersion": "22.5.1",
+      "_nodeVersion": "22.10.0",
       "dependencies": {
-        "qs": "6.13.0",
+        "qs": "~6.14.0",
         "depd": "2.0.0",
-        "bytes": "3.1.2",
+        "bytes": "~3.1.2",
         "debug": "2.6.9",
-        "unpipe": "1.0.0",
-        "destroy": "1.2.0",
+        "unpipe": "~1.0.0",
+        "destroy": "~1.2.0",
         "type-is": "~1.6.18",
-        "raw-body": "2.5.2",
-        "iconv-lite": "0.4.24",
-        "http-errors": "2.0.0",
-        "on-finished": "2.4.1",
+        "raw-body": "~2.5.3",
+        "iconv-lite": "~0.4.24",
+        "http-errors": "~2.0.1",
+        "on-finished": "~2.4.1",
         "content-type": "~1.0.5"
       },
       "_hasShrinkwrap": false,
+      "readmeFilename": "README.md",
       "devDependencies": {
         "nyc": "15.1.0",
         "mocha": "10.2.0",
@@ -75,8 +77,8 @@
   },
   "time": {
     "created": "2014-01-06T08:25:15.060Z",
-    "modified": "2025-10-20T15:48:19.227Z",
-    "1.20.3": "2024-09-09T23:15:19.538Z"
+    "modified": "2026-01-07T09:38:34.823Z",
+    "1.20.4": "2025-12-01T15:53:40.942Z"
   },
   "license": "MIT"
 }

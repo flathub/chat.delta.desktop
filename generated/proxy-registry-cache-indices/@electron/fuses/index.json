@@ -6,6 +6,69 @@
     "latest": "2.0.0"
   },
   "versions": {
+    "1.8.0": {
+      "name": "@electron/fuses",
+      "version": "1.8.0",
+      "license": "MIT",
+      "_id": "@electron/fuses@1.8.0",
+      "bugs": {
+        "url": "https://github.com/electron/fuses/issues"
+      },
+      "bin": {
+        "electron-fuses": "dist/bin.js"
+      },
+      "dist": {
+        "shasum": "ad34d3cc4703b1258b83f6989917052cfc1490a0",
+        "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.8.0.tgz",
+        "fileCount": 16,
+        "integrity": "sha512-zx0EIq78WlY/lBb1uXlziZmDZI4ubcCXIMJ4uGjXzZW0nS19TjSPeXPAjzzTmKQlJUZm0SbmZhPKP7tuQ1SsEw==",
+        "signatures": [
+          {
+            "sig": "MEQCIAcQ5IOwOo2JL26rlUcm9eepCJ9iSErXXyr7AoGd4AocAiBjNKxfpD4B0jqFPwG3+DLtlQ5uOvJE9AZTflZ9/hi25Q==",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 51164
+      },
+      "main": "dist/index.js",
+      "types": "./dist/index.d.ts",
+      "gitHead": "b38d2e80d9267b52d6db99cd9c9e616da3d037e8",
+      "scripts": {
+        "test": "jest",
+        "build": "tsc",
+        "prepare": "husky install",
+        "prepublishOnly": "tsc"
+      },
+      "_npmVersion": "10.2.4",
+      "directories": {},
+      "lint-staged": {
+        "*.ts": [
+          "prettier --write"
+        ]
+      },
+      "_nodeVersion": "20.11.1",
+      "dependencies": {
+        "chalk": "^4.1.1",
+        "fs-extra": "^9.0.1",
+        "minimist": "^1.2.5"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "jest": "^29.0.3",
+        "husky": "^8.0.0",
+        "ts-jest": "^29.0.1",
+        "prettier": "^2.1.2",
+        "typescript": "^4.3.3",
+        "@types/jest": "^29.0.3",
+        "@types/node": "^14.11.2",
+        "extract-zip": "^2.0.1",
+        "lint-staged": "^10.4.0",
+        "@electron/get": "^2.0.1",
+        "@types/fs-extra": "^9.0.1",
+        "@types/minimist": "^1.2.1",
+        "@electron/universal": "^1.3.0"
+      }
+    },
     "2.0.0": {
       "name": "@electron/fuses",
       "version": "2.0.0",
@@ -80,6 +143,7 @@
   "time": {
     "created": "2021-04-23T03:31:42.898Z",
     "modified": "2025-08-01T04:30:19.084Z",
+    "1.8.0": "2024-03-25T17:41:45.033Z",
     "2.0.0": "2025-08-01T04:30:18.690Z"
   },
   "license": "MIT"

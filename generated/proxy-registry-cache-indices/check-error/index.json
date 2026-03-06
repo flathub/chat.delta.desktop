@@ -1,91 +1,91 @@
 {
   "_id": "check-error",
-  "_rev": "15-1fc76b49ec004d329636f7384115321c",
+  "_rev": "17-2a66132d3cc3c9537a71542b191acde7",
   "name": "check-error",
   "dist-tags": {
-    "latest": "2.1.1"
+    "latest": "2.1.3"
   },
   "versions": {
     "2.1.1": {
-      "version": "2.1.1",
       "name": "check-error",
+      "version": "2.1.1",
       "license": "MIT",
-      "type": "module",
-      "main": "./index.js",
-      "module": "./index.js",
-      "scripts": {
-        "lint": "eslint --ignore-path .gitignore index.js test/",
-        "semantic-release": "semantic-release pre && npm publish && semantic-release post",
-        "pretest": "npm run lint",
-        "test": "npm run test:node && npm run test:browser",
-        "test:browser": "web-test-runner",
-        "test:node": "mocha"
+      "_id": "check-error@2.1.1",
+      "bugs": {
+        "url": "https://github.com/chaijs/check-error/issues"
       },
+      "dist": {
+        "shasum": "87eb876ae71ee388fa0471fe423f494be1d96ccc",
+        "tarball": "http://localhost:3000/check-error/-/check-error-2.1.1.tgz",
+        "fileCount": 4,
+        "integrity": "sha512-OAlb+T7V4Op9OwdkjmguYRqncdlx5JiofwOAUkmTF+jNdHwzTaTs4sRAGpzLF3oOz5xAyDGrPgeIDFQmDOTiJw==",
+        "signatures": [
+          {
+            "sig": "MEUCIAl9k4ME/A/hSRN8G9q2gZPxwfFLVo+Y98SjGJgWYfZLAiEAlWpR4ACLYgLBYvX/3qaFgu88/gnu406K2v27ArmEZU8=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 11383
+      },
+      "main": "./index.js",
+      "type": "module",
       "config": {
         "ghooks": {
           "commit-msg": "validate-commit-msg"
         }
       },
+      "module": "./index.js",
+      "engines": {
+        "node": ">= 16"
+      },
+      "gitHead": "36f9271a23f11ab99301a9c0a39f342767267c8d",
+      "scripts": {
+        "lint": "eslint --ignore-path .gitignore index.js test/",
+        "test": "npm run test:node && npm run test:browser",
+        "pretest": "npm run lint",
+        "test:node": "mocha",
+        "test:browser": "web-test-runner",
+        "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+      },
+      "_npmVersion": "10.7.0",
+      "directories": {},
+      "_nodeVersion": "22.1.0",
       "eslintConfig": {
-        "extends": [
-          "strict/es6"
-        ],
         "env": {
           "es6": true
-        },
-        "globals": {
-          "HTMLElement": false
         },
         "rules": {
           "complexity": "off",
           "max-statements": "off",
-          "prefer-arrow-callback": "off",
-          "prefer-reflect": "off"
+          "prefer-reflect": "off",
+          "prefer-arrow-callback": "off"
+        },
+        "extends": [
+          "strict/es6"
+        ],
+        "globals": {
+          "HTMLElement": false
         }
       },
+      "_hasShrinkwrap": false,
       "devDependencies": {
-        "@web/test-runner": "^0.17.0",
-        "browserify": "^13.0.0",
-        "browserify-istanbul": "^1.0.0",
-        "eslint": "^2.4.0",
-        "eslint-config-strict": "^8.5.0",
-        "eslint-plugin-filenames": "^0.2.0",
-        "ghooks": "^1.0.1",
         "mocha": "^9.1.2",
-        "semantic-release": "^4.3.5",
+        "eslint": "^2.4.0",
+        "ghooks": "^1.0.1",
+        "browserify": "^13.0.0",
         "simple-assert": "^2.0.0",
-        "validate-commit-msg": "^2.3.1"
-      },
-      "engines": {
-        "node": ">= 16"
-      },
-      "_id": "check-error@2.1.1",
-      "gitHead": "36f9271a23f11ab99301a9c0a39f342767267c8d",
-      "bugs": {
-        "url": "https://github.com/chaijs/check-error/issues"
-      },
-      "_nodeVersion": "22.1.0",
-      "_npmVersion": "10.7.0",
-      "dist": {
-        "integrity": "sha512-OAlb+T7V4Op9OwdkjmguYRqncdlx5JiofwOAUkmTF+jNdHwzTaTs4sRAGpzLF3oOz5xAyDGrPgeIDFQmDOTiJw==",
-        "shasum": "87eb876ae71ee388fa0471fe423f494be1d96ccc",
-        "tarball": "http://localhost:3000/check-error/-/check-error-2.1.1.tgz",
-        "fileCount": 4,
-        "unpackedSize": 11383,
-        "signatures": [
-          {
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-            "sig": "MEUCIAl9k4ME/A/hSRN8G9q2gZPxwfFLVo+Y98SjGJgWYfZLAiEAlWpR4ACLYgLBYvX/3qaFgu88/gnu406K2v27ArmEZU8="
-          }
-        ]
-      },
-      "directories": {},
-      "_hasShrinkwrap": false
+        "@web/test-runner": "^0.17.0",
+        "semantic-release": "^4.3.5",
+        "browserify-istanbul": "^1.0.0",
+        "validate-commit-msg": "^2.3.1",
+        "eslint-config-strict": "^8.5.0",
+        "eslint-plugin-filenames": "^0.2.0"
+      }
     }
   },
   "time": {
-    "modified": "2024-05-09T08:54:52.280Z",
     "created": "2016-06-03T15:32:19.225Z",
+    "modified": "2026-01-03T15:36:49.858Z",
     "2.1.1": "2024-05-08T20:49:55.268Z"
   },
   "license": "MIT"

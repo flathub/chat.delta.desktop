@@ -1,0 +1,101 @@
+{
+  "_id": "make-fetch-happen",
+  "_rev": "164-34ecef553873c8550d5b734a06bcaae8",
+  "name": "make-fetch-happen",
+  "dist-tags": {
+    "legacy": "5.0.2",
+    "latest": "15.0.3"
+  },
+  "versions": {
+    "14.0.3": {
+      "name": "make-fetch-happen",
+      "version": "14.0.3",
+      "license": "ISC",
+      "_id": "make-fetch-happen@14.0.3",
+      "bugs": {
+        "url": "https://github.com/npm/make-fetch-happen/issues"
+      },
+      "tap": {
+        "color": 1,
+        "files": "test/*.js",
+        "nyc-arg": [
+          "--exclude",
+          "tap-snapshots/**"
+        ],
+        "timeout": 60,
+        "check-coverage": true
+      },
+      "dist": {
+        "shasum": "d74c3ecb0028f08ab604011e0bc6baed483fcdcd",
+        "tarball": "http://localhost:3000/make-fetch-happen/-/make-fetch-happen-14.0.3.tgz",
+        "fileCount": 13,
+        "integrity": "sha512-QMjGbFTP0blj97EeidG5hk/QhKQ3T4ICckQGLgz38QF7Vgbk6e6FTARN8KhKxyBbWn8R0HU+bnw8aSoFPD4qtQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIQDp26zMrE6d6rpcSl6dDSLmAmn9A/TUzbxJ5/6OHAkWVgIgB3TWGJDx7aFn7VWSMPuZaYMtSH3Zl2mjDIRcBwpVN3M=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/make-fetch-happen@14.0.3",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 53154
+      },
+      "main": "lib/index.js",
+      "engines": {
+        "node": "^18.17.0 || >=20.5.0"
+      },
+      "gitHead": "ecd8f33c411096e8f79ae6f7043edab11ab29289",
+      "scripts": {
+        "lint": "npm run eslint",
+        "snap": "tap",
+        "test": "tap",
+        "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+        "lintfix": "npm run eslint -- --fix",
+        "postlint": "template-oss-check",
+        "posttest": "npm run lint",
+        "template-oss-apply": "template-oss-apply --force"
+      },
+      "_npmVersion": "10.9.0",
+      "directories": {},
+      "templateOSS": {
+        "publish": "true",
+        "version": "4.23.4",
+        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+      },
+      "_nodeVersion": "22.10.0",
+      "dependencies": {
+        "ssri": "^12.0.0",
+        "cacache": "^19.0.1",
+        "minipass": "^7.0.2",
+        "proc-log": "^5.0.0",
+        "negotiator": "^1.0.0",
+        "@npmcli/agent": "^3.0.0",
+        "promise-retry": "^2.0.1",
+        "minipass-fetch": "^4.0.0",
+        "minipass-flush": "^1.0.5",
+        "minipass-pipeline": "^1.2.4",
+        "http-cache-semantics": "^4.1.1"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.0.0",
+        "nock": "^13.2.4",
+        "safe-buffer": "^5.2.1",
+        "standard-version": "^9.3.2",
+        "@npmcli/template-oss": "4.23.4",
+        "@npmcli/eslint-config": "^5.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2017-03-27T23:41:48.082Z",
+    "modified": "2025-11-13T17:36:23.233Z",
+    "5.1.0": "2019-10-01T17:17:10.854Z",
+    "14.0.3": "2024-10-23T15:55:03.209Z"
+  },
+  "license": "ISC"
+}

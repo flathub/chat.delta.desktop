@@ -1,13 +1,11 @@
 {
   "_id": "chai",
-  "_rev": "580-2125454239d325bb9e0f631b55d657f0",
+  "_rev": "583-414eb12c413b14a8cd090e294bd13bd4",
   "name": "chai",
   "dist-tags": {
-    "next": "5.1.1",
-    "canary": "5.1.1",
     "legacy": "4.5.0",
     "v5-legacy": "5.3.3",
-    "latest": "6.2.1"
+    "latest": "6.2.2"
   },
   "versions": {
     "5.2.0": {
@@ -81,12 +79,85 @@
         "@rollup/plugin-commonjs": "^25.0.7",
         "@web/test-runner-playwright": "^0.11.0"
       }
+    },
+    "6.2.1": {
+      "name": "chai",
+      "version": "6.2.1",
+      "license": "MIT",
+      "_id": "chai@6.2.1",
+      "bugs": {
+        "url": "https://github.com/chaijs/chai/issues"
+      },
+      "dist": {
+        "shasum": "d1e64bc42433fbee6175ad5346799682060b5b6a",
+        "tarball": "http://localhost:3000/chai/-/chai-6.2.1.tgz",
+        "fileCount": 7,
+        "integrity": "sha512-p4Z49OGG5W/WBCPSS/dH3jQ73kD6tiMmUM+bckNK6Jr5JHMG3k9bg/BvKR8lKmtVBKmOiuVaV2ws8s9oSbwysg==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCBCCDdxDkDiW/BXuXiyz3DO4x2yarcCGVDpZ4ig1WskwIhAPqeLh8ejBKps03hpHFOGEMEsjlm62gaRmH9iCL9UCE9",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/chai@6.2.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 153608
+      },
+      "main": "./index.js",
+      "type": "module",
+      "engines": {
+        "node": ">=18"
+      },
+      "gitHead": "110a1eab94060fc383b4c46efd0e8ce4f16dc788",
+      "scripts": {
+        "lint": "npm run lint:js && npm run lint:format",
+        "test": "npm run test-node && npm run test-chrome",
+        "build": "esbuild --bundle --format=esm --target=es2021 --keep-names --outfile=index.js lib/chai.js",
+        "clean": "rm -rf index.js coverage/",
+        "format": "prettier --write lib",
+        "lint:js": "eslint lib/",
+        "pretest": "npm run lint",
+        "prebuild": "npm run clean",
+        "test-node": "c8 --99 --check-coverage mocha --require ./test/bootstrap/index.js test/*.js",
+        "lint:types": "tsc",
+        "lint:format": "prettier --check lib",
+        "test-chrome": "web-test-runner --playwright"
+      },
+      "_npmVersion": "11.6.1",
+      "directories": {},
+      "_nodeVersion": "24.11.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "c8": "^10.1.3",
+        "loupe": "^3.1.0",
+        "mocha": "^11.0.0",
+        "eslint": "^9.0.0",
+        "esbuild": "^0.27.0",
+        "globals": "^16.3.0",
+        "pathval": "^2.0.0",
+        "deep-eql": "^5.0.1",
+        "prettier": "^3.4.2",
+        "@eslint/js": "^9.17.0",
+        "typescript": "~5.9.0",
+        "check-error": "^2.1.1",
+        "assertion-error": "^2.0.1",
+        "@web/test-runner": "^0.20.0",
+        "eslint-plugin-jsdoc": "^61.0.0",
+        "@web/dev-server-rollup": "^0.6.1",
+        "@rollup/plugin-commonjs": "^29.0.0",
+        "@web/test-runner-playwright": "^0.11.0"
+      }
     }
   },
   "time": {
     "created": "2011-12-07T06:53:41.352Z",
-    "modified": "2025-11-11T11:17:34.754Z",
-    "5.2.0": "2025-02-14T17:01:54.480Z"
+    "modified": "2026-01-13T14:19:15.956Z",
+    "5.2.0": "2025-02-14T17:01:54.480Z",
+    "6.2.1": "2025-11-11T11:17:33.992Z"
   },
   "license": "MIT"
 }

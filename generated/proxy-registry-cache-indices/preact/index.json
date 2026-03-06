@@ -1,23 +1,197 @@
 {
   "_id": "preact",
-  "_rev": "355-5530d85e1b0c8dbacd9af1d3d0114954",
+  "_rev": "366-fe6e051252b9f3cda66fa2a9794ea554",
   "name": "preact",
   "dist-tags": {
     "legacy": "8.5.3",
-    "latest": "10.27.2",
-    "beta": "11.0.0-beta.0"
+    "latest": "10.28.4",
+    "beta": "11.0.0-beta.1"
   },
   "versions": {
-    "10.27.2": {
+    "10.28.3": {
       "name": "preact",
-      "amdName": "preact",
-      "version": "10.27.2",
-      "private": false,
+      "version": "10.28.3",
+      "license": "MIT",
+      "_id": "preact@10.28.3",
+      "bugs": {
+        "url": "https://github.com/preactjs/preact/issues"
+      },
+      "dist": {
+        "shasum": "3c2171526b3e29628ad1a6c56a9e3ca867bbdee8",
+        "tarball": "http://localhost:3000/preact/-/preact-10.28.3.tgz",
+        "fileCount": 131,
+        "integrity": "sha512-tCmoRkPQLpBeWzpmbhryairGnhW9tKV6c6gr/w+RhoRoKEJwsjzipwp//1oCpGPOchvSLaAPlpcJi9MwMmoPyA==",
+        "signatures": [
+          {
+            "sig": "MEQCIGNE0DlDvVNVq46On4/AtFOsNiQcZedeTtd0NmoHgQHmAiBJtQyo6RIpcO5EIcOTSclk7I6QcnTOQbN8ZvxfVr5ZyQ==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 1554008
+      },
       "main": "dist/preact.js",
-      "module": "dist/preact.module.js",
-      "umd:main": "dist/preact.umd.js",
+      "_from": "file:preact-10.28.3.tgz",
+      "types": "src/index.d.ts",
       "unpkg": "dist/preact.min.js",
+      "volta": {
+        "node": "20.19.1"
+      },
+      "module": "dist/preact.module.js",
       "source": "src/index.js",
+      "amdName": "preact",
+      "authors": [
+        "The Preact Authors (https://github.com/preactjs/preact/contributors)"
+      ],
+      "exports": {
+        ".": {
+          "umd": "./dist/preact.umd.js",
+          "types": "./src/index.d.ts",
+          "import": "./dist/preact.mjs",
+          "browser": "./dist/preact.module.js",
+          "require": "./dist/preact.js",
+          "types@<=5.0": {
+            "types": "./src/index-5.d.ts"
+          }
+        },
+        "./debug": {
+          "umd": "./debug/dist/debug.umd.js",
+          "types": "./debug/src/index.d.ts",
+          "import": "./debug/dist/debug.mjs",
+          "browser": "./debug/dist/debug.module.js",
+          "require": "./debug/dist/debug.js"
+        },
+        "./hooks": {
+          "umd": "./hooks/dist/hooks.umd.js",
+          "types": "./hooks/src/index.d.ts",
+          "import": "./hooks/dist/hooks.mjs",
+          "browser": "./hooks/dist/hooks.module.js",
+          "require": "./hooks/dist/hooks.js"
+        },
+        "./compat": {
+          "umd": "./compat/dist/compat.umd.js",
+          "types": "./compat/src/index.d.ts",
+          "import": "./compat/dist/compat.mjs",
+          "browser": "./compat/dist/compat.module.js",
+          "require": "./compat/dist/compat.js"
+        },
+        "./devtools": {
+          "umd": "./devtools/dist/devtools.umd.js",
+          "types": "./devtools/src/index.d.ts",
+          "import": "./devtools/dist/devtools.mjs",
+          "browser": "./devtools/dist/devtools.module.js",
+          "require": "./devtools/dist/devtools.js"
+        },
+        "./test-utils": {
+          "umd": "./test-utils/dist/testUtils.umd.js",
+          "types": "./test-utils/src/index.d.ts",
+          "import": "./test-utils/dist/testUtils.mjs",
+          "browser": "./test-utils/dist/testUtils.module.js",
+          "require": "./test-utils/dist/testUtils.js"
+        },
+        "./jsx-runtime": {
+          "umd": "./jsx-runtime/dist/jsxRuntime.umd.js",
+          "types": "./jsx-runtime/src/index.d.ts",
+          "import": "./jsx-runtime/dist/jsxRuntime.mjs",
+          "browser": "./jsx-runtime/dist/jsxRuntime.module.js",
+          "require": "./jsx-runtime/dist/jsxRuntime.js"
+        },
+        "./package.json": "./package.json",
+        "./compat/client": {
+          "types": "./compat/client.d.ts",
+          "import": "./compat/client.mjs",
+          "require": "./compat/client.js"
+        },
+        "./compat/server": {
+          "import": "./compat/server.mjs",
+          "browser": "./compat/server.browser.js",
+          "require": "./compat/server.js"
+        },
+        "./jsx-dev-runtime": {
+          "umd": "./jsx-runtime/dist/jsxRuntime.umd.js",
+          "types": "./jsx-runtime/src/index.d.ts",
+          "import": "./jsx-runtime/dist/jsxRuntime.mjs",
+          "browser": "./jsx-runtime/dist/jsxRuntime.module.js",
+          "require": "./jsx-runtime/dist/jsxRuntime.js"
+        },
+        "./compat/scheduler": {
+          "import": "./compat/scheduler.mjs",
+          "require": "./compat/scheduler.js"
+        },
+        "./compat/test-utils": {
+          "umd": "./test-utils/dist/testUtils.umd.js",
+          "types": "./test-utils/src/index.d.ts",
+          "import": "./test-utils/dist/testUtils.mjs",
+          "browser": "./test-utils/dist/testUtils.module.js",
+          "require": "./test-utils/dist/testUtils.js"
+        },
+        "./compat/jsx-runtime": {
+          "types": "./jsx-runtime/src/index.d.ts",
+          "import": "./compat/jsx-runtime.mjs",
+          "require": "./compat/jsx-runtime.js"
+        },
+        "./debug/package.json": "./debug/package.json",
+        "./hooks/package.json": "./hooks/package.json",
+        "./compat/package.json": "./compat/package.json",
+        "./compat/server.browser": {
+          "types": "./compat/server.d.ts",
+          "default": "./compat/server.browser.js"
+        },
+        "./devtools/package.json": "./devtools/package.json",
+        "./compat/jsx-dev-runtime": {
+          "types": "./jsx-runtime/src/index.d.ts",
+          "import": "./compat/jsx-dev-runtime.mjs",
+          "require": "./compat/jsx-dev-runtime.js"
+        },
+        "./test-utils/package.json": "./test-utils/package.json",
+        "./jsx-runtime/package.json": "./jsx-runtime/package.json"
+      },
+      "funding": {
+        "url": "https://opencollective.com/preact",
+        "type": "opencollective"
+      },
+      "private": false,
+      "scripts": {
+        "dev": "microbundle watch --raw --no-generateTypes --format cjs",
+        "tsc": "tsc -p jsconfig-lint.json",
+        "lint": "run-s oxlint tsc",
+        "test": "npm-run-all build lint test:unit",
+        "build": "npm-run-all --parallel 'build:*'",
+        "format": "biome format --write .",
+        "oxlint": "oxlint -c oxlint.json src test/browser test/node test/shared debug compat hooks test-utils",
+        "prepare": "husky && run-s build",
+        "test:ts": "run-p 'test:ts:*'",
+        "build:jsx": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd jsx-runtime",
+        "dev:hooks": "microbundle watch --raw --no-generateTypes --format cjs --cwd hooks",
+        "postbuild": "node ./config/node-13-exports.js && node ./config/compat-entries.js",
+        "test:unit": "run-p test:mocha test:vitest:min test:ts",
+        "build:core": "microbundle build --raw --no-generateTypes -f cjs,esm,umd",
+        "dev:compat": "microbundle watch --raw --no-generateTypes --format cjs --cwd compat --globals 'preact/hooks=preactHooks'",
+        "test:mocha": "mocha --recursive --require \"@babel/register\" test/shared test/node",
+        "build:debug": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd debug",
+        "build:hooks": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd hooks",
+        "test:vitest": "cross-env COVERAGE=true vitest run",
+        "build:compat": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd compat --globals 'preact/hooks=preactHooks'",
+        "format:check": "biome format .",
+        "test:ts:core": "tsc -p test/ts/ && mocha --require \"@babel/register\" test/ts/**/*-test.js",
+        "build:core-min": "microbundle build --raw --no-generateTypes -f cjs,esm,umd,iife src/cjs.js -o dist/preact.min.js",
+        "build:devtools": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd devtools",
+        "test:ts:compat": "tsc -p compat/test/ts/",
+        "test:vitest:min": "cross-env MINIFY=true vitest run",
+        "build:test-utils": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd test-utils",
+        "test:mocha:watch": "npm run test:mocha -- --watch",
+        "test:vitest:watch": "vitest"
+      },
+      "umd:main": "dist/preact.umd.js",
+      "_resolved": "/Users/jovi/Documents/SideProjects/preact/preact-10.28.3.tgz",
+      "_integrity": "sha512-tCmoRkPQLpBeWzpmbhryairGnhW9tKV6c6gr/w+RhoRoKEJwsjzipwp//1oCpGPOchvSLaAPlpcJi9MwMmoPyA==",
+      "_npmVersion": "10.9.2",
+      "directories": {},
+      "nano-staged": {
+        "**/*.{js,jsx,mjs,cjs,ts,tsx,yml,json,html,md,css,scss}": [
+          "biome format --write --no-errors-on-unmatched"
+        ]
+      },
+      "_nodeVersion": "22.16.0",
       "typesVersions": {
         "<=5.0": {
           ".": [
@@ -25,226 +199,56 @@
           ]
         }
       },
-      "exports": {
-        ".": {
-          "types@<=5.0": {
-            "types": "./src/index-5.d.ts"
-          },
-          "types": "./src/index.d.ts",
-          "browser": "./dist/preact.module.js",
-          "umd": "./dist/preact.umd.js",
-          "import": "./dist/preact.mjs",
-          "require": "./dist/preact.js"
-        },
-        "./compat": {
-          "types": "./compat/src/index.d.ts",
-          "browser": "./compat/dist/compat.module.js",
-          "umd": "./compat/dist/compat.umd.js",
-          "import": "./compat/dist/compat.mjs",
-          "require": "./compat/dist/compat.js"
-        },
-        "./debug": {
-          "types": "./debug/src/index.d.ts",
-          "browser": "./debug/dist/debug.module.js",
-          "umd": "./debug/dist/debug.umd.js",
-          "import": "./debug/dist/debug.mjs",
-          "require": "./debug/dist/debug.js"
-        },
-        "./devtools": {
-          "types": "./devtools/src/index.d.ts",
-          "browser": "./devtools/dist/devtools.module.js",
-          "umd": "./devtools/dist/devtools.umd.js",
-          "import": "./devtools/dist/devtools.mjs",
-          "require": "./devtools/dist/devtools.js"
-        },
-        "./hooks": {
-          "types": "./hooks/src/index.d.ts",
-          "browser": "./hooks/dist/hooks.module.js",
-          "umd": "./hooks/dist/hooks.umd.js",
-          "import": "./hooks/dist/hooks.mjs",
-          "require": "./hooks/dist/hooks.js"
-        },
-        "./test-utils": {
-          "types": "./test-utils/src/index.d.ts",
-          "browser": "./test-utils/dist/testUtils.module.js",
-          "umd": "./test-utils/dist/testUtils.umd.js",
-          "import": "./test-utils/dist/testUtils.mjs",
-          "require": "./test-utils/dist/testUtils.js"
-        },
-        "./compat/test-utils": {
-          "types": "./test-utils/src/index.d.ts",
-          "browser": "./test-utils/dist/testUtils.module.js",
-          "umd": "./test-utils/dist/testUtils.umd.js",
-          "import": "./test-utils/dist/testUtils.mjs",
-          "require": "./test-utils/dist/testUtils.js"
-        },
-        "./jsx-runtime": {
-          "types": "./jsx-runtime/src/index.d.ts",
-          "browser": "./jsx-runtime/dist/jsxRuntime.module.js",
-          "umd": "./jsx-runtime/dist/jsxRuntime.umd.js",
-          "import": "./jsx-runtime/dist/jsxRuntime.mjs",
-          "require": "./jsx-runtime/dist/jsxRuntime.js"
-        },
-        "./jsx-dev-runtime": {
-          "types": "./jsx-runtime/src/index.d.ts",
-          "browser": "./jsx-runtime/dist/jsxRuntime.module.js",
-          "umd": "./jsx-runtime/dist/jsxRuntime.umd.js",
-          "import": "./jsx-runtime/dist/jsxRuntime.mjs",
-          "require": "./jsx-runtime/dist/jsxRuntime.js"
-        },
-        "./compat/client": {
-          "types": "./compat/client.d.ts",
-          "import": "./compat/client.mjs",
-          "require": "./compat/client.js"
-        },
-        "./compat/server": {
-          "browser": "./compat/server.browser.js",
-          "import": "./compat/server.mjs",
-          "require": "./compat/server.js"
-        },
-        "./compat/jsx-runtime": {
-          "types": "./jsx-runtime/src/index.d.ts",
-          "import": "./compat/jsx-runtime.mjs",
-          "require": "./compat/jsx-runtime.js"
-        },
-        "./compat/jsx-dev-runtime": {
-          "types": "./jsx-runtime/src/index.d.ts",
-          "import": "./compat/jsx-dev-runtime.mjs",
-          "require": "./compat/jsx-dev-runtime.js"
-        },
-        "./compat/scheduler": {
-          "import": "./compat/scheduler.mjs",
-          "require": "./compat/scheduler.js"
-        },
-        "./package.json": "./package.json",
-        "./compat/package.json": "./compat/package.json",
-        "./debug/package.json": "./debug/package.json",
-        "./devtools/package.json": "./devtools/package.json",
-        "./hooks/package.json": "./hooks/package.json",
-        "./test-utils/package.json": "./test-utils/package.json",
-        "./jsx-runtime/package.json": "./jsx-runtime/package.json"
-      },
-      "license": "MIT",
-      "funding": {
-        "type": "opencollective",
-        "url": "https://opencollective.com/preact"
-      },
-      "types": "src/index.d.ts",
-      "scripts": {
-        "prepare": "husky && run-s build",
-        "build": "npm-run-all --parallel 'build:*'",
-        "build:core": "microbundle build --raw --no-generateTypes -f cjs,esm,umd",
-        "build:core-min": "microbundle build --raw --no-generateTypes -f cjs,esm,umd,iife src/cjs.js -o dist/preact.min.js",
-        "build:debug": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd debug",
-        "build:devtools": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd devtools",
-        "build:hooks": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd hooks",
-        "build:test-utils": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd test-utils",
-        "build:compat": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd compat --globals 'preact/hooks=preactHooks'",
-        "build:jsx": "microbundle build --raw --no-generateTypes -f cjs,esm,umd --cwd jsx-runtime",
-        "postbuild": "node ./config/node-13-exports.js && node ./config/compat-entries.js",
-        "dev": "microbundle watch --raw --no-generateTypes --format cjs",
-        "dev:hooks": "microbundle watch --raw --no-generateTypes --format cjs --cwd hooks",
-        "dev:compat": "microbundle watch --raw --no-generateTypes --format cjs --cwd compat --globals 'preact/hooks=preactHooks'",
-        "test": "npm-run-all build lint test:unit",
-        "test:unit": "run-p test:mocha test:vitest:min test:ts",
-        "test:vitest": "cross-env COVERAGE=true vitest run",
-        "test:vitest:min": "cross-env MINIFY=true vitest run",
-        "test:vitest:watch": "vitest",
-        "test:ts": "run-p 'test:ts:*'",
-        "test:ts:core": "tsc -p test/ts/ && mocha --require \"@babel/register\" test/ts/**/*-test.js",
-        "test:ts:compat": "tsc -p compat/test/ts/",
-        "test:mocha": "mocha --recursive --require \"@babel/register\" test/shared test/node",
-        "test:mocha:watch": "npm run test:mocha -- --watch",
-        "lint": "run-s oxlint tsc",
-        "tsc": "tsc -p jsconfig-lint.json",
-        "oxlint": "oxlint -c oxlint.json src test/browser test/node test/shared debug compat hooks test-utils",
-        "format": "biome format --write .",
-        "format:check": "biome format ."
-      },
-      "nano-staged": {
-        "**/*.{js,jsx,mjs,cjs,ts,tsx,yml,json,html,md,css,scss}": [
-          "biome format --write --no-errors-on-unmatched"
-        ]
-      },
-      "authors": [
-        "The Preact Authors (https://github.com/preactjs/preact/contributors)"
-      ],
-      "bugs": {
-        "url": "https://github.com/preactjs/preact/issues"
-      },
+      "_hasShrinkwrap": false,
       "devDependencies": {
-        "@actions/github": "^6.0.0",
-        "@actions/glob": "^0.5.0",
-        "@babel/core": "^7.26.0",
-        "@babel/plugin-transform-react-jsx": "^7.25.9",
-        "@babel/plugin-transform-react-jsx-source": "^7.25.9",
-        "@babel/preset-env": "^7.26.0",
-        "@babel/register": "^7.25.9",
-        "@biomejs/biome": "^1.9.4",
-        "@types/chai": "^5.0.1",
-        "@types/mocha": "^10.0.0",
-        "@types/node": "^18.19.87",
-        "@types/sinon": "^17.0.3",
-        "@vitest/browser": "^3.2.1",
-        "@vitest/coverage-istanbul": "^3.2.1",
-        "babel-plugin-transform-rename-properties": "0.1.0",
         "chai": "^5.2.0",
+        "sade": "^1.8.1",
+        "vite": "^6.2.0",
+        "husky": "^9.1.7",
+        "mocha": "^11.0.0",
+        "sinon": "^19.0.2",
+        "oxlint": "^0.15.12",
+        "terser": "5.16.0",
+        "undici": "^4.12.0",
+        "vitest": "^3.2.1",
+        "esbuild": "^0.24.0",
+        "kolorist": "^1.8.0",
         "coveralls": "^3.1.1",
         "cross-env": "^7.0.3",
-        "errorstacks": "^2.4.1",
-        "esbuild": "^0.24.0",
-        "husky": "^9.1.7",
-        "kolorist": "^1.8.0",
-        "microbundle": "^0.15.1",
-        "mocha": "^11.0.0",
-        "npm-run-all2": "^7.0.0",
-        "oxlint": "^0.15.12",
-        "preact-render-to-string": "^6.5.0",
         "prop-types": "^15.8.1",
-        "sade": "^1.8.1",
-        "sinon": "^19.0.2",
         "sinon-chai": "^4.0.0",
-        "terser": "5.16.0",
         "typescript": "5.1.6",
-        "undici": "^4.12.0",
-        "vite": "^6.2.0",
-        "vitest": "^3.2.1",
-        "webdriverio": "^9.15.0"
-      },
-      "volta": {
-        "node": "20.19.1"
-      },
-      "_id": "preact@10.27.2",
-      "_integrity": "sha512-5SYSgFKSyhCbk6SrXyMpqjb5+MQBgfvEKE/OC+PujcY34sOpqtr+0AZQtPYx5IA6VxynQ7rUPCtKzyovpj9Bpg==",
-      "_resolved": "/Users/jovi/Documents/SideProjects/preact/preact-10.27.2.tgz",
-      "_from": "file:preact-10.27.2.tgz",
-      "_nodeVersion": "20.13.0",
-      "_npmVersion": "10.5.2",
-      "dist": {
-        "integrity": "sha512-5SYSgFKSyhCbk6SrXyMpqjb5+MQBgfvEKE/OC+PujcY34sOpqtr+0AZQtPYx5IA6VxynQ7rUPCtKzyovpj9Bpg==",
-        "shasum": "19b9009c1be801a76a0aaf0fe5ba665985a09312",
-        "tarball": "http://localhost:3000/preact/-/preact-10.27.2.tgz",
-        "fileCount": 131,
-        "unpackedSize": 1548326,
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEQCIGoPQSolFLQbyI2o6evfOeTMXRezWtO/lYeTYeJ+SSHxAiA76MUgQX/oeQMY0+2tO+xmM8hQtpp+6zTzLONnkbZUDQ=="
-          }
-        ]
-      },
-      "directories": {},
-      "_hasShrinkwrap": false
+        "@babel/core": "^7.26.0",
+        "@types/chai": "^5.0.1",
+        "@types/node": "^18.19.87",
+        "errorstacks": "^2.4.1",
+        "microbundle": "^0.15.1",
+        "webdriverio": "^9.15.0",
+        "@types/mocha": "^10.0.0",
+        "@types/sinon": "^17.0.3",
+        "npm-run-all2": "^7.0.0",
+        "@actions/glob": "^0.5.0",
+        "@biomejs/biome": "^1.9.4",
+        "@actions/github": "^6.0.0",
+        "@babel/register": "^7.25.9",
+        "@vitest/browser": "^3.2.1",
+        "@babel/preset-env": "^7.26.0",
+        "preact-render-to-string": "^6.5.0",
+        "@vitest/coverage-istanbul": "^3.2.1",
+        "@babel/plugin-transform-react-jsx": "^7.25.9",
+        "@babel/plugin-transform-react-jsx-source": "^7.25.9",
+        "babel-plugin-transform-rename-properties": "0.1.0"
+      }
     }
   },
   "time": {
     "created": "2015-09-11T02:41:33.521Z",
-    "modified": "2025-09-13T13:59:16.549Z",
+    "modified": "2026-02-19T07:15:49.709Z",
     "5.0.0-beta12": "2016-06-13T15:56:58.301Z",
     "5.0.0-beta.12": "2016-06-13T16:00:14.174Z",
     "5.0.1-beta.13": "2016-06-18T17:26:50.831Z",
     "7.0.0": "2016-11-10T19:33:23.091Z",
-    "10.27.2": "2025-09-13T13:59:16.323Z"
+    "10.28.3": "2026-01-31T09:59:30.554Z"
   },
   "license": "MIT"
 }

@@ -1,9 +1,9 @@
 {
   "_id": "builder-util-runtime",
-  "_rev": "117-de1a8d6f16ade3890879c77c253e2c47",
+  "_rev": "118-e62c856ad5f6afa37cfc1ffb51404184",
   "name": "builder-util-runtime",
   "dist-tags": {
-    "latest": "9.3.1",
+    "latest": "9.5.1",
     "next": "9.5.1"
   },
   "versions": {
@@ -48,12 +48,62 @@
         "@types/sax": "1.2.3",
         "@types/debug": "4.1.7"
       }
+    },
+    "9.5.1": {
+      "name": "builder-util-runtime",
+      "version": "9.5.1",
+      "license": "MIT",
+      "_id": "builder-util-runtime@9.5.1",
+      "bugs": {
+        "url": "https://github.com/electron-userland/electron-builder/issues"
+      },
+      "dist": {
+        "shasum": "74125fb374d1ecbf472ae1787485485ff7619702",
+        "tarball": "http://localhost:3000/builder-util-runtime/-/builder-util-runtime-9.5.1.tgz",
+        "fileCount": 42,
+        "integrity": "sha512-qt41tMfgHTllhResqM5DcnHyDIWNgzHvuY2jDcYP9iaGpkWxTUzV6GQjDeLnlR1/DtdlcsWQbA7sByMpmJFTLQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCE7yzzlybeY7veiG/wZVgQsLfycz4Eq3kKuDoMuR88aAIgdXzIKYGn2XdqjsulFMri6XztAuSXKYFmHgzsCfYx1io=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/builder-util-runtime@9.5.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 173884
+      },
+      "main": "out/index.js",
+      "_from": "file:builder-util-runtime-9.5.1.tgz",
+      "types": "./out/index.d.ts",
+      "engines": {
+        "node": ">=12.0.0"
+      },
+      "_resolved": "/tmp/de379bb551aacb93d81d834f51aa44f0/builder-util-runtime-9.5.1.tgz",
+      "_integrity": "sha512-qt41tMfgHTllhResqM5DcnHyDIWNgzHvuY2jDcYP9iaGpkWxTUzV6GQjDeLnlR1/DtdlcsWQbA7sByMpmJFTLQ==",
+      "_npmVersion": "11.6.2",
+      "directories": {},
+      "_nodeVersion": "22.21.1",
+      "dependencies": {
+        "sax": "^1.2.4",
+        "debug": "^4.3.4"
+      },
+      "_hasShrinkwrap": false,
+      "readmeFilename": "readme.md",
+      "devDependencies": {
+        "@types/sax": "1.2.3",
+        "@types/debug": "4.1.7"
+      }
     }
   },
   "time": {
     "created": "2017-09-06T17:09:16.067Z",
-    "modified": "2025-11-18T13:53:24.565Z",
-    "9.2.4": "2024-02-17T20:48:14.872Z"
+    "modified": "2026-01-06T16:31:54.350Z",
+    "9.2.4": "2024-02-17T20:48:14.872Z",
+    "9.5.1": "2025-11-18T13:53:24.183Z"
   },
   "license": "MIT"
 }

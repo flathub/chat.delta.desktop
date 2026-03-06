@@ -1,9 +1,9 @@
 {
   "_id": "@eslint/core",
-  "_rev": "21-a6b22f8aa6789a2c5913c633ecacb548",
+  "_rev": "23-904be3fef1d315bc586f3869f6f1b53c",
   "name": "@eslint/core",
   "dist-tags": {
-    "latest": "1.0.0"
+    "latest": "1.1.0"
   },
   "versions": {
     "0.17.0": {
@@ -64,12 +64,72 @@
       "devDependencies": {
         "json-schema": "^0.4.0"
       }
+    },
+    "1.0.0": {
+      "name": "@eslint/core",
+      "version": "1.0.0",
+      "license": "Apache-2.0",
+      "_id": "@eslint/core@1.0.0",
+      "bugs": {
+        "url": "https://github.com/eslint/rewrite/issues"
+      },
+      "dist": {
+        "shasum": "6e371a1ce8dc56224f3b9b97fb6b815cd41f9b87",
+        "tarball": "http://localhost:3000/@eslint/core/-/core-1.0.0.tgz",
+        "fileCount": 5,
+        "integrity": "sha512-PRfWP+8FOldvbApr6xL7mNCw4cJcSTq4GA7tYbgq15mRb0kWKO/wEB2jr+uwjFH3sZvEZneZyCUGTxsv4Sahyw==",
+        "signatures": [
+          {
+            "sig": "MEUCIDo47GFd2MTr27i2n7vw+tDGsTSrFIbzFUf3XvSBcL5mAiEA1DFJqIWe8Mi6zAtPcIBNTUnRCOz1I4gTgLnItJ8WlMY=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@eslint%2fcore@1.0.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 90404
+      },
+      "type": "module",
+      "types": "./dist/esm/types.d.ts",
+      "engines": {
+        "node": "^20.19.0 || ^22.13.0 || >=24"
+      },
+      "exports": {
+        "types": {
+          "import": "./dist/esm/types.d.ts",
+          "require": "./dist/cjs/types.d.cts"
+        }
+      },
+      "gitHead": "c368656dbba4d927344905f24b3993a378a59a88",
+      "scripts": {
+        "build": "tsc && npm run build:cts",
+        "test:jsr": "npx jsr@latest publish --dry-run",
+        "build:cts": "node -e \"fs.cpSync('dist/esm/types.d.ts', 'dist/cjs/types.d.cts')\"",
+        "test:types": "tsc -p tests/types/tsconfig.json"
+      },
+      "_npmVersion": "11.6.2",
+      "directories": {},
+      "_nodeVersion": "24.11.1",
+      "dependencies": {
+        "@types/json-schema": "^7.0.15"
+      },
+      "publishConfig": {
+        "access": "public"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "json-schema": "^0.4.0"
+      }
     }
   },
   "time": {
     "created": "2024-06-26T16:13:30.730Z",
-    "modified": "2025-11-14T16:30:08.609Z",
-    "0.17.0": "2025-10-29T14:21:34.375Z"
+    "modified": "2026-01-30T17:17:12.314Z",
+    "0.17.0": "2025-10-29T14:21:34.375Z",
+    "1.0.0": "2025-11-14T16:30:08.136Z"
   },
   "license": "Apache-2.0"
 }

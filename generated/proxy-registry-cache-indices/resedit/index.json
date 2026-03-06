@@ -1,0 +1,101 @@
+{
+  "_id": "resedit",
+  "_rev": "34-ea24e3da5fb473752204e5a68273bba9",
+  "name": "resedit",
+  "dist-tags": {
+    "latest": "3.0.2"
+  },
+  "versions": {
+    "1.7.2": {
+      "name": "resedit",
+      "version": "1.7.2",
+      "license": "MIT",
+      "_id": "resedit@1.7.2",
+      "bugs": {
+        "url": "https://github.com/jet2jet/resedit-js/issues"
+      },
+      "dist": {
+        "shasum": "b1041170b99811710c13f949c7d225871de4cc78",
+        "tarball": "http://localhost:3000/resedit/-/resedit-1.7.2.tgz",
+        "fileCount": 149,
+        "integrity": "sha512-vHjcY2MlAITJhC0eRD/Vv8Vlgmu9Sd3LX9zZvtGzU5ZImdTN3+d6e/4mnTyV8vEbyf1sgNIrWxhWlrys52OkEA==",
+        "signatures": [
+          {
+            "sig": "MEUCIQDs3Fak4c/ixI076WKoRSoqWeetGZpdG3gW0kLZlWQ2/QIgW6Mos/IZUFxn5deHHJKBRppXSp94Bv+mTmj0+4Nv48w=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 355386
+      },
+      "main": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "module": "./dist/_esm/index.js",
+      "engines": {
+        "npm": ">=6",
+        "node": ">=12"
+      },
+      "exports": {
+        "node": {
+          "import": "./dist/index.mjs",
+          "require": "./dist/index.js"
+        },
+        "import": "./dist/_esm/index.js",
+        "require": "./dist/index.js"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/jet2jet",
+        "type": "github"
+      },
+      "gitHead": "ea23879d87340b523bbcd1de93bcb963fbd9a2ce",
+      "scripts": {
+        "lint": "npm run lint:prettier && npm run lint:eslint",
+        "test": "jest --config ./jest.config.basic.js",
+        "build": "npm run build:cjs && npm run build:esm",
+        "version": "node ./tools/updateVersion.js ./src/main/version.ts && git add -A ./src/main/version.ts",
+        "lint:fix": "npm run lint:prettier:fix && npm run lint:eslint:fix",
+        "build:cjs": "tsc -p ./tsconfig.app.json",
+        "build:esm": "tsc -p ./tsconfig.app.esm.json && node ./tools/copyEsmFile.js",
+        "test:lint": "npm run lint",
+        "typecheck": "tsc --project tsconfig.json --noEmit && echo \"Done\".",
+        "test:basic": "jest --config ./jest.config.basic.js",
+        "lint:eslint": "eslint -c .eslintrc.yml --ext .js,.jsx,.ts,.tsx .",
+        "test:win-x64": "jest --config ./jest.config.win-x64.js",
+        "test:win-x86": "jest --config ./jest.config.win-x86.js",
+        "lint:prettier": "prettier --config ./.prettierrc.yml --check \"**/*.{js,jsx,ts,tsx,yml,json,md}\"",
+        "lint:eslint:fix": "eslint -c .eslintrc.yml --fix --ext .js,.jsx,.ts,.tsx .",
+        "lint:prettier:fix": "prettier --config ./.prettierrc.yml --write \"**/*.{js,jsx,ts,tsx,yml,json,md}\""
+      },
+      "_npmVersion": "6.14.15",
+      "directories": {},
+      "_nodeVersion": "12.22.9",
+      "dependencies": {
+        "pe-library": "^0.4.1"
+      },
+      "engineStrict": true,
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "jest": "^28.1.3",
+        "eslint": "^8.31.0",
+        "ts-jest": "^28.0.8",
+        "prettier": "^2.8.2",
+        "typescript": "~4.2.4",
+        "@types/jest": "^27.5.0",
+        "@types/node": "^12.20.37",
+        "eslint-plugin-n": "^15.6.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-promise": "^6.1.1",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-config-standard": "^17.0.0",
+        "@typescript-eslint/parser": "^5.48.0",
+        "@typescript-eslint/eslint-plugin": "^5.48.0",
+        "eslint-config-standard-with-typescript": "^26.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2018-12-09T08:11:50.514Z",
+    "modified": "2026-02-07T12:14:52.656Z",
+    "1.7.2": "2024-10-08T12:13:26.061Z"
+  },
+  "license": "MIT"
+}

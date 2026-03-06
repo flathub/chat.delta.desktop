@@ -1,72 +1,72 @@
 {
   "_id": "express-session",
-  "_rev": "552-37bc3747431f236c27d8252b7a88e032",
+  "_rev": "553-237bb7ee0943fcb59c2dd2ce9cd4ec71",
   "name": "express-session",
   "dist-tags": {
-    "latest": "1.18.2"
+    "latest": "1.19.0"
   },
   "versions": {
     "1.18.2": {
       "name": "express-session",
       "version": "1.18.2",
       "license": "MIT",
-      "dependencies": {
-        "cookie": "0.7.2",
-        "cookie-signature": "1.0.7",
-        "debug": "2.6.9",
-        "depd": "~2.0.0",
-        "on-headers": "~1.1.0",
-        "parseurl": "~1.3.3",
-        "safe-buffer": "5.2.1",
-        "uid-safe": "~2.1.5"
+      "_id": "express-session@1.18.2",
+      "bugs": {
+        "url": "https://github.com/expressjs/session/issues"
       },
-      "devDependencies": {
-        "after": "0.8.2",
-        "cookie-parser": "1.4.6",
-        "eslint": "8.56.0",
-        "eslint-plugin-markdown": "3.0.1",
-        "express": "4.17.3",
-        "mocha": "10.8.2",
-        "nyc": "15.1.0",
-        "supertest": "6.3.4"
+      "dist": {
+        "shasum": "34db6252611b57055e877036eea09b4453dec5d8",
+        "tarball": "http://localhost:3000/express-session/-/express-session-1.18.2.tgz",
+        "fileCount": 9,
+        "integrity": "sha512-SZjssGQC7TzTs9rpPDuUrR23GNZ9+2+IkA/+IJWmvQilTr5OSliEHGF+D9scbIpdC6yGtTI0/VhaHoVes2AN/A==",
+        "signatures": [
+          {
+            "sig": "MEYCIQD0H0z8ycfDXOse3Yu71gG8qY0dAspPYnfC6vb7TeIt+gIhAIpgRtoo9FDjYJW5eGaMKygeIIaIALNw10ZOyyT9lagh",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 87129
       },
       "engines": {
         "node": ">= 0.8.0"
       },
+      "gitHead": "d10709f319d1ff4069e1e552fc7f3ca27989e981",
       "scripts": {
         "lint": "eslint . && node ./scripts/lint-readme.js",
         "test": "./test/support/gencert.sh && mocha --require test/support/env --check-leaks --bail --no-exit --reporter spec test/",
         "test-ci": "nyc --reporter=lcov --reporter=text npm test",
-        "test-cov": "nyc npm test",
-        "version": "node scripts/version-history.js && git add HISTORY.md"
+        "version": "node scripts/version-history.js && git add HISTORY.md",
+        "test-cov": "nyc npm test"
       },
-      "_id": "express-session@1.18.2",
-      "gitHead": "d10709f319d1ff4069e1e552fc7f3ca27989e981",
-      "bugs": {
-        "url": "https://github.com/expressjs/session/issues"
-      },
-      "_nodeVersion": "22.10.0",
       "_npmVersion": "10.9.0",
-      "dist": {
-        "integrity": "sha512-SZjssGQC7TzTs9rpPDuUrR23GNZ9+2+IkA/+IJWmvQilTr5OSliEHGF+D9scbIpdC6yGtTI0/VhaHoVes2AN/A==",
-        "shasum": "34db6252611b57055e877036eea09b4453dec5d8",
-        "tarball": "http://localhost:3000/express-session/-/express-session-1.18.2.tgz",
-        "fileCount": 9,
-        "unpackedSize": 87129,
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEYCIQD0H0z8ycfDXOse3Yu71gG8qY0dAspPYnfC6vb7TeIt+gIhAIpgRtoo9FDjYJW5eGaMKygeIIaIALNw10ZOyyT9lagh"
-          }
-        ]
-      },
       "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "22.10.0",
+      "dependencies": {
+        "depd": "~2.0.0",
+        "debug": "2.6.9",
+        "cookie": "0.7.2",
+        "parseurl": "~1.3.3",
+        "uid-safe": "~2.1.5",
+        "on-headers": "~1.1.0",
+        "safe-buffer": "5.2.1",
+        "cookie-signature": "1.0.7"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "nyc": "15.1.0",
+        "after": "0.8.2",
+        "mocha": "10.8.2",
+        "eslint": "8.56.0",
+        "express": "4.17.3",
+        "supertest": "6.3.4",
+        "cookie-parser": "1.4.6",
+        "eslint-plugin-markdown": "3.0.1"
+      }
     }
   },
   "time": {
     "created": "2014-02-16T00:49:14.605Z",
-    "modified": "2025-07-17T17:53:20.524Z",
+    "modified": "2026-01-22T14:46:26.342Z",
     "1.18.2": "2025-07-17T17:53:20.235Z"
   },
   "license": "MIT"

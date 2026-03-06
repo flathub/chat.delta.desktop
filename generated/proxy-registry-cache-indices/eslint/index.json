@@ -1,19 +1,19 @@
 {
   "_id": "eslint",
-  "_rev": "927-41af6acfb772250dc6df178c9b7f48f3",
+  "_rev": "937-8688aa38c40f97b93c507fbb03273351",
   "name": "eslint",
   "dist-tags": {
     "es6jsx": "0.11.0-alpha.0",
-    "next": "10.0.0-alpha.0",
-    "maintenance": "8.57.1",
-    "latest": "9.39.1"
+    "next": "10.0.0-rc.2",
+    "maintenance": "9.39.3",
+    "latest": "10.0.2"
   },
   "versions": {
-    "9.39.0": {
+    "9.39.2": {
       "name": "eslint",
-      "version": "9.39.0",
+      "version": "9.39.2",
       "license": "MIT",
-      "_id": "eslint@9.39.0",
+      "_id": "eslint@9.39.2",
       "bugs": {
         "url": "https://github.com/eslint/eslint/issues/"
       },
@@ -21,17 +21,17 @@
         "eslint": "bin/eslint.js"
       },
       "dist": {
-        "shasum": "33c90ddf62b64e1e3f83b689934b336f21b5f0e5",
-        "tarball": "http://localhost:3000/eslint/-/eslint-9.39.0.tgz",
+        "shasum": "cb60e6d16ab234c0f8369a3fe7cc87967faf4b6c",
+        "tarball": "http://localhost:3000/eslint/-/eslint-9.39.2.tgz",
         "fileCount": 426,
-        "integrity": "sha512-iy2GE3MHrYTL5lrCtMZ0X1KLEKKUjmK0kzwcnefhR66txcEmXZD2YWgR5GNdcEwkNx3a0siYkSvl0vIC+Svjmg==",
+        "integrity": "sha512-LEyamqS7W5HB3ujJyvi0HQK/dtVINZvd5mAAp9eT5S/ujByGjiZLCzPcHVzuXbpJDJF/cxwHlfceVUDZ2lnSTw==",
         "signatures": [
           {
-            "sig": "MEUCIQDJfkWHu9/eQiDgVbCKcUFeI40XKqeEU5+RQvAdn+WAuQIgCgHToUguo92yfx710vkBV8S5r3mdM+2SBmKkcLSugCQ=",
+            "sig": "MEUCIC/KDiGqB5AuVjKOtzyrvKJ+K99RH0qc+eYpIJPX4TGjAiEAyEMWyE/VtUcd3ZvhnjEIUzZlCj2mCVuEBBYgBtsvMig=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 2993043
+        "unpackedSize": 2993852
       },
       "main": "./lib/api.js",
       "type": "commonjs",
@@ -62,7 +62,7 @@
         }
       },
       "funding": "https://eslint.org/donate",
-      "gitHead": "ac3a60dffc29d8d4d5031621bc062e77f891532a",
+      "gitHead": "9278324aa0023d223874825b0d4b6ac75783096a",
       "scripts": {
         "lint": "trunk check --no-fix --ignore=docs/**/*.js -a --filter=eslint && trunk check --no-fix --ignore=docs/**/*.js",
         "test": "node Makefile.js test",
@@ -95,7 +95,7 @@
       "gitHooks": {
         "pre-commit": "lint-staged"
       },
-      "_npmVersion": "10.1.0",
+      "_npmVersion": "10.9.4",
       "directories": {},
       "lint-staged": {
         "*": "trunk check --fix",
@@ -111,7 +111,7 @@
           "git add docs/src/_data/further_reading_links.json"
         ]
       },
-      "_nodeVersion": "20.9.0",
+      "_nodeVersion": "22.21.0",
       "dependencies": {
         "ajv": "^6.12.4",
         "chalk": "^4.0.0",
@@ -123,7 +123,7 @@
         "find-up": "^5.0.0",
         "is-glob": "^4.0.0",
         "minimatch": "^3.1.2",
-        "@eslint/js": "9.39.0",
+        "@eslint/js": "9.39.2",
         "optionator": "^0.9.3",
         "cross-spawn": "^7.0.6",
         "glob-parent": "^6.0.2",
@@ -240,9 +240,9 @@
   },
   "time": {
     "created": "2013-07-04T17:01:29.347Z",
-    "modified": "2025-11-14T20:08:14.304Z",
+    "modified": "2026-02-23T21:43:39.061Z",
     "0.7.0": "2014-05-23T21:21:04.170Z",
-    "9.39.0": "2025-10-31T20:30:15.827Z"
+    "9.39.2": "2025-12-12T22:44:54.630Z"
   },
   "license": "MIT"
 }

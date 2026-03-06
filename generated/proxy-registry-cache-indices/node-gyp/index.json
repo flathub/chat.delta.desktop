@@ -1,0 +1,85 @@
+{
+  "_id": "node-gyp",
+  "_rev": "418-863008837d244878da12f66b90f37ac9",
+  "name": "node-gyp",
+  "dist-tags": {
+    "latest": "12.2.0"
+  },
+  "versions": {
+    "11.5.0": {
+      "name": "node-gyp",
+      "version": "11.5.0",
+      "license": "MIT",
+      "_id": "node-gyp@11.5.0",
+      "bugs": {
+        "url": "https://github.com/nodejs/node-gyp/issues"
+      },
+      "bin": {
+        "node-gyp": "bin/node-gyp.js"
+      },
+      "dist": {
+        "shasum": "82661b5f40647a7361efe918e3cea76d297fcc56",
+        "tarball": "http://localhost:3000/node-gyp/-/node-gyp-11.5.0.tgz",
+        "fileCount": 108,
+        "integrity": "sha512-ra7Kvlhxn5V9Slyus0ygMa2h+UqExPqUIkfk7Pc8QTLT956JLSy51uWFwHtIYy0vI8cB4BDhc/S03+880My/LQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIE42MUh4JKk7HN/Z+vxMXtV0mqzBUaybuMsytshubf6/AiEAtKmMwyfMEyfUIygxLuk4nSEZfGNost3Ca1URXPdjY6A=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/node-gyp@11.5.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 1867568
+      },
+      "main": "./lib/node-gyp.js",
+      "engines": {
+        "node": "^18.17.0 || >=20.5.0"
+      },
+      "gitHead": "3cff85955e6ec8973fc6703ed937313b30bc0093",
+      "scripts": {
+        "lint": "eslint \"*/*.js\" \"test/**/*.js\" \".github/**/*.js\"",
+        "test": "cross-env NODE_GYP_NULL_LOGGER=true mocha --timeout 15000 test/test-download.js test/test-*"
+      },
+      "_npmVersion": "11.6.2",
+      "directories": {},
+      "_nodeVersion": "22.20.0",
+      "dependencies": {
+        "tar": "^7.4.3",
+        "nopt": "^8.0.0",
+        "which": "^5.0.0",
+        "semver": "^7.3.5",
+        "proc-log": "^5.0.0",
+        "env-paths": "^2.2.0",
+        "tinyglobby": "^0.2.12",
+        "graceful-fs": "^4.2.6",
+        "make-fetch-happen": "^14.0.3",
+        "exponential-backoff": "^3.1.1"
+      },
+      "preferGlobal": true,
+      "_hasShrinkwrap": false,
+      "installVersion": 11,
+      "devDependencies": {
+        "nan": "^2.14.2",
+        "mocha": "^11.0.1",
+        "eslint": "^9.16.0",
+        "bindings": "^1.5.0",
+        "cross-env": "^7.0.3",
+        "neostandard": "^0.11.9",
+        "require-inject": "^1.4.4"
+      }
+    }
+  },
+  "time": {
+    "created": "2012-02-05T19:47:50.427Z",
+    "modified": "2026-01-27T14:47:49.706Z",
+    "0.0.1-alpha1": "2012-02-05T19:47:52.027Z",
+    "0.9.7": "2013-06-05T22:54:09.331Z",
+    "11.5.0": "2025-10-15T12:33:10.025Z"
+  },
+  "license": "MIT"
+}

@@ -1,9 +1,9 @@
 {
   "_id": "fs-extra",
-  "_rev": "649-ea3676101ff4fabf81cc670d1f71cc9b",
+  "_rev": "650-c11d783324989810d5223e4a66ec2aa8",
   "name": "fs-extra",
   "dist-tags": {
-    "latest": "11.3.2"
+    "latest": "11.3.3"
   },
   "versions": {
     "8.1.0": {
@@ -176,14 +176,73 @@
         "at-least-node": "^1.0.0",
         "read-dir-files": "^0.1.1"
       }
+    },
+    "11.3.3": {
+      "name": "fs-extra",
+      "version": "11.3.3",
+      "engines": {
+        "node": ">=14.14"
+      },
+      "license": "MIT",
+      "dependencies": {
+        "graceful-fs": "^4.2.0",
+        "jsonfile": "^6.0.1",
+        "universalify": "^2.0.0"
+      },
+      "devDependencies": {
+        "klaw": "^2.1.1",
+        "klaw-sync": "^3.0.2",
+        "minimist": "^1.1.1",
+        "mocha": "^10.1.0",
+        "nyc": "^15.0.0",
+        "proxyquire": "^2.0.1",
+        "read-dir-files": "^0.1.1",
+        "standard": "^17.0.0"
+      },
+      "main": "./lib/index.js",
+      "exports": {
+        ".": "./lib/index.js",
+        "./esm": "./lib/esm.mjs"
+      },
+      "scripts": {
+        "lint": "standard",
+        "test-find": "find ./lib/**/__tests__ -name *.test.js | xargs mocha",
+        "test": "npm run lint && npm run unit && npm run unit-esm",
+        "unit": "nyc node test.js",
+        "unit-esm": "node test.mjs"
+      },
+      "sideEffects": false,
+      "_id": "fs-extra@11.3.3",
+      "gitHead": "1de81e98a8ff3afb5cf4a6b4dc63a93216728dd3",
+      "bugs": {
+        "url": "https://github.com/jprichardson/node-fs-extra/issues"
+      },
+      "_nodeVersion": "22.8.0",
+      "_npmVersion": "10.8.2",
+      "dist": {
+        "integrity": "sha512-VWSRii4t0AFm6ixFFmLLx1t7wS1gh+ckoa84aOeapGum0h+EZd1EhEumSB+ZdDLnEPuucsVB9oB7cxJHap6Afg==",
+        "shasum": "a27da23b72524e81ac6c3815cc0179b8c74c59ee",
+        "tarball": "http://localhost:3000/fs-extra/-/fs-extra-11.3.3.tgz",
+        "fileCount": 32,
+        "unpackedSize": 56838,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQDUtOvq55ryldmMa2YZTaD0bJ4A4as7A5D5t/NaZ/IuhwIhAKVH7NEGARennfz5dagTJCoJtDrlYcCZMbnnxPeExvg8"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2011-11-16T21:47:16.814Z",
-    "modified": "2025-10-13T17:09:18.094Z",
+    "modified": "2025-12-18T17:26:35.660Z",
     "8.1.0": "2019-06-28T17:02:36.992Z",
     "9.1.0": "2021-01-19T17:28:37.001Z",
-    "10.1.0": "2022-04-16T18:51:34.573Z"
+    "10.1.0": "2022-04-16T18:51:34.573Z",
+    "11.3.3": "2025-12-18T17:26:35.464Z"
   },
   "license": "MIT"
 }

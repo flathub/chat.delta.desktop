@@ -1,12 +1,12 @@
 {
   "_id": "brace-expansion",
-  "_rev": "41-a1af4f19c907d899ab380311fe076641",
+  "_rev": "43-fb0cafbdf7e5600877f3b8706ded47cb",
   "name": "brace-expansion",
   "dist-tags": {
-    "latest": "4.0.1",
     "3.x": "3.0.1",
     "2.x": "2.0.2",
-    "1.x": "1.1.12"
+    "1.x": "1.1.12",
+    "latest": "5.0.3"
   },
   "versions": {
     "2.0.2": {
@@ -72,21 +72,31 @@
     "1.1.12": {
       "name": "brace-expansion",
       "version": "1.1.12",
+      "license": "MIT",
+      "_id": "brace-expansion@1.1.12",
+      "bugs": {
+        "url": "https://github.com/juliangruber/brace-expansion/issues"
+      },
+      "dist": {
+        "shasum": "ab9b454466e5a8cc3a187beaad580412a9c5b843",
+        "tarball": "http://localhost:3000/brace-expansion/-/brace-expansion-1.1.12.tgz",
+        "fileCount": 4,
+        "integrity": "sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCefRVlAiPWPz42vj2hoqvreB3Job7AZ0kiUGVtB1yl1gIge5j1MzW2qkqi81uRNwZK1QPOMLfb8Xo8f2zlR2sYDV0=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 11107
+      },
       "main": "index.js",
+      "gitHead": "44f33b47c5c6a965d507421af43e86cf5971d711",
       "scripts": {
         "test": "tape test/*.js",
-        "gentest": "bash test/generate.sh",
-        "bench": "matcha test/perf/bench.js"
+        "bench": "matcha test/perf/bench.js",
+        "gentest": "bash test/generate.sh"
       },
-      "dependencies": {
-        "balanced-match": "^1.0.0",
-        "concat-map": "0.0.1"
-      },
-      "devDependencies": {
-        "matcha": "^0.7.0",
-        "tape": "^4.6.0"
-      },
-      "license": "MIT",
       "testling": {
         "files": "test/*.js",
         "browsers": [
@@ -103,37 +113,27 @@
           "android-browser/4.2..latest"
         ]
       },
+      "_npmVersion": "10.9.2",
+      "directories": {},
+      "_nodeVersion": "22.14.0",
+      "dependencies": {
+        "concat-map": "0.0.1",
+        "balanced-match": "^1.0.0"
+      },
       "publishConfig": {
         "tag": "1.x"
       },
-      "_id": "brace-expansion@1.1.12",
+      "_hasShrinkwrap": false,
       "readmeFilename": "README.md",
-      "gitHead": "44f33b47c5c6a965d507421af43e86cf5971d711",
-      "bugs": {
-        "url": "https://github.com/juliangruber/brace-expansion/issues"
-      },
-      "_nodeVersion": "22.14.0",
-      "_npmVersion": "10.9.2",
-      "dist": {
-        "integrity": "sha512-9T9UjW3r0UW5c1Q7GTwllptXwhvYmEzFhzMfZ9H7FQWt+uZePjZPjBP/W1ZEyZ1twGWom5/56TF4lPcqjnDHcg==",
-        "shasum": "ab9b454466e5a8cc3a187beaad580412a9c5b843",
-        "tarball": "http://localhost:3000/brace-expansion/-/brace-expansion-1.1.12.tgz",
-        "fileCount": 4,
-        "unpackedSize": 11107,
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIQCefRVlAiPWPz42vj2hoqvreB3Job7AZ0kiUGVtB1yl1gIge5j1MzW2qkqi81uRNwZK1QPOMLfb8Xo8f2zlR2sYDV0="
-          }
-        ]
-      },
-      "directories": {},
-      "_hasShrinkwrap": false
+      "devDependencies": {
+        "tape": "^4.6.0",
+        "matcha": "^0.7.0"
+      }
     }
   },
   "time": {
     "created": "2013-10-13T12:58:47.118Z",
-    "modified": "2025-06-11T08:52:58.305Z",
+    "modified": "2026-02-22T11:37:25.767Z",
     "2.0.2": "2025-06-11T08:48:36.535Z",
     "1.1.12": "2025-06-11T08:52:58.148Z"
   },
