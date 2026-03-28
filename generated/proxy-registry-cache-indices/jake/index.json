@@ -1,16 +1,16 @@
 {
   "_id": "jake",
-  "_rev": "327-16c280ebe2962e7e36ea553aa2219505",
+  "_rev": "328-8042bac7a3ac85046607bcb419767977",
   "name": "jake",
   "dist-tags": {
-    "latest": "10.9.4"
+    "latest": "11.9.5"
   },
   "versions": {
-    "10.9.1": {
+    "10.9.4": {
       "name": "jake",
-      "version": "10.9.1",
+      "version": "10.9.4",
       "license": "Apache-2.0",
-      "_id": "jake@10.9.1",
+      "_id": "jake@10.9.4",
       "bugs": {
         "url": "https://github.com/jakejs/jake/issues"
       },
@@ -18,20 +18,20 @@
         "jake": "bin/cli.js"
       },
       "dist": {
-        "shasum": "8dc96b7fcc41cb19aa502af506da4e1d56f5e62b",
-        "tarball": "http://localhost:3000/jake/-/jake-10.9.1.tgz",
+        "shasum": "d626da108c63d5cfb00ab5c25fadc7e0084af8e6",
+        "tarball": "http://localhost:3000/jake/-/jake-10.9.4.tgz",
         "fileCount": 50,
-        "integrity": "sha512-61btcOHNnLnsOdtLgA5efqQWjnSi/vow5HbI7HMdKKWqvrKR1bLK3BPlJn9gcSaP2ewuamUSMB5XEy76KUIS2w==",
+        "integrity": "sha512-wpHYzhxiVQL+IV05BLE2Xn34zW1S223hvjtqk0+gsPrwd/8JNLXJgZZM/iPFsYc1xyphF+6M6EvdE5E9MBGkDA==",
         "signatures": [
           {
-            "sig": "MEQCIC49QGztYDWE96OQ0hXgXsg0yTaUfa0cmM5TOrDWAEFyAiBg+mmeARiDcvIdYiYocsbvVe9Y8tw8bQJAJtbub1W2Dw==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEQCIF2YlyixH62pk+YRs+JoAu6gTHiCmr/fEXenpC4DDZVgAiBmEiVvy8aOiTFZNUOV7Mm6eCtLFitEXliCOj+oR99rtQ==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 174998
+        "unpackedSize": 175071
       },
       "main": "./lib/jake.js",
-      "_from": "file:pkg/jake-v10.9.1.tar.gz",
+      "_from": "file:pkg/jake-v10.9.4.tar.gz",
       "engines": {
         "node": ">=10"
       },
@@ -41,30 +41,32 @@
         "test:ci": "npm run lint && npm run test",
         "lint:fix": "eslint --fix \"lib/**/*.js\" \"test/**/*.js\""
       },
-      "_resolved": "/home/mde/work/jake/pkg/jake-v10.9.1.tar.gz",
-      "_integrity": "sha512-61btcOHNnLnsOdtLgA5efqQWjnSi/vow5HbI7HMdKKWqvrKR1bLK3BPlJn9gcSaP2ewuamUSMB5XEy76KUIS2w==",
-      "_npmVersion": "10.2.4",
+      "_resolved": "/Users/mde/Documents/jake/pkg/jake-v10.9.4.tar.gz",
+      "_integrity": "sha512-wpHYzhxiVQL+IV05BLE2Xn34zW1S223hvjtqk0+gsPrwd/8JNLXJgZZM/iPFsYc1xyphF+6M6EvdE5E9MBGkDA==",
+      "_npmVersion": "10.9.2",
       "directories": {},
-      "_nodeVersion": "20.11.1",
+      "_nodeVersion": "22.15.0",
       "dependencies": {
-        "async": "^3.2.3",
-        "chalk": "^4.0.2",
+        "async": "^3.2.6",
         "filelist": "^1.0.4",
-        "minimatch": "^3.1.2"
+        "picocolors": "^1.1.1"
       },
       "preferGlobal": true,
       "_hasShrinkwrap": false,
       "devDependencies": {
         "q": "^1.5.1",
-        "mocha": "^10.2.0",
-        "eslint": "^6.8.0"
+        "mocha": "^11.0.1",
+        "eslint": "^9.16.0",
+        "globals": "^15.13.0",
+        "@eslint/js": "^9.16.0",
+        "eslint-formatter-codeframe": "^7.32.1"
       }
     }
   },
   "time": {
     "created": "2011-03-26T22:06:58.184Z",
-    "modified": "2025-08-03T23:30:06.303Z",
-    "10.9.1": "2024-05-03T20:23:26.668Z"
+    "modified": "2026-02-25T21:20:59.545Z",
+    "10.9.4": "2025-08-03T23:30:06.111Z"
   },
   "license": "Apache-2.0"
 }

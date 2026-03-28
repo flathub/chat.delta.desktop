@@ -1,230 +1,38 @@
 {
   "_id": "minimatch",
-  "_rev": "303-82fb67e2c573cb778417b57dbb2323ab",
+  "_rev": "320-4ec211a6660181ed5457eb1664b69519",
   "name": "minimatch",
   "dist-tags": {
-    "latest": "10.2.2",
-    "legacy-v9": "9.0.6",
-    "legacy-v8": "8.0.5",
-    "legacy-v7": "7.4.7",
-    "legacy-v6": "6.2.1",
-    "legacy-v5": "5.1.7",
-    "legacy-v4": "4.2.4",
-    "legacy-v3": "3.1.3"
+    "latest": "10.2.4",
+    "legacy-v9": "9.0.9",
+    "legacy-v8": "8.0.7",
+    "legacy-v7": "7.4.9",
+    "legacy-v6": "6.2.3",
+    "legacy-v5": "5.1.9",
+    "legacy-v4": "4.2.6",
+    "legacy-v3": "3.1.5"
   },
   "versions": {
-    "3.1.2": {
+    "10.2.4": {
       "name": "minimatch",
-      "version": "3.1.2",
-      "license": "ISC",
-      "_id": "minimatch@3.1.2",
-      "bugs": {
-        "url": "https://github.com/isaacs/minimatch/issues"
-      },
-      "dist": {
-        "shasum": "19cd194bfd3e428f049a70817c038d89ab4be35b",
-        "tarball": "http://localhost:3000/minimatch/-/minimatch-3.1.2.tgz",
-        "fileCount": 4,
-        "integrity": "sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==",
-        "signatures": [
-          {
-            "sig": "MEUCIQCjRUIUS0JXXl/vaCoh294tvrp6lut12ZaWVv4bh7mmWAIgDLzDZgvoXeXzGPeAuSItCyQASG/Nnk+X7NCGfbFFR9M=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 34902,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJiDA3rCRA9TVsSAnZWagAAiV8P/iCEUNUKlBcB1VfJNYRv\noTlTsav1Jmjk2+W5Asvl+fMwzWDOf4irHs1SS8vArxogUEvM6UBeCZedmtcE\n8y/XYYf1f4rMIODe906e30Xv4bcfDqQOMhKrxQSI7d7LqUS2EHnk9tYL2ROL\nxiqzxL0a2Ujpc34YD9hqV9WyhHJaq5IprVqi01Vg0NggZvVYj59BsvadIGDE\nb5HYaQVPpmhLy1ykt7dAXUmRFWco1uCfwmMhyX8204ZjJS7keRwkuhHqAVp/\nSfWyXaQzKoEQNWVuWf7wp+u8DWctHAAza69bdzIMDZoa0wOukve5eScDw2ud\nXvs/3kHPy5Li862zjU/kQdZW3WmN3AM0vId8pvWEzt6uaMxYOB+ce+ZR/2c6\n0pWfwwxg65qn6FYUx7mU3aHjharqHNUoPuPUJCAdmjsSRwNUl9hvFhbWr1W9\nCXQBpo+dZd8Iw8nVLmFMVmAJrDOb/1aQcEHmiriYIcSY7wLY+XZuxtZwxnvm\nuYDEFCuSmASf4M7f+RY/okzxwsGk7gD5PL5bKb+kANYctCrke6wDLzDNCxJJ\nnQR37/YjSJUxExmJETSuAkRR0brKi9qeKMMX6tw+0ZkdixRElncpETz3MkrL\ng3F78+eu8oZcSIr4s9CwE6wlXnMl3zQgyYaVyeXnZ9OC4aQ+vWU05n8mQgH7\n6u+o\r\n=0kEM\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "main": "minimatch.js",
-      "engines": {
-        "node": "*"
-      },
-      "gitHead": "699c459443a6bd98f5b28197978f76e7f71467ac",
-      "scripts": {
-        "test": "tap",
-        "preversion": "npm test",
-        "postpublish": "git push origin --all; git push origin --tags",
-        "postversion": "npm publish"
-      },
-      "_npmVersion": "8.4.1",
-      "directories": {},
-      "_nodeVersion": "17.4.0",
-      "dependencies": {
-        "brace-expansion": "^1.1.7"
-      },
-      "publishConfig": {
-        "tag": "v3-legacy"
-      },
-      "_hasShrinkwrap": false,
-      "readmeFilename": "README.md",
-      "devDependencies": {
-        "tap": "^15.1.6"
-      }
-    },
-    "5.1.6": {
-      "name": "minimatch",
-      "version": "5.1.6",
-      "license": "ISC",
-      "_id": "minimatch@5.1.6",
-      "bugs": {
-        "url": "https://github.com/isaacs/minimatch/issues"
-      },
-      "dist": {
-        "shasum": "1cfcb8cf5522ea69952cd2af95ae09477f122a96",
-        "tarball": "http://localhost:3000/minimatch/-/minimatch-5.1.6.tgz",
-        "fileCount": 5,
-        "integrity": "sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==",
-        "signatures": [
-          {
-            "sig": "MEYCIQDiMjtuM8wCBI1A20eMmJjguXdJs9emsSfkyNrP9HfX9gIhAJiQHdN0U5+b5hYdykGXicc/CoiJu7mYZLpfjuHt3xel",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 38919,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjxvsdACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmqlgQ/9ELWjZ+57ildeZ1IQyYJ/WYaaGCjqth+pGej5n40f/2GrBNH5\r\nEl3IbiTHuihdfb2NsxzZySieGNor7vFSL4sZEah6h3atWMvbkKYdYTEhpopi\r\nREkRpqOMcbLfrhYOwplT51iNaOutqLm7enUF53OrAf6/VgiQE6dBChJc3KDn\r\nXDtsdQiKUY9IpEpZR47VB8HSupYrH2e4p+fQKbwF2k9xuFGmWdf16V6sGFNh\r\nBqNTSYVzjSoQWF+k+9P3qlJEuAlmj3OmC/lsBrvpvmwMn6bH3dCTltt4REwo\r\nqlROVwV3gYXzPv/8FOOJK8jEWG49SxgGvgzNxu+WxGT7fJL3YyzYIQZpNzzR\r\nwFwO/zRCW4fLK52RrJ8fNelXavCcssrB7TmoqT2e0Yk3BIGkUNdSBEnFQItJ\r\nBBtA+T06Rp2u9XSUj6IObvU9tAz4s2qSSmXNv7//otXn2Cg1NESAz7lIxBA4\r\nm175qE3D1hLqobf65uXAngwVuleD896/m7ncclPQf6HRbWf9k7fA5WgRQIMT\r\nRZsJpTrxqHadZuvFItWe9hscXDuwbXZVahV3wwTgUmfXFS4hh2Eq/UK/0NTY\r\npHvQcJi024PAq+LLgI89J9k7i+TIT8YI1Vk33+hUODBAmXUSiVSSyzRyzX1h\r\n+7SmY0CxASDdlYg4YmNaInkbqQ4M40MkBG8=\r\n=Z9Zl\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "main": "minimatch.js",
-      "engines": {
-        "node": ">=10"
-      },
-      "gitHead": "3e216b9cf09528b8cbb90c5ecc01d054326d8f85",
-      "scripts": {
-        "snap": "tap",
-        "test": "tap",
-        "preversion": "npm test",
-        "postversion": "npm publish",
-        "prepublishOnly": "git push origin --follow-tags"
-      },
-      "_npmVersion": "9.3.0",
-      "directories": {},
-      "_nodeVersion": "19.4.0",
-      "dependencies": {
-        "brace-expansion": "^2.0.1"
-      },
-      "publishConfig": {
-        "tag": "legacy-v5"
-      },
-      "_hasShrinkwrap": false,
-      "readmeFilename": "README.md",
-      "devDependencies": {
-        "tap": "^16.3.2"
-      }
-    },
-    "9.0.5": {
-      "name": "minimatch",
-      "version": "9.0.5",
-      "license": "ISC",
-      "_id": "minimatch@9.0.5",
-      "bugs": {
-        "url": "https://github.com/isaacs/minimatch/issues"
-      },
-      "dist": {
-        "shasum": "d74f9dd6b57d83d8e98cfb82133b03978bc929e5",
-        "tarball": "http://localhost:3000/minimatch/-/minimatch-9.0.5.tgz",
-        "fileCount": 53,
-        "integrity": "sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==",
-        "signatures": [
-          {
-            "sig": "MEYCIQC8i1XVlxHUOKd0etL7moPA7FuIE5d+E6J4fd1YQj0btgIhAMtyRwTteIb7e0oR/SIFP0LK/JFECg7Aj3KbraAX9pih",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 435003
-      },
-      "main": "./dist/commonjs/index.js",
-      "tshy": {
-        "exports": {
-          ".": "./src/index.ts",
-          "./package.json": "./package.json"
-        }
-      },
-      "type": "module",
-      "types": "./dist/commonjs/index.d.ts",
-      "engines": {
-        "node": ">=16 || 14 >=14.17"
-      },
-      "exports": {
-        ".": {
-          "import": {
-            "types": "./dist/esm/index.d.ts",
-            "default": "./dist/esm/index.js"
-          },
-          "require": {
-            "types": "./dist/commonjs/index.d.ts",
-            "default": "./dist/commonjs/index.js"
-          }
-        },
-        "./package.json": "./package.json"
-      },
-      "funding": {
-        "url": "https://github.com/sponsors/isaacs"
-      },
-      "gitHead": "0de7f45232cad5e3e49e4eb7cd9b6e124ed04b84",
-      "scripts": {
-        "snap": "tap",
-        "test": "tap",
-        "format": "prettier --write . --loglevel warn",
-        "prepare": "tshy",
-        "presnap": "npm run prepare",
-        "pretest": "npm run prepare",
-        "typedoc": "typedoc --tsconfig tsconfig-esm.json ./src/*.ts",
-        "benchmark": "node benchmark/index.js",
-        "preversion": "npm test",
-        "postversion": "npm publish",
-        "prepublishOnly": "git push origin --follow-tags"
-      },
-      "prettier": {
-        "semi": false,
-        "useTabs": false,
-        "tabWidth": 2,
-        "endOfLine": "lf",
-        "printWidth": 80,
-        "arrowParens": "avoid",
-        "singleQuote": true,
-        "jsxSingleQuote": false,
-        "bracketSameLine": true
-      },
-      "_npmVersion": "10.7.0",
-      "directories": {},
-      "_nodeVersion": "20.13.1",
-      "dependencies": {
-        "brace-expansion": "^2.0.1"
-      },
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "tap": "^18.7.2",
-        "tshy": "^1.12.0",
-        "mkdirp": "1",
-        "ts-node": "^10.9.1",
-        "typedoc": "^0.23.21",
-        "prettier": "^2.8.2",
-        "@types/tap": "^15.0.8",
-        "typescript": "^4.9.3",
-        "@types/node": "^18.15.11",
-        "@types/brace-expansion": "^1.1.0",
-        "eslint-config-prettier": "^8.6.0"
-      }
-    },
-    "10.1.1": {
-      "name": "minimatch",
-      "version": "10.1.1",
+      "version": "10.2.4",
       "license": "BlueOak-1.0.0",
-      "_id": "minimatch@10.1.1",
+      "_id": "minimatch@10.2.4",
       "bugs": {
         "url": "https://github.com/isaacs/minimatch/issues"
       },
       "dist": {
-        "shasum": "e6e61b9b0c1dcab116b5a7d1458e8b6ae9e73a55",
-        "tarball": "http://localhost:3000/minimatch/-/minimatch-10.1.1.tgz",
+        "shasum": "465b3accbd0218b8281f5301e27cedc697f96fde",
+        "tarball": "http://localhost:3000/minimatch/-/minimatch-10.2.4.tgz",
         "fileCount": 53,
-        "integrity": "sha512-enIvLvRAFZYXJzkCYG5RKmPfrFArdLv+R+lbQ53BmIMLIry74bjKzX6iHAm8WYamJkhSSEabrWN5D97XnKObjQ==",
+        "integrity": "sha512-oRjTw/97aTBN0RHbYCdtF1MQfvusSIBQM0IZEgzl6426+8jSC0nF1a/GmnVLpfB9yyr6g6FTqWqiZVbxrtaCIg==",
         "signatures": [
           {
-            "sig": "MEYCIQCLKfMAxfANPGTZlOFbZOq4Hc2EOwgN1KrbJI9qgzzFdAIhALRzLLyyz+YJLduq13BlM4wubkkHCtdSN9w4OeOpC6Yi",
+            "sig": "MEUCICLIi2DfvgQ0DeqVRSASrFUZyBmYs2wwGFyvZ7XYFE5NAiEAraf0toIq8QEcYfXxli22D2MamX1Q6TO3XPoLA2jzRW0=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 448853
+        "unpackedSize": 535209
       },
       "main": "./dist/commonjs/index.js",
       "tshy": {
@@ -237,7 +45,7 @@
       "types": "./dist/commonjs/index.d.ts",
       "module": "./dist/esm/index.js",
       "engines": {
-        "node": "20 || >=22"
+        "node": "18 || 20 || >=22"
       },
       "exports": {
         ".": {
@@ -255,11 +63,11 @@
       "funding": {
         "url": "https://github.com/sponsors/isaacs"
       },
-      "gitHead": "5b833726b3fb81f83933a2708fade6399c9c86eb",
+      "gitHead": "c36addb94e33f14254b9ca9017e63ae9c9d80d1d",
       "scripts": {
         "snap": "tap",
         "test": "tap",
-        "format": "prettier --write . --log-level warn",
+        "format": "prettier --write .",
         "prepare": "tshy",
         "presnap": "npm run prepare",
         "pretest": "npm run prepare",
@@ -269,41 +77,221 @@
         "postversion": "npm publish",
         "prepublishOnly": "git push origin --follow-tags"
       },
-      "prettier": {
-        "semi": false,
-        "useTabs": false,
-        "tabWidth": 2,
-        "endOfLine": "lf",
-        "printWidth": 80,
-        "arrowParens": "avoid",
-        "singleQuote": true,
-        "jsxSingleQuote": false,
-        "bracketSameLine": true
-      },
-      "_npmVersion": "11.4.2",
+      "_npmVersion": "11.10.0",
       "directories": {},
-      "_nodeVersion": "24.4.1",
+      "_nodeVersion": "25.6.1",
       "dependencies": {
-        "@isaacs/brace-expansion": "^5.0.0"
+        "brace-expansion": "^5.0.2"
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "tap": "^21.1.0",
+        "tap": "^21.6.2",
         "tshy": "^3.0.2",
         "mkdirp": "^3.0.1",
         "typedoc": "^0.28.5",
         "prettier": "^3.6.2",
-        "@types/node": "^24.0.0"
+        "@types/node": "^25.3.0"
       }
+    },
+    "5.1.9": {
+      "name": "minimatch",
+      "version": "5.1.9",
+      "license": "ISC",
+      "_id": "minimatch@5.1.9",
+      "bugs": {
+        "url": "https://github.com/isaacs/minimatch/issues"
+      },
+      "dist": {
+        "shasum": "1293ef15db0098b394540e8f9f744f9fda8dee4b",
+        "tarball": "http://localhost:3000/minimatch/-/minimatch-5.1.9.tgz",
+        "fileCount": 6,
+        "integrity": "sha512-7o1wEA2RyMP7Iu7GNba9vc0RWWGACJOCZBJX2GJWip0ikV+wcOsgVuY9uE8CPiyQhkGFSlhuSkZPavN7u1c2Fw==",
+        "signatures": [
+          {
+            "sig": "MEUCIQDMZPEZGke1MxDoxcV04xps/y9Kk+iVNN1cPhmGsdSvLwIgF0QACHWl1SLxTpq9E+P281itO/rD0E6NU0R7X3inOQw=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 42367
+      },
+      "main": "minimatch.js",
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "4419b6e73f21516c6d53ca4165cb7abb3d79ae24",
+      "scripts": {
+        "snap": "tap",
+        "test": "tap",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "_npmVersion": "6.14.18",
+      "directories": {},
+      "_nodeVersion": "14.21.3",
+      "dependencies": {
+        "brace-expansion": "^2.0.1"
+      },
+      "publishConfig": {
+        "tag": "legacy-v5"
+      },
+      "_hasShrinkwrap": false,
+      "readmeFilename": "README.md",
+      "devDependencies": {
+        "tap": "^16.3.2"
+      }
+    },
+    "3.1.5": {
+      "name": "minimatch",
+      "version": "3.1.5",
+      "license": "ISC",
+      "_id": "minimatch@3.1.5",
+      "bugs": {
+        "url": "https://github.com/isaacs/minimatch/issues"
+      },
+      "dist": {
+        "shasum": "580c88f8d5445f2bd6aa8f3cadefa0de79fbd69e",
+        "tarball": "http://localhost:3000/minimatch/-/minimatch-3.1.5.tgz",
+        "fileCount": 4,
+        "integrity": "sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==",
+        "signatures": [
+          {
+            "sig": "MEUCIFUv1AI0cc0lo/pYgVdoCwBsJmM2xv92FIqah4y9j6vrAiEAmQvXoZr6BIABuug7UdAwwoXj+zqtkZxtf3qvTwgGQWY=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 37677
+      },
+      "main": "minimatch.js",
+      "engines": {
+        "node": "*"
+      },
+      "gitHead": "7bba97888a27a6162983056bcce2a6e28f668712",
+      "scripts": {
+        "test": "tap",
+        "preversion": "npm test",
+        "postpublish": "git push origin --all; git push origin --tags",
+        "postversion": "npm publish"
+      },
+      "_npmVersion": "6.14.18",
+      "directories": {},
+      "_nodeVersion": "14.21.3",
+      "dependencies": {
+        "brace-expansion": "^1.1.7"
+      },
+      "publishConfig": {
+        "tag": "legacy-v3"
+      },
+      "_hasShrinkwrap": false,
+      "readmeFilename": "README.md",
+      "devDependencies": {
+        "tap": "^15.1.6"
+      }
+    },
+    "9.0.9": {
+      "name": "minimatch",
+      "version": "9.0.9",
+      "main": "./dist/commonjs/index.js",
+      "types": "./dist/commonjs/index.d.ts",
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
+          }
+        }
+      },
+      "scripts": {
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags",
+        "prepare": "tshy",
+        "pretest": "npm run prepare",
+        "presnap": "npm run prepare",
+        "test": "tap",
+        "snap": "tap",
+        "format": "prettier --write . --loglevel warn",
+        "benchmark": "node benchmark/index.js",
+        "typedoc": "typedoc --tsconfig tsconfig-esm.json ./src/*.ts"
+      },
+      "prettier": {
+        "semi": false,
+        "printWidth": 80,
+        "tabWidth": 2,
+        "useTabs": false,
+        "singleQuote": true,
+        "jsxSingleQuote": false,
+        "bracketSameLine": true,
+        "arrowParens": "avoid",
+        "endOfLine": "lf"
+      },
+      "engines": {
+        "node": ">=16 || 14 >=14.17"
+      },
+      "dependencies": {
+        "brace-expansion": "^2.0.2"
+      },
+      "devDependencies": {
+        "@types/brace-expansion": "^1.1.2",
+        "@types/node": "^25.3.0",
+        "mkdirp": "^3.0.1",
+        "prettier": "^3.8.1",
+        "tap": "^21.6.1",
+        "tshy": "^3.3.2",
+        "typescript": "^5.5.3"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/isaacs"
+      },
+      "license": "ISC",
+      "tshy": {
+        "exports": {
+          "./package.json": "./package.json",
+          ".": "./src/index.ts"
+        }
+      },
+      "type": "module",
+      "publishConfig": {
+        "tag": "legacy-v9"
+      },
+      "module": "./dist/esm/index.js",
+      "readmeFilename": "README.md",
+      "gitHead": "8a10e473e2e0ff03c2d4de308f257093af2bce21",
+      "_id": "minimatch@9.0.9",
+      "bugs": {
+        "url": "https://github.com/isaacs/minimatch/issues"
+      },
+      "_nodeVersion": "25.6.1",
+      "_npmVersion": "11.10.0",
+      "dist": {
+        "integrity": "sha512-OBwBN9AL4dqmETlpS2zasx+vTeWclWzkblfZk7KTA5j3jeOONz/tRCnZomUyvNg83wL5Zv9Ss6HMJXAgL8R2Yg==",
+        "shasum": "9b0cb9fcb78087f6fd7eababe2511c4d3d60574e",
+        "tarball": "http://localhost:3000/minimatch/-/minimatch-9.0.9.tgz",
+        "fileCount": 53,
+        "unpackedSize": 476318,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQD62OLH3Oo/MyvCYUlWHTmDHRkzaYDxf2Pwv7GD3ls0nQIhALkuU0Pg7x/6+Nc1nQIn/ftd8UmMz3SBRSPGHBN17oKo"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2011-07-16T08:52:46.242Z",
-    "modified": "2026-02-22T03:54:20.277Z",
-    "3.1.2": "2022-02-15T20:32:43.510Z",
-    "5.1.6": "2023-01-17T19:46:37.483Z",
-    "9.0.5": "2024-06-25T22:41:02.824Z",
-    "10.1.1": "2025-10-28T22:58:24.269Z"
+    "modified": "2026-02-26T19:32:47.199Z",
+    "10.2.4": "2026-02-25T17:13:19.885Z",
+    "5.1.9": "2026-02-25T17:16:47.801Z",
+    "3.1.5": "2026-02-25T17:17:15.626Z",
+    "9.0.9": "2026-02-26T19:32:47.083Z"
   },
   "license": "BlueOak-1.0.0"
 }

@@ -1,14 +1,36 @@
 {
   "_id": "needle",
-  "_rev": "255-dee4f45ce9255ec228ed972b22469323",
+  "_rev": "259-18c5eae971018cc931f8bdc60cb767e4",
   "name": "needle",
   "dist-tags": {
-    "latest": "3.3.1"
+    "latest": "3.5.0"
   },
   "versions": {
     "3.3.1": {
       "name": "needle",
       "version": "3.3.1",
+      "license": "MIT",
+      "_id": "needle@3.3.1",
+      "bugs": {
+        "url": "https://github.com/tomas/needle/issues"
+      },
+      "bin": {
+        "needle": "bin/needle"
+      },
+      "dist": {
+        "shasum": "63f75aec580c2e77e209f3f324e2cdf3d29bd049",
+        "tarball": "http://localhost:3000/needle/-/needle-3.3.1.tgz",
+        "fileCount": 57,
+        "integrity": "sha512-6k0YULvhpw+RoLNiQCRKOl09Rv1dPLr8hHnVjHqdolKwDrdNyk+Hmrthi4lIGPPz3r39dLx0hsF5s40sZ3Us4Q==",
+        "signatures": [
+          {
+            "sig": "MEYCIQDd1A2fJon2vvQ9J9EdFDIlG8RosrdtBuYbji6O9T89kwIhANsm/F4U6VPmxih1YSqmxPas8gXDilCqjQMayxaQ37K2",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 323689
+      },
+      "main": "./lib/needle",
       "tags": [
         "http",
         "https",
@@ -25,60 +47,38 @@
         "cookie",
         "redirect"
       ],
-      "dependencies": {
-        "iconv-lite": "^0.6.3",
-        "sax": "^1.2.4"
-      },
-      "devDependencies": {
-        "JSONStream": "^1.3.5",
-        "jschardet": "^1.6.0",
-        "mocha": "^5.2.0",
-        "pump": "^3.0.0",
-        "q": "^1.5.1",
-        "should": "^13.2.3",
-        "sinon": "^2.3.0",
-        "xml2js": "^0.4.19"
-      },
-      "scripts": {
-        "test": "mocha test"
-      },
-      "directories": {
-        "lib": "./lib"
-      },
-      "main": "./lib/needle",
-      "bin": {
-        "needle": "bin/needle"
-      },
-      "license": "MIT",
       "engines": {
         "node": ">= 4.4.x"
       },
       "gitHead": "de79d5036d5b63705bb9ae1b04a5577c7c59c901",
-      "bugs": {
-        "url": "https://github.com/tomas/needle/issues"
+      "scripts": {
+        "test": "mocha test"
       },
-      "_id": "needle@3.3.1",
-      "_nodeVersion": "12.21.0",
       "_npmVersion": "6.14.11",
-      "dist": {
-        "integrity": "sha512-6k0YULvhpw+RoLNiQCRKOl09Rv1dPLr8hHnVjHqdolKwDrdNyk+Hmrthi4lIGPPz3r39dLx0hsF5s40sZ3Us4Q==",
-        "shasum": "63f75aec580c2e77e209f3f324e2cdf3d29bd049",
-        "tarball": "http://localhost:3000/needle/-/needle-3.3.1.tgz",
-        "fileCount": 57,
-        "unpackedSize": 323689,
-        "signatures": [
-          {
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-            "sig": "MEYCIQDd1A2fJon2vvQ9J9EdFDIlG8RosrdtBuYbji6O9T89kwIhANsm/F4U6VPmxih1YSqmxPas8gXDilCqjQMayxaQ37K2"
-          }
-        ]
+      "directories": {
+        "lib": "./lib"
       },
-      "_hasShrinkwrap": false
+      "_nodeVersion": "12.21.0",
+      "dependencies": {
+        "sax": "^1.2.4",
+        "iconv-lite": "^0.6.3"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "q": "^1.5.1",
+        "pump": "^3.0.0",
+        "mocha": "^5.2.0",
+        "sinon": "^2.3.0",
+        "should": "^13.2.3",
+        "xml2js": "^0.4.19",
+        "jschardet": "^1.6.0",
+        "JSONStream": "^1.3.5"
+      }
     }
   },
   "time": {
-    "modified": "2023-12-12T01:05:09.131Z",
     "created": "2011-12-11T05:31:30.478Z",
+    "modified": "2026-03-12T22:24:55.627Z",
     "3.3.1": "2023-12-12T01:05:08.960Z"
   },
   "license": "MIT"

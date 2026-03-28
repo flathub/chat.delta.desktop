@@ -58,12 +58,88 @@
         "tape": "^4.6.0",
         "matcha": "^0.7.0"
       }
+    },
+    "4.0.4": {
+      "name": "balanced-match",
+      "version": "4.0.4",
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
+          }
+        }
+      },
+      "type": "module",
+      "scripts": {
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags",
+        "prepare": "tshy",
+        "pretest": "npm run prepare",
+        "presnap": "npm run prepare",
+        "test": "tap",
+        "snap": "tap",
+        "format": "prettier --write .",
+        "benchmark": "node benchmark/index.js",
+        "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts"
+      },
+      "devDependencies": {
+        "@types/brace-expansion": "^1.1.2",
+        "@types/node": "^25.2.1",
+        "mkdirp": "^3.0.1",
+        "prettier": "^3.3.2",
+        "tap": "^21.6.2",
+        "tshy": "^3.0.2",
+        "typedoc": "^0.28.5"
+      },
+      "license": "MIT",
+      "engines": {
+        "node": "18 || 20 || >=22"
+      },
+      "tshy": {
+        "exports": {
+          "./package.json": "./package.json",
+          ".": "./src/index.ts"
+        }
+      },
+      "main": "./dist/commonjs/index.js",
+      "types": "./dist/commonjs/index.d.ts",
+      "module": "./dist/esm/index.js",
+      "_id": "balanced-match@4.0.4",
+      "gitHead": "adf286f7c6142102f932c8d7c7066463741a0036",
+      "bugs": {
+        "url": "https://github.com/juliangruber/balanced-match/issues"
+      },
+      "_nodeVersion": "22.14.0",
+      "_npmVersion": "10.9.2",
+      "dist": {
+        "integrity": "sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==",
+        "shasum": "bfb10662feed8196a2c62e7c68e17720c274179a",
+        "tarball": "http://localhost:3000/balanced-match/-/balanced-match-4.0.4.tgz",
+        "fileCount": 13,
+        "unpackedSize": 17584,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQDybrxbk42Achkx5R4DEljgHEAByz+vDnfh6X/udxaxOAIgF6eTvZqu76P9yBtJhkA+6G6WCVzu10FhiZVW8swnUic="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2013-10-13T12:26:00.713Z",
     "modified": "2026-02-22T11:38:26.052Z",
-    "1.0.2": "2021-04-06T12:51:09.276Z"
+    "1.0.2": "2021-04-06T12:51:09.276Z",
+    "4.0.4": "2026-02-22T11:38:25.951Z"
   },
   "license": "MIT"
 }
