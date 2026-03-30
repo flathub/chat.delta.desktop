@@ -3,8 +3,8 @@ set -e
 
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
-CORE_CHECKOUT=v2.47.0
-DESKTOP_CHECKOUT=v2.47.0
+CORE_CHECKOUT=v2.48.0
+DESKTOP_CHECKOUT=v2.48.0
 
 # this script needs:
 # environment:

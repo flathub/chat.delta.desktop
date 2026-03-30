@@ -1,82 +1,83 @@
 {
   "_id": "@xmldom/xmldom",
-  "_rev": "56-850b8a2ff510629862369136863155fa",
+  "_rev": "60-83150082c4606d7854057e225056c3a8",
   "name": "@xmldom/xmldom",
   "dist-tags": {
     "lts": "0.8.10",
-    "latest": "0.8.11"
+    "latest": "0.9.9"
   },
   "versions": {
     "0.8.11": {
       "name": "@xmldom/xmldom",
       "version": "0.8.11",
-      "main": "lib/index.js",
-      "types": "index.d.ts",
-      "scripts": {
-        "lint": "eslint lib test",
-        "format": "prettier --write test",
-        "changelog": "auto-changelog --unreleased-only",
-        "start": "nodemon --watch package.json --watch lib --watch test --exec 'npm --silent run test && npm --silent run lint'",
-        "stryker": "stryker run",
-        "stryker:dry-run": "stryker run -m '' --reporters progress",
-        "test": "jest",
-        "testrelease": "npm test && eslint lib",
-        "version": "./changelog-has-version.sh",
-        "release": "np --no-yarn --test-script testrelease --branch release-0.8.x patch"
-      },
-      "engines": {
-        "node": ">=10.0.0"
-      },
-      "dependencies": {},
-      "devDependencies": {
-        "@stryker-mutator/core": "5.6.1",
-        "auto-changelog": "2.4.0",
-        "eslint": "8.25.0",
-        "eslint-config-prettier": "8.5.0",
-        "eslint-plugin-es5": "1.5.0",
-        "eslint-plugin-prettier": "4.2.1",
-        "get-stream": "6.0.1",
-        "jest": "27.5.1",
-        "nodemon": "2.0.20",
-        "np": "9.2.0",
-        "prettier": "2.7.1",
-        "xmltest": "1.5.0",
-        "yauzl": "2.10.0"
-      },
+      "license": "MIT",
+      "_id": "@xmldom/xmldom@0.8.11",
       "bugs": {
         "url": "https://github.com/xmldom/xmldom/issues"
       },
-      "license": "MIT",
-      "auto-changelog": {
-        "prepend": true,
-        "remote": "upstream",
-        "tagPrefix": "",
-        "template": "./auto-changelog.hbs"
-      },
-      "_id": "@xmldom/xmldom@0.8.11",
-      "gitHead": "c0f14011c7cf93af60b2541898065b7136594f6b",
-      "_nodeVersion": "18.20.7",
-      "_npmVersion": "10.8.2",
       "dist": {
-        "integrity": "sha512-cQzWCtO6C8TQiYl1ruKNn2U6Ao4o4WBBcbL61yJl84x+j5sOWWFU9X7DpND8XZG3daDppSsigMdfAIl2upQBRw==",
         "shasum": "b79de2d67389734c57c52595f7a7305e30c2d608",
         "tarball": "http://localhost:3000/@xmldom/xmldom/-/xmldom-0.8.11.tgz",
         "fileCount": 13,
-        "unpackedSize": 183008,
+        "integrity": "sha512-cQzWCtO6C8TQiYl1ruKNn2U6Ao4o4WBBcbL61yJl84x+j5sOWWFU9X7DpND8XZG3daDppSsigMdfAIl2upQBRw==",
         "signatures": [
           {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEYCIQCgqOG2tkrPz0yyaGw7eClQhcogv3I8Rs92qci0KZ2aZgIhAM7Tm1+DchL2vvYmt+6h7uuTSI8sSgFyFvtrySazPC4Q"
+            "sig": "MEYCIQCgqOG2tkrPz0yyaGw7eClQhcogv3I8Rs92qci0KZ2aZgIhAM7Tm1+DchL2vvYmt+6h7uuTSI8sSgFyFvtrySazPC4Q",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
-        ]
+        ],
+        "unpackedSize": 183008
       },
+      "main": "lib/index.js",
+      "types": "index.d.ts",
+      "engines": {
+        "node": ">=10.0.0"
+      },
+      "gitHead": "c0f14011c7cf93af60b2541898065b7136594f6b",
+      "scripts": {
+        "lint": "eslint lib test",
+        "test": "jest",
+        "start": "nodemon --watch package.json --watch lib --watch test --exec 'npm --silent run test && npm --silent run lint'",
+        "format": "prettier --write test",
+        "release": "np --no-yarn --test-script testrelease --branch release-0.8.x patch",
+        "stryker": "stryker run",
+        "version": "./changelog-has-version.sh",
+        "changelog": "auto-changelog --unreleased-only",
+        "testrelease": "npm test && eslint lib",
+        "stryker:dry-run": "stryker run -m '' --reporters progress"
+      },
+      "deprecated": "this version has critical issues, please update to the latest version",
+      "_npmVersion": "10.8.2",
       "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "18.20.7",
+      "dependencies": {},
+      "_hasShrinkwrap": false,
+      "auto-changelog": {
+        "remote": "upstream",
+        "prepend": true,
+        "template": "./auto-changelog.hbs",
+        "tagPrefix": ""
+      },
+      "devDependencies": {
+        "np": "9.2.0",
+        "jest": "27.5.1",
+        "yauzl": "2.10.0",
+        "eslint": "8.25.0",
+        "nodemon": "2.0.20",
+        "xmltest": "1.5.0",
+        "prettier": "2.7.1",
+        "get-stream": "6.0.1",
+        "auto-changelog": "2.4.0",
+        "eslint-plugin-es5": "1.5.0",
+        "@stryker-mutator/core": "5.6.1",
+        "eslint-config-prettier": "8.5.0",
+        "eslint-plugin-prettier": "4.2.1"
+      }
     }
   },
   "time": {
     "created": "2021-08-19T19:35:11.285Z",
-    "modified": "2025-08-17T14:06:58.224Z",
+    "modified": "2026-03-29T20:08:48.610Z",
     "0.8.11": "2025-08-17T14:06:57.956Z"
   },
   "license": "MIT"
