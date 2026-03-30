@@ -72,90 +72,6 @@
         "end-of-stream": "^1.4.0"
       }
     },
-    "5.0.0": {
-      "name": "minipass",
-      "version": "5.0.0",
-      "license": "ISC",
-      "_id": "minipass@5.0.0",
-      "bugs": {
-        "url": "https://github.com/isaacs/minipass/issues"
-      },
-      "tap": {
-        "check-coverage": true
-      },
-      "dist": {
-        "shasum": "3e9788ffb90b694a5d0ec94479a45b5d8738133d",
-        "tarball": "http://localhost:3000/minipass/-/minipass-5.0.0.tgz",
-        "fileCount": 6,
-        "integrity": "sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==",
-        "signatures": [
-          {
-            "sig": "MEQCIGG9d/n9j/SiJwfKLK58G4W+KXXHLm/aIadRa/mJxsnFAiAMhpcZ9419dsyFB+8n8uTkyWOkalIM/OsqBG4PrBM2lA==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 69475,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkMzQCACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrbsQ//brt9nqdgncqvwVSLdtzC7rp53x+Q7gIYj9/fPCRFwJvFG98V\r\nRwhWWlSbFcbHyZDb8qCTK63KLICw4d6ha3SjKV3ZNX/+Xd7Qr4HbCp+ELyRs\r\n1+8EyQQdtcJcMAYnUBhG/wV3+h9gLgc8AY47iFColB5GJahS38Ua7lcQ5vU3\r\ncGmt1oiL5pnCAe8r/d4OT4k/0LIidvw7NDmXEOM6mknIFNyag4HPnDpczm0y\r\nbcBVHDGq7WMvysCjsgJOjxNb/CApOHx33z5qqbdmAKQLDVADjfQ/9gBPWOZ7\r\n5hSeSA30oyzZZR/vAlWKkK32hqIAuNq+/w+73s6flQB90Mccqia7F7Ahq43S\r\nioWBJ1frTjhlrPX0jmItGDDJLRRKS7kNm1TObWj5B4WWdJGPlWaNJi07VJkM\r\nJ5ubvfbPGH3zQZt9i5dK60UPBbB/Pm5ZtSUE5TugTuxM+hXTSxzJHgtrNzwU\r\nFFkxVaEBeFgfuUXiSnwiDI4bpCRmB/RByyMcIKT1LhO7V+3KKl2s1nd3+5V4\r\njoa6r1d33dG7eUacD+ijDrLzQzCj/2rwm9cgccsG2XdWjbudkaZBfgySQ+ka\r\niGsmYH1MfCpGzrKr+DgtQn0crIMh/0UdTmbh3NFdm24C2PeiskcfggYaj/Xn\r\nR2ROnLecGp3aTTn6W5PCRkeZW2GgCQDcR+Y=\r\n=ZOod\r\n-----END PGP SIGNATURE-----\r\n"
-      },
-      "main": "./index.js",
-      "types": "./index.d.ts",
-      "module": "./index.mjs",
-      "engines": {
-        "node": ">=8"
-      },
-      "exports": {
-        ".": {
-          "import": {
-            "types": "./index.d.ts",
-            "default": "./index.mjs"
-          },
-          "require": {
-            "types": "./index.d.ts",
-            "default": "./index.js"
-          }
-        },
-        "./package.json": "./package.json"
-      },
-      "gitHead": "3066600b811753bd9c85831a8ecd5c6ca248f2aa",
-      "scripts": {
-        "snap": "tap",
-        "test": "tap",
-        "format": "prettier --write . --loglevel warn",
-        "prepare": "node ./scripts/transpile-to-esm.js",
-        "presnap": "npm run prepare",
-        "pretest": "npm run prepare",
-        "typedoc": "typedoc ./index.d.ts",
-        "preversion": "npm test",
-        "postpublish": "git push origin --follow-tags",
-        "postversion": "npm publish"
-      },
-      "prettier": {
-        "semi": false,
-        "useTabs": false,
-        "tabWidth": 2,
-        "endOfLine": "lf",
-        "printWidth": 80,
-        "arrowParens": "avoid",
-        "singleQuote": true,
-        "jsxSingleQuote": false,
-        "bracketSameLine": true
-      },
-      "_npmVersion": "9.6.3",
-      "directories": {},
-      "_nodeVersion": "18.14.0",
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "tap": "^16.2.0",
-        "ts-node": "^10.8.1",
-        "typedoc": "^0.23.24",
-        "prettier": "^2.6.2",
-        "through2": "^2.0.3",
-        "typescript": "^4.7.3",
-        "@types/node": "^17.0.41",
-        "end-of-stream": "^1.4.0",
-        "node-abort-controller": "^3.1.1"
-      }
-    },
     "7.1.2": {
       "name": "minipass",
       "version": "7.1.2",
@@ -255,7 +171,6 @@
     "created": "2017-03-14T00:11:57.420Z",
     "modified": "2026-02-19T00:34:33.989Z",
     "3.3.6": "2022-11-25T07:54:48.420Z",
-    "5.0.0": "2023-04-09T21:54:10.390Z",
     "7.1.2": "2024-05-24T00:42:21.149Z"
   },
   "license": "BlueOak-1.0.0"
