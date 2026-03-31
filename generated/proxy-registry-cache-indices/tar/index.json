@@ -1,127 +1,55 @@
 {
   "_id": "tar",
-  "_rev": "324-70eae9b351d97d51ad3d50cf10cf00d3",
+  "_rev": "328-ee368d2b6d5ee2bc208343657dd5909e",
   "name": "tar",
   "dist-tags": {
     "v3-legacy": "3.2.3",
     "v5-legacy": "5.0.11",
     "v4-legacy": "4.4.19",
-    "latest": "7.5.9"
+    "latest": "7.5.13"
   },
   "versions": {
-    "6.2.1": {
+    "7.5.11": {
       "name": "tar",
-      "version": "6.2.1",
-      "license": "ISC",
-      "_id": "tar@6.2.1",
-      "bugs": {
-        "url": "https://github.com/isaacs/node-tar/issues"
-      },
-      "tap": {
-        "nyc-arg": [
-          "--exclude",
-          "tap-snapshots/**"
-        ],
-        "timeout": 0,
-        "coverage-map": "map.js"
-      },
-      "dist": {
-        "shasum": "717549c541bc3c2af15751bea94b1dd068d4b03a",
-        "tarball": "http://localhost:3000/tar/-/tar-6.2.1.tgz",
-        "fileCount": 29,
-        "integrity": "sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==",
-        "signatures": [
-          {
-            "sig": "MEQCICiN57b6g7ZWCQN3sRJ+KpQedOYvNEmp0rJiwyGiT6ilAiA92/r4ohXAxTc9ATTxiPbhsnqxFx5d2WFp4qzPVMI+cA==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 166613
-      },
-      "engines": {
-        "node": ">=10"
-      },
-      "gitHead": "c65f76d89a69a4c0d2a1e3ab97c289ce965f6476",
-      "scripts": {
-        "snap": "tap",
-        "test": "tap",
-        "genparse": "node scripts/generate-parse-fixtures.js"
-      },
-      "deprecated": "Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
-      "_npmVersion": "10.5.0",
-      "directories": {},
-      "templateOSS": {
-        "content": "scripts/template-oss",
-        "engines": ">=10",
-        "version": "4.11.0",
-        "distPaths": [
-          "index.js"
-        ],
-        "allowPaths": [
-          "/index.js"
-        ],
-        "ciVersions": [
-          "10.x",
-          "12.x",
-          "14.x",
-          "16.x",
-          "18.x"
-        ],
-        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
-      },
-      "_nodeVersion": "20.11.0",
-      "dependencies": {
-        "chownr": "^2.0.0",
-        "mkdirp": "^1.0.3",
-        "yallist": "^4.0.0",
-        "minipass": "^5.0.0",
-        "minizlib": "^2.1.1",
-        "fs-minipass": "^2.0.0"
-      },
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "tap": "^16.0.1",
-        "nock": "^13.2.9",
-        "chmodr": "^1.2.0",
-        "rimraf": "^3.0.2",
-        "mutate-fs": "^2.1.1",
-        "end-of-stream": "^1.4.3",
-        "events-to-array": "^2.0.3",
-        "@npmcli/template-oss": "4.11.0",
-        "@npmcli/eslint-config": "^4.0.0"
-      }
-    },
-    "7.5.7": {
-      "name": "tar",
-      "version": "7.5.7",
+      "version": "7.5.11",
       "license": "BlueOak-1.0.0",
-      "_id": "tar@7.5.7",
+      "_id": "tar@7.5.11",
       "bugs": {
         "url": "https://github.com/isaacs/node-tar/issues"
       },
       "dist": {
-        "shasum": "adf99774008ba1c89819f15dbd6019c630539405",
-        "tarball": "http://localhost:3000/tar/-/tar-7.5.7.tgz",
-        "fileCount": 237,
-        "integrity": "sha512-fov56fJiRuThVFXD6o6/Q354S7pnWMJIVlDBYijsTNx6jKSE4pvrDTs6lUnmGvNyfJwFQQwWy3owKz1ucIhveQ==",
+        "shasum": "1250fae45d98806b36d703b30973fa8e0a6d8868",
+        "tarball": "http://localhost:3000/tar/-/tar-7.5.11.tgz",
+        "fileCount": 249,
+        "integrity": "sha512-ChjMH33/KetonMTAtpYdgUFr0tbz69Fp2v7zWxQfYZX4g5ZN2nOBXm1R2xyA+lMIKrLKIoKAwFj93jE/avX9cQ==",
         "signatures": [
           {
-            "sig": "MEUCIHCsjR9BB/0sLz+7K0ARiFWQ3CMJ8DRJCZ+xX+SvBVPzAiEA+hd6u5Lf1+i/kpKxUcZWQjchisBHeY5AiWUq89P+gPE=",
+            "sig": "MEUCIQCPUY1LQ0xUYTY9kPktuOV1i4xLMTBeN7+8S+h7ZJoMJwIgSGkpX5W3CDfZCIhy45qkYDhtbcdabCvNGMMCOaIumuQ=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 1256289
+        "unpackedSize": 2251554
       },
-      "main": "./dist/commonjs/index.js",
+      "main": "./dist/commonjs/index.min.js",
       "tshy": {
         "exports": {
-          ".": "./src/index.ts",
+          ".": {
+            "import": {
+              "types": "./dist/esm/index.d.ts",
+              "default": "./dist/esm/index.min.js"
+            },
+            "require": {
+              "types": "./dist/commonjs/index.d.ts",
+              "default": "./dist/commonjs/index.min.js"
+            }
+          },
           "./c": "./src/create.ts",
           "./r": "./src/create.ts",
           "./t": "./src/list.ts",
           "./u": "./src/update.ts",
           "./x": "./src/extract.ts",
           "./pax": "./src/pax.ts",
+          "./raw": "./src/index.ts",
           "./list": "./src/list.ts",
           "./pack": "./src/pack.ts",
           "./parse": "./src/parse.ts",
@@ -139,7 +67,7 @@
       },
       "type": "module",
       "types": "./dist/commonjs/index.d.ts",
-      "module": "./dist/esm/index.js",
+      "module": "./dist/esm/index.min.js",
       "engines": {
         "node": ">=18"
       },
@@ -147,11 +75,11 @@
         ".": {
           "import": {
             "types": "./dist/esm/index.d.ts",
-            "default": "./dist/esm/index.js"
+            "default": "./dist/esm/index.min.js"
           },
           "require": {
             "types": "./dist/commonjs/index.d.ts",
-            "default": "./dist/commonjs/index.js"
+            "default": "./dist/commonjs/index.min.js"
           }
         },
         "./c": {
@@ -212,6 +140,16 @@
           "require": {
             "types": "./dist/commonjs/pax.d.ts",
             "default": "./dist/commonjs/pax.js"
+          }
+        },
+        "./raw": {
+          "import": {
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
           }
         },
         "./list": {
@@ -336,12 +274,12 @@
         },
         "./package.json": "./package.json"
       },
-      "gitHead": "4a37eb9a1cf1137df4eb70c5c7f849f412ff3cdb",
+      "gitHead": "bf776f673164215074b62749e0fe80e5834588f4",
       "scripts": {
         "snap": "tap",
         "test": "tap",
         "format": "prettier --write . --log-level warn",
-        "prepare": "tshy",
+        "prepare": "tshy && bash scripts/build.sh",
         "presnap": "npm run prepare",
         "pretest": "npm run prepare",
         "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts",
@@ -350,10 +288,9 @@
         "postversion": "npm publish",
         "prepublishOnly": "git push origin --follow-tags"
       },
-      "deprecated": "Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me",
-      "_npmVersion": "11.7.0",
+      "_npmVersion": "11.10.0",
       "directories": {},
-      "_nodeVersion": "24.4.1",
+      "_nodeVersion": "25.6.1",
       "dependencies": {
         "chownr": "^3.0.0",
         "yallist": "^5.0.0",
@@ -363,15 +300,16 @@
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "tap": "^21.5.0",
+        "tap": "^21.6.2",
         "nock": "^13.5.4",
-        "tshy": "^3.1.0",
+        "tshy": "^3.3.2",
         "chmodr": "^2.0.2",
         "rimraf": "^6.1.2",
-        "typedoc": "^0.28.16",
-        "prettier": "^3.8.0",
+        "esbuild": "^0.27.3",
+        "typedoc": "^0.28.17",
+        "prettier": "^3.8.1",
         "mutate-fs": "^2.1.1",
-        "@types/node": "^25.0.9",
+        "@types/node": "^25.3.3",
         "end-of-stream": "^1.4.3",
         "events-to-array": "^2.0.3"
       }
@@ -379,10 +317,9 @@
   },
   "time": {
     "created": "2011-11-20T07:11:18.109Z",
-    "modified": "2026-02-16T01:08:58.600Z",
+    "modified": "2026-03-23T18:13:38.573Z",
     "5.0.3": "2019-10-05T02:05:48.604Z",
-    "6.2.1": "2024-03-21T21:13:04.779Z",
-    "7.5.7": "2026-01-27T20:49:56.523Z"
+    "7.5.11": "2026-03-09T05:53:07.844Z"
   },
   "license": "BlueOak-1.0.0"
 }

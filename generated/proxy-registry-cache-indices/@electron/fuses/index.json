@@ -1,9 +1,9 @@
 {
   "_id": "@electron/fuses",
-  "_rev": "19-356e63b19e1eca11b61d38e420f8954d",
+  "_rev": "21-d1d468ce76c521752c66b86d0bdbebaa",
   "name": "@electron/fuses",
   "dist-tags": {
-    "latest": "2.0.0"
+    "latest": "2.1.1"
   },
   "versions": {
     "1.8.0": {
@@ -72,77 +72,77 @@
     "2.0.0": {
       "name": "@electron/fuses",
       "version": "2.0.0",
-      "type": "module",
-      "exports": "./dist/index.js",
       "license": "MIT",
-      "bin": {
-        "electron-fuses": "dist/bin.js"
-      },
-      "engines": {
-        "node": ">=22.12.0"
-      },
-      "publishConfig": {
-        "provenance": true
-      },
-      "scripts": {
-        "build": "tsc",
-        "build:docs": "npx typedoc src/index.ts",
-        "test": "vitest run && tsc --noEmit",
-        "prepublishOnly": "tsc",
-        "prepare": "husky"
-      },
-      "devDependencies": {
-        "@electron/get": "^4.0.2",
-        "@electron/universal": "^3.0.1",
-        "@tsconfig/node22": "^22.0.2",
-        "@types/node": "~22.10.7",
-        "extract-zip": "^2.0.1",
-        "husky": "^9.1.7",
-        "lint-staged": "^16.1.2",
-        "prettier": "^3.6.2",
-        "typedoc": "~0.25.13",
-        "typescript": "^5.8.3",
-        "vitest": "^3.2.4"
-      },
-      "lint-staged": {
-        "*.ts": [
-          "prettier --write"
-        ]
-      },
-      "dependencies": {},
+      "_id": "@electron/fuses@2.0.0",
       "bugs": {
         "url": "https://github.com/electron/fuses/issues"
       },
-      "_id": "@electron/fuses@2.0.0",
-      "gitHead": "7edb87260b0fb09a60cc055c76ab56a7ae4759d8",
-      "_nodeVersion": "22.12.0",
-      "_npmVersion": "10.9.0",
+      "bin": {
+        "electron-fuses": "dist/bin.js"
+      },
       "dist": {
-        "integrity": "sha512-lyb1zK3YHeWUjaz7yiK0GnxSPduwASKMyiDbCtbn3spP6EEt+UWtktggWehG0icFrXAk3GwvcJ4nCrJO0N9IhQ==",
         "shasum": "b3d0626f08e9d7afe7b968bbbd9a3c9a0594bdfb",
         "tarball": "http://localhost:3000/@electron/fuses/-/fuses-2.0.0.tgz",
         "fileCount": 15,
-        "unpackedSize": 33232,
+        "integrity": "sha512-lyb1zK3YHeWUjaz7yiK0GnxSPduwASKMyiDbCtbn3spP6EEt+UWtktggWehG0icFrXAk3GwvcJ4nCrJO0N9IhQ==",
+        "signatures": [
+          {
+            "sig": "MEUCIGhtPfVFW+90wnQ08yW8VtRGDx7Ho7tCYQcotc4ecCEMAiEA6zqYzZ582dvUIHHZRa2YBn3eUVJCOXvsdkI8RBQpYZk=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
         "attestations": {
           "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2ffuses@2.0.0",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIGhtPfVFW+90wnQ08yW8VtRGDx7Ho7tCYQcotc4ecCEMAiEA6zqYzZ582dvUIHHZRa2YBn3eUVJCOXvsdkI8RBQpYZk="
-          }
+        "unpackedSize": 33232
+      },
+      "type": "module",
+      "engines": {
+        "node": ">=22.12.0"
+      },
+      "exports": "./dist/index.js",
+      "gitHead": "7edb87260b0fb09a60cc055c76ab56a7ae4759d8",
+      "scripts": {
+        "test": "vitest run && tsc --noEmit",
+        "build": "tsc",
+        "prepare": "husky",
+        "build:docs": "npx typedoc src/index.ts",
+        "prepublishOnly": "tsc"
+      },
+      "_npmVersion": "10.9.0",
+      "directories": {},
+      "lint-staged": {
+        "*.ts": [
+          "prettier --write"
         ]
       },
-      "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "22.12.0",
+      "dependencies": {},
+      "publishConfig": {
+        "provenance": true
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "husky": "^9.1.7",
+        "vitest": "^3.2.4",
+        "typedoc": "~0.25.13",
+        "prettier": "^3.6.2",
+        "typescript": "^5.8.3",
+        "@types/node": "~22.10.7",
+        "extract-zip": "^2.0.1",
+        "lint-staged": "^16.1.2",
+        "@electron/get": "^4.0.2",
+        "@tsconfig/node22": "^22.0.2",
+        "@electron/universal": "^3.0.1"
+      }
     }
   },
   "time": {
     "created": "2021-04-23T03:31:42.898Z",
-    "modified": "2025-08-01T04:30:19.084Z",
+    "modified": "2026-03-27T02:31:54.220Z",
     "1.8.0": "2024-03-25T17:41:45.033Z",
     "2.0.0": "2025-08-01T04:30:18.690Z"
   },
