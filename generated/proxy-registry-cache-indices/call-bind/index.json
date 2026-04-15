@@ -1,105 +1,105 @@
 {
   "_id": "call-bind",
-  "_rev": "10-6539b37302c8e316ffb5d6e2a8a38f74",
+  "_rev": "12-d878af2a217161b3a3f44712470dd281",
   "name": "call-bind",
   "dist-tags": {
-    "latest": "1.0.8"
+    "latest": "1.0.9"
   },
   "versions": {
     "1.0.8": {
       "name": "call-bind",
       "version": "1.0.8",
+      "license": "MIT",
+      "_id": "call-bind@1.0.8",
+      "bugs": {
+        "url": "https://github.com/ljharb/call-bind/issues"
+      },
+      "dist": {
+        "shasum": "0736a9660f537e3388826f440d5ec45f744eaa4c",
+        "tarball": "http://localhost:3000/call-bind/-/call-bind-1.0.8.tgz",
+        "fileCount": 12,
+        "integrity": "sha512-oKlSFMcMwpUg2ednkhQ454wfWiU/ul3CkJe/PEHcTKuiX6RpbehUiFMXu13HalGZxfUwCQzZG747YXBn1im9ww==",
+        "signatures": [
+          {
+            "sig": "MEQCIBCWAcFsIN5sOX/SHK/D8Sbe/rCHls/Yjygwqt7joQhPAiBKlFffluBFMCcKcT8tfPVmzy1w+iq5WIyeYHqthSv/lw==",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 22902
+      },
       "main": "index.js",
+      "engines": {
+        "node": ">= 0.4"
+      },
       "exports": {
         ".": "./index.js",
         "./callBound": "./callBound.js",
         "./package.json": "./package.json"
       },
-      "scripts": {
-        "prepack": "npmignore --auto --commentLines=auto",
-        "prepublish": "not-in-publish || npm run prepublishOnly",
-        "prepublishOnly": "safe-publish-latest",
-        "lint": "eslint --ext=.js,.mjs .",
-        "postlint": "evalmd README.md",
-        "pretest": "npm run lint",
-        "tests-only": "nyc tape 'test/**/*.js'",
-        "test": "npm run tests-only",
-        "posttest": "npx npm@'>=10.2' audit --production",
-        "version": "auto-changelog && git add CHANGELOG.md",
-        "postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\""
-      },
       "funding": {
         "url": "https://github.com/sponsors/ljharb"
       },
-      "license": "MIT",
-      "bugs": {
-        "url": "https://github.com/ljharb/call-bind/issues"
-      },
-      "dependencies": {
-        "call-bind-apply-helpers": "^1.0.0",
-        "es-define-property": "^1.0.0",
-        "get-intrinsic": "^1.2.4",
-        "set-function-length": "^1.2.2"
-      },
-      "devDependencies": {
-        "@ljharb/eslint-config": "^21.1.1",
-        "auto-changelog": "^2.5.0",
-        "encoding": "^0.1.13",
-        "es-value-fixtures": "^1.5.0",
-        "eslint": "=8.8.0",
-        "evalmd": "^0.0.19",
-        "for-each": "^0.3.3",
-        "has-strict-mode": "^1.0.1",
-        "in-publish": "^2.0.1",
-        "npmignore": "^0.3.1",
-        "nyc": "^10.3.2",
-        "object-inspect": "^1.13.3",
-        "safe-publish-latest": "^2.0.0",
-        "tape": "^5.9.0"
+      "gitHead": "1f1dfc86a9d1b9ed3b39b8fdd922f7d2eb913c15",
+      "scripts": {
+        "lint": "eslint --ext=.js,.mjs .",
+        "test": "npm run tests-only",
+        "prepack": "npmignore --auto --commentLines=auto",
+        "pretest": "npm run lint",
+        "version": "auto-changelog && git add CHANGELOG.md",
+        "postlint": "evalmd README.md",
+        "posttest": "npx npm@'>=10.2' audit --production",
+        "prepublish": "not-in-publish || npm run prepublishOnly",
+        "tests-only": "nyc tape 'test/**/*.js'",
+        "postversion": "auto-changelog && git add CHANGELOG.md && git commit --no-edit --amend && git tag -f \"v$(node -e \"console.log(require('./package.json').version)\")\"",
+        "prepublishOnly": "safe-publish-latest"
       },
       "testling": {
         "files": "test/index.js"
       },
-      "auto-changelog": {
-        "output": "CHANGELOG.md",
-        "template": "keepachangelog",
-        "unreleased": false,
-        "commitLimit": false,
-        "backfillLimit": false,
-        "hideCredit": true
+      "_npmVersion": "10.9.0",
+      "directories": {},
+      "_nodeVersion": "23.3.0",
+      "dependencies": {
+        "get-intrinsic": "^1.2.4",
+        "es-define-property": "^1.0.0",
+        "set-function-length": "^1.2.2",
+        "call-bind-apply-helpers": "^1.0.0"
       },
       "publishConfig": {
         "ignore": [
           ".github/workflows"
         ]
       },
-      "engines": {
-        "node": ">= 0.4"
+      "_hasShrinkwrap": false,
+      "auto-changelog": {
+        "output": "CHANGELOG.md",
+        "template": "keepachangelog",
+        "hideCredit": true,
+        "unreleased": false,
+        "commitLimit": false,
+        "backfillLimit": false
       },
-      "_id": "call-bind@1.0.8",
-      "gitHead": "1f1dfc86a9d1b9ed3b39b8fdd922f7d2eb913c15",
-      "_nodeVersion": "23.3.0",
-      "_npmVersion": "10.9.0",
-      "dist": {
-        "integrity": "sha512-oKlSFMcMwpUg2ednkhQ454wfWiU/ul3CkJe/PEHcTKuiX6RpbehUiFMXu13HalGZxfUwCQzZG747YXBn1im9ww==",
-        "shasum": "0736a9660f537e3388826f440d5ec45f744eaa4c",
-        "tarball": "http://localhost:3000/call-bind/-/call-bind-1.0.8.tgz",
-        "fileCount": 12,
-        "unpackedSize": 22902,
-        "signatures": [
-          {
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-            "sig": "MEQCIBCWAcFsIN5sOX/SHK/D8Sbe/rCHls/Yjygwqt7joQhPAiBKlFffluBFMCcKcT8tfPVmzy1w+iq5WIyeYHqthSv/lw=="
-          }
-        ]
-      },
-      "directories": {},
-      "_hasShrinkwrap": false
+      "devDependencies": {
+        "nyc": "^10.3.2",
+        "tape": "^5.9.0",
+        "eslint": "=8.8.0",
+        "evalmd": "^0.0.19",
+        "encoding": "^0.1.13",
+        "for-each": "^0.3.3",
+        "npmignore": "^0.3.1",
+        "in-publish": "^2.0.1",
+        "auto-changelog": "^2.5.0",
+        "object-inspect": "^1.13.3",
+        "has-strict-mode": "^1.0.1",
+        "es-value-fixtures": "^1.5.0",
+        "safe-publish-latest": "^2.0.0",
+        "@ljharb/eslint-config": "^21.1.1"
+      }
     }
   },
   "time": {
     "created": "2020-10-30T20:31:13.640Z",
-    "modified": "2024-12-06T05:19:16.625Z",
+    "modified": "2026-04-09T15:38:08.382Z",
     "1.0.8": "2024-12-06T05:19:14.902Z"
   },
   "license": "MIT"
