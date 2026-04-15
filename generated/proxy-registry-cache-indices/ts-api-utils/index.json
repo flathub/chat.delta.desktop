@@ -1,17 +1,46 @@
 {
   "_id": "ts-api-utils",
-  "_rev": "50-526ce1b07e3093ab718e1cea52b92aa9",
+  "_rev": "52-3dcde98c4cb59c708901acfd62ad7346",
   "name": "ts-api-utils",
   "dist-tags": {
     "beta": "1.0.0-beta",
-    "latest": "2.4.0"
+    "latest": "2.5.0",
+    "rc": "3.0.0-rc.1"
   },
   "versions": {
     "2.4.0": {
       "name": "ts-api-utils",
       "version": "2.4.0",
       "license": "MIT",
+      "_id": "ts-api-utils@2.4.0",
+      "bugs": {
+        "url": "https://github.com/JoshuaKGoldberg/ts-api-utils/issues"
+      },
+      "dist": {
+        "shasum": "2690579f96d2790253bdcf1ca35d569ad78f9ad8",
+        "tarball": "http://localhost:3000/ts-api-utils/-/ts-api-utils-2.4.0.tgz",
+        "fileCount": 7,
+        "integrity": "sha512-3TaVTaAv2gTiMB35i3FiGJaRfwb3Pyn/j3m/bfAvGe8FB7CF6u+LMYqYlDh7reQf7UNvoTvdfAqHGmPGOSsPmA==",
+        "signatures": [
+          {
+            "sig": "MEQCHyOfukgHhhRPqarefbp3YdE/qA3kM2ayB5lTOukt3+kCIQD8ose7t9Hi3OWjJApJfS2knBI2e2XCoCGWBFoob85oCA==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/ts-api-utils@2.4.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 352644
+      },
+      "main": "./lib/index.js",
       "type": "module",
+      "types": "./lib/index.d.ts",
+      "engines": {
+        "node": ">=18.12"
+      },
       "exports": {
         ".": {
           "types": {
@@ -22,110 +51,82 @@
           "require": "./lib/index.cjs"
         }
       },
-      "main": "./lib/index.js",
+      "gitHead": "3f5203c09ff6b81942e7685432017b4ed2836c51",
       "scripts": {
-        "build": "tsup src/index.ts && cp lib/index.d.ts lib/index.d.cts",
+        "tsc": "tsc",
         "docs": "typedoc",
-        "docs:serve": "npx --yes http-server docs/generated",
-        "format": "prettier \"**/*\" --ignore-unknown",
         "lint": "eslint . --max-warnings 0",
+        "test": "vitest",
+        "build": "tsup src/index.ts && cp lib/index.d.ts lib/index.d.cts",
+        "format": "prettier \"**/*\" --ignore-unknown",
+        "lint:md": "markdownlint \"**/*.md\" \".github/**/*.md\" --rules sentences-per-line",
+        "prepare": "husky",
         "lint:docs": "typedoc --validation --treatValidationWarningsAsErrors",
         "lint:knip": "knip",
-        "lint:md": "markdownlint \"**/*.md\" \".github/**/*.md\" --rules sentences-per-line",
+        "docs:serve": "npx --yes http-server docs/generated",
         "lint:packages": "pnpm dedupe --check",
         "lint:spelling": "cspell \"**\" \".github/**/*\"",
-        "prepare": "husky",
-        "should-semantic-release": "should-semantic-release --verbose",
-        "test": "vitest",
-        "tsc": "tsc"
+        "should-semantic-release": "should-semantic-release --verbose"
       },
+      "_npmVersion": "11.6.2",
+      "directories": {},
       "lint-staged": {
         "*": "prettier --ignore-unknown --write"
       },
+      "_nodeVersion": "25.2.1",
+      "_hasShrinkwrap": false,
+      "packageManager": "pnpm@10.6.5",
       "devDependencies": {
-        "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1",
-        "@eslint/js": "^9.19.0",
-        "@phenomnomnominal/tsquery": "^6.1.3",
-        "@release-it/conventional-changelog": "^10.0.0",
-        "@types/eslint-plugin-markdown": "^2.0.2",
-        "@types/node": "^18.19.74",
-        "@typescript/vfs": "^1.6.0",
-        "@vitest/coverage-v8": "^3.0.0",
-        "@vitest/eslint-plugin": "^1.1.25",
-        "console-fail-test": "^0.5.0",
+        "knip": "^5.46.0",
+        "tsup": "^8.3.6",
+        "husky": "^9.1.7",
         "cspell": "^8.17.3",
         "eslint": "^9.19.0",
-        "eslint-plugin-jsdoc": "^50.6.3",
-        "eslint-plugin-jsonc": "^2.19.1",
-        "eslint-plugin-markdown": "^5.1.0",
-        "eslint-plugin-n": "^17.15.1",
-        "eslint-plugin-package-json": "^0.19.0",
-        "eslint-plugin-perfectionist": "^4.7.0",
-        "eslint-plugin-regexp": "^2.7.0",
-        "eslint-plugin-yml": "^1.16.0",
-        "husky": "^9.1.7",
-        "jsonc-eslint-parser": "^2.4.0",
-        "knip": "^5.46.0",
+        "vitest": "^3.0.0",
+        "typedoc": "^0.28.0",
+        "prettier": "^3.4.2",
+        "@eslint/js": "^9.19.0",
+        "release-it": "^18.1.2",
+        "typescript": "^5.7.3",
+        "@types/node": "^18.19.74",
         "lint-staged": "^15.4.3",
         "markdownlint": "^0.37.4",
+        "@typescript/vfs": "^1.6.0",
+        "eslint-plugin-n": "^17.15.1",
         "markdownlint-cli": "^0.44.0",
-        "prettier": "^3.4.2",
-        "prettier-plugin-curly": "^0.3.1",
-        "prettier-plugin-packagejson": "^2.5.8",
-        "release-it": "^18.1.2",
+        "console-fail-test": "^0.5.0",
+        "eslint-plugin-yml": "^1.16.0",
+        "typescript-eslint": "^8.22.0",
         "sentences-per-line": "^0.3.0",
+        "@vitest/coverage-v8": "^3.0.0",
+        "eslint-plugin-jsdoc": "^50.6.3",
+        "eslint-plugin-jsonc": "^2.19.1",
+        "jsonc-eslint-parser": "^2.4.0",
+        "eslint-plugin-regexp": "^2.7.0",
+        "@vitest/eslint-plugin": "^1.1.25",
+        "prettier-plugin-curly": "^0.3.1",
+        "eslint-plugin-markdown": "^5.1.0",
         "should-semantic-release": "^0.3.0",
-        "tsup": "^8.3.6",
-        "typedoc": "^0.28.0",
         "typedoc-plugin-coverage": "^3.4.1",
+        "typedoc-plugin-mdn-links": "^5.0.0",
+        "@phenomnomnominal/tsquery": "^6.1.3",
+        "eslint-plugin-package-json": "^0.19.0",
+        "eslint-plugin-perfectionist": "^4.7.0",
+        "prettier-plugin-packagejson": "^2.5.8",
+        "@types/eslint-plugin-markdown": "^2.0.2",
         "typedoc-plugin-custom-validation": "^2.0.2",
         "typedoc-plugin-konamimojisplosion": "^0.0.2",
-        "typedoc-plugin-mdn-links": "^5.0.0",
-        "typescript": "^5.7.3",
-        "typescript-eslint": "^8.22.0",
-        "vitest": "^3.0.0"
+        "@release-it/conventional-changelog": "^10.0.0",
+        "@eslint-community/eslint-plugin-eslint-comments": "^4.4.1"
       },
       "peerDependencies": {
         "typescript": ">=4.8.4"
-      },
-      "packageManager": "pnpm@10.6.5",
-      "engines": {
-        "node": ">=18.12"
-      },
-      "gitHead": "3f5203c09ff6b81942e7685432017b4ed2836c51",
-      "types": "./lib/index.d.ts",
-      "_id": "ts-api-utils@2.4.0",
-      "bugs": {
-        "url": "https://github.com/JoshuaKGoldberg/ts-api-utils/issues"
-      },
-      "_nodeVersion": "25.2.1",
-      "_npmVersion": "11.6.2",
-      "dist": {
-        "integrity": "sha512-3TaVTaAv2gTiMB35i3FiGJaRfwb3Pyn/j3m/bfAvGe8FB7CF6u+LMYqYlDh7reQf7UNvoTvdfAqHGmPGOSsPmA==",
-        "shasum": "2690579f96d2790253bdcf1ca35d569ad78f9ad8",
-        "tarball": "http://localhost:3000/ts-api-utils/-/ts-api-utils-2.4.0.tgz",
-        "fileCount": 7,
-        "unpackedSize": 352644,
-        "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/ts-api-utils@2.4.0",
-          "provenance": {
-            "predicateType": "https://slsa.dev/provenance/v1"
-          }
-        },
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEQCHyOfukgHhhRPqarefbp3YdE/qA3kM2ayB5lTOukt3+kCIQD8ose7t9Hi3OWjJApJfS2knBI2e2XCoCGWBFoob85oCA=="
-          }
-        ]
-      },
-      "directories": {},
-      "_hasShrinkwrap": false
+      }
     }
   },
   "time": {
     "created": "2023-02-07T15:19:43.786Z",
-    "modified": "2026-01-02T14:18:38.609Z",
+    "modified": "2026-03-21T21:36:28.793Z",
     "2.4.0": "2026-01-02T14:18:38.223Z"
   },
   "license": "MIT"
