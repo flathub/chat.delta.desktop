@@ -1,98 +1,98 @@
 {
   "_id": "@tauri-apps/api",
-  "_rev": "104-d27855a762f1747ce6f62d9bf6d65c40",
+  "_rev": "105-b256ca0b0730f9c41ab13d2b18971475",
   "name": "@tauri-apps/api",
   "dist-tags": {
     "next": "2.0.1",
-    "latest": "2.10.1"
+    "latest": "2.11.0"
   },
   "versions": {
-    "2.9.1": {
+    "2.11.0": {
       "name": "@tauri-apps/api",
-      "version": "2.9.1",
+      "version": "2.11.0",
+      "funding": {
+        "type": "opencollective",
+        "url": "https://opencollective.com/tauri"
+      },
       "license": "Apache-2.0 OR MIT",
-      "_id": "@tauri-apps/api@2.9.1",
       "bugs": {
         "url": "https://github.com/tauri-apps/tauri/issues"
       },
+      "type": "module",
+      "main": "./index.cjs",
+      "module": "./index.js",
+      "types": "./index.d.ts",
+      "exports": {
+        ".": {
+          "import": "./index.js",
+          "require": "./index.cjs",
+          "types": "./index.d.ts"
+        },
+        "./*": {
+          "import": "./*.js",
+          "require": "./*.cjs",
+          "types": "./*.d.ts"
+        },
+        "./package.json": "./package.json"
+      },
+      "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@rollup/plugin-terser": "1.0.0",
+        "@rollup/plugin-typescript": "12.3.0",
+        "@types/eslint": "^9.6.1",
+        "@types/node": "^24.11.0",
+        "eslint": "^10.0.2",
+        "eslint-config-prettier": "10.1.8",
+        "eslint-plugin-security": "4.0.0",
+        "fast-glob": "3.3.3",
+        "globals": "^17.4.0",
+        "rollup": "4.60.2",
+        "tslib": "^2.8.1",
+        "typescript": "^6.0.0",
+        "typescript-eslint": "^8.58.2"
+      },
+      "scripts": {
+        "build": "rollup -c --configPlugin typescript",
+        "build:debug": "rollup -c --configPlugin typescript",
+        "npm-pack": "pnpm build && cd ./dist && npm pack",
+        "npm-publish": "pnpm build && cd ./dist && pnpm publish --access public --loglevel silly --no-git-checks",
+        "ts:check": "tsc --noEmit",
+        "eslint:check": "eslint src/**/*.ts",
+        "eslint:fix": "eslint src/**/*.ts --fix"
+      },
+      "_id": "@tauri-apps/api@2.11.0",
+      "_integrity": "sha512-7CinYODhky9lmO23xHnUFv0Xt43fbtWMyxZcLcRBlFkcgXKuEirBvHpmtJ89YMhyeGcq20Wuc47Fa4XjyniywA==",
+      "_resolved": "/tmp/62753b73fd2498862aee9b07ed29cc21/tauri-apps-api-2.11.0.tgz",
+      "_from": "file:tauri-apps-api-2.11.0.tgz",
+      "_nodeVersion": "24.14.1",
+      "_npmVersion": "11.11.0",
       "dist": {
-        "shasum": "e539bfa437e53864fd5e7ed0f28e8217fbc74de1",
-        "tarball": "http://localhost:3000/@tauri-apps/api/-/api-2.9.1.tgz",
+        "integrity": "sha512-7CinYODhky9lmO23xHnUFv0Xt43fbtWMyxZcLcRBlFkcgXKuEirBvHpmtJ89YMhyeGcq20Wuc47Fa4XjyniywA==",
+        "shasum": "00fb69996010178a5153798d4a84f6fe3a1e1182",
+        "tarball": "http://localhost:3000/@tauri-apps/api/-/api-2.11.0.tgz",
         "fileCount": 67,
-        "integrity": "sha512-IGlhP6EivjXHepbBic618GOmiWe4URJiIeZFlB7x3czM0yDHHYviH1Xvoiv4FefdkQtn6v7TuwWCRfOGdnVUGw==",
-        "signatures": [
-          {
-            "sig": "MEUCIQCtqYFedtI2GnDYBf/IYuFnEb363UjEIh8ecgiYIYLfIQIgZRSrbvDQS5Wk5lV43MmoY2ZLuVpvkXNuBU/CAJYK+98=",
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
-          }
-        ],
+        "unpackedSize": 697432,
         "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fapi@2.9.1",
+          "url": "http://localhost:3000/-/npm/v1/attestations/@tauri-apps%2fapi@2.11.0",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "unpackedSize": 690982
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIETGm9Ssalqj8H4iT3ePlMWfSPsAj+EzY+bIxd9KpnR6AiEA2jsC/qMtqpP7+SGwNPxglj7sN36cSUvPSMolCeqYSxk="
+          }
+        ]
       },
-      "main": "./index.cjs",
-      "type": "module",
-      "_from": "file:tauri-apps-api-2.9.1.tgz",
-      "types": "./index.d.ts",
-      "module": "./index.js",
-      "exports": {
-        ".": {
-          "types": "./index.d.ts",
-          "import": "./index.js",
-          "require": "./index.cjs"
-        },
-        "./*": {
-          "types": "./*.d.ts",
-          "import": "./*.js",
-          "require": "./*.cjs"
-        },
-        "./package.json": "./package.json"
-      },
-      "funding": {
-        "url": "https://opencollective.com/tauri",
-        "type": "opencollective"
-      },
-      "scripts": {
-        "build": "rollup -c --configPlugin typescript",
-        "npm-pack": "pnpm build && cd ./dist && npm pack",
-        "ts:check": "tsc --noEmit",
-        "eslint:fix": "eslint src/**/*.ts --fix",
-        "build:debug": "rollup -c --configPlugin typescript",
-        "npm-publish": "pnpm build && cd ./dist && pnpm publish --access public --loglevel silly --no-git-checks",
-        "eslint:check": "eslint src/**/*.ts"
-      },
-      "_resolved": "/tmp/5eecf8755e3ccac5da44bd37c262b650/tauri-apps-api-2.9.1.tgz",
-      "_integrity": "sha512-IGlhP6EivjXHepbBic618GOmiWe4URJiIeZFlB7x3czM0yDHHYviH1Xvoiv4FefdkQtn6v7TuwWCRfOGdnVUGw==",
-      "_npmVersion": "10.8.2",
       "directories": {},
-      "_nodeVersion": "20.19.5",
-      "_hasShrinkwrap": false,
-      "devDependencies": {
-        "tslib": "^2.8.1",
-        "eslint": "^9.29.0",
-        "rollup": "4.53.3",
-        "globals": "^16.2.0",
-        "fast-glob": "3.3.3",
-        "@eslint/js": "^9.29.0",
-        "typescript": "^5.8.3",
-        "@types/node": "^24.0.0",
-        "@types/eslint": "^9.6.1",
-        "typescript-eslint": "^8.34.1",
-        "@rollup/plugin-terser": "0.4.4",
-        "eslint-config-prettier": "10.1.8",
-        "eslint-plugin-security": "3.0.1",
-        "@rollup/plugin-typescript": "12.3.0"
-      }
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2021-04-13T22:39:47.265Z",
-    "modified": "2026-02-03T00:17:27.147Z",
-    "2.9.1": "2025-11-30T10:45:52.615Z"
+    "modified": "2026-04-30T15:51:17.890Z",
+    "2.11.0": "2026-04-30T15:51:17.448Z"
   },
   "license": "Apache-2.0 OR MIT"
 }

@@ -1,74 +1,74 @@
 {
   "_id": "@humanfs/node",
-  "_rev": "18-95d22fc01af0d861fca5ff44ed7c896a",
+  "_rev": "19-83031372b52e25a60c9482f445186686",
   "name": "@humanfs/node",
   "dist-tags": {
-    "latest": "0.16.7"
+    "latest": "0.16.8"
   },
   "versions": {
     "0.16.7": {
       "name": "@humanfs/node",
       "version": "0.16.7",
-      "type": "module",
+      "license": "Apache-2.0",
+      "_id": "@humanfs/node@0.16.7",
+      "bugs": {
+        "url": "https://github.com/humanwhocodes/humanfs/issues"
+      },
+      "dist": {
+        "shasum": "822cb7b3a12c5a240a24f621b5a2413e27a45f26",
+        "tarball": "http://localhost:3000/@humanfs/node/-/node-0.16.7.tgz",
+        "fileCount": 8,
+        "integrity": "sha512-/zUx+yOsIrG4Y43Eh2peDeKCxlRt/gET6aHfaKpuq267qXdYDFViVHfMaLyygZOnl0kGWxFIgsBy8QFuTLUXEQ==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCYSxEaMQPaM5JCCWNlXaE6z058hSTjE9KM0dfN4rPKlAIhALmYZcFHSQ1gC0q7CSCjBVVGenrwHlluZt3Vrf8SC3Ry",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 44140
+      },
       "main": "dist/index.js",
+      "type": "module",
       "types": "dist/index.d.ts",
+      "engines": {
+        "node": ">=18.18.0"
+      },
       "exports": {
         "import": {
           "types": "./dist/index.d.ts",
           "default": "./src/index.js"
         }
       },
+      "gitHead": "257b7b53eb2800daca06453ea385f9f2a098fcb9",
       "scripts": {
+        "test": "mocha ./tests/",
         "build": "tsc",
         "prepare": "npm run build",
-        "pretest": "npm run build",
-        "test": "mocha ./tests/"
+        "pretest": "npm run build"
+      },
+      "_npmVersion": "11.0.0",
+      "directories": {},
+      "_nodeVersion": "22.15.0",
+      "dependencies": {
+        "@humanfs/core": "^0.19.1",
+        "@humanwhocodes/retry": "^0.4.0"
       },
       "publishConfig": {
         "access": "public"
       },
-      "license": "Apache-2.0",
-      "bugs": {
-        "url": "https://github.com/humanwhocodes/humanfs/issues"
-      },
-      "engines": {
-        "node": ">=18.18.0"
-      },
+      "_hasShrinkwrap": false,
       "devDependencies": {
+        "mocha": "^10.2.0",
+        "typescript": "^5.2.2",
         "@types/node": "^20.9.4",
         "@humanfs/test": "^0.15.0",
-        "@humanfs/types": "^0.15.0",
-        "mocha": "^10.2.0",
-        "typescript": "^5.2.2"
-      },
-      "dependencies": {
-        "@humanwhocodes/retry": "^0.4.0",
-        "@humanfs/core": "^0.19.1"
-      },
-      "_id": "@humanfs/node@0.16.7",
-      "gitHead": "257b7b53eb2800daca06453ea385f9f2a098fcb9",
-      "_nodeVersion": "22.15.0",
-      "_npmVersion": "11.0.0",
-      "dist": {
-        "integrity": "sha512-/zUx+yOsIrG4Y43Eh2peDeKCxlRt/gET6aHfaKpuq267qXdYDFViVHfMaLyygZOnl0kGWxFIgsBy8QFuTLUXEQ==",
-        "shasum": "822cb7b3a12c5a240a24f621b5a2413e27a45f26",
-        "tarball": "http://localhost:3000/@humanfs/node/-/node-0.16.7.tgz",
-        "fileCount": 8,
-        "unpackedSize": 44140,
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEYCIQCYSxEaMQPaM5JCCWNlXaE6z058hSTjE9KM0dfN4rPKlAIhALmYZcFHSQ1gC0q7CSCjBVVGenrwHlluZt3Vrf8SC3Ry"
-          }
-        ]
-      },
-      "directories": {},
-      "_hasShrinkwrap": false
+        "@humanfs/types": "^0.15.0"
+      }
     }
   },
   "time": {
     "created": "2024-01-30T00:34:36.325Z",
-    "modified": "2025-09-03T15:14:06.191Z",
+    "modified": "2026-04-17T20:51:27.104Z",
     "0.16.7": "2025-09-03T15:14:05.977Z"
   },
   "license": "Apache-2.0"

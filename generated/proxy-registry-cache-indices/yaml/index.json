@@ -1,36 +1,36 @@
 {
   "_id": "yaml",
-  "_rev": "161-8a8659da8b0e1892520d4fbaa4f5f490",
+  "_rev": "164-5f7b5f5a50679aa1bc9cefada488dbdb",
   "name": "yaml",
   "dist-tags": {
-    "next": "3.0.0-0",
-    "latest": "2.8.3"
+    "latest": "2.9.0",
+    "next": "3.0.0-1"
   },
   "versions": {
-    "1.10.2": {
+    "1.10.3": {
       "name": "yaml",
-      "version": "1.10.2",
+      "version": "1.10.3",
       "license": "ISC",
-      "_id": "yaml@1.10.2",
+      "_id": "yaml@1.10.3",
       "bugs": {
         "url": "https://github.com/eemeli/yaml/issues"
       },
       "dist": {
-        "shasum": "2301c5ffbf12b467de8da2333a459e29e7920e4b",
-        "tarball": "http://localhost:3000/yaml/-/yaml-1.10.2.tgz",
+        "shasum": "76e407ed95c42684fb8e14641e5de62fe65bbcb3",
+        "tarball": "http://localhost:3000/yaml/-/yaml-1.10.3.tgz",
         "fileCount": 58,
-        "integrity": "sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==",
+        "integrity": "sha512-vIYeF1u3CjlhAFekPPAk2h/Kv4T3mAkMox5OymRiJQB0spDP10LHvt+K7G9Ny6NuuMAb25/6n1qyUjAcGNf/AA==",
         "signatures": [
           {
-            "sig": "MEQCIARiB1B72AX0dpaxjNVxQyj72VJoz9RC0lByfo2DeJ2jAiAYN5J9l3vH2JTUdSYuhybuSU3m57Ww07CzCK9c4/vkNw==",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+            "sig": "MEUCIQCPNDleyiJCjBuKvt005wwrvcZfriko25rU8XFpPXs//wIgcCEwKrvs/kEidJjRY5Oo2UARHuFVEkkNfFS6+Vgmzgc=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 448149,
-        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgTSiACRA9TVsSAnZWagAAh3wQAKE5IvIw2W5eSY7PKd3B\nkJAyHHeUEY4wPPqwAQ2Nt5dC3/vFRin43nUyRXcFdcFnodotLmCtnhsKKZOd\nPTVlPh+ykL0Z8vMBDIMtztxE2uakX58l4WIxM+b7i5BUfP9FuQoss8xx/Y+V\nVemmvD6a87jEH/6F+kCHd320l90gpBZAsyxohc/A71z7B8l1Cw8Y+zOb+N2R\nhiz1dpcwyzAjbVi47Eaz6EIMaVr1qmLgYq7Oq6YCzAyRE8BOGS5Ikf0iioav\n5oWM9/qGH21ip7fePw58WoQNZn7b1GSM27hKZQ/P+5R7FSZL03UA8kmmZ24k\n58f94SYVf/7pNga+5N/jtJHwbJ8GZC3QkHCos1kk7kGOJQ+4v4dFSziSgYWO\nPiLkoD7WENtvdCIUO3DNyzBI6LRY94Ae/bTnZ6YuGtLIv6iSR/+OlTdYEEld\nV4Tf/R7zt+FaRDsHup411QdzJAyc5HqCjEyAdsBTXUENozAyR9LYY1mG9nE1\n0QxJR2+xEsYejK3NQPQG1coTXutZVUwcCfBTlLCSYPZixD530/v8Lw/ATevi\nYAU8ZdqxPt+ioUGiaTmZ3NRVgB3rUl/7oLMI057Qk79thgu2UBGwN8LwrYWz\n7AK/ylAPh7wETDwaGb6epEf7J8m9O6qGoyNpRoBBGeuMuJ6fhgalqfK/YDPn\nwsi9\r\n=mchG\r\n-----END PGP SIGNATURE-----\r\n"
+        "unpackedSize": 400876
       },
       "main": "./index.js",
       "type": "commonjs",
+      "types": "./index.d.ts",
       "browser": {
         "./map.js": "./browser/map.js",
         "./seq.js": "./browser/seq.js",
@@ -69,7 +69,7 @@
         ],
         "./parse-cst": "./parse-cst.js"
       },
-      "gitHead": "4cdcde632ece71155f3108ec0120c1a0329a6914",
+      "gitHead": "cfe8f0437054ff5fbfe6499894f55b3316a54959",
       "scripts": {
         "docs": "cd docs-slate && bundle exec middleman server",
         "lint": "eslint src/",
@@ -85,8 +85,7 @@
         "docs:deploy": "cd docs-slate && ./deploy.sh",
         "docs:install": "cd docs-slate && bundle install",
         "build:browser": "rollup -c rollup.browser-config.js",
-        "test:browsers": "cd playground && npm test",
-        "prepublishOnly": "npm run clean && npm test && npm run build"
+        "test:browsers": "cd playground && npm test"
       },
       "prettier": {
         "semi": false,
@@ -94,11 +93,12 @@
         "singleQuote": true,
         "trailingComma": "none"
       },
-      "_npmVersion": "7.6.0",
+      "_npmVersion": "11.8.0",
       "directories": {},
-      "_nodeVersion": "15.11.0",
+      "_nodeVersion": "25.5.0",
       "browserslist": "> 0.5%, not dead",
       "_hasShrinkwrap": false,
+      "readmeFilename": "README.md",
       "devDependencies": {
         "jest": "^26.6.3",
         "eslint": "^7.19.0",
@@ -118,11 +118,11 @@
         "@babel/plugin-proposal-class-properties": "^7.12.1"
       }
     },
-    "2.8.2": {
+    "2.8.3": {
       "name": "yaml",
-      "version": "2.8.2",
+      "version": "2.8.3",
       "license": "ISC",
-      "_id": "yaml@2.8.2",
+      "_id": "yaml@2.8.3",
       "bugs": {
         "url": "https://github.com/eemeli/yaml/issues"
       },
@@ -130,17 +130,17 @@
         "yaml": "bin.mjs"
       },
       "dist": {
-        "shasum": "5694f25eca0ce9c3e7a9d9e00ce0ddabbd9e35c5",
-        "tarball": "http://localhost:3000/yaml/-/yaml-2.8.2.tgz",
+        "shasum": "a0d6bd2efb3dd03c59370223701834e60409bd7d",
+        "tarball": "http://localhost:3000/yaml/-/yaml-2.8.3.tgz",
         "fileCount": 233,
-        "integrity": "sha512-mplynKqc1C2hTVYxd0PU2xQAc22TI1vShAYGksCCfxbn/dFwnHTNi1bvYsBTkhdUNtGIf5xNOg938rrSSYvS9A==",
+        "integrity": "sha512-AvbaCLOO2Otw/lW5bmh9d/WEdcDFdQp2Z2ZUH3pX9U2ihyUY0nvLv7J6TrWowklRGPYbB/IuIMfYgxaCPg5Bpg==",
         "signatures": [
           {
-            "sig": "MEUCIQDW889LCHnZhy3pe+XXwXPLGrXgFZItrRjC+1wPcUPzjQIgNDItn+clRUJBmqXLY0WSP0nuUm353uZnAU9K8TJ8mHE=",
+            "sig": "MEQCICALJHbe+G1OS1tHaaHjrFgCqUUu5ggaRmLxytTVE1geAiBxRnSUA/BMy9gMlZWk7OYUpf5bj0vZMx1GDl0QyJZB3g==",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 683007
+        "unpackedSize": 684613
       },
       "main": "./dist/index.js",
       "type": "commonjs",
@@ -167,7 +167,7 @@
         "./package.json": "./package.json"
       },
       "funding": "https://github.com/sponsors/eemeli",
-      "gitHead": "086fa6b5bae325da18734750cddee231ce578930",
+      "gitHead": "ce14587484822bffb0f7d31aefedcaf2dc0d0387",
       "scripts": {
         "docs": "cd docs-slate && bundle exec middleman server",
         "lint": "eslint config/ src/",
@@ -197,9 +197,9 @@
         "singleQuote": true,
         "trailingComma": "none"
       },
-      "_npmVersion": "11.6.2",
+      "_npmVersion": "11.8.0",
       "directories": {},
-      "_nodeVersion": "25.2.1",
+      "_nodeVersion": "25.5.0",
       "browserslist": "defaults, not ie 11",
       "_hasShrinkwrap": false,
       "devDependencies": {
@@ -229,9 +229,9 @@
   },
   "time": {
     "created": "2011-04-15T16:25:52.216Z",
-    "modified": "2026-03-21T10:37:55.900Z",
-    "1.10.2": "2021-03-13T21:02:56.363Z",
-    "2.8.2": "2025-11-30T07:58:42.380Z"
+    "modified": "2026-05-11T10:16:24.145Z",
+    "1.10.3": "2026-03-21T10:28:32.082Z",
+    "2.8.3": "2026-03-21T10:37:06.001Z"
   },
   "license": "ISC"
 }

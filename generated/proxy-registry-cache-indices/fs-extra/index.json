@@ -1,9 +1,9 @@
 {
   "_id": "fs-extra",
-  "_rev": "651-5091af8adbce4c81f9616a168399c255",
+  "_rev": "652-d0c2c239d60eecf750b77716964afc48",
   "name": "fs-extra",
   "dist-tags": {
-    "latest": "11.3.4"
+    "latest": "11.3.5"
   },
   "versions": {
     "7.0.1": {
@@ -241,65 +241,65 @@
     "11.3.4": {
       "name": "fs-extra",
       "version": "11.3.4",
-      "engines": {
-        "node": ">=14.14"
-      },
       "license": "MIT",
-      "dependencies": {
-        "graceful-fs": "^4.2.0",
-        "jsonfile": "^6.0.1",
-        "universalify": "^2.0.0"
-      },
-      "devDependencies": {
-        "klaw": "^2.1.1",
-        "klaw-sync": "^3.0.2",
-        "minimist": "^1.1.1",
-        "mocha": "^10.1.0",
-        "nyc": "^15.0.0",
-        "proxyquire": "^2.0.1",
-        "read-dir-files": "^0.1.1",
-        "standard": "^17.0.0"
-      },
-      "main": "./lib/index.js",
-      "exports": {
-        ".": "./lib/index.js",
-        "./esm": "./lib/esm.mjs"
-      },
-      "scripts": {
-        "lint": "standard",
-        "test-find": "find ./lib/**/__tests__ -name *.test.js | xargs mocha",
-        "test": "npm run lint && npm run unit && npm run unit-esm",
-        "unit": "nyc node test.js",
-        "unit-esm": "node test.mjs"
-      },
-      "sideEffects": false,
-      "gitHead": "353a29b18c883fa0f3997fd8be90a89077633af4",
       "_id": "fs-extra@11.3.4",
       "bugs": {
         "url": "https://github.com/jprichardson/node-fs-extra/issues"
       },
-      "_nodeVersion": "24.13.0",
-      "_npmVersion": "11.6.2",
       "dist": {
-        "integrity": "sha512-CTXd6rk/M3/ULNQj8FBqBWHYBVYybQ3VPBw0xGKFe3tuH7ytT6ACnvzpIQ3UZtB8yvUKC2cXn1a+x+5EVQLovA==",
         "shasum": "ab6934eca8bcf6f7f6b82742e33591f86301d6fc",
         "tarball": "http://localhost:3000/fs-extra/-/fs-extra-11.3.4.tgz",
         "fileCount": 32,
-        "unpackedSize": 57708,
+        "integrity": "sha512-CTXd6rk/M3/ULNQj8FBqBWHYBVYybQ3VPBw0xGKFe3tuH7ytT6ACnvzpIQ3UZtB8yvUKC2cXn1a+x+5EVQLovA==",
         "signatures": [
           {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEQCIB9VlZn6aZlJJFYtN5AHWwrAo3abcmSKYu2fZjchTAAaAiACCDUlFuSQAEX7GBf9OSBQCHDMiAqCQt2DIK60RAcPug=="
+            "sig": "MEQCIB9VlZn6aZlJJFYtN5AHWwrAo3abcmSKYu2fZjchTAAaAiACCDUlFuSQAEX7GBf9OSBQCHDMiAqCQt2DIK60RAcPug==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
-        ]
+        ],
+        "unpackedSize": 57708
       },
+      "main": "./lib/index.js",
+      "engines": {
+        "node": ">=14.14"
+      },
+      "exports": {
+        ".": "./lib/index.js",
+        "./esm": "./lib/esm.mjs"
+      },
+      "gitHead": "353a29b18c883fa0f3997fd8be90a89077633af4",
+      "scripts": {
+        "lint": "standard",
+        "test": "npm run lint && npm run unit && npm run unit-esm",
+        "unit": "nyc node test.js",
+        "unit-esm": "node test.mjs",
+        "test-find": "find ./lib/**/__tests__ -name *.test.js | xargs mocha"
+      },
+      "_npmVersion": "11.6.2",
       "directories": {},
-      "_hasShrinkwrap": false
+      "sideEffects": false,
+      "_nodeVersion": "24.13.0",
+      "dependencies": {
+        "jsonfile": "^6.0.1",
+        "graceful-fs": "^4.2.0",
+        "universalify": "^2.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "nyc": "^15.0.0",
+        "klaw": "^2.1.1",
+        "mocha": "^10.1.0",
+        "minimist": "^1.1.1",
+        "standard": "^17.0.0",
+        "klaw-sync": "^3.0.2",
+        "proxyquire": "^2.0.1",
+        "read-dir-files": "^0.1.1"
+      }
     }
   },
   "time": {
     "created": "2011-11-16T21:47:16.814Z",
-    "modified": "2026-03-03T16:46:08.861Z",
+    "modified": "2026-05-06T19:35:56.404Z",
     "7.0.1": "2018-11-07T13:23:10.451Z",
     "8.1.0": "2019-06-28T17:02:36.992Z",
     "9.1.0": "2021-01-19T17:28:37.001Z",

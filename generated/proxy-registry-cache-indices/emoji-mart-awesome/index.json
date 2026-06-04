@@ -1,0 +1,75 @@
+{
+  "_id": "emoji-mart-awesome",
+  "_rev": "16-edc83f910bd8ec69cc7e737dbad599cb",
+  "name": "emoji-mart-awesome",
+  "dist-tags": {
+    "latest": "3.0.0"
+  },
+  "versions": {
+    "3.0.0": {
+      "name": "emoji-mart-awesome",
+      "version": "3.0.0",
+      "license": "MIT",
+      "source": "src/index.ts",
+      "types": "dist/index.d.ts",
+      "main": "dist/main.js",
+      "module": "dist/module.js",
+      "global": "dist/browser.js",
+      "browserslist": "defaults",
+      "targets": {
+        "main": {
+          "includeNodeModules": true
+        },
+        "module": {
+          "includeNodeModules": true
+        },
+        "global": {
+          "source": "src/browser.js",
+          "includeNodeModules": true
+        }
+      },
+      "scripts": {
+        "build": "parcel build --no-autoinstall",
+        "prepublishOnly": "yarn build"
+      },
+      "devDependencies": {
+        "preact": "10.6.4"
+      },
+      "alias": {
+        "react": "preact/compat",
+        "react-dom/test-utils": "preact/test-utils",
+        "react-dom": "preact/compat",
+        "react/jsx-runtime": "preact/jsx-runtime",
+        "preact/jsx-dev-runtime": "preact/jsx-runtime"
+      },
+      "_id": "emoji-mart-awesome@3.0.0",
+      "gitHead": "9ea78030db28ec960b5c5530c990ccf8898ff6fd",
+      "bugs": {
+        "url": "https://github.com/viaduck/emoji-mart-awesome/issues"
+      },
+      "_nodeVersion": "20.19.2",
+      "_npmVersion": "10.8.2",
+      "dist": {
+        "integrity": "sha512-bruL48qsNlk5ek4BCM36dgdDX+sFXGf+CgjCzzk0meI79N9l/uXNtdWcBeVRvtcb5x4EbYkDJ3XfW5ws96e9cA==",
+        "shasum": "8216b8b98593355b74e19b8a162deea5edfd583b",
+        "tarball": "http://localhost:3000/emoji-mart-awesome/-/emoji-mart-awesome-3.0.0.tgz",
+        "fileCount": 11,
+        "unpackedSize": 1515585,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQCjMC6EuPtu8wTKENgMk+QpCpqd/Ca46X4WNvU98HY5OgIhAPOoMbq6++QCmtVq3qZC/w/EVLCeCS5wTR+djOKhg+Kt"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2019-01-28T03:21:52.810Z",
+    "modified": "2025-11-26T02:29:06.453Z",
+    "3.0.0": "2025-11-26T02:29:06.235Z"
+  },
+  "license": "MIT"
+}
