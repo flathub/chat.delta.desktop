@@ -1,6 +1,6 @@
 {
   "_id": "punycode",
-  "_rev": "130-4d40b59301b83e5191ece86316c9640c",
+  "_rev": "132-4a133693b406cd723d55fe2096c151ce",
   "name": "punycode",
   "dist-tags": {
     "latest": "2.3.1"
@@ -9,24 +9,23 @@
     "2.3.1": {
       "name": "punycode",
       "version": "2.3.1",
-      "main": "punycode.js",
-      "jsnext:main": "punycode.es6.js",
-      "module": "punycode.es6.js",
-      "engines": {
-        "node": ">=6"
-      },
       "license": "MIT",
+      "_id": "punycode@2.3.1",
       "bugs": {
         "url": "https://github.com/mathiasbynens/punycode.js/issues"
       },
-      "scripts": {
-        "test": "mocha tests",
-        "build": "node scripts/prepublish.js"
-      },
-      "devDependencies": {
-        "codecov": "^3.8.3",
-        "nyc": "^15.1.0",
-        "mocha": "^10.2.0"
+      "dist": {
+        "shasum": "027422e2faec0b25e1549c3e1bd8309b9133b6e5",
+        "tarball": "http://localhost:3000/punycode/-/punycode-2.3.1.tgz",
+        "fileCount": 5,
+        "integrity": "sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==",
+        "signatures": [
+          {
+            "sig": "MEUCIHZvXa/+EopO0I7a00fXXIlm21laKpF9NAascJaEmE6gAiEAueild+KrVfZMTffBSXj1LfptDjmXF437Aet8pmmV9m8=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 33514
       },
       "jspm": {
         "map": {
@@ -35,30 +34,31 @@
           }
         }
       },
-      "_id": "punycode@2.3.1",
-      "gitHead": "9e1b2cda98d215d3a73fcbfe93c62e021f4ba768",
-      "_nodeVersion": "20.9.0",
-      "_npmVersion": "10.1.0",
-      "dist": {
-        "integrity": "sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==",
-        "shasum": "027422e2faec0b25e1549c3e1bd8309b9133b6e5",
-        "tarball": "http://localhost:3000/punycode/-/punycode-2.3.1.tgz",
-        "fileCount": 5,
-        "unpackedSize": 33514,
-        "signatures": [
-          {
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-            "sig": "MEUCIHZvXa/+EopO0I7a00fXXIlm21laKpF9NAascJaEmE6gAiEAueild+KrVfZMTffBSXj1LfptDjmXF437Aet8pmmV9m8="
-          }
-        ]
+      "main": "punycode.js",
+      "module": "punycode.es6.js",
+      "engines": {
+        "node": ">=6"
       },
+      "gitHead": "9e1b2cda98d215d3a73fcbfe93c62e021f4ba768",
+      "scripts": {
+        "test": "mocha tests",
+        "build": "node scripts/prepublish.js"
+      },
+      "_npmVersion": "10.1.0",
       "directories": {},
-      "_hasShrinkwrap": false
+      "jsnext:main": "punycode.es6.js",
+      "_nodeVersion": "20.9.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "nyc": "^15.1.0",
+        "mocha": "^10.2.0",
+        "codecov": "^3.8.3"
+      }
     }
   },
   "time": {
-    "modified": "2023-10-30T18:28:32.689Z",
     "created": "2011-09-07T03:53:54.173Z",
+    "modified": "2026-04-24T23:30:35.626Z",
     "2.3.1": "2023-10-30T18:28:32.512Z"
   },
   "license": "MIT"

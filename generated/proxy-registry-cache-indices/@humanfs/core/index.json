@@ -1,69 +1,69 @@
 {
   "_id": "@humanfs/core",
-  "_rev": "17-a7b6867243e077e988c854643138a9cd",
+  "_rev": "19-7c5737c5bc9d884c05f121e605d7aea5",
   "name": "@humanfs/core",
   "dist-tags": {
-    "latest": "0.19.1"
+    "latest": "0.19.2"
   },
   "versions": {
     "0.19.1": {
       "name": "@humanfs/core",
       "version": "0.19.1",
-      "type": "module",
+      "license": "Apache-2.0",
+      "_id": "@humanfs/core@0.19.1",
+      "bugs": {
+        "url": "https://github.com/humanwhocodes/humanfs/issues"
+      },
+      "dist": {
+        "shasum": "17c55ca7d426733fe3c561906b8173c336b40a77",
+        "tarball": "http://localhost:3000/@humanfs/core/-/core-0.19.1.tgz",
+        "fileCount": 12,
+        "integrity": "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==",
+        "signatures": [
+          {
+            "sig": "MEYCIQDB3b20eOAYRinW1zzvD+RxyGsywllcdBQvBYI0Yp9ZbQIhAOYNzfk58oMYBJVKxugcQ8JlwUCfHvDdRFFJUiMjmO/w",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 72735
+      },
       "main": "dist/index.js",
+      "type": "module",
       "types": "dist/index.d.ts",
+      "engines": {
+        "node": ">=18.18.0"
+      },
       "exports": {
         "import": {
           "types": "./dist/index.d.ts",
           "default": "./src/index.js"
         }
       },
+      "gitHead": "514883417ddb4880179b4000d874d2d764e30f2d",
       "scripts": {
+        "test": "c8 mocha tests",
         "build": "tsc",
         "prepare": "npm run build",
-        "pretest": "npm run build",
-        "test": "c8 mocha tests"
+        "pretest": "npm run build"
       },
+      "_npmVersion": "10.4.0",
+      "directories": {},
+      "_nodeVersion": "22.9.0",
       "publishConfig": {
         "access": "public"
       },
-      "license": "Apache-2.0",
-      "bugs": {
-        "url": "https://github.com/humanwhocodes/humanfs/issues"
-      },
-      "engines": {
-        "node": ">=18.18.0"
-      },
+      "_hasShrinkwrap": false,
       "devDependencies": {
-        "@humanfs/types": "^0.15.0",
         "c8": "^9.0.0",
         "mocha": "^10.2.0",
-        "typescript": "^5.2.2"
-      },
-      "_id": "@humanfs/core@0.19.1",
-      "gitHead": "514883417ddb4880179b4000d874d2d764e30f2d",
-      "_nodeVersion": "22.9.0",
-      "_npmVersion": "10.4.0",
-      "dist": {
-        "integrity": "sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==",
-        "shasum": "17c55ca7d426733fe3c561906b8173c336b40a77",
-        "tarball": "http://localhost:3000/@humanfs/core/-/core-0.19.1.tgz",
-        "fileCount": 12,
-        "unpackedSize": 72735,
-        "signatures": [
-          {
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
-            "sig": "MEYCIQDB3b20eOAYRinW1zzvD+RxyGsywllcdBQvBYI0Yp9ZbQIhAOYNzfk58oMYBJVKxugcQ8JlwUCfHvDdRFFJUiMjmO/w"
-          }
-        ]
-      },
-      "directories": {},
-      "_hasShrinkwrap": false
+        "typescript": "^5.2.2",
+        "@humanfs/types": "^0.15.0"
+      }
     }
   },
   "time": {
     "created": "2024-01-30T00:34:31.713Z",
-    "modified": "2024-10-28T13:55:51.149Z",
+    "modified": "2026-04-17T20:51:12.021Z",
     "0.19.1": "2024-10-28T13:55:50.943Z"
   },
   "license": "Apache-2.0"
