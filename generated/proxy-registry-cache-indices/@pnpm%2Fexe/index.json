@@ -1,6 +1,6 @@
 {
  "_id": "@pnpm/exe",
- "_rev": "1069-1015c8da72c3c6ffe9c47b264787541a",
+ "_rev": "1072-b8349b31377f6534f1016cfc28b5de23",
  "name": "@pnpm/exe",
  "dist-tags": {
   "next": "6.31.0",
@@ -15,9 +15,9 @@
   "next-9": "9.15.9",
   "latest-10": "10.34.1",
   "next-10": "10.34.1",
-  "latest": "11.5.1",
-  "latest-11": "11.5.1",
-  "next-11": "11.5.1"
+  "latest": "11.5.2",
+  "next-11": "11.5.2",
+  "latest-11": "11.5.2"
  },
  "versions": {
   "6.17.1": {
@@ -28217,11 +28217,88 @@
     "@pnpm/linuxstatic-x64": "11.5.1",
     "@pnpm/linuxstatic-arm64": "11.5.1"
    }
+  },
+  "11.5.2": {
+   "name": "@pnpm/exe",
+   "version": "11.5.2",
+   "license": "MIT",
+   "_id": "@pnpm/exe@11.5.2",
+   "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+   },
+   "bin": {
+    "pn": "pn",
+    "pnx": "pnx",
+    "pnpm": "pnpm",
+    "pnpx": "pnpx"
+   },
+   "dist": {
+    "shasum": "4298c49e98760a169dcb3a7c60274d6c0d7d09d5",
+    "tarball": "http://localhost:3000/@pnpm/exe/-/exe-11.5.2.tgz",
+    "fileCount": 446,
+    "integrity": "sha512-4UFnP2rhNu1xjAQ+I1GdIUUEtCJuTYJlbpiWSFA4POAID3Lpt+2vrjImWO7eOJ7iCY3vpc4TFe2IW3sAolW4Kg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQC9ERE5W3vHGwxpRJEmEgJOhM8yDzPcv7nD46pVXzYdbwIgBOm/kevZDdc1tLpQDMMUb2nmxG0UazX2k2Op0hOrufA=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@pnpm%2fexe@11.5.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 16076057
+   },
+   "jest": {
+    "preset": "@pnpm/jest-config"
+   },
+   "type": "module",
+   "funding": "https://opencollective.com/pnpm",
+   "scripts": {
+    "test": "pn .test",
+    ".test": "cross-env NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules --disable-warning=ExperimentalWarning --disable-warning=DEP0169\" jest",
+    "preinstall": "node setup.js",
+    "build-artifacts": "pn --filter=pnpm prepublishOnly && node ./scripts/build-artifacts.ts"
+   },
+   "directories": {},
+   "_nodeVersion": "26.0.0",
+   "dependencies": {
+    "detect-libc": "^2.1.2",
+    "@reflink/reflink": "0.1.19"
+   },
+   "preferGlobal": true,
+   "publishConfig": {
+    "tag": "next-10",
+    "executableFiles": [
+     "./dist/node-gyp-bin/node-gyp",
+     "./dist/node-gyp-bin/node-gyp.cmd",
+     "./dist/node_modules/node-gyp/bin/node-gyp.js"
+    ]
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "execa": "npm:safe-execa@0.3.0",
+    "@pnpm/exe": "11.5.2",
+    "@jest/globals": "30.3.0",
+    "@pnpm/jest-config": "1100.0.13",
+    "@zkochan/cmd-shim": "^9.0.3"
+   },
+   "optionalDependencies": {
+    "@pnpm/win-x64": "11.5.2",
+    "@pnpm/linux-x64": "11.5.2",
+    "@pnpm/win-arm64": "11.5.2",
+    "@pnpm/linux-arm64": "11.5.2",
+    "@pnpm/macos-arm64": "11.5.2",
+    "@pnpm/linuxstatic-x64": "11.5.2",
+    "@pnpm/linuxstatic-arm64": "11.5.2"
+   }
   }
  },
  "time": {
   "created": "2021-10-14T13:01:16.093Z",
-  "modified": "2026-06-02T08:42:16.330Z",
+  "modified": "2026-06-05T06:54:34.347Z",
   "6.17.1": "2021-10-14T13:01:16.280Z",
   "6.17.2": "2021-10-16T01:34:42.085Z",
   "6.18.0": "2021-10-19T09:50:29.625Z",
@@ -28721,7 +28798,8 @@
   "10.34.0": "2026-05-27T13:38:27.508Z",
   "10.34.1": "2026-05-27T22:58:35.617Z",
   "11.5.0": "2026-05-29T15:30:03.291Z",
-  "11.5.1": "2026-06-02T08:36:32.923Z"
+  "11.5.1": "2026-06-02T08:36:32.923Z",
+  "11.5.2": "2026-06-05T06:32:36.244Z"
  },
  "license": "MIT",
  "users": {
