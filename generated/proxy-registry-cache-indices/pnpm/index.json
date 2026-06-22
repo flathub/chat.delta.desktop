@@ -1,6 +1,6 @@
 {
  "_id": "pnpm",
- "_rev": "2677-8612d2cac1e7400fb9cc9ffb8f5794f1",
+ "_rev": "2694-dc37c7b8bd1297920c43e50ef848e112",
  "name": "pnpm",
  "dist-tags": {
   "latest-1": "1.43.1",
@@ -10,19 +10,19 @@
   "latest-5": "5.18.10",
   "dev": "6.23.7-202112041634",
   "pr4475": "0.0.0-pr4475.1",
-  "latest-6": "6.35.1",
   "next-6": "6.35.1",
+  "latest-6": "6.35.1",
   "latest-7": "7.33.5",
   "next-7": "7.33.7",
-  "next-8": "8.15.9",
   "latest-8": "8.15.9",
+  "next-8": "8.15.9",
   "latest-9": "9.15.9",
   "next-9": "9.15.9",
-  "latest-10": "10.34.1",
-  "next-10": "10.34.1",
-  "latest": "11.5.2",
-  "next-11": "11.5.2",
-  "latest-11": "11.5.2"
+  "next-10": "10.34.4",
+  "latest-10": "10.34.3",
+  "latest-11": "11.8.0",
+  "latest": "11.8.0",
+  "next-11": "11.8.0"
  },
  "versions": {
   "0.0.1": {
@@ -143404,11 +143404,497 @@
     ]
    },
    "_hasShrinkwrap": false
+  },
+  "11.5.3": {
+   "name": "pnpm",
+   "version": "11.5.3",
+   "license": "MIT",
+   "_id": "pnpm@11.5.3",
+   "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+   },
+   "bin": {
+    "pn": "bin/pnpm.mjs",
+    "pnx": "bin/pnpx.mjs",
+    "pnpm": "bin/pnpm.mjs",
+    "pnpx": "bin/pnpx.mjs"
+   },
+   "dist": {
+    "shasum": "1223d6facd4baaec00348ee9c7400c1405399954",
+    "tarball": "http://localhost:3000/pnpm/-/pnpm-11.5.3.tgz",
+    "fileCount": 449,
+    "integrity": "sha512-esHJGTQcITo03A0Cr7cUPFwmrCbujEeC3uqCG4rGTSE0oIH9iUHa5uKbu0j1jfwrf7zuzMB8svCdIZ00Kklp7Q==",
+    "signatures": [
+     {
+      "sig": "MEUCIG2WtlMZcGWMNbJwitjEn+dswy7wsLVdDSb6m87+S9diAiEAzX57ErEo0UL4UoYQCLK5UVB7LB/tS02LCoX2AzJEAGk=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/pnpm@11.5.3",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 18603660
+   },
+   "jest": {
+    "preset": "@pnpm/jest-config/with-registry"
+   },
+   "main": "bin/pnpm.mjs",
+   "type": "module",
+   "unpkg": "dist/pnpm.mjs",
+   "engines": {
+    "node": ">=22.13"
+   },
+   "exports": {
+    ".": "./package.json"
+   },
+   "funding": "https://opencollective.com/pnpm",
+   "scripts": {
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "test": "pn compile && pn .test",
+    ".test": "cross-env NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules --disable-warning=ExperimentalWarning --disable-warning=DEP0169\" jest",
+    "start": "tsgo --watch",
+    "bundle": "pnx node@runtime:24.6.0 bundle.ts",
+    "compile": "tsgo --build && pn lint --fix && rimraf dist bin/nodes && pn bundle && shx cp -r node-gyp-bin dist/node-gyp-bin && shx cp -r node_modules/@pnpm/tabtab/lib/templates dist/templates && shx cp -r node_modules/ps-list/vendor dist/vendor && shx cp pnpmrc dist/pnpmrc",
+    "pretest:e2e": "rimraf node_modules/.bin/pnpm"
+   },
+   "directories": {
+    "test": "test"
+   },
+   "_nodeVersion": "26.0.0",
+   "preferGlobal": true,
+   "publishConfig": {
+    "tag": "next-11",
+    "executableFiles": [
+     "./dist/node-gyp-bin/node-gyp",
+     "./dist/node-gyp-bin/node-gyp.cmd",
+     "./dist/node_modules/node-gyp/bin/node-gyp.js"
+    ]
+   },
+   "_hasShrinkwrap": false
+  },
+  "10.34.2": {
+   "name": "pnpm",
+   "version": "10.34.2",
+   "license": "MIT",
+   "_id": "pnpm@10.34.2",
+   "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+   },
+   "bin": {
+    "pnpm": "bin/pnpm.cjs",
+    "pnpx": "bin/pnpx.cjs"
+   },
+   "dist": {
+    "shasum": "303275cf3e52a3fa57132d7a76e2525ad6167007",
+    "tarball": "http://localhost:3000/pnpm/-/pnpm-10.34.2.tgz",
+    "fileCount": 1068,
+    "integrity": "sha512-mufj/kd8UrvOHdyKoZb/JD7UtI8c6qdFWCCt+npItfV+gX7S0g5fPCw2Rt/tujYFZ2k+U0Vy3M0lL7Lri3wETA==",
+    "signatures": [
+     {
+      "sig": "MEUCIBnDy+7QMm7Yofsx5aKfpC4GhFLaqIsWy/MpTzN9k3g2AiEAhdqNmEHCwLQvjrfcF7GqTaqxFEAXYR1VBK6ICdd4b8I=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 19837386
+   },
+   "jest": {
+    "preset": "@pnpm/jest-config/with-registry"
+   },
+   "main": "bin/pnpm.cjs",
+   "type": "commonjs",
+   "_from": "file:pnpm-10.34.2.tgz",
+   "unpkg": "dist/pnpm.cjs",
+   "engines": {
+    "node": ">=18.12"
+   },
+   "exports": {
+    ".": "./package.json"
+   },
+   "funding": "https://opencollective.com/pnpm",
+   "scripts": {
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "test": "pnpm run compile && pnpm run _test",
+    "_test": "jest",
+    "start": "tsc --watch",
+    "bundle": "ts-node bundle.ts",
+    "compile": "tsc --build && pnpm run lint --fix && rimraf dist bin/nodes && pnpm run bundle && shx cp -r node-gyp-bin dist/node-gyp-bin && shx cp -r node_modules/@pnpm/tabtab/lib/templates dist/templates && shx cp -r node_modules/ps-list/vendor dist/vendor && shx cp pnpmrc dist/pnpmrc",
+    "_compile": "tsc --build",
+    "pretest:e2e": "rimraf node_modules/.bin/pnpm"
+   },
+   "_resolved": "/tmp/92c5b3831e4e2ce8fd4217902e6b53f2/pnpm-10.34.2.tgz",
+   "_integrity": "sha512-mufj/kd8UrvOHdyKoZb/JD7UtI8c6qdFWCCt+npItfV+gX7S0g5fPCw2Rt/tujYFZ2k+U0Vy3M0lL7Lri3wETA==",
+   "_npmVersion": "10.8.2",
+   "directories": {
+    "test": "test"
+   },
+   "_nodeVersion": "20.20.2",
+   "preferGlobal": true,
+   "publishConfig": {
+    "tag": "next-10",
+    "executableFiles": [
+     "./dist/node-gyp-bin/node-gyp",
+     "./dist/node-gyp-bin/node-gyp.cmd",
+     "./dist/node_modules/node-gyp/bin/node-gyp.js"
+    ]
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md"
+  },
+  "10.34.3": {
+   "name": "pnpm",
+   "version": "10.34.3",
+   "license": "MIT",
+   "_id": "pnpm@10.34.3",
+   "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+   },
+   "bin": {
+    "pnpm": "bin/pnpm.cjs",
+    "pnpx": "bin/pnpx.cjs"
+   },
+   "dist": {
+    "shasum": "f20e731937c690a41d0d3cd9e01505a8d37a0546",
+    "tarball": "http://localhost:3000/pnpm/-/pnpm-10.34.3.tgz",
+    "fileCount": 1068,
+    "integrity": "sha512-8sUxsIgp175/A8kK3cJmYV+cVHdGPkvx0nXLJjzp6lfPDVWZEQ2UZJqbs/7Z8LXvzqdKcBa2FTKiTLmth4YMHQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIEQ0rm9Sjfz1Idy1qnZzn6heMKbsCJNmBm5sOudKJAeBAiAtRqqWMyLwRbO2mpBUv3Aa7fGN3en6+n3kfMYZfGhmaA==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 19838562
+   },
+   "jest": {
+    "preset": "@pnpm/jest-config/with-registry"
+   },
+   "main": "bin/pnpm.cjs",
+   "type": "commonjs",
+   "_from": "file:pnpm-10.34.3.tgz",
+   "unpkg": "dist/pnpm.cjs",
+   "engines": {
+    "node": ">=18.12"
+   },
+   "exports": {
+    ".": "./package.json"
+   },
+   "funding": "https://opencollective.com/pnpm",
+   "scripts": {
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "test": "pnpm run compile && pnpm run _test",
+    "_test": "jest",
+    "start": "tsc --watch",
+    "bundle": "ts-node bundle.ts",
+    "compile": "tsc --build && pnpm run lint --fix && rimraf dist bin/nodes && pnpm run bundle && shx cp -r node-gyp-bin dist/node-gyp-bin && shx cp -r node_modules/@pnpm/tabtab/lib/templates dist/templates && shx cp -r node_modules/ps-list/vendor dist/vendor && shx cp pnpmrc dist/pnpmrc",
+    "_compile": "tsc --build",
+    "pretest:e2e": "rimraf node_modules/.bin/pnpm"
+   },
+   "_resolved": "/tmp/6cbc9a64db673e3175f6876067a18f60/pnpm-10.34.3.tgz",
+   "_integrity": "sha512-8sUxsIgp175/A8kK3cJmYV+cVHdGPkvx0nXLJjzp6lfPDVWZEQ2UZJqbs/7Z8LXvzqdKcBa2FTKiTLmth4YMHQ==",
+   "_npmVersion": "10.8.2",
+   "directories": {
+    "test": "test"
+   },
+   "_nodeVersion": "20.20.2",
+   "preferGlobal": true,
+   "publishConfig": {
+    "tag": "next-10",
+    "executableFiles": [
+     "./dist/node-gyp-bin/node-gyp",
+     "./dist/node-gyp-bin/node-gyp.cmd",
+     "./dist/node_modules/node-gyp/bin/node-gyp.js"
+    ]
+   },
+   "_hasShrinkwrap": false,
+   "readmeFilename": "README.md"
+  },
+  "11.6.0": {
+   "name": "pnpm",
+   "version": "11.6.0",
+   "license": "MIT",
+   "_id": "pnpm@11.6.0",
+   "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+   },
+   "bin": {
+    "pn": "bin/pnpm.mjs",
+    "pnx": "bin/pnpx.mjs",
+    "pnpm": "bin/pnpm.mjs",
+    "pnpx": "bin/pnpx.mjs"
+   },
+   "dist": {
+    "shasum": "63d4f90fda01d22365b606aacebf010760fb28bd",
+    "tarball": "http://localhost:3000/pnpm/-/pnpm-11.6.0.tgz",
+    "fileCount": 449,
+    "integrity": "sha512-mjZRgiQIDG/lFlr9z+eb+hGMKb5wPz9GKx4y7+HpjkfodQsUjggoYlCq1BE8x5k8pBPE4s1Ed1JwjC7ldRvJXw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDXgEyeGibffuH1d/T0yISpeLQ2EEIboRVC8seTE9BO9gIhAJNGLzGu30sTAYwIvgv0AeoOqMaNz2cgqcbpUlDmnvDz",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/pnpm@11.6.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 18611622
+   },
+   "jest": {
+    "preset": "@pnpm/jest-config/with-registry"
+   },
+   "main": "bin/pnpm.mjs",
+   "type": "module",
+   "unpkg": "dist/pnpm.mjs",
+   "engines": {
+    "node": ">=22.13"
+   },
+   "exports": {
+    ".": "./package.json"
+   },
+   "funding": "https://opencollective.com/pnpm",
+   "scripts": {
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "test": "pn compile && pn .test",
+    ".test": "cross-env NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules --disable-warning=ExperimentalWarning --disable-warning=DEP0169\" jest",
+    "start": "tsgo --watch",
+    "bundle": "pnx node@runtime:24.6.0 bundle.ts",
+    "compile": "tsgo --build && pn lint --fix && rimraf dist bin/nodes && pn bundle && shx cp -r node-gyp-bin dist/node-gyp-bin && shx cp -r node_modules/@pnpm/tabtab/lib/templates dist/templates && shx cp -r node_modules/ps-list/vendor dist/vendor && shx cp pnpmrc dist/pnpmrc",
+    "pretest:e2e": "rimraf node_modules/.bin/pnpm"
+   },
+   "directories": {
+    "test": "test"
+   },
+   "_nodeVersion": "26.0.0",
+   "preferGlobal": true,
+   "publishConfig": {
+    "tag": "next-11",
+    "executableFiles": [
+     "./dist/node-gyp-bin/node-gyp",
+     "./dist/node-gyp-bin/node-gyp.cmd",
+     "./dist/node_modules/node-gyp/bin/node-gyp.js"
+    ]
+   },
+   "_hasShrinkwrap": false
+  },
+  "11.7.0": {
+   "name": "pnpm",
+   "version": "11.7.0",
+   "license": "MIT",
+   "_id": "pnpm@11.7.0",
+   "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+   },
+   "bin": {
+    "pn": "bin/pnpm.mjs",
+    "pnx": "bin/pnpx.mjs",
+    "pnpm": "bin/pnpm.mjs",
+    "pnpx": "bin/pnpx.mjs"
+   },
+   "dist": {
+    "shasum": "bea54364524dadf0a42dae28dbfeeab25ff177e5",
+    "tarball": "http://localhost:3000/pnpm/-/pnpm-11.7.0.tgz",
+    "fileCount": 449,
+    "integrity": "sha512-GcyFLBIMcSV2DyRD7mvgyltA+fUFmN4aCaHxd1A+AQ5Xwjx3ZG4B52HeWb+HT7IqM5jDOrlpH8E+uUa28PTWIA==",
+    "signatures": [
+     {
+      "sig": "MEUCIHPuCpPJCRz4QWSyd/Qf/8Eeni+iuECdgPv5JJwAlT1BAiEA3Nv2FicH4kf7n0OzZKEqoEjO45+YYVcfFysFwSPFXYM=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/pnpm@11.7.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 18644360
+   },
+   "jest": {
+    "preset": "@pnpm/jest-config/with-registry",
+    "collectCoverage": false
+   },
+   "main": "bin/pnpm.mjs",
+   "type": "module",
+   "unpkg": "dist/pnpm.mjs",
+   "engines": {
+    "node": ">=22.13"
+   },
+   "exports": {
+    ".": "./package.json"
+   },
+   "funding": "https://opencollective.com/pnpm",
+   "scripts": {
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "test": "pn compile && pn .test",
+    ".test": "cross-env NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules --disable-warning=ExperimentalWarning --disable-warning=DEP0169\" jest",
+    "start": "tsgo --watch",
+    "bundle": "pnx node@runtime:24.6.0 bundle.ts",
+    "compile": "tsgo --build && pn lint --fix && rimraf dist bin/nodes && pn bundle && shx cp -r node-gyp-bin dist/node-gyp-bin && shx cp -r node_modules/@pnpm/tabtab/lib/templates dist/templates && shx cp -r node_modules/ps-list/vendor dist/vendor && shx cp pnpmrc dist/pnpmrc",
+    "pretest:e2e": "rimraf node_modules/.bin/pnpm"
+   },
+   "directories": {
+    "test": "test"
+   },
+   "_nodeVersion": "26.0.0",
+   "preferGlobal": true,
+   "publishConfig": {
+    "tag": "next-11",
+    "executableFiles": [
+     "./dist/node-gyp-bin/node-gyp",
+     "./dist/node-gyp-bin/node-gyp.cmd",
+     "./dist/node_modules/node-gyp/bin/node-gyp.js"
+    ]
+   },
+   "_hasShrinkwrap": false
+  },
+  "11.8.0": {
+   "name": "pnpm",
+   "version": "11.8.0",
+   "license": "MIT",
+   "_id": "pnpm@11.8.0",
+   "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+   },
+   "bin": {
+    "pn": "bin/pnpm.mjs",
+    "pnx": "bin/pnpx.mjs",
+    "pnpm": "bin/pnpm.mjs",
+    "pnpx": "bin/pnpx.mjs"
+   },
+   "dist": {
+    "shasum": "d1cb3c2c0c77584011fece2f27384b37788fb7ca",
+    "tarball": "http://localhost:3000/pnpm/-/pnpm-11.8.0.tgz",
+    "fileCount": 449,
+    "integrity": "sha512-wfXnxMskHI8XS3Q4UdgvQrgCMkr8iw8Ra5atsVqgZmSUjd42lgo7oQebpbSyndAUATW5S1tfUmNZIknWjlVfJg==",
+    "signatures": [
+     {
+      "sig": "MEUCICJTkdrgSTecRTLtKWpQndImSERv9ZZyCnfi0Du6y6AtAiEAhM3BzFhogZe/pf1Gnc4Gcksngl+bjp2jdsZoD8CBPVk=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/pnpm@11.8.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 18692386
+   },
+   "jest": {
+    "preset": "@pnpm/jest-config/with-registry",
+    "collectCoverage": false
+   },
+   "main": "bin/pnpm.mjs",
+   "type": "module",
+   "unpkg": "dist/pnpm.mjs",
+   "engines": {
+    "node": ">=22.13"
+   },
+   "exports": {
+    ".": "./package.json"
+   },
+   "funding": "https://opencollective.com/pnpm",
+   "scripts": {
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "test": "pn compile && pn .test",
+    ".test": "cross-env NODE_OPTIONS=\"$NODE_OPTIONS --experimental-vm-modules --disable-warning=ExperimentalWarning --disable-warning=DEP0169\" jest",
+    "start": "tsgo --watch",
+    "bundle": "pnx node@runtime:24.6.0 bundle.ts",
+    "compile": "tsgo --build && pn lint --fix && rimraf dist bin/nodes && pn bundle && shx cp -r node-gyp-bin dist/node-gyp-bin && shx cp -r node_modules/@pnpm/tabtab/lib/templates dist/templates && shx cp -r node_modules/ps-list/vendor dist/vendor && shx cp pnpmrc dist/pnpmrc",
+    "pretest:e2e": "rimraf node_modules/.bin/pnpm"
+   },
+   "directories": {
+    "test": "test"
+   },
+   "_nodeVersion": "26.0.0",
+   "preferGlobal": true,
+   "publishConfig": {
+    "tag": "next-11",
+    "executableFiles": [
+     "./dist/node-gyp-bin/node-gyp",
+     "./dist/node-gyp-bin/node-gyp.cmd",
+     "./dist/node_modules/node-gyp/bin/node-gyp.js"
+    ]
+   },
+   "_hasShrinkwrap": false
+  },
+  "10.34.4": {
+   "name": "pnpm",
+   "version": "10.34.4",
+   "license": "MIT",
+   "funding": "https://opencollective.com/pnpm",
+   "bugs": {
+    "url": "https://github.com/pnpm/pnpm/issues"
+   },
+   "type": "commonjs",
+   "main": "bin/pnpm.cjs",
+   "exports": {
+    ".": "./package.json"
+   },
+   "bin": {
+    "pnpm": "bin/pnpm.cjs",
+    "pnpx": "bin/pnpx.cjs"
+   },
+   "directories": {
+    "test": "test"
+   },
+   "unpkg": "dist/pnpm.cjs",
+   "engines": {
+    "node": ">=18.12"
+   },
+   "jest": {
+    "preset": "@pnpm/jest-config/with-registry"
+   },
+   "preferGlobal": true,
+   "publishConfig": {
+    "tag": "next-10",
+    "executableFiles": [
+     "./dist/node-gyp-bin/node-gyp",
+     "./dist/node-gyp-bin/node-gyp.cmd",
+     "./dist/node_modules/node-gyp/bin/node-gyp.js"
+    ]
+   },
+   "scripts": {
+    "bundle": "ts-node bundle.ts",
+    "start": "tsc --watch",
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "pretest:e2e": "rimraf node_modules/.bin/pnpm",
+    "_test": "jest",
+    "test": "pnpm run compile && pnpm run _test",
+    "_compile": "tsc --build",
+    "compile": "tsc --build && pnpm run lint --fix && rimraf dist bin/nodes && pnpm run bundle && shx cp -r node-gyp-bin dist/node-gyp-bin && shx cp -r node_modules/@pnpm/tabtab/lib/templates dist/templates && shx cp -r node_modules/ps-list/vendor dist/vendor && shx cp pnpmrc dist/pnpmrc"
+   },
+   "_id": "pnpm@10.34.4",
+   "readmeFilename": "README.md",
+   "_integrity": "sha512-h2i+VSAK4/Iia2Un/Momh+FLxOXxLXchoPJdo99HkVF3BYZI20F3uvNIEg+guidS2NjZP2vq8f5krhjajelhrw==",
+   "_resolved": "/tmp/cf3462f243d46a1bb3b40942431aada5/pnpm-10.34.4.tgz",
+   "_from": "file:pnpm-10.34.4.tgz",
+   "_nodeVersion": "20.20.2",
+   "_npmVersion": "10.8.2",
+   "dist": {
+    "integrity": "sha512-h2i+VSAK4/Iia2Un/Momh+FLxOXxLXchoPJdo99HkVF3BYZI20F3uvNIEg+guidS2NjZP2vq8f5krhjajelhrw==",
+    "shasum": "4a602c6225af008714592e19c1372d885e98256a",
+    "tarball": "http://localhost:3000/pnpm/-/pnpm-10.34.4.tgz",
+    "fileCount": 1068,
+    "unpackedSize": 19891638,
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQD1uDH6FMSuQkAPeHYpOTeRzuru//CCg3W8+oIXR4YJrQIhAMnGQ1YYbGwb/A+ecoBHrSvNzGRVlDY8nOtKWJrPJ8iO"
+     }
+    ]
+   },
+   "_hasShrinkwrap": false
   }
  },
  "time": {
   "created": "2013-03-08T23:25:56.611Z",
-  "modified": "2026-06-05T06:54:31.856Z",
+  "modified": "2026-06-18T22:30:33.465Z",
   "0.0.1": "2013-03-08T23:25:57.106Z",
   "0.16.0": "2016-02-01T19:22:42.489Z",
   "0.17.0": "2016-02-02T23:29:00.749Z",
@@ -144672,7 +145158,14 @@
   "10.34.1": "2026-05-27T23:03:31.140Z",
   "11.5.0": "2026-05-29T15:35:17.520Z",
   "11.5.1": "2026-06-02T08:39:19.368Z",
-  "11.5.2": "2026-06-05T06:41:56.301Z"
+  "11.5.2": "2026-06-05T06:41:56.301Z",
+  "11.5.3": "2026-06-10T11:53:15.266Z",
+  "10.34.2": "2026-06-10T13:59:52.470Z",
+  "10.34.3": "2026-06-11T17:03:08.178Z",
+  "11.6.0": "2026-06-11T23:06:54.463Z",
+  "11.7.0": "2026-06-15T06:54:02.299Z",
+  "11.8.0": "2026-06-18T10:30:09.204Z",
+  "10.34.4": "2026-06-18T22:30:33.318Z"
  },
  "license": "MIT",
  "users": {
