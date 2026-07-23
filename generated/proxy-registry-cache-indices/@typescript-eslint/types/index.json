@@ -1,6 +1,6 @@
 {
   "_id": "@typescript-eslint/types",
-  "_rev": "3991-d10930e12e24183f4f457a6a5c6889fe",
+  "_rev": "4059-2f8549432becf7544fb15f3a3d51f4a6",
   "name": "@typescript-eslint/types",
   "dist-tags": {
     "rc-v4": "4.0.0-alpha.16",
@@ -8,15 +8,15 @@
     "rc-v": "6.0.0-alpha.58",
     "rc-v6": "7.0.0-alpha.0",
     "rc-v8": "8.0.0-alpha.62",
-    "canary": "8.62.1-alpha.0",
-    "latest": "8.62.0"
+    "latest": "8.65.0",
+    "canary": "8.65.1-alpha.7"
   },
   "versions": {
-    "8.51.0": {
+    "8.61.1": {
       "name": "@typescript-eslint/types",
-      "version": "8.51.0",
+      "version": "8.61.1",
       "license": "MIT",
-      "_id": "@typescript-eslint/types@8.51.0",
+      "_id": "@typescript-eslint/types@8.61.1",
       "bugs": {
         "url": "https://github.com/typescript-eslint/typescript-eslint/issues"
       },
@@ -31,6 +31,9 @@
             ]
           },
           "build": {
+            "inputs": [
+              "{projectRoot}/src/generated/**/*"
+            ],
             "dependsOn": [
               "copy-ast-spec"
             ]
@@ -47,7 +50,8 @@
             "dependsOn": [
               "ast-spec:build"
             ]
-          }
+          },
+          "typecheck:tsgo": {}
         },
         "includedScripts": [
           "clean"
@@ -57,25 +61,26 @@
         ]
       },
       "dist": {
-        "shasum": "6996e59d49e92fb893531bdc249f0d92a7bebdbb",
-        "tarball": "http://localhost:3000/@typescript-eslint/types/-/types-8.51.0.tgz",
+        "shasum": "0c51f518e4e6848371a1c988e859d59eb7522d5a",
+        "tarball": "http://localhost:3000/@typescript-eslint/types/-/types-8.61.1.tgz",
         "fileCount": 13,
-        "integrity": "sha512-TizAvWYFM6sSscmEakjY3sPqGwxZRSywSsPEiuZF6d5GmGD9Gvlsv0f6N8FvAAA0CD06l3rIcWNbsN1e5F/9Ag==",
+        "integrity": "sha512-G+CRlPqLv7Bz1IZVs03x5K59F1veqL0EJUROAdGhKsEq8qOiRiZbI+HUojPq5l0fEGOKModD9br6lObhB8zkoA==",
         "signatures": [
           {
-            "sig": "MEYCIQCgInXH485ljGxR/JZyzfGSAkTQiQtnyIX2fiUr7vPgyAIhAMB2Qm0rsJAUgFsmbVRmWd1mYZYTFVHferNfc8UCbpTy",
+            "sig": "MEUCIAOJVl6DhM2fCnK2+ya9hD9nm4lPcqIfoAolSrzUschZAiEA25R9C5pp6lgex0j8RTrHP8SmZov9XEL+lziyMmulRTQ=",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
         "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/@typescript-eslint%2ftypes@8.51.0",
+          "url": "http://localhost:3000/-/npm/v1/attestations/@typescript-eslint%2ftypes@8.61.1",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "unpackedSize": 111569
+        "unpackedSize": 113306
       },
       "type": "commonjs",
+      "_from": "file:typescript-eslint-types-8.61.1.tgz",
       "types": "./dist/index.d.ts",
       "engines": {
         "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
@@ -91,35 +96,38 @@
         "url": "https://opencollective.com/typescript-eslint",
         "type": "opencollective"
       },
-      "gitHead": "e4c57f5996a9a3aed8a8c2b02712a9ce37db4928",
       "scripts": {
-        "lint": "yarn run -BT nx lint",
-        "test": "yarn run -BT nx test",
-        "build": "yarn run -BT nx build",
+        "lint": "pnpm -w exec nx lint",
+        "test": "pnpm -w exec nx test",
+        "build": "pnpm exec nx build",
         "clean": "rimraf dist/ src/generated/ coverage/",
-        "format": "yarn run -T format",
-        "typecheck": "yarn run -BT nx typecheck",
-        "generate-lib": "yarn run -BT nx generate-lib repo",
-        "copy-ast-spec": "yarn run -BT nx copy-ast-spec"
+        "format": "pnpm -w run format",
+        "typecheck": "pnpm -w exec nx typecheck",
+        "generate-lib": "pnpm -w exec nx run scope-manager:generate-lib",
+        "copy-ast-spec": "tsx ./tools/copy-ast-spec.mts",
+        "typecheck:tsgo": "pnpm -w exec nx typecheck:tsgo"
       },
+      "_resolved": "/tmp/6795f86eef718de40577876a8eb398ad/typescript-eslint-types-8.61.1.tgz",
+      "_integrity": "sha512-G+CRlPqLv7Bz1IZVs03x5K59F1veqL0EJUROAdGhKsEq8qOiRiZbI+HUojPq5l0fEGOKModD9br6lObhB8zkoA==",
       "_npmVersion": "11.5.2",
       "directories": {},
-      "_nodeVersion": "20.19.6",
+      "_nodeVersion": "20.20.2",
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "tsx": "*",
-        "eslint": "*",
-        "rimraf": "*",
-        "vitest": "^3.1.3",
-        "typescript": "*",
-        "@vitest/coverage-v8": "^3.1.3"
+        "tsx": "^4.7.2",
+        "eslint": "^10.0.0",
+        "rimraf": "^5.0.10",
+        "vitest": "^4.0.18",
+        "typescript": ">=4.8.4 <6.1.0",
+        "@vitest/coverage-v8": "^4.0.18",
+        "@typescript/native-preview": "7.0.0-dev.20260518.1"
       }
     }
   },
   "time": {
     "created": "2020-06-29T18:42:26.860Z",
-    "modified": "2026-06-22T18:30:12.998Z",
-    "8.51.0": "2025-12-29T17:04:59.354Z"
+    "modified": "2026-07-23T10:09:11.026Z",
+    "8.61.1": "2026-06-15T18:30:54.891Z"
   },
   "license": "MIT"
 }

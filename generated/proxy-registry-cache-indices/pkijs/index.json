@@ -1,0 +1,96 @@
+{
+  "_id": "pkijs",
+  "_rev": "167-5251b222ec8892c113e9c3e9ff6696e6",
+  "name": "pkijs",
+  "dist-tags": {
+    "beta": "3.0.1-2",
+    "stable-v2": "2.4.0",
+    "latest": "3.4.0"
+  },
+  "versions": {
+    "3.4.0": {
+      "devDependencies": {
+        "@peculiar/webcrypto": "^1.5.0",
+        "@rollup/plugin-alias": "^5.1.1",
+        "@rollup/plugin-commonjs": "^28.0.7",
+        "@rollup/plugin-node-resolve": "^16.0.3",
+        "@types/mocha": "^10.0.10",
+        "@types/node": "^20.19.21",
+        "@typescript-eslint/eslint-plugin": "^8.46.1",
+        "@typescript-eslint/parser": "^8.46.1",
+        "assert": "^2.1.0",
+        "emailjs-mime-builder": "^2.0.5",
+        "emailjs-mime-parser": "^2.0.7",
+        "eslint": "^9.37.0",
+        "mocha": "^11.7.4",
+        "nyc": "^17.1.0",
+        "rollup": "^4.52.4",
+        "rollup-plugin-dts": "^6.2.3",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+      },
+      "dependencies": {
+        "@noble/hashes": "1.4.0",
+        "asn1js": "^3.0.6",
+        "bytestreamjs": "^2.0.1",
+        "pvtsutils": "^1.3.6",
+        "pvutils": "^1.1.3",
+        "tslib": "^2.8.1"
+      },
+      "scripts": {
+        "build": "rollup -c",
+        "build:examples": "rollup -c examples/rollup.config.js",
+        "lint": "eslint . --ext .ts",
+        "lint:fix": "eslint --fix . --ext .ts",
+        "coverage": "nyc npm test",
+        "test": "mocha",
+        "prepublishOnly": "npm run build"
+      },
+      "module": "build/index.es.js",
+      "main": "./build/index.js",
+      "types": "./build/index.d.ts",
+      "name": "pkijs",
+      "version": "3.4.0",
+      "license": "BSD-3-Clause",
+      "engines": {
+        "node": ">=16.0.0"
+      },
+      "devEngines": {
+        "packageManager": {
+          "name": "npm",
+          "version": ">=10",
+          "onFail": "error"
+        }
+      },
+      "_id": "pkijs@3.4.0",
+      "gitHead": "1e134fcc2f5bf7a8d8b5393957bf711cdf39eac8",
+      "bugs": {
+        "url": "https://github.com/PeculiarVentures/PKI.js/issues"
+      },
+      "_nodeVersion": "22.22.1",
+      "_npmVersion": "10.9.4",
+      "dist": {
+        "integrity": "sha512-emEcLuomt2j03vxD54giVB4SxTjnsqkU692xZOZXHDVoYyypEm+b3jpiTcc+Cf+myooc+/Ly0z01jqeNHVgJGw==",
+        "shasum": "d9164def30ff6d97be2d88966d5e36192499ca9c",
+        "tarball": "http://localhost:3000/pkijs/-/pkijs-3.4.0.tgz",
+        "fileCount": 6,
+        "unpackedSize": 1940504,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQDi+LGnjZDezDaieyEBGp3uDgo+PMAZercB9uvhj4ULZgIhAIlLxkHu0RZ18l24A2KpVaci+k3NY+VwlA3Znn+5REuo"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2014-07-16T11:29:26.942Z",
+    "modified": "2026-03-18T09:13:24.137Z",
+    "3.4.0": "2026-03-18T09:13:24.018Z"
+  },
+  "license": "BSD-3-Clause"
+}

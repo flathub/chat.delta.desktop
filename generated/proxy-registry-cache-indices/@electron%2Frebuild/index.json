@@ -1,0 +1,3043 @@
+{
+ "_id": "@electron/rebuild",
+ "_rev": "27-0bf2d15fb0f9074284260e65acd07066",
+ "name": "@electron/rebuild",
+ "dist-tags": {
+  "latest": "4.2.0"
+ },
+ "versions": {
+  "0.0.0": {
+   "name": "@electron/rebuild",
+   "version": "0.0.0",
+   "_id": "@electron/rebuild@0.0.0",
+   "dist": {
+    "shasum": "2948795d0158bbd2a373a8f163cf8c943f267899",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-0.0.0.tgz",
+    "fileCount": 1,
+    "integrity": "sha512-pfSSynY+Al3XJ0O42/mZd9puuZqp7s7HJJzt39vpMuK70Lo/HamAvxRmfsDdR5+ZJbZpAhkPRECpOvnF0UkQBQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIHeX5lgpFjvCZS2tIS1KSs5K1ZkrTULCw4NIc4JlEIMPAiBiUWiWL9WUV3QktT9K0lfxNGyuPOWCnjIRLfKPMxFjxg==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 56,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjWwyvACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmqdwg/9GdX9Pdh3O2FE3MAWkyueP355nZs0Wm0sCv/Rip47XZe92F5w\r\nCRO7wZ+p5vw6RQGgv+htrpANgtihTqPYsBqEzbTmZxHSaBE7R0blwnOouUGs\r\nKL3XpaLGujiQrPXipqATURjsTVJ91cpUcdS61Z6Ob55MV0h6TY6tdzez75CX\r\nGAciwwu5fyYVK0jtcusfqZD5E5ythuYsQEnRjoSEHp4+sR0Oq4oIa+pdzAic\r\nPdsaj3na2gLCQXZeFRbB0e6nEZUQ1KjIawMmS5cBE+lPrOELhaWv6VWK9AFz\r\nIwsDOzPUL/ZbdhZtZJdwFs0ERFxFtMMEQZwRDd1fr3FvClZMIGtIUIwBGNUR\r\ndA9UDj5MG7eHR3CbjJTDV6s/FIj21GiHSEmYAEa1UhDCkWnQHDDsOCcSHb/V\r\nPUYC21zBXbYWxHV7W4q0HRNfW2T6VLFu5XEsUTwig8k8TU1pAbG6YBfIFlzn\r\nAqxD8jOEtkbXJhUND6VCoifsAl7XpftGh6Nuodz+vld75Kj/LdZBhwzfS+5Z\r\n+ho2SuGKhvFfFqDtF9lLSKQ6FHPaU7wWpw1ivnyOgcAEbb3bf30VG0rd6YdJ\r\ngn6QGZfqA96wF46k/HvGJeNNS6SATOHmpIjJK7Gz6mJHFUtrkfzSFyF3/rPs\r\npLnXySouVJ5e/AxeBmbPrecDQ2Wj72KV3lQ=\r\n=0F9k\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "_npmVersion": "6.14.16",
+   "directories": {},
+   "_nodeVersion": "14.19.1",
+   "_hasShrinkwrap": false
+  },
+  "3.2.10": {
+   "name": "@electron/rebuild",
+   "version": "3.2.10",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.2.10",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/src/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "adc9443179709d4e4b93a68fac6a08b9a3b9e5e6",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.2.10.tgz",
+    "fileCount": 101,
+    "integrity": "sha512-SUBM6Mwi3yZaDFQjZzfGKpYTtOp9m60glounwX6tfGeVc/ZOl4jbquktUcyy7gYSLDWFLtKkftkY2xgMJZLQgg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQC6SX2K7N9QOvrBQqGXegKcYKom53JvNwnv/AtiD+LowwIgBVFzDNZcsQhFMZob07RYCjn+VzLMygouK8ZOf7eHK7w=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 210424,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjWzBxACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmoJQA//UZXZM/mnjjb/4b1ZAjWMwyGsMkaD3Fiu25/rSPZdsfYJ2SLt\r\nFp3iglvw6/JZ5gHyoBhM3SVPz12VGYQfpBCf4ZJlMPaxOk4NJ7e997fRPZu+\r\nySzeo61K48wSjTQAs2rUldAnu6DxbsL135+cemZOobIa+8v9iGdvGhI3c64E\r\ngqx5RnZ1zKdS+RgraadMFBKCAFQ57MRuw6dedf85m8a05OmdH+KPg3bCLMpu\r\n3I6j84VSHFniRlEyFUVRGQNRH2pQ6FjvYGq27TcvMwxvCw5/xCH9IRZboVtN\r\ng77BeJ+j1mq5F1tuwjoHqBJwS1f9AhF0pySNq17rEf5YbZTMTdIky4ZHKXu8\r\n9w+4FoTOnOlT5NTYDtrB1suNo388kIQc71MiUPXpavUp7Lp9GWD/36aSV4/I\r\nbuC6UDIedGYdvntLJNgwBXFkaV6CRsMGtKH2kfjvGulUDir+n+UxwHnW/Kjq\r\nWHroEPdFk85inChbC6GZlxtWUQwcvf53w5sPGbYWj7uo2/uaccF6shcZNR27\r\nKZCMmFSUkt0KrdgBrhHwgm91Q/rkORB8pS1NNeBEw0YCZdZW+6Q3BS02TBa8\r\ncaYO3L4cQXp0xy7Dj9VHl4FYrRbMCrkWo1s/by57hFqkLb7Kd2oHnAhUMbgv\r\nKIMC/tim3RatgFr9AtRAa7DfZlrbZVA+chk=\r\n=jBHt\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "lib/src/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "a328ed2251fe23d8beec1b2df5f1726dffc65759",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "npm run mocha -- test/*.ts",
+    "test": "npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "nyc npm run spec"
+   },
+   "typings": "lib/src/main.d.ts",
+   "_npmVersion": "6.14.17",
+   "directories": {},
+   "_nodeVersion": "14.17.6",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.0.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "lzma-native": "^8.0.5",
+    "node-api-version": "^0.1.4",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "no-unused-vars": "off",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^12.0.2",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "@types/lzma-native": "^4.0.0",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@continuous-auth/semantic-release-npm": "^2.0.0"
+   }
+  },
+  "3.2.11": {
+   "name": "@electron/rebuild",
+   "version": "3.2.11",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.2.11",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/src/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "be4098ceb0f976e36566a2b511e723f761066844",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.2.11.tgz",
+    "fileCount": 69,
+    "integrity": "sha512-pkSf7vKLeBWktxavCz7TvolaD/u0ZP8pzJCM83MjwEnk4KMBCso0d4pl8aAl2vAZ9Pxp6wiwT8XLgmuuBXeVlg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQD7awKebIx7PtM5tXyzlv6AUCXFSZLI5EXRMWVH2hSQHQIgZC0QScIb4y7C6T1TQ/5+HkSl8axNNnjsxb5EVxkVPyM=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 143169,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkNz9cACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmq0mQ/+KDCJeAAHIM7k5vGpCYfCSVQTmP91GV5hq4p0Eu0C4SKFK8DP\r\nrtwJcqGgZzCv5aNTtXKHcEOjOlf786c5gVdy9gOnnLaz/8HYPObn2iJSdXA+\r\noI3WuSX3D02cnoBSsGRzIZ4q+Sr92DBpbZvIVTXv2KtS8gsACHCJgoeBO2m/\r\nb6XqZ5C2obIjO+MszRLVPH+mACRW/sg6fXi63uZ08nkI3ZdxA13uFwLRGj+r\r\n8ErxLNTJy0heZuQPPVkqz2vK9xRLq0iCLpLM4beRwiJd9tRGhyHjt+A5/8Hm\r\nM61pYRzMq9SLA2QnsoLFU/jHD+i+FQ+talHSpaHwgm4o1EMh3RbOOjQnFyi4\r\nrGQYTpkxUp3iLEB60nsSHzd4eTKxvwTw7JNGw3enrNhQcD34vRhIHLMnNugZ\r\nqna4wYDvwsxxUPTIvycm1UNQyyvYN13IWCy1rV9iGng9OkYXPj2b7XHacJAP\r\nPZzmW2oJJ7VoTPtSNqlTSsKTPltzb7xkM1zbiaTK1isbXH/JjWDK3GHOfdmP\r\ntdXX7FTD5CcW/eh9PsFKzyotwkLz36aPo/v3gDskSM32MWTlxfI6ERLi9s4/\r\nocvsDK7fjFTie1kl4DuP9V2iGPTKfiLuCCPipOaw5EnEKsdEBL7RtibY1AwA\r\nN6qkfoUiT9huaY4xfkTu1aRklNTaC+lWD24=\r\n=/XTG\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "8e4c73bb5120c34bd495bd2a7375609500259a99",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "nyc npm run spec"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "8.19.3",
+   "directories": {},
+   "_nodeVersion": "14.17.6",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.0.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.1.4",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "no-unused-vars": "off",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@continuous-auth/semantic-release-npm": "^3.0.0"
+   }
+  },
+  "3.2.12": {
+   "name": "@electron/rebuild",
+   "version": "3.2.12",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.2.12",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "2c26c260686a6232963e8b538af3955735ee5275",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.2.12.tgz",
+    "fileCount": 69,
+    "integrity": "sha512-2P9TpygstHQ13LtCAK2N2XB9D1lQq5sZ73dv3YXwKoJ78/XG8Gjbm+44vWtjNiEtj98a3dVZc8Pw3YVS8Iu0KA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQD9W6oyZC9hDk0o/LXgQ2C0Y0vMcs3MGjXZaum4GcWpvgIgNo4kBSLtoiuLUQUz8Xbi+rAxrmsvRZtKPx4nMhDj+IY=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 143165,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkN7sKACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmqLNg/7BX5Pe1t2kshnKKOSVs75aoGP+25DFSk7qpEfkWia068RV+Jy\r\n/v167Thtvah0zTc1tSgmpRR511uwx4U2G8z0vo693lld/eOV7OlfAFc2XyDB\r\na+3AbgTDHGVhNZ+zlWBoxp18B5LPnLCF1+TgCmBEoCG2n5p7KQ6+h+j0QGX0\r\n67Y/EMuxuB8riz6E7t7p0Cg2ED12/vt5E25UqLYpddjApuIDwaAhk3cGUG4s\r\ndz+rkaXLGKAPejwJi0ZVY9ihhFDCO6C49dBSRC1sQORbyZjhglzEyO1ohQb5\r\nmYPD3G3ptiJ/VB/mKukUTgZDQKMHqyHbMnEgpTVTPEkxQ/mNnxKOYvqHVuXJ\r\nB5mDVqQ8Qr2Fv5rlSXeJJFgWAho79Z7ewOMCmwCBAS9WG0RdE9cmGG07coDE\r\nhQH9+tO5NvnxQ4ueGvcH3UR+FWduTiqFQuXB39e3LI5q6qwMj474OsGiLlzA\r\nfpbYBi1DcLP1nCeOvy/glXBXUT/IIZ/Nup+2ZcbnPV4O24666Hc+IQHOhEO/\r\nALcM38aEwkjwvg+0RgdgJQ6oucnYGb4ugiwRx/Fra2+UMhXc1j1p6EJ0USSm\r\nyy0BscAaJkw3qNvZPInuBGeX/r8NtpRqhdgTvYogC44HC76Du0UteHbz8Atp\r\nBcwckOAzzrEggeVvgXpRbFC6wVd2rpDVZNA=\r\n=vJOS\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "02d7c66477bf8382651a5bfa52b0028d4343121c",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "nyc npm run spec"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "8.19.3",
+   "directories": {},
+   "_nodeVersion": "14.17.6",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.0.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.1.4",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "no-unused-vars": "off",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@continuous-auth/semantic-release-npm": "^3.0.0"
+   }
+  },
+  "3.2.13": {
+   "name": "@electron/rebuild",
+   "version": "3.2.13",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.2.13",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "98fbb98981b1a86162546a2ab91b2355569cca4c",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.2.13.tgz",
+    "fileCount": 69,
+    "integrity": "sha512-DH9Ol4JCnHDYVOD0fKWq+Qqbn/0WU1O6QR0mIpMXEVU4YFM4PlaqNC9K36mGShNBxxGFotZCMDrB1wl/iHM12g==",
+    "signatures": [
+     {
+      "sig": "MEUCIDUOqv/bOLdzy3cVWPfqK5zwASD8szzTyFlXTdBzzbmiAiEAl40zwnOB8MnB8pvbc0PM20KhQkX7AHpK8Vj7WpRl2u0=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 143877,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkRtMnACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmptNA//bQdKW00rYvFx6x/o60AxP1Fg4vqCbGHM5pf6wCXeGLJwg+te\r\n1RVq5k8d4VP9CcChZWDy4ewB9tdaBwxTIFLk1o+s9z7FnM6WtpDjLBWm11z1\r\nfA0+Gz9bKly+Di7y+l7TI1HgG/sXsRng5RVSXcmHBIBa2AgwBCnwcwDVBqVc\r\nVq5VWmlMqwwM/2DtlMxh5+yZ+FqaeFi9sU3eRVFG84ymVyX8hbqH6RgqSMl2\r\nA0OWHjlPJtM5ekd2kt7qx6hIMOlwnUiqTOB1Da0u8/qS0/LwIDrHqQgo7zc3\r\nUhyBnTKRYwuVpcfI5Qce3R3J9IrfDTmfo5iVAifng672iucSI5COHr6GWwBI\r\nXo5JVxHUaVpgW0xcJctInCcl/NRTuzJ6VuRx3kfiOxqRjYub5kEVh8dSg3Os\r\nqTVjUwwRSYJgTED9IbgbZJXeWLcaOqVURCaQdbgaH6d/FgHB+P14PxmtUJZH\r\nwvltehGFsIVXxIeE6SIYJ8PM51I/QPnX2iQ+jPqL7ZGJU5LlO07GWeuc9AWI\r\nHDEYeIfOeB0sEklZCYBAk1JFEIsvuN//zC94KdwiqyufR+v1ZH+BeX/9hxhH\r\n+UhND/noIoYXW07JHutPUxUYFst+n/WF2+AuFe78lHSOY7+ez1aK/3V1lW71\r\nkUgWrgF2C4FBUZJcLCMiu2DVOdX8GOpkKew=\r\n=Lj/o\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "82da9d9e2a7d3d0a7c5ebec4f5010361f77be861",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "nyc npm run spec"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "8.19.3",
+   "directories": {},
+   "_nodeVersion": "14.17.6",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.0.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.1.4",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "no-unused-vars": "off",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@continuous-auth/semantic-release-npm": "^3.0.0"
+   }
+  },
+  "3.3.0": {
+   "name": "@electron/rebuild",
+   "version": "3.3.0",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.3.0",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "6ba0ae1cb545b2e314901d2ac175ca9c03a2e3da",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.3.0.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-S1vgpzIOS1wCJmsYjdLz97MTUV6UTLcMk/HE3w90HYtVxvW+PQdwxLbgsrECX2bysqcnmM5a0K6mXj/gwVgYtQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCwGVHulMvUQ+V6ts9YXSU1EpMbO5vylwiqTD2nXvHc1AIhALlT4/++Z0dJj3FuUpIha7EUS9WoCWIM7En9U9nArqkg",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 150211
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "e71316b6a508e1bd349f61df8f3631d40f91e123",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "8.19.3",
+   "directories": {},
+   "_nodeVersion": "18.17.1",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.1.4",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "no-unused-vars": "off",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@continuous-auth/semantic-release-npm": "^3.0.0"
+   }
+  },
+  "3.3.1": {
+   "name": "@electron/rebuild",
+   "version": "3.3.1",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.3.1",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "7f1455e3f992b3c829873b0d3eb34859fdf8f0a2",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.3.1.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-bQDWw9rkEGYW+gzPNFCD+ugJ8LIFSu0pORJl5fmrT+H8qETOIPAe99Klzg0wGaZRu9JN+5qLzKG+PehRGOlzmQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIFkShRKM2jN60JdgRIe4xoGJrpnvdFOGSQSwab6+GkzmAiAtnV2oUTUlY1mgkoJ9043xVh0bkN7gNg5lkBRzAVfWxA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 150461
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "25bcc0d966a5473909e7d334f9afd4c6b35896ff",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.1.0",
+   "directories": {},
+   "_nodeVersion": "20.9.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.1.4",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "no-unused-vars": "off",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "3.4.0": {
+   "name": "@electron/rebuild",
+   "version": "3.4.0",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.4.0",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "b0152baa14f795f73bc5e154c261205a79aceed0",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.4.0.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-fi+O1zgxSmZR1X8oSOHRgCWALSS56dGHJ2AXLx9Ua3wg/NmBaMI/jpu7moU6T8lk/XRLnsC9Ds/Jo4I+UCkHAA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDG+CFt/W6nokDzxsAZErSbW5RKCT2E+K4Y5M512O45FQIgYQBnB4DUhcJy+Tmb9cMuM8WCoZqyIfPOcFRxliVONEw=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 151808
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "0e934adbb59a33d1d086be6f69820422577a5fac",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.1.4",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "no-unused-vars": "off",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "3.4.1": {
+   "name": "@electron/rebuild",
+   "version": "3.4.1",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.4.1",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "a547af63068f1e62ff18631beb7704190ceab895",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.4.1.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-iMKb6KJgKcdURbejs0j2GLEmrY8uY4rg1ESThXx9sFTgdWb8UOfJuTqW6LIEtcoY8FrbFqDmJrkWc4tBpdStXw==",
+    "signatures": [
+     {
+      "sig": "MEUCIDxKhm6/54r8l1RX/hR2qaRMZVS0GLMXv+X/Vhs3I4sTAiEA1L1/rgkDZ+HzdmoE58xQ4D8AzGT+Iynq25U++N7MR9U=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 155279
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "5e6f72794c8d079a580a2d6390c396d2b7faca40",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.1.4",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "no-unused-vars": "off",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "3.5.0": {
+   "name": "@electron/rebuild",
+   "version": "3.5.0",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.5.0",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "4483a2577c516d9c7698edf51cf25496bcfe42d8",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.5.0.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-pWRza7F+JxzTNATkEgI5iW7lAQTVBtU5r6ZjUSbrD04kbuQWUIHBcuvqosaHvKLmTpdRlsZQkPxTYciIoOWf3A==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCUP37S3QHVjfjGpP6icXfyTvEmLHrwA91hmTjSnv5sMgIgGzHlI6Qwu2kXA6ZuiIJ4qfrRqizhNPL2jFGzyyA3AoA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 155279
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "c483ddeb748a7b6057aa8d9dad7197be88c9541e",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.2.0",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "no-unused-vars": "off",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "3.6.0": {
+   "name": "@electron/rebuild",
+   "version": "3.6.0",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.6.0",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "60211375a5f8541a71eb07dd2f97354ad0b2b96f",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.6.0.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-zF4x3QupRU3uNGaP5X1wjpmcjfw1H87kyqZ00Tc3HvriV+4gmOGuvQjGNkrJuXdsApssdNyVwLsy+TaeTGGcVw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCiK0ki0xeSIs3Aw4ZBksS2eQK3fPhwiT3vxnQ229LP8gIgbp75bfzJk8hbHAb6nJUTOs7HGtWCZFCgPMFRKlcyGw8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 155343
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "38dcca23793c75fe83b7fe4284acf0fa62fddcdf",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.2.4",
+   "directories": {},
+   "_nodeVersion": "20.11.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.2.0",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "no-unused-vars": "off",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "3.6.1": {
+   "name": "@electron/rebuild",
+   "version": "3.6.1",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.6.1",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "59e8e36c3f6e6b94a699425dfb61f0394c3dd4df",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.6.1.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-f6596ZHpEq/YskUd8emYvOUne89ij8mQgjYFA5ru25QwbrRO+t1SImofdDv7kKOuWCmVOuU5tvfkbgGxIl3E/w==",
+    "signatures": [
+     {
+      "sig": "MEQCIAkbtFunrfx1acnbyQM0b4f8NsDrUx7zR49A8dYF99JsAiAlxz3MGwhfEErpKK/LzI6JyNLgd/R5QvQguJp5MTpYPA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 160242
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "9ebf9bd51c8e602f19fbd39ed01b21e9e60096b5",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.2.0",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "semi": "off",
+     "no-unused-vars": "off",
+     "@typescript-eslint/semi": "error",
+     "no-unexpected-multiline": "error",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "3.6.2": {
+   "name": "@electron/rebuild",
+   "version": "3.6.2",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.6.2",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "234f76d08566d558a80a615a78d8735f39bf5e9f",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.6.2.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-fTSoWdbrPTmQOwvct4VnJH45aJg79WRabuNqt7cAWIno5kTXv1QD6qVmR2e8wmHi/xryaiVINl1gcEhKGjREVw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDn2BuPPOvyKwnfImrVRRm0xQ2VSYElYRpiwJ9qvDbJIgIhANYo0L3lMCbXz3c2hcs7EV+aOsqqzFNMpUq4lSnx/IMI",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 161843
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "683129a010bdd47b1113d7677929d1ac5b4b6b4b",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.17.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "node-gyp": "^9.0.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.2.0",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "semi": "off",
+     "no-unused-vars": "off",
+     "@typescript-eslint/semi": "error",
+     "no-unexpected-multiline": "error",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "3.7.0": {
+   "name": "@electron/rebuild",
+   "version": "3.7.0",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.7.0",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "82e20c467ddedbb295d7f641592c52e68c141e9f",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.7.0.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-VW++CNSlZwMYP7MyXEbrKjpzEwhB5kDNbzGtiPEjwYysqyTCF+YbNJ210Dj3AjWsGSV4iEEwNkmJN9yGZmVvmw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDDoxf/Tqm+hSZ0MZrXed780KJWXjocTAxj6cEUjjLv4wIhANEyZfLZNqEd22k2eEx1MBoEoRXDN1kEnOiDJxfWVFYI",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 161883
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "96b462a052f3937a6114dd79c570f3f750983459",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.2.0",
+    "@electron/node-gyp": "git+https://github.com/electron/node-gyp.git#06b29aafb7708acef8b3669835c8a7857ebc92d2",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "semi": "off",
+     "no-unused-vars": "off",
+     "@typescript-eslint/semi": "error",
+     "no-unexpected-multiline": "error",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "3.7.1": {
+   "name": "@electron/rebuild",
+   "version": "3.7.1",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.7.1",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "27ed124f7f1dbed92b222aabe68c0e4a3e6c5cea",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.7.1.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-sKGD+xav4Gh25+LcLY0rjIwcCFTw+f/HU1pB48UVbwxXXRGaXEqIH0AaYKN46dgd/7+6kuiDXzoyAEvx1zCsdw==",
+    "signatures": [
+     {
+      "sig": "MEQCIC5l8P/sW+J2B7/GHl96eTsOimM17lFdjcdU3/CjInJtAiAmJIf9VzqvatKVMMpIdzgWbPpyqtp1R+MDXhHbaMMfYQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 161960
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "6430e7401e080791de4cf8440ac564f2c5d5f44e",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.2.0",
+    "@electron/node-gyp": "git+https://github.com/electron/node-gyp.git#06b29aafb7708acef8b3669835c8a7857ebc92d2",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "semi": "off",
+     "no-unused-vars": "off",
+     "@typescript-eslint/semi": "error",
+     "no-unexpected-multiline": "error",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^9.0.1",
+    "eslint": "^7.7.0",
+    "codecov": "^3.7.2",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^9.0.0",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "3.7.2": {
+   "name": "@electron/rebuild",
+   "version": "3.7.2",
+   "license": "MIT",
+   "_id": "@electron/rebuild@3.7.2",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "8d808b29159c50086d27a5dec72b40bf16b4b582",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-3.7.2.tgz",
+    "fileCount": 72,
+    "integrity": "sha512-19/KbIR/DAxbsCkiaGMXIdPnMCJLkcf8AvGnduJtWBs/CBwiAjY1apCqOLVxrXg+rtXFCngbXhBanWjxLUt1Mg==",
+    "signatures": [
+     {
+      "sig": "MEQCIHjHdfNwyVQzg9g1qNB32s6j7pAU+EJZobO7k7MAZmX+AiBfOfrAr2xSiO82sbbtTPcokHXDIdvFTbAi8qrW3Xk4dw==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2frebuild@3.7.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 162774
+   },
+   "main": "lib/main.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extensions": [
+     "ts"
+    ]
+   },
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=12.13.0"
+   },
+   "gitHead": "2efb86db3e10e38f08f7be07c119f56b876c907d",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && npm run mocha -- test/*.ts",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "mocha": "cross-env TS_NODE_FILES=true mocha",
+    "watch": "tsc -w",
+    "compile": "tsc",
+    "prepare": "npm run compile",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.19.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "fs-extra": "^10.0.0",
+    "node-abi": "^3.45.0",
+    "detect-libc": "^2.0.1",
+    "node-api-version": "^0.2.0",
+    "@electron/node-gyp": "git+https://github.com/electron/node-gyp.git#06b29aafb7708acef8b3669835c8a7857ebc92d2",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "eslintConfig": {
+    "env": {
+     "es6": true,
+     "node": true,
+     "mocha": true
+    },
+    "rules": {
+     "semi": "off",
+     "no-unused-vars": "off",
+     "@typescript-eslint/semi": "error",
+     "no-unexpected-multiline": "error",
+     "mocha/no-exclusive-tests": "error",
+     "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+       "args": "after-used",
+       "vars": "all",
+       "argsIgnorePattern": "^_",
+       "ignoreRestSiblings": true
+      }
+     ]
+    },
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+     "eslint:recommended",
+     "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+     "mocha",
+     "@typescript-eslint"
+    ],
+    "parserOptions": {
+     "sourceType": "module",
+     "ecmaVersion": 2019
+    }
+   },
+   "eslintIgnore": [
+    "*.d.ts",
+    "node_modules"
+   ],
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^10.8.2",
+    "eslint": "^7.7.0",
+    "ts-node": "^10.0.0",
+    "electron": "^22.0.0",
+    "cross-env": "^7.0.2",
+    "@types/tar": "^6.1.0",
+    "typescript": "^4.0.2",
+    "@types/chai": "^4.2.12",
+    "@types/node": "^17.0.8",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^10.0.10",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/fs-extra": "^9.0.1",
+    "@types/node-abi": "^3.0.0",
+    "chai-as-promised": "^7.1.1",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^4.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "4.0.0": {
+   "name": "@electron/rebuild",
+   "version": "4.0.0",
+   "license": "MIT",
+   "_id": "@electron/rebuild@4.0.0",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "5406c189c38f8af7b755f4dff01e7e3df5f0711f",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-4.0.0.tgz",
+    "fileCount": 75,
+    "integrity": "sha512-ilVZIehe+CzmAEVZCcblKzmZTbxNfyv1BQbqXxuhCUJH42468VtVt1Q9qM9OroZuwAdAh1MqjFrXwWjwxPJo/w==",
+    "signatures": [
+     {
+      "sig": "MEQCICKu822CAcdWpFI2YVjFaA1CZT4ESGf0Xsm5qVu/soHtAiBBOUuK+9dcUguzw+qpvk4kxJ6SocK6FweIZneVQROStw==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2frebuild@4.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 151797
+   },
+   "type": "module",
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./lib/main.js",
+   "gitHead": "8a2a59985f9a3edf8b50c645728bc86d105f7589",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && mocha",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepare": "npm run build",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "build:docs": "typedoc src/main.ts",
+    "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.9.0",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "node-abi": "^4.2.0",
+    "detect-libc": "^2.0.1",
+    "graceful-fs": "^4.2.11",
+    "node-api-version": "^0.2.1",
+    "@electron/node-gyp": "git+https://github.com/electron/node-gyp.git#06b29aafb7708acef8b3669835c8a7857ebc92d2",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "tsx": "^4.19.3",
+    "chai": "^4.2.0",
+    "mocha": "^11.1.0",
+    "eslint": "^7.7.0",
+    "typedoc": "~0.25.13",
+    "electron": "^22.0.0",
+    "@types/tar": "^6.1.0",
+    "typescript": "~5.4.5",
+    "@types/chai": "^4.2.12",
+    "@types/node": "~22.10.7",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^10.0.10",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/node-abi": "^3.0.0",
+    "@tsconfig/node22": "^22.0.0",
+    "chai-as-promised": "^7.1.1",
+    "@types/graceful-fs": "^4.1.9",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "4.0.1": {
+   "name": "@electron/rebuild",
+   "version": "4.0.1",
+   "license": "MIT",
+   "_id": "@electron/rebuild@4.0.1",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "0620d5bb71a0b8b09a86fb9fa979244e1fcc10bf",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-4.0.1.tgz",
+    "fileCount": 75,
+    "integrity": "sha512-iMGXb6Ib7H/Q3v+BKZJoETgF9g6KMNZVbsO4b7Dmpgb5qTFqyFTzqW9F3TOSHdybv2vKYKzSS9OiZL+dcJb+1Q==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDjPyEfpcsW7pVgtIiNKFkyfGpmyOsr8cZWFysEePO6MQIgUU1lCLKKQ7D+zfQXzN+wGmc6tFlpNdH6LUWLfW0AwWY=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2frebuild@4.0.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 151705
+   },
+   "type": "module",
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./lib/main.js",
+   "gitHead": "764ef6d477023ab3c10d5b03d5370668fae894fd",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && mocha",
+    "test": "npm run prewarm-headers && npm run lint && npm run spec",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepare": "npm run build",
+    "coverage": "npm run prewarm-headers && nyc npm run spec",
+    "build:docs": "typedoc src/main.ts",
+    "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "10.9.0",
+   "directories": {},
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "node-abi": "^4.2.0",
+    "node-gyp": "^11.2.0",
+    "detect-libc": "^2.0.1",
+    "graceful-fs": "^4.2.11",
+    "node-api-version": "^0.2.1",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "tsx": "^4.19.3",
+    "chai": "^4.2.0",
+    "mocha": "^11.1.0",
+    "eslint": "^7.7.0",
+    "typedoc": "~0.25.13",
+    "electron": "^22.0.0",
+    "@types/tar": "^6.1.0",
+    "typescript": "~5.4.5",
+    "@types/chai": "^4.2.12",
+    "@types/node": "~22.10.7",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^10.0.10",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/node-abi": "^3.0.0",
+    "@tsconfig/node22": "^22.0.0",
+    "chai-as-promised": "^7.1.1",
+    "@types/graceful-fs": "^4.1.9",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   }
+  },
+  "4.0.2": {
+   "name": "@electron/rebuild",
+   "version": "4.0.2",
+   "license": "MIT",
+   "_id": "@electron/rebuild@4.0.2",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "e303996a57057b4f8e9f383868eb6be0a188f9e8",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-4.0.2.tgz",
+    "fileCount": 75,
+    "integrity": "sha512-8iZWVPvOpCdIc5Pj5udQV3PeO7liJVC7BBUSizl1HCfP7ZxYc9Kqz0c3PDNj2HQ5cQfJ5JaBeJIYKPjAvLn2Rg==",
+    "signatures": [
+     {
+      "sig": "MEQCIChk5VzL3Q9Z8frdTb+Gue5YtqXa9Z3Srnii63Z4kiWNAiB6emOe1iYvoiALCGivYdT1zouzKh/LrmD0NDC1lbVjHg==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2frebuild@4.0.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 152321
+   },
+   "type": "module",
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./lib/main.js",
+   "gitHead": "7a8eeea735bdd81d6d8cc75c7810c6dc7cf69174",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && mocha",
+    "test": "yarn prewarm-headers && yarn lint && yarn spec",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepare": "yarn build",
+    "coverage": "yarn prewarm-headers && nyc yarn spec",
+    "build:docs": "typedoc src/main.ts",
+    "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "_nodeVersion": "24.10.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^6.0.5",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "node-abi": "^4.2.0",
+    "node-gyp": "^11.2.0",
+    "detect-libc": "^2.0.1",
+    "graceful-fs": "^4.2.11",
+    "node-api-version": "^0.2.1",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "tsx": "^4.19.3",
+    "chai": "^4.2.0",
+    "mocha": "^11.1.0",
+    "eslint": "^7.7.0",
+    "typedoc": "~0.25.13",
+    "electron": "^35.7.5",
+    "@types/tar": "^6.1.0",
+    "typescript": "~5.4.5",
+    "@types/chai": "^4.2.12",
+    "@types/node": "~22.10.7",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^10.0.10",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/node-abi": "^3.0.0",
+    "@tsconfig/node22": "^22.0.0",
+    "chai-as-promised": "^7.1.1",
+    "@types/graceful-fs": "^4.1.9",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   },
+   "dependenciesMeta": {
+    "electron": {
+     "built": true
+    }
+   }
+  },
+  "4.0.3": {
+   "name": "@electron/rebuild",
+   "version": "4.0.3",
+   "license": "MIT",
+   "_id": "@electron/rebuild@4.0.3",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript"
+   },
+   "dist": {
+    "shasum": "f022f7e66874920fd16a4d802b8605885cb549d3",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-4.0.3.tgz",
+    "fileCount": 75,
+    "integrity": "sha512-u9vpTHRMkOYCs/1FLiSVAFZ7FbjsXK+bQuzviJZa+lG7BHZl1nz52/IcGvwa3sk80/fc3llutBkbCq10Vh8WQA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCTdwIGDQMulXzh6qSlG8WsIfsdua7frvgZ+W+zPgcFggIhAOvAJldi1B3P24JLxHlOnypFbX02iTL8XreerkbceQI6",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2frebuild@4.0.3",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 152303
+   },
+   "type": "module",
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./lib/main.js",
+   "gitHead": "c8dad87a0e086be75aae1b4ca4815e0dcaded8df",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && mocha",
+    "test": "yarn prewarm-headers && yarn lint && yarn spec",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepare": "yarn build",
+    "coverage": "yarn prewarm-headers && nyc yarn spec",
+    "build:docs": "typedoc src/main.ts",
+    "coverage:report": "nyc report --reporter=text-lcov > coverage.lcov",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "_nodeVersion": "24.10.0",
+   "dependencies": {
+    "got": "^11.7.0",
+    "ora": "^5.1.0",
+    "tar": "^7.5.6",
+    "debug": "^4.1.1",
+    "yargs": "^17.0.1",
+    "semver": "^7.3.5",
+    "node-abi": "^4.2.0",
+    "node-gyp": "^11.2.0",
+    "detect-libc": "^2.0.1",
+    "graceful-fs": "^4.2.11",
+    "node-api-version": "^0.2.1",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "tsx": "^4.19.3",
+    "chai": "^4.2.0",
+    "mocha": "^11.1.0",
+    "eslint": "^7.7.0",
+    "typedoc": "~0.25.13",
+    "electron": "^35.7.5",
+    "typescript": "~5.4.5",
+    "@types/chai": "^4.2.12",
+    "@types/node": "~22.10.7",
+    "@types/debug": "^4.1.5",
+    "@types/mocha": "^10.0.10",
+    "@types/yargs": "^17.0.2",
+    "@types/semver": "^7.3.9",
+    "@types/node-abi": "^3.0.0",
+    "@tsconfig/node22": "^22.0.0",
+    "chai-as-promised": "^7.1.1",
+    "@types/graceful-fs": "^4.1.9",
+    "eslint-plugin-mocha": "^9.0.0",
+    "@types/chai-as-promised": "^7.1.3",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1"
+   },
+   "dependenciesMeta": {
+    "electron": {
+     "built": true
+    }
+   }
+  },
+  "4.0.4": {
+   "name": "@electron/rebuild",
+   "version": "4.0.4",
+   "license": "MIT",
+   "_id": "@electron/rebuild@4.0.4",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "dist": {
+    "shasum": "a61331d9ae3b8e2c7eddca8e446fcd7fcd60e4ce",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-4.0.4.tgz",
+    "fileCount": 75,
+    "integrity": "sha512-Rzc39XPdk/+/wBG8MfwAHohXflep0ITUfulb6Rgz3R0NeSB1noE+E9/M/cb8ftCAiyDD9PPhLuuWgE1GaInbKg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDT0UORUo88TDNRSS5c0AqxNI+pQwdwlwsDdV7NNOl1YgIgYBQYqRWVJ8iwcv1tIbmVuaCdc/SgY1Z2yLDE8xtlwV8=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2frebuild@4.0.4",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 152467
+   },
+   "type": "module",
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./lib/main.js",
+   "gitHead": "21ceb5b60cb3cde1839e3e73dd5ad89b12eab6f6",
+   "scripts": {
+    "lint": "eslint --ext .ts .",
+    "spec": "tsc && vitest run",
+    "test": "yarn prewarm-headers && yarn lint && yarn spec",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepare": "yarn build",
+    "coverage": "yarn prewarm-headers && yarn spec --coverage",
+    "build:docs": "typedoc src/main.ts",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "resolutions": {
+    "@typescript-eslint/typescript-estree/minimatch": "^9.0.7"
+   },
+   "_nodeVersion": "24.10.0",
+   "dependencies": {
+    "debug": "^4.1.1",
+    "node-abi": "^4.2.0",
+    "node-gyp": "^12.2.0",
+    "node-api-version": "^0.2.1",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "eslint": "^7.7.0",
+    "vitest": "^4.1.2",
+    "typedoc": "~0.25.13",
+    "electron": "^39.8.5",
+    "typescript": "~5.4.5",
+    "@types/node": "~22.10.7",
+    "@types/debug": "^4.1.5",
+    "@types/node-abi": "^3.0.0",
+    "@tsconfig/node22": "^22.0.0",
+    "@vitest/coverage-v8": "^4.1.2",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0"
+   },
+   "dependenciesMeta": {
+    "electron": {
+     "built": true
+    }
+   }
+  },
+  "4.0.5": {
+   "name": "@electron/rebuild",
+   "version": "4.0.5",
+   "license": "MIT",
+   "_id": "@electron/rebuild@4.0.5",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "dist": {
+    "shasum": "f118b297cc8bdab9b2e959c35460337f1e511b16",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-4.0.5.tgz",
+    "fileCount": 75,
+    "integrity": "sha512-VKM5HP/+dnogW7QdcY7y3egfvzTDusCCoT/UycOCLq4WvnIygt0Kl6fAxWkhJfiSb55zaewFH1bfGcYlEm/drg==",
+    "signatures": [
+     {
+      "sig": "MEUCIBp+kj87bMjyg5edD5EROekofT3KBe/skiTX/YXnV3oIAiEAnVaa3oMay3GGOwN+wfrGIOVOoFQAgE9JrTmLJmd9gxU=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2frebuild@4.0.5",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 153431
+   },
+   "type": "module",
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./lib/main.js",
+   "gitHead": "3e73e57db3c3ed46382197e414bcf64fc438f620",
+   "scripts": {
+    "lint": "oxlint && oxfmt --check",
+    "spec": "tsc && vitest run",
+    "test": "yarn prewarm-headers && yarn lint && yarn spec",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepare": "husky && yarn build",
+    "coverage": "yarn prewarm-headers && yarn spec --coverage",
+    "build:docs": "typedoc src/main.ts",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "oxlint --fix",
+     "oxfmt --write"
+    ]
+   },
+   "resolutions": {
+    "@typescript-eslint/typescript-estree/minimatch": "^9.0.7"
+   },
+   "_nodeVersion": "24.10.0",
+   "dependencies": {
+    "debug": "^4.1.1",
+    "node-abi": "^4.2.0",
+    "node-gyp": "^12.2.0",
+    "node-api-version": "^0.2.1",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "husky": "^9.1.7",
+    "oxfmt": "^0.42.0",
+    "oxlint": "^1.57.0",
+    "vitest": "^4.1.2",
+    "typedoc": "~0.28.0",
+    "electron": "^39.8.5",
+    "typescript": "^6.0.2",
+    "@types/node": "~22.10.7",
+    "lint-staged": "^16.4.0",
+    "@types/debug": "^4.1.5",
+    "@types/node-abi": "^3.0.0",
+    "oxlint-tsgolint": "^0.18.1",
+    "@tsconfig/node22": "^22.0.0",
+    "@vitest/coverage-v8": "^4.1.2"
+   },
+   "dependenciesMeta": {
+    "electron": {
+     "built": true
+    }
+   }
+  },
+  "4.0.6": {
+   "name": "@electron/rebuild",
+   "version": "4.0.6",
+   "license": "MIT",
+   "_id": "@electron/rebuild@4.0.6",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "dist": {
+    "shasum": "5cbcd49e14cff7c5a8f7e2ba84460de09b6fbfb9",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-4.0.6.tgz",
+    "fileCount": 75,
+    "integrity": "sha512-323ygp5Lz4DP2nVu54NLCx4n0TKsQ3OMDG3PPeOFjOTMDtSxGbCi7mQfWBc5C80pp+9awEsiHx9HR9DfAM/IEQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQD1l8GB5NMsfGxOMhwPLCTtloho0wYI1ZdBeIb5aBdhAAIgXUQpZ+0iJmK3dVYeWWiyMwtoBFo6loRKIZgNdY6pTl4=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2frebuild@4.0.6",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 153431
+   },
+   "type": "module",
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./lib/main.js",
+   "gitHead": "8bc2a49d260eb8325f8f39f8d70c4b3651db501c",
+   "scripts": {
+    "lint": "oxlint && oxfmt --check",
+    "spec": "tsc && vitest run",
+    "test": "yarn prewarm-headers && yarn lint && yarn spec",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepare": "husky && yarn build",
+    "coverage": "yarn prewarm-headers && yarn spec --coverage",
+    "build:docs": "typedoc src/main.ts",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "oxlint --fix",
+     "oxfmt --write"
+    ]
+   },
+   "resolutions": {
+    "@typescript-eslint/typescript-estree/minimatch": "^9.0.7"
+   },
+   "_nodeVersion": "24.10.0",
+   "dependencies": {
+    "debug": "^4.1.1",
+    "node-abi": "^4.2.0",
+    "node-gyp": "^12.2.0",
+    "node-api-version": "^0.2.1",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "husky": "^9.1.7",
+    "oxfmt": "^0.42.0",
+    "oxlint": "^1.57.0",
+    "vitest": "^4.1.2",
+    "typedoc": "~0.28.0",
+    "electron": "^39.8.5",
+    "typescript": "^6.0.2",
+    "@types/node": "~22.10.7",
+    "lint-staged": "^16.4.0",
+    "@types/debug": "^4.1.5",
+    "@types/node-abi": "^3.0.0",
+    "oxlint-tsgolint": "^0.18.1",
+    "@tsconfig/node22": "^22.0.0",
+    "@vitest/coverage-v8": "^4.1.2"
+   },
+   "dependenciesMeta": {
+    "electron": {
+     "built": true
+    }
+   }
+  },
+  "4.1.0": {
+   "name": "@electron/rebuild",
+   "version": "4.1.0",
+   "license": "MIT",
+   "_id": "@electron/rebuild@4.1.0",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "dist": {
+    "shasum": "fe2f70edef9cc4ed4fa059e5bf77f2078e90815c",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-4.1.0.tgz",
+    "fileCount": 75,
+    "integrity": "sha512-GFky+1JeO8fpSqtZCh+2wFRN/MVbAhm7tXI2M7BA1Os79OR8LEoxRtAbRPyxvmKWhEMF/p10rNJkkgP1klI13g==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDdwbglbPcNJRGXZAZaCMJ8Hq7wLFdLlnoX+H5LTwZqYQIgMA9Fv765waCSsRrkrWMKyc0K0rGUqAOya8NekjpuTEc=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2frebuild@4.1.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 154267
+   },
+   "type": "module",
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./lib/main.js",
+   "gitHead": "12a0a2b7b8ab63bcbd649af7893a3cf8d819ea83",
+   "scripts": {
+    "lint": "oxlint && oxfmt --check",
+    "spec": "tsc && vitest run",
+    "test": "yarn prewarm-headers && yarn lint && yarn spec",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prepare": "husky && yarn build",
+    "coverage": "yarn prewarm-headers && yarn spec --coverage",
+    "build:docs": "typedoc src/main.ts",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "typings": "lib/main.d.ts",
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "oxlint --fix",
+     "oxfmt --write"
+    ]
+   },
+   "resolutions": {
+    "@typescript-eslint/typescript-estree/minimatch": "^9.0.7"
+   },
+   "_nodeVersion": "24.10.0",
+   "dependencies": {
+    "debug": "^4.1.1",
+    "node-abi": "^4.2.0",
+    "node-gyp": "^12.2.0",
+    "node-api-version": "^0.2.1",
+    "read-binary-file-arch": "^1.0.6",
+    "@malept/cross-spawn-promise": "^2.0.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "husky": "^9.1.7",
+    "oxfmt": "^0.42.0",
+    "oxlint": "^1.57.0",
+    "vitest": "^4.1.2",
+    "typedoc": "~0.28.0",
+    "electron": "^39.8.5",
+    "typescript": "^6.0.2",
+    "@types/node": "~22.10.7",
+    "lint-staged": "^16.4.0",
+    "@types/debug": "^4.1.5",
+    "@types/node-abi": "^3.0.0",
+    "oxlint-tsgolint": "^0.18.1",
+    "@tsconfig/node22": "^22.0.0",
+    "@vitest/coverage-v8": "^4.1.2"
+   },
+   "dependenciesMeta": {
+    "electron": {
+     "built": true
+    }
+   }
+  },
+  "4.2.0": {
+   "name": "@electron/rebuild",
+   "version": "4.2.0",
+   "type": "module",
+   "exports": "./lib/main.js",
+   "typings": "lib/main.d.ts",
+   "scripts": {
+    "build": "tsc",
+    "build:docs": "typedoc src/main.ts",
+    "coverage": "yarn prewarm-headers && yarn spec --coverage",
+    "watch": "tsc -w",
+    "prepare": "husky && yarn build",
+    "lint": "oxlint && oxfmt --check",
+    "spec": "tsc && vitest run",
+    "test": "yarn prewarm-headers && yarn lint && yarn spec",
+    "prewarm-headers": "node-gyp install --ensure"
+   },
+   "bin": {
+    "electron-rebuild": "lib/cli.js"
+   },
+   "authors": [
+    "Ani Betts <anais@anaisbetts.org>",
+    "Electron Community"
+   ],
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/electron/rebuild/issues"
+   },
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "dependencies": {
+    "@malept/cross-spawn-promise": "^2.0.0",
+    "debug": "^4.1.1",
+    "node-abi": "^4.2.0",
+    "node-api-version": "^0.2.1",
+    "node-gyp": "^12.2.0",
+    "read-binary-file-arch": "^1.0.6"
+   },
+   "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
+    "@types/debug": "^4.1.5",
+    "@types/node": "~22.10.7",
+    "@types/node-abi": "^3.0.0",
+    "@vitest/coverage-v8": "^4.1.2",
+    "electron": "^39.8.5",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "oxfmt": "^0.42.0",
+    "oxlint": "^1.57.0",
+    "oxlint-tsgolint": "^0.18.1",
+    "typedoc": "~0.28.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+   },
+   "lint-staged": {
+    "*.ts": [
+     "oxlint --fix",
+     "oxfmt --write"
+    ]
+   },
+   "resolutions": {
+    "@typescript-eslint/typescript-estree/minimatch": "^9.0.7"
+   },
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "dependenciesMeta": {
+    "electron": {
+     "built": true
+    }
+   },
+   "gitHead": "2d5d8e54308599c906d5c43ce64e9be092cb6284",
+   "_id": "@electron/rebuild@4.2.0",
+   "_nodeVersion": "24.10.0",
+   "_npmVersion": "11.6.2",
+   "dist": {
+    "integrity": "sha512-RKL/O+jGoXJMxrx/5771y1n0xTKmFuOYGO3gMmwypBM6rsH0kou0mswwdXA2JrhIkE4xyC7v9vGk0n6NPzgOxQ==",
+    "shasum": "ee7429a97134d13eb37b7f517d737e02d1dea877",
+    "tarball": "http://localhost:3000/@electron/rebuild/-/rebuild-4.2.0.tgz",
+    "fileCount": 75,
+    "unpackedSize": 155779,
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2frebuild@4.2.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIEsABlDkU+SQqdZIP2PbOOD/iIRinU6fN1e8+zgz/cwAAiEA3bzhJKpmJHii4rNhfqa/jNoVpWNQ012LaQRIi4GnF2o="
+     }
+    ]
+   },
+   "directories": {},
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2022-10-27T22:56:47.343Z",
+  "modified": "2026-07-07T21:16:06.397Z",
+  "0.0.0": "2022-10-27T22:56:47.565Z",
+  "3.2.10": "2022-10-28T01:29:21.606Z",
+  "3.2.11": "2023-04-12T23:31:40.076Z",
+  "3.2.12": "2023-04-13T08:19:21.999Z",
+  "3.2.13": "2023-04-24T19:06:15.126Z",
+  "3.3.0": "2023-08-21T18:58:41.593Z",
+  "3.3.1": "2023-11-21T23:31:55.760Z",
+  "3.4.0": "2023-11-30T23:31:00.034Z",
+  "3.4.1": "2023-12-04T23:23:45.906Z",
+  "3.5.0": "2024-01-09T16:27:04.176Z",
+  "3.6.0": "2024-01-23T07:08:50.618Z",
+  "3.6.1": "2024-10-01T16:20:08.993Z",
+  "3.6.2": "2024-10-02T18:02:46.395Z",
+  "3.7.0": "2024-10-08T17:48:16.493Z",
+  "3.7.1": "2024-11-12T02:22:24.128Z",
+  "3.7.2": "2025-04-10T20:28:49.233Z",
+  "4.0.0": "2025-04-30T00:46:40.440Z",
+  "4.0.1": "2025-04-30T18:16:11.107Z",
+  "4.0.2": "2025-12-09T23:29:10.142Z",
+  "4.0.3": "2026-01-27T18:46:51.302Z",
+  "4.0.4": "2026-04-21T18:00:04.346Z",
+  "4.0.5": "2026-06-27T23:42:08.618Z",
+  "4.0.6": "2026-06-28T04:11:20.961Z",
+  "4.1.0": "2026-07-01T05:21:37.180Z",
+  "4.2.0": "2026-07-07T21:16:06.075Z"
+ },
+ "license": "MIT"
+}

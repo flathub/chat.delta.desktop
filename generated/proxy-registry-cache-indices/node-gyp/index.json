@@ -1,16 +1,16 @@
 {
   "_id": "node-gyp",
-  "_rev": "421-006026d85e98e7709dda53a22a03770d",
+  "_rev": "422-4d7909f2167f541ca86a6a3b3ff0a7e6",
   "name": "node-gyp",
   "dist-tags": {
-    "latest": "13.0.0"
+    "latest": "13.0.1"
   },
   "versions": {
-    "11.5.0": {
+    "12.4.0": {
       "name": "node-gyp",
-      "version": "11.5.0",
+      "version": "12.4.0",
       "license": "MIT",
-      "_id": "node-gyp@11.5.0",
+      "_id": "node-gyp@12.4.0",
       "bugs": {
         "url": "https://github.com/nodejs/node-gyp/issues"
       },
@@ -18,68 +18,68 @@
         "node-gyp": "bin/node-gyp.js"
       },
       "dist": {
-        "shasum": "82661b5f40647a7361efe918e3cea76d297fcc56",
-        "tarball": "http://localhost:3000/node-gyp/-/node-gyp-11.5.0.tgz",
+        "shasum": "2d017b6ea1ca9294dbbee75be533728f49257024",
+        "tarball": "http://localhost:3000/node-gyp/-/node-gyp-12.4.0.tgz",
         "fileCount": 108,
-        "integrity": "sha512-ra7Kvlhxn5V9Slyus0ygMa2h+UqExPqUIkfk7Pc8QTLT956JLSy51uWFwHtIYy0vI8cB4BDhc/S03+880My/LQ==",
+        "integrity": "sha512-OMcPNvqTCFUnNaBlmdgq+lfNqY7gTiSmNRDjY3uAXRyudeKZEZxu3CLtjMQrx4zZxCX2b/mpNqTtwuCJgXhHkw==",
         "signatures": [
           {
-            "sig": "MEUCIE42MUh4JKk7HN/Z+vxMXtV0mqzBUaybuMsytshubf6/AiEAtKmMwyfMEyfUIygxLuk4nSEZfGNost3Ca1URXPdjY6A=",
+            "sig": "MEQCIE9T1dHoyisjtLhIVlBfFtmNheJKkHt1uhylViGAtNZXAiAwQ+4yNukjR4kdcR2NkXPuekQR/bkU3CPrCyInp47SSQ==",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
         "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/node-gyp@11.5.0",
+          "url": "http://localhost:3000/-/npm/v1/attestations/node-gyp@12.4.0",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "unpackedSize": 1867568
+        "unpackedSize": 1876531
       },
       "main": "./lib/node-gyp.js",
       "engines": {
-        "node": "^18.17.0 || >=20.5.0"
+        "node": "^20.17.0 || >=22.9.0"
       },
-      "gitHead": "3cff85955e6ec8973fc6703ed937313b30bc0093",
+      "gitHead": "ee9b5448f61f66629f0f5faa3ef2f57311797a9d",
       "scripts": {
         "lint": "eslint \"*/*.js\" \"test/**/*.js\" \".github/**/*.js\"",
-        "test": "cross-env NODE_GYP_NULL_LOGGER=true mocha --timeout 15000 test/test-download.js test/test-*"
+        "test": "cross-env NODE_GYP_NULL_LOGGER=true mocha --timeout 30000 test/test-download.js test/test-*"
       },
-      "_npmVersion": "11.6.2",
+      "_npmVersion": "11.16.0",
       "directories": {},
-      "_nodeVersion": "22.20.0",
+      "_nodeVersion": "24.16.0",
       "dependencies": {
-        "tar": "^7.4.3",
-        "nopt": "^8.0.0",
-        "which": "^5.0.0",
+        "tar": "^7.5.4",
+        "nopt": "^9.0.0",
+        "which": "^6.0.0",
         "semver": "^7.3.5",
-        "proc-log": "^5.0.0",
+        "undici": "^6.25.0",
+        "proc-log": "^6.0.0",
         "env-paths": "^2.2.0",
         "tinyglobby": "^0.2.12",
         "graceful-fs": "^4.2.6",
-        "make-fetch-happen": "^14.0.3",
         "exponential-backoff": "^3.1.1"
       },
       "preferGlobal": true,
       "_hasShrinkwrap": false,
       "installVersion": 11,
       "devDependencies": {
-        "nan": "^2.14.2",
-        "mocha": "^11.0.1",
-        "eslint": "^9.16.0",
+        "nan": "^2.23.1",
+        "mocha": "^11.7.5",
+        "eslint": "^9.39.1",
         "bindings": "^1.5.0",
-        "cross-env": "^7.0.3",
-        "neostandard": "^0.11.9",
+        "cross-env": "^10.1.0",
+        "neostandard": "^0.13.0",
         "require-inject": "^1.4.4"
       }
     }
   },
   "time": {
     "created": "2012-02-05T19:47:50.427Z",
-    "modified": "2026-06-12T12:46:35.742Z",
+    "modified": "2026-07-02T23:09:30.093Z",
     "0.0.1-alpha1": "2012-02-05T19:47:52.027Z",
     "0.9.7": "2013-06-05T22:54:09.331Z",
-    "11.5.0": "2025-10-15T12:33:10.025Z"
+    "12.4.0": "2026-06-05T07:05:03.680Z"
   },
   "license": "MIT"
 }

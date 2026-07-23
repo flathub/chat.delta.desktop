@@ -1,0 +1,78 @@
+{
+  "_id": "unzipper",
+  "_rev": "91-416ff8be884b387f8ccda1affba4068f",
+  "name": "unzipper",
+  "dist-tags": {
+    "beta": "0.9.0-rc4",
+    "future": "0.9.0-rc10",
+    "latest": "0.12.5"
+  },
+  "versions": {
+    "0.12.5": {
+      "name": "unzipper",
+      "version": "0.12.5",
+      "license": "MIT",
+      "dependencies": {
+        "bluebird": "~3.7.2",
+        "duplexer2": "~0.1.4",
+        "fs-extra": "11.3.1",
+        "graceful-fs": "^4.2.2",
+        "node-int64": "^0.4.0"
+      },
+      "devDependencies": {
+        "@eslint/js": "^9.2.0",
+        "aws-sdk": "^2.1636.0",
+        "@aws-sdk/client-s3": "^3.0.0",
+        "dirdiff": ">= 0.0.1 < 1",
+        "eslint": "^9.2.0",
+        "globals": "^15.2.0",
+        "iconv-lite": "^0.4.24",
+        "request": "^2.88.0",
+        "stream-buffers": ">= 0.2.5 < 1",
+        "tap": "^16.3.10",
+        "temp": ">= 0.4.0 < 1"
+      },
+      "directories": {
+        "example": "examples",
+        "test": "test"
+      },
+      "main": "unzip.js",
+      "scripts": {
+        "test": "npx tap test/*.js --coverage-report=html --lines=90 --functions=85 --statements=90 --branches=80 --reporter=dot"
+      },
+      "gitHead": "aaf77f0c7b4d29af500b0aa9c0e2aa2ade0a2618",
+      "_id": "unzipper@0.12.5",
+      "bugs": {
+        "url": "https://github.com/ZJONSSON/node-unzipper/issues"
+      },
+      "_nodeVersion": "20.20.2",
+      "_npmVersion": "11.17.0",
+      "dist": {
+        "integrity": "sha512-tXYOi9R57Uj/2Z25SOs5RRSzq886MBQj2gY8dPL+xl/kv6s6SvByoKfAtvfVeEuhntWDgjd2o9p2lb4TVPAz0A==",
+        "shasum": "7fc6b4862f3832202d1f5cc3adbee2679deaaf6c",
+        "tarball": "http://localhost:3000/unzipper/-/unzipper-0.12.5.tgz",
+        "fileCount": 19,
+        "unpackedSize": 56795,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/unzipper@0.12.5",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQDTHTd6rQOcgwAx7yoR9GCFXOoiS+3Kr6wYSg/fxAuzuAIgSOLkt96cIqtXys2ZYGxVlnV8/CN8wC5Ztt+Gn767a6E="
+          }
+        ]
+      },
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2016-07-05T14:01:18.034Z",
+    "modified": "2026-06-21T16:36:04.152Z",
+    "0.12.5": "2026-06-21T16:36:03.865Z"
+  },
+  "license": "MIT"
+}

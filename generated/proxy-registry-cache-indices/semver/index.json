@@ -1,6 +1,6 @@
 {
   "_id": "semver",
-  "_rev": "452-c89d1fa1c1c4e8f64fcde233ea859378",
+  "_rev": "453-cd419d6673fc74240b971c7ca6048f54",
   "name": "semver",
   "dist-tags": {
     "legacy": "5.7.2",
@@ -196,14 +196,104 @@
         "@npmcli/template-oss": "4.25.1",
         "@npmcli/eslint-config": "^5.0.0"
       }
+    },
+    "7.7.4": {
+      "name": "semver",
+      "version": "7.7.4",
+      "license": "ISC",
+      "_id": "semver@7.7.4",
+      "bugs": {
+        "url": "https://github.com/npm/node-semver/issues"
+      },
+      "bin": {
+        "semver": "bin/semver.js"
+      },
+      "tap": {
+        "nyc-arg": [
+          "--exclude",
+          "tap-snapshots/**"
+        ],
+        "timeout": 30,
+        "coverage-map": "map.js"
+      },
+      "dist": {
+        "shasum": "28464e36060e991fa7a11d0279d2d3f3b57a7e8a",
+        "tarball": "http://localhost:3000/semver/-/semver-7.7.4.tgz",
+        "fileCount": 52,
+        "integrity": "sha512-vFKC2IEtQnVhpT78h1Yp8wzwrf8CM+MzKMHGJZfBtzhZNycRFnXsHk6E5TxIkkMsgNS7mdX3AGB7x2QM2di4lA==",
+        "signatures": [
+          {
+            "sig": "MEUCIQDCtGLDNkM1R8FDGorCfRtY8NL1e4Bvp0JvegtgqkzeQAIgF4TquobI4rzb0RmeNjmO/PxJX8co8n2KXo9FJPO2WRU=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/semver@7.7.4",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 97799
+      },
+      "main": "index.js",
+      "engines": {
+        "node": ">=10"
+      },
+      "gitHead": "5993c2e42bdf17c5f03e6360da51bc707fcee460",
+      "scripts": {
+        "lint": "npm run eslint",
+        "snap": "tap",
+        "test": "tap",
+        "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
+        "lintfix": "npm run eslint -- --fix",
+        "postlint": "template-oss-check",
+        "posttest": "npm run lint",
+        "template-oss-apply": "template-oss-apply --force"
+      },
+      "_npmVersion": "11.9.0",
+      "directories": {},
+      "templateOSS": {
+        "engines": ">=10",
+        "publish": "true",
+        "version": "4.29.0",
+        "distPaths": [
+          "classes/",
+          "functions/",
+          "internal/",
+          "ranges/",
+          "index.js",
+          "preload.js",
+          "range.bnf"
+        ],
+        "allowPaths": [
+          "/classes/",
+          "/functions/",
+          "/internal/",
+          "/ranges/",
+          "/index.js",
+          "/preload.js",
+          "/range.bnf",
+          "/benchmarks"
+        ],
+        "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
+      },
+      "_nodeVersion": "22.22.0",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^16.0.0",
+        "benchmark": "^2.1.4",
+        "@npmcli/template-oss": "4.29.0",
+        "@npmcli/eslint-config": "^6.0.0"
+      }
     }
   },
   "time": {
     "created": "2011-02-12T00:20:25.690Z",
-    "modified": "2026-06-19T18:32:49.353Z",
+    "modified": "2026-07-06T14:05:00.791Z",
     "5.7.2": "2023-07-10T19:57:47.111Z",
     "6.3.1": "2023-07-10T22:38:41.428Z",
-    "7.7.3": "2025-10-07T18:00:51.643Z"
+    "7.7.3": "2025-10-07T18:00:51.643Z",
+    "7.7.4": "2026-02-05T17:23:11.131Z"
   },
   "license": "ISC"
 }

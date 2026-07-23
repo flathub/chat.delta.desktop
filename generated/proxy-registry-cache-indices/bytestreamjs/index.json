@@ -1,0 +1,79 @@
+{
+  "_id": "bytestreamjs",
+  "_rev": "27-38a13cf8054d42c3072276c1b8894832",
+  "name": "bytestreamjs",
+  "dist-tags": {
+    "latest": "2.0.1",
+    "next": "1.1.3",
+    "beta": "1.1.3-beta.0"
+  },
+  "versions": {
+    "2.0.1": {
+      "devDependencies": {
+        "@types/mocha": "^9.1.1",
+        "@types/node": "^17.0.35",
+        "@typescript-eslint/eslint-plugin": "^5.25.0",
+        "@typescript-eslint/parser": "^5.25.0",
+        "coveralls": "^3.1.1",
+        "eslint": "^8.15.0",
+        "mocha": "^10.0.0",
+        "nyc": "^15.1.0",
+        "rimraf": "^3.0.2",
+        "ts-node": "^10.7.0",
+        "typescript": "^4.6.4"
+      },
+      "engines": {
+        "node": ">=6.0.0"
+      },
+      "scripts": {
+        "test": "mocha",
+        "clear": "rimraf build",
+        "build": "npm run build:cjs && npm run build:mjs && npm run build:types",
+        "build:cjs": "tsc -p tsconfig.json --module commonjs --removeComments --outDir build/cjs",
+        "build:mjs": "tsc -p tsconfig.json --module es2015 --removeComments --outDir build/mjs",
+        "prebuild:types": "rimraf build/types",
+        "build:types": "tsc -p tsconfig.json --outDir build/types --declaration --emitDeclarationOnly",
+        "rebuild": "npm run clear && npm run build",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "coverage": "nyc npm test",
+        "coveralls": "nyc report --reporter=text-lcov | coveralls"
+      },
+      "name": "bytestreamjs",
+      "version": "2.0.1",
+      "module": "./build/mjs/index.js",
+      "main": "./build/cjs/index.js",
+      "types": "./build/types/index.d.ts",
+      "license": "BSD-3-Clause",
+      "gitHead": "f11570f4f7011dd5f9079d5e7ba4a7dbb0d73fbc",
+      "bugs": {
+        "url": "https://github.com/PeculiarVentures/ByteStream.js/issues"
+      },
+      "_id": "bytestreamjs@2.0.1",
+      "_nodeVersion": "16.13.0",
+      "_npmVersion": "8.1.0",
+      "dist": {
+        "integrity": "sha512-U1Z/ob71V/bXfVABvNr/Kumf5VyeQRBEm6Txb0PQ6S7V5GpBM3w4Cbqz/xPDicR5tN0uvDifng8C+5qECeGwyQ==",
+        "shasum": "a32947c7ce389a6fa11a09a9a563d0a45889535e",
+        "tarball": "http://localhost:3000/bytestreamjs/-/bytestreamjs-2.0.1.tgz",
+        "fileCount": 24,
+        "unpackedSize": 169984,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCIA72U3PaeZ1xJ5c0+1wkKj7IK5wvLtSzoRQtowDxyJrRAiEA2KjlUjSDfs5kNxmN3CxCOMSuvIdjrKIAZc5goT0Ias0="
+          }
+        ],
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjGJ6hACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmoNoA/+IBJ+VWtjg69dHmbiLvz1QYjhEMRcYBXQMNsnl2F8g7Ftedjd\r\nmNR/g8ZNW5KPFYdcSgk2U+cfxgajlKzrl8TLi4TZ07t1WSjEIvLOqp/NnlsH\r\n2kRkpd15ZziK9yOSLpUr03wlTQZqud52kr3mFOGvSJyDipFy0mFt/SP95byc\r\nOOR9b3Xdle/02vKQbl8vPGKsHsBv3jVG+EKvFc7+b0kv8YcrDvDsjk51GtkS\r\naTaKQY4fKb7liKP8UppZ3wFgDzb8ZRqOGJVG8jRSC009Mhx3XFreAIZSSZHv\r\nBEt4iRvXmXJr2dXd40HPOTEErqBLaH1LSueSsEMoukhA5Zh5KroZNa8yix2S\r\nl4siQvb8m/XO+iVgux+WdibloQf3DtyRAB4LbHs8PJBnj87G+efWKQ+EMm4L\r\ndx7120Bg9vxtP/jdhrmwbRpdGGttc3zDZPzZ/TvJHVJIIlDf/qYQV72FfbOR\r\nfxwC8CcyDPjE+58BNjseJK4sinKeP2OX5zNODCuA6e+SXRx155tlxrO8ZLd0\r\nEmlBPfEp99jaNymLfK2bU1pJ24rg11LkXklTpWp6yeAR1NFAbwQ73iQbdhOk\r\nl1/UgY9mWeCF3ao20bvUJ9YKhiRzyVIJoTufsBeGuGAuHS3kfCr3tL+xTW5J\r\ndZoLfYNdPwrvznKSPr5UaUehPCK84Y9oQNI=\r\n=MgZF\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "modified": "2022-09-07T13:37:37.553Z",
+    "created": "2016-08-05T11:20:06.544Z",
+    "2.0.1": "2022-09-07T13:37:37.477Z"
+  },
+  "license": "BSD-3-Clause"
+}

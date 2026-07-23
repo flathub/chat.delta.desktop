@@ -1,0 +1,1289 @@
+{
+ "_id": "@peculiar/json-schema",
+ "_rev": "19-16c9b39e1808e77ee41f65cfe2e47f16",
+ "name": "@peculiar/json-schema",
+ "dist-tags": {
+  "latest": "1.1.12"
+ },
+ "versions": {
+  "1.0.2": {
+   "name": "@peculiar/json-schema",
+   "version": "1.0.2",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.0.2",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "c3327d9a94dfe839e49f47b06db16f5e3788f74e",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.0.2.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-cJNlmEIURW/8pwdKs9f+sI3mFE3CYHjvj4ftpfiFEgaeXRIA0KKb7GZRZ21gER45fPiuyStAW2YkEiEhTODAaQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCkonmFE/lJavK0RlVDOtQyZLIKvv6Ijcm7jQzOT4AX0wIgQ6WLfCdRn3Nxxzvh+yOCMTkuTTmxj9wKocj8kyUbmrs=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 15695,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbt3uZCRA9TVsSAnZWagAAdDcP/3IAoRVQYZjfi7zLP23Q\nX39VYyjbqM96FqLpTmGxqjg8RalIWyuhb0pNXgte0m2HXCulSOwx054UTjjq\n7XeYPkS+PZ8cSWo3rl3UuIWRGd/O2y01iAX/73znzNCI1zJBXmJ5l0TAmOC3\nR3k6bORdZcuT84ytLnf5n+n6UjFFha202dS5aeJkffFB/8UqIEz7ghcbvaEs\n9YdEPh6PE0DdchX1kn40VPbqKYMamxesFgCUNCsrrTX3vQqOed2h97r4rqjQ\nk9D4pBpFVi0wv+uWzwbl97+IrTZl3W71UVMqvW5+NtBA+zBTGCE6Evp9XYtl\nbjKIvuxlnG8qYsvboWlExW1rddShf283b1tyEVx3sjX68aykwratQ/oS67OF\nk/GM4cVDMhg3RIeS9f96gKf9oRXuSQ00JLcbmuCXOIWcvV+2sZMS/oo53kn/\n8KnGTEUb6tLuDFHXQPBOTchu4aHShdEkyd3GASGgxhfjmJa0mEJdIAbOOAOD\nM15jFXWHiic2nRxrNulnJ9FByigGiXQcsiZ/l1vcMqoE3FdNAtJm1JQjQTgh\nMOkgA67NWxLyiYskYoUFxLc8cVBXfGa9MoO4/19cMZsXBQjdrG6JOYRuSPEo\nNnQJrvWECZy0RDcpwYbGnqpZTXIkAkpWZBiZDNoQaKT7hqXphv8PvuE4q4T2\n0rqE\r\n=RHTP\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "d1f77b2dc096f7af930b9c18c41fb329f86f97d8",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "tsc": "tsc --noEmit",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run tsc",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "_nodeVersion": "8.11.1",
+   "dependencies": {
+    "tslib": "^1.9.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^5.2.0",
+    "rollup": "^0.66.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
+    "@types/node": "^10.10.1",
+    "@types/mocha": "^5.2.5",
+    "rollup-plugin-cleanup": "^3.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2"
+   }
+  },
+  "1.0.5": {
+   "name": "@peculiar/json-schema",
+   "version": "1.0.5",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.0.5",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "d1a805a4da87952e42fdce1e64cc4432bd84a31f",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.0.5.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-4LZXj6Q1XwIdRE5jdHPyRxPfdz/+Usu5OpYGmNQu/a9wZ5XjrwCCFDxNoX0T1DVG1zXpE+B4hSRk833Uuwq3Xw==",
+    "signatures": [
+     {
+      "sig": "MEUCIHPEO084DQjrvGZvJ65YZ0Nz6NaDigPW28GcLftED0LiAiEA7BiXvskkBDcUp+xJXF4JhIZQOBs53G6kaDb7LSQMDS8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 15728,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbu9UjCRA9TVsSAnZWagAAfcUP/3w0aluAOtLmpLONHFVk\nTTLXM81DKg6MCjoznMofH50MyMNItCkkGGLo0odvNXxjp1xEcerCwANBmaje\no60IjzXMU95QWZFiVtUC+Ryw1/d2ZrSx7mGivFPUVU2OqCBqDd/je1WukhF4\nGkGCECwzVjGR20LyjO3IxJaPwIur0Ae2VuY6v5lWUtXliOZrypZXQHaJo/l0\nqetooNGQPJy/c3S4dQsvrYdMjv3b+yCDpW7eey1adVFAELehIB3pIiTpKQeg\n+ZyHi1lHKjQgw+45dO85BwnmupFMM2eIsqtygovcTpdkAIKFzbvmbihnLWec\nrInIXlq2sYhYxr6s705VkoVtw1zGnrjZlRCO8AyCBwoHe30Ebojld8+1yUT7\nidL/YPQPtKPsi2ahD5c+XkOd/TrCTE4d+UA7AgVrybpvGfw5CbbWKuXo5VlM\no9d4Jge0XPzW36YcFnot6msXT9na7ghgQbFoXHW0ca8szV1b+rTzn0tcZVqi\n+mzpokZ4wAs8RUp2QZnCsbogI8yiWBYRuxm5qGCuLkixBPZDtMbeofwdcBrp\nj7pIYVHyQ0IWNrn/xnzN1v4mjzz+48hGI0ge3sdrUgw82MDieXxj5jfvnsES\nwOHMtQNHtjTmYddXsUlcyst257fCunZkg+NToEUyNo0Qra4u5FwYRk2UwBL0\n8Uby\r\n=MnXx\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "29cc78fd74dc552c6df3278a0ab7ee8cd72b3b8a",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "tsc": "tsc --noEmit",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run tsc",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "_nodeVersion": "8.11.1",
+   "dependencies": {
+    "tslib": "^1.9.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^5.2.0",
+    "rollup": "^0.66.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
+    "@types/node": "^10.10.1",
+    "@types/mocha": "^5.2.5",
+    "rollup-plugin-cleanup": "^3.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2"
+   }
+  },
+  "1.0.6": {
+   "name": "@peculiar/json-schema",
+   "version": "1.0.6",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.0.6",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "09f29b850a1c63dc28dbbf11240e596b381afff6",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.0.6.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-Ji8JwurGXRKPUNT8SGMXpIqXss/sgcQ0aqgVYo/sFqogqAZ8Ux6WEp8x5IiUdXBeUtxe3UOpT0KQnZIW4eBKvw==",
+    "signatures": [
+     {
+      "sig": "MEUCIAkKFs3LDLAooTHZB44cGdaNjUixsAj21d5IZbY3j6YKAiEA5D6nQTNuqSTfQ9PSxwlGXI9EnRfvjlpY/41QmlYObno=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 16350,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbxcjCCRA9TVsSAnZWagAAWSwP/0JOvlNlPg2RMhzYUwOo\nXXYeL8YwUmQs1s0MHCbphx0RVxJ+AnUevW4xpXFvoTe0gZzVi8UabcKi5nEs\n/U2X2UlkybVlgZApa21+9yXuGG3TgqCZDGz7sZROQV/LwsueB11vlxUpsbi4\n/vomGVFnUDoQ7bLLypAmIwkxte+LGVl7I7iBAa2jnekC8ETvT/xEMSn5+2wB\nGAUT91OergmPH3yFvCe21R4MnowlsibJZNbta5cZn+6qsBR9tUfI56djG7UL\n8JB5xat1bocFYMLZnsul/GsRAgiWbVIBeQC8AQV5Zjzg43K6B8AjTS6d5zNo\ncIe7aGJ+2qaVca/An/Dzei60sITRjuLzt5C/Z31hx95teyDxU57SpYDLJENH\n+4U/9BFE0ItivMso2QUaQcI12ajXrhaViC1n2RbW6OcGBBfmk3oG6B9xl7tF\nBGSqMV+b6Gyk9ihWdwVgrMHXWGN3UA0YPUsg4y9YzBiD+mrDgj26FVuC5RH+\nyd7Jaclishm49ZaeTgl5ulaPy03Y+q4noopjSzGQtjfrIOy0b5y/4kQY1FDt\n+M4+lOV4u9StG7TPjRAeC63u0t5/AdWGRu+fAXGGBV2zwGKxsGU9opipGcvT\nNS2dSZWZglnM9PfEkLa5VV5mVSbRvDMbV3+BCtWzDgad++jMKeJLpM1Nodua\nF8Cb\r\n=sUUW\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "e0f61a9dcb776d02077625a4b7ee6bf06c351cab",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "tsc": "tsc --noEmit",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run tsc",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "_nodeVersion": "8.11.1",
+   "dependencies": {
+    "tslib": "^1.9.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^5.2.0",
+    "rollup": "^0.66.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
+    "@types/node": "^10.10.1",
+    "@types/mocha": "^5.2.5",
+    "rollup-plugin-cleanup": "^3.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2"
+   }
+  },
+  "1.0.7": {
+   "name": "@peculiar/json-schema",
+   "version": "1.0.7",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.0.7",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "5ce801ecc4517085a66883c41bd3dcff61b7a58b",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.0.7.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-6qc5ILb5kD70rAqqoAdmdv7Bxh4ENNUz6O8oTW1B922yXAf6yMIQP9nGqyle2j2VH5WFokciaNwZFsYazluKxQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIFzMb1v9Ef+xyTwrtHaVGLmp5BmVUJg/dmq/XHm/U/MFAiAU1Gtbb0zQvMry0mK5ghXwCxuwJLhHjcD9Qti2SDr4cA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 16374,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJbxeMICRA9TVsSAnZWagAAuLcP/AzPF/ivm2qvlQB8ESaC\nSdTr5VFkOtuzu+Qz+6uOkO9HxU6T70BXTCD3p+OryXUNJ8T7NHUW0g+zL28x\n3f/2ciQqjkdKgaT0K3Ta74/z4ircgOQj4tjC7wLUvT5JnHOa97TZkZRFOWAB\nquF2ITJXcc3MpBzpLFHQ35lprK1QvhAVQNcLWoiggL+72HOoSC/oC+acNJfu\n8BmgZxaUK/PiTRYJgxzC9rmbbqJPich/3lSCXD2VdM+zch2QJm+dQgnGoJDC\nM/nfxBUj/t7LDdvDWIDbrEa+9QvZVsOiNWQov6G6ZXTJRysPfPlhZvqMRRwF\n2Z34mcmrJjhWJ2FJ7isfoYJC5vs0tkXirKyVCuYYn3abD9Vmgxn0ENIa+dCF\nzgI1vgz5yPGQapwe3ktyRUgQ/NKLLuBySA1nhIb1zvogWkI9M/k8VMVQqE60\ndU1CVelUUTxFvXIbjTYwljRxTHTlgYdnIswUms5n7+ircL+eUEKtHZ2zHuNy\nKs8JpCHCHf/agUSk55lXCt5pRuTOY9ZQaaCm1QM4h9HFv+rqiB4ZocxuVW9S\nfvhVAAhUvNi+cIb+RevyAFh+kadUB+UGkBXZ4yM239TeeBWSVNwEpV0z96Vq\nr2vvVn0y5UXfksP79cjXBWDx5tZUvHuLqI5j2Z3VkxXT5eeB/AP7sgjMg5QV\nDOt7\r\n=vgwy\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "346f928176b375d3f933099f133cfe1734e223fe",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "tsc": "tsc --noEmit",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run tsc",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "_nodeVersion": "8.11.1",
+   "dependencies": {
+    "tslib": "^1.9.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^5.2.0",
+    "rollup": "^0.66.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
+    "@types/node": "^10.10.1",
+    "@types/mocha": "^5.2.5",
+    "rollup-plugin-cleanup": "^3.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2"
+   }
+  },
+  "1.1.1": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.1",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.1",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "419e4160c5c54f47aaf089bb34d6881d75886a47",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.1.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-ik0Z/85BnoTfmOfqfBM2fwxTtPE2B90tUgOSbVVKlk8xelwzEHW1LiAHzYY9fZ7EiXl3HcAmOyAICv78A/lXbQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIBfSYHKFCifG4balWd99bVUN4Y2xB4r5eTg9BJrUUUzLAiEAtF9HtVK9aFRoC9mohNfopLBwhXGGiZWZAOnJmxBlwIY=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 25627,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcBXyTCRA9TVsSAnZWagAAKhsP/Rge5GSJ/Wous42iKX40\nnGlZwADgrD2AxnhuSNQMxxa0UjygOOXX7CzLCJMH2Y6Zld5WabeMnh/flBut\na+2h3JBCBfk/N0CnmS8W5Yamc+cbb69J14zp9FV/gVbkEPolsGVTAtXnfh7Q\ndearqG4FeZvxHtp+MrE6AJv4EGQ4YminRC0WyfSI/iFo9zHd+x92VQ3GmqS1\npIejfgmh3wM6acTxKbn5SKSBeYBvdSJffjsEooGeNvHL1LYOJXuA0lvKeLgh\n1ybRrkpXaxiIMjDgzSTs8kElmih6v6jI3k1g2jxbLepG+WTWCiAmSlee8D4Y\nX4is9wFf7+yNS36n1KJjpd2mcNRSB4GAWoUSfdA08HvDAwpBCBA4sU4yuyN+\nt9nMrqSwPkCKfUkitwM+xCBp9IIPu5v4v02jNmGSH0Exn0GbUqQY1g6XZRxn\nL4FXrEfrqhuqg5/ydSKNY+YpKe26/+AYuO1CBCqtQ37hHXzYvr/3ZBP1brMo\n0kBCA8Vp56b6T0NL4yiMycwGmaZW5jV4Cj8QJSUHpeVP67qqi1Lptfw4G6cJ\nGExO6i4ZcJRfRkJubM2OX/vfJ1bCoSae/3X77lWmN5NvLHswbeDGvatP+TH0\nWbDSdIqpbHQoZQkAX3WPalyMgpWYxXzFFSqUdnNIA3x+MHdcmsw49sL3Mhi5\nGJil\r\n=xhkf\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "28528e568c6825edaf57834948f80a1975554dc6",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "tsc": "tsc --noEmit",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run tsc",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^5.2.0",
+    "rollup": "^0.66.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
+    "@types/node": "^10.10.1",
+    "@types/mocha": "^5.2.5",
+    "rollup-plugin-cleanup": "^3.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2"
+   }
+  },
+  "1.1.2": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.2",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.2",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "f45f2d75b776d84a16c39afd87db9bf3c55a89b7",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.2.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-V3IcX3jEs9K1IERb3jIBaXOBPlYM658NEgjarqH6XsmMfPwFb2UtlpSL80BGDmF3HNh68ekF8O5un8rYzEzOnQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIF41swcPBaVjhTfXYEWGMbuLgP4RIo1XuBvDThBQX4ZCAiBrNB0s5aV0Qq+cfu/FP7UFRKvodhFuapdPn+H8YAVmSA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 25736,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcBnRFCRA9TVsSAnZWagAAC+IP/3jemBGZPdrMCQzmgU5K\nTYCaYBu1DaVUudTpHbOt2qlMCJZHXR0DDWZ/VvDZSt1E0cLTEJcHsX4Qcvs5\nCq9kkeN/VNdsBEnggyiwbyJ2ZW0xRb8HWgYC7eZ9rnQ9zHFmu+pWhw3gctIr\nFSiGtnyKY1gloX4UiE0nx2g131lqCvTvvtRKjLnvF0wBcRTGRy7UwFoDpAQi\naR8ySi4Y0zkH4oBScm84RjeaDNhjtU73p0FjF+tv2CgXGDBriiKj67izgBCG\nHrBas+EHXPMNn+aMb9h2+ebSX798z3agnX5+y0GSP+QDhyXUxYrkL3DyVkFU\ngGZJfHM8j4ozDknMDziqgaRgjwS2WvEYDoPJ4S4eDstnFNoVNn+MJCjuF2Cu\nkmUk4lUp2q1igAZOn9Im6+bLmEoa0XO1s4WAO9R3NbbtLMxjjNfst/14Vgbm\nBMOOhLpq3Vx07Fht0Dj5T0F9F5JsYQo85Dad1yyDxCPFMOgp4BHfaeDvMYgI\n5hbY9eRa1ZmYDdBL9N6kxosAGAZkvb/NdLecoQiM2e4oVYd1wIwSqZErG+q3\nc/4SrTGI6/KwB4dOSDlDRXoVfksyIwrA7PJkQLytdysql6Bi9dj41Ofl4HBv\ntTqxC5W6dcACB6zkZtYrLJ4CXySEXmBRa6O7kvzx1lsYLtY8Qn6Krq9hG9LH\nMt6a\r\n=k1Za\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "36d9bb78d96780bfc25999e5d1220b23e7512e29",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "tsc": "tsc --noEmit",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run tsc",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^5.2.0",
+    "rollup": "^0.66.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.3",
+    "@types/node": "^10.10.1",
+    "@types/mocha": "^5.2.5",
+    "rollup-plugin-cleanup": "^3.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2"
+   }
+  },
+  "1.1.3": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.3",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.3",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "7042eda65a252c49087dbf7c7dc900148330d2fa",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.3.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-cbefXzf/TvUZCykDL4j7CZ4l9X58+BgjErCK41gQp+9dH85Uy0zbKj2gyuoIrQn+pcHhqghgG8CgEUyXIeoLzA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDcn63wUQlTHp8HP4WoU8kwnbdRHsMqtUjQ9kT5E9teTwIgR9nTS0xfAIU3ZycYuh/bT9b36f44c2gtTGnO1BiSOKw=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 26373,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcIMH8CRA9TVsSAnZWagAAL38P/js9D3aBgCDYExXyeAFb\nmZg/gastodYTr1+YCxmwOuQfBSVHKTlC0kqUo3l5c30Ji0xtJxuV133mzERf\n9DUWfOGlVgUa2ftysvSZbn69Gd6G6Qqc0q5EfoC7MffHfsSdk6iuTM8Bz4kv\nxGhlHkC0+uUv171TVxtb+niQ0IjIYZaLvZuoZXZOZoLR/iFB4dLyx0Tq1nJ4\nbj2CEk7fmylEu5aYocrye22Vpd8MDK8x/BX4itsY+A0NA06JPJ6WhRcaBxyY\nC++YggUzelOx3eIcNXi0kDRm9O9aBjAYs6zlTU9750cqazUf8bpppULAEger\nTJNnC7gl1bsX9Dg3srnxrfVfr9JOAvpNI3mhWawMZFGKMIjctSG0RzNxJ+dw\nVgGf7C9/I/t+zVp2bU5mWVP58bdnkdSEbFLj7xZgz/E+Nm5w9jCmi3xTziuk\ne7vdPASL95VX5l25JNjQoQy+WpPzMfcoke76U73vu+OsOZji5vRcuoRywyMS\nwKlS2vof+qjcU2rycxwwewBLUaESlyJk15DoIi75CNcxXfwpPoaWF4K60FYM\nK3M+nDeiAiNmOwGKcPX1O85QAgv+JmJH1F3XV/H/b5ixMlDS4fgYkH+lrsC2\nJeIR2s/nreLfyeNHekNpXPtdbUtwk0HV106LjrL7bsPpowHoa9le7wNOdYd/\n6hwF\r\n=XLcn\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "b3e5eed367d07a0e9ce74be8b1f7d8ae4ea888bd",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "tsc": "tsc --noEmit",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run tsc",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.5.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^5.2.0",
+    "rollup": "^0.66.6",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2",
+    "@types/node": "^10.12.18",
+    "@types/mocha": "^5.2.5",
+    "rollup-plugin-cleanup": "^3.0.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2"
+   }
+  },
+  "1.1.4": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.4",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.4",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "2d2e2f88007f672472a1d661f5a48b88168aa843",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.4.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-wQvZLSJ2A08QvMhZhjLf/HgFu+bwrID14idCa9kBdUO3iSzsRA/FgwmTNARSUPH3/jnYQI/FB9Rh7sPpYK9gdA==",
+    "signatures": [
+     {
+      "sig": "MEQCIGSuwAHm/paqbUQ/B3rYcR5Me791tkVYtPxoJSWaL2ykAiA8DNAeeoYV2OfgRUXTNKT+SKY95N3OTQFcivTFpWkW4Q==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 27236,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcM4YtCRA9TVsSAnZWagAAUJQQAJHPUJNYrkp8JQ6oXWDi\nsuXzX7UQr1A/rMf4Xp9KY+PpLlhcUL69gsq7spjle+5+y8phNab1sJdkceCz\nbF9lWotVYI3iXnjpYqkeYDOIif51yAKUYI7ax3aApz92+US3RYtaN0cv5qNT\nBXXY+ApcGvsWuqvjc2CBlfIl3b19TbffnutRb34b8SL8ffTl95C1yyTB4tpX\ngnkHjG/wSSlxP4x5/aOhGU92/ci3vGqk8PVlFHtKIuxtdyZ0i3doD8fAl1YP\nWudYnfgJeBFBlUkhwCZAdiU7bOzbluDmdEk15k9NU/ku4KL/bIwMOcz10zgu\nS6bKx//raOuPfaMRFgcZW6F5BDO1uWdHeQj3bhEJqygEWI8lnzWFG+JRf/FN\nyCy36mnu7A/gYzNEO4TcDfILPEORHsW3dwwDmBQP7r/DRzf+dZ+TqJ8uoFkJ\ncu0P1mktfDXakLsFxWx2utJ5EG2MtdEXSqVN9YJaw2c6zijoCIeNhhe4OqbP\nFyjGygiFyDQLajf1Esidrjt3CnpQj/x2g3Zhy6AQDdeKZAVcx0YsMyGMj5L7\n1kNHBuKQNzIp8zpQgdk8ZppAmP4Ai4lZALykBe7fx8I5g6GN8SthnF3J4tNx\nSucpx2QhD3liXXJYaT44vlOAoDe2O2cCCoENYtRKxVcRPjWVkTotNwbl6qNA\n045/\r\n=FPM7\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "f45e9289c8d1c0e510a0d4e42e147aa5b4ccf6f6",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "tsc": "tsc --noEmit",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run tsc",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.5.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^5.2.0",
+    "rollup": "^1.0.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2",
+    "@types/node": "^10.12.18",
+    "@types/mocha": "^5.2.5",
+    "rollup-plugin-cleanup": "^3.1.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2"
+   }
+  },
+  "1.1.5": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.5",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.5",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "376e0e978d2bd7132487a5679ab375a34313e73f",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.5.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-y5XYA3pf9+c+YKVpWnPtQbNmlNCs2ehNHyMLJvq4K5Fjwc1N64YGy7MNecKW3uYLga+sqbGTQSUdOdlnaRRbpA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCsES2n5phaJ2KbZ/8FigIs2Lf+R2oHjCW7eUKu/DiyCAIhAIRh9fwJUi15WkpLrY38Ekil9XxNwzb4yrMtyYHftpE1",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 27522,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcW/zbCRA9TVsSAnZWagAAGqIP/15csMcO2UKFlqCZaZcK\nOf4qK2oPFm6X3XeMRuPi51JBl13t98fosR//Jrs6nJ69vAjEKo4lLJGh+URB\n9TWBZj34Fnr7N0oC6mhnqKQoApXQ2HomiKnuQlWF8XZSzdGRRZvKldw+hK10\nLF0n+5aZ/VnakQZpXJHzXkrzrgtGFub5jQXwZ84rPtuGq4xjq55vgxxQVqMa\nqmqeBoV9djt662Uj6bevlIDZuYlGzQYVMWyDDFXtm918g/0c3ySpFbyG1zCK\ncdeXE2qqMVIt8DJHN25u/TvRwU+qLCBeljjIwOCK55mxLPBpQarU9VYnZExN\nWcSaH70QHovAAdEkxNtY8wlMRQpNG3LpRGIM+nnrSlrzp5mxpgnmx5hzW670\n5lJ8IENHj5VcqjOPMKGaz5BLiCMCd8Q6yU677gJnCYbO3NQPTiPcrWXAK42z\nRe30jxlnOFedc87ejM90ZDW3cGxQba/oJR462sfOeryOtmRGfqn0kLU2rkfp\ngv5KqJ17AibrvOxVueQlsD7wWYJ3zUKToeXnAtCeB2qP6h6t+GE2WMreFVcJ\niq8188kUIxgSjijan61i6oZABzT+qrFpNVRrRG8thTlE8zL/EHNivAfBwFzL\nMkpFQFIemv0ieH5q7Vdy/6zBpYr8ZSmQOlLpNTGI8lbvb1uwXuU1FCwSukQB\niljE\r\n=3l5S\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "6b2bd3778e76b3cc1951cd097bcc55ed659da150",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "tsc": "tsc --noEmit",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run tsc",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.7.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^5.2.0",
+    "rollup": "^1.0.2",
+    "ts-node": "^7.0.1",
+    "typescript": "^3.2.2",
+    "@types/node": "^10.12.18",
+    "@types/mocha": "^5.2.5",
+    "rollup-plugin-cleanup": "^3.1.0",
+    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-node-builtins": "^2.1.2"
+   }
+  },
+  "1.1.6": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.6",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.6",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "134096ede59cf502e9acbdb24cbe55eb97ad2fe9",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.6.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-A8DM0ueA+LUqD/HuNPHDd8yMkhbRmnV0iosxyB/uOV1cfiKlCKXDeqkzHTOZpveRI05iCjZxqkPZ2+Nnw1wB4A==",
+    "signatures": [
+     {
+      "sig": "MEYCIQD3T9BU8zL2Xhyl5Qnio5Hi3qemHfaJ4R8dQzE1rKlixAIhAKAGwKyABdqUCrMlyUWHAiSBRwZcgk9gHON5idnZ+OKm",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 27478,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdxpcXCRA9TVsSAnZWagAAOr0P/jJEcmfhcKypVBtY8U9L\nbZ/elo5WrIH2rskOiecqwDToQzRSjxl1GCFjLeTiVMGayNLKK5GiMD0LFxKT\nHNCXXMTEYK9RfiSX+KKJ3nxmTxClROqH1P5DTcQopAxgxXeq8xIrP6cyF5gr\nGgdN+0b4cqwWtZJyspy/+PCDpxrqUdyj0SArxWdeEIrDbaYX88A15wlijcfo\nus+xP11SCO91k90i0nto9cadPgem0lTSjOHEA9lUWa55yoVLYWBYoPP0omQf\nFx0oZH+P52WoceiKfYhlqlwpdSlIElBA6dYnpAOgGYsE8kFmTNEOhYqAZ89F\nnV2z9FTmHMU8Dd5lJaeKnRktL4t0wPLzQtR12S8lndB79cLuNya7tTCYYuEA\ntMoINGZozwn5JnJkgQS/BJsX7nSxkApfzLDzQNiJz3hgFyfT65IEBoaieavd\ncUh1+xNziRGtfXU367qymm0kDi/YpBF3psCyHgx8Dc5EVbyrNWKEWJNjxoHq\ndPL8BIo6zu6lotmPY1aefzZU1ivg7HpowvPGMlN2U+J3F5LvoIe74cQ5mIMp\nQZ6lua8GnGBOZU52QY4U9Ru7KeOAnB/vtPZj3SqKomemEwvqPeuWd6svGSNL\nSYrSjAqvGNbInnS4BZxhqC3pRwmK33vU/sY0KzV5/gSMvQeSto6Ms2ZKhICQ\nFlQ4\r\n=CR1w\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "index.d.ts",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "b31e2be95016dff5b5a04db2ecab3925d847eb08",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "tsc": "tsc --noEmit",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run tsc",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.12.0",
+   "directories": {},
+   "_nodeVersion": "12.13.0",
+   "dependencies": {
+    "tslib": "^1.10.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^6.2.2",
+    "rollup": "^1.26.3",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.7.2",
+    "@types/node": "^12.12.7",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-cleanup": "^3.1.1",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.1.7": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.7",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.7",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "e4f55785b95ee879fc6a6aa578823f5d54226f35",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.7.tgz",
+    "fileCount": 28,
+    "integrity": "sha512-PFRQnb/ffbkF41Y5x2QqVcpQG/e6MOY+eKXO8+Ft0a//zN0Yh72s6gjcDHNwSgRAU+Ux+rahP6FjHL+iKAR1dg==",
+    "signatures": [
+     {
+      "sig": "MEQCIBSn6SDOOlcN50EaGmOcobr4IMAF+KdAtQAtS3BdqMA1AiBo4vgPGCp+FBxUZRNzWN0rffj1yfF5+6HEyj+BE6QN+w==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 51327,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+O2MCRA9TVsSAnZWagAANoYP/1nNyCbzL1TFXDMy7b/X\n1lWK30pETuEe3o7Lni47wxWV2d73zOAFIyDlsScJvx0Ylo/19z+5VBDc0T8i\nutI4E3lPaAamypS2eHMM8hUU0XGjK7ySxRypUPdv2MAVG7GonnjElL5FB448\nQLVO3oEurkHyutk3yc6BzPuzwg+iL1rXoPhiXONyOH/tehrpxxV1UUpLWZG7\nlEgayLBgRBhsLWDj9FU97fsno1hXiWfEssQX1NHwOwfwBq9O1wZ5ZBq42JTt\nVKn/VKAKCwPmX40v0YvrlI0FguukgKCN1VXE4SRHF72mMitKflFxIpp2Xvr5\nN7CD23PhA3bijbRR+unGLhurI1wdQ1L/lRJ0POUckI7nx0wiCSDpoL6+glys\npfTEKgsOKhelrvtTw9xB5Jf1WTWcGYDVkx/qpRw/nNTiQyZyUh9nZLYU2F5x\nP28Es05h9rKayhcns9W8L/j0Zv/Dj/9OmObG8WUdP0dm6Cw2bKCbdp3hA6Dh\n1R91terhUhYLNsCs3iPimM2Zju8zCimffWqoobE2/gaJiHUdco+CoNWaqp+n\nxdgIaYL2RL2/6oaXR9F6UTZjbM+m6ZkSyfR8cTdbXd9ezjQYpiY7OTYQ/Hn9\nTOD3yXQkce6vwovwFN/1lZX7ZHuk+2gUMrkAk80EDvx6DZcF1V4a1IQB/3i9\npiDF\r\n=DSUZ\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "build/types/index.d.ts",
+   "module": "build/index.es.js",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "1e065649cfa4ad0da6b83f35a87b3b92425e275c",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "tslint -p .",
+    "test": "mocha",
+    "build": "npm run build:module && npm run build:types",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run build",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix -p .",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "build:types": "tsc -p tsconfig.types.json",
+    "prepub:next": "npm run lint && npm run build",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.12.1",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.10.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^6.2.2",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.13",
+    "tslint": "^5.20.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3",
+    "@types/node": "^12.12.19",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript2": "^0.25.3"
+   }
+  },
+  "1.1.8": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.8",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.8",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "a768a11dbf0ee0a9f570872eb3982edb144e5b80",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.8.tgz",
+    "fileCount": 29,
+    "integrity": "sha512-6xQLVio1jr1lG3f2g2MPBp9YtIpfcdpnOlyb/X2TFFjdIbQ0F4Lo/krOCSiNklfPO2UIDBynv/dzVH6Ohm5gIA==",
+    "signatures": [
+     {
+      "sig": "MEUCIFyu0Qrx6iWj7ZqkS+NjFlGyYkXdhltQDUWtbLg0gmUvAiEArHNF7lyBjJpJsPAelnxblpeAJqMSg++ok2p18i+8N4A=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 51554,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+PBKCRA9TVsSAnZWagAA3rAQAIoUz4VOOefqDyOgtNCv\nMZ5UqX0XIh247sjeZ6AGgpiApUmQIgX6wwzoIeQoBTF1vBRQoCoi3FkQITs4\njyTPoY5bkK/+xUMCOH4jW4hzEB3wrXUkXqThytTStta4gZTuPkSYn6CsK1Ru\noZy8xFuRWTZEai5I8nsaTAckRXarUO8wAX+7+yn83qSmQjyr6d3U6R13dMD5\nzKshvSPNG2KJaxxrWwicbpD4byN9NnpMGL7oD/2AShPUdJsIzuFnBHWN94rl\nt0uAIEFHCU5Bsv8KJFv7J8l3WB4g24cAR1TAOYgdVesDpT3uDrOpRJpklnBC\n/wZAz8OFPjEUW/AcyuOofRxMH6X7AchQaUjAPBqUt0/O887ttU3E+z1ZWRjO\nvVuYUQ8dIFfAmqaJac9f/KQbKba7MZmeA+PYO9/dMnhm8h7nSLUtB884u4Bk\nW7QuIuLy9gNsxeqYrpl8DshPCgBMpO1nHVpeJu1j9KjH+k3QOeR7Qd8gkIWJ\nE9weQVHim+nwB8zL5yLnOwRaEGOZM0RATnQLfLdVvrd34A07l+eq2LSN1v5T\nX/MRqIEg2qfJ9DqNKHFWgiAluSIqZcnccqxT9N08FV382QCGQMR13UqKzCWB\n+mSMyqPC6D1A/qzQDnUiwBXBn/aIIU7u+sBQDUWShR43VKHDfLTCIFyTl0of\np8Rd\r\n=insg\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "build/types/index.d.ts",
+   "module": "build/index.es.js",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "f4db2c5aa7187cae42c13ac91c0ec75f24959f19",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "tslint -p .",
+    "test": "mocha",
+    "build": "npm run build:module && npm run build:types",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run build",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix -p .",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "build:types": "tsc -p tsconfig.types.json",
+    "prepub:next": "npm run lint && npm run build",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.12.1",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.10.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^6.2.2",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.13",
+    "tslint": "^5.20.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3",
+    "@types/node": "^12.12.19",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript2": "^0.25.3"
+   }
+  },
+  "1.1.9": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.9",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.9",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "b746e046b787607a1b2804f64437fda2527b3e62",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.9.tgz",
+    "fileCount": 29,
+    "integrity": "sha512-F2ST2y/IQPgY+1QMw1Q33sqJbGDCeO3lGqI69SL3Hgo0++7iHqprUB1QyxB/A7bN3tuM65MBxoM2JLbwh42lsQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIE7GuT+2qTlATRO4qjMV7fhvmGQ6JEEh2PFXLdlKvU5YAiEA0pIgdXS5Oh2iPKcoPOUFdtKIeNburTsuD9ge8NN+/X8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 51870,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd+PSMCRA9TVsSAnZWagAA7o0P+gJgY0ETRVzQAsAgM3Kg\nEVgMdlyUu0/W78YG4Tmtx2A3tnE7aBRaP170PSbdmRlyNAQsVw1NFUVpHzAd\npC/jncMFaBguH2hQxtH20HFnDrLNaVPBzlZgHA6TR1xUD6/uSeIVWQUMgUDl\nD/hZ1Y6S5KP4gW/+VpUFJphGi8/CWxzFyp1SsJlsCaX/rFdpChYx4E2k2OPj\nGm2k9O9Fo6XEZDk5CXwteV7/4VkN/NzRBeB4XhDz2rPb2YuucHVKdrK0sPrC\n10I+K2P8g8dUcbeOGksyE8uPXdWSAUDTjY/TM7gXhcnbOgSQdkNpTqZrEHSY\nz7ryAYYTcULauv0hyVVHUt6HEZb2CLBtizklsnJzME7EGjjB+4NnKiQq0NqF\nH11PCbhYCUk8F11sjsTsfmX9GYb3SsI7gGo9aKMCIp4FeXKkxRh6wbIqkyEo\nA5ik0d24Qcqp11/SL+sF08wCXWckQFbCYz3HEq9ISqxhSI+Mcy+q/fkBID+0\njhWk77JUkp+30kcb07OcfoaLmFWlagjd+NGXHHjRD1biHEyHulNTi9YoeAMy\ntKv7uzQ4DvTI4TWd6Edl3+9IUFUhBI9eVh9d9WNQEDTzUnlWxlYVXB+Lwnu/\nVs4YIDHrR+K/LkBuZUMwkWYeO2D7+cBkCNsgzUxj/wFWPHxuaiivyLX72e/9\n5na7\r\n=Hnid\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "types": "build/types/index.d.ts",
+   "module": "build/index.es.js",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "a0fbbc5ef34cf59cac2326f690a6113e3bf15e71",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "tslint -p .",
+    "test": "mocha",
+    "build": "npm run build:module && npm run build:types",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run build",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix -p .",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "build:types": "tsc -p tsconfig.types.json",
+    "prepub:next": "npm run lint && npm run build",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.12.1",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.10.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^6.2.2",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.13",
+    "tslint": "^5.20.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3",
+    "@types/node": "^12.12.19",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript2": "^0.25.3"
+   }
+  },
+  "1.1.10": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.10",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.10",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "d772b4323c9a4b5352b5ad52dc821a07b0db4877",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.10.tgz",
+    "fileCount": 28,
+    "integrity": "sha512-kbpnG9CkF1y6wwGkW7YtSA+yYK4X5uk4rAwsd1hxiaYE3Hkw2EsGlbGh/COkMLyFf+Fe830BoFiMSB3QnC/ItA==",
+    "signatures": [
+     {
+      "sig": "MEUCIGLiGfYBo+rxTliCd2uIjRTRAvg7vO+D+Kr+hPFrsK4DAiEAtoxozQkyTeodf8AjVL1dUwq7cX066tNcewHIqvMMjvo=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 51773,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJebyM5CRA9TVsSAnZWagAAhaYQAJMc8p7g5ko/DBVa5zzn\n526T2GVsv1yGZfWmlS82fp1g96I0cf1Rss2wDrINciBLr+uropKAD8siIXKx\nPI59Cz0rnpWGs+1BGvbx4rqCtHPwGrqbGrf0PQT6zpwVFEsVpRMgdrTO5a/N\nF6DbiIq/uxa0pRyqVrzPa5IokR34zJZENtkpFlUY37gR0tz9iwOYMZG2Mmlf\nCNaNcBeyhhjS0I5IDQPjtBweGfwhwnjqWDvjDpIXTSnjv9ECXSd6TGTVIR/R\nJ5P9eeLYnSPr7W9Ak2dnAYIyBINRUd8wgmgWdfJq/WD+KyLIn70rITy5Pfjn\na7426quS6R0gHSr3FCAbTzRJjWsHdt/UTMs9YGmyDs5HLa6octbkbAic25pa\nSuL3GhfK0/j78ZR1/kbn1uUUCcz7jQo6Ft/nDnnTxpp3Y6UqgpkCIo5CuvsL\nwtQhzn6wAG+eez8barjWDN7Rr1zY6NWze783ahd9Kje3NU5VhwWu/RhFHL+/\nIEXJ6Wd9I2m615I1QVM9MUOTYbuld7OuoKKguDrQeHUy+cFxokGNaqKi44Ki\nwrAQGCspfe/E9rsCGksokxz+ZhfqfaDcEE61KvpNKeVuLa3orr02P6Y9DJKF\n0R33Pp5fAbHJseQpXyLNXO3fr91IkBFUOkjYOLxdjH9Ku/ej6eunjOxeLy2V\nqNF+\r\n=1arh\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ],
+    "watch-files": "test/**/*.ts"
+   },
+   "types": "build/types/index.d.ts",
+   "module": "build/index.es.js",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "252d17db26af3c25681fc76290f25ffed40d4e23",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "tslint -p .",
+    "test": "mocha",
+    "build": "npm run build:module && npm run build:types",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run build",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix -p .",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "build:types": "tsc -p tsconfig.types.json",
+    "prepub:next": "npm run lint && npm run build",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.2",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.11.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^7.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.0.6",
+    "tslint": "^6.1.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.30",
+    "@types/mocha": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.26.0"
+   }
+  },
+  "1.1.11": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.11",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.11",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "d71f9515915297bd31e35c2fc5a84eab41f4df4b",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.11.tgz",
+    "fileCount": 28,
+    "integrity": "sha512-X52B7LTZ12R7vRkhs1bHlVHfHi66s4MsAO06A8W1xgnwfniSMGVytFff9ADq9fEfxW0XR/aPXtXkHUgiDV0FfA==",
+    "signatures": [
+     {
+      "sig": "MEUCIB9cxoMgfwawItVxJmJV9cAXV1NO+q2prP0t16TvJghEAiEA/NMn0P5mz9CZ8fMv4/XfuZsv2MNrV/zn4LXoJ0HTk7w=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 51918,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfF/kuCRA9TVsSAnZWagAA5rkQAJpxuxE+Hv4jYN2Ic3da\nyK6Xop6Qw7NqAhQ0vCZpFkqw7mhVVaEtHHuOqBTK9EVu22g0qzFNM5m89Hnj\nqmUkr1LZQE8xlS0ZoWFZwBDsud1Va2/ssIJNH5QP7XwV2TJoZ0eLjDQIL/J+\nCEQ8Wq2EzEim9tHq8t67dXUhmqsHJP6s3Nvip4nsLMpQcoXv5MgkzMQakcW6\nSESHHriGTwMaM5CRI1HNmrOmwXYquZn42IwERJTD/qVrkWfsmyARiNjCS7HI\nphg+DrFkehweHRVXyLRq+jEBu4s4z+kCg62DWxt5lkPnFNqZpcrlpKgCyISm\nwm9T0k08OfdPeZVe8WIZIYzcUEoc1UWPhYoX0lE9+lq9j0YCsja+BKIyEbBO\nEx9qK9fb5MHZ7iS9+FAkoGBliFH8zFlXk6WY0ED+n7FCkLLs2DSao5/JDzhJ\nLU7W9/4Gwfg1EmRq98pTwArbfD8mdNCw446UhVwk/V7G1NnM3hYyfm+opfce\nH+a05s/yu6ilXG7k0NhhgmO/ao3B8x3XyGiZuq0ShiuPlkaYTnoZ8rh6B9hW\nE3/Gnk7YD0+XPXKfTpUTTZJGMmjCoKS1d8ZxDD/5YQ72opRjxbTwYNvuZBoH\nU0fQ7RrP6lIkiuKyXzsRd+pF194srGCrNnGOmXDNTrNDjp2j6TLtSTq5wUaE\nT52J\r\n=20tq\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ],
+    "watch-files": "test/**/*.ts"
+   },
+   "types": "build/types/index.d.ts",
+   "module": "build/index.es.js",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "bf51cd92091da9b4a5fe8da934128c4bae195ac1",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "tslint -p .",
+    "test": "mocha",
+    "build": "npm run build:module && npm run build:types",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run build",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix -p .",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "build:types": "tsc -p tsconfig.types.json",
+    "prepub:next": "npm run lint && npm run build",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.6",
+   "directories": {},
+   "_nodeVersion": "12.16.3",
+   "dependencies": {
+    "tslib": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^8.0.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.22.2",
+    "tslint": "^6.1.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "@types/node": "^12.12.51",
+    "@types/mocha": "^8.0.0",
+    "rollup-plugin-typescript2": "^0.27.1"
+   }
+  },
+  "1.1.12": {
+   "name": "@peculiar/json-schema",
+   "version": "1.1.12",
+   "license": "MIT",
+   "_id": "@peculiar/json-schema@1.1.12",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/json-schema/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "fe61e85259e3b5ba5ad566cb62ca75b3d3cd5339",
+    "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.12.tgz",
+    "fileCount": 28,
+    "integrity": "sha512-coUfuoMeIB7B8/NMekxaDzLhaYmp0HZNPEjYRm9goRou8UZIC3z21s0sL9AWoCw4EG876QyO3kYrc61WNF9B/w==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDdKawQfAi2g3kFEkFm+CvOD9M9kNwFxiFuYdvDO25v/gIhAJP1DEzdxqzVhlfvt1TaLZZL5HILUkOi9nLYhw37FYC8",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 51918,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfGAA6CRA9TVsSAnZWagAA1U0P/AuLJ300rJIbrRwkpZ0p\nAk8X+P/V8TETvPt/QmALHgJfUgalMYxwFbQyVY+UtNGQzoKK83RxqrJMVtlO\ngjKKJi7pkJik/nSFBje6bSgyustRc832Nns8/QazBPO+TO5M0oHvQ57uLvMR\nXpKqFexLB3/ViIPh74oQB55CafmG+UhdijUKgraLZxY2zAXmkNMzf5usUcHc\nWelnCQzPE4emx2usfyrFB8rSo7jcqPXbuW/kS4BJp6a+IYtvemxMy2SZfOSY\nN6Jl76Dw1A0yVPuzn6iJwXW1xF2jDONH4SbF7unsOy5xYcYhTod7pMinXJAO\nYvxrMWTQwGChBwhd9vuM4VFR9sviZomA4XdMW+LXVvyYlTP4qJ2+U3f3UTMo\n/Uw5TqESdf5AQowDElmx+5AfiGCzduBgHL0uMh12lVZibzcYLm4u1d+vfjwu\nXRfwfNwWl+2oUhdFvDHaTudLJTf5d+BBdMNeYNTwOXHdozYqky+54myadEWH\n1rO1yL4doplYBgfpkH6eQw7Hw6wmd1HazUaeQBh9JLaI/IaJ1CzmpwSl+P58\n+EtgR6boSdA1azLNo7bzJUmBeB1ebqE7zpDH/MIjMYuSD9dG6M/ONg9f+kn3\npTWg3Vqzgo+npMZj5cxcffSkK0AChHUg9reSLHMp6nMBzq9EqADRWG5jNErc\nOGgi\r\n=/FiQ\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/index.js",
+   "mocha": {
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ],
+    "watch-files": "test/**/*.ts"
+   },
+   "types": "build/types/index.d.ts",
+   "module": "build/index.es.js",
+   "engines": {
+    "node": ">=8.0.0"
+   },
+   "gitHead": "0ac71a4abcf23a4b54753f3a5433e41232db551e",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "tslint -p .",
+    "test": "mocha",
+    "build": "npm run build:module && npm run build:types",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run build",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix -p .",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "build:types": "tsc -p tsconfig.types.json",
+    "prepub:next": "npm run lint && npm run build",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.6",
+   "directories": {},
+   "_nodeVersion": "12.16.3",
+   "dependencies": {
+    "tslib": "^2.0.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^8.0.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.22.2",
+    "tslint": "^6.1.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "@types/node": "^12.12.51",
+    "@types/mocha": "^8.0.0",
+    "rollup-plugin-typescript2": "^0.27.1"
+   }
+  }
+ },
+ "time": {
+  "created": "2018-10-05T14:56:24.963Z",
+  "modified": "2025-08-08T18:26:22.136Z",
+  "1.0.2": "2018-10-05T14:56:25.312Z",
+  "1.0.5": "2018-10-08T22:07:30.200Z",
+  "1.0.6": "2018-10-16T11:17:21.743Z",
+  "1.0.7": "2018-10-16T13:09:28.231Z",
+  "1.1.1": "2018-12-03T18:57:23.256Z",
+  "1.1.2": "2018-12-04T12:34:12.974Z",
+  "1.1.3": "2018-12-24T11:24:44.310Z",
+  "1.1.4": "2019-01-07T17:02:36.694Z",
+  "1.1.5": "2019-02-07T09:39:38.859Z",
+  "1.1.6": "2019-11-09T10:38:14.983Z",
+  "1.1.7": "2019-12-17T15:00:28.605Z",
+  "1.1.8": "2019-12-17T15:12:10.196Z",
+  "1.1.9": "2019-12-17T15:30:19.784Z",
+  "1.1.10": "2020-03-16T06:56:57.503Z",
+  "1.1.11": "2020-07-22T08:30:37.700Z",
+  "1.1.12": "2020-07-22T09:00:41.719Z"
+ },
+ "license": "MIT"
+}

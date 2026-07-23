@@ -1,0 +1,1215 @@
+{
+ "_id": "@electron/windows-sign",
+ "_rev": "18-83e740ffb97a1de7ad762270581fa6f5",
+ "name": "@electron/windows-sign",
+ "dist-tags": {
+  "latest": "2.0.6"
+ },
+ "versions": {
+  "0.0.0": {
+   "name": "@electron/windows-sign",
+   "version": "0.0.0",
+   "_id": "@electron/windows-sign@0.0.0",
+   "dist": {
+    "shasum": "1f8d80f4244a9274555f2059c9dff5bfac05e9f0",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-0.0.0.tgz",
+    "fileCount": 1,
+    "integrity": "sha512-FHeXR0bpt45PLjO/yDH/saU0Q3dfVYtbrQDQrdCInDaxIwwKPFuJVQbYIcKdWC2cXZ/MbPyH/BJmW+pmOZhRrg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCzgb/AhxlAmkhdBPp1DOZufOHL8YRdKe34LDMjrDjl3wIhANgUMhNx+Eb/qRaJe/Ht2wzJiE/jNob8TqBJ1GkRTnjk",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 61
+   },
+   "_npmVersion": "10.1.0",
+   "directories": {},
+   "_nodeVersion": "20.8.0",
+   "_hasShrinkwrap": false
+  },
+  "1.0.0": {
+   "name": "@electron/windows-sign",
+   "version": "1.0.0",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@1.0.0",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.js"
+   },
+   "dist": {
+    "shasum": "f08a0a5d4b96840ab637ce11228a59ee8b665287",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-1.0.0.tgz",
+    "fileCount": 60,
+    "integrity": "sha512-sdkQYAR/TQCEyYgz2jMbusL/ljdj6qA7vyIm/S9HICMAitXhXROFHUOLLgiORj1uiaf2EOB2U33DatGubUuZaQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIBMwaWJ5G2rJEW/8K7NcSQmtCWUHGHDYN08m9s+3HkhrAiEA8TOaBbrhhCPz6ubCTtYAuYnZ6rV1xmaBrMXIPdRDf1A=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 518556
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=16.0.0"
+   },
+   "gitHead": "b6a107cd3058a1d0ad1474cc981f4f956c6b681c",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "test:loader": "globstar -- node --loader tsx --test \"test/**/*.spec.ts\"",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "9.8.1",
+   "directories": {},
+   "_nodeVersion": "18.18.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "eslint": "^8.52.0",
+    "globstar": "^1.0.0",
+    "standard": "^17.1.0",
+    "typescript": "^5.2.2",
+    "@types/node": "^18.18.7",
+    "@types/debug": "^4.1.10",
+    "@types/fs-extra": "^11.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-standard": "^17.1.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@continuous-auth/semantic-release-npm": "^3.0.0"
+   }
+  },
+  "1.1.0": {
+   "name": "@electron/windows-sign",
+   "version": "1.1.0",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@1.1.0",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.js"
+   },
+   "dist": {
+    "shasum": "83a42d0372b8f8a83d8f63e5b10791012ffd6760",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-1.1.0.tgz",
+    "fileCount": 46,
+    "integrity": "sha512-8AkEWLW+F98+ryIhHLvffAZEy9L3N8xQZbBX5D7TouZ14LZWSPjsoChafeKr6+3Vq1stiX+BftCvp05Hh8IvFg==",
+    "signatures": [
+     {
+      "sig": "MEQCIBGBoq5d9O3UDoZcypOy1fvOLIECRFlH90rfcW6jvWDeAiBJz1j7/0LN9TfiZyXUl76AblWg+jiAYZdAIRxbkjy16A==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 518440
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=16.0.0"
+   },
+   "gitHead": "8b23eaa900b4ca0905699b4fa17ca22246624fdf",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "test:loader": "globstar -- node --loader tsx --test \"test/**/*.spec.ts\"",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "10.2.4",
+   "directories": {},
+   "_nodeVersion": "20.11.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8",
+    "postject": "^1.0.0-alpha.6",
+    "cross-dirname": "^0.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "eslint": "^8.52.0",
+    "globstar": "^1.0.0",
+    "standard": "^17.1.0",
+    "typescript": "^5.2.2",
+    "@types/node": "^18.18.7",
+    "@types/debug": "^4.1.10",
+    "@types/fs-extra": "^11.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-standard": "^17.1.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0"
+   }
+  },
+  "1.1.1": {
+   "name": "@electron/windows-sign",
+   "version": "1.1.1",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@1.1.1",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.js"
+   },
+   "dist": {
+    "shasum": "4ac6a2f782e70251cc1bd7349485a764ee07320f",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-1.1.1.tgz",
+    "fileCount": 46,
+    "integrity": "sha512-g8/atfOCKuuGedjVE6Xu/rlBtJvfDrmBH9UokBrjrvBVWdVz3SGV7DTjPTLvl7F+XUlmqj4genub62r3jKHIHw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDBLROtUPU2MGn3Ku1gcHJJuoPFY9EtIvL8AFAb5sRzhQIhAI0rkBLt8vUlr1U7m3dG1YTC5JzbD+1vSP0/LadLXFpz",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 518280
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=16.0.0"
+   },
+   "gitHead": "2374696af992e6fd901e0f2918e2bb5e8979b425",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "test:loader": "globstar -- node --loader tsx --test \"test/**/*.spec.ts\"",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "10.2.4",
+   "directories": {},
+   "_nodeVersion": "20.11.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8",
+    "postject": "^1.0.0-alpha.6",
+    "cross-dirname": "^0.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "eslint": "^8.52.0",
+    "globstar": "^1.0.0",
+    "standard": "^17.1.0",
+    "typescript": "^5.2.2",
+    "@types/node": "^18.18.7",
+    "@types/debug": "^4.1.10",
+    "@types/fs-extra": "^11.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-standard": "^17.1.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0"
+   }
+  },
+  "1.1.2": {
+   "name": "@electron/windows-sign",
+   "version": "1.1.2",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@1.1.2",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.js"
+   },
+   "dist": {
+    "shasum": "5489861ca62348d2300407e85d949af95849955e",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-1.1.2.tgz",
+    "fileCount": 46,
+    "integrity": "sha512-eXEiZjDtxW3QORCWfRUarANPRTlH9B6At4jqBZJ0NzokSGutXQUVLPA6WmGpIhDW6w2yCMdHW1EJd1HrXtU5sg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCWctxz5+yENehbp3mYd0GtDprv1tds6RZl0VCQKa9FyQIgf+zYZssnkiIjXJxdUDO5e9Yyyi5BboejSMFXw6HxYus=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 518279
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=14.14"
+   },
+   "gitHead": "9fa70fa7d468500487d1d5d4bb9dbc82a12db80a",
+   "scripts": {
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "test:loader": "globstar -- node --loader tsx --test \"test/**/*.spec.ts\"",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "10.2.4",
+   "directories": {},
+   "_nodeVersion": "20.11.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8",
+    "postject": "^1.0.0-alpha.6",
+    "cross-dirname": "^0.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "eslint": "^8.52.0",
+    "globstar": "^1.0.0",
+    "standard": "^17.1.0",
+    "typescript": "^5.2.2",
+    "@types/node": "^18.18.7",
+    "@types/debug": "^4.1.10",
+    "@types/fs-extra": "^11.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-standard": "^17.1.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0"
+   }
+  },
+  "1.1.3": {
+   "name": "@electron/windows-sign",
+   "version": "1.1.3",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@1.1.3",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.js"
+   },
+   "dist": {
+    "shasum": "52023d17d8f6c686d934f518be76736f6f2f0aef",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-1.1.3.tgz",
+    "fileCount": 46,
+    "integrity": "sha512-OqVSdAe+/88fIjvTDWiy+5Ho1nXsiBhE5RTsIQ6M/zcxcDAEP2TlQCkOyusItnmzXRN+XTFaK9gKhiZ6KGyXQw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCNLMIZ173WsrHXQGl5LTcYVaGbuBqRwFjMIfPweTcEngIhAPycBzwybuYxXAct1CNDfAbjTRoUUpP2tPlkGHWSd3QM",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 526746
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=14.14"
+   },
+   "gitHead": "812e78123d2f0c07be7dee77ff063acd7af45645",
+   "scripts": {
+    "docs": "npx typedoc",
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "test:loader": "globstar -- node --loader tsx --test \"test/**/*.spec.ts\"",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "10.7.0",
+   "directories": {},
+   "_nodeVersion": "20.15.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8",
+    "postject": "^1.0.0-alpha.6",
+    "cross-dirname": "^0.1.0"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "eslint": "^8.52.0",
+    "typedoc": "~0.25.13",
+    "globstar": "^1.0.0",
+    "standard": "^17.1.0",
+    "typescript": "^5.2.2",
+    "@types/node": "^18.18.7",
+    "@types/debug": "^4.1.10",
+    "@types/fs-extra": "^11.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-standard": "^17.1.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0"
+   }
+  },
+  "1.2.0": {
+   "name": "@electron/windows-sign",
+   "version": "1.2.0",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@1.2.0",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.js"
+   },
+   "dist": {
+    "shasum": "d4fe32f05b33070e3d9d45cfa899d4342b997f99",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-1.2.0.tgz",
+    "fileCount": 46,
+    "integrity": "sha512-5zfLHfD6kGgsXzuYlKwlWWO8w6dboKy4dhd7rGnR4rQYumuDgPAF2TYjEa8LUi89KdHxtDy2btq02KvbjhK9Iw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQC9AqPeKR6APLulxkQ5hzyVXZjLrJ4Z89R5uQdYvkCcHAIhAOaEFt4zh+ZdoC4Eh14rhJ74mUKF3aN7OCLUkqzahIih",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fwindows-sign@1.2.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 531195
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=14.14"
+   },
+   "gitHead": "8e54c1dd86a85f88364edfeb58237ea8cb0952d1",
+   "scripts": {
+    "docs": "npx typedoc",
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "test:loader": "globstar -- node --loader tsx --test \"test/**/*.spec.ts\"",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.18.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8",
+    "postject": "^1.0.0-alpha.6",
+    "cross-dirname": "^0.1.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "eslint": "^8.52.0",
+    "typedoc": "~0.25.13",
+    "globstar": "^1.0.0",
+    "standard": "^17.1.0",
+    "typescript": "^5.2.2",
+    "@types/node": "^18.18.7",
+    "@types/debug": "^4.1.10",
+    "@types/fs-extra": "^11.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-standard": "^17.1.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0"
+   }
+  },
+  "1.2.1": {
+   "name": "@electron/windows-sign",
+   "version": "1.2.1",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@1.2.1",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.js"
+   },
+   "dist": {
+    "shasum": "8e4674cfdeb7cd58e14b58e624500d9f03f2873d",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-1.2.1.tgz",
+    "fileCount": 46,
+    "integrity": "sha512-YfASnrhJ+ve6Q43ZiDwmpBgYgi2u0bYjeAVi2tDfN7YWAKO8X9EEOuPGtqbJpPLM6TfAHimghICjWe2eaJ8BAg==",
+    "signatures": [
+     {
+      "sig": "MEUCIGmi+TxuV2jw+FL0A9tR0r/ly+6OesMzx1/5u8a2z7iNAiEA8ynNX2wd9MUeKcCLHZE6orTJkcXKIgJ2RI6rcNl3fNQ=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fwindows-sign@1.2.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 531445
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=14.14"
+   },
+   "gitHead": "dfd416402b4370e3123e245e0d363bab7777b9e1",
+   "scripts": {
+    "docs": "npx typedoc",
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "test:loader": "globstar -- node --loader tsx --test \"test/**/*.spec.ts\"",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.18.2",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8",
+    "postject": "^1.0.0-alpha.6",
+    "cross-dirname": "^0.1.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "eslint": "^8.52.0",
+    "typedoc": "~0.25.13",
+    "globstar": "^1.0.0",
+    "standard": "^17.1.0",
+    "typescript": "^5.2.2",
+    "@types/node": "^18.18.7",
+    "@types/debug": "^4.1.10",
+    "@types/fs-extra": "^11.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-standard": "^17.1.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0"
+   }
+  },
+  "1.2.2": {
+   "name": "@electron/windows-sign",
+   "version": "1.2.2",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@1.2.2",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.js"
+   },
+   "dist": {
+    "shasum": "8ceaad52d5c1eb18702f48103d5f3bc7c338fa9d",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-1.2.2.tgz",
+    "fileCount": 46,
+    "integrity": "sha512-dfZeox66AvdPtb2lD8OsIIQh12Tp0GNCRUDfBHIKGpbmopZto2/A8nSpYYLoedPIHpqkeblZ/k8OV0Gy7PYuyQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIHazVRj/mzEGWXQrw9BGGkBTglbxdbugqX9D4gZwgpFtAiBkULF90onNA+sDmkkR9gOeHKKzkgBUb08NlDXz59sJMw==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fwindows-sign@1.2.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 531821
+   },
+   "main": "dist/cjs/index.js",
+   "types": "./dist/cjs/index.d.ts",
+   "module": "dist/esm/index.js",
+   "engines": {
+    "node": ">=14.14"
+   },
+   "gitHead": "c2a0c7897da0e24ac3d231b35e6860a2e1aa2eda",
+   "scripts": {
+    "docs": "npx typedoc",
+    "lint": "eslint --ext .ts,.js src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc && tsc -p tsconfig.esm.json",
+    "test:loader": "globstar -- node --loader tsx --test \"test/**/*.spec.ts\"",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "10.8.2",
+   "directories": {},
+   "_nodeVersion": "20.19.1",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "fs-extra": "^11.1.1",
+    "minimist": "^1.2.8",
+    "postject": "^1.0.0-alpha.6",
+    "cross-dirname": "^0.1.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "eslint": "^8.52.0",
+    "typedoc": "~0.25.13",
+    "globstar": "^1.0.0",
+    "standard": "^17.1.0",
+    "typescript": "^5.2.2",
+    "@types/node": "^18.18.7",
+    "@types/debug": "^4.1.10",
+    "@types/fs-extra": "^11.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-standard": "^17.1.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0"
+   }
+  },
+  "2.0.0": {
+   "name": "@electron/windows-sign",
+   "version": "2.0.0",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@2.0.0",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.mjs"
+   },
+   "dist": {
+    "shasum": "097670d5529374a44e1e811e908cfc11b2c83c1a",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-2.0.0.tgz",
+    "fileCount": 26,
+    "integrity": "sha512-ydPPtFx1CXc4jQwWzxe973N9N7V/Ev2kvHrj8QjhyjSApep6TGvGaLVNZsSsHzWe6iASV7DHaBT393eBZH9O/g==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCsUC9WWLTikjr+9XVThDiELxD4oomGGSD2qeQPYtW5JgIhAPfSowDNRihfgHuBfBuau+WwzAFUIRlwY08sqvMFHRLj",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fwindows-sign@2.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 504299
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./dist/index.js",
+   "gitHead": "683929b3b7a83218b0a6177c17dfb439291709db",
+   "scripts": {
+    "docs": "npx typedoc",
+    "lint": "prettier --check src test && eslint --ext .ts,.mjs src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc",
+    "prepare": "husky install",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "10.9.0",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,ts}": [
+     "prettier --write",
+     "eslint --fix"
+    ]
+   },
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "postject": "^1.0.0-alpha.6",
+    "graceful-fs": "^4.2.11"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "husky": "^8.0.3",
+    "eslint": "^8.56.0",
+    "typedoc": "~0.25.13",
+    "globstar": "^1.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.2.2",
+    "@types/node": "~22.10.7",
+    "lint-staged": "^14.0.1",
+    "@types/debug": "^4.1.10",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/graceful-fs": "^4.1.6",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-prettier": "^10.1.5",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0"
+   }
+  },
+  "2.0.1": {
+   "name": "@electron/windows-sign",
+   "version": "2.0.1",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@2.0.1",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.mjs"
+   },
+   "dist": {
+    "shasum": "6711ad7abd5ec21f69c0ce95eb76c4ccd299bb42",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-2.0.1.tgz",
+    "fileCount": 26,
+    "integrity": "sha512-tNmSvCTsMJeh/4iQBCnyJA24kJKkvdmge5IviVwSUgNJkoj4wRlPhyBIDHGRfVeIh92qqYBcMCdoyBff6RYYFA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCU4CDamZ74v/SVsMSSypiZMq0yxX/hGY0UnUO/uY2oBwIhAM4o/EPfmCipj96K5LJ9FCFSwylrNRmBBTDo5HtdOT4z",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fwindows-sign@2.0.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 502759
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./dist/index.js",
+   "gitHead": "34298ad6ad9c7cb11425dac299fbd18b377d0f3a",
+   "scripts": {
+    "lint": "prettier --check src test && eslint --ext .ts,.mjs src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc",
+    "prepare": "husky install",
+    "build:docs": "npx typedoc",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "10.9.0",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,ts}": [
+     "prettier --write",
+     "eslint --fix"
+    ]
+   },
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "postject": "^1.0.0-alpha.6",
+    "graceful-fs": "^4.2.11"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "husky": "^8.0.3",
+    "eslint": "^8.56.0",
+    "typedoc": "~0.25.13",
+    "globstar": "^1.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.2.2",
+    "@types/node": "~22.10.7",
+    "lint-staged": "^14.0.1",
+    "@types/debug": "^4.1.10",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/graceful-fs": "^4.1.6",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-prettier": "^10.1.5",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0"
+   }
+  },
+  "2.0.2": {
+   "name": "@electron/windows-sign",
+   "version": "2.0.2",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@2.0.2",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.mjs"
+   },
+   "dist": {
+    "shasum": "7396f18c19e407751ffe8528628e292cba52c634",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-2.0.2.tgz",
+    "fileCount": 26,
+    "integrity": "sha512-9Lldk4pvRBh/BWhwopW4CxCnVoztEAVWdxvVVwpvrFd/3QU3dVn15IRmVB9i46IqpAg1Y42cFtRT0NQKZPpc5A==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCcNip7YmHaKxxrDZe6FiMV7h9rth35Jd2/ipjk4yXZawIhAJy3W2F+6oJ9zE38XLDhKHiT9jDJb20Prkuiov8U42XS",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fwindows-sign@2.0.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 502766
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./dist/index.js",
+   "gitHead": "7a7dbaff526c4c39189335b9f6a27707ed2c9a46",
+   "scripts": {
+    "lint": "prettier --check src test && eslint --ext .ts,.mjs src bin test",
+    "test": "globstar -- node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc",
+    "prepare": "husky install",
+    "build:docs": "npx typedoc",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "10.9.0",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,ts}": [
+     "prettier --write",
+     "eslint --fix"
+    ]
+   },
+   "_nodeVersion": "22.12.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "postject": "^1.0.0-alpha.6",
+    "graceful-fs": "^4.2.11"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "husky": "^8.0.3",
+    "eslint": "^8.56.0",
+    "typedoc": "~0.25.13",
+    "globstar": "^1.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.2.2",
+    "@types/node": "~22.10.7",
+    "lint-staged": "^14.0.1",
+    "@types/debug": "^4.1.10",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/graceful-fs": "^4.1.6",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-config-eslint": "^9.0.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-config-prettier": "^10.1.5",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0"
+   }
+  },
+  "2.0.3": {
+   "name": "@electron/windows-sign",
+   "version": "2.0.3",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@2.0.3",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.mjs"
+   },
+   "dist": {
+    "shasum": "343551e8daa9ec0036e3554f038a71a2e19ddadb",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-2.0.3.tgz",
+    "fileCount": 26,
+    "integrity": "sha512-lJGpt2artEZNiOsQtU1JmcLr4Ow/AGskwjTTNaxL2+R2wLN7G2BHL4Z9unOoW321N69kBP1nzObSMdDbQydjbA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDtYqoE9lsa0H2Gfdr2G4BsdKiMMtrdVUfjwzMMtUtUSgIhAPm9viYRF5jodB+PeYFBdPrHHH7FBck/JMueQR4NwwCb",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fwindows-sign@2.0.3",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 503102
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./dist/index.js",
+   "gitHead": "04df5f7c50057c520c7ac75f88cb37971a0c0319",
+   "scripts": {
+    "lint": "oxlint && oxfmt --check",
+    "test": "node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc",
+    "prepare": "husky install",
+    "lint:fix": "oxlint --fix && oxfmt --write",
+    "build:docs": "typedoc",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "lint-staged": {
+    "*.{json}": [
+     "oxfmt"
+    ],
+    "*.{js,ts}": [
+     "oxlint --fix",
+     "oxfmt"
+    ]
+   },
+   "resolutions": {
+    "fsevents": "npm:@electron/fsevents@2.3.3-fork"
+   },
+   "_nodeVersion": "24.10.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "postject": "^1.0.0-alpha.6",
+    "graceful-fs": "^4.2.11"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "husky": "^9.1.7",
+    "oxfmt": "^0.44.0",
+    "oxlint": "^1.59.0",
+    "typedoc": "~0.28.0",
+    "typescript": "^6.0.2",
+    "@types/node": "~22.10.7",
+    "lint-staged": "^16.4.0",
+    "@types/debug": "^4.1.10",
+    "oxlint-tsgolint": "^0.20.0",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/graceful-fs": "^4.1.6"
+   }
+  },
+  "2.0.4": {
+   "name": "@electron/windows-sign",
+   "version": "2.0.4",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@2.0.4",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.mjs"
+   },
+   "dist": {
+    "shasum": "674c07fb584bbb4211fc02997850dad4d8bf97ca",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-2.0.4.tgz",
+    "fileCount": 26,
+    "integrity": "sha512-gxWQ8BZxMF04uYze50xjAnNhnR1bCsruRyLmLZIHbdKMYAWa+vulI4XOE5CGlEcK5Q3zHksZKpHLXeRI27Mucw==",
+    "signatures": [
+     {
+      "sig": "MEUCIGNoPGe8HEpMXaZ6DVJb1gq49tNO1DIr+CHzjr8lZv5gAiEA35htAn1mES9bqJeWY/3gW8BkZXbNwXWm25LX+64s6es=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fwindows-sign@2.0.4",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 503255
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./dist/index.js",
+   "gitHead": "f89187ebbfdecea8177d4ea1c767c635fb24c40a",
+   "scripts": {
+    "lint": "oxlint && oxfmt --check",
+    "test": "node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc",
+    "prepare": "husky install",
+    "lint:fix": "oxlint --fix && oxfmt --write",
+    "build:docs": "typedoc",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "lint-staged": {
+    "*.{json}": [
+     "oxfmt"
+    ],
+    "*.{js,ts}": [
+     "oxlint --fix",
+     "oxfmt"
+    ]
+   },
+   "resolutions": {
+    "fsevents": "npm:@electron/fsevents@2.3.3-fork"
+   },
+   "_nodeVersion": "24.10.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "postject": "^1.0.0-alpha.6",
+    "graceful-fs": "^4.2.11"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "husky": "^9.1.7",
+    "oxfmt": "^0.44.0",
+    "oxlint": "^1.59.0",
+    "typedoc": "~0.28.0",
+    "typescript": "^6.0.2",
+    "@types/node": "~22.10.7",
+    "lint-staged": "^16.4.0",
+    "@types/debug": "^4.1.10",
+    "oxlint-tsgolint": "^0.20.0",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/graceful-fs": "^4.1.6"
+   }
+  },
+  "2.0.5": {
+   "name": "@electron/windows-sign",
+   "version": "2.0.5",
+   "license": "BSD-2-Clause",
+   "_id": "@electron/windows-sign@2.0.5",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.mjs"
+   },
+   "dist": {
+    "shasum": "270adbf5c8f6c75d25637108e8fc3e54c2f62cee",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-2.0.5.tgz",
+    "fileCount": 26,
+    "integrity": "sha512-GFW/TAFuo5UmUWxJS+zsYHtZA7StzIfQcEF3pmlN9PpqMwUHPfYnUpZT1C5i1W3mrY7jQeax8kDCLJERjVf19w==",
+    "signatures": [
+     {
+      "sig": "MEQCIFA6YUOgk5VF4awR7zLyIxoDw0lT4PryGkLEkHO/KF1zAiBCjQZOsg0rhwusiouSd0aw9883nxHL5ZUiDkMV8M0ruA==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fwindows-sign@2.0.5",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 506311
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./dist/index.js",
+   "gitHead": "d05de3bad0bbb6ca80b75bbab9112e7fde6be3c0",
+   "scripts": {
+    "lint": "oxlint && oxfmt --check",
+    "test": "node --import tsx --test \"test/**/*.spec.ts\"",
+    "build": "tsc",
+    "prepare": "husky install",
+    "lint:fix": "oxlint --fix && oxfmt --write",
+    "build:docs": "typedoc",
+    "prepublishOnly": "yarn build"
+   },
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "lint-staged": {
+    "*.{json}": [
+     "oxfmt"
+    ],
+    "*.{js,ts}": [
+     "oxlint --fix",
+     "oxfmt"
+    ]
+   },
+   "resolutions": {
+    "fsevents": "npm:@electron/fsevents@2.3.3-fork"
+   },
+   "_nodeVersion": "24.10.0",
+   "dependencies": {
+    "debug": "^4.3.4",
+    "postject": "^1.0.0-alpha.6",
+    "graceful-fs": "^4.2.11"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "tsx": "^3.14.0",
+    "husky": "^9.1.7",
+    "oxfmt": "^0.44.0",
+    "oxlint": "^1.59.0",
+    "typedoc": "~0.28.0",
+    "typescript": "^6.0.2",
+    "@types/node": "~22.10.7",
+    "lint-staged": "^16.4.0",
+    "@types/debug": "^4.1.10",
+    "oxlint-tsgolint": "^0.20.0",
+    "@tsconfig/node22": "^22.0.1",
+    "@types/graceful-fs": "^4.1.6"
+   }
+  },
+  "2.0.6": {
+   "name": "@electron/windows-sign",
+   "version": "2.0.6",
+   "type": "module",
+   "exports": "./dist/index.js",
+   "bin": {
+    "electron-windows-sign": "bin/electron-windows-sign.mjs"
+   },
+   "license": "BSD-2-Clause",
+   "bugs": {
+    "url": "https://github.com/electron/windows-sign/issues"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "dependencies": {
+    "debug": "^4.3.4",
+    "graceful-fs": "^4.2.11",
+    "postject": "^1.0.0-alpha.6"
+   },
+   "devDependencies": {
+    "@tsconfig/node22": "^22.0.1",
+    "@types/debug": "^4.1.10",
+    "@types/graceful-fs": "^4.1.6",
+    "@types/node": "~22.10.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "oxfmt": "^0.44.0",
+    "oxlint": "^1.59.0",
+    "oxlint-tsgolint": "^0.20.0",
+    "tsx": "^3.14.0",
+    "typedoc": "~0.28.0",
+    "typescript": "^6.0.2"
+   },
+   "scripts": {
+    "build": "tsc",
+    "build:docs": "typedoc",
+    "lint": "oxlint && oxfmt --check",
+    "lint:fix": "oxlint --fix && oxfmt --write",
+    "test": "node --import tsx --test \"test/**/*.spec.ts\"",
+    "prepublishOnly": "yarn build",
+    "prepare": "husky install"
+   },
+   "resolutions": {
+    "fsevents": "npm:@electron/fsevents@2.3.3-fork"
+   },
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "lint-staged": {
+    "*.{js,ts}": [
+     "oxlint --fix",
+     "oxfmt"
+    ],
+    "*.{json}": [
+     "oxfmt"
+    ]
+   },
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "gitHead": "dac07153c3eeffc378ebe82cd6de0c62a4dcbb2e",
+   "_id": "@electron/windows-sign@2.0.6",
+   "_nodeVersion": "24.10.0",
+   "_npmVersion": "11.6.2",
+   "dist": {
+    "integrity": "sha512-ESWgNkFsXFH06I5EB2uHv3hmZA3yF4j9GTB77W74x3b5KZNItxggNzuADw41HUy6mhnC2K+E2mT0Xgc4YKu3IQ==",
+    "shasum": "a193b288e064cdee25a7f51a6fb16e8d2f82abe0",
+    "tarball": "http://localhost:3000/@electron/windows-sign/-/windows-sign-2.0.6.tgz",
+    "fileCount": 26,
+    "unpackedSize": 506747,
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2fwindows-sign@2.0.6",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIBxCCRg8s7YTxnRfxDU5lIXoml06Jnilasn/pQC4Lj8sAiEAyNaF7op161+d4u0p5MfhI3UTg5GWvpr553Wr3Dfd7SU="
+     }
+    ]
+   },
+   "directories": {},
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2023-10-27T22:50:35.488Z",
+  "modified": "2026-07-01T05:17:35.074Z",
+  "0.0.0": "2023-10-27T22:50:35.782Z",
+  "1.0.0": "2023-11-01T19:57:36.608Z",
+  "1.1.0": "2024-02-04T21:20:23.372Z",
+  "1.1.1": "2024-02-07T01:02:38.590Z",
+  "1.1.2": "2024-03-01T01:01:16.419Z",
+  "1.1.3": "2024-06-28T16:05:50.281Z",
+  "1.2.0": "2024-11-06T00:50:22.151Z",
+  "1.2.1": "2025-02-13T20:06:03.534Z",
+  "1.2.2": "2025-05-02T19:58:40.026Z",
+  "2.0.0": "2025-07-30T00:01:41.197Z",
+  "2.0.1": "2025-07-30T21:35:19.699Z",
+  "2.0.2": "2025-07-30T23:20:52.230Z",
+  "2.0.3": "2026-04-21T21:05:01.509Z",
+  "2.0.4": "2026-06-28T03:14:35.041Z",
+  "2.0.5": "2026-06-28T04:04:31.215Z",
+  "2.0.6": "2026-07-01T05:17:34.760Z"
+ },
+ "license": "BSD-2-Clause"
+}

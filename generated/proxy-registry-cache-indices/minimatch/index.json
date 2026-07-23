@@ -283,6 +283,92 @@
         "@types/node": "^25.3.0",
         "@types/brace-expansion": "^1.1.2"
       }
+    },
+    "10.2.5": {
+      "name": "minimatch",
+      "version": "10.2.5",
+      "main": "./dist/commonjs/index.js",
+      "types": "./dist/commonjs/index.d.ts",
+      "exports": {
+        "./package.json": "./package.json",
+        ".": {
+          "import": {
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
+          }
+        }
+      },
+      "scripts": {
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags",
+        "prepare": "tshy",
+        "pretest": "npm run prepare",
+        "presnap": "npm run prepare",
+        "test": "tap",
+        "snap": "tap",
+        "format": "prettier --write .",
+        "benchmark": "node benchmark/index.js",
+        "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts",
+        "lint": "oxlint --fix src test",
+        "postsnap": "npm run lint",
+        "postlint": "npm run format"
+      },
+      "engines": {
+        "node": "18 || 20 || >=22"
+      },
+      "devDependencies": {
+        "@types/node": "^25.5.0",
+        "mkdirp": "^3.0.1",
+        "oxlint": "^1.57.0",
+        "oxlint-tsgolint": "^0.18.1",
+        "prettier": "^3.8.1",
+        "tap": "^21.6.2",
+        "tshy": "^4.0.0",
+        "typedoc": "^0.28.18"
+      },
+      "funding": {
+        "url": "https://github.com/sponsors/isaacs"
+      },
+      "license": "BlueOak-1.0.0",
+      "tshy": {
+        "exports": {
+          "./package.json": "./package.json",
+          ".": "./src/index.ts"
+        },
+        "selfLink": false
+      },
+      "type": "module",
+      "module": "./dist/esm/index.js",
+      "dependencies": {
+        "brace-expansion": "^5.0.5"
+      },
+      "gitHead": "693c82377d0948401be4c6d3220c9a74132ab112",
+      "_id": "minimatch@10.2.5",
+      "bugs": {
+        "url": "https://github.com/isaacs/minimatch/issues"
+      },
+      "_nodeVersion": "25.8.2",
+      "_npmVersion": "11.11.1",
+      "dist": {
+        "integrity": "sha512-MULkVLfKGYDFYejP07QOurDLLQpcjk7Fw+7jXS2R2czRQzR56yHRveU5NDJEOviH+hETZKSkIk5c+T23GjFUMg==",
+        "shasum": "bd48687a0be38ed2961399105600f832095861d1",
+        "tarball": "http://localhost:3000/minimatch/-/minimatch-10.2.5.tgz",
+        "fileCount": 53,
+        "unpackedSize": 536120,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIFCok6Bs8XbOM2QJd3MCQAYqbjjdKAllkSiz+wYKIx7mAiEAjSnIUpoOMI6hol3S6rSn+n0IuZOu44W5kTjnbdN6W98="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
@@ -291,7 +377,8 @@
     "10.2.4": "2026-02-25T17:13:19.885Z",
     "5.1.9": "2026-02-25T17:16:47.801Z",
     "3.1.5": "2026-02-25T17:17:15.626Z",
-    "9.0.9": "2026-02-26T19:32:47.083Z"
+    "9.0.9": "2026-02-26T19:32:47.083Z",
+    "10.2.5": "2026-03-30T18:08:07.247Z"
   },
   "license": "BlueOak-1.0.0"
 }

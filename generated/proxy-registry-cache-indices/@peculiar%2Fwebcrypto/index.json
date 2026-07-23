@@ -1,0 +1,5029 @@
+{
+ "_id": "@peculiar/webcrypto",
+ "_rev": "59-91388b36c3b24ade8f24137c57364371",
+ "name": "@peculiar/webcrypto",
+ "dist-tags": {
+  "latest": "1.7.1"
+ },
+ "versions": {
+  "1.0.1": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.1",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.1",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "13beff943a8485d5c47adb5f8a1caed70886057e",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.1.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-L+XTvPkb7Vzxj3SR3QJGPdTSh6YHqX8/DPJP8GYC9i4Q6zcafezNTmeCu8Dsy8uo6zkjbQOfOGgz8qV5AtqNVw==",
+    "signatures": [
+     {
+      "sig": "MEUCIBdtZMPrDxtrS0WKofimaT44nkE1gP3o69VYOr68tVy2AiEAqRX+5LYt4rFbI627qk78r64tk4AWV7+HvadrI+LUEAA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 69272,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcSx21CRA9TVsSAnZWagAAoqIP/1n0C5jfWxSq8SQ8v16M\ntBBk/1Uwiss/wOOX0revOLdwFXnYtuaTdXU0X4B0Ze170yVtusSCfqIlR3fB\nRNrKdrH+3tr6uG6IMWKpW20XIL9+XBOW3P/Pi0zpRwulapsnZNY1XNtfo1R6\nM4Qw+ipobo1ngiAuB1O/34PPgrqt6YDJB5B9YA0bUjrT5B71iI7P5tncMc3u\n8mnXT+bqs5dy54eE5vM5y/6yb26Knxk79PR86xHYMJKzDOc5eFGL7ZD2Ai2j\nO16rcbspXCbkVeiv6LGntzbiBr6H2pXmVSrindDEB7DmE6XB4c/GbRsJW7PQ\nA12WQV/hyEOdXuq3ai2oIK/6n3xRTEd0iw9qcsSKKP9P1FBIqqf/WLInfsvN\nkLQEOooeHBqFTExqimxYt9ko6ag8JjRFwtHX9g7gdNEn8ltdx3ezqHrD7Dyz\n4+eAWpbxrN0xPnVqel5O7X0k7LDZ4Ow/l2bDp7eEny4jhWQCvyqxYslrlCIy\nBIz6Sdb6+q7CCI4xjDqcTm10+XbtuOJ1dHe5sj4Rxh48KtxDRKNZJXm2lEC8\nq3gMW9CW22Mm/BVA6GKXf6NDtP8RZaKV7HUBaOEEOFht+0ptAI7waJj556Az\nns1/1PA7wq0a8V0Ej6IHQKRgIm36CFE9PWgwjcscGfK25yThxLfTOD87K8Yt\n82ma\r\n=E0AX\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "54edae5652bd1889aea780cc9ab1a048642cbd48",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.7.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.21",
+    "pvtsutils": "^1.0.3",
+    "webcrypto-core": "^1.0.1",
+    "@peculiar/asn1-schema": "^1.0.1",
+    "@peculiar/json-schema": "^1.1.4"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.1.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.1.2",
+    "ts-node": "^7.0.1",
+    "coveralls": "^3.0.2",
+    "typescript": "^3.1.6",
+    "@types/node": "^10.12.10",
+    "@types/mocha": "^5.2.5",
+    "rollup-plugin-typescript": "^1.0.0"
+   }
+  },
+  "1.0.2": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.2",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.2",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "56070d20f97df0a455fa3962d9171c21ba04fc05",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.2.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-6RPes1alGaH0q74wAyFOCsEHVBEn1UuWa+6KePwkc9Zh0HxKiDU6pre9n2bJ+BBJ44i2+x6dBoozWdZLzfZ53A==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDY4/LVeZybpanL1Q/nDT9M5mTm+15quXPxjqCpODvOKQIgR0m9zR2mpf/gn85vBxbstLMM+u8dLeGNfAsqkvxng4g=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 69199,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcZUweCRA9TVsSAnZWagAAgwwP/2aHOx2/xdXPEWuYAw9r\n9WQXazUZUIn8gqpbrUX5lGIgpswPN0/kbxRb6ti+vEamuLKT9qsRa6CwVnWq\n/O68eQF6eKsMWQCpIFpiabKp3Gl/tVbQXkZnY9D4GFWo3CKEPGmwMxGsFvyB\nxmIa9+IesD1odi/WbNwaXo/IzrXS84Bt5szYuvwSQmC1w+RYwfdKCTRyJa1F\nAbN994WdgPWZt6lJlZ6S4nCDH0+s8wQE4I+bj8lhz8pwz1VBSOmE7vU4jdc7\nbq40Rx0dMOCvuC3c177KU7W5SGBXrcyYCvLHIHer3peqpJYHJeI5W5qq1ae4\nIew8hTWrATnX6ESyrI0Qcz1jpwLwNRGsKv09CmxI4pgMolR7r2Cts1pPi8tq\nYT/5P8soaQxFzfDTppcWuu2IIXYl5u8jxaJQI/keNrTNRd7jY6SfeBWqXj9P\nYlkbBqcTSumOZ0g/9VOviANYtoq//782TCJJqVz8Cb9EfBxq49u/bhlevaUA\nYFO7iQqfdb8sa1urJYA7fBI3FS5YipcGg8eLI7S3d/P6Cu8wpzbYe+2Sh+Rq\neffw8FzxsVEEvnBYc9CtyjU24+dKMvU1Ca/byqtbgEei1PtyuVmAzZN07VFD\nYrnv0cQM0yIyYL+3pZ2tV6ZSGiTqWKiUSDe8NEPkgH9vnYXdN7fCrfzlac9o\n1fFY\r\n=ymEp\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "feaf3cc79896dbf193a6c6b241e07c01b23cfd12",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.7.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.21",
+    "pvtsutils": "^1.0.3",
+    "webcrypto-core": "^1.0.4",
+    "@peculiar/asn1-schema": "^1.0.2",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.2.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.1.2",
+    "ts-node": "^7.0.1",
+    "coveralls": "^3.0.2",
+    "typescript": "^3.3.3",
+    "@types/node": "^10.12.26",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.0"
+   }
+  },
+  "1.0.3": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.3",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.3",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "54925a263d2446255685a05f72a904044d807fea",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.3.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-wDPMMBLsMx6eZHWKzpONOmPIdJjLciow45up1yiDldmz6tJXKbvQr1gFE+KiLDBL74GwkosuRwwlf3gHwFU/Bg==",
+    "signatures": [
+     {
+      "sig": "MEQCIBqtR1pD3IiZCFwLrZrGNNboN4r3pZornWAVhmDgLbKJAiBaIof/zZuJguXxL1P11vo/M6Ie+dreXojZmFreEe7lqg==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 70296,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcZ0DpCRA9TVsSAnZWagAAAn0P+QB59y43XLwSMRjSVeI+\nEc2JOLQTJtDgkua9tLnYz9fsQQL/WTaa+j4zC9PIJ2htXoi4tyOs60Fo4r8l\nkGv+5tIv1kN67AXt8zYzZMdy1vAZ99tE0v7sR5R8Kh437tnJrrFrEA7q3mYU\nnfRxPOcG6rEdetyiyPMKTposY5vKoI8qunI7VvBRPR7I+c/zGcLfaZ6120hf\np66YsvDOghkzNgy3BNEv1U1rrhZOv7zdPS5p0tw3i8OvPZ4ukiOHavGy9zeQ\nS+4gZeYzIjmfbPaMzADlU8LHGK6BKSaqO7UVaHyKuzL9s3ZJOVW5+ETh8QRH\ndbIU8bnukpUe3fU6veAB/V1Gd5u29RuIkquF1URnj61MxtAYKa1oG5JBa/qw\nmnjBVHkQ8tw4M+DW8OYbUGiCDjbPgnK7kmymp4JlxPGJji4hHWBGj+DnkJfD\n0blz3OK35D5E2d6wP9vYV+0a/MDdauvdQOUfYAgvJO6B+3mYJRJbmSK3B6H6\npX9Q3UgWSpK+qFdkx6UXEOFwa+L3CPLsv0UfqCin9FbdfGs37h2F6vdUnI47\nDKO2cDSvD7LE5XQoF4/r/u1PLrwdAsiUMm5m0u9iIQKbQBe8zOY4mgVq47e8\nKNv5QPX6xjAxO9mxu6mbanimmJk/NcHzQhf9mEO+o4vaZ5BodSSxfpUl8IwZ\ncvMs\r\n=vwK6\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "b18cd6d0af1df451ca9d4ac083afddaf2871d66f",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.8.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.21",
+    "pvtsutils": "^1.0.3",
+    "webcrypto-core": "^1.0.4",
+    "@peculiar/asn1-schema": "^1.0.2",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.2.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.1.2",
+    "ts-node": "^7.0.1",
+    "coveralls": "^3.0.2",
+    "typescript": "^3.3.3",
+    "@types/node": "^10.12.26",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.0"
+   }
+  },
+  "1.0.4": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.4",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.4",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "b3a968e73f520a743bcaf8046e4a1e093ba7fd9f",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.4.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-JJcQD6Ln8Csd7BNoYdqwxF4NFeTcf8h8l1Yogi4ZJIPJSdjUjOzZSsGsHJz5brjAAHP8BlaEB9uSteDB604GBg==",
+    "signatures": [
+     {
+      "sig": "MEUCIFRnuNJrs5dXHN6za1ljMJNq8Jue5vreSiUHiB1tczZ3AiEAnwH7a3XSKSSOyy1ua9ghFjzAb2wd46HTR1Oxehf2KVQ=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 70561,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcaQ7wCRA9TVsSAnZWagAA+g8QAJIusrdXPeFT1r0XkOXb\n3Cghw+Tl0fQD9gRDaeio6BwMKN9LwwPb/91xH6PkoFnDrkmOglI3ueLc/mX+\n7tmn4tEfAFlWpqtT+IFYRdDjd0nV4kJkdNONvu9jnkfeEwkqNzZLLW9FC9fP\n9L5w0by6QWIX3R+SF8ODuVoDjMCEhWKxtOBQo59S4ocL3CVOeVySgBfQZoiI\n60nbcRm1HycMOiq88zmNUWLo6ypJV3/8j3zzwgwrXpNdNQowgcHcZzZsF9Rf\nIl6ZcFOYzfrsOs+H8VQOmT1qchl3cd/7bt97ia/cfVTMI4t/GIEqOlz+lgeI\nqKjDQEoUCpIsTPYgptEFOZjUtJijArzshfFxaPNGGX5MseCkDJ5OVfKihewI\nXGuMu6XemlGTQ3UFqJokIsfojD7s9xBS7MgW0/jd9/l1AZGKbu8UgBV9N/dd\nuGAsxs+dSaAM99i+WY+aYUUtTcjuEYfbfKFb8vK/sfpWcU7Vzpi01C6LSZiF\nFzXn/g79M9tAiGi3WlEJ0p9qKCubjb8TeMuTbkGJH/ukIXg1FIFMXj+T7rgg\nBJPTWrzoy1EdaKweqojUdCNZTdKp3qCjAtmSchPzDefaVR6jKYonLomT2FfB\nW0IpDj+pp41RbX89KgtB06jdpYpp+JyOd9wugPoXfG1Dn4XlGotgGMsuAq3K\nMJ0D\r\n=mJNa\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "1f035bc0f94c6087270e85e4f05f3b80aeadef53",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.8.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.21",
+    "pvtsutils": "^1.0.3",
+    "webcrypto-core": "^1.0.4",
+    "@peculiar/asn1-schema": "^1.0.2",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.2.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.1.2",
+    "ts-node": "^7.0.1",
+    "coveralls": "^3.0.2",
+    "typescript": "^3.3.3",
+    "@types/node": "^10.12.26",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.0"
+   }
+  },
+  "1.0.5": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.5",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.5",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "52db2331d67cba373cdcec5c9f78645422294f80",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.5.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-mZjsAyoycpRqUO1iksJJjG5tgsOv4pBazJGIMCho8ELDEeB45dhBWs4RuuPkpBBD1iPemSMsKwOAiwyoAgHoVA==",
+    "signatures": [
+     {
+      "sig": "MEQCIHAlTrUYb0E2pK34cQ+587ff9fNNp9KXrytIT66eTVRFAiBTOFb+4MMSJ80jbMp5NKMsGCU6dz7IdJxkWoyBIfPhlQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 70571,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJca89sCRA9TVsSAnZWagAA88EQAJ9BKJtIbAOdzhx2fbvB\ndYscSQJqU7Gn+0gvwFgd6iEAh0+ezWneVTmm61YhabVZJpS1pOWLyjrg+J8F\n272nXuxuaDS9XjbdQN7Ty4+nsu9ugcykbdKG0teeyUqINFXvtOxQ2zjnXypz\nEGdt9SQKzqB7pTA8yPMMruIPGugCdHSlNFapGIfZaJ+QlyJ/Q5d9QnA+9xDE\nEf647qzBnCGuYEHU455bEMcIxCsnHkCmSEAhJoEpb1EQrHDEw94xuCAo57WM\npnCBuYFmz+eQFxVZibB2lEDFc61TmdeD9qtu4DG9FiyHDwh3VvXF5WNwXOPA\nJ7+AGYpzfcsawNQK0LRCWl0DoY2vlTnQw5jM44a9Y9Zcvy+NHWidzRQXBmFJ\nNsfrTQpVH2oNo0wZCq8+8rlMPRS4F5uzQmKVlPhTVDlCMbx8tRKqK794iaQZ\n4C04hwvrldFiIQn+Hl7yEDSdGrNluAHEM2Bp9PDArk3JXV1hBfOLynTl1/jT\nw47sCtZYytIqnvlg8Sihv2RHOiIQFQ/vG835HkEDeHj3KXaahsdTNfF+67vc\npEuvkgkgA+SE3Nx1sZgkPbf/ah5PzdXeQEqQ9apSRRq7qS0O65kn0RYh3R9D\nxrAyDb+pP4Uv8DVqWsUUWM+VBCPXjiNQIhH0NiK/jznekjGmjpeJ5OJR3mqZ\n4sk4\r\n=uW+l\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "3a899e16d5583dddb2198ae6591cef99068341c5",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.8.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.21",
+    "pvtsutils": "^1.0.3",
+    "webcrypto-core": "^1.0.5",
+    "@peculiar/asn1-schema": "^1.0.2",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.3.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.2.2",
+    "ts-node": "^7.0.1",
+    "coveralls": "^3.0.2",
+    "typescript": "^3.3.3",
+    "@types/node": "^10.12.26",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.0"
+   }
+  },
+  "1.0.6": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.6",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.6",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "5f3c82e61f6418484a6305773bde7e9caca602c1",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.6.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-OdmWLczoxzpnzBoXLEqZrQeXclXAKvbUHRHTYnkgBrkHqSx1gql3SP8g8BexzSzAYvi7T7qwl5QMCbAZX1PQyw==",
+    "signatures": [
+     {
+      "sig": "MEUCIFbGu6/3Rr/ilepuqIXPVaiTdUoJTTnGjB+zK7SGBtTjAiEA2EoWHxahtVEJ80SOh+qUnfS+P6dT9r1Ot9ZNk9LLvHU=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 72707,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcejBTCRA9TVsSAnZWagAAC9YP/AnB/c0m1Fm6WQnisyxm\nwe+vrCbY1RhTrNfuq2W58CbZEnPydOkj4AFyzrmcfNfHEhasPwV1quTWOAxt\nV8pX/MUi9ndPh+XZI/s25GaIeMjt01FaI8K46VnrPxZIRovPAnYVhvYb3KDd\niDaGQYyhlU2LCOUldLpxNQ6ZPsVKjPojiVuRACnFeLkGfHfp868k1G8SXUIq\n2iDjCTGdO4pFO7VVr4XGXJPdaybVm+g+aSbJZdlw/z7m4xVo+Zf3RObthA+I\nS+CB3nhFpZ3h5bRvoDHuPZwhifgBnOTLCSdZgYfvcbecbMGmWVpw07K3HEV2\nvspvbcfwO82QUxnDl3Zyz7uHDDrVtXMsSo+gfetbqgNBRnCDASmERvNLE14t\n6WOrbLU7r4ZrU/WvcZUIM+Rr0PyexsbHq12JJcs3ov18zTV3uiMacZczz1US\n9RopRoxa39DW2KzeO3C0qu5rpAgJVjF83TlNmcqdZLxb9YzWW5Q/AODg+Ao0\nmgui3X4zCH3O5Z2mTi34kwP3L+rlRRGGh8iCECr7Stc5+TbHUZAaluIlydDU\nba2sAn08/VvzgZrO4QReBCUVEWtk+a8MT3LufbtlOjMaNcp2mGDdxlMQw1Dm\nzz+RRViAlaIsylCoUlWX3zze4udB1OBd0Uzo6Hwj/bFnQBit5f/gVgbS6Yfp\nmhYp\r\n=NLf5\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "04c101612438c103e5a328d848c83f7ae46525fe",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint 'src/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "5.10.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.21",
+    "pvtsutils": "^1.0.3",
+    "webcrypto-core": "^1.0.7",
+    "@peculiar/asn1-schema": "^1.0.2",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.3.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.2.2",
+    "ts-node": "^7.0.1",
+    "coveralls": "^3.0.2",
+    "typescript": "^3.3.3",
+    "@types/node": "^10.12.26",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.0"
+   }
+  },
+  "1.0.7": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.7",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.7",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "672ba38ea7238065f27f11be10b0d840a66a52ca",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.7.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-8XJkJI/b3MBraCwgAIfUGoZ6wwnsQ0uQlWezLmpAi2968+6jr7RvFo1P90kFzWg2ZIN53voMI7D7cO0Pz3OdZA==",
+    "signatures": [
+     {
+      "sig": "MEUCIDmcvuYAS0coMsn621PDOXvVNYm8m/d/wtOKW1ACHluXAiEAuLAUzuZPZQLgKdzMeqpgDrtGFa+WaAK1CXYnJv6Uw3g=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 74587,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcevQfCRA9TVsSAnZWagAAIroQAIIkn0JfTiEjgn89zNVn\nVh0WGdVVjrVLf7QR8uY5/2C3ww81kpWVkq6N5A4dtmWk3kVHE2s+M07QOVdF\nQXT/InMucfcRwNJVMLDZDPNeGrKRZwjNKqT9QQQNwIIq65gaWP6gHfWDSxKL\n+Q/duxrm+73La03ETQJ/ZNJU3M4CGADZjBmdkoiVnY9TCb1D/2Iydwva8oo4\n4aex6X8JRTMsuri+EDj40+ci5AeVzaaop1YhcYadwp8NOdP4XY1+tH/L8h4W\n8Iu1kgorQfFhg72Hb/XOfbOsNPhbbZg+NssrIKaUL4mz4yUAcLuFk3R4EQs4\nKl5ZQEpEt7IZ8s+DmIN+gkPNBD+h5zoT4nCAeWXUU42mcjgY5x8a1dCTDS7f\nJPtQiH3Ik7W1nEWLNl/evBKMo2o/mahGtkOzS8OQnP/Sl7h96YYccoThdahg\nJGgJPG07NdjBrUt4SmvwAgU00bxEcgu5ARL0nTR8nYB9SltYKz2jQ4Ck9Pxs\nIJy12V1f+BDGz0v6XJuzrj6VlwMqXCXtnTdDhg0K2hVkx4ChLrfr697px6c2\npkYHprM3BzMbygpar8iKTtARXZ6/9NjviI7oHSV4KskhlgzeNM3TwpQkXSFU\nILTS1dp1Xsz3+aXZKlKKaGXX4Vo3IxQk64wPeEiZPc5S4eW/YMn3SW0P2FTy\nO4oN\r\n=sEli\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "95065c3f6a2fc1d6a976c51ee0d7c276417b9a22",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "5.10.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.21",
+    "pvtsutils": "^1.0.3",
+    "webcrypto-core": "^1.0.10",
+    "@peculiar/asn1-schema": "^1.0.2",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.3.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.2.2",
+    "tslint": "^5.13.1",
+    "ts-node": "^7.0.1",
+    "coveralls": "^3.0.2",
+    "typescript": "^3.3.3",
+    "@types/node": "^10.12.26",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.0"
+   }
+  },
+  "1.0.8": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.8",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.8",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "76a4442f8a4ed549d87e2920c83f4e5d2088e8b5",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.8.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-zOCwDimHbQeUgSdBCHnw/69wbA1ks+aUt1MPAttcWNOlXaZjbUppc8shtwX/mzDQYctzNGFlI8Xrayl7lBUe5A==",
+    "signatures": [
+     {
+      "sig": "MEUCICv33mjk+dqrwJOyj41MObcmeyfWg6qM7ghjVrDXiyrtAiEA2pNdEuexnG7SDILpVWzAD3AN96krucNmtKCnB/67lOs=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 75102,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcgGNOCRA9TVsSAnZWagAADg8P/j67M8hlvPvciTgksRL4\nyeteFQf+RD1gH60+W7jOaSC+Bo7FqjgKITBzZ/ZDM4CNyBrcGVrXK/+fVD8S\niBGWkfqOJ4JQ+jo7uVXVPgxyI7ZWltQv0NGaIojEX2Xf5+et0dgTVJTnuQTb\nFCDSxWxdCix2um7iUqQT3bU+/iMLhmmytgr8E9xzeXwBlYCUzSHkNSFBV3w3\nOw6jvLGkPfNNuNUUdabzUEKs0G4s9zlAadJT+Xgds09YIwH9gpM5X6qH8EV6\ngWHBA08zZ+smnR0qTyG+J2G//PdD6aAimids4nxUop2GbxdZkLC1N7/dblJK\nlCrDa1Ig3Huy8e9UQImnelvKf52CnEn0MCzooaX1kYdeCJTOt+RQN417QU+b\n5Fie7QB3Fk44nDgq02TVgTf32lEZ+yxrlMbUKpX/10QmqQ0LFpO5q1w/76qe\nph+sScIBb+FEVnFO/aoJ6Yrdkx0INk+Ui2VtY3Ctxzls6ZTbBnU3f7HkJm+0\nb6d6VR6+1GWSo2DSoioCdXqPVH1dHUgmBwoBt/XxEotTaZBAv8HTGn//b6sJ\ntZ0Lsx9JQeufg8NqiVjOb+f1wbipU2Wx3Vaz0t++Dhof1yyy58fUlo+NfV2t\nY2qYJN+CUEPpIGYDLLGbkONpG1Fq9Vq0Vf6626BeMxHxHcUbWALrsqNv4xyk\n0U2M\r\n=mA8v\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "93461d097359f7e0ca80a4439e883e2d2c4b1181",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "5.10.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.22",
+    "pvtsutils": "^1.0.4",
+    "webcrypto-core": "^1.0.10",
+    "@peculiar/asn1-schema": "^1.0.2",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.3.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.4.1",
+    "tslint": "^5.13.1",
+    "ts-node": "^7.0.1",
+    "coveralls": "^3.0.3",
+    "typescript": "^3.3.3333",
+    "@types/node": "^10.12.30",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.0"
+   }
+  },
+  "1.0.9": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.9",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.9",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "4b53da1efe9821f76b4c6b673132782b8c5ed608",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.9.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-+DQEyNgB207UgMZeIB90Vaon9tbJ3sIl9r48HwjoLl8fL/uD834J8p098jBw6PC7ryxKAdjyn6/YnksPX31Vcw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDbQIBzW5Y65b+HIvPIFZ0R4o0lNPL01au13cKuaK6LgAIgax2Tt4mPLLQnYEuZSLVT6pVI5w4wb7h1mtMMavdT1r4=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 74863,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcnMzXCRA9TVsSAnZWagAAZEIP/A2gSAGAkuV5GQDzqUsn\nwKyNgqguvqnrxe3NP89ajURjH1Uh5suNBpNIyob0x2PfcmZ99T+b3AinutAc\nsQm30sfwFWAu/vv5NiLDiF1p1QDrAg6dSg1JJgHdPV5Od8cH8RazH6VfLsJ5\na+eYq3niBWUE9ifmdCZZDyvmRHpTjZU1DYbrgX6MdWqUrwHLPrMqkINO/x7z\n0LOuJCeOrtqoEE42rmPWn7TmYla4QPOFcpXCRE/N5gX9znZZXJ33QtyhiTVb\nwEkkjrFpcOZev059NK+bRJ5wR0QHlEaAzV97woj+HtDD1CfuN2cO/pWI0ZVt\nC8AJDAClYFYWWP9JkPoAMX2BER7oE12rVKDRifPp+udXUdfdzjOB4sKHjXNo\nGOmz6Rpppqlsen5bE9Rx8tsxBD5VGQkR75GH/LEwRl3sBbvaDQ33T1beF6Ov\nCuEgBWKuhkhESDYgSZwxakg3EiGFiwvnsxnrBE16zer8Mb1uOCv69Pf6p3xc\nFOVPtTp6m+FyjLkSf1xWRNE/x2lKbgQ885aW9Xqn7yqrE074APjVyceM9XaG\ngERa5v2tlx80RZLRf8b/vaNCkS1bGe/R3kgWJpg9NRTiYlzwJdrbApCaM0/F\nhx1mpYQ6As4XHPitbYHPxj0bm4rmkm6UDLygdKWQIY092bqhp1rNIyUscL3H\n/S9Y\r\n=t7IQ\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "4e6994c0be9ec56044d33b33d342d9d860638b47",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "5.10.0",
+   "directories": {},
+   "_nodeVersion": "10.13.0",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.22",
+    "pvtsutils": "^1.0.4",
+    "webcrypto-core": "^1.0.10",
+    "@peculiar/asn1-schema": "^1.0.2",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.3.0",
+    "mocha": "^5.2.0",
+    "rollup": "^1.4.1",
+    "tslint": "^5.13.1",
+    "ts-node": "^7.0.1",
+    "coveralls": "^3.0.3",
+    "typescript": "^3.3.3333",
+    "@types/node": "^10.12.30",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.0"
+   }
+  },
+  "1.0.10": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.10",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.10",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "7dcd2985766832b5df82a9f1047a7b02a48d4aed",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.10.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-Ohkfu3xgk/Y/6+40Uq8juAO1zPuuAuSJ/BLpP4xovjU3+u3J7Rc/dbcWB4/Z2sj+0L4hZXh6p4rZsvzDFk22QQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIG9L6sWqZbYHtLU9blQX3YFcPEjUoTQuD4gMo3NCL3X+AiBaZcXmN5LVzoXomyc2UuCG7P8pr4uXSIrI9/QMQwyCgw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 75647,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJczEzECRA9TVsSAnZWagAA53gQAJcputScluBzaGGbtOCM\nmV0C3CIy8O47hzDIu3zmTVTmPQKawIDeh/wbeY3wdU+GXQLRTIuwModr1Jiv\n+ZrRMj1+6gC0xCyNWHCmW+N1Hu56TBBH1Lg0bFBlpPiDJ17VQ+cJjp25YXLm\nuphfQE4iyT2H7qOg4m6cxD24gXuL+jg7sgY5wNkDnKWngkNWpkkKTAiHkqP0\nzaWhlN6fXa/CobHZ4tgqbz4ti/qjlO0WtjuMWcCcZ/CcLXeEWGDVDRpgKZ/v\nJdlPomZ9Dk8IPHIWFtWtaJu6AkPRWzWzDxAlBGg5IRW5vHBU87B1zjBDuS79\nOOP8oSf+Joon4gx5S6iCtC8rAYzFaWv9aa9RD9p7z49JeLQE+EXCE5jfohlt\ninvM8rdevd+XyMDFtlALiq4n4iS+nSpXF2PzCzlT9gNDbQaO1/En1vI4X1K5\nGiUILZ95Sh+/YPByA1oQau/cNlNHuCvfs/zv4Fd2thRToUkQ3cTRVBKFrpE7\ngAkJiW/3NRnTojW/xaUTbwh0D5YUqg71jlVv34DOu3q7TGT0VkY2T0tJUH7l\nndNDcJncz9RCXoXi/viUe+DBhkQwT2fyjPydD360i3BadoCfzHdd9QnEbav8\n+bNCKbRxB622cXIhittHUspEgL73uLTzvtYq1PfoO9xPAQGV0KhS8q5L9Ats\n/hSb\r\n=B3SD\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "8b065098193363c895f9ab3e3c5c0bc3b246ae69",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.9.0",
+   "directories": {},
+   "_nodeVersion": "10.15.0",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.22",
+    "pvtsutils": "^1.0.4",
+    "webcrypto-core": "^1.0.12",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.0",
+    "mocha": "^6.1.4",
+    "rollup": "^1.11.0",
+    "tslint": "^5.16.0",
+    "ts-node": "^8.1.0",
+    "coveralls": "^3.0.3",
+    "typescript": "^3.4.5",
+    "@types/node": "^10.14.6",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.11": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.11",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.11",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "9cc4d51cd7b5ad6c60edd850a0de51f0faad2325",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.11.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-Ps0Q8TZfJ2DwCpcFm1sb7gZIy1qsgAWvfW2MZ4GPuYYZGUenD6By5Yr9lp+D1zWoTwyaLeVUX3Cf6UpTytfAQw==",
+    "signatures": [
+     {
+      "sig": "MEUCIBxHjFUaKMmwt0npsCO3+c4lkhM8au6ReWArxI998USnAiEA09rgQwLjmwg1LY8NOfC7ABHFX9e7WMCvllLTISXZlSY=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 79818,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc5aGnCRA9TVsSAnZWagAAArwP/Rd4y3zkxYB1wTP6q9aL\nEMTTXMpG1lbwA1Fu7S7beh3PFOyGZ1vmdB9mL+yvQMqU+1KN70/nl9r2pr3Q\nbsBwHM7G/2DtULMAyNxuMZHt9eab2bAA6JuAIIGUK89YehpW54BZP5ypb0JR\npiTEiNBItJBNHXLFxFqN6vvvRq8CWEH8nTxSx6ABkq5N4KQizhH4ASs5svzu\nPoLboGzsH0ZLPEzcdLfFpJ25jsc8M4VNLOJ5DTbfUGoDoV6/GaMGuvinyokd\nKMqd1WeVs5lXedNXokwTcWZulBsZ9s5Fat5u53SlxQraFYoFwBNi2jX7T9ro\nAlMuqUFlzqIMpHcRV6jUvJdOgChnvlHwKNOzyrWNlvQb+0O/RUIEnyfa4YfQ\nc2URrEkyxqQia9efmt5KvsPY3GOl/r3YXt16uWjHEZrz12yesE6ZdheDyvbk\nlDWCgTCSII19CIrtt2UOWs9P3vIe/WOwdboN8+Vl86GLBhoEuw4rscL9y1pD\nUTt+Jes4J7NAHQBIo7BDXfPcDG/gyD0L5iEWuY1y3JAzMzJM6XSk959xpvb3\nkExs6rbOWgT6ey64lBzZaxpT65+pFJuwk3DFqwlWZXIw7VhxfGj9VAkvvLQ2\nsDQQxvwIhBhgiG75TYy74n2usCJNoRsP+/1F5IQSpEr54QkVxrYUMk+MkL8/\nGT67\r\n=3vX3\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "gitHead": "d18744c5311000fdebafdaa39bd38a284b75fb9f",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "_nodeVersion": "10.15.3",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.22",
+    "pvtsutils": "^1.0.4",
+    "webcrypto-core": "^1.0.12",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.0",
+    "mocha": "^6.1.4",
+    "rollup": "^1.11.0",
+    "tslint": "^5.16.0",
+    "ts-node": "^8.1.0",
+    "coveralls": "^3.0.3",
+    "typescript": "^3.4.5",
+    "@types/node": "^12.0.2",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.12": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.12",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.12",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "96d8da38d3f31fd5df317ac1caebb05cac3af386",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.12.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-2ANX3KChSdywh1wHhke69Mo2yF6n8i4GEVEOl3qcseMEubmwymtBvAKLTGDEEH7RXGYXT2jGacws4H+lC1tTtg==",
+    "signatures": [
+     {
+      "sig": "MEQCIEvrunarwo0du7AThEyQHr/FnRT9Pi9fOW77srW2ygLSAiAbRiAb6Xq1pJX9rbriXOFibBOtqWcrq/p/32Aoq0khvw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 80077,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJc6lJbCRA9TVsSAnZWagAAzS0P/jPK6/9ztd4QNEeQnpRx\n/u5lez+h4btB0E7c8AH/0qr3aB3tPUMyheJxq3uRsnDVVDVG9fhIi3b+yBfy\ng1pOGeOcB90xuejuJBD5YN2b9UV/XOq1xllymhgUzG5ynHIHiYkXzLrhc8lC\nEMQkDUU7h6EBagOoXSS5glS6tFLWxl/v9ZUS7CRA9RGKFInyGjvVWZOBKN/g\npif7bsxFtcja5S+yIvGq9aezKAaIgpV9GI7sC13vd1lrvRHbhaDYoB7IN+yi\nhGQtop2VOL2NuiY3ku6ql2kXGNGc1x78HlnaFVog/qrF2C6CuU9daLXwkV/L\nFj57Z2LzYarkDkXvXnlcVZaLfgzwhbqY0OetnCWNMipfz464Der2hcsDqqmh\nboyX3rexIZy56u0SrhqJpcrNltLcAXGbg4rVWrQaHNl28yh5qs0Pl83oZ5MY\n46L0IyNqq+br+ZfqP1G5g+XHbdJMqgf4GeMBgls3lmaTVRiFKapkDB5LsUGx\ngxedpDiC7f3xiYUAuCs9R9PyDrqM1a5lhf6jO7kbQXIDMHPZL8VhNw9vxwIa\nZUKhwOILIjHnvyVzBUSpY1k1jl+aHFX29GpaAaMylmPr1+j+o0G2hUOopGxH\nlJ5Cw8nIwUpqS8CZrkB1hAtQUTXNuOWYxBpvQDpbFWrLIinVEEE/MvTuH82m\n8nSL\r\n=3xko\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "33312d5c1a3283343f07949da300a351021fd37e",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "_nodeVersion": "10.15.3",
+   "dependencies": {
+    "tslib": "^1.9.3",
+    "asn1js": "^2.0.22",
+    "pvtsutils": "^1.0.4",
+    "webcrypto-core": "^1.0.12",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.0",
+    "mocha": "^6.1.4",
+    "rollup": "^1.11.0",
+    "tslint": "^5.16.0",
+    "ts-node": "^8.1.0",
+    "coveralls": "^3.0.3",
+    "typescript": "^3.4.5",
+    "@types/node": "^12.0.2",
+    "@types/mocha": "^5.2.6",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.13": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.13",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.13",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "95de90ae86ed6678a6fa9c40431e576e62d2886b",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.13.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-BgLIWTAolxADNr3agzadQ/eFh0AcHzJqGtykLbw6v43VfHBNDSMDyLJPlfYJ6kkiwxhkLf3cPzRTKcIYecBDIQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQD+hq9QQ/aMsSKzQ77cwgOvsRX3R0Z1F2xaq0HFKQLePQIgQHmtmaqIa9O5KtSx5g9xRRxwh545w80aeX9j6rGalw8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 80781,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdW7SBCRA9TVsSAnZWagAAEh4P/Ry8PtzBQMDsZ4DQoXuv\nxOa0yXwHfYAcf8Tj74vBj/V2Z0PfwUG+t8Xg9uq/Gp3PZ94d+WaaNwLpdAeU\naXtWDLQOSh9ds7zp3ofIonLJOe+vMgQDc323J90Z/Xe+I/35wAbIrtQIw+1C\nxb/Q9Plhx5ee/o2vqL8TAI7avFqqkL6uAKSxvxeRYgFS3UnmtVwFJbjsxvs0\nP0Kc0xz5vCkT3BzidKPZXU4fyJjiNizGzdjLMnDhqBWVNrPwLnvaRwOmSIO7\n4c7NU5lhzBryx/QDta6Y3kEY/st8MUbsfYku1Fc2gQoLtDMXkFaoCjC38rwg\nmVKHL+jy/Z7LQ2aWlPUiaONRh9Yze+T6g0plPaFN4c83tq5ouDWV47Flo1Hu\nQLJ+cJXu3fwzBi7CyASm6Bn4iRQzEHqdyYEc/blGU9/rAwMYncMOgMQGO24F\no1OY3F0+1ynWDwW7TmV5XwEMv94mWDwhY3d7QOCVvyqzZdzFKK9XEOJ7fFxz\n5h9x2sRpqTqg8utP8G/8f1w1ienLrkb4OSEzWVLVC0H4XiMWmUqmd/Ykri8c\noQnPiylZzQCUTNdsWhtoxlsNxvQXLJ4L0xxWl4kEcn1IPLwtW4jj777/9fRJ\neogVr/z0fXQHe+VIUcfg3WgELFth0MsvTmyJ1h6mScZmg1L5Qrz4UIbWE6hd\np3Gh\r\n=A7/8\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "b8c0549a07772aedcc49c05fd664f9afd34fec31",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.10.2",
+   "directories": {},
+   "_nodeVersion": "10.16.0",
+   "dependencies": {
+    "tslib": "^1.10.0",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.4",
+    "webcrypto-core": "^1.0.12",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.0",
+    "rollup": "^1.19.4",
+    "tslint": "^5.18.0",
+    "ts-node": "^8.3.0",
+    "coveralls": "^3.0.6",
+    "typescript": "^3.5.3",
+    "@types/node": "^12.7.2",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.14": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.14",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.14",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "6fd12f87440edb9864c0edbcbde1185ddd237237",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.14.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-4kHaPT9evkKDg5iwn+gGsQJrc5lIHRzwfe3HIOvLEC4WTLUP0DaqkylTV5pyVVZfd5cxJa43B9rzM0uyFwl53A==",
+    "signatures": [
+     {
+      "sig": "MEQCIG7QS/tpVmusbSvO0T9C2bkrG3qe/d056R0s4HeKCJzrAiBiIKRXavTiHiZHB+w0RkK6uzB085YfUb6oqbaOkQayLQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 84561,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdW7whCRA9TVsSAnZWagAAav8P/3lmnU9mn6jIixEmUWPL\nEJ/CeH2lVB/3X+Hw9zIpEWXEGr7gvFrgdvI+I+/adzRxlTvV3SuhVvsJUHlz\nq2GA8I9dtSAi8p1l/6srLcCnSDhhXborDBwPYawvYfbI7y7iLJ8FAcMXZi1u\nWiCTKN7Xu+9x0CHSk/PepDyq3/8ZUmIhfIVuITIDVoSFj192iymjNCpKRHNu\nhrgAz2y5Ua/v5PQ4oyv7zWhXyQAQo0CCGNpcgqEPCTUmZJz12O0TKPXCSZnm\nDb02v01H2isNAdNLP4RpJy+HvqqoDl5t64HA/tfMpsdhwMYVj4p/eT0F4N90\nMMcJuzTEMMr9BS6xgyA5abRl6ng8btiaqd96t49awjAX27+AanHoCKTxogtu\nqb8Bp0DASilEvW/De03xgjI2Hht74RO/YspaTO7Mpl5+Kk4d8BRAhZwYqulY\n82mUGOFvoJPdiwXi/qKXE4D3tSnPVUiuuhjeOIa8M5o9wyaRlrEGNPjtlzb/\nLcQNF7LCTVugSRxV/Kt+Fx3N4nf4rc3Ds2n4bSjBwJlIcijaJaarUhmvAwPE\nbPozEIrlltizFftpk7YFzfJI1L7uAcqu/mZUx5jMPo84QojO59ZqoJpVfGcO\nMxe+MfPKAI5Vpo8QNwmE171cDo+KBC0yzLfZWzLeFpN7qHgVdCiAlz7q7sAV\nnNE4\r\n=X4x1\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "97ec2e6185a65b4ceeccfea3a87c786099db9897",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.10.2",
+   "directories": {},
+   "_nodeVersion": "10.16.0",
+   "dependencies": {
+    "tslib": "^1.10.0",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.4",
+    "webcrypto-core": "^1.0.12",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.0",
+    "rollup": "^1.19.4",
+    "tslint": "^5.18.0",
+    "ts-node": "^8.3.0",
+    "coveralls": "^3.0.6",
+    "typescript": "^3.5.3",
+    "@types/node": "^12.7.2",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.15": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.15",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.15",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "c3b9a03138d71096ea618b94efee174f44ea50f9",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.15.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-I9IKKqeOIwwdgdw5ZyAk0OddSl0/4LTL9d5O0MDuT6c+yMC0i3kC/jP5Sd6EDyTnURL83PQcOWSmPB+UGWYeOA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCD+vmqaWOoCAqLb/7SvJj6ycFN6wdLfvD27BRZMhG4qAIhANvRHgVj13aJ5f5SrIMKhJexlNLnK0LcWvLE2vV801D6",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 88754,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdYcWLCRA9TVsSAnZWagAASpEP/RBJKfpChs3UlmzFNAnl\ncmJgIDcN+X6bkUcp+DnJ7/CbpbzrTjT+xruXDQUvN8KXffKp/jukYfhyjQfq\nuatUHsmLMwjXZbKEj3qoJyLqlxfNzobI+43t6CaentSbn2TF+KzbfdI5BF3H\nT/+1AUNalr2JdJqDSVan6Y11/+NuaCKPrHv6bEaLs09bCVXZvhvoGp22c1/T\nukD7cK1zB0AIAdkyWArBPd71Lo3PAA6+hvv1kAu+iYLpHxL48BXAynw7rgyd\nYsdu0rEZaWSu5VMI0dBdK8hNV9YBI8UzbBcBfea4G99SYTh60L67zLHTuxI+\nZO4BWzIk8OvdRu5qI+MpEzds4wOQzvzOSLH3LSucWT64jY1ejEWXp5BZTCrX\nj6dAINrKKu3x3U3trpSXEHmBhifdzZVUVFirMpabWv8XohcUH4IQ4rBoqAGX\nnZpDlcluNzD/UZbIoJCmWKuQ2zGpERKSym7x2jtA9J7djyPbTU4yEfQIlELB\nF64TMBEUFIP2d2b2gH+lQUHeIBIt9PZl7RxPfWeMuq+3YGG9WqeWuDg6z4Iu\nDnKWLPv2JtcRyNZdc5LeKRgi1Q4Lj2RAwa0DXiDnyC9fHz5TDjhWIWTW/yJz\nO6M1drYpUA8E9VV+ykJxZyTQoNykOfWahYVzu/sPexmYAhtjBHadlcGsRP6S\nlXsC\r\n=QC83\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "5c20f047d14cca61fe409598852bdc25ab8c0f43",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.11.2",
+   "directories": {},
+   "_nodeVersion": "10.16.0",
+   "dependencies": {
+    "tslib": "^1.10.0",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.4",
+    "webcrypto-core": "^1.0.12",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.0",
+    "rollup": "^1.19.4",
+    "tslint": "^5.18.0",
+    "ts-node": "^8.3.0",
+    "coveralls": "^3.0.6",
+    "typescript": "^3.5.3",
+    "@types/node": "^12.7.2",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.16": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.16",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.16",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "332773d8eb680089da4e3547a049181de85b92e1",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.16.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-icSt3wAm4FKPkzMzmQFNfSkhwPvwc7bbWY1JKqDSwJDIfJ56sdtb8PF1afm2f0d463yPY+U8G+G6FhdhWtoA7A==",
+    "signatures": [
+     {
+      "sig": "MEQCIAM8EYws4N2zrhssHFT4/zrLsloXKzashS11vI7bo6uUAiAfAPHdFumua2RUMq8tepkcZhRBAQbhyUueTSAp10Qrew==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 87407,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdZEWwCRA9TVsSAnZWagAAUZgP/167kbCD8cT1x7zZKZtY\nZfemXE07dYrGln3v8x/aoqYOeg+HTx9GNj7Kt+wWjx2vf4f/miuPwMZmpQai\ne+iQFvviozm1YPKnf6DDmc1Tx8NNBCNMZVgEUXKn0g5ESFlgYrphpciKkzTs\nlyumX3DpiMkuBxEBy0wfS71I4foNDXTY29glXQwFSC6z6otUNURAg1HXYewJ\nTHCwrwyD6aeHP4RkuDLoK/Xh6DX00O0O6D1LKoDMAKMpP/RPKf/Z72HaPvd8\nM5QQADREPJ4DWf9VBx5VDVxyme3lbzfMnj5Dui1XeonJCSuYP2nOLxZO6vXu\noAh7TajcA9x6K7h4eQwz00gIEm5uNClVSfhGS91yhqDtI80aeyWYkx4YXhpg\nm5gP45qIrguSNaMibtFNaJdkZuEiXbCJEqVMmB4UHq6GuSYjvvevUYNJCs9E\nZsfkqKe7a/bPfeWd58OYJF1BjJ37AvrCorBeLUJL/MqjhDJhQmt4yh7uDxlL\nK+yasrI3MrKNO+pw55afFdYMHhpphoqrZeiRTugcJTG2KlpxIdgOBrEkugEj\ntjRbBX8zTm78dAR/UoQ4cSLe0t3O8E8AbMa0yu9sZl0bEaKj1GqRa4XeYxBu\n1TFFGKLVkwT0wOQ2DGgZMJG4c6W5I3wPFJQS0xzjP3Uq8ZSJD8GCPgdJdlUY\nUmV9\r\n=5jW6\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "e63e8cd868666a30a2af9bb91ccef4c46146fdcd",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.11.2",
+   "directories": {},
+   "_nodeVersion": "10.16.0",
+   "dependencies": {
+    "tslib": "^1.10.0",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.4",
+    "webcrypto-core": "^1.0.12",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.0",
+    "rollup": "^1.19.4",
+    "tslint": "^5.18.0",
+    "ts-node": "^8.3.0",
+    "coveralls": "^3.0.6",
+    "typescript": "^3.5.3",
+    "@types/node": "^12.7.2",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.17": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.17",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.17",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "2a1d97cc887c6e217e2a78efa431746f11c9c177",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.17.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-+N2E8fh4SsXLm0YKPsyuLYmvx+Tqgqwjdo5P2el7l4cJK8t8uOObwufh6lp0t7CEcEZ2V49fCs0/m5/1oeNS8A==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCx1f2NzZ2e2DQk1AxlryknGfoNOtz5YjD0LHWF6rNUSAIhAP54p+zdJssDLo1BXAtC3e9+dgq9jmb/NbAtd0QAQPfC",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 87407,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdb1A9CRA9TVsSAnZWagAAgO8QAIi/peoLfiTSVUrErwn3\nd79quY86TcMzPQUnV2mjse8sUmYJxu5x/bI/fWOCKoBEbg9t6iYnCc17OngX\nUZTrI4HFTtK38gHCKrpx/QdK7UHAQlPFefTMD9oqaTo9RKgMW/fCKuR0Es3n\nQMvWLTLFzPtLDdZ2pWGTnrwcV2z0Q5qpvsMBLjGRaGC18WO25wnLASW3/rVs\n4+KE8FQni+DC6RYWDdPVmLUYzYZiqxpqY8pEDoVya0zZO9ENUvTTnLIaVUk1\n8/FklnulaH3dSTPewtFtni09eiee59IPxJDBHd68BTiyzhRQ1z+GSXlYbY7R\nOPpEzZrINyuaiwSH/HNM5uYLAQznLcHDh4w1W2ZmiNqOO62YppV2qiyHR6Z9\n48F+tvtCbYmAAB5jXZ53cHRWzXGT/yRIFajF2XaMUTaR7PbxCwFA7OoMWaDy\nGWn8F7Y/3Dl+UNI9IPOlGpX1K7mpmWiw4sXfgPl4EO3AuisqwCo8VooAsuuU\nZgplGPvyzoctAwreDd0033xW/9OlbILp5sDnB5CIQWYUHOCFAc1Q3CuJYRFC\nAHQvNsCOacKXLbhGjv5Ue58M0RiN6PHw6HBMrgQtHRAwMtfCP9qkUbchT9wd\n1b0DPKqvaxS78cersZwm2Kq6WUnzGrN73cUwNuAF+VGs9sU6gHj77wui/zGC\nZH8n\r\n=thp6\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "bb01ed15d295837a01dcd0d32830da7f3b03c5af",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.11.3",
+   "directories": {},
+   "_nodeVersion": "10.16.3",
+   "dependencies": {
+    "tslib": "^1.10.0",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.6",
+    "webcrypto-core": "^1.0.12",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.0",
+    "rollup": "^1.19.4",
+    "tslint": "^5.18.0",
+    "ts-node": "^8.3.0",
+    "coveralls": "^3.0.6",
+    "typescript": "^3.5.3",
+    "@types/node": "^12.7.2",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.18": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.18",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.18",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "6c2e556277c8a7ad15de10e67f1aeb14314c1f6c",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.18.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-fad5c9bX+NxeDYHe0PafEfMgstQquieL+bseibperTM8AKBKQGP2irs3p3lkvIvfWGtM33eDA19eC6QBmpUZqA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQD1qiksgnZEoFKmM/5rmGtz6jp4zO1WoTLdehdsimc3/gIhAI0iMKcenUdtDHERFJpgpyTtw20Pdh7PUtWMGEQT3yAG",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 87331,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdb1CmCRA9TVsSAnZWagAArFEP/3ZJgo64KZzCUrNQmpyq\nvE4GTACIdbXhti6MkP98m81yrWfhOhCFuoFv+LEgjxax3/ZBodPQtieKK4zD\nw0SXdbVW98LmvU71JVQpPk/daLb3U+77ru5tCazN4qbxfWstN2UWvLZqmqNU\n6ys1xuIBEuIx4fU93PsoVTUtfOHeeMLzXkl3obWptfXtwyv06yMgkvOPSTPs\nKst4E0N0r5Lg1p/XDrrXEL+VwuNo+ESZE/m2JX5NFCCT74GGy0cD7/4M9hB2\npsI7o1g7p0D43oZVDJ2JgSp/bQxTTghqNTqTQ/Y5TimG+LDwK6rDBbq/ZUTS\np/m63ydFnodrGlmow4YkszPtLWgHf0oqgoVy9oKLQwuQIThp1VVqmtuazZih\n7IYKW24fgmDqrbYUERvRmpJLhufKTAK39yGTfD+7hB85xzh/HmOz9WuDhsUZ\nKbPKigOF+pfz1129ljuKNW035eYzzLV421c8ju2jNVAmegiS9HtxPJ6ZteWp\njjDp4JOjCzG7O3yLTPCRRBm6P6h+MVXmnH/v1pkJjCAL727PF8OAjVCgmVlA\nNQABSQfMFC8aMSFdGByYJWr96I8AlIOlLMQ6orAIaXyzEloKf0bm/ynFBxNI\nGnPGIwgoSolKYkgd6ufbP91hSkdulnznLWrl9MhDRmqxcDbMEw+UDxhdf1UD\nfBN8\r\n=madc\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "331687a627ecdf96a261c1c9e277f8f1782d4c96",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.11.3",
+   "directories": {},
+   "_nodeVersion": "10.16.3",
+   "dependencies": {
+    "tslib": "^1.10.0",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.6",
+    "webcrypto-core": "^1.0.13",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.0",
+    "rollup": "^1.20.3",
+    "tslint": "^5.19.0",
+    "ts-node": "^8.3.0",
+    "coveralls": "^3.0.6",
+    "typescript": "^3.6.2",
+    "@types/node": "^12.7.4",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.19": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.19",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.19",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "45dd199c57ee655f9efd0332aca6fd53801d89f7",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.19.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-+lF69A18LJBLp0/gJIQatCARLah6cTUmLwY0Cdab0zsk+Z53BcpjKQyyP4LIN8oW601ZXv28mWEQ4Cm7MllF6w==",
+    "signatures": [
+     {
+      "sig": "MEUCIE/nD/mQdf7DaLm7thZZlLYF8kTEBqo5GSy4JP/+tmmGAiEAkWHkAaHMr9u2GHiVHQUNHF1Lw7vCrbNMF2qvohBvuak=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 87331,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdb1i1CRA9TVsSAnZWagAAIbUP/jZipzWC5h56nUKrr4po\nwIx4u7znVooAawKjEAOZaP6zoyHxiHbpheuCk+Y5aoHGnntxfv8yveTRxsP+\nldPZewSVValR++AOFB72B1VwZV4QumeXwF8ZKlNNgmGEVY40AXplBYayRpED\npq7lfaHs4HiqfgOL2lKIr1IJ7KC6BJJ/JxjeXM3fV5a2ej9ShVxyHl9hPdx4\nUWz0DjvLIq3OAD2iPBE9AJZTrzhazbjzs3W1bScSX4b2Zhs02qJP/yH80le/\nl8yvxjGZco+AocASsLqPdyCVjvz8u8M4Ae+evkJOm6K/yDe2sxB1df6FVJmL\njuYjYqK4AKd8/jP+tL7fNym7We5752VX+TAt90anDfn6H1f4+N8DIQf/8TWc\nO6xcCztn8vTfu2rCF+Q1BX7tAVoOxF78hv46VWY4uMJgECUNzLS4TJkuoyzO\ntAZreeHYyT+B017dITjtFuIUrhLk68wUwiKF/16JWqJfD5Udais0ZdeDjwen\n+IUVHVyNfGmAjMFapQg0YOtUiCIzTLqHL450BGC5FK5sm1sjtgcavKiS6rpp\niGdhwJ+ZBHX0KjlzGKTpeXkDUoRSefnaBXEIysQ/xmGrJahcyagihjiOFlZS\nLU6DLwjB3nyLKk5wzt9MXQcwR1wceRwsAO6fwf9Sk3jJ9SUblwTOy0qH9Ekz\n1RVo\r\n=Qd7u\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "c8b24fc624a9a5ac5a2ade48b7e7c0a3daaae296",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.11.3",
+   "directories": {},
+   "_nodeVersion": "10.16.3",
+   "dependencies": {
+    "tslib": "^1.10.0",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.6",
+    "webcrypto-core": "^1.0.14",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.0",
+    "rollup": "^1.20.3",
+    "tslint": "^5.19.0",
+    "ts-node": "^8.3.0",
+    "coveralls": "^3.0.6",
+    "typescript": "^3.6.2",
+    "@types/node": "^12.7.4",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.20": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.20",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.20",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "099255d5d372e840b55a1f3af31564f3551a8761",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.20.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-ynPIOhJ6R5M0a1473SP7a7BVjR9Y6ANKr10FCypAa7jKboNf8xxe99+mlyGOMtW4FDYz1gabdyDzoPfcxAg6nQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCkKof8lPwpx2sdcMcXwlm+7YT5ZuZpXT/4g6M+e+YBsAIhAJJRwPfLvMGkeMMaUFOkX7D/4VhgRVfhrd7Z5ffvdSg5",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 89359,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdoYH+CRA9TVsSAnZWagAAI+YP/3Rf4u/m38jlC/5fO5e8\nkD7fuR/61wTTv6VZCVgYfSJI/9Hmt5bwuEPzrreI01sx9z1aCGtrOSGVzXyB\nfGUbz1M+lxmydHz0ihdMsq9SM7LIO4ytDZXVFu57Xc4bOVibjO5aWudAVr8j\n3nlT07MqreLbsThlUPNXmF2qrVd8NiqlnKzAsJ0wb3J1IDz29DBtIVBTd7I7\nUUcEB9H3DOTX1M2wjEEWPQ7ZkzriIZZTtOf4AN7H49WhicSrbIiDpt5KA2qR\nOEYq/IkM+rBFrvln0+xlJPGL9qht2oWtfaPW45xVM8IGNJg52RuCi2/V7/G7\nbqoL/bF/I/a/ls2EBHm2ggDBbCChS7ocG/ejFRM5TPZnn5c/ksGDWK++Ux1D\nfIcVh/KcaDDJj2ebnH6bGX+9GFaPB16UGarh6jNhtPXzzj/EkhDOHE2Q/PAF\n6jWKTjoFqiqusSyO8Zy7inYUzMc1hPthDMdZlQ3FIk5mYWKtNPdo21nc8OAK\nFtAAwGBFCgOQOZOornGpl6yYS2/QtUHSj598o6+PEJDLrHPsgTaVhOvRQsiy\nCzhqcjEEG+yM1/dk63J6HNElrasqRlSZMQCBJYxKdeqUb+dwSxqbZ2id9Czg\n46RU50OD1iaYxicQw09dS/gCSz5wge5vml3t96ORWnsx7nB3LkNtn9Pj4JkD\nHXAR\r\n=oXnZ\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "f241be335d293c47a8a4da8863805b6cb35da987",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.11.3",
+   "directories": {},
+   "_nodeVersion": "10.16.3",
+   "dependencies": {
+    "tslib": "^1.10.0",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.6",
+    "webcrypto-core": "^1.0.14",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.1",
+    "rollup": "^1.23.1",
+    "tslint": "^5.20.0",
+    "ts-node": "^8.4.1",
+    "coveralls": "^3.0.7",
+    "typescript": "^3.6.4",
+    "@types/node": "^12.7.12",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.21": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.21",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.21",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "d38eb883bf966b247954afc259054c3fa2a10c98",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.21.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-dMQe+vTKSKDpiizQj5q7lFqU56zBgavrjcST4d8RMxEbmgoUOuAUOXlkI5DoqVy3ktcfAhk6CRV4YkaSUEXdAg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDYHHVNZ8qNLVgTlzJ0tzeZmgCf5fTzYSkB9zNaokZ2RQIhAL4ChiqdYP5q2RMV9bFgTeGbMir7tqS/WfzYBk0KcO3o",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 89483,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdoYKyCRA9TVsSAnZWagAADvUP/3YZzHVQeozTXmtsV3km\nl9ekbUIXq+X7nkwuaSXHmWjP7rxJ4Ln0pRsFlgXzHoHYxjKuTbkqAFhhlFXv\noUY22/LjZSWaFIRIG2vWW3olmo2vCi1NWkQ5GtrswDD1TRU9tYAoIwbFhmPJ\nDdLWiBZBNqbhTFogCNFH9YVslWlKhg50cWmawJ6Mk+vDgICCQWU5Nfon53XV\nYuUsj54mWFboNMf4d9dN5Pc8FxSMZ5nTG6aUSS0i50k/zpn08RwxaBrOp1rP\nL8lY9RMHEJCdB2+9ugfPeLUf4H30QUu7UAUeRgMlrH9ChDmNzxtK+VqdnU/2\nCz+I14F5QwRcS2Qy+OErjXf5ivq97VdCcygMg1D5rzBhw187C4pgd4eys3On\nT1sbG8hhkRFLAwBTp+JRf8ynJ0eA0DwQMKkOq1v8Mb1n4FyvTVBRbDPHoNQs\nZKebPk3e7LyYg+DJcLAJT9Yg2r8qyRQwdidnEFqGM7S7+2rbPMxmGD4DTAhq\n2SV5s0y/jXyQh5EAIb/IE19WiHlqVNh2vTLiTJrjUhOdW/386Jk0F9UfDitF\niYoKlpQEyLeONGhH6l9k4psFwtiuo8S3//Jf12ZsPTG3v+XwpEb66klyraLG\nNPNDU/lyawt0VSFV42SB7T33/4/gsVRHo1CiyLlbcP03YSTGeM379OpPxKiB\nWlJE\r\n=ZUCz\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "1951d3ef3ba0c43f161c77a18c64d9de8c886f51",
+   "scripts": {
+    "pub": "npm version patch && npm publish --access=public && git push",
+    "lint": "tslint '{src,test}/**/*.ts'",
+    "test": "mocha",
+    "build": "rollup -c",
+    "prepub": "npm run lint && npm run test && npm run build",
+    "prepare": "npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix '{src,test}/**/*.ts'",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "6.11.3",
+   "directories": {},
+   "_nodeVersion": "10.16.3",
+   "dependencies": {
+    "tslib": "^1.10.0",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.6",
+    "webcrypto-core": "^1.0.14",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.1",
+    "rollup": "^1.23.1",
+    "tslint": "^5.20.0",
+    "ts-node": "^8.4.1",
+    "coveralls": "^3.0.7",
+    "typescript": "^3.6.4",
+    "@types/node": "^12.7.12",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript": "^1.0.1"
+   }
+  },
+  "1.0.22": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.22",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.22",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "9dae652fce6bacd9df15bc91965797cee33adf67",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.22.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-NP6H6ZGXUvJnQJCWzUgnRcQv+9nMCNwLUDhTwOxRUwPFvtHauMOl0oPTKUjbhInCMaE55gJqB4yc0YKbde6Exw==",
+    "signatures": [
+     {
+      "sig": "MEUCIE3g1QJGsBIKFI0tXjw85Y1AgSRkpjhTiPs2Cq9rG3ajAiEA9552viUJ4+H3gYb/g3I6slisQ84s+V4N3z11fBIInZ8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 172630,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJd94aWCRA9TVsSAnZWagAAi8wP/jFQxTSGn9HiP09ogfjq\nsMmXauXEmsbUVIUfou3+DnwPUhA1wJRAzagi0PLhYc0M2r2xqNO38N092QLY\nviAt1mrFzc7MG0W3okPlJUITDdM9CFXChcuedEkUqvIvnCt5ofQ3/SwSQ4fG\n8Uxa5Sg3bGShuROpJ1Ei1v4vLkMK0hbk0ihxhBR3RUEdvII/jA1MTaArJzW8\nhqvFlnnkm8QLPCaxNsTiD471i/HUzbU6Jr7DfsrEYHtDUD1+K+RU8s/YFQPx\nnLfVIZwt40jtcXlgTMGWrUwNATweVut/DQG3Uo0IBfT32ZIhn4kfaVT7072g\n9oX04ZeSfrlrfoC6W+329cOAgGP8H0a2wWmKOwhFWPbefVEmEJ7Tcu93NY2H\nbkeW7sQw6+0HqAalGWRFMCsz0xKtgpOG723ZLVIjWRXRmFPfgHdsLBAnRaqK\nP8Ornji1FhJ2PG3TVyPKhewoiBc8j3BEVNQzcrnNOtSFHLhZXmNi+c68/RaO\nwUEumupDpC5lJzw4zTpoYMQfg2u7qT06tD7ZgpJm4qFOBODxpna1CM4y7enf\nJohHY1cUi2ERrWiJdHdL2NWZh4oAQZKH0Fo/YmJJyYJ50hQoiwtF/lHxaaT7\n8CvnMa+a1v/6mBEEumH9yM13qXhqrTqu/PCARQ74ejhVWLQz6uJTz9BRBgRL\nKUF+\r\n=td45\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.0.0"
+   },
+   "gitHead": "1e8aab4c0534c8363355ed73888f71852bc70193",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "tslint -p .",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix -p .",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.12.1",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.10.0",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.9",
+    "webcrypto-core": "^1.0.17",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.6"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.2",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.27.13",
+    "tslint": "^5.20.1",
+    "ts-node": "^8.5.4",
+    "coveralls": "^3.0.9",
+    "typescript": "^3.7.3",
+    "@types/node": "^12.12.18",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript2": "^0.25.3"
+   }
+  },
+  "1.0.23": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.23",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.23",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "5519b839fba2cf8603bbbd6764dc41b108093dad",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.23.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-Ssb4xpQI3BJ0itAtT9y9jyeeiWNjcFvP6Wt/ehITxRYrEnlSfnrP7Ytc7BwN8XtnKmXDS2cWvppPldw5QsFCcw==",
+    "signatures": [
+     {
+      "sig": "MEQCIBJ2+485531LLfIKZYqcJFo/b01w4W77K4kvqYAXo5OVAiBwJGrGxRIt7I99zK6VobGXBJN1VnjXWZCbZt87X76InA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 172465,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeYihtCRA9TVsSAnZWagAA6qEQAITe6kOF/ACNdrWesOHy\nCT5faK0RPRIfpBrMaX2bpcduOND8jh5uFe6ax4MCWb3kO3HoL6Q7nNxgn9tN\nsQ3UCDQyz3rfUEeBrZG/XdXUoELNxiXrj4l9Y9dZEH7moTCxUcUJS3wB9nnC\n5R3aFbJ4oK1j/mnqXl8CmP9oyh5QXr9s7JnFcaC6HMlAp6pddmoro19XCORn\n861w7k7FWUVqVf8lk2EwtVw3WOb3BViKHzI8Q4r/1sS6/c0qqNwVFU8UTKL4\nW5T5/6D7a69kpNBevXLc+pItDYTWrvN36J5rmF4huywHOt14DEzKwHpJTfjM\nkX2uYCzb3LuaPZ3FpmW2Q60evpvtHKFSHJLJwzmBqXrhlmoMXG4YCGBnZx3s\ng9qN0PFlw3Z3rOxR5rPbN/BotFvA9yNGXs+ybSrCbZZy8z05Jam6IhHNJdif\nYNFbdI0zyU9AEh9sasK9HHZPK9nQ12LiKT5NHhW9AwsedJKfVNxNaFgB8rlG\nUPNF14eJ9Dtwkgwl83bf6gxiy/LOieXUSgukJSXVDOj/agadQ1Z3YFbL1qnJ\nN5W4VnWkf9rzV8o8dWfLcVN3rxeQO3N1XwyKEyphJAcDWvHRfumW2gP1V9DO\nNKneVkx9BWku7W340gO3QxewIFvMXbMkJRsARJIjn6Rdzl2/t3U5ZiHW14oO\nTxOA\r\n=gMFh\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2019, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "2519880f2ef227d4d31a4e92a34280f6a34abbf4",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "tslint -p .",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "tslint --fix -p .",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.13.7",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.11.1",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.9",
+    "webcrypto-core": "^1.0.17",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.9"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^6.2.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^1.32.1",
+    "tslint": "^5.20.1",
+    "ts-node": "^8.6.2",
+    "coveralls": "^3.0.9",
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.29",
+    "@types/mocha": "^5.2.7",
+    "rollup-plugin-typescript2": "^0.25.3"
+   }
+  },
+  "1.0.24": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.24",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.24",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "fe293d48e3820b2114c4e2fd8731d615b97eb08c",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.24.tgz",
+    "fileCount": 7,
+    "integrity": "sha512-zSEv/+uE+GEUabqTYZCsfkjhMQ48l45nrRgfNj0s7p1qE5U1vkABejzvQ1c9laJXx0/v5LgaIUQNNWzQX5a/fA==",
+    "signatures": [
+     {
+      "sig": "MEUCIH/XDO2tNECEo/MTB4DAOuzPVBled4XU8r5Pzcigi0OnAiEArE/FG0INfITVGQHFz5vqTCgme2bdhDCfGgzCeMd3OXs=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 180389,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJebfjcCRA9TVsSAnZWagAAlagP/RuQSkIVaDpticHdRdvk\n3gFGSCx1PojBTzUBNtBT3Z+QJjq4LrjHRIiV7XU9Ard3d8v6mRhsicHS18RV\niM77Txr8iYgwiiDjaRmJLgluq3h3U/AxDwyEmLC56eNAnV71auU/KyVNGsxS\n6SBl0ry3iRgNZ/aXdMJ+qukLeDmmrsqKqGapz6Ax6xKfilydzxXLkhoLxWzj\ngjAaB/JpiLebKrDOLJHyRmV3ZsCUpstljrg69Pe69s6sJP8BKyWfWjam3Q6u\nekTHX+rCOpM8Y7drFrHcMD7w9neDs+eH7Na0xo4IwLuQdZ38hVO3TgOF604L\npIsiU5UNaQwtwJjV/hPVJYiCKEzSd8YxEDQEgVEEYTxrLftndxqgAZVbuAL3\nEeLsm9YtpjbGrZ6+lp+3GOzbPtsw425ITpn3i5AFKqwObOYyfSkrvYRBn8s4\n/t6+1qNiW6PuqCd2ZmzsZU2H/SIrYH89ZmjQ4qybX9bFN18T8gdg0xz4IkMf\nl4HFdUHcAV0hFB5w+eC5ipkTA03zzVRwLX/MKzCK8eGtjJfvD/K7JUL9KKIR\ncp+GyCYVdV1QeF6cXJITJnV8XJnUCkYyOCP404LEL4ss8Mo1auDjZ+4fZ6Wd\nokvhbD5asPrw2720YaprCMkZRyzwKF1/jRVg8Is7IDcjgC1OWcwNwrVXmJQm\nGlPT\r\n=C6c2\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "files": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "9b131514422877233bcef0c2ab026636c8bdfb43",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.2",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.11.1",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.9",
+    "webcrypto-core": "^1.0.17",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.9"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^7.1.0",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.0.6",
+    "ts-node": "^8.6.2",
+    "coveralls": "^3.0.9",
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.30",
+    "@types/mocha": "^7.0.2",
+    "eslint-plugin-import": "^2.20.1",
+    "@typescript-eslint/parser": "^2.23.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.23.0"
+   }
+  },
+  "1.0.25": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.25",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.25",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "fe1f24d6004b412e92525b5e94bad746a4c584ae",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.25.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-c/+KJJIw/R5mnsNLW0wlVZh7LKpYsnK5usdKCHztqs+X8LEXVzLeu1kB2L0sYEL+arDBM3VSPKGSmCJ8OLTNkQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIB997a8MOGyzZFbM+kBedI+wklou+oQLzC3GF73yQTZkAiBeIpA07nAxnu+SL4WbCMz2wuPH2Kg/fsuLAPWPMCSv8Q==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 179580,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJebfk7CRA9TVsSAnZWagAAtwkP/jgHOe2CxjFrdIX+dXzQ\nkCf7wdatmh+tcbxWuBQN7xAjWXbQYeOZVw32+V6o0cW4Bgg9EzvEsyl5c7BV\nop9RdeT9D+1pgRrmcg6w3e57hxFx4l4hT1H+RGpXPRq1LZ1rEaKyPzvvateW\nTsJULwVNUUZOugzIFFdeY9mN3yD0uqNwXVZwvRUTnJCtFx+CbvfjIfQSjkF5\nuI5A7X1ieAXAxyqyclY34vz+MuL4tZkzDzluqLMwTqjMfQC6CeLoGJcrOLxY\nTO4m0BO1QUJEJIX2ZCDLULT+f/d8uKnrfd+EdSKF176u09DqBibxcnRXM2Cg\nyyrHfs/US2g099s+/fTmO9RtYXrJpWmF3gARtM+0pKwACLbKph5cpJRzmV1g\nfwoOv1SfBtRejwndEORulmMBu3eGITo3iGX47U5bbJaEJJ4GD1r+yTrlW3XB\nFEiQapUOWsWLpwKpJVtGtTF43eHEBcVG0iRalqRoQX+9ZbT3ZCt08+llayI0\n7DEYzIbEFebsFdw5XAq6lJQd6QwNfax2umXz6iItZtmphnuTX0E6A1O/fPgi\n1u+4WdY3Z4ngdZqDavURI32H6VpGs1rLLz/t/VZ4+UpaY9mJZIgcUlwG5wFo\nthiabfr5RW3jqbTxoQ4EeMPJyHJvq9yLKSK5CbzBIFy7wtxqg7rmg3ICIgRJ\n6yjU\r\n=X+J7\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "files": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "8b91f978c011a42a0ea0715b943de94f92756c0a",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.2",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.11.1",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.9",
+    "webcrypto-core": "^1.0.17",
+    "@peculiar/asn1-schema": "^1.0.3",
+    "@peculiar/json-schema": "^1.1.9"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^7.1.0",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.0.6",
+    "ts-node": "^8.6.2",
+    "coveralls": "^3.0.9",
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.30",
+    "@types/mocha": "^7.0.2",
+    "eslint-plugin-import": "^2.20.1",
+    "@typescript-eslint/parser": "^2.23.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.23.0"
+   }
+  },
+  "1.0.26": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.26",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.26",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "681c01aeac701284727bdbdb40a9c58392e63155",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.26.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-7Ws4t+eUiLPSL9q8OCcbevd9S8qjqBDAXJrbnjzbuWu3nI8NgBvc7qZ97DZO8y8qxEoh5cGqK2p+p+UhxLw9Kg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCZh9KMJeVdM5jbYYLZca4EIyVlI88rEU3zXz21HIdt7gIgVD2OPG+7OCYnrOpKvQjlu9zB1gChsCu5/H4fZk00/Ag=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 179625,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeeG5BCRA9TVsSAnZWagAAD3MP/RXK9oQUdSkIpnEKsPH2\n4G7PPo8AlWi0GJoJcgtSn1IuXgIsXCseiXikjnUnUvWBuAyjk5H/FcYlHO/H\n9FZNkBwfdbZ1xdUtEbAuSOg7C0cdjFcVuS98sLmO95YpzJFQGRzPU6MlcKtd\ntyRKAS6+w2Xf+YVXDESZuHwmd6m7ZqiLNsnGZwjj4smIQdXO+qi3p4KQLgr9\nGn6Uro9RWuyi68bwd3Uzd57ZxWiMFQr4kp/SQEyvCtY1l2/1yNbAR+ZZRpLT\n0THHHeYdpKFcLnG0mZZznIVH/eVsyAODMh+wQwFtCNeFqARtkZz8DREu2GnV\ntda/jiQAIifpiMr4GmmyWH5gcV4zx2iSw5oK95d3YnqPG6Bm3iynF8F197M8\nZRHH+k4vHEhEKTZJK1J17F9j5eyKaycPJ4tFAJUS2APPnWFAZtN5gqskrIce\nXkE1oRGSVXLKTTbXouv9gTojBtqPqlulyyHMvFgc4HPLmdfIqtXr7+GrdS21\nT0AAi17I3+UFjBa4boCu+i+0pqhvzHdlVgzvRqWvP/9DQWserBQJvYB0noy1\nECi9xzhKTdeeEjBAcPjA3E5byNxZnrGqS2Xu5qAw946FLzElpDX41B7su+hg\nMBgwO+79D2qLs9ihpzLI/mW4J36UX4RIW5QbJHl9ZtWPCgCulK7T1sGtR031\ngFS3\r\n=vjeR\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "files": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "f16433ef9780b38e29cec82689a5a0ab6bac07ba",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.3",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.11.1",
+    "asn1js": "^2.0.26",
+    "pvtsutils": "^1.0.10",
+    "webcrypto-core": "^1.0.18",
+    "@peculiar/asn1-schema": "^1.0.5",
+    "@peculiar/json-schema": "^1.1.10"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^7.1.1",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.1.0",
+    "ts-node": "^8.8.1",
+    "coveralls": "^3.0.11",
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.30",
+    "@types/mocha": "^7.0.2",
+    "eslint-plugin-import": "^2.20.1",
+    "@peculiar/webcrypto-test": "^1.0.1",
+    "@typescript-eslint/parser": "^2.24.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.24.0"
+   }
+  },
+  "1.0.27": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.27",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.27",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "f32c58656267c8f8419a6b574322573a1b83a683",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.27.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-sERMakD19gNhwBVXGGoJjBfc28bDbd2YWaio7/x8jKtvwMKNuljM7ANQ6LzEkEvqFAyjf3bhBZktJ6UXy/0Plg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQC6GwbyZhEO3egK7R9xeeWtGhQHs6qJC6GcBlfjBuxl1gIhAI+NwaaUtloh91LYBa/4gTHT1YCrw7CSIZ+t4mrrFBn8",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 159846,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJeiyFvCRA9TVsSAnZWagAAIjEP/iy+jsJ6H25/PT6Qqr+1\nsE5V0ZmCn7cnkw4vTxv9CypbpT2lmoRQh91Opz4EpuAdgCSpips5p7kwDtyL\nB7t5MyiTfflhsc6FmdrRMS5oXry/V2EHI57NY8jxezALG0nabo91mv3kUvoP\nql0MTt7PrhJkVetYygzgogdjGmiIet0OwX1lKN1tB2iW41LmbhrSMuLn+vnH\ncoV7GWic2eImN5zr76dB0yurjQpMM2iwVvqEwlXZyl+waJQU5VRkCLvkbB8M\nciOTEvIN4rfqruHtfEHeuee3d8qstxuQXnkgiR5ShVylGWnVm/uO1Z+EMVyt\nAD9i8CZJFncK4OOPOiQ/fDMWtGoQle6bGsqIO5PHV8lAdfoFGI/MOano0swp\ngCBVhgbyYzpDvevv0XySjCZ8MOPbK0O3Rd0ioI/S6NXCENdgRsKUg754giA7\n8xQwHxkdPa/EXnrxEzLDma1XzXxlrB9mub9qJrihqnqP+fF6Z4gkMZMb37eC\ng1324RIbV0AKYkZlF/ackGquvgsEuH1fTEAa2ohngSPyrrA9gKJj4DJ1Da3K\npxMlcLId7uuMJFc2nkDFaxQZ5+nel32Smv3bc7WC+twv/ROkfUElDueHvYwl\njMdNhI8uTtVpcn3F1X9Rp1spI/V+JdtkOYo3sGKGAYnLqfNyC0extJCawpFg\nw7Ew\r\n=clux\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "67004b9093edfe9131b9daf843c1b14fcefd4e2f",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.4",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.11.1",
+    "pvtsutils": "^1.0.10",
+    "webcrypto-core": "^1.0.19-next.0",
+    "@peculiar/asn1-schema": "^1.0.5",
+    "@peculiar/json-schema": "^1.1.10"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^7.1.1",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.3.3",
+    "ts-node": "^8.8.2",
+    "coveralls": "^3.0.11",
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.34",
+    "@types/mocha": "^7.0.2",
+    "eslint-plugin-import": "^2.20.2",
+    "@peculiar/webcrypto-test": "^1.0.1",
+    "@typescript-eslint/parser": "^2.26.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.26.0"
+   }
+  },
+  "1.0.28": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.28",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.28",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "2083c46b15cd68a723ef58cdc8b3cfc922fa85e1",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.28.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-LPfZ7Jq87hL18oMC8jEvF6XnFBokMBUIA4nZz3RvWSjyhYsk8KIeMOUGg960zt4pcMUOODIU1aCzHD2Rz+ND4w==",
+    "signatures": [
+     {
+      "sig": "MEQCIHz6jHy1ub6duRr9VphO/V6ZfD9p3QOtIBsSJTfGUz5eAiB9dPZ+XTdbnaTXVCbQd+AZ0Yq3Gf1t6oiuY0Rq14Ri1w==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 159881,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJem1p1CRA9TVsSAnZWagAAQvIP/0YKXQzwHDknpN5Z3hL6\n195sWWql7A3LwsQocakB6yEYvFsjgALXf24RU5nkWgdBjTbj1Ltt90T/nO5x\n56wN8MLKNaidUn99SLBYn2t55XAED+RqwQOSLr0TaNRr6m7srLEPDtVeQqut\nEEJMKtl/BpTmfcPLxf76M1Jv8HGov0iFsvYcF/cP7VvFzw78UbxkgumlFzfO\niix2B+CKj+EdbpWfC1Qe8dYX5nUdEnIodWmjLgJU9Bts7jpjdOU3cQWgbIEQ\nYDXOViwV0bcbgpjz/cHrbMYA974QGBVAzc+DtU+Ob6OxOdS03lOX8xPQgEOm\n4disvTqvSQ0K64yDsoSQfKkYHisnYRIe/mlupiOOITl84HXlN0oKFJ558toc\nUGFw5R89fB3qMcGzZ7VqLqwzouoy7Sqjw/lBEMxs7adcZbLP32dpKK5dS528\naMh8AQxYidj8iF5au/0RMkgQ8kaHehQclnmR3ndaG9Tt1U1VXzt7g0ZymX3q\n/8WdKJxqwIRdqPpDkLj0TLNfg1iKnwcBV/PSKFmgxDtGeXWVN7KNmxPduJDZ\nj1vhbs9fp931RJBAmhLibfbxTz8u/KcH/RwCnOQwWHEvw3orVUFovZ7g9OBW\n6tEpl6KTvGCGu9/61mMPUclVpExrfZ8pchJDVXUZmiFi/47w7XQvNYX933Lr\nm0wG\r\n=YGs0\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "e24525f71d3257ef71b4f25d1aaf1a3d5ac0150e",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.4",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.11.1",
+    "pvtsutils": "^1.0.10",
+    "webcrypto-core": "^1.0.20",
+    "@peculiar/asn1-schema": "^1.1.2",
+    "@peculiar/json-schema": "^1.1.10"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^7.1.1",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.6.1",
+    "ts-node": "^8.8.2",
+    "coveralls": "^3.0.11",
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.36",
+    "@types/mocha": "^7.0.2",
+    "eslint-plugin-import": "^2.20.2",
+    "@peculiar/webcrypto-test": "^1.0.3",
+    "@typescript-eslint/parser": "^2.28.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.28.0"
+   }
+  },
+  "1.0.29": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.0.29",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.0.29",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "ec3f866e1eae53687d5c6a12c2522fff196dd939",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.0.29.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-3e6CIpjZuj5WxPymGm0kCZA05XA9BSXwBEb/mU9KjBHAmEwMokT0yVIhxqwspCHSynlrTfUB+9KTNpseyB077A==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCetpwClNecS0At02n70XUqqHoKwubtVJp3JsFYRWWtDQIgGx7FEY9LDah8pwLde28u/LUIQ62FbcL4KYpHgoGiPrI=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 159905,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJem2B8CRA9TVsSAnZWagAABGIP/2VVn3QP0A0g8ivtrmna\nM8UW/y11rs0rGrsO4m4XQEH28ZFaRWLcI3rijRKyWGFj9bC50Sv1cJ7vE2+L\neSUUZ9Gk90E+ezR6YHOMO/O2yCdlMq2nJvpm7CcAC3EtEmAbeFTEGztsvG5b\n/KiNVTBXO+/uLyz0PgvPvFnj3nG9xW7MRVcuJYwQ5erhZasmb0z+QOJl+Eso\nKSd4ptNaVKOv+ea3YYbMC/EKN1SyhVmaL0o7fb/Eclr5Jb9gBzNsi41toAo3\np72OTakg1XGRjtf2dR1h320bi3ojI7DH20BGXGflN2ap5nPlankvlr9yAehq\ndj5iTcLohdaFzMswBQ87SBELDH8+BP+osx/sOoB82yejKxzC+9F1G9Z1IIsT\n2BX73tVEjV5sjPP+cHUZ244cXqd8ZwL8g/Lr3n17Ql2r4gon6MMpsA8zxaGx\ntRWBiXThvsLWZ3pGUlE7JQuzqx1QNuJu9m/rIRyQirBISkEO1Deb97R9dmwQ\nafAJjH24iSX7NKa+I6TH0GrZjEL4U5Wita9MITlTnBWr7/nKjjCzkbOgI0hh\nAqBTRtKIW8GU26+v7JXrkfiW7tAJNvGY3Lvz+3WK/V7hl7NFkrArrotfZZSG\nYrYs3aJVkSd5HFrNNdTH+SN3n3cfGHIb+SCRZR9dTClTWoHMhT1+SqNSJ9s2\nVIqZ\r\n=Obo1\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "a46c65bc10bd43f18286f20a27a5fc33b851039d",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.4",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.11.1",
+    "pvtsutils": "^1.0.10",
+    "webcrypto-core": "^1.0.20",
+    "@peculiar/asn1-schema": "^1.1.2",
+    "@peculiar/json-schema": "^1.1.10"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^14.1.1",
+    "mocha": "^7.1.1",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.6.1",
+    "ts-node": "^8.8.2",
+    "coveralls": "^3.0.11",
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.36",
+    "@types/mocha": "^7.0.2",
+    "eslint-plugin-import": "^2.20.2",
+    "@peculiar/webcrypto-test": "^1.0.3",
+    "@typescript-eslint/parser": "^2.28.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.28.0"
+   }
+  },
+  "1.1.0": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.1.0",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.1.0",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "19ffe0d040984acc79cbda8e3f49a285b5d0ebfd",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.1.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-hg87ivvX/grHj3w50SehUayXj9uhOoDezQFSvZO8PI9pH90dKQrDlGBWNteH+f1A7uh1bBsf5iGxDz2Vo6WQ2Q==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCJfpG7aBnVkTxoW5FWz1RJjzbd9t6E89l1EgM1gYYTwwIgF6FEfNs8AqwrG1/3PlLT0B24oj7YeQIxWCKUXH6vQFE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 159903,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJes9e5CRA9TVsSAnZWagAAaroP/2rAeXXDg40JAfo4qdvU\nvHe0Q6p5AexQwcptCG3CsgCUDLJpFq7AeTRwU6AYfHaNU0WMeQxa2C8onUNU\nBiEgRx1v0D0RH4U8DCoXz8KVAK31Pe9BfUa1Cusfbcex56lJiOFfBRGVOe8h\nkq7Q6G61HeZr/AJnEl/udvUcji9waYr6wWI/SIFAvzI1ooLm2f5wbLbWt1gU\nnlCGq+CdnIsZntAWrokkn1ertt0ACVZHAeDf7c5q9t/Y90Klw8hVFARxDhWy\n4ikkvqJ0noCqqADHRTCVTgrNjkY2tzusZIe91PNsrE7/0c1jFmHboJS5G/6P\nKlEolhNDQ3RHMmZ2NY8DVbENpaLLJGD7eTqLiNVZPcMLi2z1qRi4gAaRW4Cr\nn8JyDFdNEFstE7vr5hupVXGnUkBgUk8glBPDcHx6m9WHxzFDptEmICJM5lvN\nuEcljfBXRHLCyFS/Ff0i74vTWr26ZHgM4+PedIVFLOQOJRyu4WhzOrOI4iRs\n/gbhdfG4ZeNY+60INkC4tn6y5F+4kmAXRemeWIkCz95u7txblqUtlCZjtAfa\n1O653CCVX8bKx86GvJbjHjuft8wjbZ1R2Pru5rndf7NY8xmpbZ+I+cb3WBil\nyHYnlafJnyUWqGehKaOiwtLSOxFzi/bnjYpQbSW61Lc7wB3mfB6cEC27ya1/\nw+vD\r\n=twAE\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "51269b930e108e76cf9161f8be49d16bae16eaf5",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.5",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.11.2",
+    "pvtsutils": "^1.0.10",
+    "webcrypto-core": "^1.1.0",
+    "@peculiar/asn1-schema": "^2.0.1",
+    "@peculiar/json-schema": "^1.1.10"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.0.1",
+    "mocha": "^7.1.2",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.8.2",
+    "ts-node": "^8.10.1",
+    "coveralls": "^3.1.0",
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.38",
+    "@types/mocha": "^7.0.2",
+    "eslint-plugin-import": "^2.20.2",
+    "@peculiar/webcrypto-test": "^1.0.6",
+    "@typescript-eslint/parser": "^2.31.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.31.0"
+   }
+  },
+  "1.1.1": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.1.1",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.1.1",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "4c7498e4861878e299ef058bce1208a4d063d0ff",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.1.1.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-Bu2XgOvzirnLcojZYs4KQ8hOLf2ETpa0NL6btQt5NgsAwctI6yVkzgYP+EcG7Mm579RBP+V0LM5rXyMlTVx23A==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDUP5J5heLo1h7Nh/BvA9duNMaoZt8GdpLvT3mROqoZ5gIgMyvmn6HLN0HNtUYds5737CPBzhF7dXjpl+ZCOsdT23A=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 159903,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJetQz4CRA9TVsSAnZWagAAnyMQAIdsWZwykbzEfZFPmbAr\nmfXg850yztGMAjVmWtFO1cehbB0hTgi7iPUl9sAeY477f5jOppAyp/gpAzL2\nygmccSEUthsb1ZFk8KsYsSg0cbf2K4k3xbGk921qWRJ00aEugLUdPy7SvqxF\nvLx2e+uzkkzpQpj6cnxV0DPeSZeziW8gvuBkL2j0tyw+4O/jxv1bfFrxUEez\nal52mxfqxp7tSicvDtpSj+0kK+6g0NF+7oX3L/AYJ4aSL07sT0LkPyva+0iX\n7/N7p4wzenyYVgL4gbwQQo6IgKWowFUCbevdAEoVDGvYoycYH1hfhRVtYbF6\n9spuc4T8MXjfgXTFjtjjv10El7jzcjkHjPngPgct7XF+RMJEDPp2LIBD7ZQV\nRcV7ZUcbURgCLh8LPhRbp3fY3qLC6p6wjFImHYNw9kd1zOyF3hRg8OcRquY8\nD5/OkOjtKygum0hK2xyf+MXAYry5rDNHQcT+9yvDRqKg3rldbs0kodxcf6x/\nclARgdTuxVNGYjg85flhizdxkZh0ch0/AG3kAdoTpvJCRNN6W6cpkjcrQsYQ\nrD59Ll1TeaPk+9sGk0OfSpIwV4YgHT5yMP0lQMEzO53KoxV79dzqk+VQnIWb\n9gboqn7prUT/E6U6GnVTPnJh6Xu1icE9gYY1WKyw7NgLPACVJHd58VKUf7Zm\ns5m2\r\n=dViV\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "37d61f28ed54c52720854d42150880792edfd40c",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.5",
+   "directories": {},
+   "_nodeVersion": "12.13.1",
+   "dependencies": {
+    "tslib": "^1.11.2",
+    "pvtsutils": "^1.0.10",
+    "webcrypto-core": "^1.1.0",
+    "@peculiar/asn1-schema": "^2.0.3",
+    "@peculiar/json-schema": "^1.1.10"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.0.1",
+    "mocha": "^7.1.2",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.8.2",
+    "ts-node": "^8.10.1",
+    "coveralls": "^3.1.0",
+    "typescript": "^3.8.3",
+    "@types/node": "^12.12.38",
+    "@types/mocha": "^7.0.2",
+    "eslint-plugin-import": "^2.20.2",
+    "@peculiar/webcrypto-test": "^1.0.6",
+    "@typescript-eslint/parser": "^2.31.0",
+    "rollup-plugin-typescript2": "^0.26.0",
+    "@typescript-eslint/eslint-plugin": "^2.31.0"
+   }
+  },
+  "1.1.2": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.1.2",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.1.2",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "3114da877ddd9d2d0be10188371e15855aa71368",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.1.2.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-BkgD5iH2n3+Fdd/+xfhac8VbISo4MPvECPhK1kRpuYC7PnhxaJe2rpU7B4udvMeEL8lhJlvCWybo8Y7A29u/xQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIGejDPiN+60IFyXh9R6r232YbmZCYBAQvy0+taspaXzuAiBcIzhdMEtzxZl8ywMVMWm+w4tmOb/AQKe3HpKuiMJmrg==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 159903,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfEXm/CRA9TVsSAnZWagAA9qYP/2SmF3/X0F4iqYATJta5\nXUu4T3v6VFHP8LQqoCHJzshdhX88zLXDjkF0smFC/VCkJ3PffPrr2HbVOCpp\neWsVvpJTOA5qHu/cEmAtBvwkcksVDOMOmPV/1utGDw5sx+Rd1AqI5KMMTcQw\nnD3HjQ4V9mV9C0RnR/wUdhzrMlHi9qBQv5L6+o3T5Al/dnjHhvNIDe6YEnSa\nw9oQnyv7dRijFEOoCZ9v5/zeDMrU16jJUHPshjD3PlBmm08X4oX7PH9nX2pT\nneO501CldXbzHlwtjKukTXFZSExAYDJzwGUpjwpmDHluVPCgAjUC0wPuxPPn\nSxzGFB8chiXEYqGoU1DYHIkBu4uhw/SY5QHgFzaC9hiDijUWVUG8gPvTIiF7\nRFvMF9k3iBTL3f6gftocTGvib6LwOQToR/XnqmJbuP1pQ/Qt54djbdGle17E\nJ1sywmL921PgvVtj4KDaFjBPUJwEwPIVoVKdCZVfOUUS+HpGm6kK0VXKGmkJ\ndiVMMkGJBN3a+IuBO6rW8BLLMYrRrlUGmEAAJ1Vq+s9SdOwICY7jG05PxqRf\nTnhvxWu0/2FdlkNWaRIZciZGhXOhERp+SConnvDcszgM2aW+LN6SepjTEooW\nAuKRoKJ3KaKfYDXOwvEVbTGE07esSrTwKPY1ft7Fdi1ZJ1xqPnfN47d0Zxz7\na5sT\r\n=Rsd/\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "045353e9ec95e32c00f302328f14636d9deaee9e",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.6",
+   "directories": {},
+   "_nodeVersion": "12.16.3",
+   "dependencies": {
+    "tslib": "^2.0.0",
+    "pvtsutils": "^1.0.10",
+    "webcrypto-core": "^1.1.2",
+    "@peculiar/asn1-schema": "^2.0.8",
+    "@peculiar/json-schema": "^1.1.10"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^8.0.1",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.21.0",
+    "ts-node": "^8.10.2",
+    "coveralls": "^3.1.0",
+    "typescript": "^3.9.7",
+    "@types/node": "^12.12.50",
+    "@types/mocha": "^8.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "@peculiar/webcrypto-test": "^1.0.6",
+    "@typescript-eslint/parser": "^2.34.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "@typescript-eslint/eslint-plugin": "^2.34.0"
+   }
+  },
+  "1.1.3": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.1.3",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.1.3",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "54301b4cfa22e9d879fd8d460528fa44a1548119",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.1.3.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-M1mipPJkWzIf92w3T1Vx5ir3kV9c0oWCcLkeh4vNa/3XDEtQ7xxj5NRKyq67NuVNKLH2/0JD1crlLJyqfYbfBA==",
+    "signatures": [
+     {
+      "sig": "MEUCIBQeNS/6XQFLpn1zgssZVmYq3f/fMFx7aqzQN/cprlAxAiEAsviLeL7Vy7X7cYSwM03hHQ6Cx0pdLrb/dsQcyH3+cuk=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 160021,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfMSyZCRA9TVsSAnZWagAAJd0P/3lYmBwWkg+5WrlkJ+6o\nG1lZT99tE9QoQ1Jb+LQltEr24SBZN5ceNEaaw5b/QYSNTBaYWpRLtOeyoSb8\nzO6u/XqBHDO8yon9J52EcQATsmLyqOpgzgPR2shFWSNt2Ek8PhpulRqNdlqg\nVcejA4Om8yz+IctUYljdeg5qZ4IgoQQQ7Pm8QLS5nvayYDhlXzS7Wipkj6H3\nRHCpydun8VYWgJYWFY4YmgIIwMm0Qx4w6zlXEYp9u53FgZJ8lw+49Ra/mc8Q\n1ql47ZObR9QNweZoxFi/Xej8SwOyYMt4X4AuDE3b53WaIHRAnQ03D6dds16g\noLyQ6zXYn9V5cM8fK2EcW/z+mkLQkd9jaH7zFaWCQj5FssTBnQa/t1TSXZi4\nrowoysCwp+wsGBNT+zn2v8+d+HcT7Fu0vec6OtpPww3JkYaEMKJ5mOO8hAK/\nReQypVQ9Osq+9cxzhC79+23VE749OlUtngXTnv+lPRN7yd++Du/hQbQZkGU5\nn+wZMqR5iNGBNpAzT3zllPT90HTZ3aF2KWbyFP0TPDpHn29VJ8vomoz5nWdS\njGllf4O4fnlQHbCR16Aof+ijpGTLfzzgVgPo6nPZOJYU21kj2KyYKyoWTttX\n45jNOV9lGNl+7alemfIAQchdPPZ2AH41fDlqGeBJzhrgISF9Nr96n1wCPvd6\nYzhB\r\n=0xAL\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "47976a9b35fcdbb42e045cb3ba5b9626bed620a5",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.7",
+   "directories": {},
+   "_nodeVersion": "12.18.3",
+   "dependencies": {
+    "tslib": "^2.0.1",
+    "pvtsutils": "^1.0.11",
+    "webcrypto-core": "^1.1.6",
+    "@peculiar/asn1-schema": "^2.0.13",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^8.1.1",
+    "eslint": "^6.8.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.23.1",
+    "ts-node": "^8.10.2",
+    "coveralls": "^3.1.0",
+    "typescript": "^3.9.7",
+    "@types/node": "^12.12.54",
+    "@types/mocha": "^8.0.1",
+    "eslint-plugin-import": "^2.22.0",
+    "@peculiar/webcrypto-test": "^1.0.6",
+    "@typescript-eslint/parser": "^2.34.0",
+    "rollup-plugin-typescript2": "^0.27.2",
+    "@typescript-eslint/eslint-plugin": "^2.34.0"
+   }
+  },
+  "1.1.4": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.1.4",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.1.4",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "cbbe2195e5e6f879780bdac9a66bcbaca75c483c",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.1.4.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-gEVxfbseFDV0Za3AmjTrRB+wigEMOejHDzoo571e8/YWD33Ejmk0XPF3+G+VaN8+5C5IWZx4CPvxQZ7mF2dvNA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCsOPQW7n2tZcvgQ8IKBshSsYCppfl1YSXlMEhhr/2qPwIhAITr/9mV/hqsXC4OSzFNfA6vE9Ku/G0KXvWPDQYjce2J",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 160130,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfvjX8CRA9TVsSAnZWagAAragQAJRW7DKRDiz1dN1O6oDZ\nF+Yk2N/TjzjDSNFA4PA50AkPaYsXD10T74Yn1PTbepvAh14yY4Wky1KwtJAo\niRMggZD0oeOySLMymsKwE+qHq515vJGrqdeIa02WFl4R96sbAbNTPr7hO4Q6\nSftMDu0QhZeGUtk3uU57IrkT7n0TH4uHfUkC21b4l+jYOGOYBHI3pLeMF4xI\njFeBSvECMeT6Sm+0tTHxh2PKz79plm1v+jAGOWKzhGJsjyDqJLhuFMzK5tMH\npst0AmnWIss1npo2nJKSo/MSvWm1ProhXUOFBsJSfqJWie4LTXjTBOQOaSvh\n6LZNDQsR3WWMvPc+vzvWisG4BZTT39YrcYlTGwjRkCczgIZZ29ZQBMxaOCER\nduBEhtAXXEaWaKmYDH2lqxRHw3IPuncB38D1pv2unLAZsg3l1pcC4LQsECbn\nb1TtGF5UjTTMlc/dbMDRIIZ+h6S//bWrY+yYd4M0i76AEte1igaaBCNTeSBA\n86+k8sw9zmah8taEKSrnvnzImpDx4AhMtCFjkbdBDB5qarQEXO7xGLzUAWRV\nlnNbk5JZmnbgA1Fa2EfXsgh3cv/NSddgKnxWUlugheGRUX33HTT/qNFrCrNv\nEBJJKcqC/8z2TDG3NBe7meZ0nJdTBvwOIJ5Bl6ZYB6SJp/AlrCfnSg4hyD/x\nlvKm\r\n=t7oX\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "75fb5c4b13925f56e08a113fa314e76f18eae832",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.8",
+   "directories": {},
+   "_nodeVersion": "12.18.3",
+   "dependencies": {
+    "tslib": "^2.0.3",
+    "pvtsutils": "^1.1.1",
+    "webcrypto-core": "^1.1.8",
+    "@peculiar/asn1-schema": "^2.0.26",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^8.2.1",
+    "eslint": "^7.14.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.33.3",
+    "ts-node": "^9.0.0",
+    "coveralls": "^3.1.0",
+    "typescript": "^3.9.7",
+    "@types/node": "^12.19.7",
+    "@types/mocha": "^8.0.4",
+    "eslint-plugin-import": "^2.22.1",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^4.8.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "@typescript-eslint/eslint-plugin": "^4.8.2"
+   }
+  },
+  "1.1.5": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.1.5",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.1.5",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "d1ef11bccaae2a5c7ab170a7082b65702c2d2283",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.1.5.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-0cAJiTZTR+ARx/zP/+dJ+SpcWEbUMjp2ZpS2V7iv4dNmSiaQjBn8EHGXIsUkcP1Nl45WOw1nY/1as+nscJDc4w==",
+    "signatures": [
+     {
+      "sig": "MEQCIFhRnqgH0DNj385OyOIL+HwfgukfgTIYAkNkCVwUl71YAiByV+oVmXO/ZIMddE6y0fr7aWeJBLDoqtWZXXserC5ulQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 161912,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgGA2RCRA9TVsSAnZWagAAZMgP/3WOEbdRrdMnFkKN8wZ0\nO01sX8SPsvpJboDiUI8F6pF209HXwguG6o74kZYO86WNwxztNRuetYHkuiER\nyHKXz/YnqU3kNjq6c2xu2hdOMZ+8rFqTS1zcadiJD+JwoaswxGR6ADZcG9Mk\nvqCkKZM8MgtePtGRKDapg8MESz6v67JXdMNu9bgKoMEwhyK6zWm7MivlzKQI\n+4IgaNuz1GVzjsAoj7dZxQYjcOXOg72FkDvQbxj3aLgGQFlZwC3VsDvjYm9Q\nozWuifKUX3aHS/J6Ig+3LBTP9qiawBCbkG7/e5ePZ4hQV8ojktOlOJxFl2AZ\nTHxDhwyMTFDKIAZYaCwTNofXpDkGSe8x93+wAFzzyj5V+3qiVv4foC3KLamJ\n6y5eDyY5EI2r9GwfhqGinqwN4tZWObWYLNnBrDDVOGehcxZK2ff1Ps+UnnWN\n9zZ/UmXcioDpNWdgmO1QVO8Rjw47VH+lHkigWvStWm9Rd+GtssHZAQe6L7Y5\nCJZa84OFd1Zyiw7YEdN3Yqti+3tCK03OvZUQM+UfQUVqNYCqhqjWrCfcpW6G\nBNVgwZf+L8sidP7vgDwQ2ttEleL5yhKZvs0y3SIp4LMCbqeH1bAxIvB3NBND\nqs+V6xFCPxDAJ/TkwwDEWBKEtsdEy1RuFgBB3FNpmzeQkC9VPMJOfFjp/YP3\nLc7h\r\n=VYtY\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "d1f5cbfb63d41ff7dcb2bf9d6ab5d2530cb7a222",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "_nodeVersion": "14.15.4",
+   "dependencies": {
+    "tslib": "^2.1.0",
+    "pvtsutils": "^1.1.1",
+    "webcrypto-core": "^1.1.10",
+    "@peculiar/asn1-schema": "^2.0.27",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^8.2.1",
+    "eslint": "^7.17.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.36.1",
+    "ts-node": "^9.1.1",
+    "coveralls": "^3.1.0",
+    "typescript": "^4.1.3",
+    "@types/node": "^12.19.12",
+    "@types/mocha": "^8.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^4.12.0",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "@typescript-eslint/eslint-plugin": "^4.12.0"
+   }
+  },
+  "1.1.6": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.1.6",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.1.6",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "484bb58be07149e19e873861b585b0d5e4f83b7b",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.1.6.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-xcTjouis4Y117mcsJslWAGypwhxtXslkVdRp7e3tHwtuw0/xCp1te8RuMMv/ia5TsvxomcyX/T+qTbRZGLLvyA==",
+    "signatures": [
+     {
+      "sig": "MEUCIBM57+NQG62Xw+LUDrnB9sbJsP7AboLMPC8V/d1Cz54mAiEA4lhPN1w/p5EMbcZ4dqk3esgPg9bOWIIn6hc7qfRCUzk=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 184576,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgHFiGCRA9TVsSAnZWagAAn48P+QAx7q5F2sYDQfIWNEpG\nKLa67kAK9y9F3mpuD51sdYBx0BoffprenxPBnjv+dZsPPe3XVqI3VTPNeGB+\nbxMddcgtBQC7DCLBeojD8Cbq2eXEJyXTFmAWBE6NdiTBU38ggssbq87AsecR\nFeMUumbKUbP8SJIoKXiFoUAb1V0AlHH5ED5oH23luqEjCERvHkd3HBk1vevk\n6C6NxhbAQ+4KjCYs0NVMaDDuJxJr7Kvcw70dFcvpW875qDjTkyDHXhsFX4wE\nXxmQj8saOxrSjmA5okEPCLm+v5y4XUTVKLna8YxMGUo5dp0FdgB+5PSDJOYt\nvH5F8anXP/R4Uun++oEaLtj5T9/DK1e0M2NXT/iwrWXNybl8dm2JNNUZ3g2T\nthauwU+tcFCf9SrMdMiGe00sbj0s9QVhA5WIYuuM0jkE4avAJQQxJKh7NG9i\nHl0ztXM0Z/NChW7qLtRE4KWMsZJk/zgVXIOTlqyX1MGX49nMtMOP8JZradxH\nEO6vAc/RP9UCa6hPXIKpB4J/f/xzlh9mku6E4kXnm0icnJ0nU30SpzptKV0J\ntjdTR+GWYMlt9kcPVNZ5ooT1Tegwg2xvwRxmjkjDHie8it0iqa9+1ifM3r7S\nNOv0LL7KvmWYosCPHbLbck3rhTmVhNYvWtgFO9dWzpRhx5On71JxzeDgCssk\nbVwg\r\n=4w1N\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2020, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "7a3f11f3fd7df282084ce377d4be2e3b8b7ac118",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "_nodeVersion": "14.15.4",
+   "dependencies": {
+    "tslib": "^2.1.0",
+    "pvtsutils": "^1.1.2",
+    "webcrypto-core": "^1.2.0",
+    "@peculiar/asn1-schema": "^2.0.27",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^8.2.1",
+    "eslint": "^7.19.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.38.4",
+    "ts-node": "^9.1.1",
+    "coveralls": "^3.1.0",
+    "typescript": "^4.1.3",
+    "@types/node": "^14.14.22",
+    "@types/mocha": "^8.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^4.14.2",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.2"
+   }
+  },
+  "1.1.7": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.1.7",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.1.7",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "ff02008612e67ab7cc2a92fce04a7f0e2a04b71c",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.1.7.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-aCNLYdHZkvGH+T8/YBOY33jrVGVuLIa3bpizeHXqwN+P4ZtixhA+kxEEWM1amZwUY2nY/iuj+5jdZn/zB7EPPQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCQGmt94Z0LZLZxBm33W6qpb5HeF786jaK+VJeO5vXDfwIhAINqNMBXxV+hXplGuIwsT9rB5qMrC9fpIuu4XUpg/WmB",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 187220,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgmYyVCRA9TVsSAnZWagAARc0P/3zv5+SjBkIRfFfq73Tr\nMHDej6iYgQU3yyy+6ejC1VlaHgfpf4PBxi2LdmVlIapgJn0OSxNNyyplna77\nk1RkKGRAHYQrt+pWnOS6xrHWlEu7jFY5K1ebpZLPxYj+d5Df9iqC8goL3FNV\nm39/feF0PKMyQgGKnEUeI3K1VeKcKszoYdL6P4xjbpWwK6mtA8JDyqX5GOF3\nvjPu/sOYoR4LEVWrlIstZkGgrzT0z8VqoPvy24pvgzgwGwwqLnyZgjE0L4Uc\ncZcyIuggFQ0ieX/ShKtMdbvvCZ7bJcEt39bDHXaKidUN2GoJwf18IeB26YG2\nYz8UZJclFAjmpEhvfDSBEedYqVA+SrRqfVyF3wieCKLW+GAEUM0Ioanld0Ih\nCBYFnbgrOGWNyOFvaiN5ysTRHVm9fSbAs4BM+pcJCDu70inx+TU+Z2exasM/\nBhPDbgBvJjlnWkngPBKl0ukW36r6USoSZbUDqbSWNUlzsaniuJsrp4QhzDZ6\nZPhZ/P3EJrmFbo0PTYEz1PaQekCNvf0o4T1R8j9Z1R5SSJsC/UMDoXE31u9P\n14DZZVV/s21yRlvL3r/a/8MpaumrtqdqIrjjcXSV1vDF5IAU6d8+q4jvyEcy\n0pP2xQPZ3eABIwp5xFXVGNNtf4lG4fonGOEIZQNEeZ1lnSCPtLVDTgmVKZzi\nVx3v\r\n=Srb4\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2021, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "012a63f17f3e67e91219ecb8a4eeee2c7d81dc0c",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "7.5.3",
+   "directories": {},
+   "_nodeVersion": "14.15.4",
+   "dependencies": {
+    "tslib": "^2.2.0",
+    "pvtsutils": "^1.1.6",
+    "webcrypto-core": "^1.2.0",
+    "@peculiar/asn1-schema": "^2.0.32",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^8.4.0",
+    "eslint": "^7.26.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.47.0",
+    "ts-node": "^9.1.1",
+    "coveralls": "^3.1.0",
+    "typescript": "^4.2.4",
+    "@types/node": "^14.14.44",
+    "@types/mocha": "^8.2.2",
+    "eslint-plugin-import": "^2.22.1",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^4.23.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0"
+   }
+  },
+  "1.2.0": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.2.0",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.2.0",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "e1375ba60e0e5e53e67290f917d77bf813ef5ade",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.2.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-ln2CvfmTzXSr877zM1+3JTyvbtaDXsoDivvEyeYAzB4RQIM+Pw82gp1nQFp9xM4BylBBrip/R36Gp+WJFCoU3Q==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDgiC3em6vSWtek0lADh4HgqeoLjx4jXFNjiPfxDPYanAIgVecRkBalm505vUSvs45xW9rB6TKHh5RYc2uVqUOHvsw=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 188668
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2021, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "9fab59c4dc0b25ec34c1d6cf20a9d3770b10d9ee",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "7.5.3",
+   "directories": {},
+   "_nodeVersion": "14.15.4",
+   "dependencies": {
+    "tslib": "^2.3.1",
+    "pvtsutils": "^1.2.1",
+    "webcrypto-core": "^1.3.0",
+    "@peculiar/asn1-schema": "^2.0.38",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^9.1.3",
+    "eslint": "^8.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.58.1",
+    "ts-node": "^10.4.0",
+    "coveralls": "^3.1.1",
+    "typescript": "^4.4.4",
+    "@types/node": "^16.11.4",
+    "@types/mocha": "^9.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "@typescript-eslint/eslint-plugin": "^5.2.0"
+   }
+  },
+  "1.2.1": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.2.1",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.2.1",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "87bcbaf702f15ff1b19bd4a5f5a7a3e47d841a44",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.2.1.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-HDh4CWPeC5hpCF6hrwzQyocPdI/xGcpz3rzAivNTa+YMLc6LC4KBxyge4pixTO1BlLygnZ9YN19k2LJEsaAthA==",
+    "signatures": [
+     {
+      "sig": "MEQCICuKE321K05MWy3tbwvKUGs2evPTfa8pLsMQ17/p2xxWAiBFS2vTr3kdeYXiQhb0ZQOwSc21dq6+eBl1s7rub7mAPg==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 188700
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2021, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "7d6401b210638ea822f061e373e4e949d8675119",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "8.1.0",
+   "directories": {},
+   "_nodeVersion": "16.13.0",
+   "dependencies": {
+    "tslib": "^2.3.1",
+    "pvtsutils": "^1.2.1",
+    "webcrypto-core": "^1.3.0",
+    "@peculiar/asn1-schema": "^2.0.38",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^9.1.3",
+    "eslint": "^8.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.58.1",
+    "ts-node": "^10.4.0",
+    "coveralls": "^3.1.1",
+    "typescript": "^4.4.4",
+    "@types/node": "^16.11.4",
+    "@types/mocha": "^9.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "@typescript-eslint/eslint-plugin": "^5.2.0"
+   }
+  },
+  "1.2.2": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.2.2",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.2.2",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "bc0532c26191fbb100099b67996f797c170a013a",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.2.2.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-xb8MEgfq93TAkIb70kn+llZgIFQwhdiCiOJHzekVTAS74Y+ae5bZn8KEsuycop/LXAm1kx+Kad/v9eTDTWuY/w==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCc4Lb5LXFRNNk6XgbTqDqnFFRBHwuKcaLnnZ5PLbUZxwIgWjFKtBHclyM8dQA49Hn8FCku0U37NMPYHMj4TIw2avU=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 188772
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2021, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "a1760f21e2e190f4762e51bf9af97772cd02b134",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "8.1.0",
+   "directories": {},
+   "_nodeVersion": "16.13.0",
+   "dependencies": {
+    "tslib": "^2.3.1",
+    "pvtsutils": "^1.2.1",
+    "webcrypto-core": "^1.3.0",
+    "@peculiar/asn1-schema": "^2.0.38",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^9.1.3",
+    "eslint": "^8.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.58.1",
+    "ts-node": "^10.4.0",
+    "coveralls": "^3.1.1",
+    "typescript": "^4.4.4",
+    "@types/node": "^16.11.4",
+    "@types/mocha": "^9.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "@typescript-eslint/eslint-plugin": "^5.2.0"
+   }
+  },
+  "1.2.3": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.2.3",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.2.3",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "79268ef0a8068bed2a40fc33bc68b4d3546fe2cc",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.2.3.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-q7wDfZy3k/tpnsYB23/MyyDkjn6IdHh8w+xwoVMS5cu6CjVoFzngXDZEOOuSE4zus2yO6ciQhhHxd4XkLpwVnQ==",
+    "signatures": [
+     {
+      "sig": "MEUCICeRKf8P+KY/oRgMFGLWF7cOQrw5HP9/Q9fBPLDvlA0/AiEAhFI/wUvme+gRXIJ8pIH0d9sA78feU7qE0O9CHegHH1Q=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 188773,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJhngRQCRA9TVsSAnZWagAA/VkQAIisnvkyQugXNbV7A8Qd\nSmWy0Q9j8zWCGh2CHpGqOVCVoAs7KMNreeVEFN4qua2zSDPea+vyzw+VEqL/\nilM+4haN/U6HcUnqqDNqKW+fhePkxIqqGlPIcCP7BS1BP4URHnwHG369WL3U\n6uPnWArYo344AU0KllgjU+VXVE4R1UknARBHbgNI6UoEbz82vrX+aAcn17aC\nu+xrlSpDkSY5TX/t7btYuMowOu+oa8TQfbdX3okYUwjBC/Wwv2MfXuOm6C0h\nbMmrM87Rev/wwadJF8HvMuIWO/NtVEozPwCe3vp5EraKWhhaAN8lVEOPnxQt\nf0+FrmvmLepQjC2lH4PeydO1WSP6f7y6fYs4JqSYT248SAAErhn963Go+h7T\nPICoE2QCFmvxOpH5CGnjh0TVIeoZgRT7ENhaxEaapWiNy3ChWhabXUTFxN/d\n7LnbM14846urvcRYKuJ9irjQB4Lsf06O9k+vvd6PZ00ZzWAFEsQ4B9LgDn2x\nFOPN4YVjqP7ZVGnn1h4ciiHqVpMK9X/p3ji+Udo5sDAGzRnbHPMv3ndDJHPq\nOaAu5i4/DCXy762KpzJ6frmppQrE+GAw0CiHxBYiFddshxLqbaGI68ty9pjS\n3sdtPctHUKixvsgpXgUN7fi9oFRZ1bhgXJ3620n1WZJHP2vXA2HnUmB/ckto\nMhJK\r\n=Ndlc\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2021, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "e14e507276728eff93648444732d181342d065aa",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "8.1.0",
+   "directories": {},
+   "_nodeVersion": "16.13.0",
+   "dependencies": {
+    "tslib": "^2.3.1",
+    "pvtsutils": "^1.2.1",
+    "webcrypto-core": "^1.4.0",
+    "@peculiar/asn1-schema": "^2.0.44",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^9.1.3",
+    "eslint": "^8.3.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.60.1",
+    "ts-node": "^10.4.0",
+    "coveralls": "^3.1.1",
+    "typescript": "^4.5.2",
+    "@types/node": "^16.11.10",
+    "@types/mocha": "^9.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.4.0",
+    "rollup-plugin-typescript2": "^0.31.1",
+    "@typescript-eslint/eslint-plugin": "^5.4.0"
+   }
+  },
+  "1.3.0": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.3.0",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.3.0",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "9b597b90470afdb566040e703e6aaaf704d9be7c",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.3.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-gV+1F0jQmZmxChl8kNqhdBEYqQbSBvvzT/6r05FSj95/wXmAP+EIAKqMM8ehM2aCxHYTQpOV7bs7y+RQvAwZaw==",
+    "signatures": [
+     {
+      "sig": "MEUCIHxxplqHudXMevVwpVHFoRUKuNC04nrdn0PStDyeGSquAiEAzTnR7v2Srtg+YZm2ijhLJlPKS9Xgduc1aQelMDx2IWc=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 191070,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiF/ANACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpcVw//cvB28DA7dvofCP6LfhFOKkvF+pRzkaK0Rev1ZZSZGKuxDFwl\r\nFE6wAC5XrbRCUju6YUvDzCLNx8B7t/8RCKntyCMo7Wfj6sSaY079ZOCiliII\r\nZwH+fvm1f5RiBbVmmDj76vckQDDRD7L3ir4oFiN3hPjysLeOWyrMqzcc7rLr\r\nmxJmUuRuPFFzBx+ibzINxTFyOGHUt6S8tzf+le0YAbxtc/otZJwNo+Ek2qgi\r\nC+wBCiImBIoPBQdEAlFngZZSuvkxvcOs0/k8IWP0HOWBaRX2kBW5oNH3zNe6\r\nhBUjM+A9dCoPDnBMUWItWYWLb7q1P4JcIeKJDKNyIms2ff1AYXC92rhmiU2Y\r\nGcE2q1ZspporZnF+zjK7v8qaKmvhsKDLkDjPMhUubQiZv94E+gFDsoS0PmJE\r\no+PM9eIU0+tXNCZKdaIB+6Vn3H5j2HSy/GFgqER+jeOKkOl0nTmw1FxFwibV\r\n+9J9a45ThJFD6qssPZLMN99vGlw9W6r/crPvKlGD9YqRdIsOnlrVgVHQKykZ\r\nsmLHCyh/Sz2l4LNirFM6BZfjx3qksQ0rR5CGgKyNZFv5KuOULTbdSvLJXTOm\r\nhFe5QPhT+J1Q/17GEYKKRzfK2I6wvGiVORWysC2oCJJBlTN7Gb28LOk9KDmG\r\n1DymdIaJrxA1ijVW4+nCkHjDUsKaFEl5be0=\r\n=gX3t\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "banner": "// Copyright (c) 2021, Peculiar Ventures, All rights reserved.",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "88c2bf23dec5333cbc429f2d08a1a7cb8789ee28",
+   "scripts": {
+    "pub": "npm version patch && npm publish",
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "npm run build:module",
+    "clear": "rimraf build/*",
+    "prepub": "npm run lint && npm run rebuild",
+    "postpub": "git push && git push --tags origin master",
+    "prepare": "npm run build",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "prepub:next": "npm run lint && npm run rebuild",
+    "build:module": "rollup -c",
+    "postpub:next": "git push"
+   },
+   "_npmVersion": "8.3.1",
+   "directories": {},
+   "_nodeVersion": "16.14.0",
+   "dependencies": {
+    "tslib": "^2.3.1",
+    "pvtsutils": "^1.2.1",
+    "webcrypto-core": "^1.4.0",
+    "@peculiar/asn1-schema": "^2.0.44",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^9.2.1",
+    "eslint": "^8.9.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.68.0",
+    "ts-node": "^10.5.0",
+    "coveralls": "^3.1.1",
+    "typescript": "^4.5.5",
+    "@types/node": "^16.11.10",
+    "@types/mocha": "^9.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.12.1",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "@typescript-eslint/eslint-plugin": "^5.12.1"
+   }
+  },
+  "1.3.1": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.3.1",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.3.1",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "cd152b5d41841b4296983425fbeb9defb085bb0a",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.3.1.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-BdzqCnzquMaoPYsFqWP/Q8SNslweb6A+oVaVbt9JBuXuvb528CEDUGVA0NSEZrgXj8jt++2kx3anChiKhOV3Nw==",
+    "signatures": [
+     {
+      "sig": "MEUCIFpZ99voYcuNZzhl4bhBlSJfZFJWkp94lz47VlPgzND+AiEAtn2ZgTVJ8+/3fM/Ew/tTB1sXast8KD3iG/qBRaepEb4=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 190216,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiH7plACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2Vmq4Wg//QQN5mWQyhD9C+BAecRFqEs1eOE1qyYwVHELzqKQrMnhL/mI8\r\no6VEKgDM9oOWSwvcyk0RKj+wk5mfMkuMMHALRaiLkF+mrcjTrnukNsDEVE32\r\nXhEoZsZ/NVxVX6GXSkFRTVuAPDiN1mSWP+9U0vZg/Q/e3tsWo2dxmGG8lqWy\r\nki4DFPbfsr7frODqNrbrfKX+KyCvf+p3+g410IEfoBhwMgIn7Vp/wE4Dty+J\r\nY5j97M9WXHr/sSrMngg4QufxLmiS7zJjOl+iTSmK1jMg3JT/ksmZyt/62LQW\r\nYeV9UoVbWR/XFY3iGYGDXctTJUZqUVpDaP2F+YPd7hKqh/eBvYqmwsITHjTM\r\nvL2b7jIRiZbXsK9SNOT1NuDByhpyXvm3wPmVfguMsFsCl7dRBhLZmnmYklKp\r\nJtChs6Z41M8CDESjmNUv8xeFLz2zLFMgYh1NkoWvJ213sXGI6bg2clEOVfPa\r\n4eXyL0U4O5FcrkUK81ezHE6NWy8Owi1PCB/dk1oZoJh8ZOckBiYZyrO68HdL\r\n0tjLqXAdahsCohR+mkIvSC1EaNv1ap+toKDlnkaa+HUauWY7lSxpxwd0Jy3c\r\n77uwsboKFcCbkS3hjBhVhtPXRExcC1bfLLjUYOFfS5aeAieNoL5vblzsrbzD\r\nwN7knRyZVs254Ti0V2MiRZAPPj06OVoRSRQ=\r\n=y9Xo\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "b6008797e97c2b4d56e1bd6c4ffb97856d71f32c",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "8.3.1",
+   "directories": {},
+   "_nodeVersion": "16.14.0",
+   "dependencies": {
+    "tslib": "^2.3.1",
+    "pvtsutils": "^1.2.2",
+    "webcrypto-core": "^1.6.0",
+    "@peculiar/asn1-schema": "^2.0.44",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^9.2.1",
+    "eslint": "^8.10.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.69.0",
+    "ts-node": "^10.6.0",
+    "coveralls": "^3.1.1",
+    "typescript": "^4.6.2",
+    "@types/node": "^17.0.21",
+    "@types/mocha": "^9.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.13.0",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "@typescript-eslint/eslint-plugin": "^5.13.0"
+   }
+  },
+  "1.3.2": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.3.2",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.3.2",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "8ea98f1410068cf7da0c7e74758a21caa26caf8d",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.3.2.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-oUgNj+8oT7uROEMEpZZ3U+kZjyxj1KXuvA8P5kiMUveTya9eyS8KTqu/dzdEtYC3u7dvjknVz+0sUfkWOBHfQg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCD1lOqnU/uY24sTzDfPcDoAiYce1cmcN4Zr2MbnHSiUgIhAIzBCQ/2NqBOHsibhxZ0jOyrgz1Q13oVCz+2xE9rOuVW",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 190216,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiJoCLACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmqvhQ//etHs3DMArwHn/RaE0rlweyB5EuBoE28MsBCNnfQrJT0EbLAW\r\nJJhFD0d0cDivk+Qd7sjX1hoG8UmXVH05E1FV3Gi/9KadXWh+dGX/ePo6BJB5\r\nmpT7Ek3jBemN2dPcZH228fv/C68JXtljdVbUhBG5Fn0ZKTun4LObckjoOirr\r\ndfIkw3R3YnsLlvh47otaKTe7vNOwOJYZsH5WLfd+43nflg9ufuJiEOkaWQgY\r\nR1zf0IadCD6y2gzjCU2vz/cnRV+tf1MjcrWQylE1FX65bAkWs/yF3t1OCtdh\r\n5tep7UnbHMJ9MffBXp4cVASgAI+i5sTpyTW1fjRXr/zlok1TggQG9L0PAFzt\r\nc6kOdloORXkxr9puI3bpTc/sVx0+YQlyJ+cpYyeVV6Fr3loBD2VG7MSCed4C\r\nmDvOwqFkPsUPit4XSMb0CgIvm0zu+huPW9UcxYEysogeSrbXj71x1bXPiBKv\r\nGztfuqNiar8zhyFQ/63pYxkGR6XKq4pMsW2X8Y5Y7iklVeNt04+/HB15Zh03\r\n1IgzMMG5dwUIC0zFQgCH0Vcn5of37HI4o+KvKhNzxk5whxLQFkFmoHcS4oI/\r\n3vKEtjFD5sSKq86GjMoQ23QyNAflHv4aXbE6gRdJRjZ0n/qozm6U+Z8cW865\r\nVoUwcoLyMJVsNCW7rczv3DH/TnHejsTEBSQ=\r\n=i/DA\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "becdb5e25b140fa8a8cbca5f6b18236f5b8825c6",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "8.3.1",
+   "directories": {},
+   "_nodeVersion": "16.14.0",
+   "dependencies": {
+    "tslib": "^2.3.1",
+    "pvtsutils": "^1.2.2",
+    "webcrypto-core": "^1.7.1",
+    "@peculiar/asn1-schema": "^2.0.44",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^9.2.1",
+    "eslint": "^8.10.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.70.0",
+    "ts-node": "^10.7.0",
+    "coveralls": "^3.1.1",
+    "typescript": "^4.6.2",
+    "@types/node": "^17.0.21",
+    "@types/mocha": "^9.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.14.0",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "@typescript-eslint/eslint-plugin": "^5.14.0"
+   }
+  },
+  "1.3.3": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.3.3",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.3.3",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "ccca15d27d64a63df013e6575834563aa5df0dbc",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.3.3.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-+jkp16Hp18HkphJlMtqsQKjyDWJBh0AhDuoB+vVakuIRbkBdaFb7v26Ldm25altjiYhCyQnR5NChHxwSTvbXJw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCQlixrOGYAnWDrtV08sM2TeVgTP9WNQdyhCCxTfOHsdwIgeoXB5EKmsoYdKTIHowjoPdAqOODVoY3vaGMBNS34/zs=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 190215,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJiPXJYACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrYAhAAm4UKzX6z283R9zaLr9jT6l7vTF7FsmOga7zR3wUSAlXwEgVj\r\nxtqN/EZ7F5MrCCWFMXWWEOQJRZEi7GQfJ/l64GvNV5X8H0kHKONNPd+23unf\r\nYBeaPChuKxwkKKnjEKnbwiap8YFhVU5I/SMXUaIv/9qusBrMwGSzsbFa4Huv\r\n+PwHJeNTWaw3bWr8eUezet2sRTJBZhefHrgxMmnu4RCrw5Jr/ge9wre/h4+Y\r\nvzdVMeWUcBi2nWNiCAxe17J9mY6wvzMiVgyt7/RhF21cSNHhKFAET2rvGMrZ\r\ng2g7+Guza0aNdYPwxIxsx3wKkOaYjCvmdQYkBIWJboNFJFlWQn9KUPFSApOP\r\n/OnVxpc6zZshog4bybYbrF8Vhpmar0LSsigNg7k4pxA2+rAgH9KJPb/6pLn9\r\n5VaL6yMi/dOHz9LgI71EgWZYy8ATocptVhkCXik23Ly5i8eLFMFcskJgGEFG\r\nFZu/VTijMiB7KvTAWDcsKb0cwc+FPN8IRzDB04Un8AriHULyoN8Xk52hOTC+\r\n5XzSPJhnwAtbjfG0/TVN2tGuJh+SryeN0PWzTh0YnmAt/jU0gy1kxwUSJ5sR\r\nTjxjMemt2ccv0N7vkRW/ZjWmRrWlHBF8kvLvLvc1GwqUPSSwB7ZeHkKfGmtL\r\nXAKJbhNR8dEZWiZ3Ir7vpOWVmNfXIPnfXQ4=\r\n=vArj\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "75d4f9a453b66e527cfe9c266727abd05d446394",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "8.3.1",
+   "directories": {},
+   "_nodeVersion": "16.14.0",
+   "dependencies": {
+    "tslib": "^2.3.1",
+    "pvtsutils": "^1.2.2",
+    "webcrypto-core": "^1.7.2",
+    "@peculiar/asn1-schema": "^2.1.0",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^9.2.2",
+    "eslint": "^8.11.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.70.1",
+    "ts-node": "^10.7.0",
+    "coveralls": "^3.1.1",
+    "typescript": "^4.6.3",
+    "@types/node": "^17.0.23",
+    "@types/mocha": "^9.1.0",
+    "eslint-plugin-import": "^2.25.4",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.14.0",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "@typescript-eslint/eslint-plugin": "^5.14.0"
+   }
+  },
+  "1.4.0": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.4.0",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.4.0",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "f941bd95285a0f8a3d2af39ccda5197b80cd32bf",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.4.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-U58N44b2m3OuTgpmKgf0LPDOmP3bhwNz01vAnj1mBwxBASRhptWYK+M3zG+HBkDqGQM+bFsoIihTW8MdmPXEqg==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDpiB+77q9obOQQRi/x1K5wKtO6HVesT+4KEId5PbMJTgIgTrs+IZXyIxjVMYjCHaFkXcg7RyNDgy16mQySf6ILQl4=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 196004,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJifPb9ACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmplLhAAklpV4995rRtPGFgyXW1iDisbTChCcYYosrzkNekikP+9Fb/P\r\n40F+mHqOQCBMzzU2hT09zqvSPkretHFfH6v4LeDceVUAuM3bM82WyRksn5VJ\r\ntv/YGPx9VBiggKvyNVVO+1jbDNxKWtvU+7lKTSsJpOboLB/7OlDhsbuy8Ota\r\n98E+Y5217AYUdGcrwWO7KEQcN9BqfzRYxOm5Kl7ufQwW/XBpvZRkhxEt4Lkd\r\n9HUZihi5cwcyiYP6ktZ2tSCANJYxjaacTSOD6bs+lQlvRVujY9vZvT+HQXH5\r\nO+b2ijQ6jI/h+wFKdY9Hbv8zFC3WHzCxKWTF6yXSymv0ImDXZDahNha93ZeQ\r\nSg+9al4lrmmXCn80qxbEHKIj0IyoMWTB7IWCYoLABXx/SYI9vPUwZhC+Cu9a\r\nn0ZWBOawhLHrCfJyCCk5S/iG8LlL+/SmmYcQnTLGFSYZGLVOrU+20HNhv1AJ\r\n1Zrz5quVOBc3aFMW5MuCRK7NQxGCd9477fYgyQJ9zqmZ/0f7tdvqKDGxjEIk\r\nP/RMnMn8zI3NzFLBx6accmoXwVYqU+UewNDh8u8UBFeVaIHiwlnn2P3LRNuO\r\njnv/t9iZtLtwNJPb5mem3+83Ibw8pRhXSX8N5e/G5I47bkptBiXIdoTjy4IX\r\n7s1KKTRUtahRg24Mh89dsd0Sol28KOycXuU=\r\n=y43e\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "6b304aedf4920f0dfe6bb6504648d1e17948e195",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "8.5.5",
+   "directories": {},
+   "_nodeVersion": "16.15.0",
+   "dependencies": {
+    "tslib": "^2.4.0",
+    "pvtsutils": "^1.3.2",
+    "webcrypto-core": "^1.7.4",
+    "@peculiar/asn1-schema": "^2.1.6",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^10.0.0",
+    "eslint": "^8.15.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.72.1",
+    "ts-node": "^10.7.0",
+    "coveralls": "^3.1.1",
+    "typescript": "^4.6.4",
+    "@types/node": "^17.0.32",
+    "@types/mocha": "^9.1.1",
+    "eslint-plugin-import": "^2.26.0",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.23.0",
+    "rollup-plugin-typescript2": "^0.31.2",
+    "@typescript-eslint/eslint-plugin": "^5.23.0"
+   }
+  },
+  "1.4.1": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.4.1",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.4.1",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "821493bd5ad0f05939bd5f53b28536f68158360a",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.4.1.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-eK4C6WTNYxoI7JOabMoZICiyqRRtJB220bh0Mbj5RwRycleZf9BPyZoxsTvpP0FpmVS2aS13NKOuh5/tN3sIRw==",
+    "signatures": [
+     {
+      "sig": "MEQCIAXIoyp7oFW5ZHY4fV8oxdg9YeB1UP8XvctaR31F/00EAiBd0vaPMZ3B138LokGwm00Ro8NMx+j3EEfeQcRQK7m/Ew==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 194826,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjYkbBACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmropQ//UlkZRvGFZjNXURkSG8924dfmIOtGurZXS+KVTYN/z+KJNwM3\r\nsAvd5dD2DLklx8L29a+Sopjyx2JN2v8peWu90GwSlHuh3kR2A/cgugHcNSJm\r\n8rsOBSvmzLjubmRTkwz0BeX98RMJnL5ktiybo9feQGcBrGxHCJq2qNJDZ4V2\r\nqqcw0m65FL9lhSP2UTkXzU2huuUOrDGaGN1n25vWxJN3PCZ5BsrITR8rseHn\r\n/2NIJ3nUM3YMbLKKn9zfF1psWQjypPDkY1DkI6zOG/foHDZvgvV/VFWeo3L1\r\n6f8WyZrQRnlV6xHdElm16Ix4jPO5oyto+etgVkPbETPFsF98Vamm3wP5zVjI\r\nJ8iQ0An3tua+GvvWaN5I/XaZyKAP+sj/XQ4Fz33qMYdiBw0WT1ZwrcqbGb9m\r\n51BkWY9nb5A+dOCk6ZK/+1YZiNo0ZDE8/utzHm2whQ35I4R6p0/rT3Cpy7vV\r\njNAGBp1QosaosmP9qvSpgU2qamlFFnSA0UWWdDw/1VAe5KN9n6pbjYIh+ESd\r\nlVH7vNQQrGqq3DLsQA8+ZY1nH345P7TBMhJy756dyujsSQ6U9jkvLwNNkFA+\r\nN9pSMBeOxLHtw+6rEDp2W/SiXVkn/whhaGm6RLdKYl319eP2qk5peIunpFJe\r\nLckhdJpwy4Bx5/enqnQxBnqzW/M5eIB4uVA=\r\n=dHN1\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "cae65e28585bac6bb117cc3506b58ee82f2c3d3a",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "8.15.0",
+   "directories": {},
+   "_nodeVersion": "16.17.1",
+   "dependencies": {
+    "tslib": "^2.4.1",
+    "pvtsutils": "^1.3.2",
+    "webcrypto-core": "^1.7.4",
+    "@peculiar/asn1-schema": "^2.3.0",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "mocha": "^10.1.0",
+    "eslint": "^8.26.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.2.5",
+    "ts-node": "^10.9.1",
+    "coveralls": "^3.1.1",
+    "typescript": "^4.8.4",
+    "@types/node": "^18.11.9",
+    "@types/mocha": "^10.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.42.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "@typescript-eslint/eslint-plugin": "^5.42.0"
+   }
+  },
+  "1.4.2": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.4.2",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.4.2",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "66d70ee476608fa45ebd60af0aa3c69640d0d85a",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.4.2.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-dMvTarTKRx3FzlRUD7Zi2qEsnWVedb/XNRvfM/JaanhTPm+ug9wPsvLXfPHDdl4mjbGdD+Lo/DXRd9sJRuQV3w==",
+    "signatures": [
+     {
+      "sig": "MEQCIHgOH02kbzMK6aVqcmPQaSsd/EQxbHrqO6jS9VgAuD1TAiBJ8iabLLH9CPDuSreqPJw/1/8DjYqSjNOgybEANN6JNA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 190681,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkGgHlACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmpcYQ/+MPwfQ7IQGs/dymqcxC878CDQY2ojMc52Z7Z1YlTeoG9GFMwe\r\ntYm9RMZu4nJbGkeD9O7jS/PLbD+TVDFkxVpuSrC+DV4TNCffEYLipPITtQbP\r\ni914iazpuK5YSM5yIvp6Z6STxURHEE5XUEkDm40spTmJ/H8pcnkTvq688Wzt\r\n+PbeflOwL/7eoey4mO6W1HV6tg8SzxDbdWXYL4BCCcsfZNvbpzjCrS5/Xxzm\r\nEVWcJPYX/LEzIOKH+X8D8Ka11iHakpXSmxi/gptMRWsNhUzMjUohzKD/aC72\r\nzSYAov3Cj65LobV5OWjPilmjzQyatAEJ9aq1bH4qZacxXjOjvzak0WKvuGWQ\r\npsZ198sOZvxqfOppaYaRTl8+8U5/ZrSJHks96BInoJC0oWR8bghulpU5biPr\r\ngTLHik/q2WPTlYAn0Ne1rn2wU8MgifuZDyD8GPx3h/Vt81APz/ZXoZci4tgc\r\nwpPxLm8qWykpeH7ZRBB4whIEJtSclwTUU1ktT4UoxzS985G2GVKeXH8Mt53C\r\ngmlj+Xjcc0n9gxmbIte3LfS4CMJjCklVTfnS3wBgpckX/fqUXejwE0feBTnE\r\nQnaDg6XJ8Y8s++wM2HczivNpRGnq8m1ZoQXrfTDEAg3FAeUV+qaUbOVwBhXl\r\n9WKUCnKfnYNVd4pgim4+5Hvk4SXxyQbqN3o=\r\n=GcWZ\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "3e22e86bef8679e105a86449d2b7b90fa1ffab9b",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "8.19.3",
+   "directories": {},
+   "_nodeVersion": "16.19.1",
+   "dependencies": {
+    "tslib": "^2.5.0",
+    "pvtsutils": "^1.3.2",
+    "webcrypto-core": "^1.7.7",
+    "@peculiar/asn1-schema": "^2.3.6",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^10.2.0",
+    "eslint": "^8.36.0",
+    "rimraf": "^4.4.0",
+    "rollup": "^3.20.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "@types/node": "^18.15.5",
+    "@types/mocha": "^10.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.56.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "@typescript-eslint/eslint-plugin": "^5.56.0"
+   }
+  },
+  "1.4.3": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.4.3",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.4.3",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "078b3e8f598e847b78683dc3ba65feb5029b93a7",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.4.3.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-VtaY4spKTdN5LjJ04im/d/joXuvLbQdgy5Z4DXF4MFZhQ+MTrejbNMkfZBp1Bs3O5+bFqnJgyGdPuZQflvIa5A==",
+    "signatures": [
+     {
+      "sig": "MEUCIBGjasKN4hts/gL7g1ZjxwJoXz6aKZuRPDGf/PH5sL3tAiEAjB3xKvwUdDM5VJrQoGdJ6gjeVfwppZfupFX+3zmYGVQ=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 190719,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJkHZhcACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmrK4w/+LCaXDoFUYUgQKzh6ygMOHCtSIDvpbLcWaBJugSxDXG84+1+T\r\nW+7oxQ++vigxoXtzHfHVsqrh4JekiYCPBJfISWM2qiK5x4XDd25yuFPhsPVn\r\nuu0OBGLNP8a/4TuakKWGjoPbKJBuHSos4RmTDr+ZH1Sb1Q6hDsZ9hXCmU/qH\r\nunUGKhUIGW8yw/EX3BU37vOdVWfEsh+ajrKjv+Of0xf2SAHPghzvFFlSymOf\r\nVQe3zBIzwFh04auSWF7ybik3v74A3cxXyC7xWDBj/coUuoKF5xFk0IZ2HSUl\r\nmDb/JcYm9OiJE950oDXwesiXM2XsjJxouoopk9OKPpetZsoNgpthhlM4g3GU\r\n0C8HB4T/QKuMSwQghoSGSFF89+QDWopKwbgLSgQk7Alq+3KALX10aAWm291V\r\nd5dH+3SQJRku9fb+ImQ5KHfOzWd6Gq6J2t668uFWcY4IwTaZMKLeVa+7W0bM\r\n2GjCzbHBYXrqWOcVU9QI6t39itljBjyQY5OZmorHjkXvDhL7O/H2fAdHBtyT\r\njDuk2KjHkytqid9mFgiBv9GAQpxlI611/pZiJzkihDKmABzSuhaCok5V6jB4\r\nfzNK9ojBQDyguy4m+rYoC5Osmm3NllTaKmNODdx5wymeofigVIbB6Z1Fmims\r\nYmbVJ7KdffgJpTGYEazvZkMPxnv+t4Hrodc=\r\n=bfNS\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "49f7b850325720a3b6275c4639b6d85ca1fa96e9",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "8.19.3",
+   "directories": {},
+   "_nodeVersion": "16.19.1",
+   "dependencies": {
+    "tslib": "^2.5.0",
+    "pvtsutils": "^1.3.2",
+    "webcrypto-core": "^1.7.7",
+    "@peculiar/asn1-schema": "^2.3.6",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^10.2.0",
+    "eslint": "^8.36.0",
+    "rimraf": "^4.4.0",
+    "rollup": "^3.20.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "@types/node": "^18.15.5",
+    "@types/mocha": "^10.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^5.56.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "@typescript-eslint/eslint-plugin": "^5.56.0"
+   }
+  },
+  "1.4.4": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.4.4",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.4.4",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "3f529abca96c8d78cecfd39ddec2148c5df3f8ac",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.4.4.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-VETlZgJqOP3OLRC7AcEYfb6/u05evqsW0Vgs9DyCBATp3FSx7D30Z8ALuDJHsmXCsMblfyTwvB9PLR6IfdlRhg==",
+    "signatures": [
+     {
+      "sig": "MEUCIHjRLrsTAdWCSobkwoqtRPu66Xmn7Rm+XxAYntZz7CSnAiEA0j1Jqkbrv9SatLSY9+3g64GQ3ZYTtyywY/fzapC2AFk=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 191401
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "9dfd7153c65f3211a3f0c2221190fac68c78983b",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "tslib": "^2.6.2",
+    "pvtsutils": "^1.3.5",
+    "webcrypto-core": "^1.7.7",
+    "@peculiar/asn1-schema": "^2.3.8",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^10.2.0",
+    "eslint": "^8.56.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.9.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.4",
+    "@types/mocha": "^10.0.6",
+    "eslint-plugin-import": "^2.29.1",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^6.19.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0"
+   }
+  },
+  "1.4.5": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.4.5",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.4.5",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "424bed6b0d133b772f5cbffd143d0468a90f40a0",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.4.5.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-oDk93QCDGdxFRM8382Zdminzs44dg3M2+E5Np+JWkpqLDyJC9DviMh8F8mEJkYuUcUOGA5jHO5AJJ10MFWdbZw==",
+    "signatures": [
+     {
+      "sig": "MEUCIQD3/z9x1a34sSCLgi97NrwDWaiQclsaxOq45uwon/d7pAIgGpmXQysxcM4qOKv8Q+TA7G977+Zl/pas7RxjCz6Pxis=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 191401
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "e95c128688329c3dee949cf24ef3f8505dd30d0f",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "tslib": "^2.6.2",
+    "pvtsutils": "^1.3.5",
+    "webcrypto-core": "^1.7.8",
+    "@peculiar/asn1-schema": "^2.3.8",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^10.2.0",
+    "eslint": "^8.56.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.9.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "@types/node": "^20.11.4",
+    "@types/mocha": "^10.0.6",
+    "eslint-plugin-import": "^2.29.1",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^6.19.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "@typescript-eslint/eslint-plugin": "^6.19.0"
+   }
+  },
+  "1.4.6": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.4.6",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.4.6",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "607af294c4f205efeeb172aa32cb20024fe4aecf",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.4.6.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-YBcMfqNSwn3SujUJvAaySy5tlYbYm6tVt9SKoXu8BaTdKGROiJDgPR3TXpZdAKUfklzm3lRapJEAltiMQtBgZg==",
+    "signatures": [
+     {
+      "sig": "MEQCIAKjmJ1argWW88fOEAOJM/Lrqm7T+itQ5uxXVEp3/KBNAiBL7qGwEO+gYke+vtzZ1shu9zSOLplfIpct7pvHCBby7A==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 191503
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "b26d67e0fdb47ce2f602316bbc81d9bc66024522",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "10.2.4",
+   "directories": {},
+   "_nodeVersion": "20.11.1",
+   "dependencies": {
+    "tslib": "^2.6.2",
+    "pvtsutils": "^1.3.5",
+    "webcrypto-core": "^1.7.9",
+    "@peculiar/asn1-schema": "^2.3.8",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^10.4.0",
+    "eslint": "^8.57.0",
+    "rimraf": "^5.0.5",
+    "rollup": "^4.13.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3",
+    "@types/node": "^20.11.30",
+    "@types/mocha": "^10.0.6",
+    "eslint-plugin-import": "^2.29.1",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^7.4.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "@typescript-eslint/eslint-plugin": "^7.4.0"
+   }
+  },
+  "1.5.0": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.5.0",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.5.0",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "nyc": {
+    "exclude": [
+     "**/*.d.ts"
+    ],
+    "include": [
+     "src/**/*.ts"
+    ],
+    "reporter": [
+     "lcov",
+     "text-summary",
+     "html"
+    ],
+    "extension": [
+     ".ts",
+     ".tsx"
+    ]
+   },
+   "dist": {
+    "shasum": "9e57174c02c1291051c553600347e12b81469e10",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.5.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-BRs5XUAwiyCDQMsVA9IDvDa7UBR9gAvPHgugOeGng3YN6vJ9JYonyDc0lNczErgtCWtucjR5N7VtaonboD/ezg==",
+    "signatures": [
+     {
+      "sig": "MEUCIDSerJ90vEB+8jlUncz+dvQzUEyqw8Y8okmXxTVhftFQAiEAgr5jHtgyKE12XH3WSVWFxNZm7BwZtc9Go1TsHOA81zE=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 209620
+   },
+   "main": "build/webcrypto.js",
+   "mocha": {
+    "spec": "test/**/*.ts",
+    "require": "ts-node/register",
+    "extension": [
+     "ts"
+    ]
+   },
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=10.12.0"
+   },
+   "gitHead": "919c67e3d578d06916e3f57a070d3ad5ebef19d5",
+   "scripts": {
+    "lint": "eslint . --ext .ts",
+    "test": "mocha",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "nyc npm test",
+    "lint:fix": "eslint --fix . --ext .ts",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
+   },
+   "_npmVersion": "10.5.2",
+   "directories": {},
+   "_nodeVersion": "20.13.1",
+   "dependencies": {
+    "tslib": "^2.6.2",
+    "pvtsutils": "^1.3.5",
+    "webcrypto-core": "^1.8.0",
+    "@peculiar/asn1-schema": "^2.3.8",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "react-native": "build/webcrypto.es.js",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "mocha": "^10.4.0",
+    "eslint": "^8.57.0",
+    "rimraf": "^5.0.7",
+    "rollup": "^4.17.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "@types/node": "^20.12.12",
+    "@types/mocha": "^10.0.6",
+    "eslint-plugin-import": "^2.29.1",
+    "@peculiar/webcrypto-test": "^1.0.7",
+    "@typescript-eslint/parser": "^7.10.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "@typescript-eslint/eslint-plugin": "^7.10.0"
+   }
+  },
+  "1.6.0": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.6.0",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.6.0",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "dist": {
+    "shasum": "a4e7b61723d961852dd32fe3866824fe8d35f1d1",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.6.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-P5Z7kKGbBi5R4DMaSJ6ThjH7oybsUakwHEIX05ciJ85xwCHVpB2WKxzvMsSVhWBGSFskp/JQ7Bn0FFzkGpzafQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDVc1a5EOXVJtcGjhg5ZLrquU7CGtRmsKoE7fSR6TJCpwIhAJJ/gKUYN51lZeq6jTVhNfkeT5qjA4Qx4NCta7Vma6gr",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@peculiar%2fwebcrypto@1.6.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 206622
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=14.18.0"
+   },
+   "gitHead": "74ba7c5ab179ddf1b718a4254e1fb7e6a1a4b150",
+   "scripts": {
+    "lint": "eslint",
+    "test": "vitest run",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "vitest --coverage",
+    "lint:fix": "eslint --fix",
+    "typecheck": "tsc --noEmit",
+    "test:watch": "vitest"
+   },
+   "_npmVersion": "11.11.0",
+   "directories": {},
+   "_nodeVersion": "24.14.1",
+   "dependencies": {
+    "tslib": "^2.8.1",
+    "pvtsutils": "^1.3.6",
+    "webcrypto-core": "^1.8.1",
+    "@peculiar/asn1-schema": "^2.6.0",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "react-native": "build/webcrypto.es.js",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "rimraf": "^6.1.3",
+    "rollup": "^4.60.2",
+    "vitest": "^4.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "@types/node": "^25.6.0",
+    "@vitest/coverage-v8": "^4.1.5",
+    "@peculiar/webcrypto-test": "^2.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@peculiar/eslint-config-base": "^0.2.9"
+   }
+  },
+  "1.7.0": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.7.0",
+   "license": "MIT",
+   "_id": "@peculiar/webcrypto@1.7.0",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "dist": {
+    "shasum": "8dbf402981d32a6030bd35063097cf29752318e8",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.7.0.tgz",
+    "fileCount": 6,
+    "integrity": "sha512-04vwLd8VKfvsq3CsW5Xix6Xs9wAMK/xci/TO2T/VFLRGlYa06RGiUS9eClwnAx3z5XIjf0EdmHlmGcNzlBJLmA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDyr1FtnvhQPguUfhnietX53Kcu1TOkeZCnoetqkVYpgQIgIjTvZSqWENrtRA9gzyl/CF2kGMgfn1pCGCCarZLkk90=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@peculiar%2fwebcrypto@1.7.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 208172
+   },
+   "main": "build/webcrypto.js",
+   "types": "index.d.ts",
+   "module": "build/webcrypto.es.js",
+   "engines": {
+    "node": ">=14.18.0"
+   },
+   "gitHead": "78da91707b61756fe767c3878346963ee417e26d",
+   "scripts": {
+    "lint": "eslint",
+    "test": "vitest run",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "coverage": "vitest --coverage",
+    "lint:fix": "eslint --fix",
+    "typecheck": "tsc --noEmit",
+    "test:watch": "vitest"
+   },
+   "_npmVersion": "11.11.0",
+   "directories": {},
+   "_nodeVersion": "24.14.1",
+   "dependencies": {
+    "tslib": "^2.8.1",
+    "webcrypto-core": "^1.9.0",
+    "@peculiar/utils": "^2.0.1",
+    "@peculiar/asn1-schema": "^2.6.0",
+    "@peculiar/json-schema": "^1.1.12"
+   },
+   "react-native": "build/webcrypto.es.js",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "rimraf": "^6.1.3",
+    "rollup": "^4.60.2",
+    "vitest": "^4.1.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3",
+    "@types/node": "^25.6.0",
+    "@vitest/coverage-v8": "^4.1.5",
+    "@peculiar/webcrypto-test": "^2.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@peculiar/eslint-config-base": "^0.2.9"
+   }
+  },
+  "1.7.1": {
+   "name": "@peculiar/webcrypto",
+   "version": "1.7.1",
+   "exports": {
+    ".": {
+     "types": "./index.d.ts",
+     "import": "./build/webcrypto.es.js",
+     "require": "./build/webcrypto.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "main": "build/webcrypto.js",
+   "module": "build/webcrypto.es.js",
+   "react-native": "build/webcrypto.es.js",
+   "types": "index.d.ts",
+   "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest --coverage",
+    "build": "rollup -c",
+    "clear": "rimraf build/*",
+    "rebuild": "npm run clear && npm run build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+   },
+   "license": "MIT",
+   "bugs": {
+    "url": "https://github.com/PeculiarVentures/webcrypto/issues"
+   },
+   "devDependencies": {
+    "@peculiar/eslint-config-base": "^0.2.9",
+    "@peculiar/webcrypto-test": "^2.0.0",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "@types/node": "^25.6.0",
+    "@vitest/coverage-v8": "^4.1.5",
+    "rimraf": "^6.1.3",
+    "rollup": "^4.60.2",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+   },
+   "dependencies": {
+    "@peculiar/asn1-schema": "^2.7.0",
+    "@peculiar/json-schema": "^1.1.12",
+    "@peculiar/utils": "^2.0.2",
+    "tslib": "^2.8.1",
+    "webcrypto-core": "^1.9.2"
+   },
+   "engines": {
+    "node": ">=14.18.0"
+   },
+   "_id": "@peculiar/webcrypto@1.7.1",
+   "_integrity": "sha512-ODOov0sGMJMf3jPonOkgGqPknTsu+DdQ7kD++gz8aI+aFMOMHFbWAA2taqXXVTdP+OTOQR/znGvSpmkeI0WTYQ==",
+   "_resolved": "/home/runner/work/webcrypto/webcrypto/release-package/peculiar-webcrypto-1.7.1.tgz",
+   "_from": "file:release-package/peculiar-webcrypto-1.7.1.tgz",
+   "_nodeVersion": "24.14.1",
+   "_npmVersion": "11.11.0",
+   "dist": {
+    "integrity": "sha512-ODOov0sGMJMf3jPonOkgGqPknTsu+DdQ7kD++gz8aI+aFMOMHFbWAA2taqXXVTdP+OTOQR/znGvSpmkeI0WTYQ==",
+    "shasum": "ef8cfae878ca1f1a44ef0c82cf3fa6f3cbe9c26a",
+    "tarball": "http://localhost:3000/@peculiar/webcrypto/-/webcrypto-1.7.1.tgz",
+    "fileCount": 6,
+    "unpackedSize": 208337,
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@peculiar%2fwebcrypto@1.7.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEYCIQCcgzpg8S5818glWnXgz6nu88/+hagOecznFSsl8nvJ8gIhAJoE/Nq+AIVEoOY5ILn7kEDkjCGZNh0lWQ/0HsltH62u"
+     }
+    ]
+   },
+   "directories": {},
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2019-01-25T14:31:16.162Z",
+  "modified": "2026-05-01T15:27:24.480Z",
+  "1.0.1": "2019-01-25T14:31:16.590Z",
+  "1.0.2": "2019-02-14T11:08:14.404Z",
+  "1.0.3": "2019-02-15T22:44:56.856Z",
+  "1.0.4": "2019-02-17T07:36:15.887Z",
+  "1.0.5": "2019-02-19T09:42:04.144Z",
+  "1.0.6": "2019-03-02T07:27:14.836Z",
+  "1.0.7": "2019-03-02T21:22:39.012Z",
+  "1.0.8": "2019-03-07T00:18:21.951Z",
+  "1.0.9": "2019-03-28T13:32:06.880Z",
+  "1.0.10": "2019-05-03T14:14:27.765Z",
+  "1.0.11": "2019-05-22T19:23:19.151Z",
+  "1.0.12": "2019-05-26T08:46:19.044Z",
+  "1.0.13": "2019-08-20T08:51:12.671Z",
+  "1.0.14": "2019-08-20T09:23:44.864Z",
+  "1.0.15": "2019-08-24T23:17:30.787Z",
+  "1.0.16": "2019-08-26T20:48:48.235Z",
+  "1.0.17": "2019-09-04T05:48:44.794Z",
+  "1.0.18": "2019-09-04T05:50:30.207Z",
+  "1.0.19": "2019-09-04T06:24:53.145Z",
+  "1.0.20": "2019-10-12T07:34:21.849Z",
+  "1.0.21": "2019-10-12T07:37:22.119Z",
+  "1.0.22": "2019-12-16T13:28:53.864Z",
+  "1.0.23": "2020-03-06T10:39:40.869Z",
+  "1.0.24": "2020-03-15T09:43:56.231Z",
+  "1.0.25": "2020-03-15T09:45:31.103Z",
+  "1.0.26": "2020-03-23T08:07:28.776Z",
+  "1.0.27": "2020-04-06T12:32:47.480Z",
+  "1.0.28": "2020-04-18T19:52:21.402Z",
+  "1.0.29": "2020-04-18T20:18:04.227Z",
+  "1.1.0": "2020-05-07T09:41:13.203Z",
+  "1.1.1": "2020-05-08T07:40:39.782Z",
+  "1.1.2": "2020-07-17T10:13:19.410Z",
+  "1.1.3": "2020-08-10T11:16:41.323Z",
+  "1.1.4": "2020-11-25T10:46:19.645Z",
+  "1.1.5": "2021-02-01T14:17:53.142Z",
+  "1.1.6": "2021-02-04T20:26:46.182Z",
+  "1.1.7": "2021-05-10T19:42:13.554Z",
+  "1.2.0": "2021-10-26T10:00:03.616Z",
+  "1.2.1": "2021-11-10T00:02:25.323Z",
+  "1.2.2": "2021-11-10T00:31:47.237Z",
+  "1.2.3": "2021-11-24T09:22:24.829Z",
+  "1.3.0": "2022-02-24T20:52:29.106Z",
+  "1.3.1": "2022-03-02T18:41:41.102Z",
+  "1.3.2": "2022-03-07T22:00:43.091Z",
+  "1.3.3": "2022-03-25T07:42:16.864Z",
+  "1.4.0": "2022-05-12T12:01:01.687Z",
+  "1.4.1": "2022-11-02T10:30:25.024Z",
+  "1.4.2": "2023-03-21T19:13:41.713Z",
+  "1.4.3": "2023-03-24T12:32:28.766Z",
+  "1.4.4": "2024-01-16T20:48:30.100Z",
+  "1.4.5": "2024-01-22T23:51:48.817Z",
+  "1.4.6": "2024-03-29T12:51:00.434Z",
+  "1.5.0": "2024-05-28T20:26:02.297Z",
+  "1.6.0": "2026-04-29T09:36:16.414Z",
+  "1.7.0": "2026-04-30T09:18:38.497Z",
+  "1.7.1": "2026-05-01T15:27:23.878Z"
+ },
+ "license": "MIT"
+}

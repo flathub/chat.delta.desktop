@@ -1,0 +1,415 @@
+{
+ "_id": "@jridgewell/remapping",
+ "_rev": "5-2398e3ba04b4ab5dcb981986aac3925e",
+ "name": "@jridgewell/remapping",
+ "dist-tags": {
+  "latest": "2.3.5"
+ },
+ "versions": {
+  "2.3.1": {
+   "name": "@jridgewell/remapping",
+   "version": "2.3.1",
+   "license": "MIT",
+   "_id": "@jridgewell/remapping@2.3.1",
+   "bugs": {
+    "url": "https://github.com/jridgewell/sourcemaps/issues"
+   },
+   "dist": {
+    "shasum": "5bae581e59f0d18903b68b3d0d428794881c667c",
+    "tarball": "http://localhost:3000/@jridgewell/remapping/-/remapping-2.3.1.tgz",
+    "fileCount": 32,
+    "integrity": "sha512-ZFTwvLNs3+zzLZDxsVsWhgXNFhAq6UvcbgcN+mbO5D+rtyl4+Qjp4Haz79zj4bGmc6gUb+qOP1nHR8ij9qFliQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIErG+JF8AK1H9kHnAYPUcN0qKIvnb/YPf4xqE4yiV/2QAiBSuXvl9v3rqZ8QZmtTG6fXX+EEHX2bR8O+mkGDgwtFtg==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 58016
+   },
+   "main": "dist/remapping.umd.js",
+   "types": "types/remapping.d.cts",
+   "module": "dist/remapping.mjs",
+   "exports": {
+    ".": [
+     {
+      "import": {
+       "types": "./types/remapping.d.mts",
+       "default": "./dist/remapping.mjs"
+      },
+      "browser": {
+       "types": "./types/remapping.d.cts",
+       "default": "./dist/remapping.umd.js"
+      },
+      "require": {
+       "types": "./types/remapping.d.cts",
+       "default": "./dist/remapping.umd.js"
+      },
+      "module-sync": {
+       "types": "./types/remapping.d.mts",
+       "default": "./dist/remapping.mjs"
+      }
+     },
+     "./dist/remapping.umd.js"
+    ],
+    "./package.json": "./package.json"
+   },
+   "gitHead": "90648758f7150574cf6cfd073acadb86f37cf24f",
+   "scripts": {
+    "lint": "run-s -n lint:types lint:format",
+    "test": "run-s -n test:types test:only test:format",
+    "build": "run-s -n build:code build:types",
+    "clean": "run-s -n clean:code clean:types",
+    "benchmark": "run-s build:code benchmark:*",
+    "test:only": "mocha",
+    "build:code": "node ../../esbuild.mjs remapping.ts",
+    "clean:code": "tsc --build --clean tsconfig.build.json",
+    "lint:types": "npm run test:types -- --fix",
+    "test:types": "eslint '{src,test}/**/*.ts'",
+    "build:types": "run-s build:types:force build:types:emit build:types:mts",
+    "clean:types": "rimraf dist types",
+    "lint:format": "npm run test:format -- --write",
+    "test:format": "prettier --check '{src,test}/**/*.ts'",
+    "benchmark:only": "node --expose-gc benchmark/index.js",
+    "prepublishOnly": "npm run-s -n build test",
+    "build:types:mts": "node ../../mts-types.mjs",
+    "build:types:emit": "tsc --project tsconfig.build.json",
+    "benchmark:install": "cd benchmark && npm install",
+    "build:types:force": "rimraf tsconfig.build.tsbuildinfo"
+   },
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "@jridgewell/gen-mapping": "^0.3.5",
+    "@jridgewell/trace-mapping": "^0.3.24"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "source-map": "0.6.1"
+   }
+  },
+  "2.3.2": {
+   "name": "@jridgewell/remapping",
+   "version": "2.3.2",
+   "license": "MIT",
+   "_id": "@jridgewell/remapping@2.3.2",
+   "bugs": {
+    "url": "https://github.com/jridgewell/sourcemaps/issues"
+   },
+   "dist": {
+    "shasum": "c02bc3d1664fd6dae3ba78fff47b146459933ec3",
+    "tarball": "http://localhost:3000/@jridgewell/remapping/-/remapping-2.3.2.tgz",
+    "fileCount": 32,
+    "integrity": "sha512-nVdLIUMnRtrxDxcIBdeGltzPyvrtC3/d4DrUQcL4nCL1cubAnX6ROIPXFi0XWSMHuiyH+oUPVY+g7WEovMhXcg==",
+    "signatures": [
+     {
+      "sig": "MEUCICE2zmM6QIYs1kmdbBolUPv3BEiWbnT12lF2cGBFm1llAiEAzwxNFT124/m7qa7LeP0pSmy5ZFAKhSuvYOPtqR3oOCQ=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 57890
+   },
+   "main": "dist/remapping.umd.js",
+   "types": "types/remapping.d.cts",
+   "module": "dist/remapping.mjs",
+   "exports": {
+    ".": [
+     {
+      "import": {
+       "types": "./types/remapping.d.mts",
+       "default": "./dist/remapping.mjs"
+      },
+      "browser": {
+       "types": "./types/remapping.d.cts",
+       "default": "./dist/remapping.umd.js"
+      },
+      "require": {
+       "types": "./types/remapping.d.cts",
+       "default": "./dist/remapping.umd.js"
+      }
+     },
+     "./dist/remapping.umd.js"
+    ],
+    "./package.json": "./package.json"
+   },
+   "gitHead": "dad47801cf1793389c88aeea2b2f688e98113eaa",
+   "scripts": {
+    "lint": "run-s -n lint:types lint:format",
+    "test": "run-s -n test:types test:only test:format",
+    "build": "run-s -n build:code build:types",
+    "clean": "run-s -n clean:code clean:types",
+    "benchmark": "run-s build:code benchmark:*",
+    "test:only": "mocha",
+    "build:code": "node ../../esbuild.mjs remapping.ts",
+    "clean:code": "tsc --build --clean tsconfig.build.json",
+    "lint:types": "npm run test:types -- --fix",
+    "test:types": "eslint '{src,test}/**/*.ts'",
+    "build:types": "run-s build:types:force build:types:emit build:types:mts",
+    "clean:types": "rimraf dist types",
+    "lint:format": "npm run test:format -- --write",
+    "test:format": "prettier --check '{src,test}/**/*.ts'",
+    "benchmark:only": "node --expose-gc benchmark/index.js",
+    "prepublishOnly": "npm run-s -n build test",
+    "build:types:mts": "node ../../mts-types.mjs",
+    "build:types:emit": "tsc --project tsconfig.build.json",
+    "benchmark:install": "cd benchmark && npm install",
+    "build:types:force": "rimraf tsconfig.build.tsbuildinfo"
+   },
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "@jridgewell/gen-mapping": "^0.3.5",
+    "@jridgewell/trace-mapping": "^0.3.24"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "source-map": "0.6.1"
+   }
+  },
+  "2.3.3": {
+   "name": "@jridgewell/remapping",
+   "version": "2.3.3",
+   "license": "MIT",
+   "_id": "@jridgewell/remapping@2.3.3",
+   "bugs": {
+    "url": "https://github.com/jridgewell/sourcemaps/issues"
+   },
+   "dist": {
+    "shasum": "4e162c4c6f158a3908add7db9e2cc66b7e7b93fe",
+    "tarball": "http://localhost:3000/@jridgewell/remapping/-/remapping-2.3.3.tgz",
+    "fileCount": 32,
+    "integrity": "sha512-ABQqI4f6xRPwTcySKyRk9qDQpzL9Tgu0iAH/cLcfACinqORdTYR5DzhzKexHrHJOYnWuyMfbOpYCvFrA9+xT7A==",
+    "signatures": [
+     {
+      "sig": "MEYCIQD1GLw3m6/kwQ8eKNiZw7yvfJl2XIkhfigq9IJDa644PQIhAIJnBFDvBUAlhmzD7pa2T2zoMw81AoxyxGcWJAkNdnL/",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 58218
+   },
+   "main": "dist/remapping.umd.js",
+   "types": "types/remapping.d.cts",
+   "module": "dist/remapping.mjs",
+   "exports": {
+    ".": [
+     {
+      "import": {
+       "types": "./types/remapping.d.mts",
+       "default": "./dist/remapping.mjs"
+      },
+      "browser": {
+       "types": "./types/remapping.d.cts",
+       "default": "./dist/remapping.umd.js"
+      },
+      "require": {
+       "types": "./types/remapping.d.cts",
+       "default": "./dist/remapping.umd.js"
+      }
+     },
+     "./dist/remapping.umd.js"
+    ],
+    "./package.json": "./package.json"
+   },
+   "gitHead": "d2578bd71829135bee7f510e62f898bcde97e80a",
+   "scripts": {
+    "lint": "run-s -n lint:types lint:format",
+    "test": "run-s -n test:types test:only test:format",
+    "build": "run-s -n build:code build:types",
+    "clean": "run-s -n clean:code clean:types",
+    "benchmark": "run-s build:code benchmark:*",
+    "test:only": "mocha",
+    "build:code": "node ../../esbuild.mjs remapping.ts",
+    "clean:code": "tsc --build --clean tsconfig.build.json",
+    "lint:types": "npm run test:types -- --fix",
+    "test:types": "eslint '{src,test}/**/*.ts'",
+    "build:types": "run-s build:types:force build:types:emit build:types:mts",
+    "clean:types": "rimraf dist types",
+    "lint:format": "npm run test:format -- --write",
+    "test:format": "prettier --check '{src,test}/**/*.ts'",
+    "benchmark:only": "node --expose-gc benchmark/index.js",
+    "prepublishOnly": "npm run-s -n build test",
+    "build:types:mts": "node ../../mts-types.mjs",
+    "build:types:emit": "tsc --project tsconfig.build.json",
+    "benchmark:install": "cd benchmark && npm install",
+    "build:types:force": "rimraf tsconfig.build.tsbuildinfo"
+   },
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "@jridgewell/gen-mapping": "^0.3.5",
+    "@jridgewell/trace-mapping": "^0.3.24"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "source-map": "0.6.1"
+   }
+  },
+  "2.3.4": {
+   "name": "@jridgewell/remapping",
+   "version": "2.3.4",
+   "license": "MIT",
+   "_id": "@jridgewell/remapping@2.3.4",
+   "bugs": {
+    "url": "https://github.com/jridgewell/sourcemaps/issues"
+   },
+   "dist": {
+    "shasum": "231002d80f23252cda81b2233e1592119e1b78ea",
+    "tarball": "http://localhost:3000/@jridgewell/remapping/-/remapping-2.3.4.tgz",
+    "fileCount": 32,
+    "integrity": "sha512-aG+WvAz17rhbzhKNkSeMLgbkPPK82ovXdONvmucbGhUqcroRFLLVhoGAk4xEI17gHpXgNX3sr0/B1ybRUsbEWw==",
+    "signatures": [
+     {
+      "sig": "MEUCICUrsD70icSMr1OzlM4qIwIaxGQbHJyUSk+FEtoPvVb4AiEA5L0Sn5UEHgFC3H1EJAEiYh/nIxWkN5JkSp4TwpxMv7M=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 59270
+   },
+   "main": "dist/remapping.umd.js",
+   "types": "types/remapping.d.cts",
+   "module": "dist/remapping.mjs",
+   "exports": {
+    ".": [
+     {
+      "import": {
+       "types": "./types/remapping.d.mts",
+       "default": "./dist/remapping.mjs"
+      },
+      "browser": {
+       "types": "./types/remapping.d.cts",
+       "default": "./dist/remapping.umd.js"
+      },
+      "require": {
+       "types": "./types/remapping.d.cts",
+       "default": "./dist/remapping.umd.js"
+      }
+     },
+     "./dist/remapping.umd.js"
+    ],
+    "./package.json": "./package.json"
+   },
+   "gitHead": "3c6286e949d58c2bc6e27334385349c6a83c6d7d",
+   "scripts": {
+    "lint": "run-s -n lint:types lint:format",
+    "test": "run-s -n test:types test:only test:format",
+    "build": "run-s -n build:code build:types",
+    "clean": "run-s -n clean:code clean:types",
+    "benchmark": "run-s build:code benchmark:*",
+    "test:only": "mocha",
+    "build:code": "node ../../esbuild.mjs remapping.ts",
+    "clean:code": "tsc --build --clean tsconfig.build.json",
+    "lint:types": "npm run test:types -- --fix",
+    "test:types": "eslint '{src,test}/**/*.ts'",
+    "build:types": "run-s build:types:force build:types:emit build:types:mts",
+    "clean:types": "rimraf dist types",
+    "lint:format": "npm run test:format -- --write",
+    "test:format": "prettier --check '{src,test}/**/*.ts'",
+    "benchmark:only": "node --expose-gc benchmark/index.js",
+    "prepublishOnly": "npm run-s -n build test",
+    "build:types:mts": "node ../../mts-types.mjs",
+    "build:types:emit": "tsc --project tsconfig.build.json",
+    "benchmark:install": "cd benchmark && npm install",
+    "build:types:force": "rimraf tsconfig.build.tsbuildinfo"
+   },
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "@jridgewell/gen-mapping": "^0.3.5",
+    "@jridgewell/trace-mapping": "^0.3.24"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "source-map": "0.6.1"
+   }
+  },
+  "2.3.5": {
+   "name": "@jridgewell/remapping",
+   "version": "2.3.5",
+   "main": "dist/remapping.umd.js",
+   "module": "dist/remapping.mjs",
+   "types": "types/remapping.d.cts",
+   "exports": {
+    ".": [
+     {
+      "import": {
+       "types": "./types/remapping.d.mts",
+       "default": "./dist/remapping.mjs"
+      },
+      "default": {
+       "types": "./types/remapping.d.cts",
+       "default": "./dist/remapping.umd.js"
+      }
+     },
+     "./dist/remapping.umd.js"
+    ],
+    "./package.json": "./package.json"
+   },
+   "scripts": {
+    "benchmark": "run-s build:code benchmark:*",
+    "benchmark:install": "cd benchmark && npm install",
+    "benchmark:only": "node --expose-gc benchmark/index.js",
+    "build": "run-s -n build:code build:types",
+    "build:code": "node ../../esbuild.mjs remapping.ts",
+    "build:types": "run-s build:types:force build:types:emit build:types:mts",
+    "build:types:force": "rimraf tsconfig.build.tsbuildinfo",
+    "build:types:emit": "tsc --project tsconfig.build.json",
+    "build:types:mts": "node ../../mts-types.mjs",
+    "clean": "run-s -n clean:code clean:types",
+    "clean:code": "tsc --build --clean tsconfig.build.json",
+    "clean:types": "rimraf dist types",
+    "test": "run-s -n test:types test:only test:format",
+    "test:format": "prettier --check '{src,test}/**/*.ts'",
+    "test:only": "mocha",
+    "test:types": "eslint '{src,test}/**/*.ts'",
+    "lint": "run-s -n lint:types lint:format",
+    "lint:format": "npm run test:format -- --write",
+    "lint:types": "npm run test:types -- --fix",
+    "prepublishOnly": "npm run-s -n build test"
+   },
+   "license": "MIT",
+   "dependencies": {
+    "@jridgewell/gen-mapping": "^0.3.5",
+    "@jridgewell/trace-mapping": "^0.3.24"
+   },
+   "devDependencies": {
+    "source-map": "0.6.1"
+   },
+   "_id": "@jridgewell/remapping@2.3.5",
+   "gitHead": "095a5825c482003597a30aa380b50159219f3618",
+   "bugs": {
+    "url": "https://github.com/jridgewell/sourcemaps/issues"
+   },
+   "_nodeVersion": "24.4.1",
+   "_npmVersion": "11.4.2",
+   "dist": {
+    "integrity": "sha512-LI9u/+laYG4Ds1TDKSJW2YPrIlcVYOwi2fUC6xB43lueCjgxV4lffOCZCtYFiH6TNOX+tQKXx97T4IKHbhyHEQ==",
+    "shasum": "375c476d1972947851ba1e15ae8f123047445aa1",
+    "tarball": "http://localhost:3000/@jridgewell/remapping/-/remapping-2.3.5.tgz",
+    "fileCount": 32,
+    "unpackedSize": 59366,
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIQDmnq5itLnV7/riJcHN0MZ4pwbZicCcpV9JGXDLgqWb+AIgak7hXSDglw9tX3DNlTtgq3jAG4XEYqiEx29bztRnx0Y="
+     }
+    ]
+   },
+   "directories": {},
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2025-06-29T21:44:02.256Z",
+  "modified": "2025-08-12T06:43:35.514Z",
+  "2.3.1": "2025-06-29T21:44:02.513Z",
+  "2.3.2": "2025-06-30T05:03:58.242Z",
+  "2.3.3": "2025-06-30T18:08:19.904Z",
+  "2.3.4": "2025-07-01T18:18:41.180Z",
+  "2.3.5": "2025-08-12T06:43:35.321Z"
+ },
+ "license": "MIT"
+}

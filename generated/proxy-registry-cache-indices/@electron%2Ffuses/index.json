@@ -1,0 +1,1267 @@
+{
+ "_id": "@electron/fuses",
+ "_rev": "23-9bbcb131cf0ac427f2b3b1bc1e8f145c",
+ "name": "@electron/fuses",
+ "dist-tags": {
+  "latest": "2.1.3"
+ },
+ "versions": {
+  "1.0.0": {
+   "name": "@electron/fuses",
+   "version": "1.0.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.0.0",
+   "dist": {
+    "shasum": "d8a30128146ff2a587c0c24e5a9f327952ab7dc3",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.0.0.tgz",
+    "fileCount": 3,
+    "integrity": "sha512-VjWIlZHEB7a93tXl+6tX2YzN+s1/mS0RM8WX4GZlMOqAzlmRfTMP6pp0MM0LtkzWZB+KQOv+zJt5Dlgdik+DUQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIDryiI4RoOY9u+gan4tn01rGqIP1W52preuFfAbe/lFcAiAIc2VpsdraKLxKCYtPci61PGq2EHoIVKuvmNIDEIJ1NQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 2219,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJggj+fCRA9TVsSAnZWagAA8LEQAJM6LBLCtr/aZ/jv9XDm\nRPDFPLHpeigPT4Kj3CN6ntOfMywWMDcaaJL+hWgBKIYCQ6q66plf0raW7yiR\nGCFESpHUzuFwlcfSCQRerF+TJc7/MK+s35Ox67HZ+h7sDDss/je4smb6VBeg\nKayuR4S53dWeIQaCQoySUMhOIQLVX+0M0CMuI1YtZ5nfkF4xvTrLzV9G3hLH\n6r2pGiRPW1dGm5IRDr0TUnvvp81U81IJk063x5og6CpdUWL/HloAhb1SP16y\nfb3tAi9NghUcyff6qAysNUgY33IlDowZPJt9GFVt7dYmHxXyuQoXeQVCMyCb\nwpvad6r8UISm2UvxjEUU531smDPvt1VKmPAq1lJliqqiriRVS1MUzMStTKKV\nMK3tTZkRPzd8Ad/TFIVhx9If8aFJEihO0V8rPN+EJ4bFJy7e+m2fNcwLgNux\nxFvg/TSWefe2+NJQsnLJe1uYPYAl4j6sB5g4V6ki7rkVBgpxkoTVntyDxIeb\nff44Sis2MoataOJKJ2piTtGAGFzQqv6lj9VVH/avA2jn6Llu8VNvFGRPwrVY\nX1mKFrnZJsfyI5PmGOVBJUpj2aluNVkZubxu80FdT+1WdtgWLrVwptp0jmNA\nYK6IKRiIHsNYLASZXjsVR9wpmYrkZ1IioHxdd4fiOTObi7a7x8EFUWHMcHB0\npmBW\r\n=EC0D\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "14a3d7eb49c5eb0fcc1bdd2abda96d68c9785dd2",
+   "scripts": {
+    "build": "tsc"
+   },
+   "_npmVersion": "6.9.0",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "10.16.0",
+   "dependencies": {
+    "fs-extra": "^9.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2",
+    "lint-staged": "^10.4.0",
+    "@types/fs-extra": "^9.0.1"
+   }
+  },
+  "1.0.1": {
+   "name": "@electron/fuses",
+   "version": "1.0.1",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.0.1",
+   "dist": {
+    "shasum": "b8115682aca2a81e3cbdc95121f5abb1b35f2bb5",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.0.1.tgz",
+    "fileCount": 13,
+    "integrity": "sha512-UNfNOhNRzoxwrfV+4oUify8ajDgGMymzgjvyFnPIMv4ItLPi1O8aTG/VbBJVopIt3l4fjl0TeP63BBP3+u/ZOw==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDcDh8N57Dm2K4wkvA2rfO7Lblb2rPl+Jkn9ML1HbwVbAIhAPeOEcPHFL2UpPjIs2qCTwdcfH0MG1uxi9xWlE5aFyu9",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 53196,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJggkCcCRA9TVsSAnZWagAADCMP/0wG6kF3rY/GIUPA9fny\nzmZoifnoR6+ica+VPC+lEVVhmTDzDu0UeNeSLvgvKV1mI8iHswPifdpQ5FyZ\nl8u64XSMQxrOmNZQSW7YuP/GyKOHkY0jBJwLVEOozAdDJHJvV+cUfw5PR8BQ\nLU3m/PrlU+pMVDuk6qeixXuHuqmT5kMZBzLTCYzN7VUZlaz85OgI8EbjgUBE\neLrAcSz5oAPgXSe/VonRNUaVUGIVQWtPAp9NfGq+nYQkCurcK1OuCXpSH90t\nAvtO4fR9xeNwz9IJxJCaCWWnGnu+igOvlfjJPvP7zacMfkf+hQg2zA6c7/AG\nSE7adyHPMASam56b4249iXZ5jo3FlC8neaZ6vqHnASoeYbfUjSMpIyD4qkmF\nBt4fDPrSLV/U46CB9j64TV9U5TuQaMMWwchtjEBpA4+rvOXa6qVsQhAQiF2C\noMj/Oyx2oyJHB0g4N2wWT9+/GhXaqptQCFaxYgd1Uo2xX6d48Ovo1ezFLE4v\n29VMZw3NTUQ21YOALe49yY7XkQZ2twUv3tUYCo3STJMLlrpABGZE7O/8MRZF\nDuMDNv/2nTf5BJoaDIJi7mYH5G7oym9LM9ol8n+kq8kkpg3utP8YDnfxSDXB\nzG9leDPa+XFvM72Ozag+mxZ7nmOnFeOhSNcWUgrvIylYEplanAVzaUsZO+Sy\nfUgT\r\n=l44k\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "4831a61c01d226bfb29f0e1bee79d73daff3d919",
+   "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "tsc"
+   },
+   "typings": "dist/index.d.ts",
+   "_npmVersion": "6.9.0",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "10.16.0",
+   "dependencies": {
+    "fs-extra": "^9.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2",
+    "lint-staged": "^10.4.0",
+    "@types/fs-extra": "^9.0.1"
+   }
+  },
+  "1.1.0": {
+   "name": "@electron/fuses",
+   "version": "1.1.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.1.0",
+   "dist": {
+    "shasum": "ac5bbe3c919cb04ba98397b9f3dacdb31612a08b",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.1.0.tgz",
+    "fileCount": 13,
+    "integrity": "sha512-68sgmIaRaVUGs2OBP+DmtqjfbP/6SoHhzt1SFJjfAowgNpkaEq26U90CBX31aak3jOXI6a1r6t+k/b+k23gnQA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCcFpCyPJLWwwGTKxEHH2zbDtqNBP2ht4ULwv7BZ2xpjQIgOT7za0eZHKs+8HzJjOoXyM6dTod1w3vLfjMVWIOXQ1Y=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 53355,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgrqiPCRA9TVsSAnZWagAA+7IP/0wzz0vSKZ+n4im6EIIO\nCPIvqnTOyhzdmcpY/sSm2X+GfjXSEjrK6GT05Q+/rxlRDyvaGFCTSie135+Q\nELGDG4900hzmWyX/KSQP8Y9uzlblmfjbFmCJFIfvTbrpvScHNBNt/KXSWKoO\n9xeugpTkIyRd6DV53z06hW6AWzI4jhZ3PZRBhkgaZILVgYRq/2I8EP19fHVy\nTl39bDyrhDe0sV9ZRAwx20/szjjSwe2cKe4y4YZWvH3IvRjRgAX9LvQvoRYk\nZB7FinvR5kF5e7hYqc0yxqsj5CzU+s0d//zap9fT6vfu2dFO+LWmyFQqXVrG\nte4S8DUpPOMzKTCv5Dn+zhwsu+AlpccYdL8pHhoD2SWzoO1miFPBafV0aq52\nGUSinaQdZS27hI+7lIsgRL1RZ6HU1XL1kGdqCiPFnZGQO/L89qUy64L3omeR\nl7Kju009a8RxytGLMY4Irragfos7R3w1YNZpE2b3EIvhE6135LBBYJyrQ/Sc\nSVj3/ybUf8oknBl2WXB0EREAn9w4Eca1qrrr8+fqvA0+vyAlHLqC/aK9tdp8\nFh/x3+tnC1L0jt/VV7jOCuWvk4DaC6v5vMSqM80gijDALdxW8XI5c8y314Ca\npglOIYzPMbK4SBMpPaLynQEReoVu7ww7zD/Set3YBsjVke9tf149ZmL602IX\nZT6W\r\n=tA/B\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "a621db4a8c90df600d5e3668966c3472398c43ce",
+   "scripts": {
+    "build": "tsc"
+   },
+   "_npmVersion": "6.14.7",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "12.16.1",
+   "dependencies": {
+    "fs-extra": "^9.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2",
+    "lint-staged": "^10.4.0",
+    "@types/fs-extra": "^9.0.1"
+   }
+  },
+  "1.1.1": {
+   "name": "@electron/fuses",
+   "version": "1.1.1",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.1.1",
+   "dist": {
+    "shasum": "3714088fbb6085d369a3a1ec809ff72278b1a06b",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.1.1.tgz",
+    "fileCount": 13,
+    "integrity": "sha512-wB2Jr8JKJDF8sUAxgMs10NDbWeAnNgDDl1eSiidbjTSLURMHYBDWEkbSAEoB5ytToTEL/2aLurqRB602jF9wYg==",
+    "signatures": [
+     {
+      "sig": "MEUCIEVCOGB8h462RypnOQk/G0ryy7HcuAKrN0oVkbYlrsZKAiEAttIW9zzME/61Q3PLis4exFxo1PkMURR09vHIOYqcn34=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 53355,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgrqkrCRA9TVsSAnZWagAAGwQP/1Jsr1tqAf2W/J/FpDJc\n9ISUeuja8TFJ95zhk/2s8BKlsCl5S9Ojb+UmP8A/pk/XqEcuU5YLZ7IXgXra\neMZcdWfuIUeoNKv0vPDXwz5zm0deKacmW/5nDeswYPOdbCblJPVzWekgPvPC\nK+vWHrKjpywibxQizhI8PBzv4IHiQwSPphXj8toOJxp4tgyjyT9MKopoHvKH\nB2OeskVCzGlPzzFditihSqvohXOb17ugu/vP19G/eaS5va4RLjisOpToPpnf\nmVX8/4JfNdiAtb/2A+oTDb88cPPikkpAgpNkeY6yFatLQjfN7ZNQDf0Yp6/M\nle7evjNmKbwgaPoM3UKMMPJGxnTcJLY74fq/KrIvXbrXllPYnB9CSUVDWiOE\nP0ERgyIZvFhKJIndwPo4xmU//rfyJLxFstpWib9s72QiDVwBrCeTq80ZN4JR\nij3/0E8JZ+8AAKPRsnqsYvHOK5Rpi5H1B1YkyZkQkafZVfUkKREqOsm8nBq+\nOT96oVcxTcBy7rMIGdiSSYU0Jg1EaFtg7vXYkA3wDiS9ixRI/cLqkgm8D/ik\nNUNdyzy3TkFD/bdQHQ/rUAP/wf0qaSGp0TRvJSREDPoXvhE/a6cvzVADcwfB\n1VMCbVkFDJf2mBzMHuYjcboX+s8L9PUtoVAfgQE+r3/VHaDWmhxtTQwUdnaO\nKLoU\r\n=2btC\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "1ae8a6473cf4cfd3e2fa98338d1ffdcdc19f32ae",
+   "scripts": {
+    "build": "tsc"
+   },
+   "_npmVersion": "6.14.7",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "12.16.1",
+   "dependencies": {
+    "fs-extra": "^9.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2",
+    "lint-staged": "^10.4.0",
+    "@types/fs-extra": "^9.0.1"
+   }
+  },
+  "1.1.2": {
+   "name": "@electron/fuses",
+   "version": "1.1.2",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.1.2",
+   "dist": {
+    "shasum": "586ce174e70d7e94a2824195789949efe2a8cf12",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.1.2.tgz",
+    "fileCount": 13,
+    "integrity": "sha512-1fxmwwyyc6s/fEXudoIoJ9/rK8/f7EUwmLtXI+QC4zb1EMByFI6mLB/ve1dQRcr/kQbtJ9KeNObiglwXgeoVsQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIDbFsHF+E3ExNQTcPLu0ZjarjDz/RZe2wbxy09ER5c7ZAiAL35q4j+tiGbx97B4kYtBM+zKwVDhDMy5luzmyMfrFhw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 53554,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgwAQnCRA9TVsSAnZWagAAcUoP/2rAfSqLXKA1aAUbXUqi\nUQrKQbXFAGWtnvYgPn0x9QtsmjkBlB719BeyofuQ6iP0VGG3L/2oDsHFH9Ch\nZxltE2f4Itc5fy4IRDlIIqLN4Xmn33WlBGoYQjzoJwAIqZAJ4srluW4Ueb4t\nUVqK55FgUuEvAEc7rA65zN2wF9uSQAY/EYYu8eK0iV2xP6zDcpZytQPHUmqZ\nExOsWDHWUeg945gT5xK6TbmYWpzdlROsh1u+E7C/Ng1BqMBQ/5eQKrV17GWq\nSY7BRoqR4U3K4fz1E9v5ByZ860bRDW7S3XUhVPj9regR9QR6mvIU1v4B1F16\n1WSXt4dwI7360mcL6RRYpnp59pHzDr6XEMvxEjljrLa5DsKYSL51RGeoNGAc\nJF0WBTHgw9L6LOTqiUIdtuYLmvLgbZHpV0DdPPjeJWBrUWVnYIMwHxc2KmIW\nEcV7JjVZRrYCjsNGMJ2Ik1YNIkxYBwDvWW6PTqN6as+WJIGLE7LQZFcEGaby\na0UEme9b2QAGm0WzhKQpKU798NgqMfzTUREwAdzFoK1OMGgjfwTHfZjXendI\nvES2TenwBQTKLsRF46Fbs96ck9cRVgC1RSxDNshDyzwM+mLYQJbBudfogAsU\n3gu1mH+jZ5QfEt2msc0CbeQicSWMoFO3Kvir8A8Owfm08/KUQ6qZ4tobKi4p\nwWB6\r\n=FPPu\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "5d00d2f1ae83f976e8b872fd3d4d53ee4504f24b",
+   "scripts": {
+    "build": "tsc"
+   },
+   "_npmVersion": "6.13.4",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "12.13.0",
+   "dependencies": {
+    "fs-extra": "^9.0.1"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2",
+    "lint-staged": "^10.4.0",
+    "@types/fs-extra": "^9.0.1"
+   }
+  },
+  "1.2.0": {
+   "name": "@electron/fuses",
+   "version": "1.2.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.2.0",
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "86c258925fbe009d3d5ea0bb9be19962afda0fcd",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.2.0.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-zGIwEblXAzF9gLJEF8qLBdXwRaUvzwOPY2aI6ptbPU1nfmy45+mYEaSxNO03BTNyMUh5lyUXqe+w1lOorCbCRg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDLXym4SKCK3eS/0wcxEGtpPGljodu8sAAZpZQuqGsdHQIhALuLHwMYyAgS0Bkmm/pCMz6QH5cVpPR1GKSlEhai/Kkg",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 61916,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgwpQYCRA9TVsSAnZWagAAG+QQAJGkFwWfzatePhpJd+Oj\n90IcWzZhryeYgPP5OmIeKr5hRIx/WHnfQBykTJlnDGbl28XTqDPEmVqYno46\nkF8cYRar9JAGX1TxOg9BY+YJw0PztnSLt31wfvSnmY2sV/VlRl/khH05JE36\nZqFuWu4uz8NBJqjLBNDMuDizPKKk88xrcjhg3yycr9rE0ynTExH+w6HlDh1i\n8Mp4f/CgqQKZOAbsdLkwaNSsaW3oaBJVlYgJwz8hbEmc0/+sWRtzdt9yvcz0\nJKqnpvSgzhEY37lTl/M0eHiSLdFy1uyyT6qTRUxeS6aDT7pjGq7Gx3f+0a7b\nuMuDGqLJFAgW4HPs7oGwVN2nZzpMBp/xjazDfAsUxp95VehGKvWmROttdvPL\nTftrA9qdnOkY6uaaqLP+3Aq3QHlB87hcE2tOeemz/mr7DHAXNUClNv24jI6+\nOlm61WnJNlTa4+MpuVlpAZ/VyWrc1IKbMdgSMhRCzFAv/1kCA1FdMNr4sdrB\nj86SuHxbNbQTg6/XGul3KxfdL7dVSX3EkHI4Dibmw+CEY0AmT297IFft6QJp\n3iEypk3q6KQl/x5Jh+ucKcl1edctzp8Sp7irGjoczpVRzROmt28YWOmLAOsu\nO12fr93pzeVnJXSyVkm5zUTjQYf9GRsx1Np7fmJQDuvQhW8/g6gx6T9ODMwT\nd7XS\r\n=xp8R\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "e5efb3bc0ce5c1f2117ffbc5d4a891e733ed2459",
+   "scripts": {
+    "build": "tsc"
+   },
+   "_npmVersion": "6.13.4",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "12.13.0",
+   "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2",
+    "lint-staged": "^10.4.0",
+    "@types/fs-extra": "^9.0.1",
+    "@types/minimist": "^1.2.1"
+   }
+  },
+  "1.2.1": {
+   "name": "@electron/fuses",
+   "version": "1.2.1",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.2.1",
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "9417ae4edfa75ff133ae81bdadd5b969ebf7d07b",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.2.1.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-FQWAjmLMpo06X4QNEA7ijZ5BeI53BIJGlTiD7Ula7I86hRLABGvswl36QAOlOiM1jETbymQ93h2p9/7/A/bCEQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIGELmIckl2mhr8iLuVIn3q+yOryPtlyKoKKJIIYToRDJAiEAh3El8xrR9q4tZgcrm4mAlheIQmz4t/HCwCedRCkueKc=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 63955,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgw9mCCRA9TVsSAnZWagAANRcP/jrY0zm8NMkb4pLbImFi\nmPjia7iB3eyPDc9edseTFiebxZ2VMd5r4T7ICqd+F/X9WTWJnuR9kFdUvI2T\n+IYFQzS5oxm4npukizU/rngH1pyBf3HnZpvLPM/oed2vNhIo0JP66uPCKYe4\npr/8bziE8+CS4Nqui7dAWab8e/ZfGJK5M7QJo17iEZq6u3ddbPe9IeYagTHs\nXgfBbaCi+TQnEZyF7T8DTvtnxo2OJrCqIKbuEwIpzU1k2N+Iy6n5QdPgJLok\nSkxpI3PLhgFrYbJaXEMd+n2EimHtGEp67qKASdqtZNdY5PYVSrCC+JZUSMR6\nMIYwHDKIErNyoyY1i07OzIGHz7htqxcmsGdVSq6y4mlt3vL3wUcaDdt+FN4F\nerGFdSYZVlNsgZwY+dVcwxqQ2x/aZIvcZfd6sHYP7ZjrvjQMSKN44gj4qYoE\nRj6aVHkrhbeVw6rHt3eHM09lr9XPHGYb1SN7sJUH1JISJS90LkE7bxtkW5EC\n4bfZ/kLJJEjD4aVDcrrtn+O84XWR5bLmxROMasqc6TjurPJiWbqGYTk8F6Bx\nZy7dlcd95XH25HsVZBTr6hMq4lmHZMPdIb4j7OVI5lK6A0jUccQ9SQXHACq/\nC2yLuM8gi/OvGbMUn/go8JpnU/6x+B4HpGSLceuV/I9PeGIPEc6oVAxJYNqw\nR0Zt\r\n=TzEe\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "4be6519e55b1ac9d3a050dfac3fb515f972d997c",
+   "scripts": {
+    "build": "tsc"
+   },
+   "_npmVersion": "6.14.7",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "12.16.1",
+   "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2",
+    "lint-staged": "^10.4.0",
+    "@types/fs-extra": "^9.0.1",
+    "@types/minimist": "^1.2.1"
+   }
+  },
+  "1.3.0": {
+   "name": "@electron/fuses",
+   "version": "1.3.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.3.0",
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "9023f3d030a910fa9600f321295a399ddb189ba7",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.3.0.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-eahYzYfKyomgVhSMjw8zX3vAlwOrpm0gX/Ip+ht5VPmL0c/x++MzGs+ocXNDuozkVpYUWbJmamzHbBIdxHdbPQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCZY5Trqq3SrgmYR54WGH4EBwBLf46nhndTjp61ofW7XAIhAOM9nshJjGnF5xjzjtnX5cZrzJFIeHDNoSoZql+niMYY",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 70474,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJhCxoGCRA9TVsSAnZWagAAQtcP/2Py5+Uw3LJ417NoIshr\n8QgwxMglUCU5vBEqSBQM+nPbyE6Tk0XFOOZZ+gs+4xAIkslrHMBVYbERtLtj\n1VyKnkhiQCn7gRaFB7qvcRLcqsFRstCbZJqMNqb5cf6lbVTEfsHdyMFeZwV6\ngh3pIyqTeKBCmgDtp005UAyLukCEnZCobC8KiYeL+6SI6egSud2Hbs5A+lhm\nCyJTYXJEU7oU9N6S+SE5gtJXmQOM1ae+o9HURc8J1eBhYnXpNxuRrzLtNvaA\n/HsLFaghO3QcXCU3Y558y0yxUyUiSd1yVgQL/35leA2VhIDoApf7a8vTHrfR\nZhCJEbbA5/+Z1bUnyM7RfAodjUNnTu1l2hsbkJphz0nkYsZnBG2iKajXNFDM\njECQtboXsXUPdClGHu6l09wd8Q/Q+mcdvO5iZfjf+ret3o1qsrqHOLoOcAc3\nWq0u2Rsek+ozoT3nU+vB02L+suF9Yc5xF0swne4PKJBj0l0EreY7R8/ynz+2\nBlm0ja5zckUa+o/U/tsJJOTKyxmGIuSSzxxB1RcSye5zai7qyanhXEYKwxxv\nqo6oIeNaI9RJhw+kSqkcdq+GzvDFNMnggzr+8oDDqct9XmdfxxeRdzukierz\nYZmrkm/JuW47ulAak1m29xqhmKq0LZEjVs+4kFdBr2VhuAwSMnBvz5ADE+Mt\n6GpR\r\n=FY9r\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "9246f9adee05c36b9b052c13961de4689a2caace",
+   "scripts": {
+    "build": "tsc"
+   },
+   "_npmVersion": "6.14.7",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "12.16.1",
+   "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2",
+    "lint-staged": "^10.4.0",
+    "@types/fs-extra": "^9.0.1",
+    "@types/minimist": "^1.2.1"
+   }
+  },
+  "1.4.0": {
+   "name": "@electron/fuses",
+   "version": "1.4.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.4.0",
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "7d3685c5a0105363ab7bfcf46ea95af006df88e7",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.4.0.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-3h7tkzBxziz2zYI+b1c3/NPVUetrZtRcjqroQ4MZ4ZNfIJ98znyHhUl3oMDDg5ErogtpWOs3+REt3c8oKgXwHw==",
+    "signatures": [
+     {
+      "sig": "MEUCICIab+x67Y3ZM99bTmrBvqoZSZNsZiTQyauXhH738sd0AiEApIXdIc3qfxe+DbHC2Bd/uyN3U1yxxnlzdBf5ItMKkY8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 71088,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJhEPeYCRA9TVsSAnZWagAA+rAP/2bi2aBPJgsRJ9QA5EhY\nXWZKDNS9wC+shxMSPchUK42Ot5meohOdOvkl0W/YJ1axduG33Rw7cxZMEkqs\np3hq5ltxXcQ+MUqh+fuiuCqbR7csp5uq5+zZJ2dkyim4MZg9Rb0+jIWY90Js\nlJcJy5RPR5F42iMQIKhUsoI7oKBQy8n3gqow3lBuzcE7HtPyxLIl3qLsk8PL\na6BCobVbXF36eG8MOEJzQaGmgu23knigTDKIOp2r7+q6650ZV+2ZlvQvmISc\nMWSnGyzPeG3mhMznc7qR5cFRw1PHDEsdmyrcngE2YQI/NxblIKhg30H4uw86\njAzYTXvTB2aSqBB5aJeS/eaAkKXWX64ysO879rHx7DJrnIhoPJN3xqWRu7un\n5cXERauul8akK1HPNjSnxjTMp+WzXrRIZ/cTAZDEd6qXXNdp3XRxsSNk6Xvv\nrhlUw6ND6SElNZOHoImNQwMhrxSbr8ze+qkLGlxWnY8NnA3sECyk6g1VeDKr\nEPcI607VcLaU2J3qwixLlFRJY7z23IWxgKexq9EzLb3tSK/6zLXaeziJiyfo\n+xVSH4L+yW9VCtmQN+och5ATkr4czNeC8cbK5ExM0KHzE1sBqTxxhxMAdE7z\nf8f51Tc5r6edGziPqEUoByPGhpfwYyZ/6G0Kp8efyK5L4bpPli/FHUasnZnZ\ngrDp\r\n=If72\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "a067ee27cd7ccd831c277748bc02de0b2d9d7e26",
+   "scripts": {
+    "build": "tsc"
+   },
+   "_npmVersion": "6.14.7",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "12.16.1",
+   "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2",
+    "lint-staged": "^10.4.0",
+    "@types/fs-extra": "^9.0.1",
+    "@types/minimist": "^1.2.1"
+   }
+  },
+  "1.5.0": {
+   "name": "@electron/fuses",
+   "version": "1.5.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.5.0",
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "e477acd34ba13e93d5c11465b63597d967de6fda",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.5.0.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-2NPJdQTPoERxcIWsTAG9ZKay0KsORfs973dbkdksNEeBAfjdyPBNaUrh/DAlpUdAnFmPl+Cs9gIZibRYiOrvqQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDwlxpaieS7+KSHOy0uwyxCngO2x50j/ayWG8qaDuaw2wIhAOCb5OU3lRAsIa/X7uPv9E9uqtX7EKhNJ1MamnoAAPCP",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 72175,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJhOonHCRA9TVsSAnZWagAAvd0P/1IQ/6K3HEwt5RI4Td8o\nhx/jaAxhr5dwWSP6oiQKGGINUrDg9F0c5TfobMA/n/fcJpnM2afKsLIEstG3\nHNrAHDzLFK9/sm0OMYZdZQaF2ERnNtPkEvdPiAcG1rIX06m+6hRmT5RvivZ/\nEB+wiuTQma8/RDzGp8nGweNSEuLGDZ61CWOsQuGBg4XxGrfPe3eX+jnJrrCR\ndzghxoRwQUNtEhuwK2tZWoe+xf55GIitcJ/qmlqmlTpdoSmjB+h2xR3+LNcY\nvUjJh2O+Pzkzl/Hr+WRC+57mnjA+JMvtw6UG39Cxj+f15FmRem4GLGR0a+fp\ndIUg+CDWSdhlNowj0vWMJpwSct290nyFrRfVRp80HU2ZAWO+DmJtdI29ZIs5\nnK/VPzfu1KF4yC/XfwQz1PMwRS+e5uZHnzKZ9Ek+LoVCFWHRDo2RsDjZ+KOL\nfDhYK/TxoQsb2lYN/Ua7ra1ACc9lP0I4u3kaCrbdmuR3s4JQ+6bTbHmhg+1e\nIFNhXr9XYTOH9atM7DZLv+bgModpxNumVK3229cxHn/noU4gC11Et2DBBcat\n/ABRAFzbc4OXqdDb0XnW2dboeE9hJwGOGvE2MSKHlI2qyF1C0sKTvX8MG0pk\nUwkwGZfZaqUt9vwta6qgbwyu4OqBmVcySxGZ0VlTYeHyoenGjyq7f4SEee30\noCCB\r\n=O2SJ\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "524707c193b87c52baa8f31c39778e188eab097e",
+   "scripts": {
+    "build": "tsc"
+   },
+   "_npmVersion": "6.14.14",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "14.17.5",
+   "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^4.3.0",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.3",
+    "@types/node": "^14.11.2",
+    "lint-staged": "^10.4.0",
+    "@types/fs-extra": "^9.0.1",
+    "@types/minimist": "^1.2.1"
+   }
+  },
+  "1.6.0": {
+   "name": "@electron/fuses",
+   "version": "1.6.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.6.0",
+   "bugs": {
+    "url": "https://github.com/electron/fuses/issues"
+   },
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "d4ca0b4701c286424b8096c55458b5ab91191b61",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.6.0.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-UnZgLfVO1jf7QoYVEEB27CCP1JjT5plhbWU1U8ji1OaXnvNe5UT6KPuRJ3Z12mwa5ZBAASU2tgxVuI06/2x6nQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDFKO/wcREXZBnmVqqW0KCWNx996odBuKonypcY/InkcAIhAKs9zWymqP1D1/8YdP19uJZrDYR9fdYPV2gX3P7B34jL",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 48216,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjLAI+ACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmphNQ//cstYf5Y3d2ti1TzLYhdVwcxzuGyOu1i3a1RmVFPXhG256SZI\r\nmH+Zn4GuRShZPIpU88G37c7ALkz/4VFEfVRPttoTbygknly6e+1FsJ9YspAz\r\nmQ1cJIOWLR4Unur0DImOqpS3XqN2cTrqX5mtNskfX5tbF4mcPsDJmHv5sXEX\r\n6zHuX8aQm+2MoBksCg0HL3lE3HV22ODoAN552vOD1zf9A0XwqW9VP92wyxuC\r\nRbpXfmxXCy40xD9xFTpgmlYkOLmY67kH4z5YeusHye0GLLXUUpvu96bUcK5L\r\nhUB6fay5nAEx/T+Z1DpG6/IRNZbxa9esQwx4nhojK0azGVcNzXiH9rrTyuMG\r\nf87AauVNGjR78rlhPfngXZuNWYsfDX7op65PuWfFrj20c8nlDMAjFLuQxQEO\r\nVmXHUarbBHaY2w3+dfsUV+yFuCCC87mLGw5fwfyjkbV2uPdlVR8tmVwQTyrI\r\nps8rsqpKjPEr9Kx3bLf1pfPODDeWOo3HX9FqTr/J6ed9jpx9JT1duuGRNwlq\r\nRU1myxKwNpnHxtlwxMbdxYp4suGsku7/lUEy5tzhHey8ZLiZIvHaptSNMEJu\r\n4vmqN5siMFUBmbWGsJ1RIV06mgzuA9sAIRuaajfxqbebcLxnX/TANy6jrDXi\r\nvYbJ8rSAKZlKBkxZ9QjBSDkcRl5wnwKuBJ4=\r\n=BOb1\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "b9cf2134d6135df887e499ab509d8a530c44f910",
+   "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepublishOnly": "tsc"
+   },
+   "_npmVersion": "6.14.17",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "14.20.0",
+   "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^29.0.3",
+    "husky": "^4.3.0",
+    "ts-jest": "^29.0.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.3.3",
+    "@types/jest": "^29.0.3",
+    "@types/node": "^14.11.2",
+    "extract-zip": "^2.0.1",
+    "lint-staged": "^10.4.0",
+    "@electron/get": "^2.0.1",
+    "@types/fs-extra": "^9.0.1",
+    "@types/minimist": "^1.2.1",
+    "@electron/universal": "^1.3.0",
+    "@continuous-auth/semantic-release-npm": "^2.0.0"
+   }
+  },
+  "1.6.1": {
+   "name": "@electron/fuses",
+   "version": "1.6.1",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.6.1",
+   "bugs": {
+    "url": "https://github.com/electron/fuses/issues"
+   },
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "c639e018202a59e3cd8911fa943e22c63dd3e6fc",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.6.1.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-J7kRMlc0vP03uzUuhHNEqffqZMZ6FRe0YGMOJO4kJObmYkOg38mMTvbbktEj+oteH5nfyhbQUkHIYnMSh7T/CQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCIzMq0vm6xuQff2yAJaZlGXcw2cF90Ce10fuseb1FnaQIhAJy7OEec8JG7a7BavdpBD5doa9PRO0X8Ln35Qd282cNB",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 48348,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJjPeRRACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmoMSxAAlqDpicp75iWqV3asuasugSKjn90SqhHhkd3eKKwgASr7NFC+\r\nPmg0Ky0qo4EDCm71MwyInbVmO3S03U26/x17gHjhli5mSdkHhz5yN+ZoWa9k\r\nVQub7Vq9+LsLUz+p9LGhABooSSoGns21Gt0V70+OpEn7tq0HqVFqAyycyGPG\r\n7zEZVzw5qYeMKoh9LUK8VACehyoaDewfbt77fPZbStYK1ECcZAjns4Emk2/S\r\nw6ebRCc69qwY2pc/7KC9YpjwCgjRzNjy8uSAvbMsqllWqf9WcsC43YyTgC5E\r\nNnBU67A1q73po9B6VpwwlljeKIbP//5snDQRoke1eSMMqRBWhAiqKLe4O5JK\r\n2mOjYf45sJ/SGZk0KUmmH4sKu8TSQ6uVrZ4P9cQQFEb+P+BBGSfsynm8fk7l\r\nR6R875I+v5TVyNdLYFBZ8Y7TJnaE19FVPuWpfCbtgdrBBx3ScrYLQhA/6Cam\r\ntOJwD/nAubvES+dRcymSFyULN9lAUo5D1BRIEpl66Pt7muPiyXmrz6RgOEn1\r\nCuT5OydTiGzU6OU07v/KD/FmgpjyU/ljgEPChHmDxcYyRB/n+5lQqMbKh7Cp\r\nH0LKcN166F9/TchJKFhqhfHdUzv7x4sU/7rcupN2F0R+9elo8bTe8U7y/cx1\r\nQDumdienRdLxF08OYkPDhuHCzd6h1T5qk0w=\r\n=nFe9\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "dist/index.js",
+   "husky": {
+    "hooks": {
+     "pre-commit": "lint-staged"
+    }
+   },
+   "gitHead": "d62101f4c49bcf24682d816e5b22b9d79f06b95c",
+   "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepublishOnly": "tsc"
+   },
+   "_npmVersion": "6.14.17",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "14.20.1",
+   "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^29.0.3",
+    "husky": "^4.3.0",
+    "ts-jest": "^29.0.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.3.3",
+    "@types/jest": "^29.0.3",
+    "@types/node": "^14.11.2",
+    "extract-zip": "^2.0.1",
+    "lint-staged": "^10.4.0",
+    "@electron/get": "^2.0.1",
+    "@types/fs-extra": "^9.0.1",
+    "@types/minimist": "^1.2.1",
+    "@electron/universal": "^1.3.0",
+    "@continuous-auth/semantic-release-npm": "^2.0.0"
+   }
+  },
+  "1.6.2": {
+   "name": "@electron/fuses",
+   "version": "1.6.2",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.6.2",
+   "bugs": {
+    "url": "https://github.com/electron/fuses/issues"
+   },
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "24e9525817e19d9547807e634e19cfc623bf5fe8",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.6.2.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-qInBOs+m21oCLwN2ASHsHqNgI45trsgSiDEYQTw3qsTfwveEUb+WRgh0sYfVXsekqr8X2qvHX9OyVc1w+Lo8NQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDKOod1QjydPsveZNy9z/bjtLkyLAShYXJjuTUPB8bBUQIhAPpy0oj5wk/Vx4Xjoy9sTqIQlnCM0wfAex7N3Vgr41od",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 48722
+   },
+   "main": "dist/index.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "e82c282dd499562b530902ae5a69419130b52d8e",
+   "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepare": "husky install",
+    "prepublishOnly": "tsc"
+   },
+   "_npmVersion": "8.19.3",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "18.17.0",
+   "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^29.0.3",
+    "husky": "^8.0.0",
+    "ts-jest": "^29.0.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.3.3",
+    "@types/jest": "^29.0.3",
+    "@types/node": "^14.11.2",
+    "extract-zip": "^2.0.1",
+    "lint-staged": "^10.4.0",
+    "@electron/get": "^2.0.1",
+    "@types/fs-extra": "^9.0.1",
+    "@types/minimist": "^1.2.1",
+    "@electron/universal": "^1.3.0",
+    "@continuous-auth/semantic-release-npm": "^3.0.0"
+   }
+  },
+  "1.7.0": {
+   "name": "@electron/fuses",
+   "version": "1.7.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.7.0",
+   "bugs": {
+    "url": "https://github.com/electron/fuses/issues"
+   },
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "0800d5404fffe5683705297990fea089d49811a2",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.7.0.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-mfhLoZGQdqrSU/SeOFBs6r+D7g1tYiVs2C/hh7t3NFQ0chcXGoWrrad17rCQL1ImNJuCXs4cu23YBj5CAnj5SA==",
+    "signatures": [
+     {
+      "sig": "MEUCIDbknlx+03Jf3aztoKENJ7FvYZhDJdaC+RGIV+mdU31GAiEAzL3ByYh1o7cnurtwWpE5T+OKg0aGe3+mko82e4lpyaM=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 48947
+   },
+   "main": "dist/index.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "8ed659df7da22498863c843c7885d725a6ae1bf5",
+   "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepare": "husky install",
+    "prepublishOnly": "tsc"
+   },
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^29.0.3",
+    "husky": "^8.0.0",
+    "ts-jest": "^29.0.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.3.3",
+    "@types/jest": "^29.0.3",
+    "@types/node": "^14.11.2",
+    "extract-zip": "^2.0.1",
+    "lint-staged": "^10.4.0",
+    "@electron/get": "^2.0.1",
+    "@types/fs-extra": "^9.0.1",
+    "@types/minimist": "^1.2.1",
+    "@electron/universal": "^1.3.0"
+   }
+  },
+  "1.8.0": {
+   "name": "@electron/fuses",
+   "version": "1.8.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@1.8.0",
+   "bugs": {
+    "url": "https://github.com/electron/fuses/issues"
+   },
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "ad34d3cc4703b1258b83f6989917052cfc1490a0",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-1.8.0.tgz",
+    "fileCount": 16,
+    "integrity": "sha512-zx0EIq78WlY/lBb1uXlziZmDZI4ubcCXIMJ4uGjXzZW0nS19TjSPeXPAjzzTmKQlJUZm0SbmZhPKP7tuQ1SsEw==",
+    "signatures": [
+     {
+      "sig": "MEQCIAcQ5IOwOo2JL26rlUcm9eepCJ9iSErXXyr7AoGd4AocAiBjNKxfpD4B0jqFPwG3+DLtlQ5uOvJE9AZTflZ9/hi25Q==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 51164
+   },
+   "main": "dist/index.js",
+   "types": "./dist/index.d.ts",
+   "gitHead": "b38d2e80d9267b52d6db99cd9c9e616da3d037e8",
+   "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "prepare": "husky install",
+    "prepublishOnly": "tsc"
+   },
+   "_npmVersion": "10.2.4",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "20.11.1",
+   "dependencies": {
+    "chalk": "^4.1.1",
+    "fs-extra": "^9.0.1",
+    "minimist": "^1.2.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "jest": "^29.0.3",
+    "husky": "^8.0.0",
+    "ts-jest": "^29.0.1",
+    "prettier": "^2.1.2",
+    "typescript": "^4.3.3",
+    "@types/jest": "^29.0.3",
+    "@types/node": "^14.11.2",
+    "extract-zip": "^2.0.1",
+    "lint-staged": "^10.4.0",
+    "@electron/get": "^2.0.1",
+    "@types/fs-extra": "^9.0.1",
+    "@types/minimist": "^1.2.1",
+    "@electron/universal": "^1.3.0"
+   }
+  },
+  "2.0.0": {
+   "name": "@electron/fuses",
+   "version": "2.0.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@2.0.0",
+   "bugs": {
+    "url": "https://github.com/electron/fuses/issues"
+   },
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "b3d0626f08e9d7afe7b968bbbd9a3c9a0594bdfb",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-2.0.0.tgz",
+    "fileCount": 15,
+    "integrity": "sha512-lyb1zK3YHeWUjaz7yiK0GnxSPduwASKMyiDbCtbn3spP6EEt+UWtktggWehG0icFrXAk3GwvcJ4nCrJO0N9IhQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIGhtPfVFW+90wnQ08yW8VtRGDx7Ho7tCYQcotc4ecCEMAiEA6zqYzZ582dvUIHHZRa2YBn3eUVJCOXvsdkI8RBQpYZk=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2ffuses@2.0.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 33232
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./dist/index.js",
+   "gitHead": "7edb87260b0fb09a60cc055c76ab56a7ae4759d8",
+   "scripts": {
+    "test": "vitest run && tsc --noEmit",
+    "build": "tsc",
+    "prepare": "husky",
+    "build:docs": "npx typedoc src/index.ts",
+    "prepublishOnly": "tsc"
+   },
+   "_npmVersion": "10.9.0",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "22.12.0",
+   "dependencies": {},
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "husky": "^9.1.7",
+    "vitest": "^3.2.4",
+    "typedoc": "~0.25.13",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "@types/node": "~22.10.7",
+    "extract-zip": "^2.0.1",
+    "lint-staged": "^16.1.2",
+    "@electron/get": "^4.0.2",
+    "@tsconfig/node22": "^22.0.2",
+    "@electron/universal": "^3.0.1"
+   }
+  },
+  "2.1.0": {
+   "name": "@electron/fuses",
+   "version": "2.1.0",
+   "license": "MIT",
+   "_id": "@electron/fuses@2.1.0",
+   "bugs": {
+    "url": "https://github.com/electron/fuses/issues"
+   },
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "bb211abc10fa43533f762faec148a80aa2a76083",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-2.1.0.tgz",
+    "fileCount": 15,
+    "integrity": "sha512-6Mhtz2xYPkiZrunCBo2RoXYSx+yGj/km6n6rTOi71srw0LFpRkfMJ7EpjMuPrXOZv7fCos81idf1lYDqwHALqw==",
+    "signatures": [
+     {
+      "sig": "MEQCIEABV3IpX7r6nNTSguDqAchXVFpUU73tBdJ7sKn5gYPQAiAQtvjII36XbDqFCm44cS13fD/fq/heH54rkm9+0bBbbQ==",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2ffuses@2.1.0",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 34033
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./dist/index.js",
+   "gitHead": "c76019bb492b6a2ebbe9fc1fe07a970486729a27",
+   "scripts": {
+    "test": "vitest run && tsc --noEmit",
+    "build": "tsc",
+    "prepack": "tsc",
+    "prepare": "husky",
+    "build:docs": "typedoc src/index.ts"
+   },
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "24.10.0",
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "husky": "^9.1.7",
+    "vitest": "^3.2.4",
+    "typedoc": "~0.25.13",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "@types/node": "~22.10.7",
+    "extract-zip": "^2.0.1",
+    "lint-staged": "^16.1.2",
+    "@electron/get": "^4.0.2",
+    "@tsconfig/node22": "^22.0.2",
+    "@electron/universal": "^3.0.1"
+   }
+  },
+  "2.1.1": {
+   "name": "@electron/fuses",
+   "version": "2.1.1",
+   "license": "MIT",
+   "_id": "@electron/fuses@2.1.1",
+   "bugs": {
+    "url": "https://github.com/electron/fuses/issues"
+   },
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "8b15eb91dcde51e20a2b3cefb5fb11adb43d237a",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-2.1.1.tgz",
+    "fileCount": 15,
+    "integrity": "sha512-38ho27/mtUV/LpsZ1LCDJUomKBBSUZDk/qBH4FNNtoN5fmnkmWDcIp5pm1Kv3InqhRjKZKs7Jzx+wWZNMArHrA==",
+    "signatures": [
+     {
+      "sig": "MEUCICN2zxR8HqPK4Lsq2TmcOg/rtp3oulsSXMC7dVg5Y+ASAiEAkBYwnDFi0n5PuaMfH2YqTcHz5x1AoZWSSFiVTn/K+Fk=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2ffuses@2.1.1",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 39436
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./dist/index.js",
+   "gitHead": "0b8ac07bd804e3ecc9f3482af2b6569ba24ae694",
+   "scripts": {
+    "test": "vitest run && tsc --noEmit",
+    "build": "tsc",
+    "prepack": "tsc",
+    "prepare": "husky",
+    "build:docs": "typedoc src/index.ts"
+   },
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "lint-staged": {
+    "*.ts": [
+     "prettier --write"
+    ]
+   },
+   "_nodeVersion": "24.10.0",
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "husky": "^9.1.7",
+    "vitest": "^3.2.4",
+    "typedoc": "~0.25.13",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3",
+    "@types/node": "~22.10.7",
+    "extract-zip": "^2.0.1",
+    "lint-staged": "^16.1.2",
+    "@electron/get": "^4.0.2",
+    "@tsconfig/node22": "^22.0.2",
+    "@electron/universal": "^3.0.1"
+   }
+  },
+  "2.1.2": {
+   "name": "@electron/fuses",
+   "version": "2.1.2",
+   "license": "MIT",
+   "_id": "@electron/fuses@2.1.2",
+   "bugs": {
+    "url": "https://github.com/electron/fuses/issues"
+   },
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "dist": {
+    "shasum": "258e34b51f86dd94005d57afd7c29813aef2b68d",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-2.1.2.tgz",
+    "fileCount": 15,
+    "integrity": "sha512-x083OSf4xO9CKUKmJFYW+Egua9y/v2XOCcCIuWnM4RlpMj8xHwKICezlVN6vZyI2cZTr/ysZXRU5AKtYPJivBQ==",
+    "signatures": [
+     {
+      "sig": "MEYCIQC5XwtlGxzVi4C3CxU0Bb994Tbq8kDRGLzJAGG3m4qR3wIhAIvA6Mb5yfO0oRhfIe9NSevowE4G34x/GRvvFw8dQkEf",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2ffuses@2.1.2",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "unpackedSize": 39785
+   },
+   "type": "module",
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "exports": "./dist/index.js",
+   "gitHead": "67d4eed3a8da0563c9afeac3229c09498d326435",
+   "scripts": {
+    "lint": "oxlint && oxfmt --check",
+    "test": "vitest run && tsc --noEmit",
+    "build": "tsc",
+    "prepack": "tsc",
+    "prepare": "husky",
+    "lint:fix": "oxlint --fix && oxfmt --write",
+    "build:docs": "typedoc src/index.ts"
+   },
+   "_npmVersion": "11.6.2",
+   "directories": {},
+   "lint-staged": {
+    "*.{ts}": [
+     "oxlint --fix",
+     "oxfmt"
+    ],
+    "*.{json}": [
+     "oxlint --fix",
+     "oxfmt"
+    ]
+   },
+   "resolutions": {
+    "fsevents": "npm:@electron/fsevents@2.3.3-fork"
+   },
+   "_nodeVersion": "24.10.0",
+   "publishConfig": {
+    "provenance": true
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "devDependencies": {
+    "husky": "^9.1.7",
+    "oxfmt": "^0.44.0",
+    "oxlint": "^1.59.0",
+    "vitest": "^4.1.2",
+    "typedoc": "~0.28.0",
+    "typescript": "^6.0.2",
+    "@types/node": "~22.10.7",
+    "lint-staged": "^16.1.2",
+    "@electron/get": "^4.0.2",
+    "oxlint-tsgolint": "^0.20.0",
+    "@tsconfig/node22": "^22.0.2",
+    "@electron/universal": "^3.0.1",
+    "@electron-internal/extract-zip": "^1.0.2"
+   }
+  },
+  "2.1.3": {
+   "name": "@electron/fuses",
+   "version": "2.1.3",
+   "type": "module",
+   "exports": "./dist/index.js",
+   "license": "MIT",
+   "bin": {
+    "electron-fuses": "dist/bin.js"
+   },
+   "engines": {
+    "node": ">=22.12.0"
+   },
+   "publishConfig": {
+    "provenance": true
+   },
+   "scripts": {
+    "build": "tsc",
+    "build:docs": "typedoc src/index.ts",
+    "lint": "oxlint && oxfmt --check",
+    "lint:fix": "oxlint --fix && oxfmt --write",
+    "test": "vitest run && tsc --noEmit",
+    "prepack": "tsc",
+    "prepare": "husky"
+   },
+   "devDependencies": {
+    "@electron-internal/extract-zip": "^1.0.2",
+    "@electron/get": "^4.0.2",
+    "@electron/universal": "^3.0.1",
+    "@tsconfig/node22": "^22.0.2",
+    "@types/node": "~22.10.7",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "oxfmt": "^0.44.0",
+    "oxlint": "^1.59.0",
+    "oxlint-tsgolint": "^0.20.0",
+    "typedoc": "~0.28.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+   },
+   "lint-staged": {
+    "*.{ts}": [
+     "oxlint --fix",
+     "oxfmt"
+    ],
+    "*.{json}": [
+     "oxlint --fix",
+     "oxfmt"
+    ]
+   },
+   "bugs": {
+    "url": "https://github.com/electron/fuses/issues"
+   },
+   "resolutions": {
+    "fsevents": "npm:@electron/fsevents@2.3.3-fork"
+   },
+   "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+   "gitHead": "00f2479b958d917fe0f6e7711e85f62b74b3e7c2",
+   "_id": "@electron/fuses@2.1.3",
+   "_nodeVersion": "24.10.0",
+   "_npmVersion": "11.6.2",
+   "dist": {
+    "integrity": "sha512-LoKJUXNiJ4JM8IIrUltSHI+8pkogaGj5wmJx81jE/Wk3g2w1/kfMbTEKNoY5kitGE8hiC12h32R/1SlywFtxXg==",
+    "shasum": "9a63a0ab88da9433417b3d5a3a95487e461488d6",
+    "tarball": "http://localhost:3000/@electron/fuses/-/fuses-2.1.3.tgz",
+    "fileCount": 15,
+    "unpackedSize": 40898,
+    "attestations": {
+     "url": "http://localhost:3000/-/npm/v1/attestations/@electron%2ffuses@2.1.3",
+     "provenance": {
+      "predicateType": "https://slsa.dev/provenance/v1"
+     }
+    },
+    "signatures": [
+     {
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+      "sig": "MEUCIFmf/gaDCtTf8ksQu36x1erXaF0+S8XQsfQzQpNOJ/0TAiEAl9sRUbX6m7Bly0txaGfu00E3XOAiIMo/d84xV11ImAo="
+     }
+    ]
+   },
+   "directories": {},
+   "_hasShrinkwrap": false
+  }
+ },
+ "time": {
+  "created": "2021-04-23T03:31:42.898Z",
+  "modified": "2026-06-29T18:04:20.012Z",
+  "1.0.0": "2021-04-23T03:31:43.080Z",
+  "1.0.1": "2021-04-23T03:35:56.075Z",
+  "1.1.0": "2021-05-26T19:59:11.093Z",
+  "1.1.1": "2021-05-26T20:01:47.075Z",
+  "1.1.2": "2021-06-08T23:58:31.166Z",
+  "1.2.0": "2021-06-10T22:37:12.288Z",
+  "1.2.1": "2021-06-11T21:45:38.588Z",
+  "1.3.0": "2021-08-04T22:51:50.656Z",
+  "1.4.0": "2021-08-09T09:38:32.267Z",
+  "1.5.0": "2021-09-09T22:25:11.730Z",
+  "1.6.0": "2022-09-22T06:35:42.770Z",
+  "1.6.1": "2022-10-05T20:08:49.743Z",
+  "1.6.2": "2023-08-02T23:56:32.095Z",
+  "1.7.0": "2023-12-10T21:23:51.025Z",
+  "1.8.0": "2024-03-25T17:41:45.033Z",
+  "2.0.0": "2025-08-01T04:30:18.690Z",
+  "2.1.0": "2026-02-26T21:36:09.148Z",
+  "2.1.1": "2026-03-27T02:31:53.911Z",
+  "2.1.2": "2026-06-05T06:02:16.081Z",
+  "2.1.3": "2026-06-29T18:04:19.741Z"
+ },
+ "license": "MIT"
+}

@@ -1,0 +1,2399 @@
+{
+ "_id": "@jcoreio/async-throttle",
+ "_rev": "66-84343bebc7bbb693bf857c2d7d537824",
+ "name": "@jcoreio/async-throttle",
+ "dist-tags": {
+  "latest": "1.7.0"
+ },
+ "versions": {
+  "1.0.0": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.0.0",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.0.0",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "a718a9fff1fa019df611a972be73eb44f278259b",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.0.0.tgz",
+    "integrity": "sha512-UBCu2M6eVlwgXXNfa1wjOAFA8TeMSl3NO57UfByDWRxyVuiIMv8XOSdfdEhBaqXe3y53CuUEUms3JFevFl269g==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDLpwi0h0BdbGnmUzxfIp6y8K7vR75Qod7HAiw9/3ypPAIgPgHVg6ohccfDDrpGnwYEry9XOpBkC/odp8gqCuL6IwA=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "lib/index.js",
+   "_from": ".",
+   "config": {
+    "mocha": "--compilers js:babel-core/register ./test/**/*.js",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "_shasum": "a718a9fff1fa019df611a972be73eb44f278259b",
+   "gitHead": "d65931eff052c90515085c212468a6d08d442dec",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint src test",
+    "test": "NODE_ENV=production BABEL_ENV=test nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "rimraf lib && babel src --out-dir lib",
+    "prepush": "npm test",
+    "lint:fix": "eslint --fix src test",
+    "commitmsg": "validate-commit-msg",
+    "precommit": "npm run lint && flow",
+    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore lib/ --ignore node_modules/ --watch .flowconfig --watch src/ --watch test/",
+    "lint:watch": "esw --watch src test",
+    "prepublish": "npm run lint && flow && npm test && npm run build && npm run copy-flow-files",
+    "test:watch": "mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "gen-flow-files": "flow gen-flow-files src/ --out-dir lib",
+    "copy-flow-files": "cd src; copy *.js.flow **/*.js.flow ../lib",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+   },
+   "_npmVersion": "4.2.0",
+   "directories": {},
+   "_nodeVersion": "7.9.0",
+   "dependencies": {
+    "delay": "^2.0.0",
+    "sinon": "^2.1.0"
+   },
+   "devDependencies": {
+    "nyc": "^10.1.2",
+    "chai": "^3.5.0",
+    "copy": "^0.3.0",
+    "husky": "^0.13.1",
+    "mocha": "^3.2.0",
+    "eslint": "^3.13.1",
+    "rimraf": "^2.5.4",
+    "bluebird": "^3.5.0",
+    "flow-bin": "^0.39.0",
+    "istanbul": "^0.4.5",
+    "babel-cli": "^6.22.2",
+    "coveralls": "^2.11.16",
+    "babel-core": "^6.22.1",
+    "flow-watch": "^1.1.0",
+    "babel-eslint": "^7.1.1",
+    "eslint-watch": "^3.0.0",
+    "babel-runtime": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "semantic-release": "^6.3.6",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "validate-commit-msg": "^2.8.2",
+    "babel-preset-stage-1": "^6.22.0",
+    "babel-plugin-istanbul": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "@jedwards1211/eslint-config": "^1.0.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "@jedwards1211/eslint-config-flow": "^1.0.0"
+   }
+  },
+  "1.0.1": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.0.1",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.0.1",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "0a0e647a6960fa2e6866c282b7a7e18602f61617",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.0.1.tgz",
+    "integrity": "sha512-g4dQU5NUCiNnPFybxzPmqcaRQ306deZf519CsYgogfCwVVjdqXWgjbl7AepBd5tLLx9t85L40pNtnKdHZPGffA==",
+    "signatures": [
+     {
+      "sig": "MEUCIFrRPeI01SiRM/ToAckG2L5JHNldXHrTW1spvSpHqcJGAiEAuR6JHW5hHrPfp3NkxdudcAYh/Lmz5G+cqmODROjI0UI=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "lib/index.js",
+   "_from": ".",
+   "config": {
+    "mocha": "--compilers js:babel-core/register ./test/**/*.js",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "_shasum": "0a0e647a6960fa2e6866c282b7a7e18602f61617",
+   "gitHead": "44069be064f018a22ed05113b22ed2c575f86364",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint src test",
+    "test": "NODE_ENV=production BABEL_ENV=test nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "rimraf lib && babel src --out-dir lib",
+    "prepush": "npm test",
+    "lint:fix": "eslint --fix src test",
+    "commitmsg": "validate-commit-msg",
+    "precommit": "npm run lint && flow",
+    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore lib/ --ignore node_modules/ --watch .flowconfig --watch src/ --watch test/",
+    "lint:watch": "esw --watch src test",
+    "prepublish": "npm run lint && flow && npm test && npm run build && npm run copy-flow-files",
+    "test:watch": "mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "gen-flow-files": "flow gen-flow-files src/ --out-dir lib",
+    "copy-flow-files": "cd src; copy *.js.flow **/*.js.flow ../lib",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+   },
+   "_npmVersion": "4.2.0",
+   "directories": {},
+   "_nodeVersion": "7.9.0",
+   "devDependencies": {
+    "nyc": "^10.1.2",
+    "chai": "^3.5.0",
+    "copy": "^0.3.0",
+    "husky": "^0.13.1",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0",
+    "eslint": "^3.13.1",
+    "rimraf": "^2.5.4",
+    "bluebird": "^3.5.0",
+    "flow-bin": "^0.39.0",
+    "istanbul": "^0.4.5",
+    "babel-cli": "^6.22.2",
+    "coveralls": "^2.11.16",
+    "babel-core": "^6.22.1",
+    "flow-watch": "^1.1.0",
+    "babel-eslint": "^7.1.1",
+    "eslint-watch": "^3.0.0",
+    "babel-runtime": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "semantic-release": "^6.3.6",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "validate-commit-msg": "^2.8.2",
+    "babel-preset-stage-1": "^6.22.0",
+    "babel-plugin-istanbul": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "@jedwards1211/eslint-config": "^1.0.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "@jedwards1211/eslint-config-flow": "^1.0.0"
+   }
+  },
+  "1.1.0": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.1.0",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.1.0",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "fb081c97ca9843399424baca907f22541ddcf6d0",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.1.0.tgz",
+    "integrity": "sha512-gkRryXfSzTwXZsPzrQ0Sk3ENA7qGtBSUo9FBEQ7w03aw+T4RzvzSWEd5SgcUbzVVyMI1XETHfD0lT8S8ipiVlA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCpqQlxUTh4CPmYyfIl2xLg7WYUr+MB/AgayfvD2Z+LygIhAM5nGuxnIax685lCoajXRdQzWWKo7DG870dx9YPjk7ip",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "lib/index.js",
+   "_from": ".",
+   "config": {
+    "mocha": "--compilers js:babel-core/register ./test/**/*.js",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "_shasum": "fb081c97ca9843399424baca907f22541ddcf6d0",
+   "gitHead": "7ab120ee5b4807204979f8f953b984635020f5c0",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint src test",
+    "test": "NODE_ENV=production BABEL_ENV=test nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "rimraf lib && babel src --out-dir lib",
+    "prepush": "npm test",
+    "lint:fix": "eslint --fix src test",
+    "commitmsg": "validate-commit-msg",
+    "precommit": "npm run lint && flow",
+    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore lib/ --ignore node_modules/ --watch .flowconfig --watch src/ --watch test/",
+    "lint:watch": "esw --watch src test",
+    "prepublish": "npm run lint && flow && npm test && npm run build && npm run copy-flow-files",
+    "test:watch": "mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "gen-flow-files": "flow gen-flow-files src/ --out-dir lib",
+    "copy-flow-files": "cd src; copy *.js.flow **/*.js.flow ../lib",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+   },
+   "_npmVersion": "4.2.0",
+   "directories": {},
+   "_nodeVersion": "7.9.0",
+   "devDependencies": {
+    "nyc": "^10.1.2",
+    "chai": "^3.5.0",
+    "copy": "^0.3.0",
+    "husky": "^0.13.1",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0",
+    "eslint": "^3.13.1",
+    "rimraf": "^2.5.4",
+    "bluebird": "^3.5.0",
+    "flow-bin": "^0.39.0",
+    "istanbul": "^0.4.5",
+    "babel-cli": "^6.22.2",
+    "coveralls": "^2.11.16",
+    "babel-core": "^6.22.1",
+    "flow-watch": "^1.1.0",
+    "babel-eslint": "^7.1.1",
+    "eslint-watch": "^3.0.0",
+    "babel-runtime": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "semantic-release": "^6.3.6",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "validate-commit-msg": "^2.8.2",
+    "babel-preset-stage-1": "^6.22.0",
+    "babel-plugin-istanbul": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "@jedwards1211/eslint-config": "^1.0.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "@jedwards1211/eslint-config-flow": "^1.0.0"
+   }
+  },
+  "1.1.1": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.1.1",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.1.1",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "edd5a5561607b1204feea2badb92eb9e23fde2d9",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.1.1.tgz",
+    "integrity": "sha512-v5PinUxulalkUiVROC11GlllTmoHrrhHy/bilu79ERalRKE7Az+9wBAGlT/RDH9f8rtnsnFZ9lzlmBkWj4t6pA==",
+    "signatures": [
+     {
+      "sig": "MEUCIQDWR4H+A//QkGJXe3ZM829gQv63S/nmtwfzZLVTcHxdFAIgPEYyCgO6NR+VK/Pr0l9CIw7Uc9tweyHIYbeL2OQ2huM=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ]
+   },
+   "main": "lib/index.js",
+   "_from": ".",
+   "config": {
+    "mocha": "--compilers js:babel-core/register ./test/**/*.js",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "_shasum": "edd5a5561607b1204feea2badb92eb9e23fde2d9",
+   "gitHead": "f404c48127b18ce661970dffe7597c8130ea849b",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint src test",
+    "test": "NODE_ENV=production BABEL_ENV=test nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "rimraf lib && babel src --out-dir lib",
+    "prepush": "npm test",
+    "lint:fix": "eslint --fix src test",
+    "commitmsg": "validate-commit-msg",
+    "precommit": "npm run lint && flow",
+    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore lib/ --ignore node_modules/ --watch .flowconfig --watch src/ --watch test/",
+    "lint:watch": "esw --watch src test",
+    "prepublish": "npm run lint && flow && npm test && npm run build && npm run copy-flow-files",
+    "test:watch": "mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "gen-flow-files": "flow gen-flow-files src/ --out-dir lib",
+    "copy-flow-files": "cd src; copy *.js.flow **/*.js.flow ../lib",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+   },
+   "_npmVersion": "4.2.0",
+   "directories": {},
+   "_nodeVersion": "7.10.1",
+   "devDependencies": {
+    "nyc": "^10.1.2",
+    "chai": "^3.5.0",
+    "copy": "^0.3.0",
+    "husky": "^0.13.1",
+    "mocha": "^3.2.0",
+    "sinon": "^2.1.0",
+    "eslint": "^3.13.1",
+    "rimraf": "^2.5.4",
+    "bluebird": "^3.5.0",
+    "flow-bin": "^0.56.0",
+    "istanbul": "^0.4.5",
+    "babel-cli": "^6.22.2",
+    "coveralls": "^2.11.16",
+    "babel-core": "^6.22.1",
+    "flow-watch": "^1.1.0",
+    "babel-eslint": "^7.1.1",
+    "eslint-watch": "^3.0.0",
+    "babel-runtime": "^6.22.0",
+    "babel-register": "^6.22.0",
+    "semantic-release": "^6.3.6",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "validate-commit-msg": "^2.8.2",
+    "babel-preset-stage-1": "^6.22.0",
+    "babel-plugin-istanbul": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "@jedwards1211/eslint-config": "^1.0.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "@jedwards1211/eslint-config-flow": "^1.0.0"
+   }
+  },
+  "1.1.2": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.1.2",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.1.2",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "e711ef3d27251cc9e3e614052d0244c0604e8632",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.1.2.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-j5dBQawgZc/XA75BXTMU6OE5MpP6mYjApwAvlEo7RyOt6e6qlz6MW9oKOvPBu7I7Wv2/5XyEzHdGITkSUsrLfA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCnSAIiHVWE9XacPiFVnf8H8T69lRF0jfzGa6i6dTtk1gIhANooA6uVPdJQgrfS6jkl/QBjsaE5CtO/0PPPf8I6tYCi",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 214471,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJa932fCRA9TVsSAnZWagAAtQoP/jyEzigEcza1li8JGfJK\ng7MKA4ZDig0s41gVoa7KV21N47ayoU3f8RlZ2AlRRawcLY8cfyuo9BsrHBak\nqVPAL1DjkA+7Vw4br3ZUIY3MoiscQ0eTule/YqW4jg4A7/xazHc3brT8NbNL\nNtPvfo7SjeXW/XBch+uwczYEvgVozEVBBz46btpFUElPPqx2kjXwIfMDAMLj\nFz9j5tNB7OE7jfrl61/xFjcPjViQ802sQidtzB3ujycAPzSp7JLDBeN+3wKU\nOn86BhPZebqkfoNwjsHZE5e3JcUZS19UTMH3eR+kYbkjBDSRN4jceXoxT34/\npfd1OJ4llpOD8csMlN4P9h/Y+ojbDk7ZTjReSNoq2rfmuPP5ytkk5LtSMQUt\nc6STjUfSKrjOnpHEfVLuZ3NXjDrA5wUu6ZV8zetJ0/iKnL597iyrMj/znJWx\nRDDip3sQXL7WnogCIfJ6JuhmcUwt/KhHqgVHZ0GSEzz1ngCelkC5VicI5IJV\ne0ZyYwjTo2kV7InZ1sieDKhPH1UzwLWKAr9lDZSkhreGs+pdKkiR2hgN6qcm\nSJMtsz8tfc//Mt4ExigTATuTanIA7NZQJSt1LwivVrzk4kmoCASuvlee7PK+\nFLzTdY9Ob9CiI9w29kiqRDJ/TfuFhq8BXp4kEn+QKQ76T6Ec/VXpFlEgWqG2\nuT/X\r\n=0QEE\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "lib/index.js",
+   "config": {
+    "mocha": "-r babel-register ./test/**/*.js",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "6bf390db5e9821e99df47d14d3a30e21e9360255",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint src test --cache",
+    "test": "NODE_ENV=production BABEL_ENV=test nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "rimraf lib && babel src --out-dir lib && flow-copy-source -v src/ lib",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "prepush": "npm test",
+    "lint:fix": "eslint --fix src test --cache",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "precommit": "npm run lint && flow",
+    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore lib/ --ignore node_modules/ --watch .flowconfig --watch src/ --watch test/",
+    "lint:watch": "esw --watch src test --cache",
+    "test:watch": "mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run lint && flow && npm test && npm run build",
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
+   },
+   "_npmVersion": "5.6.0",
+   "directories": {},
+   "_nodeVersion": "8.11.1",
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^11.4.1",
+    "chai": "^4.1.2",
+    "copy": "^0.3.0",
+    "husky": "^0.14.3",
+    "mocha": "^4.1.0",
+    "sinon": "^5.0.7",
+    "eslint": "^3.15.0",
+    "rimraf": "^2.6.0",
+    "codecov": "^3.0.0",
+    "flow-bin": "^0.72.0",
+    "istanbul": "^0.4.5",
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "flow-watch": "^1.1.0",
+    "babel-eslint": "^7.1.1",
+    "eslint-watch": "^3.0.0",
+    "babel-runtime": "^6.23.0",
+    "babel-register": "^6.23.0",
+    "@commitlint/cli": "^6.0.2",
+    "flow-copy-source": "^1.2.1",
+    "semantic-release": "^15.1.4",
+    "babel-preset-flow": "^6.23.0",
+    "travis-deploy-once": "^4.3.1",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "babel-plugin-istanbul": "^4.0.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "@jedwards1211/eslint-config": "^2.0.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "@commitlint/config-conventional": "^6.0.2",
+    "@jedwards1211/commitlint-config": "^1.0.0",
+    "@jedwards1211/eslint-config-flow": "^1.0.0"
+   }
+  },
+  "1.2.0": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.2.0",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.2.0",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "cae198f977bd3e92df0822e8d6960d6c51558810",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.2.0.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-PE25togTHEGC1W3EG4iOrFfpvZw3ol7Wi3tBbZ4hiGJ4K/oJTVh/LVJSy/hmg4388trU6QrpYGOmwFzIXyBF3g==",
+    "signatures": [
+     {
+      "sig": "MEQCIBqelsAhkoWmm/QSxD83ieh56Oz69p5uCfoDNO2Iss7xAiArzYdSV1FN24VduyntS5xtwCBKa8Q81aFEoHEelvmo3g==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 10556,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfVl8uCRA9TVsSAnZWagAANW4P/i2VFqVrKMRncq2Jg3aW\nvoYGWRjedOki/gBkHJW/PiR9jkzbcU3Kqm4fzbJRltOs3MTnwULgaDuJEHeK\nTHothWPnEuj2kUJHxoeOmtwFydB2gLQwLtzonPiip5MWX3+BkA13Uj/al1g5\n6D72C9pMUGmg7ki1llvgnMj+OoWi2s5RtLJs9CJLe9X2JMaXmB/b7WcPGHy9\n57JJ4KgKJGpALCGAJKP0wnCnYNlkvXfeAEXKJJ+uvBq98TtL5bRV1kKABch7\nIdUCSHvS88mS8aQpDc8yiI0Au09uCXZHIMJ7bW/ELzuC+14XCtQK2d56+GFB\nKigP/sJbxUmAmI+v1fP8D0ArWAzwHEFoEvUgqf7CvsA+OOT3q+fB1CnJNe+4\nduwGAKI8akY3/ma4dvOkoLbFTSrdZ0T0/8l8pF5FMj3s8bqFGLzDLsaeaMbT\no8IjenciZzbGY374agUnAnQTu4iT/gEviPWFfVAR0n4pBFhN9me9EESLmdiQ\niDZ1brRY1cBzo3WVzqJ+f4lZ5XFKR7dszM+x//NP7UWHM1Zaw3uy5fk2K4aT\niCxbMJjTChVMrVanySLOkzdGcVZlz94zL0j490DBwQxP2aXsNSguYw2jHk+R\nYhQl8MVuRFoODaDhpEWAnpxznI63qsuPKEXtzopO3RB+w1bP6EOhiwcQleKC\nhcn0\r\n=IC6e\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -e $GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "4027875653cf11d6a59fd9f8efb75f215e8680f8",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint src test --cache",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix src test --cache",
+    "prettier": "prettier --write *.json *.md *.js '{src,test}/**/*.js'",
+    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore es/ --ignore node_modules/ --watch .flowconfig --watch src/ --watch test/",
+    "lint:watch": "esw --watch src test --cache",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && npm test && npm run build",
+    "prettier:check": "prettier --list-different *.json *.md *.js '{src,test}/**/*.js'",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md}": [
+     "prettier --write",
+     "git add"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "12.16.3",
+   "dependencies": {
+    "@babel/runtime": "^7.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^1.1.4",
+    "mocha": "^6.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^5.9.0",
+    "rimraf": "^2.6.0",
+    "codecov": "^3.1.0",
+    "flow-bin": "^0.92.0",
+    "istanbul": "^0.4.5",
+    "prettier": "^1.15.2",
+    "cross-env": "^5.2.0",
+    "@babel/cli": "^7.1.5",
+    "flow-watch": "^1.1.4",
+    "@babel/core": "^7.1.6",
+    "lint-staged": "^8.0.4",
+    "babel-eslint": "^10.0.1",
+    "eslint-watch": "^4.0.2",
+    "@babel/register": "^7.0.0",
+    "@commitlint/cli": "^6.0.2",
+    "prettier-eslint": "^8.8.2",
+    "flow-copy-source": "^2.0.2",
+    "semantic-release": "^15.1.4",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-plugin-istanbul": "^5.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "@jedwards1211/eslint-config": "^2.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@commitlint/config-conventional": "^6.0.2",
+    "@jedwards1211/commitlint-config": "^1.0.0",
+    "@jedwards1211/eslint-config-flow": "^2.0.0"
+   }
+  },
+  "1.3.0": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.3.0",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.3.0",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "09bebbfe27598924f0ae9848b8b7a4a50f59dc53",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.3.0.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-7f4UQX8RsxED3XIwWxDi4gLWxPhZychQt5rkQwT1W4UdgDFSY4+J916HqnLdU3vR9OyqXyiw1iuPwtL7gBRzAA==",
+    "signatures": [
+     {
+      "sig": "MEYCIQCWpqCfMvsKKkDpDA0HP+rFQ8ND2NbhOsequnicYmKAAQIhAJcmK4osEv4Fhu1DnmnNzyS5oPXJZiyCxgeaDhMIbaRd",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 16802,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfdX9sCRA9TVsSAnZWagAAugMP/RfnPnwttj7nUyzLufCP\nmlgcEYz3M6lIC9lEyJmNkLf/yZnimrN7hSa2/1zYH05J0Z0vor80jvyAHThU\nZTL42V1WKGjXhCunYl7EVUw7hd19rPwrmijd5Kd+buFsIpnsTFal0uFfiRmY\nS74zFEriOnYOUXO0sFgBMUMKwQqYXvZ49Wgque3JSFGYId2nkaN+X5AHhZU6\nZrjuiREXjfz+Bu51Tei0MOsxBiwsk66jNR519ZqaNGFBYXaPDaI6llvQ2Gwu\nENtdxZPwwFelnJ9wevUZVdsdCvBxc2J5WNgWiXRLl5O6PhM9EMMt3KM30I19\nEIizYkl8J0KtMbpkvGqVrriMKv7aNV8/aKFMAwDpFT0GjnQraGPyjJ7C4Dov\nHvFor8UPD0gg0tjp4aIq7PxZfy2T/a6paUPU3Cbd02CqQfacmA+MONujGRVw\nsuXvWeBMEbbtwA7wSS2d9h8jXbR3O+p/1NorQe3g/gKg8cvxm+/Fgyq0Dbxj\nRu74bu4ylSaMRTv2Zs5Uu95oczOWe8FDpOwR42/+QMi8fniEC3moNC4wQmD6\nmTvVbwPC1tUIzK2/o5IkAvyRIS73S7OcVo/RDuq+9cTcaxg9bH2c/i2wdIqc\necJOswdAdQ+gduTHBp/0ORJO1W+P4Zgol6jFMpD85988aaNAklagQkbbsaSW\nC7jC\r\n=fd0/\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -e $GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "6572626a90c01423f05fd916d75044a9d82747ce",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint src test --cache",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix src test --cache",
+    "prettier": "prettier --write *.json *.md *.js '{src,test}/**/*.js'",
+    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore es/ --ignore node_modules/ --watch .flowconfig --watch src/ --watch test/",
+    "lint:watch": "esw --watch src test --cache",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && npm test && npm run build",
+    "prettier:check": "prettier --list-different *.json *.md *.js '{src,test}/**/*.js'",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md}": [
+     "prettier --write",
+     "git add"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "12.16.3",
+   "dependencies": {
+    "@babel/runtime": "^7.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^1.1.4",
+    "mocha": "^6.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^5.9.0",
+    "rimraf": "^2.6.0",
+    "codecov": "^3.1.0",
+    "flow-bin": "^0.92.0",
+    "istanbul": "^0.4.5",
+    "prettier": "^1.15.2",
+    "cross-env": "^5.2.0",
+    "@babel/cli": "^7.1.5",
+    "flow-watch": "^1.1.4",
+    "@babel/core": "^7.1.6",
+    "lint-staged": "^8.0.4",
+    "babel-eslint": "^10.0.1",
+    "eslint-watch": "^4.0.2",
+    "@babel/register": "^7.0.0",
+    "@commitlint/cli": "^6.0.2",
+    "prettier-eslint": "^8.8.2",
+    "flow-copy-source": "^2.0.2",
+    "semantic-release": "^15.1.4",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-plugin-istanbul": "^5.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "@jedwards1211/eslint-config": "^2.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@commitlint/config-conventional": "^6.0.2",
+    "@jedwards1211/commitlint-config": "^1.0.0",
+    "@jedwards1211/eslint-config-flow": "^2.0.0"
+   }
+  },
+  "1.3.1": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.3.1",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.3.1",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "51ecaa2bd88c646ca3f5f95429455662a7202e0e",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.3.1.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-hgJHzC5wWfWWuF60wA5hlhPSpWRAsAtJwJ/28CB+stL4ZLEwVXY3U6vjlNUVAMAsigwFT97j4+U+fKAOHMEqnQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQCv83RL14YfCEIqbRPg/j+c+/k67kqCXnEXfy08Su6zpgIgYI5PjaUFI1EyZK3iy5G+olC9s3e37asbuknljamQb4s=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 15608,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfdhBkCRA9TVsSAnZWagAAVNwP/29XSt3ddUvPnKl8d1YJ\nnqXRyZisAk1kdULB+UiuquIrftEqYIoslAJ3K691uDilQ0mwg+YQaULuWbVz\nKiBw+4dxi04JOdZ6G8V8H4L0y/DnRi+RbLxSS6wCsiOvCPg2iqHiMRLSSshO\nC0PyfBLMVLe3zIjgVH27Vq+NOge6e/fxtBtr6M07rq+y4OpqXdoKGDhpnlEo\n0sFHUNSiPBr6ZTZOaxEdbXsbfr7j/8vxlSWqmtyYO07/6Jz1iR1soXKnLXkU\nzD+ke6gDHl2j6GFC+2yDfZLo2TWJShTnm3DvSpRmJHgf1zouBA4snZUJnH6K\nLkJlG97IiW5K+EJ58ME7498jFBARWS16Nam8oBkNnCsLn0H1M4+lkIzBUzBH\ndC8/MiNKBU1S7prAwKgWn8k3+zQBPKUmfTkC8yPFAgnvUlE+JB/4Djeldo4y\nlDCJG26BxVRb2S8pBufdPGScZ3GV+BuqfksRoRr9iPTa6vz3EVUh6LmHLnzO\nAxvcWop9CGnMIvzjLk/r2lryWHvaToWN2vefNWlK5duWXkHo4E6rFr0qnqWK\ngZie4pEaB9fBQtB8aYnS93r+UrIDX+7uInOS4xkSHnx0uGtQ6PIU/kABf2yM\nyVDMoZUe/EYu2X2BJ8XsthUHUr6Zgbdv5eIRAMpdEdx6Ueom81skr733eYNH\noeKN\r\n=jTWd\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -e $GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "f1c2a5ca260ab3fb8817d79bf70658cd3f8db95f",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint src test --cache",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix src test --cache",
+    "prettier": "prettier --write *.json *.md *.js '{src,test}/**/*.js'",
+    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore es/ --ignore node_modules/ --watch .flowconfig --watch src/ --watch test/",
+    "lint:watch": "esw --watch src test --cache",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && npm test && npm run build",
+    "prettier:check": "prettier --list-different *.json *.md *.js '{src,test}/**/*.js'",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md}": [
+     "prettier --write",
+     "git add"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "12.16.3",
+   "dependencies": {
+    "@babel/runtime": "^7.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^1.1.4",
+    "mocha": "^6.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^5.9.0",
+    "rimraf": "^2.6.0",
+    "codecov": "^3.1.0",
+    "flow-bin": "^0.92.0",
+    "istanbul": "^0.4.5",
+    "prettier": "^1.15.2",
+    "cross-env": "^5.2.0",
+    "@babel/cli": "^7.1.5",
+    "flow-watch": "^1.1.4",
+    "@babel/core": "^7.1.6",
+    "lint-staged": "^8.0.4",
+    "babel-eslint": "^10.0.1",
+    "eslint-watch": "^4.0.2",
+    "@babel/register": "^7.0.0",
+    "@commitlint/cli": "^6.0.2",
+    "prettier-eslint": "^8.8.2",
+    "flow-copy-source": "^2.0.2",
+    "semantic-release": "^15.1.4",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-plugin-istanbul": "^5.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "@jedwards1211/eslint-config": "^2.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@commitlint/config-conventional": "^6.0.2",
+    "@jedwards1211/commitlint-config": "^1.0.0",
+    "@jedwards1211/eslint-config-flow": "^2.0.0"
+   }
+  },
+  "1.3.2": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.3.2",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.3.2",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "522bec4d3fa8139ae243f1cdc6aa9f111fc6598b",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.3.2.tgz",
+    "fileCount": 5,
+    "integrity": "sha512-i/P8ZwOQrcFw5vO8X205RivHgEamBMe0X8a7qrww2Wp5pIsVzkhD3r6GgG7zdO5N/Ics1tvg4yO/wOv8D+CuWA==",
+    "signatures": [
+     {
+      "sig": "MEQCIEdsjNMiTt4nlBziiJQExH1wSKmvtmCuafLJHf4ZzUdoAiARhjd0Rn7m3y7amkhZYORXPkKMNCpeMxmefI/SqXw2nw==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 16211,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfz8WuCRA9TVsSAnZWagAAXMsP/RYNriYIUcsYNwcgGTeM\nqkaC+WBGHtOMhWMspifTAsOCV8SYr+XDnIWu9NjRsX3mvb1rymVmlsnmF/1/\nirpsU4EgQutNOJp9UQl/sBIboNZd8zYjcQD77feH6WsU1n1fflVDpONzoPfQ\n8aAnjczjDlbJo0NC+2Ohw2i33XUhxWP2bpKoNUMvRqNZ8/j+RaDICN21TTTm\nVs6fGDWU5YVEyB9I0PGlwzwvTqM+J4nSCT6EE9u2V/0LVa2xFrKPIfN4hVn6\nxjRVyVXtk+NEoqe5mg25lamiswH2tupoTan92CELx4mQUc0taIQ/cpv6UduW\nLLRauA4dkaDGU96a0T59cDBbExpD8cHPL7p0hvEJRCoSUooI3KSTxAO3nw7J\nMCvQrZRb4bWPruoz77TWnKKNlmlHj8uhD9I37XwveBzYEvL723RMG35bIEPy\nAJd5UbHNDZMKnYw+QFdTChxnU9l5IEQ560D07ilDsuSGny/rs9T/W2fMV4aX\no0n2nmcA4K1MzXk5FrFsdEM43gXw8lWRzRIzmTqh8Ncg7CzbIwDWuSRcdVEh\no8XL28bwZIwSGmIOUc7+lXI8/Jz47M8NQGrYcQjGwMR2cpI6vPPhHYB81k21\nne9oFKhmXyhFvm8Z+CYGoHQk2aZ4Yk9FiVep9JAbmwg5qY/qotfKHNaDydj1\nNBck\r\n=Ok2J\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -e $GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "ad364ff03f26333ac3247e05a8c9ded894c8940f",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint src test --cache",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix src test --cache",
+    "prettier": "prettier --write *.json *.md *.js '{src,test}/**/*.js'",
+    "flow:watch": "flow-watch -e js,js.flow,flowconfig --ignore es/ --ignore node_modules/ --watch .flowconfig --watch src/ --watch test/",
+    "lint:watch": "esw --watch src test --cache",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && npm test && npm run build",
+    "prettier:check": "prettier --list-different *.json *.md *.js '{src,test}/**/*.js'",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.4.1",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md}": [
+     "prettier --write",
+     "git add"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "12.16.3",
+   "dependencies": {
+    "@babel/runtime": "^7.1.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^13.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^1.1.4",
+    "mocha": "^6.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^5.9.0",
+    "rimraf": "^2.6.0",
+    "codecov": "^3.7.2",
+    "flow-bin": "^0.92.0",
+    "istanbul": "^0.4.5",
+    "prettier": "^1.15.2",
+    "cross-env": "^5.2.0",
+    "@babel/cli": "^7.1.5",
+    "flow-watch": "^1.1.4",
+    "@babel/core": "^7.1.6",
+    "lint-staged": "^8.0.4",
+    "babel-eslint": "^10.0.1",
+    "eslint-watch": "^4.0.2",
+    "@babel/register": "^7.0.0",
+    "@commitlint/cli": "^6.0.2",
+    "prettier-eslint": "^8.8.2",
+    "flow-copy-source": "^2.0.2",
+    "semantic-release": "^15.1.4",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-plugin-istanbul": "^5.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-flowtype": "^3.2.0",
+    "@jedwards1211/eslint-config": "^2.0.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@commitlint/config-conventional": "^6.0.2",
+    "@jedwards1211/commitlint-config": "^1.0.0",
+    "@jedwards1211/eslint-config-flow": "^2.0.0"
+   }
+  },
+  "1.4.0": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.4.0",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.4.0",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "6c5bb562fbdc914b82c9e07acd1d49ccf2305648",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.4.0.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-29u/H2dk7GqUEzfgO1JekZ2+/FRFPDmANRBpCXLG5d6WmXA66MLG663DkoTD/QPJjc+SpwFcFRs4UizA1ZUKPA==",
+    "signatures": [
+     {
+      "sig": "MEUCIA01EdC2F8M5qGpc2NoYMMAYvMKP2PGBfmPDoyR29/UcAiEAjqWUfHt48umhBadoHndU8eP0FaFfwXK1q4OiDpHpjfI=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 22693,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJgt8n9CRA9TVsSAnZWagAAEQUP/0ZYIZEvLblmLvKLXXn/\n8IdlJUhAY+eDmANpmo4Z/DkbSoyOoEL0r1PWopU5H57a1R828JwpUdMGYsG3\nFoEJa7tOLfnXaRrbDg6fjtWn+6YKUqxU+vwfbYzXUF//LHVfaGEVgXRxGOjs\naao9v3BKrm8vSDzwH93+Ahc+Ku+UQAmoPQFhi4R633FA/Vwl6g1hfWkfzVkA\nkwY1FqiHblAyO7ctree2cNd/amwH8VigESPqUaaPn+cbCDDzNvXZIA63dd/l\n6x/kEgfIFDWfFeUwKMv8tmhTgaXcIt22yEMg0I7D9fF5D81PEhn9lndWeH1a\nQX43gz0vX5hPRHNr31f1DuA9MQ7ATXDh2qAppkJ9iy8UDgzyYuHE1yZDncTt\n+7GxO6VA1YT1fSaeFkFdU48ZRQtbappZr9xaYdeYCqEAPy0t6y8DBiT2ByCS\n5YUyOHDCTdudnhLGsU4O6osl+uxZQJ4kpguRU3IWaXvb0ep30xjvZXY8c272\nYF1XuSnEYEu9EGi2KozGRs4WhONx70F2CQklKZplRRbolgWVlnDX0+p2WZBR\niEGEQPvehUgmBoADb5IABAp+66kS5xbv9MMJeXI8ciBAEjXD+si/yixI1P5T\n/4IdvCY0/p0VXU86w6k4w453Pzc54WAqtLyYuN5yQbAnn88GIQBWLNKfYb0c\nE2kH\r\n=vOTC\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow && tsc"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "eslint": "src test --cache",
+    "prettier": "*.{json,md,js} {src,test}/**/*.{js,ts}",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "375991b3bb64ad609ced167bd3ec40dad76ed2e7",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint $npm_package_config_eslint",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && copy src/**/*.d.ts es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ . && copy src/**/*.d.ts .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow *.d.ts",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix $npm_package_config_eslint",
+    "prettier": "prettier --write $npm_package_config_prettier",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && tsc && npm test && npm run build",
+    "prettier:check": "prettier --list-different $npm_package_config_prettier",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md,ts}": [
+     "prettier --write"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "14.17.0",
+   "dependencies": {
+    "@babel/runtime": "^7.12.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^4.3.8",
+    "mocha": "^8.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^7.18.0",
+    "rimraf": "^3.0.2",
+    "codecov": "^3.8.1",
+    "flow-bin": "^0.143.1",
+    "istanbul": "^0.4.5",
+    "prettier": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "@babel/cli": "^7.12.10",
+    "typescript": "^4.1.3",
+    "@babel/core": "^7.12.10",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "@babel/register": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "prettier-eslint": "^12.0.0",
+    "flow-copy-source": "git+https://github.com/jedwards1211/flow-copy-source.git#no-watch",
+    "semantic-release": "^17.3.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/eslint-parser": "^7.12.13",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@jedwards1211/eslint-config": "^2.0.2",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@jedwards1211/commitlint-config": "^1.0.2",
+    "@jedwards1211/eslint-config-flow": "^3.0.0"
+   }
+  },
+  "1.4.1": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.4.1",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.4.1",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "13b050afc27c191e57efcc747a6d76403db807dd",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.4.1.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-RCMCEBpX492tsvmDJPd37JjEpByjYR57wxcntmU90VEFM/EXQOX3Rc5JTwv2n8PNBwJeplv0xAVCwl6A2ekkvQ==",
+    "signatures": [
+     {
+      "sig": "MEQCIGJgEs+5yP+ODWMcOksjUaxex8Dm7b36E24PUVHGq0ZzAiBlehFO1+TER5p5XukX9OuFvSHsS9jP5ZVwTz3YlSmCcQ==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 23083,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJg0RvtCRA9TVsSAnZWagAAD6gP/2oVMiFoP5uSi3v9dUrn\nXVZMTVjCN444g6u0KD5OjtaWvEamcZxJ2Tjf1vycfAAneWlU8IY6c6RRj/Zq\nx0AN87XKWK7i/rgKOIl3w0tY1JARAX1B5T3/KB7uR4Myos75vkfh96ewd87y\nyqKcQIsB54qHjcs1tb6vQyVNRePYu2HkW4l+MlEb0R4Iu49z0968sdjWoOfB\nKIHLqCepKueXCOq3gX6os03FPHjzY+SBAeXCb3AqXNTCo1BLWP5jGz4U3wZn\nLFsX2Lol8QXHdLdyVysfRUKVCjlW8WbDcF7GiSIOLF3Zum8r0FqeD0ArAKnG\noRmb9XUxus6Z8uOusB4feo+/SkKoRXyuLhsl5oDGHDUYYMs8nyA8cvK+I83B\nSZqZ5Io1r7akUmoj1JJLl34J7j+D3t2x2d1Qrcs2p2giDQN+/aIGonbQNCA0\nvP5ORuE0cq0MG6/RQCn5TtDjIUHEaj0i6Co/KpJxmfPF9BTNw9OKg14s8Xel\n7rF7Ulif5gjXH48IvA3H71LyQ+d/OTE6D9PJhdYFrs9nA/v2VrckWoahZbaY\n/cr950qj7Vog+gMMMoGVSbNyhzfJC5kHJVWyOTuBNSzUWvVqJhT8iculNPSn\nDwDlBdB7WEkL60bArOQ7KpXsBj89vaHHsQAWHr49TwcyFuUaf0zRtnZt0sFO\nl1Jx\r\n=DQZN\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow && tsc"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "eslint": "src test --cache",
+    "prettier": "*.{json,md,js} {src,test}/**/*.{js,ts}",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "777c9af3b0feaff75d72fac364156329fea101a5",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint $npm_package_config_eslint",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && copy src/**/*.d.ts es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ . && copy src/**/*.d.ts .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow *.d.ts",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix $npm_package_config_eslint",
+    "prettier": "prettier --write $npm_package_config_prettier",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && tsc && npm test && npm run build",
+    "prettier:check": "prettier --list-different $npm_package_config_prettier",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md,ts}": [
+     "prettier --write"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "14.17.1",
+   "dependencies": {
+    "@babel/runtime": "^7.12.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^4.3.8",
+    "mocha": "^8.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^7.18.0",
+    "rimraf": "^3.0.2",
+    "codecov": "^3.8.1",
+    "flow-bin": "^0.143.1",
+    "istanbul": "^0.4.5",
+    "prettier": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "@babel/cli": "^7.12.10",
+    "typescript": "^4.1.3",
+    "@babel/core": "^7.12.10",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "@babel/register": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "prettier-eslint": "^12.0.0",
+    "flow-copy-source": "git+https://github.com/jedwards1211/flow-copy-source.git#no-watch",
+    "semantic-release": "^17.3.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/eslint-parser": "^7.12.13",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@jedwards1211/eslint-config": "^2.0.2",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@jedwards1211/commitlint-config": "^1.0.2",
+    "@jedwards1211/eslint-config-flow": "^3.0.0"
+   }
+  },
+  "1.4.2": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.4.2",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.4.2",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "7778ec13f6f4b4d030428a1841bd538e10c3caaf",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.4.2.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-oiOz6iTC05pUICNsY3l/VMf4SGhwCA5uQDIdDLamueI+wrzYTpq6z9FcmmGCxvyhdmD/zeOX4eUA57njl9O0mw==",
+    "signatures": [
+     {
+      "sig": "MEUCIH65iAEKTHNKQumLCPY9tcFAQpoImMZycomkZXGNreYPAiEA0yR2yj/E/3p+fkW4UpKXemmKgjvUYJp0h5XRiUiEA3U=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 23218,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJg1QSoCRA9TVsSAnZWagAADlgQAIE8yowFGxIEtc0fH1JB\nwveNFYT3NLuPNJiQqJU9G/T61LWACkBwBU6NhqRZ+p9YYFJNr7VOCrWIqPtb\na7Qfh+zdL+9Vc8ZH4xQlSfNlTl83SqvTqp2bIg0yrob4DwG/QN8SGr6C/1K0\nWaresi9uPDta2/yQRK5LZoKGjlg5ygeSHBFHFibK51QUl0zttds0EqPVN7U2\nSMnlbcDynGsn7qMoEUkDfDPUOPVrBIQXO2vcFg62XxLFePrRULE3UsTL1iTO\niVyRtcaY5tBx4aDJHKCVD2iLoel6yWyCPLFgzCzVaD6L/16OX+jUZTJZBpUx\ne4kPzYdk8Z8jjnFcAdDpXzOIrj+BWabAQ9bPoh2t2geUg2bmF8sM7zSxAHsY\nyrPcqgW8BKPMlC9h9vYoNRaQ/+A+8iSeY3ToRaamD48wbzVUz0EEdduOmHrz\nQLU7bYpSfj/k2x/qAopCt8S8FTBDM+U/InS8WkLa/mdPJqzDUBDAutCD3qwB\np0x5K7L7uZvukBVXpCQ/Gatd2R08Mk+hlfatExfPVblykhnjQiXf6tFPdR1M\nvO1V/u71B5JwqoETZsvO2dAnpyVFeb4IOvX0eIj/xobhONyjdMG0MUHdtO6B\ngmfC2+6E0lwh8xIew1+MPyBWvGECaFaSDL0KciH6tXjR+OfUVuB2r+VAp1Lc\ntN7o\r\n=Qhg9\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow && tsc"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "eslint": "src test --cache",
+    "prettier": "*.{json,md,js} {src,test}/**/*.{js,ts}",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "824d382c0a5e50af47399024b76d7c8919439722",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint $npm_package_config_eslint",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && copy src/**/*.d.ts es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ . && copy src/**/*.d.ts .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow *.d.ts",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix $npm_package_config_eslint",
+    "prettier": "prettier --write $npm_package_config_prettier",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && tsc && npm test && npm run build",
+    "prettier:check": "prettier --list-different $npm_package_config_prettier",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md,ts}": [
+     "prettier --write"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "14.17.1",
+   "dependencies": {
+    "@babel/runtime": "^7.12.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^4.3.8",
+    "mocha": "^8.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^7.18.0",
+    "rimraf": "^3.0.2",
+    "codecov": "^3.8.1",
+    "flow-bin": "^0.143.1",
+    "istanbul": "^0.4.5",
+    "prettier": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "@babel/cli": "^7.12.10",
+    "typescript": "^4.1.3",
+    "@babel/core": "^7.12.10",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "@babel/register": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "prettier-eslint": "^12.0.0",
+    "flow-copy-source": "git+https://github.com/jedwards1211/flow-copy-source.git#no-watch",
+    "semantic-release": "^17.3.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/eslint-parser": "^7.12.13",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@jedwards1211/eslint-config": "^2.0.2",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@jedwards1211/commitlint-config": "^1.0.2",
+    "@jedwards1211/eslint-config-flow": "^3.0.0"
+   }
+  },
+  "1.4.3": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.4.3",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.4.3",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "2e6b1dca73f49ae9dc36037b919bf6b7b051e29c",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.4.3.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-LPV+lqOSJQ5QCR02OLzJH0TWmUnMJNwfO+64WDCmRHlJF6GcSPDmB1wrjhO5btBfrnW/KgNGDHA2xlKjspo/zA==",
+    "signatures": [
+     {
+      "sig": "MEQCIGbbvhFpxSlwWX2lid8YN0y+8DGFw+aMOENELmnUFrx0AiAquAHgZxHu0pW7p+ZEmSxLJkhPXh4G8v6cqyMjVVbpMA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 24105,
+    "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJg2582CRA9TVsSAnZWagAAHnMP/iiVQBhSwBXmIqwdTXgS\nGJ1uHNxhaGk/hG9QPDkpYHi6+nM8F54dWZYLVEXyt+Jby1Sf1WkRhUovdft5\nUQ1FEfCvFDlMon/PPoSCCOrMZYe5kPqpGMpXr7x9RmcQB/4FqOqvMypwqqyp\ns2k1Io4tiwqiH5/jr1skWhiQhlYN81vEmqEO/OjoXQz0deC6CI9o+AMLtikU\nojdzqJOlVQOaz4NoYtviOF9+5JcWHbBSHZA1G7anJy6CCWT6npbYRQw7BqLJ\nQ7GBnuR2Af4klNLLZLZpHAjdTPut3i1G8uHOTvdYdqBvv8hGSh+T5CNkC8py\ndzak/0Pnk/sUeyRa/9B1nX+RMtRpiN4ebqJELpVNvCkXv9S26AkL1muT04q3\nXvHNThp16P3o6vnFU+b7fUSw2eA0/HEU1weZ1VGwa1GZrG7ee2tVLrLbjpKr\n1KZda0nbCV/flZE4cUIeYy6qwtg/t960t6s8nHWeBUDdA/o2DVn9B2rl0mQ6\n2gPKHCDRrqsn+jk5B2iFEWc2sGDwjmD64BSmF3EZOvz3V20yHWY2UVH9bzN/\nLh1HsVC6ZOSXQBdKFrhvNatw+EfjM9KFGd8ACCAxVoceswMbvWNWzY3dxRne\nJz7hJ2ELRwfFo47MOM/oR15jaP6m3P1OM32z43+B3KqZmsid7I/Wf5crsxEb\nhWTi\r\n=95nV\r\n-----END PGP SIGNATURE-----\r\n"
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow && tsc"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "eslint": "src test --cache",
+    "prettier": "*.{json,md,js} {src,test}/**/*.{js,ts}",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "c1224b3ec89fc9b5a47424b90023008a906d761c",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint $npm_package_config_eslint",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && copy src/**/*.d.ts es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ . && copy src/**/*.d.ts .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow *.d.ts",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix $npm_package_config_eslint",
+    "prettier": "prettier --write $npm_package_config_prettier",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && tsc && npm test && npm run build",
+    "prettier:check": "prettier --list-different $npm_package_config_prettier",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md,ts}": [
+     "prettier --write"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "14.17.1",
+   "dependencies": {
+    "@babel/runtime": "^7.12.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^4.3.8",
+    "mocha": "^8.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^7.18.0",
+    "rimraf": "^3.0.2",
+    "codecov": "^3.8.1",
+    "flow-bin": "^0.143.1",
+    "istanbul": "^0.4.5",
+    "prettier": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "@babel/cli": "^7.12.10",
+    "typescript": "^4.1.3",
+    "@babel/core": "^7.12.10",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "@babel/register": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "prettier-eslint": "^12.0.0",
+    "flow-copy-source": "git+https://github.com/jedwards1211/flow-copy-source.git#no-watch",
+    "semantic-release": "^17.3.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/eslint-parser": "^7.12.13",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@jedwards1211/eslint-config": "^2.0.2",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@jedwards1211/commitlint-config": "^1.0.2",
+    "@jedwards1211/eslint-config-flow": "^3.0.0"
+   }
+  },
+  "1.4.4": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.4.4",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.4.4",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "3f56ced577da9a428a995089b6c2761e3532f24e",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.4.4.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-0H5sH60hBmaFErAH88k7bPTVTFgHE/8qIlJtC04I2W5+tN0+xBmQeGc1sBqNoxEDz+PN/ZAOioN25fvIhTeC4A==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDhI3H/WuK4fO6rJQIJq17HTLaWfHrGMd60GVWKs1oU3AIhAKBAlKDv5oCnr01+Hj6dP0QIYLuwe6b9l1rZjKPevN1k",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 26269
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow && tsc"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "eslint": "src test --cache",
+    "prettier": "*.{json,md,js} {src,test}/**/*.{js,ts}",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "ead88d7c7a04218861dca238356d264e1be3af4a",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint $npm_package_config_eslint",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && copy src/**/*.d.ts es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ . && copy src/**/*.d.ts .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow *.d.ts",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix $npm_package_config_eslint",
+    "prettier": "prettier --write $npm_package_config_prettier",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && tsc && npm test && npm run build",
+    "prettier:check": "prettier --list-different $npm_package_config_prettier",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md,ts}": [
+     "prettier --write"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "14.18.2",
+   "dependencies": {
+    "@babel/runtime": "^7.12.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^4.3.8",
+    "mocha": "^8.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^7.18.0",
+    "rimraf": "^3.0.2",
+    "codecov": "^3.8.1",
+    "flow-bin": "^0.143.1",
+    "istanbul": "^0.4.5",
+    "prettier": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "@babel/cli": "^7.12.10",
+    "typescript": "^4.1.3",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.20.7",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "@babel/register": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "prettier-eslint": "^12.0.0",
+    "chai-as-promised": "^7.1.1",
+    "flow-copy-source": "git+https://github.com/jedwards1211/flow-copy-source.git#no-watch",
+    "semantic-release": "^17.3.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/eslint-parser": "^7.12.13",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@jedwards1211/eslint-config": "^2.0.2",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@jedwards1211/commitlint-config": "^1.0.2",
+    "@jedwards1211/eslint-config-flow": "^3.0.0"
+   }
+  },
+  "1.4.5": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.4.5",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.4.5",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "cf0f413fd664f47c06cc5426ca3c6f8fadf8361c",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.4.5.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-LGxcPryOAwqQ4bVXLBL8vHuh7S7Y+tRKvA7r8YrkbzZR1Lq/4edxgNlh+JhHR9lgdX54Vqi3SLmQITm9HopyGg==",
+    "signatures": [
+     {
+      "sig": "MEUCIDoUm2b8oSYdToYBH9fnOsojgd7kGdN5S0cvSI1N8xklAiEAyQGrhODyc9RuHccPTTPqX11cfjJ4vi87IhIa/o/Hy4U=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 25375
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow && tsc"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "eslint": "src test --cache",
+    "prettier": "*.{json,md,js} {src,test}/**/*.{js,ts}",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "70682fe3590c130fb6bbf29f323d3937d4b091a2",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint $npm_package_config_eslint",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && copy src/**/*.d.ts es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ . && copy src/**/*.d.ts .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow *.d.ts",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix $npm_package_config_eslint",
+    "prettier": "prettier --write $npm_package_config_prettier",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && tsc && npm test && npm run build",
+    "prettier:check": "prettier --list-different $npm_package_config_prettier",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md,ts}": [
+     "prettier --write"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "14.18.2",
+   "dependencies": {
+    "@babel/runtime": "^7.12.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^4.3.8",
+    "mocha": "^8.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^7.18.0",
+    "rimraf": "^3.0.2",
+    "codecov": "^3.8.1",
+    "flow-bin": "^0.143.1",
+    "istanbul": "^0.4.5",
+    "prettier": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "@babel/cli": "^7.12.10",
+    "typescript": "^4.1.3",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.20.7",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "@babel/register": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "prettier-eslint": "^12.0.0",
+    "chai-as-promised": "^7.1.1",
+    "flow-copy-source": "git+https://github.com/jedwards1211/flow-copy-source.git#no-watch",
+    "semantic-release": "^17.3.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/eslint-parser": "^7.12.13",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@jedwards1211/eslint-config": "^2.0.2",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@jedwards1211/commitlint-config": "^1.0.2",
+    "@jedwards1211/eslint-config-flow": "^3.0.0"
+   }
+  },
+  "1.4.6": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.4.6",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.4.6",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "af07a3e15c122289e46632a1ff2a9067b907c5f5",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.4.6.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-fm8p3iVXMohxVGq7Cx4mXiroYZ+1NWNxtoXqq7Ax2JiWR+v44cO8ZKQ3BcHPexZEjPb7IOt2l8WTI5TtmdwUJQ==",
+    "signatures": [
+     {
+      "sig": "MEUCIQD421xvJdtkq6DszhJoq/r9L+Y511EP9CzF0hA3mq9/8gIgPLrghe2mNpFIa35eNJRxiryIKxh0acOlboYxfXRc3W8=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 25142
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow && tsc"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "eslint": "src test --cache",
+    "prettier": "*.{json,md,js} {src,test}/**/*.{js,ts}",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "1537301ec61db212656cf96609b165d07368caf8",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint $npm_package_config_eslint",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && copy src/**/*.d.ts es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ . && copy src/**/*.d.ts .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow *.d.ts",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix $npm_package_config_eslint",
+    "prettier": "prettier --write $npm_package_config_prettier",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && tsc && npm test && npm run build",
+    "prettier:check": "prettier --list-different $npm_package_config_prettier",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md,ts}": [
+     "prettier --write"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "14.18.2",
+   "dependencies": {
+    "@babel/runtime": "^7.12.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^4.3.8",
+    "mocha": "^8.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^7.18.0",
+    "rimraf": "^3.0.2",
+    "codecov": "^3.8.1",
+    "flow-bin": "^0.143.1",
+    "istanbul": "^0.4.5",
+    "prettier": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "@babel/cli": "^7.12.10",
+    "typescript": "^4.1.3",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.20.7",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "@babel/register": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "prettier-eslint": "^12.0.0",
+    "chai-as-promised": "^7.1.1",
+    "flow-copy-source": "git+https://github.com/jedwards1211/flow-copy-source.git#no-watch",
+    "semantic-release": "^17.3.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/eslint-parser": "^7.12.13",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@jedwards1211/eslint-config": "^2.0.2",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@jedwards1211/commitlint-config": "^1.0.2",
+    "@jedwards1211/eslint-config-flow": "^3.0.0"
+   }
+  },
+  "1.4.7": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.4.7",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.4.7",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "a0c210962eb648ef4127b0fd4b7fb645751a10ea",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.4.7.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-pF3P5jR6MKXMO/OjWrA+9S7P6rs2BlXYyHBURtdu83V2BTabYOzayPoAeSArTZQpbenIn1i4+T53xJM9WmJjrg==",
+    "signatures": [
+     {
+      "sig": "MEQCIE/n3A+D2BC4ZFqSd3NqyD2jWCdeqtBAauFIYH+spMqLAiBTV4e0DkHrxHsKL3unQISq87X5XzyMsL/7SgUTZLg0qA==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 25268
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow && tsc"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "eslint": "src test --cache",
+    "prettier": "*.{json,md,js} {src,test}/**/*.{js,ts}",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "892697a4e7e9f3797905308989adbc3b6d8c7206",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint $npm_package_config_eslint",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && copy src/**/*.d.ts es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ . && copy src/**/*.d.ts .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow *.d.ts",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix $npm_package_config_eslint",
+    "prettier": "prettier --write $npm_package_config_prettier",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && tsc && npm test && npm run build",
+    "prettier:check": "prettier --list-different $npm_package_config_prettier",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md,ts}": [
+     "prettier --write"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "14.18.2",
+   "dependencies": {
+    "@babel/runtime": "^7.12.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^4.3.8",
+    "mocha": "^8.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^7.18.0",
+    "rimraf": "^3.0.2",
+    "codecov": "^3.8.1",
+    "flow-bin": "^0.143.1",
+    "istanbul": "^0.4.5",
+    "prettier": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "@babel/cli": "^7.12.10",
+    "typescript": "^4.1.3",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.20.7",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "@babel/register": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "prettier-eslint": "^12.0.0",
+    "chai-as-promised": "^7.1.1",
+    "flow-copy-source": "git+https://github.com/jedwards1211/flow-copy-source.git#no-watch",
+    "semantic-release": "^17.3.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/eslint-parser": "^7.12.13",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@jedwards1211/eslint-config": "^2.0.2",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@jedwards1211/commitlint-config": "^1.0.2",
+    "@jedwards1211/eslint-config-flow": "^3.0.0"
+   }
+  },
+  "1.5.0": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.5.0",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.5.0",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "6c8c034fce9b2ab4f9ff8c5d4dd634d07469e337",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.5.0.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-Rr8X14D8oMpQEWymucdPVYeRlKlkSazxZegHk9LSY4xOfioGH2GrL6l5xInyVKO8cCwrwTeroLcsMJfYxvCHkg==",
+    "signatures": [
+     {
+      "sig": "MEYCIQDYAUpLkPyTXpgFLkX9s1Bjn+ORM4J9gnmuUOk/6xYxZwIhAKFrg/LUNdg2cXvajTzurE6NZiW/hxOKeJyQLuzcm0Nz",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 30962
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow && tsc"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "eslint": "src test --cache",
+    "prettier": "*.{json,md,js} {src,test}/**/*.{js,ts}",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "271a6950f668131bf24407c40ecb199dce04cc08",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint $npm_package_config_eslint",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && copy src/**/*.d.ts es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ . && copy src/**/*.d.ts .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow *.d.ts",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix $npm_package_config_eslint",
+    "prettier": "prettier --write $npm_package_config_prettier",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && tsc && npm test && npm run build",
+    "prettier:check": "prettier --list-different $npm_package_config_prettier",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md,ts}": [
+     "prettier --write"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "14.18.2",
+   "dependencies": {
+    "@babel/runtime": "^7.12.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^4.3.8",
+    "mocha": "^8.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^7.18.0",
+    "rimraf": "^3.0.2",
+    "codecov": "^3.8.1",
+    "flow-bin": "^0.143.1",
+    "istanbul": "^0.4.5",
+    "prettier": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "@babel/cli": "^7.12.10",
+    "typescript": "^4.1.3",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.20.7",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "@babel/register": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "prettier-eslint": "^12.0.0",
+    "chai-as-promised": "^7.1.1",
+    "flow-copy-source": "git+https://github.com/jedwards1211/flow-copy-source.git#no-watch",
+    "semantic-release": "^17.3.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/eslint-parser": "^7.12.13",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@jedwards1211/eslint-config": "^2.0.2",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@jedwards1211/commitlint-config": "^1.0.2",
+    "@jedwards1211/eslint-config-flow": "^3.0.0"
+   }
+  },
+  "1.6.0": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.6.0",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.6.0",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "nyc": {
+    "include": [
+     "src/**/*.js"
+    ],
+    "require": [
+     "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+   },
+   "dist": {
+    "shasum": "9566b92bdd57bde2a2bfbbec786ff177663cd539",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.6.0.tgz",
+    "fileCount": 9,
+    "integrity": "sha512-0efaXmn498OKPti0tG1GGCPdQwnfHecBGyJZ9eJzZf779WEDbAURGAFh4NWgbuTHU53KSMA2fwJcn6WqlOVRJA==",
+    "signatures": [
+     {
+      "sig": "MEQCID8z0BJDFa3Shcgg3Mvs7VyvJicSNJ6X3IbZcybN5BopAiAvUOjaczHKjNZN8MgJtU3jV2aAqCmSy/Qog/B5fTyqZg==",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 31070
+   },
+   "main": "index.js",
+   "husky": {
+    "hooks": {
+     "pre-push": "npm test",
+     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+     "pre-commit": "lint-staged && npm run lint && flow && tsc"
+    }
+   },
+   "config": {
+    "mocha": "-r @babel/register test/configure.js 'test/**/*.js'",
+    "eslint": "src test --cache",
+    "prettier": "*.{json,md,js} {src,test}/**/*.{js,ts}",
+    "commitizen": {
+     "path": "cz-conventional-changelog"
+    }
+   },
+   "gitHead": "74a28ffe88f1b6191d2eb35d623769d4e9c6bc27",
+   "scripts": {
+    "flow": "flow",
+    "lint": "eslint $npm_package_config_eslint",
+    "test": "cross-env NODE_ENV=test BABEL_ENV=es5 mocha $npm_package_config_mocha && cross-env NODE_ENV=test BABEL_ENV=coverage nyc --reporter=lcov --reporter=text mocha $npm_package_config_mocha",
+    "build": "npm run clean && babel src --out-dir es && flow-copy-source -v src/ es && copy src/**/*.d.ts es && cross-env BABEL_ENV=es5 babel src --out-dir . && flow-copy-source -v src/ . && copy src/**/*.d.ts .",
+    "clean": "rimraf es lib $(cd src; ls) *.js.flow *.d.ts",
+    "codecov": "nyc report --reporter=text-lcov > coverage.lcov; codecov",
+    "lint:fix": "eslint --fix $npm_package_config_eslint",
+    "prettier": "prettier --write $npm_package_config_prettier",
+    "test:debug": "cross-env NODE_ENV=test BABEL_ENV=test mocha --inspect-brk $npm_package_config_mocha",
+    "test:watch": "cross-env NODE_ENV=test BABEL_ENV=test mocha --watch $npm_package_config_mocha",
+    "flow:coverage": "for file in src/**.js test/**.js; do echo $file; flow coverage $file; done",
+    "open:coverage": "open coverage/lcov-report/index.html",
+    "prepublishOnly": "npm run clean && npm run prettier:check && npm run lint && flow && tsc && npm test && npm run build",
+    "prettier:check": "prettier --list-different $npm_package_config_prettier",
+    "semantic-release": "semantic-release"
+   },
+   "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "es5"
+   },
+   "commitlint": {
+    "extends": [
+     "@jedwards1211/commitlint-config"
+    ]
+   },
+   "_npmVersion": "6.14.11",
+   "directories": {},
+   "lint-staged": {
+    "*.{js,json,css,md,ts}": [
+     "prettier --write"
+    ]
+   },
+   "sideEffects": false,
+   "_nodeVersion": "14.18.2",
+   "dependencies": {
+    "@babel/runtime": "^7.12.5"
+   },
+   "_hasShrinkwrap": false,
+   "devDependencies": {
+    "nyc": "^15.1.0",
+    "chai": "^4.2.0",
+    "copy": "^0.3.2",
+    "husky": "^4.3.8",
+    "mocha": "^8.2.1",
+    "sinon": "^9.0.3",
+    "waait": "^1.0.5",
+    "eslint": "^7.18.0",
+    "rimraf": "^3.0.2",
+    "codecov": "^3.8.1",
+    "flow-bin": "^0.143.1",
+    "istanbul": "^0.4.5",
+    "prettier": "^2.2.1",
+    "cross-env": "^7.0.3",
+    "@babel/cli": "^7.12.10",
+    "typescript": "^4.1.3",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.20.7",
+    "lint-staged": "^10.5.3",
+    "babel-eslint": "^10.1.0",
+    "@babel/register": "^7.12.10",
+    "@commitlint/cli": "^11.0.0",
+    "prettier-eslint": "^12.0.0",
+    "chai-as-promised": "^7.1.1",
+    "flow-copy-source": "git+https://github.com/jedwards1211/flow-copy-source.git#no-watch",
+    "semantic-release": "^17.3.7",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-flow": "^7.12.1",
+    "@babel/eslint-parser": "^7.12.13",
+    "babel-plugin-istanbul": "^6.0.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "@jedwards1211/eslint-config": "^2.0.2",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@jedwards1211/commitlint-config": "^1.0.2",
+    "@jedwards1211/eslint-config-flow": "^3.0.0"
+   }
+  },
+  "1.6.1": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.6.1",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.6.1",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "dist": {
+    "shasum": "728f179541e2db334d6a207abe150bec0f2a5acb",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.6.1.tgz",
+    "fileCount": 13,
+    "integrity": "sha512-9c9SH93yYEX6zK7N8GThr7twbRtJdKX59CuIKd3qtF0SH4ZDAgeMuQPlWnWMLmWy/RdGKgHJaiciOoOHnFlmUA==",
+    "signatures": [
+     {
+      "sig": "MEUCIERe8mEs+C8uGCJck3ReICapDSgTJG0nnJfMDKM5BysKAiEAiIL+muVxMc/LC8c72svR045TTSCC25JLqMfJVAoMcDw=",
+      "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+     }
+    ],
+    "unpackedSize": 47292
+   },
+   "main": "index.js",
+   "types": "index.d.ts",
+   "module": "index.mjs",
+   "engines": {
+    "node": ">=16"
+   },
+   "exports": {
+    ".": {
+     "types": "./index.d.ts",
+     "import": "./index.mjs",
+     "default": "./index.js"
+    },
+    "./package.json": "./package.json"
+   },
+   "gitHead": "7250aa0e3b25cf1630d265dfe8a3e6d1e279e9a9",
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "@babel/runtime": "^7.18.6"
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "pnpm@8.11.0",
+   "@jcoreio/toolchain": {
+    "migratedVersion": "4.9.1"
+   }
+  },
+  "1.7.0": {
+   "name": "@jcoreio/async-throttle",
+   "version": "1.7.0",
+   "license": "MIT",
+   "_id": "@jcoreio/async-throttle@1.7.0",
+   "bugs": {
+    "url": "https://github.com/jcoreio/async-throttle/issues"
+   },
+   "dist": {
+    "shasum": "80e818c3cbf172d79e7280389fc404b4df5c379e",
+    "tarball": "http://localhost:3000/@jcoreio/async-throttle/-/async-throttle-1.7.0.tgz",
+    "fileCount": 25,
+    "integrity": "sha512-C+H4hz60AAcM5rwkXVvsEh+g2M/0GReFn46j+mEhS2J5zxsD+gwQVbo+Z7x8vbx5tb9ealOxicrnA3KCp+cbug==",
+    "signatures": [
+     {
+      "sig": "MEUCIFn+h/lZ8S8cnef9Y3bIfWWTX2+sTVmbMiqSnPogmvCwAiEAzyEKv7fBvXez8j742F3RiYQB2QML/vRU+qZ70uqhCtk=",
+      "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+     }
+    ],
+    "unpackedSize": 39319
+   },
+   "main": "index.cjs",
+   "type": "module",
+   "types": "index.d.cts",
+   "module": "index.js",
+   "engines": {
+    "node": ">=16"
+   },
+   "exports": {
+    ".": {
+     "types": {
+      "import": "./index.d.ts",
+      "default": "./index.d.cts"
+     },
+     "import": "./index.js",
+     "default": "./index.cjs"
+    },
+    "./package.json": "./package.json"
+   },
+   "gitHead": "7f30fc750756ed1a8029dcc5692121437b77b0df",
+   "_npmVersion": "10.2.3",
+   "directories": {},
+   "sideEffects": false,
+   "_nodeVersion": "20.10.0",
+   "dependencies": {
+    "@babel/runtime": "^7.26.0"
+   },
+   "_hasShrinkwrap": false,
+   "packageManager": "pnpm@10.6.5",
+   "@jcoreio/toolchain": {
+    "migratedVersion": "5.8.2"
+   }
+  }
+ },
+ "time": {
+  "created": "2017-04-18T02:20:53.534Z",
+  "modified": "2026-02-25T04:49:14.234Z",
+  "1.0.0": "2017-04-18T02:20:53.534Z",
+  "1.0.1": "2017-04-18T02:26:25.020Z",
+  "1.1.0": "2017-04-18T18:43:57.167Z",
+  "1.1.1": "2017-10-07T21:32:02.448Z",
+  "1.1.2": "2018-05-12T23:49:50.413Z",
+  "1.2.0": "2020-09-07T16:26:21.885Z",
+  "1.3.0": "2020-10-01T07:04:12.069Z",
+  "1.3.1": "2020-10-01T17:22:43.933Z",
+  "1.3.2": "2020-12-08T18:27:58.267Z",
+  "1.4.0": "2021-06-02T18:12:13.888Z",
+  "1.4.1": "2021-06-21T23:08:29.400Z",
+  "1.4.2": "2021-06-24T22:18:16.240Z",
+  "1.4.3": "2021-06-29T22:31:18.184Z",
+  "1.4.4": "2023-05-21T17:33:15.772Z",
+  "1.4.5": "2023-05-28T04:35:40.835Z",
+  "1.4.6": "2023-05-29T21:43:20.145Z",
+  "1.4.7": "2023-05-29T21:45:29.264Z",
+  "1.5.0": "2023-05-29T22:40:17.506Z",
+  "1.6.0": "2023-06-02T21:52:34.702Z",
+  "1.6.1": "2024-10-08T14:11:14.592Z",
+  "1.7.0": "2025-11-26T06:01:22.104Z"
+ },
+ "license": "MIT"
+}

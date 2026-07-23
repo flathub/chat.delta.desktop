@@ -169,13 +169,78 @@
         "rollup-plugin-dts": "^6.1.1",
         "@typescript-eslint/parser": "^8.7.0"
       }
+    },
+    "5.0.1": {
+      "name": "eslint-visitor-keys",
+      "version": "5.0.1",
+      "type": "module",
+      "main": "dist/eslint-visitor-keys.cjs",
+      "types": "./dist/index.d.ts",
+      "exports": {
+        ".": [
+          {
+            "import": "./lib/index.js",
+            "require": "./dist/eslint-visitor-keys.cjs"
+          },
+          "./dist/eslint-visitor-keys.cjs"
+        ],
+        "./package.json": "./package.json"
+      },
+      "engines": {
+        "node": "^20.19.0 || ^22.13.0 || >=24"
+      },
+      "devDependencies": {
+        "rollup-plugin-dts": "^6.2.3",
+        "tsd": "^0.33.0"
+      },
+      "scripts": {
+        "build": "npm run build:cjs && npm run build:types",
+        "build:cjs": "rollup -c",
+        "build:debug": "npm run build:cjs -- -m && npm run build:types",
+        "build:types": "tsc -v && tsc",
+        "test": "mocha \"tests/**/*.test.cjs\" && mocha \"tests/**/*.test.js\" && npm run test:types",
+        "test:coverage": "c8 npm test",
+        "test:types": "tsd"
+      },
+      "funding": "https://opencollective.com/eslint",
+      "license": "Apache-2.0",
+      "bugs": {
+        "url": "https://github.com/eslint/js/issues"
+      },
+      "sideEffects": false,
+      "gitHead": "a52a694e064952bd55cf6050049062464a0c1304",
+      "_id": "eslint-visitor-keys@5.0.1",
+      "_nodeVersion": "24.13.0",
+      "_npmVersion": "11.10.1",
+      "dist": {
+        "integrity": "sha512-tD40eHxA35h0PEIZNeIjkHoDR4YjjJp34biM0mDvplBe//mB+IHCqHDGV7pxF+7MklTvighcCPPZC7ynWyjdTA==",
+        "shasum": "9e3c9489697824d2d4ce3a8ad12628f91e9f59be",
+        "tarball": "http://localhost:3000/eslint-visitor-keys/-/eslint-visitor-keys-5.0.1.tgz",
+        "fileCount": 9,
+        "unpackedSize": 31942,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/eslint-visitor-keys@5.0.1",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQC/MkKkZDt1didyEscIrEBvxfB0xxm5vTuyW72wOzo9jQIgQssOJ9A7JCQAXo5hEuhZ3alENSqYfSzy/3CfvdWQmHg="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2017-11-17T08:52:53.415Z",
     "modified": "2026-02-20T14:40:48.205Z",
     "3.4.3": "2023-08-11T14:49:54.383Z",
-    "4.2.1": "2025-06-09T15:45:52.557Z"
+    "4.2.1": "2025-06-09T15:45:52.557Z",
+    "5.0.1": "2026-02-20T14:40:47.824Z"
   },
   "license": "Apache-2.0"
 }
