@@ -1,61 +1,68 @@
 {
   "_id": "adm-zip",
-  "_rev": "141-a02508cf2ea5459c1a8b351b0a29fabe",
+  "_rev": "143-0eec97d4462868dc866b61fdaf74c9ad",
   "name": "adm-zip",
   "dist-tags": {
-    "latest": "0.5.17"
+    "latest": "0.6.0"
   },
   "versions": {
-    "0.5.14": {
+    "0.6.0": {
       "name": "adm-zip",
-      "version": "0.5.14",
-      "license": "MIT",
-      "_id": "adm-zip@0.5.14",
-      "bugs": {
-        "url": "https://github.com/cthackers/adm-zip/issues",
-        "email": "sy@another-d-mention.ro"
-      },
-      "dist": {
-        "shasum": "2c557c0bf12af4311cf6d32970f4060cf8133b2a",
-        "tarball": "http://localhost:3000/adm-zip/-/adm-zip-0.5.14.tgz",
-        "fileCount": 19,
-        "integrity": "sha512-DnyqqifT4Jrcvb8USYjp6FHtBpEIz1mnXu6pTRHZ0RL69LbQYiO+0lDFg5+OKA7U29oWSs3a/i8fhn8ZcceIWg==",
-        "signatures": [
-          {
-            "sig": "MEUCIQCuepKfhuKhT6Yxc/MnwJk3gLgPHvVss+L9yF1vv1JV8wIgNy8YaOEbz9Ud8ZUmN7v/9lYo9RvktPwsA+LaPG40hvo=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 105014
-      },
-      "main": "adm-zip.js",
-      "engines": {
-        "node": ">=12.0"
-      },
-      "gitHead": "8bc411184de1b5ca28138c53074fb61119994dde",
+      "version": "0.6.0",
       "scripts": {
         "test": "mocha -R spec",
-        "format": "npm run format:prettier",
         "test:format": "npm run format:prettier:raw -- --check",
+        "format": "npm run format:prettier",
         "format:prettier": "npm run format:prettier:raw -- --write",
         "format:prettier:raw": "prettier \"**/*.{js,yml,json}\""
       },
-      "_npmVersion": "9.8.0",
-      "directories": {},
-      "_nodeVersion": "20.5.1",
-      "_hasShrinkwrap": false,
+      "bugs": {
+        "url": "https://github.com/cthackers/adm-zip/issues",
+        "email": "adm-zip@pm.me"
+      },
+      "license": "MIT",
+      "main": "adm-zip.js",
+      "types": "types.d.ts",
+      "engines": {
+        "node": ">=14.0"
+      },
+      "overrides": {
+        "mocha": {
+          "chokidar": "^4.0.3"
+        }
+      },
       "devDependencies": {
-        "chai": "^4.3.4",
-        "mocha": "^10.2.0",
-        "rimraf": "^3.0.2",
-        "prettier": "^2.2.1"
-      }
+        "chai": "^6.2.2",
+        "iconv-lite": "^0.7.2",
+        "mocha": "12.0.0-beta-10",
+        "prettier": "^3.8.1",
+        "rimraf": "^3.0.2"
+      },
+      "gitHead": "2b4d84087d45344643e0183756e19191d52815cc",
+      "_id": "adm-zip@0.6.0",
+      "_nodeVersion": "25.2.1",
+      "_npmVersion": "11.11.0",
+      "dist": {
+        "integrity": "sha512-XleryMhbuksdKtofnWZ9Sk+4CUTbms4Mb/EU32SZwToAyZ5RgVos/ki8n+yr0LWHOGKuakbXTuuYNHLQjhddgg==",
+        "shasum": "bbc5c6c333755e967a06dd98747f431e1d53a3cf",
+        "tarball": "http://localhost:3000/adm-zip/-/adm-zip-0.6.0.tgz",
+        "fileCount": 20,
+        "unpackedSize": 140065,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEQCIEnbrFD/UUOqIU8ThWNrXkKQzwHcrPF+zAOXAMUCejuZAiAn+S+38tU/6Xsx96/QNScQp8nfYsLytgRdTni2Pgj6GQ=="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2012-02-23T13:50:30.878Z",
-    "modified": "2026-04-01T10:09:24.841Z",
-    "0.5.14": "2024-06-04T11:44:22.547Z"
+    "modified": "2026-07-10T20:08:24.594Z",
+    "0.6.0": "2026-07-10T20:08:24.472Z"
   },
   "license": "MIT"
 }

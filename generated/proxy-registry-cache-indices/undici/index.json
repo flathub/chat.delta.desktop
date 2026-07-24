@@ -1,0 +1,278 @@
+{
+  "_id": "undici",
+  "_rev": "309-e24d0bfce53d6efa4dc40e1d3fd84e58",
+  "name": "undici",
+  "dist-tags": {
+    "test": "5.24.0-test.6",
+    "next": "7.0.0-alpha.10",
+    "five": "5.29.0",
+    "seven": "7.28.0",
+    "six": "6.27.0",
+    "latest": "8.8.0"
+  },
+  "versions": {
+    "7.28.0": {
+      "name": "undici",
+      "version": "7.28.0",
+      "license": "MIT",
+      "_id": "undici@7.28.0",
+      "bugs": {
+        "url": "https://github.com/nodejs/undici/issues"
+      },
+      "tsd": {
+        "directory": "test/types",
+        "compilerOptions": {
+          "lib": [
+            "esnext"
+          ],
+          "esModuleInterop": true
+        }
+      },
+      "dist": {
+        "shasum": "97d64564198b285bc281f0e8e29597e3d11fe7ec",
+        "tarball": "http://localhost:3000/undici/-/undici-7.28.0.tgz",
+        "fileCount": 210,
+        "integrity": "sha512-cRZYrTDwWznlnRiPjggAGxZXanty6M8RV1ff8Wm4LWXBp7/IG8v5DnOm74DtUBp9OONpK75YlPnIjQqX0dBDtA==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCrnf6x/PrxvF220Wl4no4DN2K8KopawkbI/zKRLw1xNwIhAMVUcmPnR9R5BuaXVih335jyIuDTf64nLooHTJ25kkjl",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/undici@7.28.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 1621228
+      },
+      "jest": {
+        "testMatch": [
+          "<rootDir>/test/jest/**"
+        ]
+      },
+      "main": "index.js",
+      "types": "index.d.ts",
+      "engines": {
+        "node": ">=20.18.1"
+      },
+      "gitHead": "f9eba0ad9134e1c0977848476bba9d49734696e4",
+      "scripts": {
+        "lint": "eslint --cache",
+        "test": "npm run test:javascript && cross-env NODE_V8_COVERAGE= npm run test:typescript",
+        "bench": "echo \"Error: Benchmarks have been moved to '/benchmarks'\" && exit 1",
+        "prepare": "husky && node ./scripts/platform-shell.js",
+        "test:h2": "npm run test:h2:core && npm run test:h2:fetch",
+        "coverage": "npm run coverage:clean && cross-env NODE_V8_COVERAGE=./coverage/tmp npm run test:javascript && npm run coverage:report",
+        "lint:fix": "eslint --fix --cache",
+        "test:tdd": "borp --timeout 180000 --expose-gc -p \"test/*.js\"",
+        "test:wpt": "npm run test:wpt:setup && node test/web-platform-tests/wpt-runner.mjs run /fetch /mimesniff /xhr /websockets /serviceWorkers /eventsource",
+        "test:jest": "cross-env NODE_V8_COVERAGE= jest",
+        "test:unit": "borp --timeout 180000 --expose-gc -p \"test/*.js\"",
+        "build:node": "esbuild index-fetch.js --bundle --platform=node --outfile=undici-fetch.js --define:esbuildDetection=1 --keep-names && node scripts/strip-comments.js",
+        "build:wasm": "node build/wasm.js --docker",
+        "test:cache": "borp --timeout 180000 -p \"test/cache/*.js\"",
+        "test:fetch": "npm run build:node && borp --timeout 180000 --expose-gc --concurrency 1 -p \"test/fetch/*.js\" && npm run test:webidl && npm run test:busboy",
+        "test:infra": "borp --timeout 180000 -p \"test/infra/*.js\"",
+        "coverage:ci": "npm run coverage:clean && cross-env NODE_V8_COVERAGE=./coverage/tmp npm run test:javascript && npm run coverage:report:ci",
+        "test:busboy": "borp --timeout 180000 -p \"test/busboy/*.js\"",
+        "test:webidl": "borp --timeout 180000 -p \"test/webidl/*.js\"",
+        "generate-pem": "node scripts/generate-pem.js",
+        "test:cookies": "borp --timeout 180000 -p \"test/cookie/*.js\"",
+        "test:fuzzing": "node test/fuzzing/fuzzing.test.js",
+        "test:h2:core": "borp --timeout 180000 -p \"test/+(http2|h2)*.js\"",
+        "serve:website": "echo \"Error: Documentation has been moved to '/docs'\" && exit 1",
+        "test:h2:fetch": "npm run build:node && borp --timeout 180000 -p \"test/fetch/http2*.js\"",
+        "coverage:clean": "node ./scripts/clean-coverage.js",
+        "test:node-test": "borp --timeout 180000 -p \"test/node-test/**/*.js\"",
+        "test:websocket": "borp --timeout 180000 -p \"test/websocket/**/*.js\"",
+        "test:wpt:setup": "node test/web-platform-tests/wpt-runner.mjs setup",
+        "coverage:report": "cross-env NODE_V8_COVERAGE= c8 report",
+        "test:javascript": "npm run test:javascript:no-jest && npm run test:jest",
+        "test:node-fetch": "borp --timeout 180000 -p \"test/node-fetch/**/*.js\"",
+        "test:typescript": "tsd && tsc test/imports/undici-import.ts --typeRoots ./types --noEmit && tsc ./types/*.d.ts --noEmit --typeRoots ./types",
+        "test:cache-tests": "node test/cache-interceptor/cache-tests.mjs --ci",
+        "test:eventsource": "npm run build:node && borp --timeout 180000 --expose-gc -p \"test/eventsource/*.js\"",
+        "test:interceptors": "borp --timeout 180000 -p \"test/interceptors/*.js\"",
+        "coverage:report:ci": "c8 report",
+        "test:tdd:node-test": "borp --timeout 180000 -p \"test/node-test/**/*.js\" -w",
+        "test:cache-interceptor": "borp --timeout 180000 -p \"test/cache-interceptor/*.js\"",
+        "test:javascript:no-jest": "npm run generate-pem && npm run test:unit && npm run test:fetch && npm run test:node-fetch && npm run test:infra && npm run test:cache && npm run test:cache-interceptor && npm run test:interceptors && npm run test:cookies && npm run test:eventsource && npm run test:subresource-integrity && npm run test:wpt && npm run test:websocket && npm run test:node-test && npm run test:cache-tests",
+        "test:websocket:autobahn": "node test/autobahn/client.js",
+        "test:subresource-integrity": "borp --timeout 180000 -p \"test/subresource-integrity/*.js\"",
+        "test:javascript:without-intl": "npm run test:javascript:no-jest",
+        "test:cache-interceptor:sqlite": "cross-env NODE_OPTIONS=--experimental-sqlite npm run test:cache-interceptor",
+        "test:websocket:autobahn:report": "node test/autobahn/report.js"
+      },
+      "_npmVersion": "11.17.0",
+      "directories": {},
+      "_nodeVersion": "24.16.0",
+      "_hasShrinkwrap": false,
+      "readmeFilename": "README.md",
+      "devDependencies": {
+        "c8": "^10.0.0",
+        "ws": "^8.11.0",
+        "tsd": "^0.33.0",
+        "borp": "^0.20.0",
+        "jest": "^30.0.5",
+        "husky": "^9.0.7",
+        "proxy": "^2.1.1",
+        "eslint": "^9.9.0",
+        "esbuild": "^0.27.3",
+        "cross-env": "^10.0.0",
+        "dns-packet": "^5.4.0",
+        "fast-check": "^4.1.1",
+        "node-forge": "^1.3.1",
+        "typescript": "^6.0.2",
+        "@types/node": "^20.19.22",
+        "neostandard": "^0.12.0",
+        "jsondiffpatch": "^0.7.3",
+        "@fastify/busboy": "3.2.0",
+        "abort-controller": "^3.0.0",
+        "@matteo.collina/tspl": "^0.2.0",
+        "@sinonjs/fake-timers": "^12.0.0",
+        "@metcoder95/https-pem": "^1.0.0"
+      }
+    },
+    "6.27.0": {
+      "name": "undici",
+      "version": "6.27.0",
+      "license": "MIT",
+      "_id": "undici@6.27.0",
+      "bugs": {
+        "url": "https://github.com/nodejs/undici/issues"
+      },
+      "tsd": {
+        "directory": "test/types",
+        "compilerOptions": {
+          "lib": [
+            "esnext"
+          ],
+          "esModuleInterop": true
+        }
+      },
+      "dist": {
+        "shasum": "41f9e48f7c5a40d27376caaead8c9a9fc7bca9c4",
+        "tarball": "http://localhost:3000/undici/-/undici-6.27.0.tgz",
+        "fileCount": 176,
+        "integrity": "sha512-YmfV3YnEDzXRC5lZ2jWtWWHKGUm1zIt8AhesR1tens+HTNv+YZlN/dp6G727LOvMJ8xjP9Be7Y2Sdr96LDm+pg==",
+        "signatures": [
+          {
+            "sig": "MEUCIBbWAIO9kiD/4RMdLM4JKqAENRLwQDahnXkfG3FMYsCGAiEAqx8DAjBreZYGGv525BD4I+0lSHRqUKEYzdVuBa1sD80=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/undici@6.27.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 1191475
+      },
+      "jest": {
+        "testMatch": [
+          "<rootDir>/test/jest/**"
+        ]
+      },
+      "main": "index.js",
+      "types": "index.d.ts",
+      "engines": {
+        "node": ">=18.17"
+      },
+      "gitHead": "551138cbc1742c92242a68216167761075e8a82c",
+      "scripts": {
+        "lint": "standard | snazzy",
+        "test": "npm run test:javascript && cross-env NODE_V8_COVERAGE=  npm run test:typescript",
+        "bench": "echo \"Error: Benchmarks have been moved to '/benchmarks'\" && exit 1",
+        "prepare": "husky && node ./scripts/platform-shell.js",
+        "test:h2": "npm run test:h2:core && npm run test:h2:fetch",
+        "coverage": "npm run coverage:clean && cross-env NODE_V8_COVERAGE=./coverage/tmp npm run test:javascript && npm run coverage:report",
+        "lint:fix": "standard --fix | snazzy",
+        "test:tdd": "borp --expose-gc -p \"test/*.js\"",
+        "test:wpt": "node test/wpt/start-fetch.mjs && node test/wpt/start-FileAPI.mjs && node test/wpt/start-mimesniff.mjs && node test/wpt/start-xhr.mjs && node test/wpt/start-websockets.mjs && node test/wpt/start-cacheStorage.mjs && node test/wpt/start-eventsource.mjs",
+        "test:jest": "cross-env NODE_V8_COVERAGE= jest",
+        "test:unit": "borp --expose-gc -p \"test/*.js\"",
+        "build:node": "npx esbuild@0.19.10 index-fetch.js --bundle --platform=node --outfile=undici-fetch.js --define:esbuildDetection=1 --keep-names && node scripts/strip-comments.js",
+        "build:wasm": "node build/wasm.js --docker",
+        "test:cache": "borp -p \"test/cache/*.js\"",
+        "test:fetch": "npm run build:node && npm run test:fetch:nobuild",
+        "coverage:ci": "npm run coverage:clean && cross-env NODE_V8_COVERAGE=./coverage/tmp npm run test:javascript && npm run coverage:report:ci",
+        "test:busboy": "borp -p \"test/busboy/*.js\"",
+        "test:webidl": "borp -p \"test/webidl/*.js\"",
+        "test:cookies": "borp -p \"test/cookie/*.js\"",
+        "test:fuzzing": "node test/fuzzing/fuzzing.test.js",
+        "test:h2:core": "borp -p \"test/http2*.js\"",
+        "prebuild:wasm": "node build/wasm.js --prebuild",
+        "serve:website": "echo \"Error: Documentation has been moved to '/docs'\" && exit 1",
+        "test:h2:fetch": "npm run build:node && borp -p \"test/fetch/http2*.js\"",
+        "coverage:clean": "node ./scripts/clean-coverage.js",
+        "test:node-test": "borp -p \"test/node-test/**/*.js\"",
+        "test:websocket": "borp -p \"test/websocket/*.js\"",
+        "coverage:report": "cross-env NODE_V8_COVERAGE= c8 report",
+        "test:javascript": "node scripts/generate-pem && npm run test:unit && npm run test:node-fetch && npm run test:cache && npm run test:interceptors && npm run test:fetch && npm run test:cookies && npm run test:eventsource && npm run test:wpt && npm run test:websocket && npm run test:node-test && npm run test:jest",
+        "test:node-fetch": "borp -p \"test/node-fetch/**/*.js\"",
+        "test:typescript": "tsd && tsc test/imports/undici-import.ts --typeRoots ./types && tsc ./types/*.d.ts --noEmit --typeRoots ./types",
+        "test:eventsource": "npm run build:node && npm run test:eventsource:nobuild",
+        "test:interceptors": "borp -p \"test/interceptors/*.js\"",
+        "coverage:report:ci": "c8 report",
+        "test:fetch:nobuild": "borp --timeout 180000 --expose-gc --concurrency 1 -p \"test/fetch/*.js\" && npm run test:webidl && npm run test:busboy",
+        "test:tdd:node-test": "borp -p \"test/node-test/**/*.js\" -w",
+        "test:wpt:withoutintl": "node test/wpt/start-fetch.mjs && node test/wpt/start-mimesniff.mjs && node test/wpt/start-xhr.mjs && node test/wpt/start-cacheStorage.mjs && node test/wpt/start-eventsource.mjs",
+        "test:websocket:autobahn": "node test/autobahn/client.js",
+        "test:eventsource:nobuild": "borp --expose-gc -p \"test/eventsource/*.js\"",
+        "test:javascript:withoutintl": "node scripts/generate-pem && npm run test:unit && npm run test:node-fetch && npm run test:fetch:nobuild && npm run test:cache && npm run test:interceptors && npm run test:cookies && npm run test:eventsource:nobuild && npm run test:wpt:withoutintl && npm run test:node-test",
+        "test:websocket:autobahn:report": "node test/autobahn/report.js"
+      },
+      "standard": {
+        "env": [
+          "jest"
+        ],
+        "ignore": [
+          "lib/llhttp/constants.js",
+          "lib/llhttp/utils.js",
+          "test/fixtures/wpt"
+        ]
+      },
+      "_npmVersion": "11.17.0",
+      "directories": {},
+      "_nodeVersion": "20.20.2",
+      "_hasShrinkwrap": false,
+      "readmeFilename": "README.md",
+      "devDependencies": {
+        "c8": "^10.0.0",
+        "ws": "^8.11.0",
+        "tsd": "^0.31.0",
+        "borp": "^0.15.0",
+        "jest": "^29.0.2",
+        "husky": "^9.0.7",
+        "jsdom": "^24.0.0",
+        "proxy": "^2.1.1",
+        "snazzy": "^9.0.0",
+        "standard": "^17.0.0",
+        "cross-env": "^7.0.3",
+        "form-data": "^4.0.0",
+        "dns-packet": "^5.4.0",
+        "fast-check": "^3.17.1",
+        "node-forge": "^1.3.1",
+        "pre-commit": "^1.2.2",
+        "typescript": "^5.0.2",
+        "@types/node": "~18.19.50",
+        "formdata-node": "^6.0.3",
+        "@fastify/busboy": "2.1.1",
+        "abort-controller": "^3.0.0",
+        "@matteo.collina/tspl": "^0.1.1",
+        "@sinonjs/fake-timers": "^11.1.0",
+        "@metcoder95/https-pem": "^1.0.0"
+      }
+    }
+  },
+  "time": {
+    "created": "2018-07-26T17:26:12.234Z",
+    "modified": "2026-07-20T15:15:11.524Z",
+    "7.28.0": "2026-06-15T15:51:12.886Z",
+    "6.27.0": "2026-06-15T15:51:25.559Z"
+  },
+  "license": "MIT"
+}

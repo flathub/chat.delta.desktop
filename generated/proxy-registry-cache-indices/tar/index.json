@@ -1,34 +1,34 @@
 {
   "_id": "tar",
-  "_rev": "331-d8d42d9a85e3f8cb5bc38c3e8e4e6339",
+  "_rev": "336-90a05b6a1e68bcc3f5c2dc977ded8b76",
   "name": "tar",
   "dist-tags": {
     "v3-legacy": "3.2.3",
     "v5-legacy": "5.0.11",
     "v4-legacy": "4.4.19",
-    "latest": "7.5.16"
+    "latest": "7.5.21"
   },
   "versions": {
-    "7.5.11": {
+    "7.5.20": {
       "name": "tar",
-      "version": "7.5.11",
+      "version": "7.5.20",
       "license": "BlueOak-1.0.0",
-      "_id": "tar@7.5.11",
+      "_id": "tar@7.5.20",
       "bugs": {
         "url": "https://github.com/isaacs/node-tar/issues"
       },
       "dist": {
-        "shasum": "1250fae45d98806b36d703b30973fa8e0a6d8868",
-        "tarball": "http://localhost:3000/tar/-/tar-7.5.11.tgz",
+        "shasum": "37a65aa911cbd69864002e14bf8a926a5551e240",
+        "tarball": "http://localhost:3000/tar/-/tar-7.5.20.tgz",
         "fileCount": 249,
-        "integrity": "sha512-ChjMH33/KetonMTAtpYdgUFr0tbz69Fp2v7zWxQfYZX4g5ZN2nOBXm1R2xyA+lMIKrLKIoKAwFj93jE/avX9cQ==",
+        "integrity": "sha512-9FcyK4PA6+WbzlTM9WhQm6vB5W7cP7dUiPsv1g7YDwEQnQ1CGpK3MGlKk/ITVWMk05kHZuBhmVhiv8LZoy/PFQ==",
         "signatures": [
           {
-            "sig": "MEUCIQCPUY1LQ0xUYTY9kPktuOV1i4xLMTBeN7+8S+h7ZJoMJwIgSGkpX5W3CDfZCIhy45qkYDhtbcdabCvNGMMCOaIumuQ=",
+            "sig": "MEQCICNhrdgPKMksFFGwZWszfesvXzL0DmeQYnzJE1UQD3bIAiBL+3cmjJPaQGH0TEYWKVAvyKkyliRjXwao2gpTxhH2Hw==",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 2251554
+        "unpackedSize": 2296120
       },
       "main": "./dist/commonjs/index.min.js",
       "tshy": {
@@ -63,7 +63,8 @@
           "./read-entry": "./src/read-entry.ts",
           "./write-entry": "./src/write-entry.ts",
           "./package.json": "./package.json"
-        }
+        },
+        "selfLink": false
       },
       "type": "module",
       "types": "./dist/commonjs/index.d.ts",
@@ -274,8 +275,9 @@
         },
         "./package.json": "./package.json"
       },
-      "gitHead": "bf776f673164215074b62749e0fe80e5834588f4",
+      "gitHead": "ebbb72094159d003f428dcd1cb28255d37ea4873",
       "scripts": {
+        "lint": "oxlint --fix src test",
         "snap": "tap",
         "test": "tap",
         "format": "prettier --write . --log-level warn",
@@ -284,13 +286,15 @@
         "pretest": "npm run prepare",
         "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts",
         "genparse": "node scripts/generate-parse-fixtures.js",
+        "postlint": "npm run format",
+        "postsnap": "npm run lint",
         "preversion": "npm test",
         "postversion": "npm publish",
         "prepublishOnly": "git push origin --follow-tags"
       },
-      "_npmVersion": "11.10.0",
+      "_npmVersion": "11.15.0",
       "directories": {},
-      "_nodeVersion": "25.6.1",
+      "_nodeVersion": "26.0.0",
       "dependencies": {
         "chownr": "^3.0.0",
         "yallist": "^5.0.0",
@@ -300,26 +304,28 @@
       },
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "tap": "^21.6.2",
+        "tap": "^21.7.4",
         "nock": "^13.5.4",
-        "tshy": "^3.3.2",
+        "tshy": "^4.1.2",
         "chmodr": "^2.0.2",
+        "oxlint": "^1.67.0",
         "rimraf": "^6.1.2",
-        "esbuild": "^0.27.3",
-        "typedoc": "^0.28.17",
-        "prettier": "^3.8.1",
+        "esbuild": "^0.28.0",
+        "typedoc": "^0.28.19",
+        "prettier": "^3.8.3",
         "mutate-fs": "^2.1.1",
-        "@types/node": "^25.3.3",
+        "@types/node": "^25.9.1",
         "end-of-stream": "^1.4.3",
-        "events-to-array": "^2.0.3"
+        "events-to-array": "^2.0.3",
+        "oxlint-tsgolint": "^0.23.0"
       }
     }
   },
   "time": {
     "created": "2011-11-20T07:11:18.109Z",
-    "modified": "2026-06-01T16:20:51.683Z",
+    "modified": "2026-07-21T22:11:07.053Z",
     "5.0.3": "2019-10-05T02:05:48.604Z",
-    "7.5.11": "2026-03-09T05:53:07.844Z"
+    "7.5.20": "2026-07-12T04:11:09.830Z"
   },
   "license": "BlueOak-1.0.0"
 }

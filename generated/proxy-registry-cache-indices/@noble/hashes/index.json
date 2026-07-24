@@ -1,0 +1,280 @@
+{
+  "_id": "@noble/hashes",
+  "_rev": "52-477c02185857a080cd94b4d9df4f1ab6",
+  "name": "@noble/hashes",
+  "dist-tags": {
+    "latest": "2.2.0"
+  },
+  "versions": {
+    "1.4.0": {
+      "name": "@noble/hashes",
+      "version": "1.4.0",
+      "license": "MIT",
+      "_id": "@noble/hashes@1.4.0",
+      "bugs": {
+        "url": "https://github.com/paulmillr/noble-hashes/issues"
+      },
+      "dist": {
+        "shasum": "45814aa329f30e4fe0ba49426f49dfccdd066426",
+        "tarball": "http://localhost:3000/@noble/hashes/-/hashes-1.4.0.tgz",
+        "fileCount": 148,
+        "integrity": "sha512-V1JJ1WTRUqHHrOSh597hURcMqVKVGL/ea3kv0gSnEdsEZ0/+VyPghM1lMNGc00z7CIQorSvbKpuJkxvuHbvdbg==",
+        "signatures": [
+          {
+            "sig": "MEUCIQCFsKmZ1ZcVs1vT4X7jxurjKS81zSpTQ6xk8CoT1lcL0QIgf/kRVp+wmpndbnkk8Od+NVI0Yd+JqAO2ip599UPmTDE=",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@noble%2fhashes@1.4.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "unpackedSize": 772880
+      },
+      "types": "./index.d.ts",
+      "browser": {
+        "./crypto": "./crypto.js",
+        "node:crypto": false
+      },
+      "engines": {
+        "node": ">= 16"
+      },
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "import": "./esm/index.js",
+          "default": "./index.js"
+        },
+        "./_md": {
+          "types": "./_md.d.ts",
+          "import": "./esm/_md.js",
+          "default": "./_md.js"
+        },
+        "./hkdf": {
+          "types": "./hkdf.d.ts",
+          "import": "./esm/hkdf.js",
+          "default": "./hkdf.js"
+        },
+        "./hmac": {
+          "types": "./hmac.d.ts",
+          "import": "./esm/hmac.js",
+          "default": "./hmac.js"
+        },
+        "./sha1": {
+          "types": "./sha1.d.ts",
+          "import": "./esm/sha1.js",
+          "default": "./sha1.js"
+        },
+        "./sha2": {
+          "types": "./sha2.d.ts",
+          "import": "./esm/sha2.js",
+          "default": "./sha2.js"
+        },
+        "./sha3": {
+          "types": "./sha3.d.ts",
+          "import": "./esm/sha3.js",
+          "default": "./sha3.js"
+        },
+        "./eskdf": {
+          "types": "./eskdf.d.ts",
+          "import": "./esm/eskdf.js",
+          "default": "./eskdf.js"
+        },
+        "./utils": {
+          "types": "./utils.d.ts",
+          "import": "./esm/utils.js",
+          "default": "./utils.js"
+        },
+        "./argon2": {
+          "types": "./argon2.d.ts",
+          "import": "./esm/argon2.js",
+          "default": "./argon2.js"
+        },
+        "./blake3": {
+          "types": "./blake3.d.ts",
+          "import": "./esm/blake3.js",
+          "default": "./blake3.js"
+        },
+        "./crypto": {
+          "node": {
+            "import": "./esm/cryptoNode.js",
+            "default": "./cryptoNode.js"
+          },
+          "types": "./crypto.d.ts",
+          "import": "./esm/crypto.js",
+          "default": "./crypto.js"
+        },
+        "./pbkdf2": {
+          "types": "./pbkdf2.d.ts",
+          "import": "./esm/pbkdf2.js",
+          "default": "./pbkdf2.js"
+        },
+        "./scrypt": {
+          "types": "./scrypt.d.ts",
+          "import": "./esm/scrypt.js",
+          "default": "./scrypt.js"
+        },
+        "./sha256": {
+          "types": "./sha256.d.ts",
+          "import": "./esm/sha256.js",
+          "default": "./sha256.js"
+        },
+        "./sha512": {
+          "types": "./sha512.d.ts",
+          "import": "./esm/sha512.js",
+          "default": "./sha512.js"
+        },
+        "./_assert": {
+          "types": "./_assert.d.ts",
+          "import": "./esm/_assert.js",
+          "default": "./_assert.js"
+        },
+        "./blake2b": {
+          "types": "./blake2b.d.ts",
+          "import": "./esm/blake2b.js",
+          "default": "./blake2b.js"
+        },
+        "./blake2s": {
+          "types": "./blake2s.d.ts",
+          "import": "./esm/blake2s.js",
+          "default": "./blake2s.js"
+        },
+        "./ripemd160": {
+          "types": "./ripemd160.d.ts",
+          "import": "./esm/ripemd160.js",
+          "default": "./ripemd160.js"
+        },
+        "./sha3-addons": {
+          "types": "./sha3-addons.d.ts",
+          "import": "./esm/sha3-addons.js",
+          "default": "./sha3-addons.js"
+        }
+      },
+      "funding": "https://paulmillr.com/funding/",
+      "gitHead": "531daab72e8cef0dbaf2db134260c758a89a39ed",
+      "scripts": {
+        "lint": "prettier --check 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
+        "test": "node test/index.js",
+        "bench": "node benchmark/index.js noble",
+        "build": "npm run build:clean; tsc && tsc -p tsconfig.esm.json",
+        "format": "prettier --write 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
+        "test:big": "node test/slow-big.test.js",
+        "test:dos": "node test/slow-dos.test.js",
+        "bench:all": "node benchmark/index.js",
+        "build:clean": "rm *.{js,d.ts,js.map} esm/*.{js,js.map} 2> /dev/null",
+        "bench:install": "cd benchmark && npm install && cd ../../",
+        "build:release": "cd build && npm i && npm run build"
+      },
+      "_npmVersion": "10.5.0",
+      "directories": {},
+      "sideEffects": false,
+      "_nodeVersion": "20.11.1",
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "prettier": "3.1.1",
+        "typescript": "5.3.2",
+        "micro-bmark": "0.3.1",
+        "micro-should": "0.4.0"
+      }
+    },
+    "2.2.0": {
+      "name": "@noble/hashes",
+      "version": "2.2.0",
+      "devDependencies": {
+        "@paulmillr/jsbt": "0.5.0",
+        "@types/node": "25.3.0",
+        "fast-check": "4.2.0",
+        "prettier": "3.6.2",
+        "typescript": "6.0.2"
+      },
+      "scripts": {
+        "bench": "node test/benchmark/noble.ts",
+        "bench:compare": "MBENCH_DIMS='algorithm,buffer,library' node test/benchmark/hashes.ts",
+        "bench:compare-scrypt": "MBENCH_DIMS='iters,library' MBENCH_FILTER='async' node test/benchmark/scrypt.ts",
+        "bench:install": "cd test/benchmark; npm install",
+        "build": "tsc",
+        "build:release": "npx --no @paulmillr/jsbt esbuild test/build",
+        "check": "npm run check:readme && npm run check:treeshake && npm run check:jsdoc",
+        "check:readme": "npx --no @paulmillr/jsbt readme package.json",
+        "check:treeshake": "npx --no @paulmillr/jsbt treeshake package.json test/build/out-treeshake",
+        "check:jsdoc": "npx --no @paulmillr/jsbt tsdoc package.json",
+        "build:clean": "rm *.{js,js.map,d.ts,d.ts.map} 2> /dev/null",
+        "format": "prettier --write 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
+        "test": "node test/index.ts",
+        "test:bun": "bun test/index.ts",
+        "test:deno": "deno --allow-env --allow-read test/index.ts",
+        "test:node20": "cd test; npx tsc; node compiled/test/index.js",
+        "test:dos": "node test/slow-dos.test.ts",
+        "test:slow": "node test/slow-big.test.ts",
+        "test:acvp": "node test/slow-acvp.test.ts",
+        "test:kdf": "node test/slow-kdf.test.ts"
+      },
+      "exports": {
+        ".": "./index.js",
+        "./_md.js": "./_md.js",
+        "./argon2.js": "./argon2.js",
+        "./blake1.js": "./blake1.js",
+        "./blake2.js": "./blake2.js",
+        "./blake3.js": "./blake3.js",
+        "./eskdf.js": "./eskdf.js",
+        "./hkdf.js": "./hkdf.js",
+        "./hmac.js": "./hmac.js",
+        "./legacy.js": "./legacy.js",
+        "./pbkdf2.js": "./pbkdf2.js",
+        "./scrypt.js": "./scrypt.js",
+        "./sha2.js": "./sha2.js",
+        "./sha3-addons.js": "./sha3-addons.js",
+        "./sha3.js": "./sha3.js",
+        "./webcrypto.js": "./webcrypto.js",
+        "./utils.js": "./utils.js"
+      },
+      "engines": {
+        "node": ">= 20.19.0"
+      },
+      "funding": "https://paulmillr.com/funding/",
+      "type": "module",
+      "main": "index.js",
+      "module": "index.js",
+      "types": "index.d.ts",
+      "sideEffects": false,
+      "license": "MIT",
+      "gitHead": "81983c2fffac48aa69dabc260b4192ad597d2734",
+      "_id": "@noble/hashes@2.2.0",
+      "bugs": {
+        "url": "https://github.com/paulmillr/noble-hashes/issues"
+      },
+      "_nodeVersion": "24.11.0",
+      "_npmVersion": "11.6.1",
+      "dist": {
+        "integrity": "sha512-IYqDGiTXab6FniAgnSdZwgWbomxpy9FtYvLKs7wCUs2a8RkITG+DFGO1DM9cr+E3/RgADRpFjrKVaJ1z6sjtEg==",
+        "shasum": "22da1d16a469954fce877055d559900a6c73b63b",
+        "tarball": "http://localhost:3000/@noble/hashes/-/hashes-2.2.0.tgz",
+        "fileCount": 98,
+        "unpackedSize": 889457,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@noble%2fhashes@2.2.0",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQDJw6iTHwkrzpJ95R62Y9u27nIVwTbQ8jQDVDzT0SHtLQIhAOcyNcX2DcQoKIksDUQxD4/WJsdhK3JQCUFhn0KGg+gM"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2021-11-07T20:54:18.069Z",
+    "modified": "2026-04-11T17:09:41.372Z",
+    "1.4.0": "2024-03-14T06:24:10.888Z",
+    "2.2.0": "2026-04-11T17:09:41.131Z"
+  },
+  "license": "MIT"
+}

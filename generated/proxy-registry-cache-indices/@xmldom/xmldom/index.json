@@ -7,36 +7,39 @@
     "latest": "0.9.10"
   },
   "versions": {
-    "0.8.11": {
+    "0.8.13": {
       "name": "@xmldom/xmldom",
-      "version": "0.8.11",
+      "version": "0.8.13",
       "license": "MIT",
-      "_id": "@xmldom/xmldom@0.8.11",
+      "_id": "@xmldom/xmldom@0.8.13",
       "bugs": {
         "url": "https://github.com/xmldom/xmldom/issues"
       },
       "dist": {
-        "shasum": "b79de2d67389734c57c52595f7a7305e30c2d608",
-        "tarball": "http://localhost:3000/@xmldom/xmldom/-/xmldom-0.8.11.tgz",
+        "shasum": "00d1dd940b218dff2e49309d410d8bb212159225",
+        "tarball": "http://localhost:3000/@xmldom/xmldom/-/xmldom-0.8.13.tgz",
         "fileCount": 13,
-        "integrity": "sha512-cQzWCtO6C8TQiYl1ruKNn2U6Ao4o4WBBcbL61yJl84x+j5sOWWFU9X7DpND8XZG3daDppSsigMdfAIl2upQBRw==",
+        "integrity": "sha512-KRYzxepc14G/CEpEGc3Yn+JKaAeT63smlDr+vjB8jRfgTBBI9wRj/nkQEO+ucV8p8I9bfKLWp37uHgFrbntPvw==",
         "signatures": [
           {
-            "sig": "MEYCIQCgqOG2tkrPz0yyaGw7eClQhcogv3I8Rs92qci0KZ2aZgIhAM7Tm1+DchL2vvYmt+6h7uuTSI8sSgFyFvtrySazPC4Q",
+            "sig": "MEYCIQCG3WVzbb9eQnPSJts/lqVJSZbYxge7BNPE4L4A/4oXmgIhANAJamD2BFAOfk+933If3QX+JcPxdmawsMkAeK0VoqxE",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 183008
+        "unpackedSize": 202999
       },
       "main": "lib/index.js",
       "types": "index.d.ts",
+      "config": {
+        "test_stack_size": 256
+      },
       "engines": {
         "node": ">=10.0.0"
       },
-      "gitHead": "c0f14011c7cf93af60b2541898065b7136594f6b",
+      "gitHead": "e5c14802592685bb872c042c54c3f73758875c85",
       "scripts": {
         "lint": "eslint lib test",
-        "test": "jest",
+        "test": "node --stack-size=$npm_package_config_test_stack_size ./node_modules/.bin/jest",
         "start": "nodemon --watch package.json --watch lib --watch test --exec 'npm --silent run test && npm --silent run lint'",
         "format": "prettier --write test",
         "release": "np --no-yarn --test-script testrelease --branch release-0.8.x patch",
@@ -44,12 +47,12 @@
         "version": "./changelog-has-version.sh",
         "changelog": "auto-changelog --unreleased-only",
         "testrelease": "npm test && eslint lib",
+        "format:check": "prettier --check test",
         "stryker:dry-run": "stryker run -m '' --reporters progress"
       },
-      "deprecated": "this version has critical issues, please update to the latest version",
       "_npmVersion": "10.8.2",
       "directories": {},
-      "_nodeVersion": "18.20.7",
+      "_nodeVersion": "18.20.8",
       "dependencies": {},
       "_hasShrinkwrap": false,
       "auto-changelog": {
@@ -73,12 +76,85 @@
         "eslint-config-prettier": "8.5.0",
         "eslint-plugin-prettier": "4.2.1"
       }
+    },
+    "0.9.10": {
+      "name": "@xmldom/xmldom",
+      "version": "0.9.10",
+      "license": "MIT",
+      "_id": "@xmldom/xmldom@0.9.10",
+      "bugs": {
+        "url": "https://github.com/xmldom/xmldom/issues"
+      },
+      "dist": {
+        "shasum": "a0ad5a26fe8aa996310870726e1704977f769dee",
+        "tarball": "http://localhost:3000/@xmldom/xmldom/-/xmldom-0.9.10.tgz",
+        "fileCount": 15,
+        "integrity": "sha512-A9gOqLdi6cV4ibazAjcQufGj0B1y/vDqYrcuP6d/6x8P27gRS8643Dj9o1dEKtB6O7fwxb2FgBmJS2mX7gpvdw==",
+        "signatures": [
+          {
+            "sig": "MEQCIBGmlFm/qZ6fpfqXBM0yoeFrKtesAclU9lqWm7yS6n4QAiA/L/lWu3twWlMRyJBIZJdmGHNJlgo5nsV4QGxJ5weHHQ==",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 411442
+      },
+      "main": "lib/index.js",
+      "types": "index.d.ts",
+      "config": {
+        "test_stack_size": 256
+      },
+      "engines": {
+        "node": ">=14.6"
+      },
+      "gitHead": "bf396a575c4dd32ce4bd925b849dcb7e778d957c",
+      "scripts": {
+        "fuzz": "jest --config=./jest.fuzz.config.js",
+        "lint": "eslint examples lib test",
+        "test": "node --stack-size=$npm_package_config_test_stack_size ./node_modules/.bin/jest",
+        "start": "nodemon --watch package.json --watch lib --watch test --exec 'npm --silent run test && npm --silent run lint'",
+        "format": "prettier --write examples lib test index.d.ts",
+        "release": "np --no-yarn --test-script testrelease",
+        "version": "./changelog-has-version.sh",
+        "changelog": "auto-changelog --unreleased-only",
+        "test:types": "cd examples/typescript-node-es6 && ./pretest.sh 3 && ./pretest.sh 4 && ./pretest.sh 5 && node dist/index.js",
+        "testrelease": "npm test && eslint lib",
+        "format:check": "prettier --check examples lib test index.d.ts"
+      },
+      "_npmVersion": "10.8.2",
+      "directories": {},
+      "_nodeVersion": "18.20.8",
+      "_hasShrinkwrap": false,
+      "auto-changelog": {
+        "remote": "origin",
+        "prepend": true,
+        "template": "./auto-changelog.hbs",
+        "tagPrefix": ""
+      },
+      "packageManager": "npm@11.12.1+sha512.cdca14b85d647b3192028d02aadbe82d75f79a446aceea9874be98e6d768f20ebd3555770a48d0e9906106007877bbc690f715e9372f2e2dc644a3c3157fb14c",
+      "devDependencies": {
+        "np": "8.0.4",
+        "jest": "29.7.0",
+        "yauzl": "3.3.0",
+        "eslint": "8.57.1",
+        "nodemon": "3.1.14",
+        "xmltest": "2.0.3",
+        "prettier": "3.8.1",
+        "get-stream": "6.0.1",
+        "auto-changelog": "2.5.0",
+        "eslint-plugin-n": "17.24.0",
+        "eslint-plugin-es5": "1.5.0",
+        "eslint-config-prettier": "10.1.8",
+        "eslint-plugin-prettier": "5.5.5",
+        "@homer0/prettier-plugin-jsdoc": "10.0.1",
+        "eslint-plugin-anti-trojan-source": "1.1.2"
+      }
     }
   },
   "time": {
     "created": "2021-08-19T19:35:11.285Z",
     "modified": "2026-04-18T11:44:55.308Z",
-    "0.8.11": "2025-08-17T14:06:57.956Z"
+    "0.8.13": "2026-04-18T11:27:55.806Z",
+    "0.9.10": "2026-04-18T11:34:10.031Z"
   },
   "license": "MIT"
 }

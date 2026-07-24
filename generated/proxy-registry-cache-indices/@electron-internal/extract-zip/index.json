@@ -1,0 +1,96 @@
+{
+  "_id": "@electron-internal/extract-zip",
+  "_rev": "5-6e2c5c9334fe3890a124324c8aadd37a",
+  "name": "@electron-internal/extract-zip",
+  "dist-tags": {
+    "latest": "1.0.4"
+  },
+  "versions": {
+    "1.0.4": {
+      "name": "@electron-internal/extract-zip",
+      "version": "1.0.4",
+      "type": "module",
+      "exports": {
+        ".": {
+          "types": "./index.d.ts",
+          "default": "./index.js"
+        }
+      },
+      "napi": {
+        "binaryName": "index",
+        "packageName": "@electron-internal/extract-zip",
+        "targets": [
+          "x86_64-apple-darwin",
+          "aarch64-apple-darwin",
+          "universal-apple-darwin",
+          "x86_64-pc-windows-msvc",
+          "aarch64-pc-windows-msvc",
+          "x86_64-unknown-linux-gnu",
+          "aarch64-unknown-linux-gnu",
+          "x86_64-unknown-linux-musl",
+          "aarch64-unknown-linux-musl",
+          "i686-unknown-linux-gnu",
+          "armv7-unknown-linux-gnueabihf"
+        ]
+      },
+      "scripts": {
+        "build": "napi build --platform --release --esm --output-dir . --js binding.js --dts binding.d.ts && node scripts/strip-binding-fallbacks.js",
+        "build:debug": "napi build --platform --esm --output-dir . --js binding.js --dts binding.d.ts && node scripts/strip-binding-fallbacks.js",
+        "universal": "napi universalize --output-dir .",
+        "test": "node --test test/*.test.js",
+        "bench": "node bench/bench.js",
+        "bench:electron": "node bench/electron.js",
+        "prepublishOnly": "node scripts/check-prebuilds.js"
+      },
+      "license": "BSD-2-Clause",
+      "packageManager": "yarn@4.10.3+sha512.c38cafb5c7bb273f3926d04e55e1d8c9dfa7d9c3ea1f36a4868fa028b9e5f72298f0b7f401ad5eb921749eb012eb1c3bb74bf7503df3ee43fd600d14a018266f",
+      "engines": {
+        "node": ">=22.12.0"
+      },
+      "publishConfig": {
+        "provenance": true,
+        "access": "public"
+      },
+      "devDependencies": {
+        "@napi-rs/cli": "patch:@napi-rs/cli@npm%3A3.6.2#~/.yarn/patches/@napi-rs-cli-npm-3.6.2-b710c59d43.patch",
+        "extract-zip": "2.0.1",
+        "yazl": "3.3.1"
+      },
+      "gitHead": "3eb9258c8e5205cd522a84bc5872f3d18daba942",
+      "types": "./index.d.ts",
+      "_id": "@electron-internal/extract-zip@1.0.4",
+      "bugs": {
+        "url": "https://github.com/electron/extract-zip/issues"
+      },
+      "_nodeVersion": "24.10.0",
+      "_npmVersion": "11.6.2",
+      "dist": {
+        "integrity": "sha512-Zr1Vs7E9tpCNhZHDAbFVXc2gEVCG9RqPDjrno5+bdgB6LRAuvgyMHJut4NCVyYwtAieapMzc3fiQ3CSTi75ARg==",
+        "shasum": "00b2c5cbd49fdc074d3ebf8dfef3c7b7b72eb46d",
+        "tarball": "http://localhost:3000/@electron-internal/extract-zip/-/extract-zip-1.0.4.tgz",
+        "fileCount": 15,
+        "unpackedSize": 7310166,
+        "attestations": {
+          "url": "http://localhost:3000/-/npm/v1/attestations/@electron-internal%2fextract-zip@1.0.4",
+          "provenance": {
+            "predicateType": "https://slsa.dev/provenance/v1"
+          }
+        },
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIF1ZT0/LEea9pKdWDtp+/5cRigCISsDcivI+lgSNlRiCAiEA3v8Uadc/QKyzUzG3xuLo0ajpRb7wKJWzTgf/6AQ5OBg="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2026-06-04T18:57:42.366Z",
+    "modified": "2026-06-23T22:43:17.619Z",
+    "1.0.4": "2026-06-23T22:43:17.304Z"
+  },
+  "license": "BSD-2-Clause"
+}

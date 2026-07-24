@@ -1,0 +1,79 @@
+{
+  "_id": "fast-uri",
+  "_rev": "40-4164e09a71c0a1dcd7be2edcfdbd2455",
+  "name": "fast-uri",
+  "dist-tags": {
+    "three": "3.1.4",
+    "latest": "4.1.1",
+    "two": "2.4.3"
+  },
+  "versions": {
+    "3.1.4": {
+      "name": "fast-uri",
+      "version": "3.1.4",
+      "main": "index.js",
+      "type": "commonjs",
+      "types": "types/index.d.ts",
+      "license": "BSD-3-Clause",
+      "bugs": {
+        "url": "https://github.com/fastify/fast-uri/issues"
+      },
+      "funding": [
+        {
+          "type": "github",
+          "url": "https://github.com/sponsors/fastify"
+        },
+        {
+          "type": "opencollective",
+          "url": "https://opencollective.com/fastify"
+        }
+      ],
+      "scripts": {
+        "lint": "eslint",
+        "lint:fix": "eslint --fix",
+        "test": "npm run test:unit && npm run test:typescript",
+        "test:browser:chromium": "playwright-test ./test/* --runner tape --browser=chromium",
+        "test:browser:firefox": "playwright-test ./test/* --runner tape --browser=firefox",
+        "test:browser:webkit": "playwright-test ./test/* --runner tape --browser=webkit",
+        "test:browser": "npm run test:browser:chromium && npm run test:browser:firefox && npm run test:browser:webkit",
+        "test:unit": "tape test/**/*.js",
+        "test:unit:dev": "npm run test:unit -- --coverage-report=html",
+        "test:typescript": "tsd"
+      },
+      "devDependencies": {
+        "ajv": "^8.16.0",
+        "eslint": "^9.17.0",
+        "neostandard": "^0.13.0",
+        "playwright-test": "^14.1.12",
+        "tape": "^5.8.1",
+        "tsd": "^0.33.0"
+      },
+      "readmeFilename": "README.md",
+      "gitHead": "6aeece669e4166b2446a89f17c07a3b15dfb7ed4",
+      "_id": "fast-uri@3.1.4",
+      "_nodeVersion": "24.15.0",
+      "_npmVersion": "11.12.1",
+      "dist": {
+        "integrity": "sha512-8JnbkQ4juDyvYs4mgFGQqg4yCYtFDtUtmp2QIQq11ZZe5CFQ5wcqm1rqDgAh/QdMySuBnPzMUiJUNZG5N/AiQw==",
+        "shasum": "3b3daf9ce68f41f956df0b505132c0cfce9ec7af",
+        "tarball": "http://localhost:3000/fast-uri/-/fast-uri-3.1.4.tgz",
+        "fileCount": 34,
+        "unpackedSize": 160945,
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEYCIQC+sIPT2OBxlaTMX9Vd+RG0tUPvJUvHQqe3e4W+3zgREwIhAPLaWQ9+OdAwnuYH9j8w5qMItQP0hJ4z6fkgtA8ZK+6o"
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2021-12-12T10:42:04.330Z",
+    "modified": "2026-07-19T07:42:54.718Z",
+    "3.1.4": "2026-07-19T07:42:54.497Z"
+  },
+  "license": "BSD-3-Clause"
+}

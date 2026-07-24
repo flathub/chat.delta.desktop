@@ -1,15 +1,15 @@
 {
   "_id": "brace-expansion",
-  "_rev": "53-82b840fc36e067150c9ff4cfd1e35e0b",
+  "_rev": "57-961990aec5ae0bf71f53af02ec6a224d",
   "name": "brace-expansion",
   "dist-tags": {
     "3.x": "3.0.1",
     "2.x": "2.0.2",
     "1.x": "1.1.12",
     "maintenance-v3": "3.0.2",
-    "maintenance-v1": "1.1.15",
-    "latest": "5.0.6",
-    "maintenance-v2": "2.1.1"
+    "latest": "5.0.8",
+    "maintenance-v1": "1.1.16",
+    "maintenance-v2": "2.1.2"
   },
   "versions": {
     "2.0.2": {
@@ -210,14 +210,93 @@
         "@types/node": "^25.2.1",
         "@types/brace-expansion": "^1.1.2"
       }
+    },
+    "5.0.7": {
+      "name": "brace-expansion",
+      "version": "5.0.7",
+      "license": "MIT",
+      "_id": "brace-expansion@5.0.7",
+      "bugs": {
+        "url": "https://github.com/juliangruber/brace-expansion/issues"
+      },
+      "dist": {
+        "shasum": "1b0e46965b479dad65af737b4a02790a05498337",
+        "tarball": "http://localhost:3000/brace-expansion/-/brace-expansion-5.0.7.tgz",
+        "fileCount": 13,
+        "integrity": "sha512-7oFy703dxfY3/NLxC1fh2SUCQ0H9rmAY+5EpDVfXjUTTs+HEwR2nYaqLv+GWcTsumwxPfiz6CzCNkwXwBUwqCA==",
+        "signatures": [
+          {
+            "sig": "MEUCIQDs74/SUnel18ihtjFv91lE6ZQUVh01x/OSoyddGNH1oAIgW7rwxKM0LIBGfFbvZL1sVky5T0LUEW3vmXQND4qzEpo=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
+        "unpackedSize": 50748
+      },
+      "main": "./dist/commonjs/index.js",
+      "tshy": {
+        "exports": {
+          ".": "./src/index.ts",
+          "./package.json": "./package.json"
+        }
+      },
+      "type": "module",
+      "types": "./dist/commonjs/index.d.ts",
+      "module": "./dist/esm/index.js",
+      "engines": {
+        "node": "18 || 20 || >=22"
+      },
+      "exports": {
+        ".": {
+          "import": {
+            "types": "./dist/esm/index.d.ts",
+            "default": "./dist/esm/index.js"
+          },
+          "require": {
+            "types": "./dist/commonjs/index.d.ts",
+            "default": "./dist/commonjs/index.js"
+          }
+        },
+        "./package.json": "./package.json"
+      },
+      "gitHead": "b735ba6ecee714b2b6562c0df90c8d2059e56501",
+      "scripts": {
+        "snap": "tap",
+        "test": "tap",
+        "format": "prettier --write .",
+        "prepare": "tshy",
+        "presnap": "npm run prepare",
+        "pretest": "npm run prepare",
+        "typedoc": "typedoc --tsconfig .tshy/esm.json ./src/*.ts",
+        "benchmark": "node benchmark/index.js",
+        "preversion": "npm test",
+        "postversion": "npm publish",
+        "prepublishOnly": "git push origin --follow-tags"
+      },
+      "_npmVersion": "11.13.0",
+      "directories": {},
+      "_nodeVersion": "24.16.0",
+      "dependencies": {
+        "balanced-match": "^4.0.2"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "tap": "^21.6.2",
+        "tshy": "^3.0.2",
+        "mkdirp": "^3.0.1",
+        "typedoc": "^0.28.5",
+        "prettier": "^3.3.2",
+        "@types/node": "^25.2.1",
+        "@types/brace-expansion": "^1.1.2"
+      }
     }
   },
   "time": {
     "created": "2013-10-13T12:58:47.118Z",
-    "modified": "2026-05-26T08:43:09.075Z",
+    "modified": "2026-07-23T11:39:25.873Z",
     "2.0.2": "2025-06-11T08:48:36.535Z",
     "1.1.12": "2025-06-11T08:52:58.148Z",
-    "5.0.4": "2026-02-27T09:37:56.676Z"
+    "5.0.4": "2026-02-27T09:37:56.676Z",
+    "5.0.7": "2026-06-29T03:47:11.352Z"
   },
   "license": "MIT"
 }

@@ -1,6 +1,6 @@
 {
   "_id": "typescript",
-  "_rev": "4168-057330396f58030791f9c6320d6a7f06",
+  "_rev": "4182-88dcdf2fdc29eabfa0f89c58a151ccae",
   "name": "typescript",
   "dist-tags": {
     "dev": "3.9.4",
@@ -8,8 +8,8 @@
     "insiders": "4.6.2-insiders.20220225",
     "beta": "6.0.0-beta",
     "rc": "7.0.1-rc",
-    "next": "6.0.0-dev.20260416",
-    "latest": "6.0.3"
+    "latest": "7.0.2",
+    "next": "7.1.0-dev.20260723.1"
   },
   "versions": {
     "4.9.5": {
@@ -138,11 +138,11 @@
         "eslint-formatter-autolinkable-stylish": "^1.2.0"
       }
     },
-    "5.8.3": {
+    "6.0.3": {
       "name": "typescript",
-      "version": "5.8.3",
+      "version": "6.0.3",
       "license": "Apache-2.0",
-      "_id": "typescript@5.8.3",
+      "_id": "typescript@6.0.3",
       "bugs": {
         "url": "https://github.com/microsoft/TypeScript/issues"
       },
@@ -151,23 +151,23 @@
         "tsserver": "bin/tsserver"
       },
       "dist": {
-        "shasum": "92f8a3e5e3cf497356f4178c34cd65a7f5e8440e",
-        "tarball": "http://localhost:3000/typescript/-/typescript-5.8.3.tgz",
-        "fileCount": 130,
-        "integrity": "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==",
+        "shasum": "90251dc007916e972786cb94d74d15b185577d21",
+        "tarball": "http://localhost:3000/typescript/-/typescript-6.0.3.tgz",
+        "fileCount": 140,
+        "integrity": "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==",
         "signatures": [
           {
-            "sig": "MEUCICgNzEJKBTUaaiiKgg7R0IlwNqfaQnF9gNt4o7IXrwwtAiEA2P9N8bFaSXiQTC6Ix7s0XOloYMV4e2030bP/JdXRImo=",
+            "sig": "MEYCIQDv8tVB8x5z1EeS+UHLgSqOywErEEFERRmMNef6kTXsPQIhAMO+L+ktR6FwCDSc+z0KD68md8mvKukeVzgjuBhoie9i",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
-        "unpackedSize": 22867703
+        "unpackedSize": 24346827
       },
       "main": "./lib/typescript.js",
       "_from": "file:/mnt/vss/_work/1/tgz/typescript.tgz",
       "volta": {
         "npm": "8.19.4",
-        "node": "20.1.0"
+        "node": "22.22.0"
       },
       "browser": {
         "fs": false,
@@ -182,7 +182,7 @@
       "engines": {
         "node": ">=14.17"
       },
-      "gitHead": "68cead182cc24afdc3f1ce7c8ff5853aba14b65a",
+      "gitHead": "050880ce59e30b356b686bd3144efe24f875ebc8",
       "scripts": {
         "gulp": "hereby",
         "knip": "hereby knip",
@@ -202,186 +202,66 @@
       "overrides": {
         "typescript@*": "$typescript"
       },
-      "_integrity": "sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==",
-      "_npmVersion": "10.7.0",
+      "_integrity": "sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==",
+      "_npmVersion": "10.8.2",
       "directories": {},
-      "_nodeVersion": "18.20.3",
+      "_nodeVersion": "20.20.2",
       "_hasShrinkwrap": false,
       "packageManager": "npm@8.19.4",
       "devDependencies": {
         "c8": "^10.1.3",
         "ms": "^2.1.3",
         "chai": "^4.5.0",
-        "diff": "^5.2.0",
-        "glob": "^10.4.5",
-        "knip": "^5.41.0",
-        "chalk": "^4.1.2",
+        "diff": "^8.0.3",
+        "glob": "^10.5.0",
+        "knip": "^5.85.0",
         "mocha": "^10.8.2",
         "tslib": "^2.8.1",
         "which": "^3.0.1",
-        "dprint": "^0.47.6",
-        "eslint": "^9.17.0",
-        "hereby": "^1.10.0",
-        "esbuild": "^0.24.0",
-        "globals": "^15.13.0",
-        "chokidar": "^3.6.0",
-        "minimist": "^1.2.8",
-        "@types/ms": "^0.7.34",
-        "@eslint/js": "^9.17.0",
-        "playwright": "^1.49.1",
-        "typescript": "^5.7.2",
-        "@types/chai": "^4.3.20",
-        "@types/diff": "^5.2.3",
-        "@types/node": "latest",
-        "@types/mocha": "^10.0.10",
-        "@types/which": "^3.0.4",
-        "jsonc-parser": "^3.3.1",
-        "@octokit/rest": "^21.0.2",
-        "@types/minimist": "^1.2.5",
-        "fast-xml-parser": "^4.5.1",
-        "@dprint/formatter": "^0.4.1",
-        "@esfx/canceltoken": "^1.0.0",
-        "typescript-eslint": "^8.18.1",
-        "@dprint/typescript": "0.93.3",
-        "source-map-support": "^0.5.21",
-        "eslint-plugin-regexp": "^2.7.0",
-        "azure-devops-node-api": "^14.1.0",
-        "@typescript-eslint/utils": "^8.18.1",
-        "@types/source-map-support": "^0.5.10",
-        "monocart-coverage-reports": "^2.11.4",
-        "@typescript-eslint/type-utils": "^8.18.1",
-        "@typescript-eslint/rule-tester": "^8.18.1",
-        "mocha-fivemat-progress-reporter": "^0.1.0",
-        "eslint-formatter-autolinkable-stylish": "^1.4.0"
-      }
-    },
-    "5.9.3": {
-      "name": "typescript",
-      "version": "5.9.3",
-      "license": "Apache-2.0",
-      "_id": "typescript@5.9.3",
-      "bugs": {
-        "url": "https://github.com/microsoft/TypeScript/issues"
-      },
-      "bin": {
-        "tsc": "bin/tsc",
-        "tsserver": "bin/tsserver"
-      },
-      "dist": {
-        "shasum": "5b4f59e15310ab17a216f5d6cf53ee476ede670f",
-        "tarball": "http://localhost:3000/typescript/-/typescript-5.9.3.tgz",
-        "fileCount": 132,
-        "integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
-        "signatures": [
-          {
-            "sig": "MEYCIQC5ifNi1il+zAZC19ov+Q5oSrhOwlpOpghAaAAXYA0RpAIhAKdcZ6pMNZGuprpke8Zi3OPB1zol9c88KVW+apJNVjTy",
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
-          }
-        ],
-        "unpackedSize": 23625066
-      },
-      "main": "./lib/typescript.js",
-      "_from": "file:/mnt/vss/_work/1/tgz/typescript.tgz",
-      "volta": {
-        "npm": "8.19.4",
-        "node": "20.1.0"
-      },
-      "browser": {
-        "fs": false,
-        "os": false,
-        "path": false,
-        "buffer": false,
-        "crypto": false,
-        "inspector": false,
-        "perf_hooks": false,
-        "source-map-support": false
-      },
-      "engines": {
-        "node": ">=14.17"
-      },
-      "gitHead": "c63de15a992d37f0d6cec03ac7631872838602cb",
-      "scripts": {
-        "gulp": "hereby",
-        "knip": "hereby knip",
-        "lint": "hereby lint",
-        "test": "hereby runtests-parallel --light=false",
-        "build": "npm run build:compiler && npm run build:tests",
-        "clean": "hereby clean",
-        "format": "dprint fmt",
-        "build:tests": "hereby tests",
-        "setup-hooks": "node scripts/link-hooks.mjs",
-        "build:compiler": "hereby local",
-        "test:eslint-rules": "hereby run-eslint-rules-tests",
-        "build:tests:notypecheck": "hereby tests --no-typecheck"
-      },
-      "typings": "./lib/typescript.d.ts",
-      "_resolved": "/mnt/vss/_work/1/tgz/typescript.tgz",
-      "overrides": {
-        "typescript@*": "$typescript"
-      },
-      "_integrity": "sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==",
-      "_npmVersion": "10.7.0",
-      "directories": {},
-      "_nodeVersion": "18.20.3",
-      "_hasShrinkwrap": false,
-      "packageManager": "npm@8.19.4",
-      "devDependencies": {
-        "c8": "^10.1.3",
-        "ms": "^2.1.3",
-        "chai": "^4.5.0",
-        "diff": "^7.0.0",
-        "glob": "^10.4.5",
-        "knip": "^5.44.4",
-        "mocha": "^10.8.2",
-        "tslib": "^2.8.1",
-        "which": "^3.0.1",
-        "dprint": "^0.49.0",
-        "eslint": "^9.20.1",
-        "hereby": "^1.10.0",
-        "esbuild": "^0.25.0",
-        "globals": "^15.15.0",
+        "dprint": "^0.49.1",
+        "eslint": "^10.0.2",
+        "hereby": "^1.12.0",
+        "esbuild": "^0.27.3",
+        "globals": "^17.4.0",
         "chokidar": "^4.0.3",
         "minimist": "^1.2.8",
-        "@types/ms": "^0.7.34",
-        "@eslint/js": "^9.20.0",
+        "@types/ms": "^2.1.0",
+        "@eslint/js": "^10.0.1",
         "picocolors": "^1.1.1",
-        "playwright": "^1.50.1",
-        "typescript": "^5.7.3",
+        "playwright": "^1.58.2",
+        "typescript": "^5.9.3",
         "@types/chai": "^4.3.20",
-        "@types/diff": "^7.0.1",
         "@types/node": "latest",
         "@types/mocha": "^10.0.10",
         "@types/which": "^3.0.4",
         "jsonc-parser": "^3.3.1",
-        "@octokit/rest": "^21.1.1",
+        "@octokit/rest": "^22.0.1",
         "@types/minimist": "^1.2.5",
-        "fast-xml-parser": "^4.5.2",
+        "fast-xml-parser": "^5.4.1",
         "@dprint/formatter": "^0.4.1",
         "@esfx/canceltoken": "^1.0.0",
-        "typescript-eslint": "^8.24.1",
+        "typescript-eslint": "^8.56.1",
         "@dprint/typescript": "0.93.4",
         "source-map-support": "^0.5.21",
-        "eslint-plugin-regexp": "^2.7.0",
-        "azure-devops-node-api": "^14.1.0",
-        "@typescript-eslint/utils": "^8.24.1",
+        "eslint-plugin-regexp": "^3.0.0",
+        "azure-devops-node-api": "^15.1.3",
+        "@typescript-eslint/utils": "^8.56.1",
         "@types/source-map-support": "^0.5.10",
-        "monocart-coverage-reports": "^2.12.1",
-        "@typescript-eslint/type-utils": "^8.24.1",
-        "@typescript-eslint/rule-tester": "^8.24.1",
-        "mocha-fivemat-progress-reporter": "^0.1.0",
-        "eslint-formatter-autolinkable-stylish": "^1.4.0"
+        "monocart-coverage-reports": "^2.12.9",
+        "@typescript-eslint/type-utils": "^8.56.1",
+        "@typescript-eslint/rule-tester": "^8.56.1",
+        "mocha-fivemat-progress-reporter": "^0.1.0"
       }
     }
   },
   "time": {
     "created": "2012-10-01T15:35:39.553Z",
-    "modified": "2026-06-18T13:43:46.502Z",
+    "modified": "2026-07-23T08:10:26.633Z",
     "1.6.0-dev.20150722": "2015-07-22T21:14:17.242Z",
     "1.9.0": "2016-04-28T20:04:35.616Z",
     "2.7.0-insider.20180119": "2018-01-19T23:01:36.879Z",
     "4.9.5": "2023-01-30T21:05:37.231Z",
-    "5.8.3": "2025-04-05T00:17:37.851Z",
-    "5.9.3": "2025-09-30T21:19:38.784Z"
+    "6.0.3": "2026-04-16T23:38:27.905Z"
   },
   "license": "Apache-2.0"
 }

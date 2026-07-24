@@ -1,82 +1,78 @@
 {
   "_id": "abbrev",
-  "_rev": "102-a16fe2d640f4f6e99603df9bc34f6b86",
+  "_rev": "103-fd2f193d7f602af8918c5d4d4f830e1f",
   "name": "abbrev",
   "dist-tags": {
     "latest": "5.0.0"
   },
   "versions": {
-    "3.0.1": {
+    "4.0.0": {
       "name": "abbrev",
-      "version": "3.0.1",
+      "version": "4.0.0",
       "license": "ISC",
-      "_id": "abbrev@3.0.1",
+      "_id": "abbrev@4.0.0",
       "bugs": {
         "url": "https://github.com/npm/abbrev-js/issues"
       },
-      "tap": {
-        "nyc-arg": [
-          "--exclude",
-          "tap-snapshots/**"
-        ]
-      },
       "dist": {
-        "shasum": "8ac8b3b5024d31464fe2a5feeea9f4536bf44025",
-        "tarball": "http://localhost:3000/abbrev/-/abbrev-3.0.1.tgz",
+        "shasum": "ec933f0e27b6cd60e89b5c6b2a304af42209bb05",
+        "tarball": "http://localhost:3000/abbrev/-/abbrev-4.0.0.tgz",
         "fileCount": 4,
-        "integrity": "sha512-AO2ac6pjRB3SJmGJo+v5/aK6Omggp6fsLrs6wN9bd35ulu4cCwaAU9+7ZhXjeqHVkaHThLuzH0nZr0YpCDhygg==",
+        "integrity": "sha512-a1wflyaL0tHtJSmLSOVybYhy22vRih4eduhhrkcjgrWGnRfrZtovJ2FRjxuTtkkj47O/baf0R86QU5OuYpz8fA==",
         "signatures": [
           {
-            "sig": "MEYCIQCuVlUH0YBHS1kAP8/rUvo5TQXhgOEcGg8lmjMUi7JAQgIhAJcn5pht2CBOzjZj+pC4ALa09qpZz0m7hPWlQTssPaSM",
+            "sig": "MEYCIQCN7D2zkygbHaYeABQ+EgwkPySFkDlvkJNUNDsiX8Z1FAIhAP4QWi8rDdXneKcW+kmZw75yIbRe1INtd8GkpZ7Su8ab",
             "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
           }
         ],
         "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/abbrev@3.0.1",
+          "url": "http://localhost:3000/-/npm/v1/attestations/abbrev@4.0.0",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "unpackedSize": 4961
+        "unpackedSize": 5121
       },
       "main": "lib/index.js",
       "engines": {
-        "node": "^18.17.0 || >=20.5.0"
+        "node": "^20.17.0 || >=22.9.0"
       },
-      "gitHead": "21ff20fdb92525008b4fc4d90857873b20c23b40",
+      "gitHead": "1f9876814876b6a2b24d72639bd55a2c9ff2763d",
       "scripts": {
         "lint": "npm run eslint",
-        "snap": "tap",
-        "test": "tap",
+        "snap": "node --test --test-update-snapshots",
+        "test": "node --test",
         "eslint": "eslint \"**/*.{js,cjs,ts,mjs,jsx,tsx}\"",
         "lintfix": "npm run eslint -- --fix",
         "postlint": "template-oss-check",
         "posttest": "npm run lint",
+        "test:cover": "node --test --experimental-test-coverage --test-timeout=3000 --test-coverage-lines=100 --test-coverage-functions=100 --test-coverage-branches=100",
         "template-oss-apply": "template-oss-apply --force"
       },
-      "_npmVersion": "11.3.0",
+      "_npmVersion": "11.6.2",
       "directories": {},
       "templateOSS": {
         "publish": true,
-        "version": "4.24.3",
+        "version": "4.26.1",
+        "testRunner": "node:test",
+        "latestCiVersion": 24,
         "//@npmcli/template-oss": "This file is partially managed by @npmcli/template-oss. Edits may be overwritten."
       },
-      "_nodeVersion": "22.14.0",
+      "_nodeVersion": "24.10.0",
       "_hasShrinkwrap": false,
       "devDependencies": {
-        "tap": "^16.3.0",
-        "@npmcli/template-oss": "4.24.3",
+        "@npmcli/template-oss": "4.26.1",
         "@npmcli/eslint-config": "^5.0.0"
       }
     }
   },
   "time": {
     "created": "2011-03-21T22:21:11.183Z",
-    "modified": "2026-05-08T18:39:07.315Z",
+    "modified": "2026-07-06T13:58:51.501Z",
     "1.0.2": "2011-03-21T22:21:11.183Z",
     "1.0.1": "2011-03-21T22:21:11.183Z",
     "1.0.3-1": "2011-03-24T23:01:19.581Z",
-    "3.0.1": "2025-04-10T13:58:55.680Z"
+    "4.0.0": "2025-10-20T18:51:05.929Z"
   },
   "license": "ISC"
 }

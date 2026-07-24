@@ -1,0 +1,106 @@
+{
+  "_id": "@peculiar/json-schema",
+  "_rev": "19-16c9b39e1808e77ee41f65cfe2e47f16",
+  "name": "@peculiar/json-schema",
+  "dist-tags": {
+    "latest": "1.1.12"
+  },
+  "versions": {
+    "1.1.12": {
+      "name": "@peculiar/json-schema",
+      "version": "1.1.12",
+      "license": "MIT",
+      "_id": "@peculiar/json-schema@1.1.12",
+      "bugs": {
+        "url": "https://github.com/PeculiarVentures/json-schema/issues"
+      },
+      "nyc": {
+        "exclude": [
+          "**/*.d.ts"
+        ],
+        "include": [
+          "src/**/*.ts"
+        ],
+        "reporter": [
+          "text-summary",
+          "html"
+        ],
+        "extension": [
+          ".ts",
+          ".tsx"
+        ]
+      },
+      "dist": {
+        "shasum": "fe61e85259e3b5ba5ad566cb62ca75b3d3cd5339",
+        "tarball": "http://localhost:3000/@peculiar/json-schema/-/json-schema-1.1.12.tgz",
+        "fileCount": 28,
+        "integrity": "sha512-coUfuoMeIB7B8/NMekxaDzLhaYmp0HZNPEjYRm9goRou8UZIC3z21s0sL9AWoCw4EG876QyO3kYrc61WNF9B/w==",
+        "signatures": [
+          {
+            "sig": "MEYCIQDdKawQfAi2g3kFEkFm+CvOD9M9kNwFxiFuYdvDO25v/gIhAJP1DEzdxqzVhlfvt1TaLZZL5HILUkOi9nLYhw37FYC8",
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+          }
+        ],
+        "unpackedSize": 51918,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJfGAA6CRA9TVsSAnZWagAA1U0P/AuLJ300rJIbrRwkpZ0p\nAk8X+P/V8TETvPt/QmALHgJfUgalMYxwFbQyVY+UtNGQzoKK83RxqrJMVtlO\ngjKKJi7pkJik/nSFBje6bSgyustRc832Nns8/QazBPO+TO5M0oHvQ57uLvMR\nXpKqFexLB3/ViIPh74oQB55CafmG+UhdijUKgraLZxY2zAXmkNMzf5usUcHc\nWelnCQzPE4emx2usfyrFB8rSo7jcqPXbuW/kS4BJp6a+IYtvemxMy2SZfOSY\nN6Jl76Dw1A0yVPuzn6iJwXW1xF2jDONH4SbF7unsOy5xYcYhTod7pMinXJAO\nYvxrMWTQwGChBwhd9vuM4VFR9sviZomA4XdMW+LXVvyYlTP4qJ2+U3f3UTMo\n/Uw5TqESdf5AQowDElmx+5AfiGCzduBgHL0uMh12lVZibzcYLm4u1d+vfjwu\nXRfwfNwWl+2oUhdFvDHaTudLJTf5d+BBdMNeYNTwOXHdozYqky+54myadEWH\n1rO1yL4doplYBgfpkH6eQw7Hw6wmd1HazUaeQBh9JLaI/IaJ1CzmpwSl+P58\n+EtgR6boSdA1azLNo7bzJUmBeB1ebqE7zpDH/MIjMYuSD9dG6M/ONg9f+kn3\npTWg3Vqzgo+npMZj5cxcffSkK0AChHUg9reSLHMp6nMBzq9EqADRWG5jNErc\nOGgi\r\n=/FiQ\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "main": "build/index.js",
+      "mocha": {
+        "require": "ts-node/register",
+        "extension": [
+          "ts"
+        ],
+        "watch-files": "test/**/*.ts"
+      },
+      "types": "build/types/index.d.ts",
+      "module": "build/index.es.js",
+      "engines": {
+        "node": ">=8.0.0"
+      },
+      "gitHead": "0ac71a4abcf23a4b54753f3a5433e41232db551e",
+      "scripts": {
+        "pub": "npm version patch && npm publish",
+        "lint": "tslint -p .",
+        "test": "mocha",
+        "build": "npm run build:module && npm run build:types",
+        "clear": "rimraf build/*",
+        "prepub": "npm run lint && npm run build",
+        "postpub": "git push && git push --tags origin master",
+        "prepare": "npm run build",
+        "rebuild": "npm run clear && npm run build",
+        "coverage": "nyc npm test",
+        "lint:fix": "tslint --fix -p .",
+        "pub:next": "npm version prerelease --preid=next && npm publish --tag next",
+        "coveralls": "nyc report --reporter=text-lcov | coveralls",
+        "build:types": "tsc -p tsconfig.types.json",
+        "prepub:next": "npm run lint && npm run build",
+        "build:module": "rollup -c",
+        "postpub:next": "git push"
+      },
+      "_npmVersion": "6.14.6",
+      "directories": {},
+      "_nodeVersion": "12.16.3",
+      "dependencies": {
+        "tslib": "^2.0.0"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "mocha": "^8.0.1",
+        "rimraf": "^3.0.2",
+        "rollup": "^2.22.2",
+        "tslint": "^6.1.2",
+        "ts-node": "^8.10.2",
+        "typescript": "^3.9.7",
+        "@types/node": "^12.12.51",
+        "@types/mocha": "^8.0.0",
+        "rollup-plugin-typescript2": "^0.27.1"
+      }
+    }
+  },
+  "time": {
+    "created": "2018-10-05T14:56:24.963Z",
+    "modified": "2025-08-08T18:26:22.136Z",
+    "1.1.12": "2020-07-22T09:00:41.719Z"
+  },
+  "license": "MIT"
+}

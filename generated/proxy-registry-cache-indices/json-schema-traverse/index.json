@@ -56,12 +56,64 @@
       },
       "directories": {},
       "_hasShrinkwrap": false
+    },
+    "1.0.0": {
+      "name": "json-schema-traverse",
+      "version": "1.0.0",
+      "main": "index.js",
+      "types": "index.d.ts",
+      "scripts": {
+        "eslint": "eslint index.js spec",
+        "test-spec": "mocha spec -R spec",
+        "test": "npm run eslint && nyc npm run test-spec"
+      },
+      "license": "MIT",
+      "bugs": {
+        "url": "https://github.com/epoberezkin/json-schema-traverse/issues"
+      },
+      "devDependencies": {
+        "eslint": "^7.3.1",
+        "mocha": "^8.0.1",
+        "nyc": "^15.0.0",
+        "pre-commit": "^1.2.2"
+      },
+      "nyc": {
+        "exclude": [
+          "**/spec/**",
+          "node_modules"
+        ],
+        "reporter": [
+          "lcov",
+          "text-summary"
+        ]
+      },
+      "gitHead": "6b45983cd76270042cc79527da5c8972f13599ec",
+      "_id": "json-schema-traverse@1.0.0",
+      "_nodeVersion": "14.15.1",
+      "_npmVersion": "6.14.8",
+      "dist": {
+        "integrity": "sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==",
+        "shasum": "ae7bcb3656ab77a73ba5c49bf654f38e6b6860e2",
+        "tarball": "http://localhost:3000/json-schema-traverse/-/json-schema-traverse-1.0.0.tgz",
+        "fileCount": 12,
+        "unpackedSize": 22220,
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.13\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJf1fN3CRA9TVsSAnZWagAAOvgP/RW4IyNaG+9p/oIa6WhS\nu0try6lP7Hym+dFd2utH5S19/K2IPoFXP7CFvq1blPVc1adUBBRdfdz7SJ9J\nVJr0Hdzpvrzhkzfod9SyGcjmwOIZDGmI7mhwxTuqYCN1kOWpAY0gnzfV+n5p\nZxDGKLieCqCzmKc1TsSb/aUtWndUmcs8UsUZI5mjqSTajcqRSX11Fillmor8\nZVFzyKWhwEmDFRQlFRR3cTEbytvs55sqTdpWxaZDh7g8UrxdhUQIoI0SnQFO\n3pWaMCf+fM9SGY2JUlMLhr6n3ui5OBqkgjfw5AUtld405fyNbPQlJu7QxATo\nMU7npmYHcoinMOpciVD/tLNxD+OQKyOZ/NlL+XXBdCWQhLIuF+Rnb+raUiSC\nw8q8W5Vba/JN9/pHs8x+3P1eZFIM+cxMQk9RYFuEqtHkGhDiVthpyMsK5h0K\n2Nu7nLBVsnEEid9UggwPep2ua1JO5YETsAtwwo0RFuhRhs3I37eKloiI+NmJ\nCBASUczFiT2vE5ySGPHWMteTjL/5uUU+a+IZhqA/o2Wsmnw4Kxln5npF0kjg\njAQnn/t7QQcWhNGqsFnKEg2rv6cUgj9MoZdxHsyyyCnZ4qEBLByv83zOpigR\nfyxhFwV8uGKg1IZmeNQn+Kj/pBpifoUSbR4LGr54MVSuUrkjIdBv/sCLVC3c\n3vaz\r\n=T5IW\r\n-----END PGP SIGNATURE-----\r\n",
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCIQCNOIFNJRe2jcKCXH4ICrcSvZnowa7w+vu8ftVn1ma0LAIgVov161AURGFLhlj5B6eSkke5RxOlmvY3avjHP8IvUTo="
+          }
+        ]
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "modified": "2023-06-22T16:32:38.879Z",
     "created": "2017-06-04T18:42:17.844Z",
-    "0.4.1": "2018-06-10T08:42:05.056Z"
+    "0.4.1": "2018-06-10T08:42:05.056Z",
+    "1.0.0": "2020-12-13T10:56:54.719Z"
   },
   "license": "MIT"
 }
