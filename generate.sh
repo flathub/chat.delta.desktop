@@ -85,8 +85,13 @@ echo "[desktop deps: fetching]"
 rm -rf .pnpm-store node_modules || true
 pnpm i --frozen-lockfile
 
-# make the proxy registry save what it recorded
+# make the proxy registry save what it recorded, and wait for it to finish:
+# record.mjs writes the manifest and used_versions_strip_info.json from its async
+# SIGINT handler, so without the wait the script races ahead and later steps
+# (e.g. tool_strip.mjs) run before those files exist. A non-zero exit here means
+# the recording itself failed, which we want to surface right away.
 kill -SIGINT $PID_RECORD
+wait $PID_RECORD
 cd -
 
 echo "[@deltachat/jsonrpc-client build-dependencies]"
