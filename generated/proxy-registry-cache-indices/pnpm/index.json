@@ -24,72 +24,7 @@
     "latest": "11.8.0",
     "next-11": "11.8.0"
   },
-  "versions": {
-    "9.11.0": {
-      "name": "pnpm",
-      "version": "9.11.0",
-      "license": "MIT",
-      "_id": "pnpm@9.11.0",
-      "bugs": {
-        "url": "https://github.com/pnpm/pnpm/issues"
-      },
-      "bin": {
-        "pnpm": "bin/pnpm.cjs",
-        "pnpx": "bin/pnpx.cjs"
-      },
-      "dist": {
-        "shasum": "4cd20e68438613738e8f2bc9aece61eaa6b3e649",
-        "tarball": "http://localhost:3000/pnpm/-/pnpm-9.11.0.tgz",
-        "fileCount": 901,
-        "integrity": "sha512-CiA/+u1aP2MkLNBkyPtYkjZsED4ygHkxj3gGLyTqjJ1QvGpHqjVnyr79gk0XDnj6J0XtHxaxMuFkNhRrdojxmw==",
-        "signatures": [
-          {
-            "sig": "MEUCIC8ZuVSP/WiXzN+PGc6XJ/Xon6zR4Cnxwr1ja1yohFsKAiEA8WseFHuUitdm0+CxhDm8rr2KlFixlsY4szvCCK0Pnrk=",
-            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
-          }
-        ],
-        "unpackedSize": 18210510
-      },
-      "main": "bin/pnpm.cjs",
-      "_from": "file:pnpm-9.11.0.tgz",
-      "unpkg": "dist/pnpm.cjs",
-      "engines": {
-        "node": ">=18.12"
-      },
-      "exports": {
-        ".": "./package.json"
-      },
-      "funding": "https://opencollective.com/pnpm",
-      "scripts": {
-        "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
-        "test": "pnpm run compile && pnpm run _test",
-        "_test": "cross-env PNPM_REGISTRY_MOCK_PORT=7777 jest",
-        "start": "tsc --watch",
-        "bundle": "ts-node bundle.ts",
-        "compile": "tsc --build && pnpm run lint --fix && rimraf dist bin/nodes && pnpm run bundle && shx cp -r node-gyp-bin dist/node-gyp-bin && shx cp -r node_modules/@pnpm/tabtab/lib/templates dist/templates && shx cp -r node_modules/ps-list/vendor dist/vendor && shx cp pnpmrc dist/pnpmrc",
-        "_compile": "tsc --build",
-        "pretest:e2e": "rimraf node_modules/.bin/pnpm"
-      },
-      "_resolved": "/tmp/7e2919a616749abd2d9e2fa424320a80/pnpm-9.11.0.tgz",
-      "_integrity": "sha512-CiA/+u1aP2MkLNBkyPtYkjZsED4ygHkxj3gGLyTqjJ1QvGpHqjVnyr79gk0XDnj6J0XtHxaxMuFkNhRrdojxmw==",
-      "_npmVersion": "10.7.0",
-      "directories": {
-        "test": "test"
-      },
-      "_nodeVersion": "18.20.4",
-      "preferGlobal": true,
-      "publishConfig": {
-        "tag": "next-9",
-        "executableFiles": [
-          "./dist/node-gyp-bin/node-gyp",
-          "./dist/node-gyp-bin/node-gyp.cmd",
-          "./dist/node_modules/node-gyp/bin/node-gyp.js"
-        ]
-      },
-      "_hasShrinkwrap": false,
-      "readmeFilename": "README.md"
-    }
-  },
+  "versions": {},
   "time": {
     "created": "2013-03-08T23:25:56.611Z",
     "modified": "2026-06-18T22:30:33.465Z",
@@ -114,8 +49,7 @@
     "2.24.0": "2019-01-05T17:49:58.874Z",
     "2.24.1": "2019-01-05T20:22:32.829Z",
     "2.25.0-0": "2019-01-07T22:18:03.216Z",
-    "2.25.0-1": "2019-01-07T22:30:29.592Z",
-    "9.11.0": "2024-09-20T10:31:56.346Z"
+    "2.25.0-1": "2019-01-07T22:30:29.592Z"
   },
   "license": "MIT"
 }
