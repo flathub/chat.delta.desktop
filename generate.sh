@@ -41,11 +41,33 @@ git checkout $DESKTOP_CHECKOUT
 git clean -d -x -f
 DESKTOP_COMMIT_HASH=$(git rev-parse HEAD)
 cd -
+
+# The pnpm running here and the one running inside the
+# flatpak sandbox have to be the same version
+PNPM_VERSION=$(jq -r '(.packageManager // "") | split("+")[0] | sub("^pnpm@"; "")' ../deltachat-desktop/package.json)
+if [ -z "$PNPM_VERSION" ]; then
+    echo "no packageManager field in ../deltachat-desktop/package.json" >&2
+    exit 1
+fi
+PNPM_VERSION_HERE=$(cd ../deltachat-desktop && pnpm --version | tail -1)
+if [ "$PNPM_VERSION_HERE" != "$PNPM_VERSION" ]; then
+    echo "pnpm version mismatch: desktop $DESKTOP_CHECKOUT declares $PNPM_VERSION, but the pnpm running there is $PNPM_VERSION_HERE" >&2
+    echo "the flatpak sandbox runs $PNPM_VERSION, and a cache recorded with a different pnpm makes the build fail with a 404" >&2
+    echo "run 'corepack enable' (or install pnpm@$PNPM_VERSION otherwise) and try again" >&2
+    exit 1
+fi
+echo "[pnpm version: $PNPM_VERSION]"
+
 # generate sources
 echo "[core build dependencies]"
 python3 ../flatpak-builder-tools/cargo/flatpak-cargo-generator.py -o generated/sources-rust.json ../deltachat-core-rust/Cargo.lock
 
 echo "[desktop build dependencies]"
+
+# the recorded indices are only additive, while the manifest listing them is
+# rewritten from scratch below - without this, leftovers from earlier runs stay
+# in git without ever being installed into the sandbox
+rm -rf generated/proxy-registry-cache-indices
 
 # start proxy registry that records the packages that are fetched
 node record.mjs &
@@ -103,17 +125,7 @@ cat >generated/core-git.json <<EOL
 EOL
 
 echo "[pnpm package to install pnpm]"
-# This has to be the version desktop declares, not a version of our choosing:
-# since pnpm 10 the workspace settings (overrides, supportedArchitectures, ...)
-# live in pnpm-workspace.yaml, which older pnpm ignores without complaining - the
-# offline install in the sandbox then fails --frozen-lockfile because the lockfile
-# was resolved with settings it never saw.
-PNPM_VERSION=$(jq -r '(.packageManager // "") | split("+")[0] | sub("^pnpm@"; "")' ../deltachat-desktop/package.json)
-if [ -z "$PNPM_VERSION" ]; then
-    echo "no packageManager field in ../deltachat-desktop/package.json" >&2
-    exit 1
-fi
-echo "[pnpm version: $PNPM_VERSION]"
+# $PNPM_VERSION is the version desktop declares and the one this run used, see above
 result=$(npm view "pnpm@$PNPM_VERSION" --json | jq "{url: .dist.tarball, integrity: .dist.integrity}")
 
 # Use Python to decode the integrity hash and construct the manifest source item
