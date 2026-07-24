@@ -1,59 +1,59 @@
 {
   "_id": "dmg-builder",
-  "_rev": "342-dc49d4ed83d9b63ad6785c4616563f52",
+  "_rev": "343-ebc86f747454bec45541a234954c6a63",
   "name": "dmg-builder",
   "dist-tags": {
     "latest": "26.15.3",
-    "next": "27.0.0-alpha.5",
+    "next": "27.0.0-alpha.6",
     "v26": "26.15.7"
   },
   "versions": {
     "26.15.7": {
       "name": "dmg-builder",
       "version": "26.15.7",
-      "main": "out/dmgUtil.js",
       "license": "MIT",
-      "bugs": "https://github.com/electron-userland/electron-builder/issues",
-      "dependencies": {
-        "fs-extra": "^10.1.0",
-        "js-yaml": "^4.1.0",
-        "app-builder-lib": "26.15.7",
-        "builder-util": "26.15.3"
-      },
-      "devDependencies": {
-        "@types/fs-extra": "9.0.13",
-        "@types/js-yaml": "4.0.3",
-        "temp-file": "3.4.0"
-      },
-      "typings": "./out/dmg.d.ts",
-      "_nodeVersion": "22.23.1",
       "_id": "dmg-builder@26.15.7",
+      "bugs": "https://github.com/electron-userland/electron-builder/issues",
       "dist": {
-        "integrity": "sha512-rfo1YyAWO0L3cZLKCqKQiLYbW6ZXebRUfK0kWp4oXxO7dDFLrf7alRkWImNuXvZVQhs6Idzy++cwOk8I+xPDhw==",
         "shasum": "cb16f9ef213c1e7779f61e48c758bc7e8e9f8b9a",
         "tarball": "http://localhost:3000/dmg-builder/-/dmg-builder-26.15.7.tgz",
         "fileCount": 18,
-        "unpackedSize": 119331,
+        "integrity": "sha512-rfo1YyAWO0L3cZLKCqKQiLYbW6ZXebRUfK0kWp4oXxO7dDFLrf7alRkWImNuXvZVQhs6Idzy++cwOk8I+xPDhw==",
+        "signatures": [
+          {
+            "sig": "MEUCIEjgqt+A1wWh2sdyo0Fy1dYSjBrEnlz8+hRI8YjIMj6iAiEAjKgYNn37PKM3Bg+SMmDyoZRtfrywnCdaouMRLfeDIcQ=",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
         "attestations": {
           "url": "http://localhost:3000/-/npm/v1/attestations/dmg-builder@26.15.7",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEUCIEjgqt+A1wWh2sdyo0Fy1dYSjBrEnlz8+hRI8YjIMj6iAiEAjKgYNn37PKM3Bg+SMmDyoZRtfrywnCdaouMRLfeDIcQ="
-          }
-        ]
+        "unpackedSize": 119331
       },
+      "main": "out/dmgUtil.js",
+      "typings": "./out/dmg.d.ts",
       "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "22.23.1",
+      "dependencies": {
+        "js-yaml": "^4.1.0",
+        "fs-extra": "^10.1.0",
+        "builder-util": "26.15.3",
+        "app-builder-lib": "26.15.7"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "temp-file": "3.4.0",
+        "@types/js-yaml": "4.0.3",
+        "@types/fs-extra": "9.0.13"
+      }
     }
   },
   "time": {
     "created": "2017-08-25T07:26:17.271Z",
-    "modified": "2026-07-18T07:08:34.810Z",
+    "modified": "2026-07-24T14:16:06.890Z",
     "26.15.7": "2026-07-18T07:08:34.428Z"
   },
   "license": "MIT"
