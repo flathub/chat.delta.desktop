@@ -140,16 +140,19 @@ modules:
       - python --version
       - pnpm config set registry http://localhost:3000 --location project
       # install the core we build locally instead of the prebuild
-      # patch package.json to exclude the extra architectures that we excluded when building the pnpm store
-      - |
-        jq ".pnpm.supportedArchitectures.os = [\"linux\"] | .pnpm.supportedArchitectures.cpu = [\"x64\",\"arm64\"]" package.json > package.new.json
-        mv package.new.json package.json
+      # exclude the extra architectures that we excluded when building the pnpm store
+      - python3 ../tool_limit_architectures.py pnpm-workspace.yaml
       # install deps from store
+      # `kill` must not be the last command, otherwise a failing install is
+      # reported as success and the build only breaks later on, with an empty
+      # node_modules and a much less obvious error
       - |
         node ../replay.mjs &
         REPLAY_PID=$!
-        env DEBUG="*" pnpm install --prefer-offline --frozen-lockfile
+        status=0
+        env DEBUG="*" pnpm install --prefer-offline --frozen-lockfile || status=$?
         kill $REPLAY_PID
+        exit $status
       # install the core we build locally instead of the prebuilds
       # link script expect it to be at `../deltachat-core-rust` so we link it
       - ln -s /app/dc-core ../deltachat-core-rust
@@ -157,8 +160,10 @@ modules:
       - |
         node ../replay.mjs &
         REPLAY_PID=$!
-        ./bin/link_core/link_local.sh
+        status=0
+        ./bin/link_core/link_local.sh || status=$?
         kill $REPLAY_PID
+        exit $status
       - mkdir -p /app/delta
 
       # build & package dc desktop
@@ -196,6 +201,9 @@ modules:
       
       - type: file
         path: replay.mjs
+
+      - type: file
+        path: tool_limit_architectures.py
 
       - type: file
         path: chat.delta.desktop.256.png

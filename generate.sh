@@ -6,6 +6,9 @@ set -e
 CORE_CHECKOUT=v2.56.0
 DESKTOP_CHECKOUT=v2.56.0
 
+# this script cd's around, so remember where our own files live
+REPO_DIR=$(cd "$(dirname "$0")" && pwd)
+
 # this script needs:
 # environment:
 # - serveral repos checked out next to this repo (you may run setup.sh to do that for you)
@@ -53,10 +56,9 @@ pnpm config set registry http://localhost:3000 --location project
 rm -r $(pwd)/.pnpm-store || true
 pnpm config set store-dir $(pwd)/.pnpm-store --location project
 echo "[desktop deps: ignore other architectures]"
-# desktop modify package json to exclude all unused architectures
-# the temporary file `package.new.json` is nessesary because jq does not support in place editing of files.
-jq ".pnpm.supportedArchitectures.os = [\"linux\"] | .pnpm.supportedArchitectures.cpu = [\"x64\", \"arm64\"]" package.json > package.new.json
-mv package.new.json package.json
+# the flatpak sandbox has to apply the exact same narrowing, so this lives in a
+# script that both this file and the manifest call
+python3 "$REPO_DIR/tool_limit_architectures.py" pnpm-workspace.yaml
 echo "[desktop deps: fetching]"
 rm -rf .pnpm-store node_modules || true
 pnpm i --frozen-lockfile
@@ -101,7 +103,18 @@ cat >generated/core-git.json <<EOL
 EOL
 
 echo "[pnpm package to install pnpm]"
-result=$(npm view pnpm@9.11.0 --json | jq "{url: .dist.tarball, integrity: .dist.integrity}")
+# This has to be the version desktop declares, not a version of our choosing:
+# since pnpm 10 the workspace settings (overrides, supportedArchitectures, ...)
+# live in pnpm-workspace.yaml, which older pnpm ignores without complaining - the
+# offline install in the sandbox then fails --frozen-lockfile because the lockfile
+# was resolved with settings it never saw.
+PNPM_VERSION=$(jq -r '(.packageManager // "") | split("+")[0] | sub("^pnpm@"; "")' ../deltachat-desktop/package.json)
+if [ -z "$PNPM_VERSION" ]; then
+    echo "no packageManager field in ../deltachat-desktop/package.json" >&2
+    exit 1
+fi
+echo "[pnpm version: $PNPM_VERSION]"
+result=$(npm view "pnpm@$PNPM_VERSION" --json | jq "{url: .dist.tarball, integrity: .dist.integrity}")
 
 # Use Python to decode the integrity hash and construct the manifest source item
 python3 - <<EOL > generated/pnpm.json
