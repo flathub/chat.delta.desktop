@@ -19,6 +19,20 @@ const pnpmVersion = basename(pnpmArchiveUrl)
   .replace(/\.tgz$/, "");
 stripInfo["pnpm"] = [...(stripInfo["pnpm"] ?? []), pnpmVersion];
 
+/* The strip info records versions whose tarballs were downloaded. link_local.sh's
+`pnpm add` additionally fetches metadata for packages that are never downloaded
+(optional platform packages like @esbuild/aix-ppc64), so their indices have no
+strip entry and would be kept in full - hundreds of versions each. The lockfile
+pins exactly which versions the sandbox can resolve, so keep those. */
+const lockfile = await readFile("../deltachat-desktop/pnpm-lock.yaml", "utf-8");
+// keys of the packages/snapshots sections: `  '@scope/name@1.2.3':` or `  name@1.2.3:`
+for (const match of lockfile.matchAll(
+  /^ {2}'?((?:@[^\s'@/]+\/)?[^\s'@/]+)@([^\s':()]+)'?:/gm,
+)) {
+  const [, name, version] = match;
+  stripInfo[name] = [...(stripInfo[name] ?? []), version];
+}
+
 /* The strip info is keyed by the package name as it appears in tarball urls
 (`/@scope/name/-/name-1.0.0.tgz`), but package metadata is requested under both
 `/@scope/name` and `/@scope%2Fname` depending on the client - pnpm >=11 uses the

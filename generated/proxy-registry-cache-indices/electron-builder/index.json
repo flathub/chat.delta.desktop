@@ -1,74 +1,74 @@
 {
   "_id": "electron-builder",
-  "_rev": "1534-d1a434e733ad0e61be7e9d61d6d5bdb1",
+  "_rev": "1535-f8288034f6c1a7c1c339ae31ab20c4f5",
   "name": "electron-builder",
   "dist-tags": {
     "latest": "26.15.3",
-    "next": "27.0.0-alpha.5",
+    "next": "27.0.0-alpha.6",
     "v26": "26.15.7"
   },
   "versions": {
     "26.15.7": {
       "name": "electron-builder",
       "version": "26.15.7",
-      "main": "out/index.js",
+      "license": "MIT",
+      "_id": "electron-builder@26.15.7",
+      "bugs": "https://github.com/electron-userland/electron-builder/issues",
       "bin": {
         "electron-builder": "./cli.js",
         "install-app-deps": "./install-app-deps.js"
       },
-      "engines": {
-        "node": ">=14.0.0"
-      },
-      "license": "MIT",
-      "bugs": "https://github.com/electron-userland/electron-builder/issues",
-      "dependencies": {
-        "chalk": "^4.1.2",
-        "ci-info": "^4.2.0",
-        "fs-extra": "^10.1.0",
-        "lazy-val": "^1.0.5",
-        "simple-update-notifier": "2.0.0",
-        "yargs": "^17.6.2",
-        "builder-util-runtime": "9.7.0",
-        "dmg-builder": "26.15.7",
-        "builder-util": "26.15.3",
-        "app-builder-lib": "26.15.7"
-      },
-      "devDependencies": {
-        "@types/fs-extra": "9.0.13",
-        "@types/yargs": "^17.0.16"
-      },
-      "typings": "./out/index.d.ts",
-      "publishConfig": {
-        "tag": "next"
-      },
-      "_nodeVersion": "22.23.1",
-      "_id": "electron-builder@26.15.7",
       "dist": {
-        "integrity": "sha512-DBpaNzxsPs1BvEblzFoNriSbzsBqDCy/gseIngeEhYzQG1IxfB7Hvc2tBBVmpWE2BTQGP9J1RrAvDT+Vc/uAxg==",
         "shasum": "e697e616ca972e207d8d44383bd858b10c45a78e",
         "tarball": "http://localhost:3000/electron-builder/-/electron-builder-26.15.7.tgz",
         "fileCount": 31,
-        "unpackedSize": 84535,
+        "integrity": "sha512-DBpaNzxsPs1BvEblzFoNriSbzsBqDCy/gseIngeEhYzQG1IxfB7Hvc2tBBVmpWE2BTQGP9J1RrAvDT+Vc/uAxg==",
+        "signatures": [
+          {
+            "sig": "MEYCIQCN6UfudUQmBBkk5fNYgo7axxIetpApMyFRQrvxGVCfjQIhAKTUrF1BoSyB+ST/NutHsKWMIqvW5mQQjTWG4nb+71Xf",
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
+          }
+        ],
         "attestations": {
           "url": "http://localhost:3000/-/npm/v1/attestations/electron-builder@26.15.7",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "signatures": [
-          {
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
-            "sig": "MEYCIQCN6UfudUQmBBkk5fNYgo7axxIetpApMyFRQrvxGVCfjQIhAKTUrF1BoSyB+ST/NutHsKWMIqvW5mQQjTWG4nb+71Xf"
-          }
-        ]
+        "unpackedSize": 84535
       },
+      "main": "out/index.js",
+      "engines": {
+        "node": ">=14.0.0"
+      },
+      "typings": "./out/index.d.ts",
       "directories": {},
-      "_hasShrinkwrap": false
+      "_nodeVersion": "22.23.1",
+      "dependencies": {
+        "chalk": "^4.1.2",
+        "yargs": "^17.6.2",
+        "ci-info": "^4.2.0",
+        "fs-extra": "^10.1.0",
+        "lazy-val": "^1.0.5",
+        "dmg-builder": "26.15.7",
+        "builder-util": "26.15.3",
+        "app-builder-lib": "26.15.7",
+        "builder-util-runtime": "9.7.0",
+        "simple-update-notifier": "2.0.0"
+      },
+      "publishConfig": {
+        "tag": "next"
+      },
+      "_hasShrinkwrap": false,
+      "devDependencies": {
+        "@types/yargs": "^17.0.16",
+        "@types/fs-extra": "9.0.13"
+      }
     }
   },
   "time": {
     "created": "2015-05-26T13:08:36.993Z",
-    "modified": "2026-07-18T07:08:38.029Z",
+    "modified": "2026-07-24T14:16:13.316Z",
     "5.6.0": "2016-06-21T19:52:08.000Z",
     "0.0.0-semantic-release": "2016-07-31T11:56:50.973Z",
     "26.15.7": "2026-07-18T07:08:37.761Z"

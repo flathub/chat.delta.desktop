@@ -35,6 +35,10 @@ const server = createServer((req, res) => {
         res.writeHead(400)
         return res.end('URL missing')
     }
+    // health check for generate.sh - answered locally, nothing gets recorded
+    if (req.url === '/__alive') {
+        return res.end('ok')
+    }
     // console.log(`Request start URL: ${req.method} ${req.url}`);
 
     const proxyRequest = request({
@@ -61,7 +65,11 @@ const server = createServer((req, res) => {
 
                 if (req.url) {
                     if (!req.url.endsWith(".tgz")) {
-                        const filename = join(req.url, 'index.json')
+                        // pnpm requests scoped packuments in encoded form (/@scope%2Fname),
+                        // but replay.mjs decodes the request path before hitting the disk -
+                        // store under the decoded path or replay answers 404
+                        const decodedUrl = decodeURIComponent(req.url)
+                        const filename = join(decodedUrl, 'index.json')
                         const dest = join(
                             'generated/proxy-registry-cache-indices/',
                             dirname(filename))
@@ -109,7 +117,7 @@ const server = createServer((req, res) => {
                         flatpakManifestIndices.push({
                             type: "file",
                             path: the_path,
-                            dest: join('npm-registry-proxy-offline-cache', req.url),
+                            dest: join('npm-registry-proxy-offline-cache', decodedUrl),
                             "dest-filename": basename(the_path)
                         })
                     }
@@ -194,9 +202,15 @@ async function save() {
     const arrayManifest = Object.keys(flatpakManifest).map(url => flatpakManifest[url])
     arrayManifest.sort((a, b) => a.url.localeCompare(b.url))
 
-    flatpakManifestIndices.sort((a, b) => a.path.localeCompare(b.path))
+    // the same packument can be recorded several times (pnpm asks during
+    // link_local.sh's pnpm add, and the force-download above asks again) -
+    // keep one manifest entry per file
+    const seenIndexPaths = new Set()
+    const dedupedIndices = flatpakManifestIndices.filter(entry =>
+        seenIndexPaths.has(entry.path) ? false : (seenIndexPaths.add(entry.path), true))
+    dedupedIndices.sort((a, b) => a.path.localeCompare(b.path))
 
-    writeFileSync('generated/proxy-registry-cache-manifest.json', JSON.stringify([...arrayManifest, ...flatpakManifestIndices], null, 2), 'utf-8')
+    writeFileSync('generated/proxy-registry-cache-manifest.json', JSON.stringify([...arrayManifest, ...dedupedIndices], null, 2), 'utf-8')
     writeFileSync('generated/used_versions_strip_info.json', JSON.stringify(usedVersions, null, 2), 'utf-8')
 }
 
