@@ -132,7 +132,15 @@ modules:
       - pwd
       - ls
       # fixup manually installed pnpm package (why manual? because global npm install is not possible because global node modules dir is read-only)
-      - mv ../pnpm/bin/pnpm.cjs ../pnpm/bin/pnpm
+      # the executable entry point moved from bin/pnpm.cjs (pnpm 9) to bin/pnpm.mjs
+      # (in pnpm 11 pnpm.cjs is only a non-executable shim for old corepack), so
+      # take it from package.json instead of hardcoding it. Symlinked rather than
+      # renamed, so node still sees the .mjs extension and treats it as ESM.
+      - |
+        PNPM_ROOT=$(cd ../pnpm && pwd)
+        PNPM_BIN=$(jq -r '.bin.pnpm' "$PNPM_ROOT/package.json")
+        chmod +x "$PNPM_ROOT/$PNPM_BIN"
+        ln -sf "$PNPM_ROOT/$PNPM_BIN" "$PNPM_ROOT/bin/pnpm"
       - ls -lah /run/build/
       - mkdir -p $TMPDIR
       - node --version
