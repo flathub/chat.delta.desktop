@@ -1,0 +1,78 @@
+{
+  "_id": "cross-dirname",
+  "_rev": "5-59ea1731613ddef3d9c69e7e69cf1c42",
+  "name": "cross-dirname",
+  "dist-tags": {
+    "latest": "0.1.0"
+  },
+  "versions": {
+    "0.1.0": {
+      "name": "cross-dirname",
+      "version": "0.1.0",
+      "type": "commonjs",
+      "main": "./dist/cjs/index.cjs",
+      "module": "./dist/esm/index.mjs",
+      "types": "./dist/types/index.d.ts",
+      "exports": {
+        ".": {
+          "require": "./dist/cjs/index.cjs",
+          "default": "./dist/esm/index.mjs"
+        }
+      },
+      "scripts": {
+        "clear": "rm -rf dist",
+        "build": "npm run clear && npm run build:cjs && npm run build:esm && npm run build:types",
+        "build:cjs": "tsc && mv ./dist/cjs/index.js ./dist/cjs/index.cjs",
+        "build:esm": "tsc --project tsconfig.esm.json && mv ./dist/esm/index.js ./dist/esm/index.mjs",
+        "build:types": "tsc --project tsconfig.types.json",
+        "test": "npm run test:node && npm run test:deno && npm run test:gjs && npm run test:browser",
+        "test:node": "mocha test/node",
+        "test:gjs": "node test/browser/esbuild.mjs && gjs -m ./test/gjs/base.test.mjs",
+        "test:deno": "deno test ./test/deno/base.test.mjs",
+        "test:browser": "npm run test:browser:esm && npm run test:browser:cjs",
+        "test:browser:esm": "node test/browser/esbuild.mjs && mocha-headless-chrome --timeout 120000 --polling 1000 -f ./test/browser/index.html",
+        "test:browser:cjs": "node test/browser/esbuild.cjs && mocha-headless-chrome --timeout 120000 --polling 1000 -f ./test/browser/index.html"
+      },
+      "url": "https://github.com/JumpLink/cross-dirname",
+      "license": "MIT",
+      "devDependencies": {
+        "chai": "^4.3.6",
+        "cross-dirname": "^0.0.6",
+        "esbuild": "^0.14.49",
+        "esm": "^3.2.25",
+        "mocha": "^10.0.0",
+        "mocha-headless-chrome": "^4.0.0",
+        "typescript": "^4.7.4"
+      },
+      "gitHead": "cf2a0674f338e21e53d752933e748849399cd104",
+      "bugs": {
+        "url": "https://github.com/JumpLink/cross-dirname/issues"
+      },
+      "_id": "cross-dirname@0.1.0",
+      "_nodeVersion": "16.16.0",
+      "_npmVersion": "8.11.0",
+      "dist": {
+        "integrity": "sha512-+R08/oI0nl3vfPcqftZRpytksBXDzOUveBq/NBVx0sUp1axwzPQrKinNx5yd5sxPu8j1wIy8AfnVQ+5eFdha6Q==",
+        "shasum": "b899599f30a5389f59e78c150e19f957ad16a37c",
+        "tarball": "http://localhost:3000/cross-dirname/-/cross-dirname-0.1.0.tgz",
+        "fileCount": 5,
+        "unpackedSize": 10449,
+        "signatures": [
+          {
+            "keyid": "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA",
+            "sig": "MEUCIHMY7Ji9DJKMm/yuHTeuTfcNxocPSs4HVJTjK+p8bAsaAiEAjl3ORDX2Y7XLtdqaHB7FN7vBQ3iC0QPtPnEA0fCAsDU="
+          }
+        ],
+        "npm-signature": "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v4.10.10\r\nComment: https://openpgpjs.org\r\n\r\nwsFzBAEBCAAGBQJi2s2YACEJED1NWxICdlZqFiEECWMYAoorWMhJKdjhPU1b\r\nEgJ2VmohOA/+IhPPGR6MYqjqtmo3bM6HpNE7DmNIeuDkU64paezdGkXVQD5h\r\nGjcRPgAh2Dkk0dpfRLd0Nw+BSHs1b0Ld6ftAfSgCesHBfzKgpeKyDvVQRPvi\r\naMLfyF8kCMzD/YsEMpU0nwwSLh39Sm9iV01tNUudwvphs0L2eQkw6TbCm88K\r\nxYtwjmNUOYvBWhfEWaF/NmSWsZNqzEswNjRCc4Uia0JPVCoZlJS4yGxA2L+W\r\nbhWba4lDt84nk5TdBaaMpyIO/X1lfnhVx9RG15jrJ9q7a2EGs5EupD0peE71\r\napNsOEjO8Z4q5PO6qh2kzzVrt4EAMtmfopwPjkCY6cbceGSLFI4RzFKYRDHd\r\n8BPJnBq2AqNjH2uFE7tNhCLFGvDLSSGdgYmKdQFewnHLjZoOu1zaqF1gGtUF\r\ngWhc//u7VIqIYk2zLvOkWeFc3hqsv/uQWsR49SEFaUjGkdi2EyIYZ8XuVpt6\r\nhbdEQfj8KXoQzqQr+X4Vl8CDIEJD48gHIPs4RoB/36svzA9Z4BomHOuDVxgR\r\nrcTQNgjLl4/SwxfCFS2r8379ukzcEirkRysAJh046WsFYNyp949IQAxN92yE\r\nJbXHyhPCPENBK/eEHi8xBwfP5Rmlh9msUJTYFXUA4+5837y4MsMx3U6LwrLS\r\nElxmgJsr2gSC02zCfoKcGqNsUszKmiMWCNA=\r\n=fPXp\r\n-----END PGP SIGNATURE-----\r\n"
+      },
+      "directories": {},
+      "_hasShrinkwrap": false
+    }
+  },
+  "time": {
+    "created": "2022-07-21T08:36:54.600Z",
+    "modified": "2022-07-22T16:17:28.364Z",
+    "0.1.0": "2022-07-22T16:17:28.289Z"
+  },
+  "license": "MIT"
+}
