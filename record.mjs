@@ -35,6 +35,10 @@ const server = createServer((req, res) => {
         res.writeHead(400)
         return res.end('URL missing')
     }
+    // health check for generate.sh - answered locally, nothing gets recorded
+    if (req.url === '/__alive') {
+        return res.end('ok')
+    }
     // console.log(`Request start URL: ${req.method} ${req.url}`);
 
     const proxyRequest = request({

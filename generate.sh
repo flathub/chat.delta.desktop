@@ -72,9 +72,30 @@ echo "[desktop build dependencies]"
 # in git without ever being installed into the sandbox
 rm -rf generated/proxy-registry-cache-indices
 
+# Clean up first in case an old record.mjs is still running
+# (-x: only an exact command-line match, so this can never hit other processes)
+pkill -xf "node record.mjs" 2>/dev/null && sleep 1 || true
+
 # start proxy registry that records the packages that are fetched
 node record.mjs &
 PID_RECORD=$!
+
+# wait until it actually serves, and abort right away if it died on startup
+# instead of recording into the void
+for i in $(seq 1 20); do
+    if curl -sf http://localhost:3000/__alive >/dev/null; then
+        break
+    fi
+    if ! kill -0 $PID_RECORD 2>/dev/null; then
+        echo "record.mjs died on startup (see error above)" >&2
+        exit 1
+    fi
+    if [ "$i" = 20 ]; then
+        echo "record.mjs did not come up on port 3000" >&2
+        exit 1
+    fi
+    sleep 0.5
+done
 
 cd ../deltachat-desktop
 pnpm config set registry http://localhost:3000 --location project
