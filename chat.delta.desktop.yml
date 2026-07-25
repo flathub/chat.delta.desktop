@@ -1,8 +1,8 @@
 app-id: chat.delta.desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: '25.08'
+base-version: "25.08"
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node22
@@ -12,14 +12,14 @@ finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --share=ipc
-  - --device=all         # Webcam access for QR code scans and DRI for OpenGL
-  - --socket=pulseaudio  # Record and play voice messages
+  - --device=all # Webcam access for QR code scans and DRI for OpenGL
+  - --socket=pulseaudio # Record and play voice messages
   - --filesystem=xdg-documents
   - --filesystem=xdg-download
   - --filesystem=xdg-music
   - --filesystem=xdg-pictures
   - --filesystem=xdg-videos
-  - --filesystem=host    # workaround until xdg-desktop-portal is released: https://github.com/flatpak/xdg-desktop-portal/issues/1445
+  - --filesystem=host # workaround until xdg-desktop-portal is released: https://github.com/flatpak/xdg-desktop-portal/issues/1445
   - --share=network
   - --talk-name=org.freedesktop.Notifications # needed for dbus notification, as the notification portal crashed because of a bug in electron https://github.com/electron/electron/issues/40461
   - --talk-name=com.canonical.AppMenu.Registrar # fix https://github.com/flathub/chat.delta.desktop/issues/118
@@ -29,20 +29,19 @@ finish-args:
   - --env=NOTIFY_IGNORE_PORTAL=1 # fix https://github.com/deltachat/deltachat-desktop/issues/3590
 
 cleanup:
-    - /app/dc-core
-    # Desktop___________________
-    - /delta/resources/app/node_modules/napi-macros
-    # frontend node_modules not needed at runtime - would get easier if dc-desktop would adopt the 2 package.json project structure
-    # every react addon
-    - /delta/resources/app/node_modules/react-*
-    - /delta/resources/app/node_modules/classnames
-    - /delta/resources/app/node_modules/use-debounce
-    - /delta/resources/app/node_modules/create-react-context
-    # need testing?
-    - /delta/resources/app/node_modules/resize-observer-polyfill
-    # momentjs is currently only used by renderer process
-    - /delta/resources/app/node_modules/moment
-
+  - /app/dc-core
+  # Desktop___________________
+  - /delta/resources/app/node_modules/napi-macros
+  # frontend node_modules not needed at runtime - would get easier if dc-desktop would adopt the 2 package.json project structure
+  # every react addon
+  - /delta/resources/app/node_modules/react-*
+  - /delta/resources/app/node_modules/classnames
+  - /delta/resources/app/node_modules/use-debounce
+  - /delta/resources/app/node_modules/create-react-context
+  # need testing?
+  - /delta/resources/app/node_modules/resize-observer-polyfill
+  # momentjs is currently only used by renderer process
+  - /delta/resources/app/node_modules/moment
 
 modules:
   - name: deltachat-core-rust
@@ -99,7 +98,7 @@ modules:
             url: https://github.com/mozilla/sccache/releases/download/v0.2.15/sccache-v0.2.15-aarch64-unknown-linux-musl.tar.gz
             sha256: 90d91d21a767e3f558196dbd52395f6475c08de5c4951a4c8049575fa6894489
             only-arches: ["aarch64"]
-      
+
     sources:
       - generated/core-git.json
       - generated/sources-rust.json
@@ -114,7 +113,7 @@ modules:
     buildsystem: simple
     build-options:
       append-path: /usr/lib/sdk/node22/bin:/run/build/delta/pnpm/bin
-      env:      
+      env:
         NPM_CONFIG_LOGLEVEL: info
 
         XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
@@ -164,7 +163,7 @@ modules:
       # install the core we build locally instead of the prebuilds
       # link script expect it to be at `../deltachat-core-rust` so we link it
       - ln -s /app/dc-core ../deltachat-core-rust
-      - sed -i "s/pnpm add/pnpm add --prefer-offline --frozen-lockfile/g" ./bin/link_core/link_local.sh
+      - sed -i "s/pnpm add/pnpm add --prefer-offline/g" ./bin/link_core/link_local.sh
       - |
         node ../replay.mjs &
         REPLAY_PID=$!
@@ -173,7 +172,6 @@ modules:
         kill $REPLAY_PID
         exit $status
       - mkdir -p /app/delta
-
       # build & package dc desktop
       - pnpm --filter @deltachat-desktop/target-electron build4production
       - pnpm --filter @deltachat-desktop/target-electron pack:generate_config
@@ -192,7 +190,7 @@ modules:
       - install -Dm 0644 ../chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
       - install -Dm 0644 ../delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
     subdir: main
-    sources: 
+    sources:
       # Electron
       # the binaries are already included in the pnpm store
 
@@ -206,7 +204,7 @@ modules:
 
       - type: file
         path: chat.delta.desktop.desktop
-      
+
       - type: file
         path: replay.mjs
 
@@ -228,12 +226,10 @@ modules:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
           - exec zypak-wrapper /app/delta/deltachat-desktop "$@"
 
-
       # dependencies
       - generated/proxy-registry-cache-manifest.json
       - generated/pnpm.json
       - generated/electron-cache-manifest.json
-
 
       # https://github.com/deltachat/deltachat-desktop/pull/1125
       - type: file
@@ -242,4 +238,3 @@ modules:
       - type: file
         path: mime/deltachat-desktop.xml
         dest: mime
-

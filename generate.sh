@@ -37,6 +37,9 @@ cd -
 echo "[git checkout desktop]"
 cd ../deltachat-desktop
 git fetch --all --tags
+# discard tracked-file modifications a previous (possibly failed) run left
+# behind (sed-ed link_local.sh, link: entries from pnpm add, ...)
+git checkout -- .
 git checkout $DESKTOP_CHECKOUT
 git clean -d -x -f
 DESKTOP_COMMIT_HASH=$(git rev-parse HEAD)
@@ -96,8 +99,8 @@ echo "[desktop deps: record link_local.sh metadata]"
 # every package in the lockfile - including optional platform packages
 # (@esbuild/aix-ppc64, ...) whose tarballs are never downloaded. The replay
 # proxy can only serve what was recorded, so run the exact same commands here:
-# same sed as in the manifest, same script.
-sed -i "s/pnpm add/pnpm add --prefer-offline --frozen-lockfile/g" ./bin/link_core/link_local.sh
+git checkout -- ./bin/link_core/link_local.sh
+sed -i "s/pnpm add/pnpm add --prefer-offline/g" ./bin/link_core/link_local.sh
 env CORE_REPO_CHECKOUT=../deltachat-core-rust ./bin/link_core/link_local.sh
 # undo everything the recording changed in the desktop checkout (sed above,
 # link: entries in package.json/lockfile) - tool_strip.mjs later reads the
