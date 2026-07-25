@@ -75,7 +75,11 @@ modules:
       - npm cache verify
       - cd deltachat-jsonrpc/typescript && env DEBUG="*" npm install --offline --verbose && npm run build
       - python3 deltachat-rpc-server/npm-package/scripts/make_local_dev_version.py
-      - mkdir -p /app/dc-core/deltachat-jsonrpc
+      # /app/dc-core only - if the deltachat-jsonrpc dir already exists, the
+      # `cp -r` below copies INTO it (nested one level deeper), link_local.sh's
+      # `link:` then points at a path that does not exist, and pnpm silently
+      # creates a dangling symlink instead of failing
+      - mkdir -p /app/dc-core
       - sed -i 's|/run/build/deltachat-core-rust|/app/dc-core/deltachat-rpc-server|g' deltachat-rpc-server/npm-package/package.json
       - cp -r deltachat-jsonrpc /app/dc-core/deltachat-jsonrpc
       - cp -r deltachat-rpc-server /app/dc-core/deltachat-rpc-server
@@ -171,6 +175,11 @@ modules:
         ./bin/link_core/link_local.sh || status=$?
         kill $REPLAY_PID
         exit $status
+      # pnpm does not verify `link:` targets - a wrong path above yields a
+      # dangling symlink that only surfaces much later as confusing type
+      # errors, so fail right here instead (test -e follows the symlink)
+      - test -e packages/target-electron/node_modules/@deltachat/jsonrpc-client/package.json
+      - test -e packages/target-electron/node_modules/@deltachat/stdio-rpc-server/package.json
       - mkdir -p /app/delta
       # build & package dc desktop
       - pnpm --filter @deltachat-desktop/target-electron build4production
