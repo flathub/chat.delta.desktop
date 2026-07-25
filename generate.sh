@@ -82,8 +82,27 @@ echo "[desktop deps: ignore other architectures]"
 # script that both this file and the manifest call
 python3 "$REPO_DIR/tool_limit_architectures.py" pnpm-workspace.yaml
 echo "[desktop deps: fetching]"
+# pnpm keeps an on-disk packument cache and may answer metadata requests from it
+# without ever asking the (recording) registry - anything served from that cache
+# is missing from the recording and 404s in the sandbox, so start from zero
+rm -rf "${XDG_CACHE_HOME:-$HOME/.cache}/pnpm/metadata"
 rm -rf .pnpm-store node_modules || true
 pnpm i --frozen-lockfile
+
+echo "[desktop deps: record link_local.sh metadata]"
+# The sandbox runs link_local.sh (a series of `pnpm add`) after the offline
+# install. Unlike the frozen-lockfile install above, which only downloads
+# tarballs by URL, `pnpm add` re-resolves the graph and requests the metadata of
+# every package in the lockfile - including optional platform packages
+# (@esbuild/aix-ppc64, ...) whose tarballs are never downloaded. The replay
+# proxy can only serve what was recorded, so run the exact same commands here:
+# same sed as in the manifest, same script.
+sed -i "s/pnpm add/pnpm add --prefer-offline --frozen-lockfile/g" ./bin/link_core/link_local.sh
+env CORE_REPO_CHECKOUT=../deltachat-core-rust ./bin/link_core/link_local.sh
+# undo everything the recording changed in the desktop checkout (sed above,
+# link: entries in package.json/lockfile) - tool_strip.mjs later reads the
+# pristine lockfile, and the next generate.sh run needs a clean tree
+git checkout -- .
 
 # make the proxy registry save what it recorded, and wait for it to finish:
 # record.mjs writes the manifest and used_versions_strip_info.json from its async
