@@ -127,9 +127,14 @@ modules:
         VERSION_INFO_GIT_REF: "flathub"
         NO_ASAR: "true"
 
-        ELECTRON_CONFIG_CACHE: /run/build/delta/cache/electron
-        electron_config_cache: /run/build/delta/cache/electron
-        ELECTRON_CACHE: /run/build/delta/cache/electron
+        # one shared electron download cache, prefilled by
+        # generated/electron-cache-manifest.json (see generate_electron_dependency.mjs):
+        # electron's postinstall reads electron_config_cache, electron-builder >= 26
+        # ignores ELECTRON_CACHE and uses @electron/get's default root
+        # $XDG_CACHE_HOME/electron - which is exactly this directory
+        ELECTRON_CONFIG_CACHE: /run/build/delta/flatpak-node/cache/electron
+        electron_config_cache: /run/build/delta/flatpak-node/cache/electron
+        ELECTRON_CACHE: /run/build/delta/flatpak-node/cache/electron
 
     build-commands:
       - pwd
@@ -184,6 +189,14 @@ modules:
       # build & package dc desktop
       - pnpm --filter @deltachat-desktop/target-electron build4production
       - pnpm --filter @deltachat-desktop/target-electron pack:generate_config
+      # electron-builder >= 26 re-verifies the cached electron zip against
+      # SHASUMS256.txt and always fetches that file fresh from the network
+      # (@electron/get downloads it with cacheMode Bypass) - impossible in the
+      # offline sandbox. The zip's sha256 is already pinned and verified by
+      # flatpak-builder itself (generated/electron-cache-manifest.json), so the
+      # online re-verification adds nothing. Must run after pack:generate_config,
+      # which regenerates electron-builder.json5.
+      - sed -i 's/^{/{"electronDownload":{"isVerifyChecksum":false},/' packages/target-electron/electron-builder.json5
       - pnpm --filter @deltachat-desktop/target-electron pack:patch-node-modules
       - pnpm --filter @deltachat-desktop/target-electron pack:linux:dir
 
