@@ -185,6 +185,24 @@ modules:
       # errors, so fail right here instead (test -e follows the symlink)
       - test -e packages/target-electron/node_modules/@deltachat/jsonrpc-client/package.json
       - test -e packages/target-electron/node_modules/@deltachat/stdio-rpc-server/package.json
+      # A `link:` dependency has no lockfile snapshot, so electron-builder's
+      # packager never sees the linked jsonrpc-client/stdio-rpc-server runtime
+      # deps (yerpc, isomorphic-ws, ...) - it packages only what its resolver
+      # finds in the pnpm graph, and the app dies at runtime with "Cannot find
+      # package 'yerpc'". Add those deps to target-electron's graph (pinned to the
+      # versions already in the lockfile) and install. Same two commands run in
+      # generate.sh, so this resolves entirely from the recorded cache.
+      - |
+        node ../replay.mjs &
+        REPLAY_PID=$!
+        status=0
+        ( node ../tool_inject_linked_deps.mjs \
+            packages/target-electron/package.json pnpm-lock.yaml \
+            ../deltachat-core-rust/deltachat-jsonrpc/typescript \
+            ../deltachat-core-rust/deltachat-rpc-server/npm-package \
+          && pnpm install --prefer-offline ) || status=$?
+        kill $REPLAY_PID
+        exit $status
       - mkdir -p /app/delta
       # build & package dc desktop
       - pnpm --filter @deltachat-desktop/target-electron build4production
@@ -232,6 +250,9 @@ modules:
 
       - type: file
         path: tool_limit_architectures.py
+
+      - type: file
+        path: tool_inject_linked_deps.mjs
 
       - type: file
         path: chat.delta.desktop.256.png

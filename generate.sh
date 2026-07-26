@@ -106,10 +106,12 @@ echo "[desktop deps: ignore other architectures]"
 # script that both this file and the manifest call
 python3 "$REPO_DIR/tool_limit_architectures.py" pnpm-workspace.yaml
 echo "[desktop deps: fetching]"
-# pnpm keeps an on-disk packument cache and may answer metadata requests from it
+# pnpm keeps an on-disk packument cache and answers metadata requests from it
 # without ever asking the (recording) registry - anything served from that cache
-# is missing from the recording and 404s in the sandbox, so start from zero
-rm -rf "${XDG_CACHE_HOME:-$HOME/.cache}/pnpm/metadata"
+# is missing from the recording and 404s in the sandbox. The cache is versioned
+# (pnpm 11: <cache>/pnpm/v11/metadata{,-full}), so wipe the whole pnpm cache dir
+# rather than a version-specific subpath, otherwise the recording is incomplete.
+rm -rf "${XDG_CACHE_HOME:-$HOME/.cache}/pnpm"
 rm -rf .pnpm-store node_modules || true
 pnpm i --frozen-lockfile
 
@@ -123,9 +125,22 @@ echo "[desktop deps: record link_local.sh metadata]"
 git checkout -- ./bin/link_core/link_local.sh
 sed -i "s/pnpm add/pnpm add --prefer-offline/g" ./bin/link_core/link_local.sh
 env CORE_REPO_CHECKOUT=../deltachat-core-rust ./bin/link_core/link_local.sh
+
+# The linked jsonrpc-client/stdio-rpc-server pull in runtime deps (yerpc,
+# isomorphic-ws, ...) that a `link:` dep hides from electron-builder's packager,
+# so the packaged app would die with "Cannot find package 'yerpc'". Add them as
+# direct deps of target-electron so they enter the dependency graph, and record
+# the resulting install (it re-resolves and may pull new tarballs) so the sandbox
+# can replay it. The manifest runs the exact same two commands.
+node "$REPO_DIR/tool_inject_linked_deps.mjs" \
+    packages/target-electron/package.json pnpm-lock.yaml \
+    ../deltachat-core-rust/deltachat-jsonrpc/typescript \
+    ../deltachat-core-rust/deltachat-rpc-server/npm-package
+pnpm install
+
 # undo everything the recording changed in the desktop checkout (sed above,
-# link: entries in package.json/lockfile) - tool_strip.mjs later reads the
-# pristine lockfile, and the next generate.sh run needs a clean tree
+# link: entries in package.json/lockfile, injected deps) - tool_strip.mjs later
+# reads the pristine lockfile, and the next generate.sh run needs a clean tree
 git checkout -- .
 
 # make the proxy registry save what it recorded, and wait for it to finish:
