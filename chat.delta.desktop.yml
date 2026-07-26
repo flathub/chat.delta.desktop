@@ -75,6 +75,13 @@ modules:
       - npm cache verify
       - cd deltachat-jsonrpc/typescript && env DEBUG="*" npm install --offline --verbose && npm run build
       - python3 deltachat-rpc-server/npm-package/scripts/make_local_dev_version.py
+      # The packaged desktop app finds the rpc-server binary via the
+      # DELTA_CHAT_RPC_SERVER env var (set in run.sh). Install the freshly built
+      # binary where that points. This is the reliable path because the
+      # @deltachat/stdio-rpc-server-<os>-<arch> platform package is a local
+      # file: optionalDependency of a link:-ed package, which electron-builder
+      # does not package - so the in-node_modules lookup fails at runtime.
+      - install -Dm755 deltachat-rpc-server/npm-package/platform_package/*/deltachat-rpc-server /app/bin/deltachat-rpc-server
       # /app/dc-core only - if the deltachat-jsonrpc dir already exists, the
       # `cp -r` below copies INTO it (nested one level deeper), link_local.sh's
       # `link:` then points at a path that does not exist, and pnpm silently
@@ -267,6 +274,10 @@ modules:
         dest-filename: run.sh
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
+          # point @deltachat/stdio-rpc-server at the locally built binary (see
+          # the core module) instead of the platform npm package, which is not
+          # in the packaged node_modules
+          - export DELTA_CHAT_RPC_SERVER=/app/bin/deltachat-rpc-server
           - exec zypak-wrapper /app/delta/deltachat-desktop "$@"
 
       # dependencies
