@@ -74,6 +74,24 @@ function lockfileVersions(name) {
   return [...versions];
 }
 
+/** Find a locally-built package (e.g. the stdio-rpc-server platform binary,
+ * @deltachat/stdio-rpc-server-<os>-<arch>) under a link target. It lives in
+ * platform_package/<cargo-target>/, and the file: path recorded in package.json
+ * may have been rewritten for the sandbox, so locate it by name on disk instead.
+ * @param {string} linkTarget @param {string} name */
+function findLocalPackage(linkTarget, name) {
+  const platformDir = join(linkTarget, "platform_package");
+  if (!existsSync(platformDir)) return null;
+  for (const entry of readdirSync(platformDir)) {
+    const pkgJson = join(platformDir, entry, "package.json");
+    if (!existsSync(pkgJson)) continue;
+    if (JSON.parse(readFileSync(pkgJson, "utf8")).name === name) {
+      return resolve(join(platformDir, entry));
+    }
+  }
+  return null;
+}
+
 const targetPkg = JSON.parse(readFileSync(targetPkgPath, "utf8"));
 targetPkg.dependencies = targetPkg.dependencies ?? {};
 
@@ -85,6 +103,20 @@ for (const linkTarget of linkTargets) {
   const deps = { ...manifest.dependencies, ...manifest.optionalDependencies };
   for (const [name, range] of Object.entries(deps)) {
     if (targetPkg.dependencies[name]) continue; // don't override an existing dep
+
+    // local file:/link: dep (the rpc-server platform binary) - not in the
+    // registry/lockfile, so point at the real directory on disk
+    if (range.startsWith("file:") || range.startsWith("link:")) {
+      const localDir = findLocalPackage(linkTarget, name);
+      if (!localDir) {
+        console.warn(`WARN: local package ${name} (${range}) not found, skipped`);
+        continue;
+      }
+      targetPkg.dependencies[name] = `file:${localDir}`;
+      injected.push(`${name}@file:${localDir}`);
+      continue;
+    }
+
     const exact = semver.maxSatisfying(lockfileVersions(name), range);
     if (!exact) {
       console.warn(
