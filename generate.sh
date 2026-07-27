@@ -3,8 +3,8 @@ set -e
 
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
-CORE_CHECKOUT=v2.56.0
-DESKTOP_CHECKOUT=v2.56.0
+CORE_CHECKOUT=v2.57.0
+DESKTOP_CHECKOUT=v2.57.0
 
 # this script cd's around, so remember where our own files live
 REPO_DIR=$(cd "$(dirname "$0")" && pwd)
