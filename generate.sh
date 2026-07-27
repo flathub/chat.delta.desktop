@@ -3,8 +3,8 @@ set -e
 
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
-CORE_CHECKOUT=v2.53.0
-DESKTOP_CHECKOUT=v2.53.1
+CORE_CHECKOUT=v2.57.0
+DESKTOP_CHECKOUT=v2.57.0
 
 # this script needs:
 # environment:
@@ -38,32 +38,72 @@ git checkout $DESKTOP_CHECKOUT
 git clean -d -x -f
 DESKTOP_COMMIT_HASH=$(git rev-parse HEAD)
 cd -
+# This manifest targets the pnpm 11 store (v11) and points pnpm at the store via
+# storeDir in pnpm-workspace.yaml. pnpm 10 uses a different store version and
+# reads store-dir from .npmrc, so bail out early with a clear message instead of
+# producing a store the sandbox pnpm cannot read.
+DESKTOP_PNPM_MAJOR=$(jq -r '(.packageManager // "") | sub("^pnpm@"; "") | split(".")[0]' ../deltachat-desktop/package.json)
+if [ "$DESKTOP_PNPM_MAJOR" != "11" ]; then
+    echo "ERROR: deltachat-desktop $DESKTOP_CHECKOUT pins pnpm $DESKTOP_PNPM_MAJOR, but this manifest targets pnpm 11 (store v11)." >&2
+    echo "       Pick a desktop version that uses pnpm 11, or adapt the store version + storeDir wiring." >&2
+    exit 1
+fi
+
 # generate sources
 echo "[core build dependencies]"
 python3 ../flatpak-builder-tools/cargo/flatpak-cargo-generator.py -o generated/sources-rust.json ../deltachat-core-rust/Cargo.lock
 
-echo "[desktop build dependencies]"
+echo "[link locally-built core into desktop deps]"
+# Link @deltachat/jsonrpc-client + @deltachat/stdio-rpc-server to the from-source
+# core so the committed lockfile references them via `link:`. At build time this
+# is reproduced with a single offline `pnpm install --frozen-lockfile`.
+# Why here and not in the sandbox: `pnpm add` re-resolves the whole dependency
+# graph and fetches registry metadata (packuments/attestations), which the pnpm
+# store does not carry - so it cannot run offline. Doing it here (network is
+# available) bakes the links into the lockfile; the offline frozen install then
+# just recreates the symlinks (their deps are already in the store).
+# CORE_REPO_CHECKOUT is set explicitly so the recorded link path
+# (../../../deltachat-core-rust/...) matches the symlink the manifest creates.
+(
+  cd ../deltachat-desktop
+  CORE_REPO_CHECKOUT=../deltachat-core-rust bash ./bin/link_core/link_local.sh
+)
+# A `link:` dep has no lockfile snapshot, so electron-builder (which packages only
+# what the pnpm graph resolves) drops the linked packages' runtime deps (yerpc,
+# isomorphic-ws, ...) and the app dies at runtime with "Cannot find package
+# 'yerpc'". Inject them as direct deps of target-electron and re-resolve so they
+# enter the committed lockfile and get packaged.
+node tool_inject_linked_deps.mjs \
+    ../deltachat-desktop/packages/target-electron/package.json \
+    ../deltachat-desktop/pnpm-lock.yaml \
+    ../deltachat-core-rust/deltachat-jsonrpc/typescript \
+    ../deltachat-core-rust/deltachat-rpc-server/npm-package
+(cd ../deltachat-desktop && pnpm install)
 
-# start proxy registry that records the packages that are fetched
-node record.mjs &
-PID_RECORD=$!
+# Capture the linked lockfile + workspace package.json manifests so the build can
+# reapply them over the pristine git checkout before installing.
+tar czf generated/linked-core-overrides.tar.gz \
+    -C ../deltachat-desktop \
+    pnpm-lock.yaml $(cd ../deltachat-desktop && ls -d packages/*/package.json)
 
-cd ../deltachat-desktop
-pnpm config set registry http://localhost:3000 --location project
-rm -r $(pwd)/.pnpm-store || true
-pnpm config set store-dir $(pwd)/.pnpm-store --location project
-echo "[desktop deps: ignore other architectures]"
-# desktop modify package json to exclude all unused architectures
-# the temporary file `package.new.json` is nessesary because jq does not support in place editing of files.
-jq ".pnpm.supportedArchitectures.os = [\"linux\"] | .pnpm.supportedArchitectures.cpu = [\"x64\", \"arm64\"]" package.json > package.new.json
-mv package.new.json package.json
-echo "[desktop deps: fetching]"
-rm -rf .pnpm-store node_modules || true
-pnpm i --frozen-lockfile
+echo "[desktop build dependencies via flatpak-node-generator (pnpm v11 store)]"
+# Emits all npm tarballs, a script that builds an offline pnpm store, plus the
+# electron / esbuild / playwright / node-gyp caches.
+# Default store version is v10; deltachat-desktop uses pnpm 11 => v11.
+flatpak-node-generator pnpm --pnpm-store-version v11 \
+    -o generated/pnpm-sources.json ../deltachat-desktop/pnpm-lock.yaml
 
-# make the proxy registry save what it recorded
-kill -SIGINT $PID_RECORD
-cd -
+# Drop the generator's auto-run "finalize" shell source (store population +
+# storeDir + node-gyp headers). It runs in flatpak's *source* phase, where the
+# node SDK extension is not on PATH (breaks setup_sdk_node_headers.sh) and where
+# $PWD is the module build-dir root, not the desktop checkout in main/ (so its
+# `>> pnpm-workspace.yaml` would hit the wrong file). We run these three steps
+# ourselves from build-commands in the manifest instead. Everything else the
+# generator emits (tarballs, caches, the populate script + manifest, the
+# electron/esbuild symlink sources which carry their own dest) is kept as-is.
+jq 'map(select(.type != "shell" or ((.commands // []) | map(select(test("populate_pnpm_store"))) | length) == 0))' \
+    generated/pnpm-sources.json > generated/pnpm-sources.json.tmp
+mv generated/pnpm-sources.json.tmp generated/pnpm-sources.json
 
 echo "[@deltachat/jsonrpc-client build-dependencies]"
 cd ../deltachat-core-rust/deltachat-jsonrpc/typescript
@@ -100,8 +140,13 @@ cat >generated/core-git.json <<EOL
 ]
 EOL
 
-echo "[pnpm package to install pnpm]"
-result=$(npm view pnpm@9.11.0 --json | jq "{url: .dist.tarball, integrity: .dist.integrity}")
+# The generator prepares the offline store, but does not provide a pnpm binary.
+# Install the exact pnpm version the desktop pins in packageManager (must be a
+# pnpm that understands the v11 store, i.e. pnpm 11), fetched from a static
+# tarball because global npm install is not possible in the read-only sandbox.
+PNPM_VERSION=$(jq -r '(.packageManager // "") | sub("^pnpm@"; "") | split("+")[0]' ../deltachat-desktop/package.json)
+echo "[pnpm package to install pnpm@$PNPM_VERSION]"
+result=$(npm view pnpm@$PNPM_VERSION --json | jq "{url: .dist.tarball, integrity: .dist.integrity}")
 
 # Use Python to decode the integrity hash and construct the manifest source item
 python3 - <<EOL > generated/pnpm.json
@@ -123,14 +168,5 @@ else:
     print("Input package has unexpected hash, expected sha512", file=sys.stderr)
     sys.exit(1)
 EOL
-
-echo "[generate manifest that puts electron binary into cache]"
-
-node generate_electron_dependency.mjs
-
-echo "[strip unused versions from pnpm package indices]"
-
-node tool_strip.mjs
-rm generated/used_versions_strip_info.json
 
 echo "[done]"
