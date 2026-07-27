@@ -22,6 +22,67 @@ These are the steps to trigger a new release using github Codespaces:
  - after merging the PR the new version will be released
 
 
+## Running the generate process locally with docker
+
+Alternative to the Codespace: only docker is needed on the machine, nothing
+else gets installed.
+
+```sh
+./generate_in_docker.sh
+```
+
+This builds a container image with all dependencies (node, pnpm,
+flatpak-node-generator, ...) and runs `generate.sh` plus `check_cache.sh`
+inside it. Local checkouts of deltachat-desktop and core are expected next to
+this repo (in `../deltachat-desktop` and `../core`, override with
+`DESKTOP_REPO=... CORE_REPO=...`). They are mounted read-only and cloned inside
+the container, so they stay untouched — which also means uncommitted changes in
+them are not used; generate.sh builds the tags it has pinned.
+
+Clones and caches are kept in the docker volume `chat-delta-generate-work`
+between runs (`docker volume rm chat-delta-generate-work` to start fresh).
+`./generate_in_docker.sh bash` opens a shell inside the environment.
+
+Afterwards review and commit the changes in `generated/`, then run
+`check_cache.sh` again: it verifies the committed cache is complete and
+consistent before you trigger a flathub build.
+
+
+## Building the flatpak locally with docker
+
+To run the full `flatpak-builder` build without installing flatpak and the
+runtimes on the machine (useful for verifying manifest changes end-to-end
+without a CI round-trip):
+
+```sh
+./build_in_docker.sh
+```
+
+This builds a container image (`Dockerfile.flatpak`) with flatpak +
+flatpak-builder and runs the build against the current working tree, so
+uncommitted manifest changes are included. It needs a committed/generated
+`generated/` cache (run `generate_in_docker.sh` first if needed) and network
+access (github repos, npm tarballs, electron, flatpak runtimes). Only the
+host's architecture is built.
+
+The flatpak runtimes, the flatpak-builder cache and the build dir live in the
+docker volume `chat-delta-flatpak-work` and are reused between runs
+(`docker volume rm chat-delta-flatpak-work` to start fresh). The first run
+downloads several GB of runtimes and compiles the Rust core, so expect
+30–60+ minutes; later runs are much faster. `./build_in_docker.sh bash` opens a
+shell in the environment (the packaged app is at
+`/work/build-dir/files/delta` inside the volume).
+
+Notes on why it works the way it does:
+- The container runs **as root** and uses a **system** flatpak installation,
+  because `bwrap` (which flatpak-builder uses for every build step) cannot set
+  up its uid map as a non-root user inside docker, while `flatpak --user`
+  refuses to run as root.
+- It runs with `--privileged` (plus `/dev/fuse`) so the nested bwrap/user
+  namespaces are allowed. This is a local trusted-developer tool and is not part
+  of the flathub build.
+
+
 ## Building locally
 
 If you'd like to locally build this flapak, you'll need both `flatpak`
