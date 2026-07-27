@@ -188,6 +188,20 @@ modules:
       # we try to catch both paths with the wildcard
       - cp -ar packages/target-electron/dist/linux*unpacked/* /app/delta/
 
+      # The from-source stdio-rpc-server ships its binary under
+      # platform_package/<rust-target>/ instead of as an installed
+      # @deltachat/stdio-rpc-server-<os>-<arch> npm package. The desktop resolves
+      # the server via require.resolve() (its env-var override is disabled unless
+      # --allow-unsafe-core-replacement), so materialize that package where node
+      # resolution expects it: node_modules/@deltachat/stdio-rpc-server-<os>-<arch>
+      # (its package.json main is the binary, so resolve() returns the exe path).
+      - |
+        set -e
+        NM=/app/delta/resources/app/node_modules
+        SRC=$(ls -d "$NM/@deltachat/stdio-rpc-server/platform_package/"*)
+        DEST="$NM/@deltachat/stdio-rpc-server-linux-$(node -e 'process.stdout.write(process.arch)')"
+        cp -a "$SRC" "$DEST"
+
       # Install the required static files
       - install ../run.sh $FLATPAK_DEST/bin/run.sh
       - install -Dm 0644 ../chat.delta.desktop.desktop  /app/share/applications/chat.delta.desktop.desktop
