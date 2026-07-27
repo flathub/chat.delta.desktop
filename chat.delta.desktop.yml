@@ -164,7 +164,10 @@ modules:
       # single offline frozen install below wires in the local core. (pnpm add
       # cannot run in the sandbox: it re-resolves and needs network metadata.)
       - ln -s /app/dc-core ../deltachat-core-rust
-      - tar xzf ../linked-core-overrides.tar.gz
+      # --no-same-owner: the tarball records the maintainer's uid/gid; inside the
+      # build sandbox tar runs as (sandbox) root and would try to restore that
+      # ownership, which the uid namespace cannot map ("Cannot change ownership").
+      - tar xzf ../linked-core-overrides.tar.gz --no-same-owner
       # install deps fully offline from the store
       - pnpm install --offline --frozen-lockfile
       - mkdir -p /app/delta

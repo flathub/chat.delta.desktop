@@ -29,12 +29,18 @@ echo "[git checkout core]"
 cd ../deltachat-core-rust
 git fetch --all --tags
 git checkout $CORE_CHECKOUT
+# reset --hard so a reused checkout (e.g. the docker work volume) starts pristine:
+# link_local.sh and tool_inject_linked_deps.mjs edit tracked files, and git clean
+# does NOT revert those - leaving prior-run edits in place would make the generated
+# sources depend on run history instead of the tag.
+git reset --hard $CORE_CHECKOUT
 CORE_COMMIT_HASH=$(git rev-parse HEAD)
 cd -
 echo "[git checkout desktop]"
 cd ../deltachat-desktop
 git fetch --all --tags
 git checkout $DESKTOP_CHECKOUT
+git reset --hard $DESKTOP_CHECKOUT
 git clean -d -x -f
 DESKTOP_COMMIT_HASH=$(git rev-parse HEAD)
 cd -
@@ -82,7 +88,10 @@ node tool_inject_linked_deps.mjs \
 
 # Capture the linked lockfile + workspace package.json manifests so the build can
 # reapply them over the pristine git checkout before installing.
+# --owner/--group/--numeric-owner: normalize ownership to root:0 so the archive
+# does not carry the maintainer's uid/gid (the build sandbox cannot restore it).
 tar czf generated/linked-core-overrides.tar.gz \
+    --owner=0 --group=0 --numeric-owner \
     -C ../deltachat-desktop \
     pnpm-lock.yaml $(cd ../deltachat-desktop && ls -d packages/*/package.json)
 
