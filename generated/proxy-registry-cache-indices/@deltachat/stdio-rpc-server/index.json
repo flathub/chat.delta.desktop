@@ -6,67 +6,67 @@
     "latest": "2.57.0"
   },
   "versions": {
-    "2.56.0": {
-      "name": "@deltachat/stdio-rpc-server",
-      "version": "2.56.0",
+    "2.57.0": {
       "license": "MPL-2.0",
-      "_id": "@deltachat/stdio-rpc-server@2.56.0",
+      "main": "index.js",
+      "name": "@deltachat/stdio-rpc-server",
+      "optionalDependencies": {
+        "@deltachat/stdio-rpc-server-darwin-arm64": "2.57.0",
+        "@deltachat/stdio-rpc-server-android-arm64": "2.57.0",
+        "@deltachat/stdio-rpc-server-linux-arm64": "2.57.0",
+        "@deltachat/stdio-rpc-server-linux-arm": "2.57.0",
+        "@deltachat/stdio-rpc-server-android-arm": "2.57.0",
+        "@deltachat/stdio-rpc-server-win32-ia32": "2.57.0",
+        "@deltachat/stdio-rpc-server-linux-ia32": "2.57.0",
+        "@deltachat/stdio-rpc-server-darwin-x64": "2.57.0",
+        "@deltachat/stdio-rpc-server-win32-x64": "2.57.0",
+        "@deltachat/stdio-rpc-server-linux-x64": "2.57.0"
+      },
+      "peerDependencies": {
+        "@deltachat/jsonrpc-client": "*"
+      },
+      "scripts": {
+        "prepack": "node scripts/update_optional_dependencies_and_version.js"
+      },
+      "type": "module",
+      "types": "index.d.ts",
+      "version": "2.57.0",
+      "_id": "@deltachat/stdio-rpc-server@2.57.0",
       "bugs": {
         "url": "https://github.com/chatmail/core/issues"
       },
+      "_integrity": "sha512-3na3d9Vz73kvDlFT/+VuPqnPaP0R27qemIexe3EwMwEJcC4a+UYGbjZC/V3Hz8rbgRsz21w38KK6DEG5d9Adqg==",
+      "_resolved": "/home/runner/work/core/core/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-2.57.0.tgz",
+      "_from": "file:deltachat-stdio-rpc-server-2.57.0.tgz",
+      "_nodeVersion": "24.18.0",
+      "_npmVersion": "11.16.0",
       "dist": {
-        "shasum": "6b8ef4d3e6d19b6e74ad256257badd1aedcf1d3b",
-        "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-2.56.0.tgz",
+        "integrity": "sha512-3na3d9Vz73kvDlFT/+VuPqnPaP0R27qemIexe3EwMwEJcC4a+UYGbjZC/V3Hz8rbgRsz21w38KK6DEG5d9Adqg==",
+        "shasum": "b2a5c35c373ed8d93250d4f085f97ee01f5f02c0",
+        "tarball": "http://localhost:3000/@deltachat/stdio-rpc-server/-/stdio-rpc-server-2.57.0.tgz",
         "fileCount": 6,
-        "integrity": "sha512-h4UfCfm7QfwdrViG6dBIPvzZLZZGl4hpLNKL4CaDjlsH4/GrDOJCN3TTomFYD/8NMuQwcSF2zCzGHRQfz8vIuw==",
-        "signatures": [
-          {
-            "sig": "MEUCIGs62mf+WjfPwkfYU3bhp5Ugt95O+Z6wb6ImJ6PwDrYLAiEAv/unXRplY9VmmjUsjYZqFnuwGZYuZTLR6cSX0NDL9DE=",
-            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U"
-          }
-        ],
+        "unpackedSize": 10756,
         "attestations": {
-          "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@2.56.0",
+          "url": "http://localhost:3000/-/npm/v1/attestations/@deltachat%2fstdio-rpc-server@2.57.0",
           "provenance": {
             "predicateType": "https://slsa.dev/provenance/v1"
           }
         },
-        "unpackedSize": 10756
+        "signatures": [
+          {
+            "keyid": "SHA256:DhQ8wR5APBvFHLF/+Tc+AYvPOdTpcIDqOhxsBHRwC7U",
+            "sig": "MEUCIQDSmpakfUVDYrZ+ft3+0Qpp7lbwhheTt4DbgvhsJc6ZhAIgQZxfvrWCdkTW5Pmy7cU/2QOgf2I7OG6TQw4b3jQ3L3c="
+          }
+        ]
       },
-      "main": "index.js",
-      "type": "module",
-      "_from": "file:deltachat-stdio-rpc-server-2.56.0.tgz",
-      "types": "index.d.ts",
-      "scripts": {
-        "prepack": "node scripts/update_optional_dependencies_and_version.js"
-      },
-      "_resolved": "/home/runner/work/core/core/deltachat-rpc-server/npm-package/deltachat-stdio-rpc-server-2.56.0.tgz",
-      "_integrity": "sha512-h4UfCfm7QfwdrViG6dBIPvzZLZZGl4hpLNKL4CaDjlsH4/GrDOJCN3TTomFYD/8NMuQwcSF2zCzGHRQfz8vIuw==",
-      "_npmVersion": "11.16.0",
       "directories": {},
-      "_nodeVersion": "24.18.0",
-      "_hasShrinkwrap": false,
-      "peerDependencies": {
-        "@deltachat/jsonrpc-client": "*"
-      },
-      "optionalDependencies": {
-        "@deltachat/stdio-rpc-server-linux-arm": "2.56.0",
-        "@deltachat/stdio-rpc-server-linux-x64": "2.56.0",
-        "@deltachat/stdio-rpc-server-win32-x64": "2.56.0",
-        "@deltachat/stdio-rpc-server-darwin-x64": "2.56.0",
-        "@deltachat/stdio-rpc-server-linux-ia32": "2.56.0",
-        "@deltachat/stdio-rpc-server-win32-ia32": "2.56.0",
-        "@deltachat/stdio-rpc-server-android-arm": "2.56.0",
-        "@deltachat/stdio-rpc-server-linux-arm64": "2.56.0",
-        "@deltachat/stdio-rpc-server-darwin-arm64": "2.56.0",
-        "@deltachat/stdio-rpc-server-android-arm64": "2.56.0"
-      }
+      "_hasShrinkwrap": false
     }
   },
   "time": {
     "created": "2024-05-10T04:29:06.206Z",
     "modified": "2026-07-25T15:12:18.327Z",
-    "2.56.0": "2026-07-21T18:34:47.747Z"
+    "2.57.0": "2026-07-25T15:12:17.936Z"
   },
   "license": "MPL-2.0"
 }
