@@ -8,7 +8,7 @@ DESKTOP_CHECKOUT=v2.57.0
 
 # this script needs:
 # environment:
-# - serveral repos checked out next to this repo (you may run setup.sh to do that for you)
+# - serveral repos checked out next to this repo
 #  - flatpak-builder-tools
 #  - deltachat-core-rust
 #  - deltachat-desktop
@@ -17,6 +17,8 @@ DESKTOP_CHECKOUT=v2.57.0
 # - jq
 # - flatpak-node-generator (setup.sh installs this for you)
 # you can call "nix develop" to install those dependencies if you are doing this on nix
+# or setup.sh inside a code space or use docker/generate_in_docker.sh to run this
+# inside a docker container (no installs needed on the host besides docker)
 
 
 # if -d ../.venv
@@ -30,7 +32,7 @@ cd ../deltachat-core-rust
 git fetch --all --tags
 git checkout $CORE_CHECKOUT
 # reset --hard so a reused checkout (e.g. the docker work volume) starts pristine:
-# link_local.sh and tool_inject_linked_deps.mjs edit tracked files, and git clean
+# tool_inject_linked_deps.mjs edit tracked files, and git clean
 # does NOT revert those - leaving prior-run edits in place would make the generated
 # sources depend on run history instead of the tag.
 git reset --hard $CORE_CHECKOUT

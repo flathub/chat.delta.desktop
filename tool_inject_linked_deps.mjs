@@ -8,15 +8,13 @@
    isomorphic-ws, @deltachat/tiny-emitter, ...) are invisible to both
    bin/build/writeFlatDependencies.js and electron-builder's own dependency
    resolver - electron-builder packages ONLY what its resolver finds in the pnpm
-   graph and ignores anything merely copied into node_modules. The result is a
-   package that dies at runtime with "Cannot find package 'yerpc'".
+   graph and ignores anything merely copied into node_modules.
 
    The only thing electron-builder honours is the dependency graph, so this script
    puts the linked packages' runtime dependencies into it: it adds them as direct
    dependencies of the given workspace package. Versions are pinned to exactly
    what the lockfile already resolved (the published packages were installed by
-   the earlier frozen install, so their deps are already in the store), so the
-   follow-up `pnpm install` reuses the store and needs no network.
+   the earlier frozen install, so their deps are already in the store).
 
    Usage:
      node tool_inject_linked_deps.mjs <target-package.json> <pnpm-lock.yaml> <link-target-dir>...
@@ -109,7 +107,9 @@ for (const linkTarget of linkTargets) {
     if (range.startsWith("file:") || range.startsWith("link:")) {
       const localDir = findLocalPackage(linkTarget, name);
       if (!localDir) {
-        console.warn(`WARN: local package ${name} (${range}) not found, skipped`);
+        console.warn(
+          `WARN: local package ${name} (${range}) not found, skipped`,
+        );
         continue;
       }
       targetPkg.dependencies[name] = `file:${localDir}`;
