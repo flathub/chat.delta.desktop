@@ -1,6 +1,6 @@
 # Environment for running generate.sh without installing its dependencies
 # (pnpm, flatpak-node-generator, python venv, ...) on the machine.
-# Not used by the flathub build - see generate_in_docker.sh for usage.
+# Not used by the flathub build - see docker/generate_in_docker.sh for usage.
 FROM node:22-bookworm
 
 RUN apt-get update \

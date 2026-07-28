@@ -3,8 +3,8 @@
 # verified end-to-end locally (no CI round-trip). Uses the current working tree
 # (bind-mounted), so uncommitted manifest changes are built.
 #
-#   ./build_in_docker.sh          build chat.delta.desktop.yml and verify
-#   ./build_in_docker.sh bash     interactive shell in the environment
+#   ./docker/build_in_docker.sh          build chat.delta.desktop.yml and verify
+#   ./docker/build_in_docker.sh bash     interactive shell in the environment
 #
 # Runtimes, the flatpak-builder cache and build-dir live in the named volume
 # "chat-delta-flatpak-work" and are reused between runs
@@ -20,9 +20,11 @@
 # build-dir and caches live in the volume, so nothing root-owned lands in the
 # working tree.
 set -e
-cd "$(dirname "$0")"
+# cd to the repo root (this script lives in docker/): the bind mount ($PWD) and
+# the docker build context must be the repo root, not docker/.
+cd "$(dirname "$0")/.."
 
-docker build -f Dockerfile.flatpak -t chat-delta-flatpak .
+docker build -f docker/Dockerfile.flatpak -t chat-delta-flatpak .
 
 TTY_FLAG=""
 if [ -t 0 ]; then TTY_FLAG="-t"; fi
@@ -42,5 +44,5 @@ run() {
 if [ $# -gt 0 ]; then
     run "$@"
 else
-    run bash build_in_docker_inner.sh
+    run bash docker/build_in_docker_inner.sh
 fi

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Runs inside the container from build_in_docker.sh: installs the flatpak
+# Runs inside the container from docker/build_in_docker.sh: installs the flatpak
 # runtimes the manifest needs (once, cached in the volume), then builds and does
 # a quick sanity check on the packaged rpc-server.
 set -e

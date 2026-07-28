@@ -1,7 +1,7 @@
 #!/bin/bash
-# Runs inside the container started by generate_in_docker.sh.
-# Takes the role of setup.sh (which is written for the codespace), then runs
-# generate.sh and check_cache.sh.
+# Runs inside the container started by docker/generate_in_docker.sh.
+# Takes the role of setup.sh (which is written for the codespace),
+# then runs generate.sh.
 set -e
 cd /work/flatpak-desktop
 
@@ -22,7 +22,7 @@ clone_local /host/deltachat-core-rust ../deltachat-core-rust https://github.com/
     || git clone https://github.com/flatpak/flatpak-builder-tools --depth 1 ../flatpak-builder-tools
 
 echo "[container setup: python venv + flatpak-node-generator]"
-# pipx installs into $HOME/.local (inside the /work volume), survives runs
+# pipx installs into $HOME/.local (inside the /work volume)
 export PATH="$HOME/.local/bin:$PATH"
 if [ ! -d ../.venv ]; then
     python3 -m venv ../.venv
@@ -32,4 +32,3 @@ if [ ! -d ../.venv ]; then
 fi
 
 bash generate.sh
-bash check_cache.sh
