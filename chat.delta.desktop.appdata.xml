@@ -5,64 +5,254 @@
   <project_license>GPL-3.0+</project_license>
   <name>Delta Chat</name>
   <developer_name>Delta Chat</developer_name>
-  <summary>Delta Chat email-based messenger</summary>
+  <summary>Decentralized private messenger with chat-shared tools and games</summary>
   <description>
-    <p>Chat over email and head back to the future with us!</p>
-    <p>
-      Delta Chat is like Telegram or Whatsapp but without the tracking
-      or central control. Check out our GDPR compliancy statement.
-    </p>
-    <p>
-      Delta Chat doesn’t have their own servers but uses the most
-      massive and diverse open messaging system ever: the existing
-      e-mail server network.
-    </p>
-    <p>
-      Chat with anyone if you know their e-mail address, no need for
-      them to install DeltaChat! All you need is a standard e-mail
-      account.
-    </p>
+    <p>Delta Chat is a reliable decentralized instant messenger that is easy and fun to use for friends, family, groups and organizations.
+      Delta Chat is developed by a dedicated FOSS contributor community that jointly releases refinements and new features several times a year,
+      across many stores and platforms world-wide.</p>
+      <p>Features at a glance:</p>
+      <ul>
+          <li>🌐 Anonymous. Instant onboarding without a phone number, e-mail or other private data.</li>
+          <li>📱 Flexible. Supports multiple chat profiles and is easy to setup on multiple devices.</li>
+          <li>🧩 Extensible. Add tools like shopping lists, calendars or gaming apps to any chat.</li>
+          <li>🌧️ Reliable. Works under bad and adversarial network conditions.</li>
+          <li>🛡️ Secure. Audited End-to-End encryption safe against network and server attacks.</li>
+          <li>🏠 Sovereign. Can be run with your own e-mail address or server.</li>
+          <li>📜 FOSS. Fully Open Source/Free Software, built on Internet Standards.</li>
+      </ul>
   </description>
   <launchable type="desktop-id">chat.delta.desktop.desktop</launchable>
+  <branding>
+    <color type="primary" scheme_preference="light">#28df86</color>
+    <color type="primary" scheme_preference="dark">#174551</color>
+  </branding>
   <screenshots>
-    <screenshot type="default">
-      <image>https://raw.githubusercontent.com/deltachat/interface/main/screenshots/2024/desktop/linux/1.46_light_mode_beach_bg.png</image>
+    <screenshot type="default" xml:lang="en">
+      <image>
+        https://raw.githubusercontent.com/deltachat/interface/d29d6199215bc13fe63b20b36b4f59dc6f54c449/screenshots/2024/desktop/linux/1.46_light_mode_beach_bg.png
+      </image>
       <caption>Main View showcasing multiple accounts, chats and a group conversation</caption>
     </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/deltachat/interface/main/screenshots/2024/desktop/linux/1.46_darkmode_beach_bg.png</image>
+    <screenshot xml:lang="en">
+      <image>
+        https://raw.githubusercontent.com/deltachat/interface/d29d6199215bc13fe63b20b36b4f59dc6f54c449/screenshots/2024/desktop/linux/1.46_darkmode_beach_bg.png
+      </image>
       <caption>We have different themes, here darkmode with beach background</caption>
     </screenshot>
-
-    <screenshot>
-      <image>https://raw.githubusercontent.com/deltachat/interface/main/screenshots/2024/desktop/linux/1.46_create_chatmail_profile.png</image>
-      <caption>You can have as many profiles as you like, just set a name to get a new chatmail account instantly</caption>
+    <screenshot xml:lang="en">
+      <image>
+        https://raw.githubusercontent.com/deltachat/interface/d29d6199215bc13fe63b20b36b4f59dc6f54c449/screenshots/2024/desktop/linux/1.46_create_chatmail_profile.png
+      </image>
+      <caption>You can have as many profiles as you like, just set a name to get a new chatmail account instantly
+      </caption>
     </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/deltachat/interface/main/screenshots/2024/desktop/linux/1.46_login_with_email.png</image>
+    <screenshot xml:lang="en">
+      <image>
+        https://raw.githubusercontent.com/deltachat/interface/d29d6199215bc13fe63b20b36b4f59dc6f54c449/screenshots/2024/desktop/linux/1.46_login_with_email.png
+      </image>
       <caption>You can also use Delta Chat as an email client with your existing email address</caption>
     </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/deltachat/interface/main/screenshots/2024/desktop/linux/1.46_small_screen_mode_chat_list.png</image>
-      <caption>(New!): small screen mode: here you can see profile sidebar and chat list</caption>
+    <screenshot xml:lang="en">
+      <image>
+        https://raw.githubusercontent.com/deltachat/interface/d29d6199215bc13fe63b20b36b4f59dc6f54c449/screenshots/2024/desktop/linux/1.46_small_screen_mode_chat_list.png
+      </image>
+      <caption>small screen mode: here you can see profile sidebar and chat list</caption>
     </screenshot>
-    <screenshot>
-      <image>https://raw.githubusercontent.com/deltachat/interface/main/screenshots/2024/desktop/linux/1.46_small_screen_mode_chat.png</image>
-      <caption>(New!): small screen mode: here you can see a conversation in a chat</caption>
+    <screenshot xml:lang="en">
+      <image>
+        https://raw.githubusercontent.com/deltachat/interface/d29d6199215bc13fe63b20b36b4f59dc6f54c449/screenshots/2024/desktop/linux/1.46_small_screen_mode_chat.png
+      </image>
+      <caption>small screen mode: here you can see a conversation in a chat</caption>
     </screenshot>
-
-    <screenshot>
-      <image>https://raw.githubusercontent.com/deltachat/interface/main/screenshots/2024/1.46_darkmode_default_bg.png</image>
+    <screenshot xml:lang="en">
+      <image>https://raw.githubusercontent.com/deltachat/interface/d29d6199215bc13fe63b20b36b4f59dc6f54c449/screenshots/2024/desktop/linux/1.46_darkmode_default_bg.png
+      </image>
       <caption>Darkmode with default background</caption>
     </screenshot>
   </screenshots>
   <url type="homepage">https://delta.chat/</url>
+  <url type="vcs-browser">https://github.com/deltachat/deltachat-desktop</url>
   <url type="bugtracker">https://github.com/deltachat/deltachat-desktop/issues</url>
   <url type="faq">https://delta.chat/en/help</url>
   <url type="donation">https://delta.chat/en/contribute#donate-money-or-devices</url>
   <url type="translate">https://www.transifex.com/delta-chat/public/</url>
   <url type="contribute">https://delta.chat/en/contribute</url>
-  <releases>
+    <releases>
+      <release version="v2.57.0" date="2026-07-27" >
+        <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.57.0</url>
+        <description>
+          <ul>
+            <li>important bugfixes</li>
+          </ul>
+        </description>
+      </release>
+      <release version="v2.53.1" date="2026-06-23" >
+        <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.53.1</url>
+        <description>
+          <ul>
+            <li>select and process multiple messages</li>
+            <li>better language support for screen reader</li>
+            <li>various bugfixes</li>
+          </ul>
+        </description>
+      </release>
+      <release version="v2.52.0" date="2026-06-09" >
+        <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.52.0</url>
+        <description>
+          <ul>
+            <li>Core upgrade 2.52.0</li>
+          </ul>
+        </description>
+      </release>
+      <release version="v2.51.0" date="2026-06-04" >
+        <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.51.0</url>
+        <description>
+          <ul>
+            <li>"Calls" and "Channels" are available by default and are no longer experimental</li>
+            <li>Resend the last 10 messages to new broadcast channel member</li>
+            <li>Improved avatar resolution</li>
+            <li>"Mark as Unread" menu item (and "as Read")</li>
+            <li>Many bugfixes</li>
+          </ul>
+        </description>
+      </release>
+      <release version="v2.49.0" date="2026-04-15" >
+        <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.49.0</url>
+        <description>
+          <ul>
+            <li>Bugfix Release</li>
+          </ul>
+        </description>
+      </release>
+      <release version="v2.48.0" date="2026-03-30" >
+        <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.48.0</url>
+        <description>
+          <ul>
+            <li>Global audio player for voice messages</li>
+            <li>View counts for channels</li>
+            <li>Various improvements and bugfixes</li>
+          </ul>
+        </description>
+      </release>
+      <release version="v2.43.0" date="2026-02-23" >
+        <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.43.0</url>
+        <description>
+          <ul>
+            <li>Forward to other profile</li>
+            <li>Select audio/video before calling (experimental)</li>
+            <li>New keyboard shortcuts</li>
+            <li>Various improvements and bugfixes</li>
+          </ul>
+        </description>
+    </release>
+    <release version="v2.35.0" date="2025-12-23" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.35.0</url>
+      <description>
+        <ul>
+          <li>Sync default transport</li>
+          <li>Prettier About Dialog and introduce Protocol View Dialog</li>
+          <li>New turn server for calls</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v2.33.0" date="2025-12-10" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.33.0</url>
+      <description>
+        <ul>
+          <li>Handle additional relays</li>
+          <li>Improved metadata protection</li>
+          <li>Better multi-device: synchronize group creation across devices</li>
+          <li>Improve onboarding speed</li>
+          <li>Links in messages are now highlighted</li>
+          <li>Improve navigation in offline help</li>
+          <li>Lots of bug fixes</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v2.25.3" date="2025-11-20" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.25.3</url>
+      <description>
+        <ul>
+          <li>Implement drag-and-drop to reorder accounts</li>
+          <li>Many bugfixes</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v2.22.0" date="2025-10-17" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.22.0</url>
+      <description>
+        <ul>
+          <li>remove experimental video chat invitation link feature</li>
+          <li>support multiple selection (multiselect) in the list of chats, activated with Ctrl + Click, Shift + Click</li>
+          <li>allow to scan a proxy url from QR code</li>
+          <li>do not disable Wayland FractionalScale feature</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v2.11.1" date="2025-09-01" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.11.1</url>
+      <description>
+        <ul>
+          <li>Bugfix and maintenance release.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v2.11.0" date="2025-08-18" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.11.0</url>
+      <description>
+        <ul>
+          <li>Support for rtl languages</li>
+          <li>Bugfix release.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v2.10.0" date="2025-08-06" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.10.0</url>
+      <description>
+        <ul>
+          <li>Bugfix release.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v2.9.0" date="2025-08-01" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.9.0</url>
+      <description>
+        <ul>
+          <li>Bugfix release.</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v2.8.0" date="2025-07-28" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v2.8.0</url>
+      <description>
+        <ul>
+          <li>💯 End-to-end encryption is reliable and forever now. Padlocks 🔒 are gone!</li>
+          <li>✉️ Classic email without end-to-end encryption is marked with a letter symbol</li>
+          <li>😻 New enhanced profile screen for all your contacts</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v1.60.1" date="2025-07-18" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v1.60.1</url>
+      <description>
+        <ul>
+          <li>🖼️ open all media view (gallery) in an own dialog</li>
+          <li>🔔 a sound effect is played when current open chat gets a new message (can be turned off)</li>
+          <li>🔎 Zoom In/Out with Ctrl +/-</li>
+          <li>💠 show 3 recently used apps in chat navbar</li>
+        </ul>
+      </description>
+    </release>
+    <release version="v1.58.2" date="2025-05-15" >
+      <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v1.58.2</url>
+      <description>
+        <ul>
+          <li>🎤 record voice messages </li>
+          <li>👤 new profile view design</li>
+          <li>🖼️ improved image display</li>
+        </ul>
+      </description>
+    </release>
     <release version="v1.56.0" date="2025-03-21" >
       <url type="details">https://github.com/deltachat/deltachat-desktop/releases/tag/v1.56.0</url>
       <description>

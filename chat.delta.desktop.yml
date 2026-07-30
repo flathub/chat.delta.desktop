@@ -1,46 +1,47 @@
 app-id: chat.delta.desktop
 base: org.electronjs.Electron2.BaseApp
-base-version: '24.08'
+base-version: "25.08"
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.node20
+  - org.freedesktop.Sdk.Extension.node22
   - org.freedesktop.Sdk.Extension.rust-stable
 command: run.sh
 finish-args:
   - --socket=fallback-x11
   - --socket=wayland
   - --share=ipc
-  - --device=all         # Webcam access for QR code scans and DRI for OpenGL
-  - --socket=pulseaudio  # Record and play voice messages
+  - --device=all # Webcam access for QR code scans and DRI for OpenGL
+  - --socket=pulseaudio # Record and play voice messages
   - --filesystem=xdg-documents
   - --filesystem=xdg-download
   - --filesystem=xdg-music
   - --filesystem=xdg-pictures
   - --filesystem=xdg-videos
-  - --filesystem=host    # workaround until xdg-desktop-portal is released: https://github.com/flatpak/xdg-desktop-portal/issues/1445
+  - --filesystem=host # workaround until xdg-desktop-portal is released: https://github.com/flatpak/xdg-desktop-portal/issues/1445
   - --share=network
   - --talk-name=org.freedesktop.Notifications # needed for dbus notification, as the notification portal crashed because of a bug in electron https://github.com/electron/electron/issues/40461
   - --talk-name=com.canonical.AppMenu.Registrar # fix https://github.com/flathub/chat.delta.desktop/issues/118
-  - --env=ELECTRON_OZONE_PLATFORM_HINT=auto # tell electron to choose Wayland if it is available
+  - --talk-name=org.kde.StatusNotifierWatcher # fix https://github.com/flathub/chat.delta.desktop/issues/143
+  - --talk-name=com.canonical.Unity # D-Bus talk for Unity desktop
+  - --system-talk-name=dummy.permission.to-suppress-chromium-error # see https://github.com/deltachat/deltachat-desktop/issues/5879
   - --env=NOTIFY_IGNORE_PORTAL=1 # fix https://github.com/deltachat/deltachat-desktop/issues/3590
 
 cleanup:
-    - /app/dc-core
-    # Desktop___________________
-    - /delta/resources/app/node_modules/napi-macros
-    # frontend node_modules not needed at runtime - would get easier if dc-desktop would adopt the 2 package.json project structure
-    # every react addon
-    - /delta/resources/app/node_modules/react-*
-    - /delta/resources/app/node_modules/classnames
-    - /delta/resources/app/node_modules/use-debounce
-    - /delta/resources/app/node_modules/create-react-context
-    # need testing?
-    - /delta/resources/app/node_modules/resize-observer-polyfill
-    # momentjs is currently only used by renderer process
-    - /delta/resources/app/node_modules/moment
-
+  - /app/dc-core
+  # Desktop___________________
+  - /delta/resources/app/node_modules/napi-macros
+  # frontend node_modules not needed at runtime - would get easier if dc-desktop would adopt the 2 package.json project structure
+  # every react addon
+  - /delta/resources/app/node_modules/react-*
+  - /delta/resources/app/node_modules/classnames
+  - /delta/resources/app/node_modules/use-debounce
+  - /delta/resources/app/node_modules/create-react-context
+  # need testing?
+  - /delta/resources/app/node_modules/resize-observer-polyfill
+  # momentjs is currently only used by renderer process
+  - /delta/resources/app/node_modules/moment
 
 modules:
   - name: deltachat-core-rust
@@ -63,7 +64,7 @@ modules:
         RUSTC_WRAPPER: /app/bin/sccache
         SCCACHE_DIR: /run/ccache/sccache/
 
-      append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/node20/bin
+      append-path: /usr/lib/sdk/rust-stable/bin:/usr/lib/sdk/node22/bin
 
     build-commands:
       - ls /run/build
@@ -74,7 +75,9 @@ modules:
       - npm cache verify
       - cd deltachat-jsonrpc/typescript && env DEBUG="*" npm install --offline --verbose && npm run build
       - python3 deltachat-rpc-server/npm-package/scripts/make_local_dev_version.py
-      - mkdir -p /app/dc-core/deltachat-jsonrpc
+      # mkdir only dc-core (not dc-core/deltachat-jsonrpc): the cp below must
+      # create that dir itself, else `cp -r` nests it one level too deep.
+      - mkdir -p /app/dc-core
       - sed -i 's|/run/build/deltachat-core-rust|/app/dc-core/deltachat-rpc-server|g' deltachat-rpc-server/npm-package/package.json
       - cp -r deltachat-jsonrpc /app/dc-core/deltachat-jsonrpc
       - cp -r deltachat-rpc-server /app/dc-core/deltachat-rpc-server
@@ -97,7 +100,7 @@ modules:
             url: https://github.com/mozilla/sccache/releases/download/v0.2.15/sccache-v0.2.15-aarch64-unknown-linux-musl.tar.gz
             sha256: 90d91d21a767e3f558196dbd52395f6475c08de5c4951a4c8049575fa6894489
             only-arches: ["aarch64"]
-      
+
     sources:
       - generated/core-git.json
       - generated/sources-rust.json
@@ -111,9 +114,14 @@ modules:
   - name: delta
     buildsystem: simple
     build-options:
-      append-path: /usr/lib/sdk/node20/bin:/run/build/delta/pnpm/bin
-      env:      
+      append-path: /usr/lib/sdk/node22/bin:/run/build/delta/pnpm/bin
+      env:
         NPM_CONFIG_LOGLEVEL: info
+
+        # pnpm 11's supply-chain check (minimumReleaseAge, default 1440) re-verifies
+        # every lockfile entry against the registry on install, and --offline does
+        # NOT suppress it (pnpm#11801) - so mark it trusted
+        PNPM_CONFIG_TRUST_LOCKFILE: "true"
 
         XDG_CACHE_HOME: /run/build/delta/flatpak-node/cache
         TMPDIR: /run/build/delta/flatpak-node/tmp
@@ -122,53 +130,74 @@ modules:
         VERSION_INFO_GIT_REF: "flathub"
         NO_ASAR: "true"
 
-        ELECTRON_CONFIG_CACHE: /run/build/delta/cache/electron
-        electron_config_cache: /run/build/delta/cache/electron
-        ELECTRON_CACHE: /run/build/delta/cache/electron
+        # electron / electron-builder look here for the prebuilt electron zip.
+        # flatpak-node-generator populates it under $XDG_CACHE_HOME/electron.
+        ELECTRON_CONFIG_CACHE: /run/build/delta/flatpak-node/cache/electron
+        electron_config_cache: /run/build/delta/flatpak-node/cache/electron
+        ELECTRON_CACHE: /run/build/delta/flatpak-node/cache/electron
 
     build-commands:
-      - pwd
-      - ls
       # fixup manually installed pnpm package (why manual? because global npm install is not possible because global node modules dir is read-only)
+      # the pnpm tarball ships bin/pnpm.cjs as 0644, so restore the execute bit after renaming
       - mv ../pnpm/bin/pnpm.cjs ../pnpm/bin/pnpm
-      - ls -lah /run/build/
+      - chmod +x ../pnpm/bin/pnpm
       - mkdir -p $TMPDIR
       - node --version
       - pnpm --version
-      - python --version
-      - pnpm config set registry http://localhost:3000 --location project
-      # install the core we build locally instead of the prebuild
-      # patch package.json to exclude the extra architectures that we excluded when building the pnpm store
-      - |
-        jq ".pnpm.supportedArchitectures.os = [\"linux\"] | .pnpm.supportedArchitectures.cpu = [\"x64\",\"arm64\"]" package.json > package.new.json
-        mv package.new.json package.json
-      # install deps from store
-      - |
-        node ../replay.mjs &
-        REPLAY_PID=$!
-        env DEBUG="*" pnpm install --prefer-offline --frozen-lockfile
-        kill $REPLAY_PID
-      # install the core we build locally instead of the prebuilds
-      # link script expect it to be at `../deltachat-core-rust` so we link it
+      - python3 --version
+      # Build the offline pnpm store from the tarballs flatpak-node-generator
+      # fetched, and set up node-gyp headers. Both are run here (not as generated
+      # source-phase shell steps) so the node SDK is on PATH and paths resolve
+      # against the module build-dir root. (../ from main/ == build-dir root.)
+      - (cd .. && python3 flatpak-node/populate_pnpm_store.py flatpak-node/pnpm-manifest.json flatpak-node/pnpm-tarballs flatpak-node/pnpm-store)
+      - (cd .. && bash flatpak-node/setup_sdk_node_headers.sh)
+      # point pnpm at the offline store (pnpm 11 reads storeDir from pnpm-workspace.yaml, not .npmrc)
+      - 'echo "storeDir: /run/build/delta/flatpak-node/pnpm-store" >> pnpm-workspace.yaml'
+      # Use the locally-built (from-source) core instead of the prebuilt npm
+      # binaries. generate.sh already linked it into the lockfile via `link:`;
+      # here we recreate the symlink at the path the lockfile expects
+      # (../../../deltachat-core-rust from packages/*) and reapply the linked
+      # lockfile + package.json manifests over the pristine checkout, so the
+      # single offline frozen install below wires in the local core. (pnpm add
+      # cannot run in the sandbox: it re-resolves and needs network metadata.)
       - ln -s /app/dc-core ../deltachat-core-rust
-      - sed -i "s/pnpm add/pnpm add --prefer-offline --frozen-lockfile/g" ./bin/link_core/link_local.sh
-      - |
-        node ../replay.mjs &
-        REPLAY_PID=$!
-        ./bin/link_core/link_local.sh
-        kill $REPLAY_PID
+      # --no-same-owner: the tarball records the maintainer's uid/gid; inside the
+      # build sandbox tar runs as (sandbox) root and would try to restore that
+      # ownership, which the uid namespace cannot map ("Cannot change ownership").
+      - tar xzf ../linked-core-overrides.tar.gz --no-same-owner
+      # install deps fully offline from the store
+      - pnpm install --offline --frozen-lockfile
       - mkdir -p /app/delta
 
       # build & package dc desktop
       - pnpm --filter @deltachat-desktop/target-electron build4production
       - pnpm --filter @deltachat-desktop/target-electron pack:generate_config
       - pnpm --filter @deltachat-desktop/target-electron pack:patch-node-modules
-      - pnpm --filter @deltachat-desktop/target-electron pack:linux:dir
+      # Point electron-builder at the electron zip flatpak-node-generator cached
+      # (flatpak-node/cache/electron/electron-v<ver>-linux-<arch>.zip) via
+      # electronDist, so it extracts that instead of trying to download electron
+      # from github (its bundled @electron/get re-verifies checksums against a
+      # github-fetched SHASUMS even on a cache hit, which fails offline).
+      - pnpm --filter @deltachat-desktop/target-electron exec electron-builder --config ./electron-builder.json5 --linux --dir -c.electronDist=/run/build/delta/flatpak-node/cache/electron
 
       # The x86-64 build seems to be put in "linux-unpacked",
       # the aarch64 build in "linux-arm64-unpacked"
       # we try to catch both paths with the wildcard
       - cp -ar packages/target-electron/dist/linux*unpacked/* /app/delta/
+
+      # The from-source stdio-rpc-server ships its binary under
+      # platform_package/<rust-target>/ instead of as an installed
+      # @deltachat/stdio-rpc-server-<os>-<arch> npm package. The desktop resolves
+      # the server via require.resolve() (its env-var override is disabled unless
+      # --allow-unsafe-core-replacement), so materialize that package where node
+      # resolution expects it: node_modules/@deltachat/stdio-rpc-server-<os>-<arch>
+      # (its package.json main is the binary, so resolve() returns the exe path).
+      - |
+        set -e
+        NM=/app/delta/resources/app/node_modules
+        SRC=$(ls -d "$NM/@deltachat/stdio-rpc-server/platform_package/"*)
+        DEST="$NM/@deltachat/stdio-rpc-server-linux-$(node -e 'process.stdout.write(process.arch)')"
+        cp -a "$SRC" "$DEST"
 
       # Install the required static files
       - install ../run.sh $FLATPAK_DEST/bin/run.sh
@@ -177,7 +206,7 @@ modules:
       - install -Dm 0644 ../chat.delta.desktop.appdata.xml  /app/share/metainfo/chat.delta.desktop.appdata.xml
       - install -Dm 0644 ../delta-v7-pathed.svg /app/share/icons/hicolor/scalable/apps/chat.delta.desktop.svg
     subdir: main
-    sources: 
+    sources:
       # Electron
       # the binaries are already included in the pnpm store
 
@@ -191,31 +220,26 @@ modules:
 
       - type: file
         path: chat.delta.desktop.desktop
-      
-      - type: file
-        path: replay.mjs
 
       - type: file
         path: chat.delta.desktop.256.png
         dest-filename: chat.delta.desktop.png
 
-      - type: archive
-        url: https://nodejs.org/download/release/v18.18.1/node-v18.18.1-headers.tar.gz
-        sha256: 7e96d38cca734754e711af9bc43b6b5f2f279951849c1089bdc8825312fd7ddb
-        dest: node-headers
-
       - type: script
         dest-filename: run.sh
         commands:
           - export TMPDIR="$XDG_RUNTIME_DIR/app/$FLATPAK_ID"
-          - exec zypak-wrapper /app/delta/deltachat-desktop "$@" --disable-features=WaylandFractionalScaleV1
+          - exec zypak-wrapper /app/delta/deltachat-desktop "$@"
 
-
-      # dependencies
-      - generated/proxy-registry-cache-manifest.json
+      # dependencies: offline pnpm store + electron/esbuild/playwright/node-gyp
+      # caches, all produced by flatpak-node-generator from pnpm-lock.yaml
+      - generated/pnpm-sources.json
+      # pnpm binary itself (not provided by flatpak-node-generator)
       - generated/pnpm.json
-      - generated/electron-cache-manifest.json
-
+      # linked lockfile + package.json manifests (from-source core), reapplied
+      # over the checkout in build-commands. type:file so it is not auto-extracted.
+      - type: file
+        path: generated/linked-core-overrides.tar.gz
 
       # https://github.com/deltachat/deltachat-desktop/pull/1125
       - type: file
@@ -224,4 +248,3 @@ modules:
       - type: file
         path: mime/deltachat-desktop.xml
         dest: mime
-
