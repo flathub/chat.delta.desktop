@@ -14,12 +14,15 @@ finish-args:
   - --share=ipc
   - --device=all # Webcam access for QR code scans and DRI for OpenGL
   - --socket=pulseaudio # Record and play voice messages
+  # These xdg-* permissions are needed for two reasons: on old xdg-desktop-portal
+  # versions (< 1.19.0) a backup export fails with: I/O error in the advisory file locking layer
+  # see https://github.com/flatpak/xdg-desktop-portal/issues/1117
+  # and drag-and-drop on X11 only works when a dropped file comes from an xdg granted path.
   - --filesystem=xdg-documents
   - --filesystem=xdg-download
   - --filesystem=xdg-music
   - --filesystem=xdg-pictures
   - --filesystem=xdg-videos
-  - --filesystem=host # workaround until xdg-desktop-portal is released: https://github.com/flatpak/xdg-desktop-portal/issues/1445
   - --share=network
   - --talk-name=org.freedesktop.Notifications # needed for dbus notification, as the notification portal crashed because of a bug in electron https://github.com/electron/electron/issues/40461
   - --talk-name=com.canonical.AppMenu.Registrar # fix https://github.com/flathub/chat.delta.desktop/issues/118
