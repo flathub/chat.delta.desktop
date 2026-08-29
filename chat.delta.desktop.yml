@@ -28,7 +28,14 @@ finish-args:
   - --talk-name=com.canonical.AppMenu.Registrar # fix https://github.com/flathub/chat.delta.desktop/issues/118
   - --talk-name=org.kde.StatusNotifierWatcher # fix https://github.com/flathub/chat.delta.desktop/issues/143
   - --talk-name=com.canonical.Unity # D-Bus talk for Unity desktop
-  - --system-talk-name=dummy.permission.to-suppress-chromium-error # see https://github.com/deltachat/deltachat-desktop/issues/5879
+  # Needed for `electron.powerMonitor.on('resume'`,
+  # to re-check for new messages on resume from sleep,
+  # otherwise the re-check may be delayed by at least a few minutes,
+  # or until the window is focused.
+  #
+  # If you want to remove this, see
+  # https://github.com/deltachat/deltachat-desktop/issues/5879.
+  - --system-talk-name=org.freedesktop.login1
   - --env=NOTIFY_IGNORE_PORTAL=1 # fix https://github.com/deltachat/deltachat-desktop/issues/3590
 
 cleanup:
