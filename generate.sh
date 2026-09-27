@@ -74,6 +74,11 @@ echo "[link locally-built core into desktop deps]"
 # (../../../deltachat-core-rust/...) matches the symlink the manifest creates.
 (
   cd ../deltachat-desktop
+  # core moved the TS client from deltachat-jsonrpc/typescript to
+  # deltachat-jsonrpc-bindings/typescript, but link_local.sh still hardcodes the
+  # old path (as of desktop v2.62.0). So we patch it for now.
+  # TODO: Remove this patch once deltachat-desktop updates link_local.sh to the new path.
+  sed -i 's|/deltachat-jsonrpc/typescript|/deltachat-jsonrpc-bindings/typescript|g' bin/link_core/link_local.sh
   CORE_REPO_CHECKOUT=../deltachat-core-rust bash ./bin/link_core/link_local.sh
 )
 # A `link:` dep has no lockfile snapshot, so electron-builder (which packages only
