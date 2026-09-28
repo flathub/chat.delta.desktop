@@ -153,7 +153,7 @@ the host). The app depends on the Electron base app, so install that once:
 
 ```sh
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install --user flathub org.electronjs.Electron2.BaseApp//25.08   # once
+flatpak install --user flathub org.electronjs.Electron2.BaseApp//26.08   # once
 flatpak install --user ./chat.delta.desktop.flatpak
 flatpak run chat.delta.desktop
 ```

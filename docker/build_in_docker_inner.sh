@@ -24,11 +24,11 @@ flatpak --system remote-add --if-not-exists flathub \
     https://flathub.org/repo/flathub.flatpakrepo
 # versions must match runtime-version/base-version/sdk-extensions in the manifest
 flatpak --system install -y --noninteractive flathub \
-    org.freedesktop.Platform//25.08 \
-    org.freedesktop.Sdk//25.08 \
-    org.freedesktop.Sdk.Extension.node22//25.08 \
-    org.freedesktop.Sdk.Extension.rust-stable//25.08 \
-    org.electronjs.Electron2.BaseApp//25.08
+    org.freedesktop.Platform//26.08 \
+    org.freedesktop.Sdk//26.08 \
+    org.freedesktop.Sdk.Extension.node22//26.08 \
+    org.freedesktop.Sdk.Extension.rust-stable//26.08 \
+    org.electronjs.Electron2.BaseApp//26.08
 
 echo "[flatpak-builder]"
 # --disable-rofiles-fuse: the rofiles-fuse overlay flatpak-builder normally uses

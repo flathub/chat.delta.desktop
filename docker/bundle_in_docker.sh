@@ -3,7 +3,7 @@
 # for testing the generated sources and the offline pnpm store. The flatpak is
 # self-contained and can be installed on any host with flatpak >= 1.12.
 # Electron base app is NOT included so you need to run
-# flatpak install --user flathub org.electronjs.Electron2.BaseApp//25.08
+# flatpak install --user flathub org.electronjs.Electron2.BaseApp//26.08
 # once on the host before you can run the flatpak.
 set -e
 cd "$(dirname "$0")/.."
