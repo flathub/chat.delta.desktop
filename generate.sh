@@ -3,8 +3,8 @@ set -e
 
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
-CORE_CHECKOUT=v2.59.0
-DESKTOP_CHECKOUT=v2.59.1
+CORE_CHECKOUT=v2.62.0
+DESKTOP_CHECKOUT=v2.62.0
 
 # this script needs:
 # environment:
@@ -74,6 +74,11 @@ echo "[link locally-built core into desktop deps]"
 # (../../../deltachat-core-rust/...) matches the symlink the manifest creates.
 (
   cd ../deltachat-desktop
+  # core moved the TS client from deltachat-jsonrpc/typescript to
+  # deltachat-jsonrpc-bindings/typescript, but link_local.sh still hardcodes the
+  # old path (as of desktop v2.62.0). So we patch it for now.
+  # TODO: Remove this patch once deltachat-desktop updates link_local.sh to the new path.
+  sed -i 's|/deltachat-jsonrpc/typescript|/deltachat-jsonrpc-bindings/typescript|g' bin/link_core/link_local.sh
   CORE_REPO_CHECKOUT=../deltachat-core-rust bash ./bin/link_core/link_local.sh
 )
 # A `link:` dep has no lockfile snapshot, so electron-builder (which packages only
@@ -84,7 +89,7 @@ echo "[link locally-built core into desktop deps]"
 node tool_inject_linked_deps.mjs \
     ../deltachat-desktop/packages/target-electron/package.json \
     ../deltachat-desktop/pnpm-lock.yaml \
-    ../deltachat-core-rust/deltachat-jsonrpc/typescript \
+    ../deltachat-core-rust/deltachat-jsonrpc-bindings/typescript \
     ../deltachat-core-rust/deltachat-rpc-server/npm-package
 (cd ../deltachat-desktop && pnpm install)
 
@@ -117,14 +122,14 @@ jq 'map(select(.type != "shell" or ((.commands // []) | map(select(test("populat
 mv generated/pnpm-sources.json.tmp generated/pnpm-sources.json
 
 echo "[@deltachat/jsonrpc-client build-dependencies]"
-cd ../deltachat-core-rust/deltachat-jsonrpc/typescript
+cd ../deltachat-core-rust/deltachat-jsonrpc-bindings/typescript
 rm -r node_modules || true
 npm i --lockfile-version 2 --package-lock-only
 cd -
 pwd
 
-flatpak-node-generator -o generated/sources-jsonrpc-client-npm.json -r npm ../deltachat-core-rust/deltachat-jsonrpc/typescript/package-lock.json
-cp ../deltachat-core-rust/deltachat-jsonrpc/typescript/package-lock.json generated/deltachat-jsonrpc.typescript.package-lock.json
+flatpak-node-generator -o generated/sources-jsonrpc-client-npm.json -r npm ../deltachat-core-rust/deltachat-jsonrpc-bindings/typescript/package-lock.json
+cp ../deltachat-core-rust/deltachat-jsonrpc-bindings/typescript/package-lock.json generated/deltachat-jsonrpc.typescript.package-lock.json
 
 echo "[writing to manifest files]"
 cat >generated/desktop-git.json <<EOL

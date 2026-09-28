@@ -83,13 +83,13 @@ modules:
       - node --version
       - python3 --version
       - npm cache verify
-      - cd deltachat-jsonrpc/typescript && env DEBUG="*" npm install --offline --verbose && npm run build
+      - cd deltachat-jsonrpc-bindings/typescript && env DEBUG="*" npm install --offline --verbose && npm run build
       - python3 deltachat-rpc-server/npm-package/scripts/make_local_dev_version.py
-      # mkdir only dc-core (not dc-core/deltachat-jsonrpc): the cp below must
+      # mkdir only dc-core (not dc-core/deltachat-jsonrpc-bindings): the cp below must
       # create that dir itself, else `cp -r` nests it one level too deep.
       - mkdir -p /app/dc-core
       - sed -i 's|/run/build/deltachat-core-rust|/app/dc-core/deltachat-rpc-server|g' deltachat-rpc-server/npm-package/package.json
-      - cp -r deltachat-jsonrpc /app/dc-core/deltachat-jsonrpc
+      - cp -r deltachat-jsonrpc-bindings /app/dc-core/deltachat-jsonrpc-bindings
       - cp -r deltachat-rpc-server /app/dc-core/deltachat-rpc-server
 
     modules:
@@ -118,7 +118,7 @@ modules:
 
       - type: file
         path: generated/deltachat-jsonrpc.typescript.package-lock.json
-        dest: deltachat-jsonrpc/typescript/
+        dest: deltachat-jsonrpc-bindings/typescript/
         dest-filename: package-lock.json
 
   - name: delta
