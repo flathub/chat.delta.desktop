@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+set -o pipefail
 
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
@@ -46,14 +47,14 @@ git reset --hard $DESKTOP_CHECKOUT
 git clean -d -x -f
 DESKTOP_COMMIT_HASH=$(git rev-parse HEAD)
 cd -
-# This manifest targets the pnpm 11 store (v11) and points pnpm at the store via
+# This manifest targets pnpm 12 (store v11) and points pnpm at the store via
 # storeDir in pnpm-workspace.yaml. pnpm 10 uses a different store version and
 # reads store-dir from .npmrc, so bail out early with a clear message instead of
 # producing a store the sandbox pnpm cannot read.
 DESKTOP_PNPM_MAJOR=$(jq -r '(.packageManager // "") | sub("^pnpm@"; "") | split(".")[0]' ../deltachat-desktop/package.json)
-if [ "$DESKTOP_PNPM_MAJOR" != "11" ]; then
-    echo "ERROR: deltachat-desktop $DESKTOP_CHECKOUT pins pnpm $DESKTOP_PNPM_MAJOR, but this manifest targets pnpm 11 (store v11)." >&2
-    echo "       Pick a desktop version that uses pnpm 11, or adapt the store version + storeDir wiring." >&2
+if [ "$DESKTOP_PNPM_MAJOR" != "12" ]; then
+    echo "ERROR: deltachat-desktop $DESKTOP_CHECKOUT pins pnpm $DESKTOP_PNPM_MAJOR, but this manifest targets pnpm 12 (store v11)." >&2
+    echo "       Pick a desktop version that uses pnpm 12, or adapt the store version + storeDir wiring." >&2
     exit 1
 fi
 
@@ -102,10 +103,10 @@ tar czf generated/linked-core-overrides.tar.gz \
     -C ../deltachat-desktop \
     pnpm-lock.yaml $(cd ../deltachat-desktop && ls -d packages/*/package.json)
 
-echo "[desktop build dependencies via flatpak-node-generator (pnpm v11 store)]"
+echo "[desktop build dependencies via flatpak-node-generator (pnpm 12, store v11)]"
 # Emits all npm tarballs, a script that builds an offline pnpm store, plus the
 # electron / esbuild / playwright / node-gyp caches.
-# Default store version is v10; deltachat-desktop uses pnpm 11 => v11.
+# Default store version is v10; pnpm 12 uses store v11.
 flatpak-node-generator pnpm --pnpm-store-version v11 \
     -o generated/pnpm-sources.json ../deltachat-desktop/pnpm-lock.yaml
 
@@ -157,15 +158,19 @@ cat >generated/core-git.json <<EOL
 EOL
 
 # The generator prepares the offline store, but does not provide a pnpm binary.
-# Install the exact pnpm version the desktop pins in packageManager (must be a
-# pnpm that understands the v11 store, i.e. pnpm 11), fetched from a static
-# tarball because global npm install is not possible in the read-only sandbox.
+# Install the exact pnpm version the desktop pins in packageManager (must be pnpm
+# 12, which is a native binary that the `pnpm` package only fetches in its install
+# script, so take the glibc binary packages for each arch directly), fetched from
+# a static tarball because global npm install is not possible in the read-only
+# sandbox.
 PNPM_VERSION=$(jq -r '(.packageManager // "") | sub("^pnpm@"; "") | split("+")[0]' ../deltachat-desktop/package.json)
 echo "[pnpm package to install pnpm@$PNPM_VERSION]"
-result=$(npm view pnpm@$PNPM_VERSION --json | jq "{url: .dist.tarball, integrity: .dist.integrity}")
+for arch_pkg in x86_64:linux-x64 aarch64:linux-arm64; do
+arch=${arch_pkg%%:*}
+result=$(npm view "@pnpm/exe.${arch_pkg#*:}@$PNPM_VERSION" --json | jq "{url: .dist.tarball, integrity: .dist.integrity}")
 
 # Use Python to decode the integrity hash and construct the manifest source item
-python3 - <<EOL > generated/pnpm.json
+python3 - <<EOL
 import json
 import sys
 import base64
@@ -177,12 +182,14 @@ if data.get("integrity", "").startswith("sha512-"):
         "type": "archive",
         "url": data["url"],
         "sha512": base64.b64decode(data["integrity"].replace("sha512-", "")).hex(),
-        "dest": "pnpm"
+        "dest": "pnpm/bin",
+        "only-arches": ["$arch"]
     }
     print(json.dumps(output, indent=2))
 else:
     print("Input package has unexpected hash, expected sha512", file=sys.stderr)
     sys.exit(1)
 EOL
+done | jq -s . > generated/pnpm.json
 
 echo "[done]"

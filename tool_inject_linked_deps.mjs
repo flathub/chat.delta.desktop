@@ -36,7 +36,7 @@ if (!targetPkgPath || !lockfilePath || linkTargets.length === 0) {
 // pnpm store, so look it up there.
 const workspaceRoot = dirname(resolve(lockfilePath));
 const rootRequire = createRequire(join(workspaceRoot, "package.json"));
-const { parse } = rootRequire("yaml");
+const { parseAllDocuments } = rootRequire("yaml");
 
 /** createRequire anchored at a package in the pnpm store @param {string} name */
 function storeRequire(name) {
@@ -52,7 +52,11 @@ const semver = existsSync(join(workspaceRoot, "node_modules/semver"))
   ? rootRequire("semver")
   : storeRequire("semver")("semver");
 
-const lockfile = parse(readFileSync(lockfilePath, "utf8"));
+// Since pnpm 11 the lockfile may start with an extra "env" document (config deps
+// and the pinned pnpm), so the project lockfile is always the last document.
+const lockfile = parseAllDocuments(readFileSync(lockfilePath, "utf8"))
+  .at(-1)
+  .toJS();
 
 /** all concrete versions the lockfile knows for a package name
  * @param {string} name */
