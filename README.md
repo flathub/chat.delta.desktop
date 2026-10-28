@@ -48,7 +48,7 @@ Everything in the manifest's `build-commands` runs here, inside bwrap with no
 network. This is where the **store is prefilled and then consumed**:
 
 1. `populate_pnpm_store.py … pnpm-tarballs pnpm-store` — rebuilds the offline
-   pnpm (v11, content-addressed) **store** from the raw tarballs fetched in
+   pnpm (v12, content-addressed, store v11) **store** from the raw tarballs fetched in
    phase 2. The store is never committed or downloaded whole; it is reconstructed
    offline from the individual tarballs on every build.
 2. `storeDir: …/pnpm-store` is appended to `pnpm-workspace.yaml` so pnpm uses it.

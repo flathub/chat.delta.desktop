@@ -148,9 +148,6 @@ modules:
 
     build-commands:
       # fixup manually installed pnpm package (why manual? because global npm install is not possible because global node modules dir is read-only)
-      # the pnpm tarball ships bin/pnpm.cjs as 0644, so restore the execute bit after renaming
-      - mv ../pnpm/bin/pnpm.cjs ../pnpm/bin/pnpm
-      - chmod +x ../pnpm/bin/pnpm
       - mkdir -p $TMPDIR
       - node --version
       - pnpm --version
@@ -161,7 +158,7 @@ modules:
       # against the module build-dir root. (../ from main/ == build-dir root.)
       - (cd .. && python3 flatpak-node/populate_pnpm_store.py flatpak-node/pnpm-manifest.json flatpak-node/pnpm-tarballs flatpak-node/pnpm-store)
       - (cd .. && bash flatpak-node/setup_sdk_node_headers.sh)
-      # point pnpm at the offline store (pnpm 11 reads storeDir from pnpm-workspace.yaml, not .npmrc)
+      # point pnpm at the offline store (pnpm reads storeDir from pnpm-workspace.yaml, not .npmrc)
       - 'echo "storeDir: /run/build/delta/flatpak-node/pnpm-store" >> pnpm-workspace.yaml'
       # Use the locally-built (from-source) core instead of the prebuilt npm
       # binaries. generate.sh already linked it into the lockfile via `link:`;
