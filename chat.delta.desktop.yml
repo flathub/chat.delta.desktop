@@ -27,6 +27,10 @@ finish-args:
   - --talk-name=org.freedesktop.Notifications # needed for dbus notification, as the notification portal crashed because of a bug in electron https://github.com/electron/electron/issues/40461
   - --talk-name=com.canonical.AppMenu.Registrar # fix https://github.com/flathub/chat.delta.desktop/issues/118
   - --talk-name=org.kde.StatusNotifierWatcher # fix https://github.com/flathub/chat.delta.desktop/issues/143
+  # Electron registers its tray icon under org.freedesktop.StatusNotifierItem-<pid>-<id>;
+  # the pid is always 2 inside the sandbox. Without this the tray icon does not appear.
+  # Fixed in Electron v44 https://github.com/electron/electron/pull/53641.
+  - --own-name=org.freedesktop.StatusNotifierItem-2-1
   - --talk-name=com.canonical.Unity # D-Bus talk for Unity desktop
   # Needed for `electron.powerMonitor.on('resume'`,
   # to re-check for new messages on resume from sleep,
