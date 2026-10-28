@@ -29,6 +29,7 @@ finish-args:
   - --talk-name=org.kde.StatusNotifierWatcher # fix https://github.com/flathub/chat.delta.desktop/issues/143
   # Electron registers its tray icon under org.freedesktop.StatusNotifierItem-<pid>-<id>;
   # the pid is always 2 inside the sandbox. Without this the tray icon does not appear.
+  # Fixed in Electron v44 https://github.com/electron/electron/pull/53641.
   - --own-name=org.freedesktop.StatusNotifierItem-2-1
   - --talk-name=com.canonical.Unity # D-Bus talk for Unity desktop
   # Needed for `electron.powerMonitor.on('resume'`,
