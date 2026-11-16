@@ -43,7 +43,7 @@ finish-args:
   - --env=NOTIFY_IGNORE_PORTAL=1 # fix https://github.com/deltachat/deltachat-desktop/issues/3590
 
 cleanup:
-  - /app/dc-core
+  - /dc-core
   # Desktop___________________
   - /delta/resources/app/node_modules/napi-macros
   # frontend node_modules not needed at runtime - would get easier if dc-desktop would adopt the 2 package.json project structure
