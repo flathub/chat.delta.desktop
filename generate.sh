@@ -4,7 +4,7 @@ set -e
 # must be tags for now
 # (if you want to use sth else, you need to read this script and modify it accordingly)
 CORE_CHECKOUT=v2.69.0
-DESKTOP_CHECKOUT=v2.69.0
+DESKTOP_CHECKOUT=v2.69.1
 
 # this script needs:
 # environment:
@@ -30,7 +30,7 @@ source ../.venv/bin/activate
 echo "[git checkout core]"
 cd ../deltachat-core-rust
 git fetch --all --tags
-git checkout $CORE_CHECKOUT
+git checkout --force $CORE_CHECKOUT
 # reset --hard so a reused checkout (e.g. the docker work volume) starts pristine:
 # tool_inject_linked_deps.mjs edit tracked files, and git clean
 # does NOT revert those - leaving prior-run edits in place would make the generated
@@ -41,7 +41,7 @@ cd -
 echo "[git checkout desktop]"
 cd ../deltachat-desktop
 git fetch --all --tags
-git checkout $DESKTOP_CHECKOUT
+git checkout --force $DESKTOP_CHECKOUT
 git reset --hard $DESKTOP_CHECKOUT
 git clean -d -x -f
 DESKTOP_COMMIT_HASH=$(git rev-parse HEAD)
